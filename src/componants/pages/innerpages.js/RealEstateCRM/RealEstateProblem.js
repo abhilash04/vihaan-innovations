@@ -80,10 +80,10 @@ const RealEstateProblem = () => {
             The Problem
           </Typography>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", mb: 3, fontSize: { xs: "32px", md: "46px" }, lineHeight: 1.2 }}>
-            Real estate teams are losing deals to outdated tools
+            Real estate teams lose deals due to outdated systems.
           </Typography>
           <Typography sx={{ color: "#666", fontSize: "18px", lineHeight: 1.6 }}>
-            Spreadsheets, disconnected apps, and manual follow-ups are silently killing your revenue pipeline every single day. We've worked with brokers, developers, and agencies across India — and the same bottlenecks keep appearing. We fix them.
+            Spreadsheets, disconnected apps, and manual follow-ups are hurting your sales daily. Without proper real estate CRM software, tracking leads and managing clients becomes difficult. Our solution fixes these common problems and simplifies your workflow.
           </Typography>
         </Box>
 

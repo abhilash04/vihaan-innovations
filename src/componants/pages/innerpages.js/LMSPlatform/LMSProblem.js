@@ -7,9 +7,9 @@ import GroupsIcon from '@mui/icons-material/Groups';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 
 const problemCards = [
-  { icon: <LaptopIcon sx={{ fontSize: 40, color: "#3b82f6" }} />, title: "Course Building\nPlatforms", sub: "Admins lack access to LMS software" },
-  { icon: <VideocamIcon sx={{ fontSize: 40, color: "#22c55e" }} />, title: "Live Class &\nWebinar Integration", sub: "Instructors must work to create instructional manual work verified" },
-  { icon: <GroupsIcon sx={{ fontSize: 40, color: "#f59e0b" }} />, title: "Corporate Training\n& L&D Teams", sub: "Isolated payment complicated tracking, Lack of separate compliance tracking" },
+  { icon: <LaptopIcon sx={{ fontSize: 40, color: "#3b82f6" }} />, title: "Course Building\nPlatforms", sub: "Admin control and lack of access in many LMS Software Development systems" },
+  { icon: <VideocamIcon sx={{ fontSize: 40, color: "#22c55e" }} />, title: "Live Class &\nWebinar Integration", sub: "Trainers spend extra time handling manual setup and content management" },
+  { icon: <GroupsIcon sx={{ fontSize: 40, color: "#f59e0b" }} />, title: "Corporate Training\n& L&D Teams", sub: "Disconnected payment systems and difficulty in tracking compliance" },
 ];
 
 const LMSProblem = () => (
@@ -37,7 +37,7 @@ const LMSProblem = () => (
         <Grid item xs={12} md={8}>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
             <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2, justifyContent: "center" }}>
-              {["Confusing student experience", "No tracking of progress", "Generic platforms lacking local support", "Instructors manual work", "Lack of corporate compliance tracking", "Revenue leaking"].map((pt, i) => (
+              {["Confusing learning experience", "No proper progress tracking", "Generic platforms with limited local support", "High manual work for instructors", "Lack of compliance tracking", "Revenue loss due to inefficient systems"].map((pt, i) => (
                 <Paper key={i} elevation={0} sx={{ px: 3, py: 1.5, borderRadius: "30px", bgcolor: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", display: "flex", alignItems: "center", gap: 1.5 }}>
                   <Box sx={{ width: 7, height: 7, borderRadius: "50%", bgcolor: "#ef4444", flexShrink: 0 }} />
                   <Typography sx={{ color: "#ffffff", fontSize: "14px", fontWeight: 500 }}>{pt}</Typography>

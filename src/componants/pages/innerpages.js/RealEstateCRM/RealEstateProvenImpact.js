@@ -80,28 +80,28 @@ const RealEstateProvenImpact = () => {
           <Grid item xs={12} sm={6} md={3}>
             <StatCard 
               value="3x" 
-              label={<>Increase in<br/>Lead-to-Site Visit<br/>Conversion</>} 
+              label={<>More site visit leads.</>} 
               delay={0.1} 
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <StatCard 
               value="68%" 
-              label={<>Reduction in<br/>Manual Follow-up<br/>Effort</>} 
+              label={<>Less manual follow-up work.</>} 
               delay={0.2} 
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <StatCard 
               value="40%" 
-              label={<>Faster Booking-<br/>to-Registration<br/>Cycle</>} 
+              label={<>Faster booking to registration.</>} 
               delay={0.3} 
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <StatCard 
               value="90" 
-              label={<>Average Days to<br/>Full Platform<br/>Launch</>} 
+              label={<>Complete platform launch time.</>} 
               delay={0.4} 
             />
           </Grid>

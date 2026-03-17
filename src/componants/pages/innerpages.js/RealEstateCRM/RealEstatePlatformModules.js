@@ -14,65 +14,67 @@ const modulesData = [
     id: "crm",
     title: "Real Estate CRM",
     icon: <DashboardOutlinedIcon />,
-    description: "A purpose-built CRM that understands the real estate sales cycle — from first enquiry to final registration. Track every touchpoint, automate follow-ups, and keep your entire team aligned.",
+    description: "A powerful Real Estate CRM system designed for the property sales process - from the first customer inquiry to the final property registration. Easily manage leads, automate follow-ups, and keep your entire sales team organised and connected.",
     features: [
-      "Lead source tracking & campaign attribution",
-      "Custom pipeline stages per project type",
-      "WhatsApp + email + call integration",
-      "Automated follow-up sequences & reminders",
-      "Role-based access for agents, managers & admins"
+      "Lead source tracking and marketing campaign insights",
+      "Custom sales pipeline stages for different property projects",
+      "WhatsApp, email, and call integration",
+      "Automated follow-ups, notifications, and reminders",
+      "Role-based access for agents, managers, and administrators"
+
     ]
   },
   {
     id: "buyer",
     title: "Buyer / Tenant Portal",
     icon: <PersonOutlineOutlinedIcon />,
-    description: "Empower your clients with a self-service portal to track their property journey, view documents, and make payments securely.",
+    description: "A user-friendly client portal that allows buyers or tenants to easily track their property journey, access important documents, and make secure payments online.",
     features: [
-      "Secure login & OTP verification",
-      "Property shortlisting & comparison",
-      "Site visit booking engine",
-      "Payment history & upcoming dues",
-      "Document vault (agreements, receipts)"
+      "Secure login with OTP verification",
+      "Property shortlisting and comparison options",
+      "Online site visit booking system",
+      "Payment history and upcoming payment reminders",
+      "Secure document storage for agreements and receipts"
+
     ]
   },
   {
     id: "inventory",
-    title: "Inventory Management",
+    title: "Property Inventory Management",
     icon: <Inventory2OutlinedIcon />,
-    description: "Real-time visibility into your available units, sold properties, and blocked inventory across all your ongoing projects.",
+    description: "A smart inventory management system that gives real-time updates on available units, sold properties, and reserved inventory across all your ongoing real estate projects.",
     features: [
-      "Live tower & floor plan status",
-      "Automated hold & release logic",
-      "Pricing & cost sheet generator",
-      "Parking allocation & management",
-      "Multi-project dashboard"
+      "Live tower and floor availability status",
+      "Automatic unit hold and release system",
+      "Property pricing and cost sheet generator",
+      "Parking space allocation and management",
+      "Multi-project overview dashboard"
     ]
   },
   {
     id: "partner",
     title: "Channel Partner Portal",
     icon: <HandshakeOutlinedIcon />,
-    description: "A dedicated interface for your broker network to submit leads, track status, and manage their commissions transparently.",
+    description: "A dedicated broker portal that allows channel partners to submit leads, track lead status, and monitor their commissions with complete transparency.",
     features: [
-      "CP onboarding & RERA compliance",
-      "Lead tagging & protection rules",
-      "Real-time status updates on submitted leads",
-      "Commission slab & payout tracking",
-      "Marketing collateral sharing"
+      "Channel partner registration and RERA compliance support",
+      "Lead tagging and lead protection system",
+      "Real-time updates on submitted leads",
+      "Commission structure and payout tracking",
+      "Marketing materials and project brochures sharing"
     ]
   },
   {
     id: "postsales",
-    title: "Post-Sales Module",
+    title: "Post-Sales Management",
     icon: <ReceiptLongOutlinedIcon />,
-    description: "Streamline the complex processes that happen after the booking amount is paid, from agreements to possession.",
+    description: "A streamlined post-sales system that helps manage all activities after a property booking, from agreement processing to final possession.",
     features: [
-      "Demand letter automation",
-      "Receipt generation & accounting integration",
-      "Welcome kit & handover checklists",
-      "Modification request management",
-      "Customer grievance ticketing"
+      "Automated demand letter generation",
+      "Receipt creation with accounting system integration",
+      "Welcome kit and property handover checklist",
+      "Customer modification request management",
+      "Customer support and grievance ticket system"
     ]
   }
 ];
@@ -143,13 +145,13 @@ const RealEstatePlatformModules = () => {
                           <ListItemIcon sx={{ minWidth: 40, color: activeModule.id === module.id ? "#00B4D8" : "#888" }}>
                             {module.icon}
                           </ListItemIcon>
-                          <ListItemText 
-                            primary={module.title} 
-                            primaryTypographyProps={{ 
+                          <ListItemText
+                            primary={module.title}
+                            primaryTypographyProps={{
                               fontWeight: activeModule.id === module.id ? 700 : 500,
                               color: activeModule.id === module.id ? "#1a1a1a" : "#666",
                               fontSize: "14px"
-                            }} 
+                            }}
                           />
                           {activeModule.id === module.id && <ChevronRightIcon sx={{ color: "#00B4D8", fontSize: 20 }} />}
                         </ListItemButton>
@@ -196,7 +198,7 @@ const RealEstatePlatformModules = () => {
             </Grid>
           </Paper>
         </motion.div>
-        
+
       </Container>
     </Box>
   );
