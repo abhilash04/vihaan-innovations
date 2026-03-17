@@ -127,7 +127,7 @@ const RealEstateBanner = () => {
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
         <Grid container spacing={6} alignItems="center">
-          
+
           {/* Left Content Area */}
           <Grid item xs={12} md={6}>
             <motion.div
@@ -138,15 +138,15 @@ const RealEstateBanner = () => {
               <Typography sx={{ color: "#00B4D8", fontWeight: 600, mb: 2, fontSize: "16px", letterSpacing: "0.5px" }}>
                 Real Estate Technology
               </Typography>
-              
+
               <Typography variant="h1" sx={{ color: "#ffffff", fontWeight: 800, fontSize: { xs: "40px", md: "56px" }, lineHeight: 1.1, mb: 3 }}>
-                Digital platforms that close deals faster
+                Digital solutions that help close property deals faster              
               </Typography>
-              
+
               <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "18px", lineHeight: 1.6, mb: 5, maxWidth: "500px" }}>
-                We build custom CRMs, property portals, lead management systems, and agent dashboards — purpose-built for real estate businesses that want to scale.
+                We develop custom Real Estate CRM platforms, property listing portals, lead management tools, and agent dashboards - specially designed for real estate businesses that want to manage clients efficiently and grow their sales.
               </Typography>
-              
+
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 <Button
                   variant="contained"
@@ -168,7 +168,7 @@ const RealEstateBanner = () => {
                 >
                   See a Live Demo
                 </Button>
-                
+
                 <Button
                   variant="outlined"
                   sx={{
@@ -197,41 +197,41 @@ const RealEstateBanner = () => {
             <Box sx={{ position: "relative", maxWidth: "450px", ml: "auto", mr: { xs: "auto", md: 0 } }}>
               <Grid container spacing={3}>
                 <Grid item xs={6}>
-                  <StatCard 
-                    icon={TrendingUpIcon} 
-                    value="3x" 
-                    label={<>Lead<br/>Conversion Rate</>} 
-                    delay={0.2} 
+                  <StatCard
+                    icon={TrendingUpIcon}
+                    value="3x"
+                    label={<>Lead<br />Conversion Rate</>}
+                    delay={0.2}
                   />
                 </Grid>
                 <Grid item xs={6}>
-                  <StatCard 
-                    icon={InsertChartOutlinedIcon} 
-                    value="60%" 
-                    label={<>Less<br/>Manual Work</>} 
-                    delay={0.4} 
+                  <StatCard
+                    icon={InsertChartOutlinedIcon}
+                    value="60%"
+                    label={<>Less<br />Manual Work</>}
+                    delay={0.4}
                   />
                 </Grid>
                 <Grid item xs={6}>
-                  <StatCard 
-                    icon={CalendarMonthOutlinedIcon} 
-                    value="90" 
-                    label={<>Days to Go<br/>Live</>} 
-                    delay={0.6} 
+                  <StatCard
+                    icon={CalendarMonthOutlinedIcon}
+                    value="90"
+                    label={<>Days to Go<br />Live</>}
+                    delay={0.6}
                   />
                 </Grid>
                 <Grid item xs={6}>
-                  <StatCard 
-                    icon={AccessTimeOutlinedIcon} 
-                    value="24/7" 
-                    label={<>Self-serve<br/>Portal</>} 
-                    delay={0.8} 
+                  <StatCard
+                    icon={AccessTimeOutlinedIcon}
+                    value="24/7"
+                    label={<>Self-serve<br />Portal</>}
+                    delay={0.8}
                   />
                 </Grid>
               </Grid>
             </Box>
           </Grid>
-          
+
         </Grid>
       </Container>
     </Box>

@@ -73,7 +73,7 @@ const RealEstateWhyUs = () => {
             Why Vihaan Innovations
           </Typography>
           <Typography sx={{ color: "#555", fontSize: "20px", fontWeight: 600 }}>
-            We don't sell software.<br/>We solve real estate problems.
+            We don’t just provide software.<br/>We deliver powerful Real Estate CRM System solutions that solve real estate business challenges.
           </Typography>
         </Box>
 
@@ -124,15 +124,15 @@ const RealEstateWhyUs = () => {
                 </Box>
 
                 <Typography sx={{ fontSize: "18px", color: "#333", lineHeight: 1.8, fontStyle: "italic", mb: 4, position: "relative", zIndex: 1 }}>
-                  "The platform Vihaan built replaced three separate tools we were paying for. Our agents now spend 80% of their time selling, not updating spreadsheets."
+                  “Vihaan’s platform replaced the multiple tools we used earlier for product development. Our team now spends 80% of their time building and improving the product instead of managing scattered systems.”
                 </Typography>
 
                 <Box>
                   <Typography sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: "16px" }}>
-                    — Head of Sales,
+                    — Product Head,
                   </Typography>
                   <Typography sx={{ color: "#666", fontSize: "14px" }}>
-                    Residential Developer, Pune
+                    VihaanInnovations, Bangalore
                   </Typography>
                 </Box>
               </Paper>

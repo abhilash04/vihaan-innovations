@@ -54,7 +54,7 @@ const RealEstateCTA = () => {
           </Typography>
           
           <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "18px", mb: 6, maxWidth: "600px", mx: "auto", lineHeight: 1.6 }}>
-            Book a free 45-minute discovery call. We'll map out the right solution for your business — no generic decks, just a conversation about your actual challenges.
+            Schedule a free 45-minute consultation call. We’ll help you find the right Real Estate CRM Development solution for your business — no generic presentations, just a focused discussion about your real business needs and challenges.
           </Typography>
 
           <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 3 }}>
@@ -81,22 +81,7 @@ const RealEstateCTA = () => {
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               Book a Free Call
-            </Button>
-            
-            <Typography 
-              sx={{ 
-                color: "rgba(255,255,255,0.5)", 
-                fontSize: "15px", 
-                textDecoration: "underline", 
-                cursor: "pointer",
-                "&:hover": { color: "#ffffff" },
-                transition: "all 0.3s"
-              }}
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              View Features Again
-            </Typography>
-            
+            </Button>            
           </Box>
         </motion.div>
 

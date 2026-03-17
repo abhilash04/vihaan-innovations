@@ -50,15 +50,11 @@ function Banner() {
               paddingBottom: isMobile ? 3 : 0,
             }}
           >
-            <Typography variant="h2" fontWeight={600} gutterBottom>
-              Leading Real Estate Software Development Firm
+            <Typography variant="h3" fontWeight={600} gutterBottom>
+              Real Estate Portal Development for Modern Property Businesses
             </Typography>
             <Typography variant="body1" sx={{ mb: isMobile ? 3 : 2 }}>
-              Tap into the future of real estate development opportunities with
-              solutions that cater to your projects. Spearhead the success of
-              your operations with{" "}
-              <span style={{ fontWeight: 700 }}>real-estate solutions</span>{" "}
-              that meet your dream, affordability, and vision!
+              We build scalable real estate portal development solutions including property listing platforms, CRM integrations, agent dashboards, and mobile-ready portals. Launch your own real estate marketplace similar to Zillow or MagicBricks with advanced search, property management tools, and lead generation features.
             </Typography>
             <Grid
               container

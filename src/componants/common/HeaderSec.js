@@ -25,6 +25,7 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import img1 from "../../assets/img2.png"
 import {
   ShoppingCart,
   Store,
@@ -550,7 +551,7 @@ const Header = () => {
     right: 0,
     bottom: 0,
     backgroundImage:
-      "radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%)",
+      "radial-gradient(circle at center, rgba(166, 230, 251, 0.76) 0%, transparent 70%)",
     borderRadius: "16px",
   }));
 
@@ -800,15 +801,15 @@ const Header = () => {
         <Box sx={{ position: "relative", zIndex: 1, width: "100%" }}>
           <Box
             component="img"
-            src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=400&h=250&fit=crop&crop=faces"
+            src={img1}
             alt="VR Technology Experience"
             sx={{
               width: "100%",
-              height: "180px",
+              height: "240px",
               objectFit: "cover",
               borderRadius: "12px",
               marginBottom: "px",
-              boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
+              boxShadow: "0 10px 25px rgba(0, 0, 0, 0.3)",
             }}
           />
         </Box>
@@ -1403,23 +1404,6 @@ const Header = () => {
         </IconButton>
 
         <List sx={{ padding: 0 }}>
-          <ListItem
-            component="a"
-            href="/"
-            sx={{
-              color: "white",
-              textDecoration: "none",
-              borderBottom: "1px solid rgba(255,255,255,0.1)",
-              transition: "background-color 0.3s ease",
-              padding: "12px 20px",
-              "&:hover": {
-                backgroundColor: "rgba(255,255,255,0.1)",
-              },
-            }}
-          >
-            <ListItemText primary="Home" />
-          </ListItem>
-
           {/* Ready Products Mobile Menu */}
           <ListItem
             sx={{
@@ -1871,9 +1855,6 @@ const Header = () => {
                   }}
                 >
                   {/* Products Dropdown */}
-                  <Box>
-                    <Button sx={navButtonStyle("")}>Home</Button>
-                  </Box>
                   <Box
                     sx={{ position: "relative" }}
                     onMouseEnter={() => setActiveDropdown("products")}

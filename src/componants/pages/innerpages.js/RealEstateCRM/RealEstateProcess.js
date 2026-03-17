@@ -25,7 +25,7 @@ const RealEstateProcess = () => {
         <Grid container spacing={8} alignItems="center">
           
           {/* Left Text Side */}
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={6}>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -36,16 +36,16 @@ const RealEstateProcess = () => {
                 Our Process
               </Typography>
               <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", mb: 3, fontSize: { xs: "36px", md: "48px" }, lineHeight: 1.1 }}>
-                From brief to launch in a structured sprint
+                Clear Process for Real Estate CRM Development
               </Typography>
               <Typography sx={{ color: "#666", fontSize: "18px", lineHeight: 1.6 }}>
-                We follow a proven methodology to launch customized real estate platforms fast. No guesswork, just a structured execution plan that respects your timeline and business goals.
+                We follow a proven process to design and launch a customised Real Estate CRM System Software India quickly and efficiently. No confusion or guesswork - just a clear development strategy that aligns with your project timeline and business objectives.
               </Typography>
             </motion.div>
           </Grid>
 
           {/* Right Stepper Timeline */}
-          <Grid item xs={12} md={7}>
+          <Grid item xs={12} md={6}>
             <Box sx={{ position: "relative", pl: { xs: 2, md: 8 } }}>
               
               {/* Stepper Vertical Track */}
