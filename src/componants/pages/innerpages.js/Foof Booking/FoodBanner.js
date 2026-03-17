@@ -34,7 +34,7 @@ const FoodBanner = () => {
   return (
     <Box sx={{
       backgroundColor: "#eff6f7",
-      pt: { xs: 8, md: 10 },
+      pt: { xs: 8, md: 16 },
       pb: { xs: 8, md: 4 },
       position: 'relative',
       overflow: 'hidden'

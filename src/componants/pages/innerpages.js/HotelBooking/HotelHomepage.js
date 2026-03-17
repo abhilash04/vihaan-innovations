@@ -25,7 +25,7 @@ import HotelCTA from "./HotelCTA";
 const HotelHomepage = () => {
   return (
     <Box sx={{ minHeight: "100vh" }}>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <Box sx={{ pt: 10 }}>
         <HotelBanner />

@@ -19,7 +19,7 @@ function Banner() {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Box maxWidth={1200} mx="auto" sx={{ mt: 2, mb: 2, px: isMobile ? 2 : 0 }}>
+    <Box maxWidth={1200} mx="auto" sx={{ mt: 10, mb: 2, px: isMobile ? 2 : 0 }}>
       <Paper
         elevation={4}
         sx={{

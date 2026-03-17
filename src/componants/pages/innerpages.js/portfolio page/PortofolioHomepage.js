@@ -10,7 +10,7 @@ import InnerPageBanner from "../../sections/InnerPageBanner";
 const PortfolioHomepage = () => {
   return (
     <Grid>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <InnerPageBanner />
       <SolutionSection />

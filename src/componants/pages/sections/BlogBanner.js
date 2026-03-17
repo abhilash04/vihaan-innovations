@@ -21,7 +21,7 @@ const BlogBanner = () => {
         backgroundPosition: "center",
         color: "#fff",
         px: { xs: 3, md: 10 },
-        mt: 6.5,
+        mt: 10,
       }}
     >
       {/* ===== Left Content ===== */}

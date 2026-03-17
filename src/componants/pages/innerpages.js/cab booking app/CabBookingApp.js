@@ -13,7 +13,7 @@ import AIIntegration from "./AIIntegration";
 const CabBookingApp = () => {
   return (
     <Grid>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <CarAnimationBanner />
       <GetTheApp />

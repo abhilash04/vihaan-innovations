@@ -16,7 +16,7 @@ import RealEstateCTA from "./RealEstateCTA";
 const RealEstateCRMHomepage = () => {
   return (
     <Box sx={{ bgcolor: "#F8FAFC", minHeight: "100vh" }}>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <Box sx={{ pt: 10 }}> {/* Offset for Navbar */}
         <RealEstateBanner />

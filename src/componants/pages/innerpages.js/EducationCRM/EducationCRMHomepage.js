@@ -18,7 +18,7 @@ import EducationCTA from "./EducationCTA";
 const EducationCRMHomepage = () => {
   return (
     <Box sx={{ minHeight: "100vh" }}>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <Box sx={{ pt: 10 }}> {/* Offset for Navbar */}
         <EducationBanner />

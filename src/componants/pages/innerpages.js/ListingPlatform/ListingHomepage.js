@@ -22,7 +22,7 @@ import ListingCTA from "./ListingCTA";
 const ListingHomepage = () => {
   return (
     <Box sx={{ minHeight: "100vh" }}>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <Box sx={{ pt: 10 }}>
         <ListingBanner />

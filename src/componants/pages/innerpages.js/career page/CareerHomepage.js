@@ -9,7 +9,7 @@ import InnerPageBanner from "../../sections/InnerPageBanner";
 const CareerHomepage = () => {
   return (
     <Grid>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <InnerPageBanner />
       <JobSection />

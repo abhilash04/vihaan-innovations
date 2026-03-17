@@ -9,7 +9,6 @@ import Footer from "../../common/Footer";
 const AllProducts = () => {
   return (
     <Grid>
-      <Header />
       <HeaderSec />
       <AllProductCollection />
       <Footer />
