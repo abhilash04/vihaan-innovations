@@ -1,0 +1,201 @@
+import React from "react";
+import { Box, Typography, Button } from "@mui/material";
+
+// Dummy images - replace with actual assets if needed
+import phone1 from "../../assets/Bitmap.png";
+import arrow from "../../assets/arrow.png";
+import img1 from "../../assets/2-1.png";
+
+const OurExpert = () => {
+  return (
+    <Box
+      sx={{
+        backgroundColor: "#f1f5f8",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      {/* Background Lines */}
+      <Box
+        className="lines"
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: "-25%",
+          width: "100%",
+          height: "100%",
+          zIndex: 0,
+          pointerEvents: "none",
+        }}
+      >
+        {[0, 1, 2].map((i) => (
+          <Box
+            key={i}
+            className="line"
+            sx={{
+              position: "absolute",
+              width: "1px",
+              height: "100%",
+              top: 0,
+              left: `${(i + 1) * 25}%`,
+              background: "rgba(0,0,0,.08)",
+              overflow: "hidden",
+              "&::after": {
+                content: '""',
+                display: "block",
+                position: "absolute",
+                height: "15vh",
+                width: "100%",
+                top: "-50%",
+                left: 0,
+                background:
+                  "linear-gradient(to bottom, rgba(0,0,0,0) 0%, #d92d20 75%, #d92d20 100%)",
+                animation: "drop 7s cubic-bezier(.4,.26,0,.97) infinite",
+                animationDelay: `${i * 2}s`, // delay per line
+              },
+            }}
+          />
+        ))}
+      </Box>
+
+      {/* Foreground Content */}
+      <Box
+        sx={{
+          maxWidth: "1200px",
+          mx: "auto",
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          alignItems: "center",
+          pt: 6,
+          position: "relative",
+          zIndex: 1,
+        }}
+      >
+        {/* Left Section: Mobile App Images */}
+        <Box
+          sx={{
+            flex: 1,
+            display: "flex",
+            justifyContent: "center",
+            mb: { xs: 4, md: 0 },
+          }}
+        >
+          <Box
+            component="img"
+            src={phone1}
+            alt="Mobile App 1"
+            sx={{
+              height: "100%",
+              width: "70%",
+              position: "relative",
+              zIndex: 2,
+            }}
+          />
+        </Box>
+
+        <img
+          src={img1}
+          alt="image1"
+          style={{
+            height: "auto",
+            width: "100px",
+            position: "absolute",
+            left: "38%",
+            bottom: "65%",
+            zIndex: 2,
+          }}
+        />
+
+        {/* Right Section: Text Content */}
+        <Box sx={{ flex: 1, borderTop: "1px solid #d92d20", pt: 4 }}>
+          <Box sx={{ px: { xs: 2, md: 4 } }}>
+            <Typography
+              sx={{
+                color: "#009f9f",
+                fontWeight: 600,
+                fontSize: "14px",
+                letterSpacing: "2px",
+                textTransform: "uppercase",
+              }}
+            >
+              [LET’S BUILD SOMETHING AMAZING]
+            </Typography>
+
+            <Typography
+              sx={{
+                color: "#41294a",
+                pt: "10px",
+                m: "0 0 15px 0",
+                fontSize: "42px",
+                lineHeight: "1.12em",
+                textTransform: "uppercase",
+                fontWeight: 700,
+              }}
+            >
+              GOT A PROJECT? TALK TO OUR IT 
+              <span style={{ color: "#009f9f" }}> EXPERTS </span>
+            </Typography>
+
+            <Typography
+              sx={{
+                color: "#616263ff",
+                fontWeight: 400,
+                fontSize: "16px",
+                lineHeight: 1.8,
+              }}
+            >
+              Share your details and get a free consultation from Vihaan Innovations. 
+            </Typography>
+
+            <Box sx={{ m: "60px 0 60px", position: "relative" }}>
+              <Button
+                variant="contained"
+                sx={{
+                  borderRadius: "6px",
+                  backgroundColor: "#d92d20",
+                  animation: "pulse 2s infinite",
+                  textTransform: "none",
+                  width: "400px",
+                  py: 1.5,
+                  fontSize: "16px",
+                  fontWeight: 500,
+                  "@keyframes pulse": {
+                    "0%": { transform: "scale(1)" },
+                    "50%": { transform: "scale(1.1)" },
+                    "100%": { transform: "scale(1)" },
+                  },
+                }}
+              >
+                Get Started
+              </Button>
+
+              <img
+                src={arrow}
+                alt="arrow"
+                style={{
+                  height: "auto",
+                  width: "120px",
+                  position: "absolute",
+                  right: 0,
+                  bottom: "15px",
+                }}
+              />
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+
+      {/* Drop Animation Keyframes */}
+      <style>
+        {`
+          @keyframes drop {
+            0% { top: -50%; }
+            100% { top: 110%; }
+          }
+        `}
+      </style>
+    </Box>
+  );
+};
+
+export default OurExpert;

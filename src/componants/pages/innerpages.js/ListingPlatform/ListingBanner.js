@@ -1,0 +1,153 @@
+import React from "react";
+import { Box, Container, Typography, Button, Grid, Paper } from "@mui/material";
+import { motion } from "framer-motion";
+import ListAltIcon from '@mui/icons-material/ListAlt';
+import SpeedIcon from '@mui/icons-material/Speed';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+
+const StatRow = ({ icon: Icon, label, value, delay }) => (
+  <motion.div
+    initial={{ opacity: 0, x: 20 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.5, delay }}
+  >
+    <Box sx={{ display: "flex", alignItems: "center", gap: 3, mb: 3 }}>
+      <Box sx={{ 
+        width: 48, height: 48, borderRadius: "50%", 
+        bgcolor: "rgba(34, 197, 94, 0.1)", // Light green tint based on mock
+        display: "flex", justifyContent: "center", alignItems: "center",
+        color: "#22c55e"
+      }}>
+        <Icon sx={{ fontSize: 24 }} />
+      </Box>
+      <Box>
+        <Typography sx={{ color: "#666", fontSize: "14px", fontWeight: 600 }}>
+          {label}
+        </Typography>
+        <Typography sx={{ color: "#1a1a1a", fontSize: "20px", fontWeight: 800 }}>
+          {value}
+        </Typography>
+      </Box>
+    </Box>
+  </motion.div>
+);
+
+const ListingBanner = () => {
+  return (
+    <Box
+      sx={{
+        position: "relative",
+        minHeight: "90vh",
+        background: "linear-gradient(135deg, #f8fafc 0%, #f0fdf4 100%)", // Very light bluish-green to white
+        overflow: "hidden",
+        display: "flex",
+        alignItems: "center",
+        pt: { xs: 15, md: 5 },
+        pb: { xs: 10, md: 5 }
+      }}
+    >
+      {/* Decorative gradient blur in background */}
+      <Box sx={{ position: "absolute", top: "10%", right: "10%", width: "40%", height: "40%", background: "radial-gradient(circle, rgba(34, 197, 94, 0.08) 0%, rgba(255,255,255,0) 70%)", borderRadius: "50%", filter: "blur(40px)", zIndex: 0 }} />
+
+      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
+        <Grid container spacing={6} alignItems="center">
+          
+          {/* Left Text Area */}
+          <Grid item xs={12} md={6}>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <Typography variant="h1" sx={{ color: "#1a1a1a", fontWeight: 800, fontSize: { xs: "36px", md: "52px" }, lineHeight: 1.1, mb: 3 }}>
+                Launch a Listing Platform Your Users Keep Coming Back To.
+              </Typography>
+              
+              <Typography sx={{ color: "#444", fontSize: "16px", lineHeight: 1.6, mb: 5, maxWidth: "500px" }}>
+                We build custom listing websites and directories for any vertical—jobs, real estate, vehicles, services, classifieds, rentals, and more.
+              </Typography>
+              
+              <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
+                <Button
+                  variant="contained"
+                  sx={{
+                    bgcolor: "#2563eb", // Royal Blue from mock
+                    color: "#ffffff",
+                    fontWeight: 700,
+                    fontSize: "14px",
+                    px: 4,
+                    py: 1.5,
+                    borderRadius: "8px",
+                    textTransform: "none",
+                    boxShadow: "0 4px 14px rgba(37, 99, 235, 0.3)",
+                    "&:hover": {
+                      bgcolor: "#1d4ed8",
+                      boxShadow: "0 6px 20px rgba(37, 99, 235, 0.4)",
+                    },
+                  }}
+                >
+                  See a Demo
+                </Button>
+                
+                <Button
+                  variant="outlined"
+                  sx={{
+                    borderColor: "#2563eb",
+                    color: "#2563eb",
+                    fontWeight: 600,
+                    fontSize: "14px",
+                    px: 4,
+                    py: 1.5,
+                    borderRadius: "8px",
+                    textTransform: "none",
+                    "&:hover": {
+                      borderColor: "#1d4ed8",
+                      bgcolor: "rgba(37, 99, 235, 0.05)",
+                    }
+                  }}
+                >
+                  Explore Features
+                </Button>
+              </Box>
+            </motion.div>
+          </Grid>
+
+          {/* Right Floating Stats Card */}
+          <Grid item xs={12} md={6}>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <Paper
+                elevation={0}
+                sx={{
+                  p: { xs: 4, md: 5 },
+                  borderRadius: "24px",
+                  bgcolor: "rgba(255, 255, 255, 0.9)",
+                  backdropFilter: "blur(20px)",
+                  boxShadow: "0 20px 60px rgba(0,0,0,0.05)",
+                  border: "1px solid rgba(255,255,255,1)",
+                  maxWidth: "400px",
+                  mx: "auto",
+                  ml: { md: "auto" }
+                }}
+              >
+                <Typography sx={{ color: "#1a1a1a", fontWeight: 800, fontSize: "16px", mb: 4, textAlign: "center" }}>
+                  Quick Stats
+                </Typography>
+                
+                <StatRow icon={ListAltIcon} label="Listings Managed" value="[1M+]" delay={0.4} />
+                <StatRow icon={SpeedIcon} label="Search Speed" value="[<1s]" delay={0.5} />
+                <StatRow icon={CheckCircleOutlineIcon} label="Monetization Ready" value="[Yes]" delay={0.6} />
+              </Paper>
+            </motion.div>
+          </Grid>
+          
+        </Grid>
+      </Container>
+    </Box>
+  );
+};
+
+export default ListingBanner;
