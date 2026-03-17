@@ -33,6 +33,7 @@ const LMSPlatformModules = () => {
       <Container maxWidth="lg">
         <Box sx={{ textAlign: "center", mb: 8 }}>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>Platform Modules – Tabbed Deep Dive</Typography>
+          <Typography variant="body1"sx={{ color: "#64748b", fontSize: { xs:"14px", md: "16px"} }}>Built by an expert LMS Application Development team, offering powerful modules for complete learning management.</Typography>
         </Box>
         {/* Tab Bar */}
         <Tabs value={active} onChange={(_, v) => setActive(v)} variant="scrollable" scrollButtons="auto"

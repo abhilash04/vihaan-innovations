@@ -12,15 +12,15 @@ import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 
 const features = [
-  { icon: EditNoteIcon, title: "Course Builder & Content Management", desc: "Uploading categories site plans, course building modules, video, quizzes, scheduling.", color: "#3b82f6" },
-  { icon: LiveTvIcon, title: "Live Class & Webinar Integration", desc: "Upcoming modules, planning per content with scheduling.", color: "#8b5cf6" },
-  { icon: QuizIcon, title: "Assessment & Quiz Engine", desc: "More questions from MCQs, Q/A, Time Tools.", color: "#22c55e" },
-  { icon: ShowChartIcon, title: "Student Progress Management", desc: "Compilation performance components and analytics.", color: "#f59e0b" },
-  { icon: GroupWorkIcon, title: "Batch & Cohort Management", desc: "Group batches self-organized, auto manage.", color: "#06b6d4" },
-  { icon: WorkspacePremiumIcon, title: "Certificate Generation Module", desc: "Auto-mint with unique Certificate IDs, QR-secured.", color: "#ec4899" },
-  { icon: CreditCardIcon, title: "Subscription & Payment Management", desc: "Price plans, bundle plans, offline flows.", color: "#f97316" },
-  { icon: PhoneAndroidIcon, title: "Mobile-first Learner App", desc: "Full native builds for iOS and Android.", color: "#14b8a6" },
-  { icon: AdminPanelSettingsIcon, title: "Admin & Instructor Dashboard", desc: "Manage courses, students, revenue, certificates.", color: "#7c3aed" },
+  { icon: EditNoteIcon, title: "Course Builder & Content Management", desc: "Create courses, upload videos, quizzes, categories, and manage schedules easily.", color: "#3b82f6" },
+  { icon: LiveTvIcon, title: "Live Class & Webinar Integration", desc: "Plan and conduct live sessions with seamless scheduling and integration.", color: "#8b5cf6" },
+  { icon: QuizIcon, title: "Assessment & Quiz Engine", desc: "Support for MCQs, Q&A formats, and time-based assessments.", color: "#22c55e" },
+  { icon: ShowChartIcon, title: "Student Progress Management", desc: "Monitor learner performance with detailed reports and analytics", color: "#f59e0b" },
+  { icon: GroupWorkIcon, title: "Batch & Cohort Management", desc: "Manage student groups, batches, and automate enrollments.", color: "#06b6d4" },
+  { icon: WorkspacePremiumIcon, title: "Certificate Generation Module", desc: "Generate secure certificates with unique IDs and QR verification.", color: "#ec4899" },
+  { icon: CreditCardIcon, title: "Subscription & Payment Management", desc: "Flexible pricing plans, bundles, and offline payment options.", color: "#f97316" },
+  { icon: PhoneAndroidIcon, title: "Mobile-first Learner App", desc: "Fully responsive apps for Android and iOS users", color: "#14b8a6" },
+  { icon: AdminPanelSettingsIcon, title: "Admin & Instructor Dashboard", desc: "Manage courses, students, revenue, and reports from a single dashboard.", color: "#7c3aed" },
 ];
 
 const LMSFeatures = () => (
@@ -28,7 +28,7 @@ const LMSFeatures = () => (
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 8 }}>
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>What We Build – Feature Overview</Typography>
-        <Typography sx={{ color: "#64748b", fontSize: "16px" }}>Dominant and capability of every feature and smaller vertices.</Typography>
+        <Typography sx={{ color: "#64748b", fontSize: "16px" }}>A leading LMS Software Development Company delivering powerful features and <br/> complete learning solutions for modern education platforms.</Typography>
       </Box>
       <Grid container spacing={3}>
         {features.map((f, i) => {

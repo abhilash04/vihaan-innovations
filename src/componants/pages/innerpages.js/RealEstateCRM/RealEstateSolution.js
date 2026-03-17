@@ -40,8 +40,8 @@ const SolutionCard = ({ icon: Icon, title, delay }) => (
         }
       }}
     >
-      <Box 
-        sx={{ 
+      <Box
+        sx={{
           mb: 2,
           color: "#0B2046",
           display: "flex",
@@ -61,7 +61,7 @@ const SolutionCard = ({ icon: Icon, title, delay }) => (
 const RealEstateSolution = () => {
   return (
     <Box sx={{ position: "relative", py: 12, overflow: "hidden" }}>
-      
+
       {/* Background shape */}
       <Box sx={{
         position: 'absolute',
@@ -87,39 +87,45 @@ const RealEstateSolution = () => {
       </Box>
 
       <Container maxWidth="md" sx={{ position: "relative", zIndex: 2 }}>
-        
+
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
           <Typography sx={{ color: "#0B2046", fontWeight: 600, mb: 1, fontSize: "16px", textTransform: "uppercase", letterSpacing: "1px" }}>
             Our Solution
           </Typography>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", mb: 3, fontSize: { xs: "32px", md: "46px" }, lineHeight: 1.2 }}>
-            Everything your real estate business needs, built as one platform
+            Everything your real estate business requires, built into a single platform.
           </Typography>
           <Typography sx={{ color: "#333", fontSize: "18px", lineHeight: 1.6 }}>
-            From listing management to post-sale documentation, we design and develop every piece your team actually uses.
+            Our real estate CRM software helps manage everything from property listings management  to post-sale work in one place. It makes it easy for your team to handle leads, clients, and deals efficiently.
           </Typography>
         </Box>
 
         {/* 3x2 Grid */}
-        <Grid container spacing={3} justifyContent="center" sx={{ maxWidth: "800px", mx: "auto" }}>
+        <Grid
+          container
+          columnSpacing={3}
+          rowSpacing={15}
+          justifyContent="center"
+          sx={{ maxWidth: "800px", mx: "auto" }}
+        >
           <Grid item xs={12} sm={6} md={4}>
-            <SolutionCard icon={DomainOutlinedIcon} title="Property Listing Portal" delay={0.1} />
+            <SolutionCard icon={DomainOutlinedIcon} title="Property Listings Management" delay={0.1} />
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
-            <SolutionCard icon={MagnetOutlinedIcon} title="Lead Capture & Routing" delay={0.2} />
+            <SolutionCard icon={MagnetOutlinedIcon} title="Lead Generation & Distribution" delay={0.2} />
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
-            <SolutionCard icon={ShowChartOutlinedIcon} title="Sales CRM" delay={0.3} />
+            <SolutionCard icon={ShowChartOutlinedIcon} title="Real Estate Sales CRM" delay={0.3} />
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
-            <SolutionCard icon={EventAvailableOutlinedIcon} title="Site Visit Scheduler" delay={0.4} />
+            <SolutionCard icon={EventAvailableOutlinedIcon} title="Site Visit Booking System" delay={0.4} />
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
-            <SolutionCard icon={DescriptionOutlinedIcon} title="Document Management" delay={0.5} />
+            <SolutionCard icon={DescriptionOutlinedIcon} title="Document & File Management" delay={0.5} />
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
-            <SolutionCard icon={InsertChartOutlinedIcon} title="Analytics Dashboard" delay={0.6} />
+            <SolutionCard icon={InsertChartOutlinedIcon} title="Reports & Analytics Dashboard" delay={0.6} />
           </Grid>
         </Grid>
 

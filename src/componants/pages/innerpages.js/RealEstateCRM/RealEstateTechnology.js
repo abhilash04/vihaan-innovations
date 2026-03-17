@@ -61,10 +61,10 @@ const RealEstateTechnology = () => {
             Technology
           </Typography>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", mb: 3, fontSize: { xs: "32px", md: "46px" }, lineHeight: 1.2 }}>
-            Built on a modern, scalable stack
+            Built with a modern and scalable technology stack
           </Typography>
           <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "18px", lineHeight: 1.6 }}>
-            Built on a modern, scalable stack created specifically for robust real estate platforms, ensuring security, performance, and seamless integrations.
+            Developed using advanced technologies specially designed for <span><strong>Real Estate CRM Development Software India</strong></span>, ensuring high security, reliable performance, and smooth integrations for real estate platforms.
           </Typography>
         </Box>
 
