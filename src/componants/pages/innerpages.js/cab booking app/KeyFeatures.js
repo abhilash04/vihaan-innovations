@@ -55,7 +55,7 @@ const KeyFeatures = () => {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 8,
         px: 4,
         background: "#ffffff", // Light background
         position: "relative",
@@ -71,7 +71,7 @@ const KeyFeatures = () => {
           transform: "translate(-50%, -50%)",
           width: "120%",
           height: "120%",
-          opacity: 0.03, 
+          opacity: 0.03,
           pointerEvents: "none",
           zIndex: 0,
           display: "flex",

@@ -233,7 +233,7 @@ const Header = () => {
         icon: Stethoscope,
         title: "Hospital Management",
         description: "Healthcare tool",
-        href: "/hospital-management",
+        href: "/hospital-management-system",
         color: "#4ADE80", // lime
       },
       {

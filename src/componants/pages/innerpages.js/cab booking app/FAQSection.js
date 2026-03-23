@@ -44,7 +44,7 @@ const FAQSection = () => {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 8,
         px: { xs: 4, md: 8 },
         background: "#f9f9f9", // Off-white contrast
         position: "relative",
@@ -180,7 +180,7 @@ const FAQSection = () => {
             Ready to hit the road?
           </Typography>
           <Typography sx={{ color: "#666", fontSize: "14px", mb: 3 }}>
-             Download our app and book your perfect drive today.
+            Download our app and book your perfect drive today.
           </Typography>
           <Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
             <Button

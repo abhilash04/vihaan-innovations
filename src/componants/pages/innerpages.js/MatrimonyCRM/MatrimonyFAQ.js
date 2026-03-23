@@ -30,22 +30,17 @@ const MatrimonyFAQ = () => {
   };
 
   return (
-    <Box sx={{ bgcolor: "#e3f2fd", py: 12 }}> {/* Light cyan matching the mock's FAQ section */}
+    <Box sx={{ bgcolor: "#e3f2fd", py: 8 }}> {/* Light cyan matching the mock's FAQ section */}
       <Container maxWidth="md">
-        
+
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
           <Box sx={{ display: "inline-block", mb: 1 }}>
-            <Typography sx={{ 
-              fontWeight: 800, color: "#0B2046", fontSize: "28px", 
-              display: "flex", alignItems: "center", gap: 1, 
-              justifyContent: "center" 
+            <Typography sx={{
+              fontWeight: 800, color: "#0B2046", fontSize: "28px",
+              display: "flex", alignItems: "center", gap: 1,
+              justifyContent: "center"
             }}>
-              <Box component="span" sx={{ 
-                width: 32, height: 32, borderRadius: "50%", 
-                border: "2px solid #0B2046", display: "flex", 
-                alignItems: "center", justifyContent: "center", fontSize: "18px" 
-              }}>14</Box>
               FAQ — Address Last-Mile Objections
             </Typography>
           </Box>
@@ -61,8 +56,8 @@ const MatrimonyFAQ = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
             >
-              <Accordion 
-                expanded={expanded === `panel${index}`} 
+              <Accordion
+                expanded={expanded === `panel${index}`}
                 onChange={handleChange(`panel${index}`)}
                 elevation={0}
                 disableGutters

@@ -16,6 +16,7 @@ import MatrimonyIntegrations from "./MatrimonyIntegrations";
 import MatrimonyWhyUs from "./MatrimonyWhyUs";
 import MatrimonyFAQ from "./MatrimonyFAQ";
 import MatrimonyCTA from "./MatrimonyCTA";
+import MatrimonyTestimonal from "./MatrimonyTestimonal";
 
 const MatrimonyHomepage = () => {
   return (
@@ -36,6 +37,9 @@ const MatrimonyHomepage = () => {
         <MatrimonyWhyUs />
         <MatrimonyFAQ />
         <MatrimonyCTA />
+        <MatrimonyTestimonal />
+
+
       </Box>
       <FooterAndPopup />
     </Box>

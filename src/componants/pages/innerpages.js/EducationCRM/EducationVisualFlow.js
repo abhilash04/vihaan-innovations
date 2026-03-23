@@ -99,7 +99,7 @@ const FeatureCard = ({ item, index }) => (
 
 const EducationVisualFlow = () => {
   return (
-    <Box sx={{ py: 12, background: "linear-gradient(135deg, #0B2046 0%, #001D4A 100%)", position: "relative", overflow: "hidden" }}>
+    <Box sx={{ py: 8, background: "linear-gradient(135deg, #0B2046 0%, #001D4A 100%)", position: "relative", overflow: "hidden" }}>
 
       {/* Floating Bubbles Background Animation */}
       <Bubble size={300} color="rgba(0, 180, 216, 0.25)" top="10%" left="-10%" delay={0} />
@@ -109,7 +109,7 @@ const EducationVisualFlow = () => {
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography sx={{ color: "#00B4D8", fontWeight: 700, mb: 1, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px" }}>
             The Admission Journey
           </Typography>

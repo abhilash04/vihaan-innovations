@@ -130,7 +130,7 @@ const Testimonials = () => {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 8,
         background: "#ffffff", // Light background
         position: "relative",
         overflow: "hidden",

@@ -7,7 +7,7 @@ const PortalCTABand = () => {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 8,
         position: "relative",
         overflow: "hidden",
         bgcolor: "#081226", // Base Dark Section remains dark

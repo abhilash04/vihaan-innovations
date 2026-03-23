@@ -34,6 +34,7 @@ import LMSHomepage from "./componants/pages/innerpages.js/LMSPlatform/LMSHomepag
 import HotelHomepage from "./componants/pages/innerpages.js/HotelBooking/HotelHomepage";
 import ChatbotHomepage from "./componants/pages/innerpages.js/AIChatbot/ChatbotHomepage";
 import HRMHomepage from "./componants/pages/innerpages.js/HRMSoftware/HRMHomepage";
+import HMSHomepage from "./componants/pages/innerpages.js/HospitalManagement/HMSHomepage";
 
 function App() {
   return (
@@ -76,6 +77,7 @@ function App() {
             <Route path="/hotel-booking" element={<HotelHomepage />} />
             <Route path="/ai-chatbot" element={<ChatbotHomepage />} />
             <Route path="/hrm-software" element={<HRMHomepage />} />
+            <Route path="/hospital-management-system" element={<HMSHomepage />} />
             <Route path="/organica" element={<OrganicaHomePage />} />
 
           </Routes>

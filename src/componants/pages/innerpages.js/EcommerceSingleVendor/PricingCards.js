@@ -135,7 +135,7 @@ const pricingPlans = [
 
 const PricingCards = () => {
   return (
-    <Box sx={{ py: 12, backgroundColor: "#fff" }}>
+    <Box sx={{ py: 8, backgroundColor: "#fff" }}>
       <Container maxWidth="lg">
         {/* Header Section */}
         <Box sx={{ textAlign: "center", mb: 8, animation: `${fadeInUp} 0.8s ease-out` }}>
