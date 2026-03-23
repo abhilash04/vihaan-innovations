@@ -48,7 +48,7 @@ const ResortBenefits = () => {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 8,
         bgcolor: "#0A111E", // Dark Navy
         color: "#F5F5F0",
       }}

@@ -16,7 +16,7 @@ const WhyChooseUs = () => {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 8,
         px: { xs: 4, md: 8 },
         background: "#ffffff", // Light background
         position: "relative",

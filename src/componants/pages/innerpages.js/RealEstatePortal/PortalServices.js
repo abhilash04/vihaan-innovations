@@ -18,7 +18,7 @@ const PortalServices = () => {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 8,
         bgcolor: "#081226", // Dark base
         color: "#FFFFFF",
         position: "relative",

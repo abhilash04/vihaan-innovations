@@ -58,30 +58,25 @@ const bottomCards = [
 
 const MatrimonyPrivacyTrust = () => {
   return (
-    <Box sx={{ bgcolor: "#0B2046", py: 12 }}> {/* Deep navy background */}
+    <Box sx={{ bgcolor: "#0B2046", py: 8 }}> {/* Deep navy background */}
       <Container maxWidth="md">
-        
+
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
           <Box sx={{ display: "inline-block", mb: 1 }}>
-            <Typography sx={{ 
-              fontWeight: 800, color: "#ffffff", fontSize: "28px", 
-              display: "flex", alignItems: "center", gap: 1, 
-              justifyContent: "center" 
+            <Typography sx={{
+              fontWeight: 800, color: "#ffffff", fontSize: "28px",
+              display: "flex", alignItems: "center", gap: 1,
+              justifyContent: "center"
             }}>
-              <Box component="span" sx={{ 
-                width: 32, height: 32, borderRadius: "50%", 
-                border: "2px solid #ffffff", display: "flex", 
-                alignItems: "center", justifyContent: "center", fontSize: "18px" 
-              }}>7</Box>
               Privacy & Trust Architecture
             </Typography>
           </Box>
         </Box>
 
         {/* Central Content Box */}
-        <Box sx={{ position: "relative", maxWidth: "800px", mx: "auto" }}>
-          
+        <Box sx={{ position: "relative", maxWidth: "800px", mx: "auto", mb: 2 }}>
+
           {/* Crucially Important Section (Top Row) */}
           <Box sx={{ bgcolor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "16px", p: 3, mb: 3 }}>
             <Typography sx={{ color: "#ffffff", textAlign: "center", fontWeight: 700, fontSize: "14px", mb: 3, textTransform: "uppercase", letterSpacing: "1px" }}>
@@ -99,8 +94,8 @@ const MatrimonyPrivacyTrust = () => {
           {/* Tiered Section (Bottom Row) */}
           <Box sx={{ display: "flex" }}>
             {/* Tiered Label */}
-            <Box sx={{ 
-              bgcolor: "rgba(0, 180, 216, 0.2)", 
+            <Box sx={{
+              bgcolor: "rgba(0, 180, 216, 0.2)",
               border: "1px solid rgba(0, 180, 216, 0.5)",
               color: "#ffffff",
               display: "flex",
@@ -118,11 +113,11 @@ const MatrimonyPrivacyTrust = () => {
             }}>
               Tiered
             </Box>
-            
-            <Box sx={{ 
-              flexGrow: 1, 
-              bgcolor: "rgba(255,255,255,0.1)", 
-              border: "1px solid rgba(255,255,255,0.1)", 
+
+            <Box sx={{
+              flexGrow: 1,
+              bgcolor: "rgba(255,255,255,0.1)",
+              border: "1px solid rgba(255,255,255,0.1)",
               borderLeft: "none",
               borderTopRightRadius: "16px",
               borderBottomRightRadius: "16px",

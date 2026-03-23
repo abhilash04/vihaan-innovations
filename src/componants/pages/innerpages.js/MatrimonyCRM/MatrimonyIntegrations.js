@@ -35,22 +35,17 @@ const IntegrationNode = ({ icon: Icon, label, side, delay, subLabel }) => {
 
 const MatrimonyIntegrations = () => {
   return (
-    <Box sx={{ bgcolor: "#F8FAFC", py: 12, position: "relative", overflow: "hidden" }}> 
+    <Box sx={{ bgcolor: "#F8FAFC", py: 8, position: "relative", overflow: "hidden" }}>
       <Container maxWidth="md">
-        
+
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
           <Box sx={{ display: "inline-block", mb: 1 }}>
-            <Typography sx={{ 
-              fontWeight: 800, color: "#0B2046", fontSize: "28px", 
-              display: "flex", alignItems: "center", gap: 1, 
-              justifyContent: "center" 
+            <Typography sx={{
+              fontWeight: 800, color: "#0B2046", fontSize: "28px",
+              display: "flex", alignItems: "center", gap: 1,
+              justifyContent: "center"
             }}>
-              <Box component="span" sx={{ 
-                width: 32, height: 32, borderRadius: "50%", 
-                border: "2px solid #0B2046", display: "flex", 
-                alignItems: "center", justifyContent: "center", fontSize: "18px" 
-              }}>11</Box>
               Integrations & Compatibility
             </Typography>
           </Box>
@@ -60,8 +55,8 @@ const MatrimonyIntegrations = () => {
         </Box>
 
         {/* Integration Hub Diagram */}
-        <Box sx={{ position: "relative", py: 8, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          
+        <Box sx={{ position: "relative", py: 4, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+
           {/* Animated Connective Lines Layer */}
           <Box sx={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0, display: { xs: 'none', md: 'block' } }}>
             <svg width="100%" height="100%" viewBox="0 0 800 400" preserveAspectRatio="none">
@@ -114,7 +109,7 @@ const MatrimonyIntegrations = () => {
               >
                 <AccountTreeIcon sx={{ color: "#ffffff", fontSize: 40, mb: 1 }} />
                 <Typography sx={{ color: "#ffffff", fontWeight: 800, fontSize: "12px", lineHeight: 1.2 }}>
-                  Central<br/>matrimony<br/>CRM
+                  Central<br />matrimony<br />CRM
                 </Typography>
               </Paper>
             </motion.div>

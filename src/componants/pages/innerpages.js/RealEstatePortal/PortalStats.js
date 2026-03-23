@@ -50,7 +50,7 @@ const PortalStats = () => {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 8,
         background: "#fff", // Deep Blue
         color: "#000",
         position: "relative",

@@ -14,7 +14,7 @@ const ResortVisualBreak = () => {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 8,
         bgcolor: "#F9F6F0", // Light Cream/Ivory
         color: "#0A111E", // Dark Navy Text
         position: "relative",

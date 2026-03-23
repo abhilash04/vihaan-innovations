@@ -16,26 +16,21 @@ const diffs = [
 
 const MatrimonyWhyUs = () => {
   return (
-    <Box sx={{ bgcolor: "#F8FAFC", py: 12 }}> {/* Light blue-gray background matching the previous flow sections */}
+    <Box sx={{ bgcolor: "#0B2046", py: 8 }}> {/* Light blue-gray background matching the previous flow sections */}
       <Container maxWidth="lg">
-        
+
         {/* Why Us Section Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
-          <Box sx={{ display: "inline-block", mb: 1 }}>
-            <Typography sx={{ 
-              fontWeight: 800, color: "#0B2046", fontSize: "28px", 
-              display: "flex", alignItems: "center", gap: 1, 
-              justifyContent: "center" 
+        <Box sx={{ textAlign: "center", mb: 6 }}>
+          <Box sx={{ display: "inline-block", mb: 2 }}>
+            <Typography sx={{
+              fontWeight: 800, color: "#fff", fontSize: "28px",
+              display: "flex", alignItems: "center", gap: 1,
+              justifyContent: "center"
             }}>
-              <Box component="span" sx={{ 
-                width: 32, height: 32, borderRadius: "50%", 
-                border: "2px solid #0B2046", display: "flex", 
-                alignItems: "center", justifyContent: "center", fontSize: "18px" 
-              }}>12</Box>
               Why Vihaan Innovations
             </Typography>
           </Box>
-          <Typography sx={{ color: "#666", fontSize: "16px" }}>
+          <Typography sx={{ color: "#fff", fontSize: "17px" }}>
             4 differentiators for matrimony context
           </Typography>
         </Box>
@@ -70,9 +65,9 @@ const MatrimonyWhyUs = () => {
                   }}
                 >
                   {/* Floating Number Tag */}
-                  <Box sx={{ 
-                    position: "absolute", top: 15, left: 15, 
-                    color: "#0B2046", fontWeight: 800, fontSize: "24px", opacity: 0.5 
+                  <Box sx={{
+                    position: "absolute", top: 15, left: 15,
+                    color: "#0B2046", fontWeight: 800, fontSize: "24px", opacity: 0.5
                   }}>
                     {diff.num}
                   </Box>
@@ -90,25 +85,25 @@ const MatrimonyWhyUs = () => {
         </Grid>
 
         {/* Testimonial Section Header */}
-        <Box sx={{ textAlign: "center", mb: 6 }}>
+        {/* <Box sx={{ textAlign: "center", mb: 6 }}>
           <Box sx={{ display: "inline-block", mb: 1 }}>
-            <Typography sx={{ 
-              fontWeight: 800, color: "#0B2046", fontSize: "24px", 
-              display: "flex", alignItems: "center", gap: 1, 
-              justifyContent: "center" 
+            <Typography sx={{
+              fontWeight: 800, color: "#0B2046", fontSize: "24px",
+              display: "flex", alignItems: "center", gap: 1,
+              justifyContent: "center"
             }}>
-              <Box component="span" sx={{ 
-                width: 28, height: 28, borderRadius: "50%", 
-                border: "2px solid #0B2046", display: "flex", 
-                alignItems: "center", justifyContent: "center", fontSize: "14px" 
+              <Box component="span" sx={{
+                width: 28, height: 28, borderRadius: "50%",
+                border: "2px solid #0B2046", display: "flex",
+                alignItems: "center", justifyContent: "center", fontSize: "14px"
               }}>13</Box>
               Testimonial / Social Proof
             </Typography>
           </Box>
-        </Box>
+        </Box> */}
 
         {/* Full width quote block */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -116,14 +111,13 @@ const MatrimonyWhyUs = () => {
         >
           <Box sx={{ position: "relative", maxWidth: "800px", mx: "auto", px: { xs: 2, md: 6 }, py: 4 }}>
             <FormatQuoteIcon sx={{ position: "absolute", top: 0, left: 0, fontSize: 60, color: "rgba(0, 180, 216, 0.2)" }} />
-            
+
             <Typography sx={{ fontWeight: 600, color: "#1a1a1a", fontSize: { xs: "18px", md: "22px" }, lineHeight: 1.6, textAlign: "center", mb: 4, position: "relative", zIndex: 1 }}>
               The platform Vihaan built helped us double our matchmaking speed and build massive trust with families. Their admin tools are incredibly powerful and helped us manage 10,000 profiles with just 3 agents.
             </Typography>
-            
+
             <FormatQuoteIcon sx={{ position: "absolute", bottom: 60, right: 0, fontSize: 60, color: "rgba(0, 180, 216, 0.2)", transform: "scaleX(-1)" }} />
 
-            {/* Author */}
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 2 }}>
               <Box sx={{ width: 50, height: 50, borderRadius: "50%", bgcolor: "#e0e0e0", display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" }}>
                 <SupervisedUserCircleIcon sx={{ fontSize: 40, color: "#9e9e9e", mt: 1 }} />
@@ -133,13 +127,13 @@ const MatrimonyWhyUs = () => {
                   Priya Singh
                 </Typography>
                 <Typography sx={{ color: "#666", fontSize: "13px", fontWeight: 500 }}>
-                  Founder<br/>Hindu Matrimony Bureau
+                  Founder<br />Hindu Matrimony Bureau
                 </Typography>
               </Box>
             </Box>
 
           </Box>
-        </motion.div>
+        </motion.div> */}
 
       </Container>
     </Box>

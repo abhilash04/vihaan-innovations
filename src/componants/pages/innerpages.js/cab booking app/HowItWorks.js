@@ -30,7 +30,7 @@ const HowItWorks = () => {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 8,
         px: 4,
         background: "#ffffff", // Light background
         position: "relative",
