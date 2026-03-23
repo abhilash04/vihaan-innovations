@@ -9,7 +9,7 @@ const glowStyle = {
 
 const HRMBanner = () => (
   <Box sx={{
-    background: "linear-gradient(135deg, #0d0614 0%, #150a22 40%, #0c0411 100%)",
+    background: "linear-gradient(135deg, #0A1E3F 0%, #112A46 50%, #0A192F 100%)",
     position: "relative", overflow: "hidden",
     pt: { xs: 12, md: 16 }, pb: { xs: 10, md: 18 }
   }}>

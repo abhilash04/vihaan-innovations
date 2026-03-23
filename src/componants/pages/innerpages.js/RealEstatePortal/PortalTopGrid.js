@@ -16,7 +16,7 @@ const PortalTopGrid = () => {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 8,
         bgcolor: "#081226", // Pure Dark Base
         color: "#FFFFFF",
         position: "relative",

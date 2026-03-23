@@ -15,10 +15,10 @@ const StatBox = ({ icon: Icon, value, label, delay }) => (
     style={{ height: '100%' }}
   >
     <Box sx={{ p: 2, textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
-      <Box sx={{ 
-        color: "#ffffff", 
+      <Box sx={{
+        color: "#ffffff",
         mb: 2,
-        "& > svg": { fontSize: 40, opacity: 0.8 } 
+        "& > svg": { fontSize: 40, opacity: 0.8 }
       }}>
         <Icon />
       </Box>
@@ -34,9 +34,9 @@ const StatBox = ({ icon: Icon, value, label, delay }) => (
 
 const MatrimonyProvenImpact = () => {
   return (
-    <Box sx={{ bgcolor: "#0B2046", py: 10, borderBottom: "1px solid rgba(255,255,255,0.05)" }}> {/* Same navy blue as Privacy & Trust */}
+    <Box sx={{ bgcolor: "#0B2046", py: 8, borderBottom: "1px solid rgba(255,255,255,0.05)" }}> {/* Same navy blue as Privacy & Trust */}
       <Container maxWidth="lg">
-        
+
         {/* The design just shows 4 stats in a row, no header */}
         <Grid container spacing={4} justifyContent="center" alignItems="center">
           <Grid item xs={6} md={3}>

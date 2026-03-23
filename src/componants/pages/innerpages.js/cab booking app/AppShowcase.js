@@ -120,7 +120,7 @@ const AppShowcase = () => {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 8,
         px: 4,
         background: "#f9f9f9", // Off-white dividing band
         position: "relative",
@@ -245,8 +245,8 @@ const AppShowcase = () => {
         </Box>
 
         <motion.div
-           animate={{ y: [0, -15, 0] }}
-           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          animate={{ y: [0, -15, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         >
           <Box sx={phoneFrameStyle}>
             <AnimatePresence mode="wait">

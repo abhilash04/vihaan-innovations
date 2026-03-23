@@ -53,7 +53,7 @@ const CarCategories = () => {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 8,
         px: 4,
         background: "#f9f9f9", // Off-white contrast band
         position: "relative",
@@ -202,12 +202,12 @@ const CarCategories = () => {
 
             {/* Trigger container trigger for hover items */}
             <Box
-               sx={{
-                 position: "absolute",
-                 inset: 0,
-                 zIndex: 3,
-                 "&:hover ~ .bottom-border": { width: "100%" },
-               }}
+              sx={{
+                position: "absolute",
+                inset: 0,
+                zIndex: 3,
+                "&:hover ~ .bottom-border": { width: "100%" },
+              }}
             />
 
             <Box

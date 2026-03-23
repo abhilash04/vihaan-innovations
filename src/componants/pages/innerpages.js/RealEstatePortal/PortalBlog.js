@@ -28,7 +28,7 @@ const PortalBlog = () => {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 8,
         bgcolor: "#0C1424", // Lighter Dark
         color: "#FFFFFF",
         position: "relative",

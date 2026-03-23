@@ -16,7 +16,7 @@ const PortalSolutions = () => {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 8,
         bgcolor: "#F8F6F2", // Lighter Dark
         color: "#0C1424",
         position: "relative",

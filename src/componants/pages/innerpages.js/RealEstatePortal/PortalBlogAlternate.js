@@ -28,7 +28,7 @@ const PortalBlogAlternate = () => {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 8,
         bgcolor: "#F8F6F2", // Light Cream/Off-white
         color: "#1A1E2B", // Dark Charcoal Text
         position: "relative",

@@ -8,6 +8,9 @@ import HRMAbout from "./HRMAbout";
 import HRMFeatures from "./HRMFeatures";
 import HRMProcess from "./HRMProcess";
 import HRMWhyUs from "./HRMWhyUs";
+import HRMTestimonials from "./HRMTestimonials";
+import HRMFAQ from "./HRMFAQ";
+import HRMCTA from "./HRMCTA";
 
 const HRMHomepage = () => {
   return (
@@ -20,6 +23,10 @@ const HRMHomepage = () => {
         <HRMFeatures />
         <HRMProcess />
         <HRMWhyUs />
+
+        <HRMFAQ />
+        <HRMCTA />
+        <HRMTestimonials />
       </Box>
       <FooterAndPopup />
     </Box>

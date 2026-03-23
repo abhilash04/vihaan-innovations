@@ -39,7 +39,7 @@ const ResortProcess = () => {
   return (
     <Box
       sx={{
-        py: 12,
+        py: 8,
         bgcolor: "rgba(255, 255, 255, 0.01)", // Slightly lighter dark
         color: "#F5F5F0",
         position: "relative",
@@ -185,13 +185,13 @@ const ResortProcess = () => {
             >
               <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                 <Box sx={{ width: "40px", height: "40px", borderRadius: "50%", border: "2px solid #D4AF37", display: "flex", alignItems: "center", justifyContent: "center", bgcolor: "#0A111E" }}>
-                   <Typography sx={{ color: "#D4AF37", fontWeight: 700 }}>{step.num}</Typography>
+                  <Typography sx={{ color: "#D4AF37", fontWeight: 700 }}>{step.num}</Typography>
                 </Box>
                 {index !== steps.length - 1 && <Box sx={{ flexGrow: 1, width: "2px", bgcolor: "#D4AF37", opacity: 0.3, my: 1 }} />}
               </Box>
               <Box sx={{ pt: 1 }}>
-                 <Typography sx={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, mb: 0.5 }}>{step.title}</Typography>
-                 <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.85rem", color: "rgba(245,245,240,0.6)", mb: 1 }}>{step.desc}</Typography>
+                <Typography sx={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, mb: 0.5 }}>{step.title}</Typography>
+                <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.85rem", color: "rgba(245,245,240,0.6)", mb: 1 }}>{step.desc}</Typography>
               </Box>
             </motion.div>
           ))}
