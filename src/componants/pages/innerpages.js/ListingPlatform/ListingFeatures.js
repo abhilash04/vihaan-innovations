@@ -51,11 +51,11 @@ const FeatureCard = ({ icon, title, desc, color, delay }) => (
         }
       }}
     >
-      <Box 
-        sx={{ 
-          color: color, 
+      <Box
+        sx={{
+          color: color,
           mb: 2,
-          "& > svg": { fontSize: 40 } 
+          "& > svg": { fontSize: 40 }
         }}
       >
         {icon}
@@ -72,11 +72,11 @@ const FeatureCard = ({ icon, title, desc, color, delay }) => (
 
 const ListingFeatures = () => {
   return (
-    <Box sx={{ bgcolor: "#fafafa", py: 14 }}>
+    <Box sx={{ bgcolor: "#fafafa", py: 8 }}>
       <Container maxWidth="lg">
-        
+
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
             Feature Overview
           </Typography>
@@ -86,7 +86,7 @@ const ListingFeatures = () => {
         </Box>
 
         {/* 4x2 Grid */}
-        <Grid container spacing={3}>
+        <Grid container spacing={3} rowSpacing={9} columnSpacing={2} mb={6}>
           {features.map((feature, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
               <FeatureCard {...feature} delay={index * 0.1} />

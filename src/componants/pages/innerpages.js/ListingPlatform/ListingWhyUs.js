@@ -21,7 +21,7 @@ const differentiators = [
 
 const ListingWhyUs = () => {
   return (
-    <Box sx={{ bgcolor: "#ffffff", py: 14 }}>
+    <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
       <Container maxWidth="lg">
 
         {/* Header */}
@@ -35,7 +35,7 @@ const ListingWhyUs = () => {
         </Box>
 
         {/* 3x2 Grid Differentiators */}
-        <Grid container spacing={3} sx={{ mb: 14 }}>
+        <Grid container spacing={3} sx={{ mb: 14 }} rowSpacing={10}>
           {differentiators.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -48,7 +48,7 @@ const ListingWhyUs = () => {
                   style={{ height: '100%' }}
                 >
                   <Paper elevation={0} sx={{
-                    p: 4,
+                    p: 3,
                     height: "100%",
                     borderRadius: "16px",
                     bgcolor: "#f8fafc",

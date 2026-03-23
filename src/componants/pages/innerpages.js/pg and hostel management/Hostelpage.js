@@ -16,7 +16,7 @@ import PgBanner from "./PgBanner";
 const Hostelpage = () => {
   return (
     <Grid>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <PgBanner />
       <ManagementFeatures />

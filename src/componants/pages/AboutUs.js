@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Header from "../common/Header";
 import HeaderSec from "../common/HeaderSec";
 import Footer from "../common/Footer";
 import {
@@ -47,7 +46,6 @@ const AboutUs = () => {
   }, []);
   return (
     <>
-      <Header />
       <HeaderSec />
       <InnerPageBanner />
       <ITServiceSection />

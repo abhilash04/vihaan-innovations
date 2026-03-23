@@ -16,7 +16,7 @@ import ReviewsMultiVendor from "./ReviewsMultiVendor";
 const EcommerceMultiVendorHomepage = () => {
   return (
     <Grid>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <VideoSection />
       <MultiVendorMobileApps />

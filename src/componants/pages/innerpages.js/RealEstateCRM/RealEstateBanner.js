@@ -6,7 +6,7 @@ import InsertChartOutlinedIcon from '@mui/icons-material/InsertChartOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
+import img from '../../../../assets/Real estate tech for modern business.png'
 const StatCard = ({ icon: Icon, value, label, delay }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
@@ -51,7 +51,7 @@ const RealEstateBanner = () => {
     <Box
       sx={{
         position: "relative",
-        minHeight: "100vh",
+        minHeight: "90vh",
         bgcolor: "#0B1120", // Dark navy background
         overflow: "hidden",
         display: "flex",
@@ -140,7 +140,7 @@ const RealEstateBanner = () => {
               </Typography>
 
               <Typography variant="h1" sx={{ color: "#ffffff", fontWeight: 800, fontSize: { xs: "40px", md: "56px" }, lineHeight: 1.1, mb: 3 }}>
-                Digital solutions that help close property deals faster              
+                Digital solutions that help close property deals faster
               </Typography>
 
               <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "18px", lineHeight: 1.6, mb: 5, maxWidth: "500px" }}>
@@ -172,8 +172,8 @@ const RealEstateBanner = () => {
                 <Button
                   variant="outlined"
                   sx={{
-                    borderColor: "rgba(255,255,255,0.3)",
-                    color: "#ffffff",
+                    borderColor: "linear-gradient(90deg, #4FACFE 0%, #00F2FE 100%)",
+                    color: "#000",
                     fontWeight: 600,
                     fontSize: "16px",
                     px: 4,
@@ -181,7 +181,7 @@ const RealEstateBanner = () => {
                     borderRadius: "30px",
                     textTransform: "none",
                     "&:hover": {
-                      borderColor: "#ffffff",
+                      borderColor: "linear-gradient(90deg, #329af4ff 0%, #00a1aaff 100%)",
                       bgcolor: "rgba(255,255,255,0.05)",
                     }
                   }}
@@ -194,41 +194,8 @@ const RealEstateBanner = () => {
 
           {/* Right Stats Grid Area */}
           <Grid item xs={12} md={6}>
-            <Box sx={{ position: "relative", maxWidth: "450px", ml: "auto", mr: { xs: "auto", md: 0 } }}>
-              <Grid container spacing={3}>
-                <Grid item xs={6}>
-                  <StatCard
-                    icon={TrendingUpIcon}
-                    value="3x"
-                    label={<>Lead<br />Conversion Rate</>}
-                    delay={0.2}
-                  />
-                </Grid>
-                <Grid item xs={6}>
-                  <StatCard
-                    icon={InsertChartOutlinedIcon}
-                    value="60%"
-                    label={<>Less<br />Manual Work</>}
-                    delay={0.4}
-                  />
-                </Grid>
-                <Grid item xs={6}>
-                  <StatCard
-                    icon={CalendarMonthOutlinedIcon}
-                    value="90"
-                    label={<>Days to Go<br />Live</>}
-                    delay={0.6}
-                  />
-                </Grid>
-                <Grid item xs={6}>
-                  <StatCard
-                    icon={AccessTimeOutlinedIcon}
-                    value="24/7"
-                    label={<>Self-serve<br />Portal</>}
-                    delay={0.8}
-                  />
-                </Grid>
-              </Grid>
+            <Box sx={{ position: "relative", maxWidth: "500px", ml: "auto", mr: { xs: "auto", md: 0 } }}>
+              <img src={img} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: '20px' }} />
             </Box>
           </Grid>
 

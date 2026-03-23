@@ -20,9 +20,9 @@ const ProblemCard = ({ icon: Icon, title, delay }) => (
       sx={{
         p: 4,
         borderRadius: "24px",
-        bgcolor: "#ffffff",
-        border: "1px solid rgba(0, 180, 216, 0.2)",
-        boxShadow: "0 10px 40px rgba(0, 180, 216, 0.08)",
+        bgcolor: "rgba(0, 180, 216, 0.2)",
+        border: "1px solid rgba(255, 255, 255, 0.2)",
+        boxShadow: "0 10px 40px rgba(255, 255, 255, 0.08)",
         height: "100%",
         display: "flex",
         flexDirection: "column",
@@ -36,14 +36,14 @@ const ProblemCard = ({ icon: Icon, title, delay }) => (
         }
       }}
     >
-      <Box 
-        sx={{ 
-          width: 80, 
-          height: 80, 
-          borderRadius: "20px", 
-          bgcolor: "#f0f8ff", 
-          display: "flex", 
-          alignItems: "center", 
+      <Box
+        sx={{
+          width: 80,
+          height: 80,
+          borderRadius: "20px",
+          bgcolor: "#f0f8ff",
+          display: "flex",
+          alignItems: "center",
           justifyContent: "center",
           mb: 3,
           color: "#00B4D8"
@@ -60,8 +60,8 @@ const ProblemCard = ({ icon: Icon, title, delay }) => (
 
 const RealEstateProblem = () => {
   return (
-    <Box sx={{ py: 10, bgcolor: "#ffffff", position: "relative", overflow: "hidden" }}>
-      
+    <Box sx={{ pb: 14, pt: 6, bgcolor: "#ffffff", position: "relative", overflow: "hidden" }}>
+
       {/* Decorative Top Arrow */}
       <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
         <motion.div
@@ -73,7 +73,7 @@ const RealEstateProblem = () => {
       </Box>
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
-        
+
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8, maxWidth: "800px", mx: "auto" }}>
           <Typography sx={{ color: "#00B4D8", fontWeight: 600, mb: 2, fontSize: "16px", textTransform: "uppercase", letterSpacing: "1px" }}>
@@ -90,31 +90,31 @@ const RealEstateProblem = () => {
         {/* Cards Grid */}
         <Grid container spacing={4}>
           <Grid item xs={12} sm={6} md={3}>
-            <ProblemCard 
-              icon={AssignmentOutlinedIcon} 
-              title="No Central Lead System" 
-              delay={0.1} 
+            <ProblemCard
+              icon={AssignmentOutlinedIcon}
+              title="No Central Lead System"
+              delay={0.1}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <ProblemCard 
-              icon={HomeWorkOutlinedIcon} 
-              title="Property Listings Are a Nightmare" 
-              delay={0.2} 
+            <ProblemCard
+              icon={HomeWorkOutlinedIcon}
+              title="Property Listings Are a Nightmare"
+              delay={0.2}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <ProblemCard 
-              icon={VisibilityOffOutlinedIcon} 
-              title="Zero Visibility on Agent Performance" 
-              delay={0.3} 
+            <ProblemCard
+              icon={VisibilityOffOutlinedIcon}
+              title="Zero Visibility on Agent Performance"
+              delay={0.3}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <ProblemCard 
-              icon={NotificationsOffOutlinedIcon} 
-              title="Follow-ups Fall Through the Cracks" 
-              delay={0.4} 
+            <ProblemCard
+              icon={NotificationsOffOutlinedIcon}
+              title="Follow-ups Fall Through the Cracks"
+              delay={0.4}
             />
           </Grid>
         </Grid>

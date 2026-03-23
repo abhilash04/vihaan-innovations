@@ -27,6 +27,7 @@ import HeaderSec from "../common/HeaderSec";
 import Footer from "../common/Footer";
 import bgImage from "../../assets/breadcrumb-bg.webp";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import InnerPageBanner from "./sections/InnerPageBanner";
 
 const ContactUs = () => {
   useEffect(() => {
@@ -34,49 +35,9 @@ const ContactUs = () => {
   }, []);
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
-      <Box
-        sx={{
-          backgroundImage: `url(${bgImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          py: 8,
-        }}
-      >
-        <Container maxWidth="lg">
-          <Box sx={{ textAlign: "center", mb: 2 }}>
-            <Typography
-              sx={{ fontSize: "35px", fontWeight: 600, color: "#27272f " }}
-            >
-              About Us
-            </Typography>
-          </Box>
-
-          <Breadcrumbs
-            separator={<NavigateNextIcon fontSize="small" />}
-            aria-label="breadcrumb"
-            sx={{ justifyContent: "center", display: "flex" }}
-          >
-            <Link
-              href="/"
-              component="a"
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                color: "#c24300",
-                fontSize: "24px",
-                textDecoration: "none", // optional: removes underline
-              }}
-            >
-              Home
-            </Link>
-            <Typography sx={{ color: "#00584b", fontSize: "24px" }}>
-              Contact Us:
-            </Typography>
-          </Breadcrumbs>
-        </Container>
-      </Box>
+      <InnerPageBanner />
 
       {/* Main Content */}
       <Box sx={{ backgroundColor: "#f4f2f9" }}>
@@ -104,7 +65,7 @@ const ContactUs = () => {
                   solution. over your business an all in one business data.
                 </Typography>
 
-                <Typography
+                <Typography 
                   variant="body1"
                   sx={{
                     fontWeight: 500,

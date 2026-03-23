@@ -12,7 +12,7 @@ const steps = [
 
 const ListingDeliveryProcess = () => {
   return (
-    <Box sx={{ bgcolor: "#ffffff", py: 14 }}>
+    <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
       <Container maxWidth="lg">
 
         {/* Header */}

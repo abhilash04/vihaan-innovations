@@ -21,6 +21,37 @@ const audiences = [
   { icon: <GroupsIcon />, title: "Niche Community\nDirectories", color: "#0f766e" } // Dark Teal
 ];
 
+// Floating Ambient Glow Sphere Component
+const Bubble = ({ size, color, top, left, right, bottom, delay }) => (
+  <motion.div
+    animate={{
+      y: [0, -15, 0],
+      x: [0, 10, 0],
+    }}
+    transition={{
+      duration: 5,
+      repeat: Infinity,
+      ease: "easeInOut",
+      delay,
+    }}
+    style={{
+      position: "absolute",
+      width: size,
+      height: size,
+      borderRadius: "50%",
+      background: color,
+      top,
+      left,
+      right,
+      bottom,
+      zIndex: 0,
+      filter: "blur(30px)",
+      opacity: 0.15, // Keep it subtle and light
+      pointerEvents: "none",
+    }}
+  />
+);
+
 const AudienceBox = ({ icon, title, color, delay }) => (
   <motion.div
     initial={{ opacity: 0, scale: 0.95 }}
@@ -33,7 +64,7 @@ const AudienceBox = ({ icon, title, color, delay }) => (
       elevation={0}
       sx={{
         p: 3,
-        borderRadius: "16px",
+        borderRadius: "20px", // slightly rounder
         bgcolor: color,
         color: "#ffffff",
         height: "100%",
@@ -42,26 +73,29 @@ const AudienceBox = ({ icon, title, color, delay }) => (
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
-        boxShadow: `0 10px 20px ${color}33`, // 20% opacity shadow of the box color
-        transition: "transform 0.3s ease",
+        boxShadow: `0 10px 25px ${color}33`,
+        transition: "all 0.3s ease",
+        cursor: "pointer",
         "&:hover": {
-          transform: "translateY(-5px)",
-          boxShadow: `0 15px 30px ${color}66`,
+          transform: "translateY(-8px)", // lift a bit more
+          boxShadow: `0 15px 35px ${color}55`,
         }
       }}
     >
-      <Box 
-        sx={{ 
-          width: 50, height: 50, borderRadius: "50%",
-          bgcolor: "rgba(255,255,255,0.2)",
+      <Box
+        sx={{
+          width: 55, height: 55, borderRadius: "50%",
+          bgcolor: "rgba(255,255,255,0.22)",
           display: "flex", justifyContent: "center", alignItems: "center",
-          mb: 2,
-          "& > svg": { fontSize: 28 } 
+          mb: 2.5,
+          transition: "transform 0.3s ease",
+          "& > svg": { fontSize: 30 },
+          ".MuiPaper-root:hover &": { transform: "scale(1.1)" } // scale icon on hover
         }}
       >
         {icon}
       </Box>
-      <Typography sx={{ fontWeight: 600, fontSize: "14px", lineHeight: 1.3, whiteSpace: "pre-line" }}>
+      <Typography sx={{ fontWeight: 700, fontSize: "15px", lineHeight: 1.3, whiteSpace: "pre-line" }}>
         {title}
       </Typography>
     </Paper>
@@ -70,12 +104,33 @@ const AudienceBox = ({ icon, title, color, delay }) => (
 
 const ListingWhoThisIsFor = () => {
   return (
-    <Box sx={{ bgcolor: "#ffffff", py: 12 }}>
-      <Container maxWidth="md">
-        
+    <Box
+      sx={{
+        bgcolor: "#ffffff",
+        py: 6,
+        position: "relative",
+        overflow: "hidden" // Clip bubbles
+      }}
+    >
+      {/* Background Floating Bubbles */}
+      <Bubble size={300} color="#3b82f6" top="-50px" left="-100px" delay={0} />
+      <Bubble size={400} color="#8b5cf6" bottom="-100px" right="-150px" delay={1} />
+      <Bubble size={200} color="#14b8a6" top="30%" left="15%" delay={2} />
+      <Bubble size={250} color="#ef4444" top="10%" right="20%" delay={0.5} />
+
+      <Container maxWidth="md" sx={{ position: "relative", zIndex: 1 }}>
+
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+          <Typography
+            variant="h2"
+            sx={{
+              fontWeight: 800,
+              color: "#1a1a1a",
+              fontSize: { xs: "28px", md: "36px" },
+              mb: 2
+            }}
+          >
             Who This Is For
           </Typography>
           <Typography sx={{ color: "#666", fontSize: "16px", mb: 1 }}>
@@ -83,8 +138,14 @@ const ListingWhoThisIsFor = () => {
           </Typography>
         </Box>
 
-        {/* 4x2 Color Block Grid */}
-        <Grid container spacing={3} justifyContent="center">
+        {/* 4x2 Color Block Grid with Spacing Fixes */}
+        <Grid
+          container
+          rowSpacing={10} // Fixes column overlap/touching vertically
+          columnSpacing={3}
+          justifyContent="center"
+          mb={8}
+        >
           {audiences.map((audience, index) => (
             <Grid item xs={6} sm={3} key={index}>
               <AudienceBox {...audience} delay={index * 0.1} />

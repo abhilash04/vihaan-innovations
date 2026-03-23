@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 import AssignmentTurnedInOutlinedIcon from '@mui/icons-material/AssignmentTurnedInOutlined';
 import CloudUploadOutlinedIcon from '@mui/icons-material/CloudUploadOutlined';
@@ -9,146 +9,143 @@ import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutli
 import CastForEducationOutlinedIcon from '@mui/icons-material/CastForEducationOutlined';
 
 const flowSteps = [
-  { id: 1, label: "Form", icon: <AssignmentTurnedInOutlinedIcon />, top: "25%", left: "45%" },
-  { id: 2, label: "Upload", icon: <CloudUploadOutlinedIcon />, top: "40%", left: "30%" },
-  { id: 3, label: "Onboarding", icon: <HowToRegOutlinedIcon />, top: "55%", left: "45%" },
-  { id: 4, label: "Payment", icon: <PaymentOutlinedIcon />, top: "70%", left: "70%" },
-  { id: 5, label: "Confirmation", icon: <CheckCircleOutlineOutlinedIcon />, top: "85%", left: "60%" },
-  { id: 6, label: "Class Start", icon: <CastForEducationOutlinedIcon />, top: "95%", left: "80%" }
+  { id: 1, label: "Form Submission", desc: "Smart forms capture prospect lead data effortlessly.", icon: <AssignmentTurnedInOutlinedIcon /> },
+  { id: 2, label: "Document Upload", desc: "Secure simplified vaults for student verification feeds.", icon: <CloudUploadOutlinedIcon /> },
+  { id: 3, label: "Onboarding Review", desc: "Automated counsellor checks & prospect grading logs.", icon: <HowToRegOutlinedIcon /> },
+  { id: 4, label: "Fee Payment", desc: "Integrated gateways with automatic invoice reconciliations.", icon: <PaymentOutlinedIcon /> },
+  { id: 5, label: "Approval & Confirmation", desc: "Digital seat locking and welcome criteria releases.", icon: <CheckCircleOutlineOutlinedIcon /> },
+  { id: 6, label: "Classroom Entry", desc: "Seamless activation handover into live LMS modules.", icon: <CastForEducationOutlinedIcon /> }
 ];
 
-const FlowNode = ({ item, index }) => (
+const Bubble = ({ size, color, top, left, right, bottom, delay }) => (
   <motion.div
-    initial={{ opacity: 0, scale: 0 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    viewport={{ once: true, margin: "-100px" }}
-    transition={{ duration: 0.5, delay: index * 0.2 }}
+    animate={{
+      y: [0, -20, 0],
+      scale: [1, 1.05, 1],
+    }}
+    transition={{
+      duration: 7,
+      repeat: Infinity,
+      ease: "easeInOut",
+      delay,
+    }}
     style={{
       position: "absolute",
-      top: item.top,
-      left: item.left,
-      transform: "translate(-50%, -50%)",
-      display: "flex",
-      alignItems: "center",
-      gap: "10px",
-      zIndex: 2
+      width: size,
+      height: size,
+      borderRadius: "50%",
+      background: `radial-gradient(circle, ${color} 0%, rgba(255,255,255,0) 70%)`,
+      filter: "blur(50px)",
+      top, left, right, bottom,
+      zIndex: 0,
+      pointerEvents: "none"
     }}
+  />
+);
+
+const FeatureCard = ({ item, index }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5, delay: index * 0.1 }}
+    style={{ height: '100%' }}
   >
     <Paper
       elevation={0}
       sx={{
-        width: 60, height: 60, borderRadius: "50%",
-        bgcolor: "#ffffff", border: "2px solid #00B4D8",
-        display: "flex", justifyContent: "center", alignItems: "center",
-        color: "#0B2046",
-        boxShadow: "0 10px 20px rgba(0, 180, 216, 0.2)"
+        p: 3.5,
+        height: "100%",
+        borderRadius: "24px",
+        bgcolor: "rgba(255, 255, 255, 0.03)",
+        border: "1px solid rgba(255, 255, 255, 0.08)",
+        backdropFilter: "blur(10px)",
+        display: "flex",
+        alignItems: "flex-start",
+        gap: 2,
+        transition: "all 0.3s ease",
+        "&:hover": {
+          transform: "translateY(-5px)",
+          bgcolor: "rgba(255, 255, 255, 0.05)",
+          borderColor: "rgba(0, 180, 216, 0.3)",
+          boxShadow: "0 15px 35px rgba(0, 180, 216, 0.15)"
+        }
       }}
     >
-      {item.icon}
+      <Box
+        sx={{
+          width: 45, height: 45, borderRadius: "12px",
+          bgcolor: "rgba(0, 180, 216, 0.15)", color: "#00B4D8",
+          display: "flex", alignItems: "center", justifyContent: "center",
+          flexShrink: 0, mt: 0.5
+        }}
+      >
+        {item.icon}
+      </Box>
+      <Box>
+        <Typography sx={{ color: "#00B4D8", fontWeight: 700, fontSize: "14px", mb: 0.5 }}>
+          STEP 0{index + 1}
+        </Typography>
+        <Typography variant="h6" sx={{ fontWeight: 800, color: "#ffffff", fontSize: "18px", mb: 1 }}>
+          {item.label}
+        </Typography>
+        <Typography sx={{ color: "rgba(255, 255, 255, 0.65)", fontSize: "14px", lineHeight: 1.5 }}>
+          {item.desc}
+        </Typography>
+      </Box>
     </Paper>
-    <Typography sx={{ fontWeight: 700, color: "#1a1a1a", fontSize: "16px", bgcolor: "rgba(255,255,255,0.8)", px: 1.5, py: 0.5, borderRadius: "8px" }}>
-      {item.label}
-    </Typography>
   </motion.div>
 );
 
 const EducationVisualFlow = () => {
   return (
-    <Box sx={{ position: "relative", bgcolor: "#e0fbfc", pt: 16, pb: 20, overflow: "hidden" }}>
-      
-      {/* Background Top Wave connecting from Platform modules */}
-      <Box sx={{ position: "absolute", top: -1, left: 0, width: "100%", zIndex: 1, transform: "rotate(180deg)" }}>
-        <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
-          <path d="M0,50 C400,100 600,0 900,50 C1200,100 1300,30 1440,0 L1440,100 L0,100 Z" fill="#F8FAFC" />
-        </svg>
-      </Box>
+    <Box sx={{ py: 12, background: "linear-gradient(135deg, #0B2046 0%, #001D4A 100%)", position: "relative", overflow: "hidden" }}>
 
-      {/* Decorative Large Background Sphere */}
-      <Box sx={{ position: "absolute", top: "20%", right: "-10%", width: "500px", height: "500px", background: "radial-gradient(circle, rgba(0, 180, 216, 0.2) 0%, rgba(224, 251, 252, 0) 70%)", borderRadius: "50%", zIndex: 0 }} />
+      {/* Floating Bubbles Background Animation */}
+      <Bubble size={300} color="rgba(0, 180, 216, 0.25)" top="10%" left="-10%" delay={0} />
+      <Bubble size={250} color="rgba(16, 185, 129, 0.15)" bottom="10%" right="-5%" delay={1} />
+      <Bubble size={400} color="rgba(59, 130, 246, 0.15)" top="40%" left="40%" delay={0.5} />
 
-      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
-        
+      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
+
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 6 }}>
-          <Box sx={{ display: "inline-block", mb: 1 }}>
-            <Typography sx={{ 
-              fontWeight: 800, color: "#0B2046", fontSize: "28px", 
-              display: "flex", alignItems: "center", gap: 1, 
-              justifyContent: "center" 
-            }}>
-              <Box component="span" sx={{ 
-                width: 32, height: 32, borderRadius: "50%", 
-                border: "2px solid #0B2046", display: "flex", 
-                alignItems: "center", justifyContent: "center", fontSize: "18px" 
-              }}>6</Box>
-              The Admission Journey — Visual Flow
-            </Typography>
-          </Box>
+        <Box sx={{ textAlign: "center", mb: 8 }}>
+          <Typography sx={{ color: "#00B4D8", fontWeight: 700, mb: 1, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px" }}>
+            The Admission Journey
+          </Typography>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "32px", md: "42px" }, lineHeight: 1.2 }}>
+            The Admission Journey — Visual Flow
+          </Typography>
+          <Typography sx={{ color: "rgba(255, 255, 255, 0.7)", fontSize: "16px", mt: 1.5, maxWidth: "600px", mx: "auto" }}>
+            A continuous tracking track designed to develop tailored educational software that yields accurate training limits effortlessly.
+          </Typography>
         </Box>
 
-        {/* Journey Graphic Area */}
-        <Box sx={{ position: "relative", width: "100%", height: "800px", mx: "auto", maxWidth: "900px" }}>
+        {/* 2 Equal Columns Split list */}
+        <Grid container spacing={4}>
+          {/* Left Column: Steps 1-3 */}
+          <Grid item xs={12} md={6}>
+            <Grid container spacing={3} direction="column">
+              {flowSteps.slice(0, 3).map((item, index) => (
+                <Grid item xs={12} key={item.id}>
+                  <FeatureCard item={item} index={index} />
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
 
-          {/* Top Browser Mockup */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            style={{ position: "relative", zIndex: 3, width: "80%", margin: "0 auto" }}
-          >
-            <Paper elevation={0} sx={{ 
-              borderRadius: "16px", overflow: "hidden", 
-              boxShadow: "0 20px 50px rgba(0,180,216,0.15)", border: "1px solid rgba(255,255,255,0.5)", bgcolor: "rgba(255,255,255,0.8)", backdropFilter: "blur(10px)"
-            }}>
-              {/* Browser Header */}
-              <Box sx={{ bgcolor: "#f1f3f5", px: 2, py: 1.5, display: "flex", gap: 1 }}>
-                <Box sx={{ width: 10, height: 10, borderRadius: "50%", bgcolor: "#ff5f56" }} />
-                <Box sx={{ width: 10, height: 10, borderRadius: "50%", bgcolor: "#ffbd2e" }} />
-                <Box sx={{ width: 10, height: 10, borderRadius: "50%", bgcolor: "#27c93f" }} />
-              </Box>
-              {/* Mock Content */}
-              <Box sx={{ p: 4 }}>
-                <Box sx={{ display: "flex", gap: 4 }}>
-                  <Box sx={{ width: "30%", "& > div": { height: 20, bgcolor: "rgba(0,180,216,0.1)", borderRadius: 1, mb: 1.5 } }}>
-                    <div/><div/><div/><div/>
-                  </Box>
-                  <Box sx={{ width: "70%" }}>
-                    <Typography variant="h6" sx={{ fontWeight: 800, color: "#1a1a1a", mb: 1 }}>Real Estate CRM</Typography>
-                    <Typography sx={{ fontSize: "12px", color: "#666", mb: 2 }}>Admissions CRM</Typography>
-                    <Box sx={{ "& > div": { height: 10, bgcolor: "rgba(0,0,0,0.05)", borderRadius: 5, mb: 1, width: "100%" } }}>
-                      <div/><div style={{width: "80%"}}/>
-                    </Box>
-                  </Box>
-                </Box>
-              </Box>
-            </Paper>
-          </motion.div>
+          {/* Right Column: Steps 4-6 */}
+          <Grid item xs={12} md={6}>
+            <Grid container spacing={3} direction="column">
+              {flowSteps.slice(3, 6).map((item, index) => (
+                <Grid item xs={12} key={item.id}>
+                  <FeatureCard item={item} index={index + 3} /> {/* Offset delay for sequential stagger */}
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
+        </Grid>
 
-          {/* Handdrawn SVG Path connector */}
-          <Box sx={{ position: "absolute", top: "15%", left: 0, width: "100%", height: "85%", zIndex: 1 }}>
-             <svg width="100%" height="100%" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* Connecting dashed line flowing downwards through the points */}
-              <motion.path 
-                d="M450 0 C450 150, 270 100, 270 200 C270 300, 405 280, 405 380 C405 480, 630 460, 630 500 C630 540, 540 550, 540 600 C540 640, 720 620, 720 700" 
-                stroke="#00B4D8" 
-                strokeWidth="4" 
-                strokeDasharray="10 10"
-                fill="none"
-                initial={{ pathLength: 0 }}
-                whileInView={{ pathLength: 1 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 2, ease: "easeInOut" }}
-              />
-            </svg>
-          </Box>
-
-          {/* Node Overlay */}
-          {flowSteps.map((step, index) => (
-            <FlowNode key={step.id} item={step} index={index} />
-          ))}
-
-        </Box>
       </Container>
     </Box>
   );

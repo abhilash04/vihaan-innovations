@@ -15,7 +15,7 @@ import FoodReviews from "./FoodReviews";
 const FoodBookingHomepage = () => {
   return (
     <Grid>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <FoodBanner />
       <FoodOrdering />

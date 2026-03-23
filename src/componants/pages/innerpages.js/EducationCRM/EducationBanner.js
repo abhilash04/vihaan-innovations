@@ -6,7 +6,7 @@ import InsertChartOutlinedIcon from '@mui/icons-material/InsertChartOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
+import img from '../../../../assets/Education CRM technology benefits infographic.png'
 const StatCard = ({ icon: Icon, value, label, delay }) => (
   <motion.div
     initial={{ opacity: 0, scale: 0.9 }}
@@ -32,10 +32,10 @@ const StatCard = ({ icon: Icon, value, label, delay }) => (
         <Typography variant="h3" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: "32px", lineHeight: 1 }}>
           {value}
         </Typography>
-        <Box sx={{ 
-          bgcolor: "#e0fbfc", 
-          color: "#00b4d8", 
-          p: 0.8, 
+        <Box sx={{
+          bgcolor: "#e0fbfc",
+          color: "#00b4d8",
+          p: 0.8,
           borderRadius: "10px",
           display: "flex"
         }}>
@@ -54,12 +54,12 @@ const EducationBanner = () => {
     <Box
       sx={{
         position: "relative",
-        minHeight: "100vh",
+        minHeight: "90vh",
         bgcolor: "#0B2046", // Deep blue from the education mock
         overflow: "hidden",
         display: "flex",
         alignItems: "center",
-        pt: { xs: 12, md: 0 },
+        pt: { xs: 10, md: 0 },
         pb: { xs: 12, md: 0 }
       }}
     >
@@ -67,7 +67,7 @@ const EducationBanner = () => {
       <Box sx={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0, opacity: 0.8 }}>
         {/* Soft underlying glow */}
         <Box sx={{ position: "absolute", top: "-20%", right: "-10%", width: "70%", height: "70%", background: "radial-gradient(circle, rgba(0, 180, 216, 0.4) 0%, rgba(11, 32, 70, 0) 70%)", borderRadius: "50%", filter: "blur(60px)" }} />
-        
+
         {/* Abstract floating shapes for liquid look */}
         <motion.div
           animate={{ x: [0, 20, 0], y: [0, -30, 0] }}
@@ -85,7 +85,7 @@ const EducationBanner = () => {
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
         <Grid container spacing={6} alignItems="center">
-          
+
           {/* Left Text Content Area */}
           <Grid item xs={12} md={6}>
             <motion.div
@@ -96,15 +96,15 @@ const EducationBanner = () => {
               <Typography sx={{ color: "#00B4D8", fontWeight: 700, mb: 1.5, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px" }}>
                 Education CRM Technology
               </Typography>
-              
+
               <Typography variant="h1" sx={{ color: "#ffffff", fontWeight: 800, fontSize: { xs: "36px", md: "52px" }, lineHeight: 1.1, mb: 3 }}>
                 Digital Enquiry forms that close deals faster
               </Typography>
-              
+
               <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "18px", lineHeight: 1.6, mb: 5, maxWidth: "500px" }}>
                 We build custom CRM, property portal, lead management systems, and agile solutions — purpose-built for real estate business and ones to scale.
               </Typography>
-              
+
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 <Button
                   variant="contained"
@@ -128,7 +128,7 @@ const EducationBanner = () => {
                 >
                   See a Demo
                 </Button>
-                
+
                 <Button
                   variant="outlined"
                   sx={{
@@ -154,39 +154,14 @@ const EducationBanner = () => {
 
           {/* Right Floating Stats Area */}
           <Grid item xs={12} md={6}>
-            <Box sx={{ position: "relative", maxWidth: "420px", ml: "auto", mr: { xs: "auto", md: 0 } }}>
-              
-              {/* Decorative backdrop for stats */}
-              <Box sx={{
-                position: "absolute",
-                top: "-10%",
-                bottom: "-10%",
-                left: "-5%",
-                right: "-5%",
-                bgcolor: "rgba(255,255,255,0.03)",
-                borderRadius: "30px",
-                border: "1px solid rgba(255,255,255,0.05)",
-                backdropFilter: "blur(5px)",
-                zIndex: 0
-              }} />
+            <Box sx={{ position: "relative", width: "100%", ml: "auto", mr: { xs: "auto", md: 0 } }}>
 
-              <Grid container spacing={3} sx={{ position: "relative", zIndex: 1 }}>
-                <Grid item xs={6}>
-                  <StatCard icon={TrendingUpIcon} value="3x" label={<>Lead<br/>Conversion Rate</>} delay={0.2} />
-                </Grid>
-                <Grid item xs={6}>
-                  <StatCard icon={InsertChartOutlinedIcon} value="60%" label={<>Less<br/>Manual Work</>} delay={0.4} />
-                </Grid>
-                <Grid item xs={6}>
-                  <StatCard icon={CalendarMonthOutlinedIcon} value="90" label={<>Days to<br/>Go Live</>} delay={0.6} />
-                </Grid>
-                <Grid item xs={6}>
-                  <StatCard icon={AccessTimeOutlinedIcon} value="24/7" label={<>Self Serve<br/>Portal</>} delay={0.8} />
-                </Grid>
-              </Grid>
+
+
+              <img src={img} alt="Education CRM technology benefits infographic" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: '20px' }} />
             </Box>
           </Grid>
-          
+
         </Grid>
       </Container>
     </Box>

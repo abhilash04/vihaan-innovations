@@ -5,7 +5,7 @@ import HeaderSec from "../../../common/HeaderSec";
 import FooterAndPopup from "../../../common/Footer";
 import Banner from "../../../pages/innerpages.js/RealEstate/Banner";
 import Clients from "./Clients";
-import RealEstateServices from "./RealEstateServices";  
+import RealEstateServices from "./RealEstateServices";
 import GetInTouch from "./GetInTouch";
 import RealEstateSegments from "./RealEstateSegments";
 import RealEstateSoftwareSolutions from "./RealEstateSoftwareSolutions";
@@ -17,18 +17,18 @@ import Resources from "./Resources";
 const RealEstateHomePage = () => {
   return (
     <Grid>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
-      <Banner/>
-      <Clients/>
-      <RealEstateServices/>
-      <RealEstateSoftwareSolutions/>
-      <GetInTouch/>
-      <RealEstateSegments/>
-      <RealEstateSolutions/>
-      <RealEstateNumbers/>
-      <Resources/>
-      <Faqs/>
+      <Banner />
+      <Clients />
+      <RealEstateServices />
+      <RealEstateSoftwareSolutions />
+      <GetInTouch />
+      <RealEstateSegments />
+      <RealEstateSolutions />
+      <RealEstateNumbers />
+      <Resources />
+      <Faqs />
       <FooterAndPopup />
     </Grid>
   );

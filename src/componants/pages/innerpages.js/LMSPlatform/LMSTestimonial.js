@@ -6,7 +6,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import StarIcon from '@mui/icons-material/Star';
 
 const LMSTestimonial = () => (
-  <Box sx={{ bgcolor: "#eff6ff", py: 14 }}>
+  <Box sx={{ bgcolor: "#eff6ff", py: 8 }}>
     <Container maxWidth="md">
       <Box sx={{ textAlign: "center", mb: 8 }}>
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "34px" }, mb: 2 }}>Testimonial / Social Proof</Typography>

@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 const ListingCTA = () => {
   return (
-    <Box sx={{ position: "relative", bgcolor: "#0f172a", py: 16, overflow: "hidden" }}>
-      
+    <Box sx={{ position: "relative", bgcolor: "#0f172a", py: 10, overflow: "hidden" }}>
+
       {/* Soft gradient glow */}
       <Box sx={{ position: "absolute", bottom: "-30%", left: "50%", transform: "translateX(-50%)", width: "80%", height: "80%", background: "radial-gradient(ellipse, rgba(59, 130, 246, 0.3) 0%, rgba(15, 23, 42, 0) 70%)", filter: "blur(60px)", zIndex: 0 }} />
-      
+
       {/* Floating sparkle dots */}
       <motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 3 }} style={{ position: "absolute", top: "15%", left: "12%", color: "#3b82f6", fontSize: 22 }}>✦</motion.div>
       <motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 4, delay: 1 }} style={{ position: "absolute", bottom: "20%", right: "15%", color: "#22c55e", fontSize: 20 }}>✦</motion.div>
@@ -23,15 +23,12 @@ const ListingCTA = () => {
         >
           <Box sx={{ textAlign: "center" }}>
 
-            <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "32px", md: "46px" }, mb: 3, lineHeight: 1.2 }}>
-              Bottom CTA
-            </Typography>
 
-            <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "18px", mb: 2, lineHeight: 1.6 }}>
+            <Typography sx={{ color: "#ffffff", fontSize: "24px", mb: 2, lineHeight: 1.6, fontWeight: 600 }}>
               Let's build a listing platform that owns its category.
             </Typography>
 
-            <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "15px", mb: 7 }}>
+            <Typography sx={{ color: "#ffffff", fontSize: "18px", mb: 7 }}>
               Let's talk. First call free.
             </Typography>
 

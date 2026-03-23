@@ -24,7 +24,7 @@ const features = [
 ];
 
 const LMSFeatures = () => (
-  <Box sx={{ bgcolor: "#f8fafc", py: 14 }}>
+  <Box sx={{ bgcolor: "#f8fafc", py: 8 }}>
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 8 }}>
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>What We Build – Feature Overview</Typography>

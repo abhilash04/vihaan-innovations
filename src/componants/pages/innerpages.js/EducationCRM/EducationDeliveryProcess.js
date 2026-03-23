@@ -6,7 +6,7 @@ import DesignServicesIcon from '@mui/icons-material/DesignServices';
 import CodeIcon from '@mui/icons-material/Code';
 import PeopleIcon from '@mui/icons-material/People';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-
+import img from "../../../../assets/Real estate sprint process infographic.png"
 const steps = [
   { num: "01", title: "Discovery", icon: <SearchIcon /> },
   { num: "02", title: "Design", icon: <DesignServicesIcon /> },
@@ -17,10 +17,10 @@ const steps = [
 
 const EducationDeliveryProcess = () => {
   return (
-    <Box sx={{ py: 14, bgcolor: "#e0fbfc", position: "relative" }}>
+    <Box sx={{ bgcolor: "#e0fbfc", position: "relative" }}>
       <Container maxWidth="lg">
         <Grid container spacing={8} alignItems="center">
-          
+
           {/* Left Text Side */}
           <Grid item xs={12} md={5}>
             <motion.div
@@ -44,66 +44,8 @@ const EducationDeliveryProcess = () => {
           {/* Right Stepper Timeline */}
           <Grid item xs={12} md={7}>
             <Box sx={{ position: "relative", pl: { xs: 2, md: 8 } }}>
-              
-              {/* Stepper Vertical Track */}
-              <Box sx={{
-                position: "absolute",
-                top: "30px",
-                bottom: "30px",
-                left: { xs: "50px", md: "100px" },
-                width: "2px",
-                bgcolor: "rgba(11,32,70,0.1)",
-                zIndex: 0
-              }} />
 
-              {steps.map((step, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <Box sx={{ display: "flex", alignItems: "center", mb: index === steps.length - 1 ? 0 : 5, position: "relative", zIndex: 1 }}>
-                    
-                    <Typography sx={{ color: "#00B4D8", fontSize: "20px", fontWeight: 700, mr: 3, width: "30px", textAlign: "right" }}>
-                      {step.num}
-                    </Typography>
-
-                    <Paper
-                      elevation={0}
-                      sx={{
-                        width: 50,
-                        height: 50,
-                        borderRadius: "50%",
-                        bgcolor: "#ffffff",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        boxShadow: "0 5px 15px rgba(0,0,0,0.05)",
-                        border: "2px solid #00B4D8",
-                        color: "#00B4D8",
-                        mr: 3,
-                        zIndex: 2,
-                        transition: "all 0.3s ease",
-                        "&:hover": {
-                          bgcolor: "#00B4D8",
-                          color: "#ffffff",
-                          transform: "scale(1.1)",
-                          boxShadow: "0 10px 25px rgba(0, 180, 216, 0.3)",
-                        }
-                      }}
-                    >
-                      {step.icon}
-                    </Paper>
-
-                    <Typography sx={{ fontSize: "20px", fontWeight: 700, color: "#0B2046" }}>
-                      {step.title}
-                    </Typography>
-                    
-                  </Box>
-                </motion.div>
-              ))}
+              <img src={img} alt="Real estate sprint process infographic" width={"100%"} height={"100%"} style={{ borderRadius: "16px" }} />
             </Box>
           </Grid>
 

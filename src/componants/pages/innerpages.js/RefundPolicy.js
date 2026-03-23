@@ -9,7 +9,7 @@ import RefundPolicySection from "../sections/RefundPolicySection";
 const RefundPolicy = () => {
   return (
     <Grid>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <RefundPolicySection />
 

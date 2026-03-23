@@ -9,7 +9,7 @@ import ContactSection from "./ContactSection";
 const ContactHomepage = () => {
   return (
     <Grid>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <ContactSection />
       <FooterAndPopup />

@@ -92,7 +92,7 @@ function RealEstateNumbers() {
             >
               {item.label}
             </Typography>
-            
+
             <Box
               sx={{
                 display: "flex",
@@ -125,7 +125,7 @@ function RealEstateNumbers() {
         ))}
       </Grid>
       {/* Divider Line */}
-            <Divider
+      <Divider
         sx={{
           mt: isMobile ? 2 : 3,
           bgcolor: "#eaeaea",
@@ -138,3 +138,4 @@ function RealEstateNumbers() {
 }
 
 export default RealEstateNumbers;
+
