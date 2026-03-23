@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import WorkIcon from '@mui/icons-material/Work';
 import HomeWorkIcon from '@mui/icons-material/HomeWork';
@@ -125,21 +125,21 @@ const ListingWhoThisIsFor = () => {
 
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
-            <Typography
-              variant="h2"
-              sx={{
-                fontWeight: 800,
-                color: "#1a1a1a",
-                fontSize: { xs: "28px", md: "36px" },
-                mb: 2
-              }}
-            >
-              Solutions Designed for Modern Listing Sites for Business Across India
-            </Typography>
-            <Typography sx={{ color: "#666", fontSize: "16px", mb: 1, maxWidth: "700px", margin: "0 auto" }}>
-              We build scalable and high-performance listing sites in India and listing sites for business across multiple industries. Whether you're a startup or an enterprise, our platforms are designed to help you grow, manage, and monetize your listings efficiently.
-            </Typography>
-          </Box>
+          <Typography
+            variant="h2"
+            sx={{
+              fontWeight: 800,
+              color: "#1a1a1a",
+              fontSize: { xs: "28px", md: "36px" },
+              mb: 2
+            }}
+          >
+            Solutions Designed for Modern Listing Sites for Business Across India
+          </Typography>
+          <Typography sx={{ color: "#666", fontSize: "16px", mb: 1, maxWidth: "700px", margin: "0 auto" }}>
+            We build scalable and high-performance listing sites in India and listing sites for business across multiple industries. Whether you're a startup or an enterprise, our platforms are designed to help you grow, manage, and monetize your listings efficiently.
+          </Typography>
+        </Box>
 
         {/* 4x2 Color Block Grid with Spacing Fixes */}
         <Grid
