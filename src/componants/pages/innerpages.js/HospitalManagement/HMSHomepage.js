@@ -35,7 +35,6 @@ const HMSHomepage = () => {
         <HMSResults />
         <HMSIntegrations />
         <HMSWhyUs />
-
         <HMSCTA />
         <HMSTestimonialFAQ />
       </Box>
