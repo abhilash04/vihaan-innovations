@@ -72,9 +72,9 @@ const PortalCTABand = () => {
                   color: "#1A1A1A", // Dark Text Customization
                 }}
               >
-                Supercharge Your PropTech <br />
+                Real Estate Portal Design That Modernizes <br />
                 <Box component="span" sx={{ color: "#F59E0B" }}>
-                  Product Visibility
+                  Your Business
                 </Box>
               </Typography>
               <Typography
@@ -87,8 +87,7 @@ const PortalCTABand = () => {
                   fontSize: "1rem",
                 }}
               >
-                Schedule a 10-minute briefing to witness our blueprint scaling
-                dashboards firsthand.
+                Transform your property business with professional real estate portal design solutions that help agencies, developers, and property platforms manage listings, attract buyers, and streamline operations.
               </Typography>
 
               <Button
@@ -115,7 +114,7 @@ const PortalCTABand = () => {
                   },
                 }}
               >
-                Request 1:1 Live Demo
+                Get a Free Consultation
               </Button>
             </Box>
           </Box>

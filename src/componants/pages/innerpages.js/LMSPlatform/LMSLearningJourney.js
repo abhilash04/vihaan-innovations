@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 const learnerSteps = [
-  "Discover Course", "Register & Pay", "Access Dashboard", "Watch Lessons",
-  "Attempt Quizzes", "Join Live Classes", "Complete Course", "Download Certificate"
+  "Browse Courses", "Sign Up & Make Payment", "Access Learning Dashboard", "Watch Video Lessons",
+  "Take Quizzes & Tests", "Join Live Classes", "Complete the Course", "Download Certificate"
 ];
 const instructorSteps = [
-  "Create Course", "Upload Content", "Set Batches & Pricing", "Publish",
-  "Track Progress", "Conduct Live Sessions", "Review Assessments", "Issue Certificates", "Analyse Performance"
+  "Create Course", "Upload Learning Content", "Set Batches & Pricing", "Publish Course",
+  "Monitor Student Progress", "Conduct Live Sessions", "Review Assessments", "Issue Certificates", "Analyze Performance"
 ];
 
 const StepBubble = ({ label, color, bg, delay }) => (

@@ -8,10 +8,10 @@ import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 
 const diffs = [
-  { num: "01", title: "Understand\nsensitivity/nuance:\nprivacy/trust built-in", icon: <EnhancedEncryptionIcon /> },
-  { num: "02", title: "Fully custom\ncommunity filters\ncaste, gotra, etc.", icon: <DisplaySettingsIcon /> },
-  { num: "03", title: "Scalable from\n500 to 500k+\nprofiles", icon: <GraphicEqIcon /> },
-  { num: "04", title: "Admin tools\npowerful for 2\nor 50 ops team", icon: <SupervisedUserCircleIcon /> }
+  { num: "01", title: "Privacy & Trust", icon: <EnhancedEncryptionIcon /> },
+  { num: "02", title: "Community Filters", icon: <DisplaySettingsIcon /> },
+  { num: "03", title: "Scalable System", icon: <GraphicEqIcon /> },
+  { num: "04", title: "Admin Control", icon: <SupervisedUserCircleIcon /> }
 ];
 
 const MatrimonyWhyUs = () => {
@@ -20,18 +20,18 @@ const MatrimonyWhyUs = () => {
       <Container maxWidth="lg">
 
         {/* Why Us Section Header */}
-        <Box sx={{ textAlign: "center", mb: 6 }}>
-          <Box sx={{ display: "inline-block", mb: 2 }}>
+        <Box sx={{ textAlign: "center", mb: 8 }}>
+          <Box sx={{ display: "inline-block", mb: 1 }}>
             <Typography sx={{
-              fontWeight: 800, color: "#fff", fontSize: "28px",
+              fontWeight: 800, color: "#0B2046", fontSize: "28px",
               display: "flex", alignItems: "center", gap: 1,
-              justifyContent: "center"
+              justifyContent: "center", mb: 2
             }}>
-              Why Vihaan Innovations
+              Why Choose Vihaan Innovations for Matrimony Platform Development
             </Typography>
           </Box>
-          <Typography sx={{ color: "#fff", fontSize: "17px" }}>
-            4 differentiators for matrimony context
+          <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
+            At Vihaan Innovations, we understand that matrimony platforms require more than just technology. They need trust, cultural sensitivity, and powerful management tools. Our solutions are designed to help matchmaking businesses scale while providing a secure and seamless experience for members.
           </Typography>
         </Box>
 
@@ -98,9 +98,13 @@ const MatrimonyWhyUs = () => {
                 alignItems: "center", justifyContent: "center", fontSize: "14px"
               }}>13</Box>
               Testimonial / Social Proof
+              Trusted by Matrimony Businesses
             </Typography>
           </Box>
-        </Box> */}
+          <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
+            Real success stories from clients who transformed their matchmaking platforms with Vihaan Innovations.
+          </Typography>
+        </Box>
 
         {/* Full width quote block */}
         {/* <motion.div
@@ -113,7 +117,7 @@ const MatrimonyWhyUs = () => {
             <FormatQuoteIcon sx={{ position: "absolute", top: 0, left: 0, fontSize: 60, color: "rgba(0, 180, 216, 0.2)" }} />
 
             <Typography sx={{ fontWeight: 600, color: "#1a1a1a", fontSize: { xs: "18px", md: "22px" }, lineHeight: 1.6, textAlign: "center", mb: 4, position: "relative", zIndex: 1 }}>
-              The platform Vihaan built helped us double our matchmaking speed and build massive trust with families. Their admin tools are incredibly powerful and helped us manage 10,000 profiles with just 3 agents.
+              "The platform Vihaan built helped us double our matchmaking speed and build trust with families."
             </Typography>
 
             <FormatQuoteIcon sx={{ position: "absolute", bottom: 60, right: 0, fontSize: 60, color: "rgba(0, 180, 216, 0.2)", transform: "scaleX(-1)" }} />
@@ -132,11 +136,24 @@ const MatrimonyWhyUs = () => {
               </Box>
             </Box>
 
-          </Box>
-        </motion.div> */}
+            {/* Trust Add-on Box */}
+        <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 4, mt: 5, borderTop: "1px solid rgba(0, 180, 216, 0.2)", pt: 4 }}>
+          <Typography sx={{ fontWeight: 700, color: "#00B4D8", fontSize: "14px", display: "flex", alignItems: "center", gap: 1 }}>
+            ✓ 10,000+ Profiles Managed
+          </Typography>
+          <Typography sx={{ fontWeight: 700, color: "#00B4D8", fontSize: "14px", display: "flex", alignItems: "center", gap: 1 }}>
+            ✓ 3 Agent Operations Team
+          </Typography>
+          <Typography sx={{ fontWeight: 700, color: "#00B4D8", fontSize: "14px", display: "flex", alignItems: "center", gap: 1 }}>
+            ✓ 2× Faster Matchmaking
+          </Typography>
+        </Box>
 
-      </Container>
     </Box>
+        </motion.div > */}
+
+      </Container >
+    </Box >
   );
 };
 

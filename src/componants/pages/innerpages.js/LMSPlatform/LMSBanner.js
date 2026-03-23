@@ -41,10 +41,10 @@ const LMSBanner = () => {
           <Grid item xs={12} md={6}>
             <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
               <Typography variant="h1" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "34px", md: "50px" }, lineHeight: 1.15, mb: 3 }}>
-                Build a Learning Platform Your Students Never Want to Leave
+                Build a Learning Platform Your Students Love to Use
               </Typography>
               <Typography sx={{ color: "#475569", fontSize: "16px", lineHeight: 1.7, mb: 5, maxWidth: "500px" }}>
-                Custom LMS platforms, ed-tech portals, and training management systems for edtech startups, coaching institutions, corporates, and universities.
+                We offer custom LMS website development services, including e-learning platforms and training management systems, designed for edtech startups, coaching institutes, corporate training teams, and universities.
               </Typography>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 <Button variant="contained" sx={{ bgcolor: "#2563eb", color: "#fff", fontWeight: 700, px: 4, py: 1.5, borderRadius: "10px", textTransform: "none", fontSize: "15px", boxShadow: "0 6px 20px rgba(37,99,235,0.35)", "&:hover": { bgcolor: "#1d4ed8", transform: "translateY(-2px)" }, transition: "all 0.3s" }}>
@@ -69,8 +69,8 @@ const LMSBanner = () => {
                       <EmojiEventsIcon key={i} sx={{ fontSize: 20, color: i < 4 ? "#f59e0b" : "#e2e8f0" }} />
                     ))}
                   </Box>
-                  <Typography sx={{ fontWeight: 700, color: "#0f172a", fontSize: "18px" }}>Interactive Learning Dashboard</Typography>
-                  <Typography sx={{ color: "#64748b", fontSize: "13px", mt: 1 }}>AI-powered, multi-device, proven results</Typography>
+                  <Typography sx={{ fontWeight: 700, color: "#0f172a", fontSize: "18px" }}>Smart Learning Dashboard</Typography>
+                  <Typography sx={{ color: "#64748b", fontSize: "13px", mt: 1 }}>Easy-to-use, works on all devices, delivers better learning results</Typography>
 
                   {/* Floating badges */}
                   <motion.div animate={{ y: [0, -8, 0] }} transition={{ repeat: Infinity, duration: 3 }}
@@ -95,13 +95,13 @@ const LMSBanner = () => {
         <Box sx={{ mt: 10, pt: 6, borderTop: "1px solid rgba(37,99,235,0.15)" }}>
           <Grid container spacing={4} justifyContent="center">
             <Grid item xs={12} sm={4}>
-              <StatCard icon={PeopleIcon} value="5,000+" label="Courses Students" color="#2563eb" delay={0.5} />
+              <StatCard icon={PeopleIcon} value="5,000+" label="Students Enrolled" color="#2563eb" delay={0.5} />
             </Grid>
             <Grid item xs={12} sm={4}>
-              <StatCard icon={TrendingUpIcon} value="40%" label="Learner Completion Rate" color="#22c55e" delay={0.6} />
+              <StatCard icon={TrendingUpIcon} value="40%" label="Course Completion Rate" color="#22c55e" delay={0.6} />
             </Grid>
             <Grid item xs={12} sm={4}>
-              <StatCard icon={AccessTimeIcon} value="10 Hours/Week" label="Time Saved by Instructors" color="#f59e0b" delay={0.7} />
+              <StatCard icon={AccessTimeIcon} value="10 Hours/Week" label="Time Saved for Trainers" color="#f59e0b" delay={0.7} />
             </Grid>
           </Grid>
         </Box>

@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 import { Check, X, ArrowRight } from "lucide-react";
 
 const rows = [
-  { item: "Booking Calendar Sync", smart: true, trad: false },
-  { item: "Staff Routing AI", smart: true, trad: false },
-  { item: "No Overbooking Risk", smart: true, trad: false },
-  { item: "Room Ready Alerts", smart: true, trad: "Manual" },
-  { item: "Guest CRM Auto-sync", smart: true, trad: false },
-  { item: "Multi-Currency Rates", smart: true, trad: "Limited" },
+  { item: "Booking", smart: "Online booking system", trad: "Manual inquiries" },
+  { item: "Availability", smart: "Real-time tracking", trad: "Manual updates" },
+  { item: "Guest Records", smart: "Central dashboard", trad: "Spreadsheets" },
+  { item: "Maintenance", smart: "Online requests", trad: "Manual logs" },
+  { item: "Reports", smart: "Advanced analytics", trad: "Limited" },
+  { item: "Growth", smart: "Easy to expand", trad: "Hard to scale" },
+  { item: "Security", smart: "Secure system", trad: "Basic" },
 ];
 
 const ResortComparison = () => {
@@ -44,7 +45,7 @@ const ResortComparison = () => {
                     fontWeight: 600,
                   }}
                 >
-                  Future of Hospitality
+                  Built for Resorts That Want to Grow
                 </Typography>
               </Box>
 
@@ -57,14 +58,30 @@ const ResortComparison = () => {
                   mb: 3,
                 }}
               >
-                Embrace the Future <br />
-                Of Guest Experiences
+                The Future of Hospitality Starts With <br />
+                Smart Resort Website Design
+              </Typography>
+
+              <Typography
+                variant="body1"
+                sx={{
+                  fontFamily: "'Outfit', sans-serif",
+                  fontSize: "1rem",
+                  color: "rgba(245, 245, 240, 0.8)",
+                  mb: 4,
+                  lineHeight: 1.6,
+                }}
+              >
+                Your resort needs more than just a good-looking website. It needs a smart system that helps you manage bookings and guests easily.<br/><br/>
+                Our solution combines beautiful design with powerful features so you can run your resort from one place.
               </Typography>
 
               {[
-                "Embrace Intelligent Smart Platform",
-                "Personalized Guest Journey Modules",
-                "Automated Staff Dispatch Operations",
+                "Easy online booking system",
+                "Real-time room availability",
+                "Centralized guest management",
+                "Online service requests",
+                "Smart reports and analytics",
               ].map((text, i) => (
                 <motion.div
                   key={i}
@@ -175,7 +192,13 @@ const ResortComparison = () => {
                         </Typography>
                       </Grid>
                       <Grid item xs={3} textAlign="center">
-                        {row.smart === true ? <Check size={20} color="#4CAF50" /> : <X size={20} color="#F44336" />}
+                        {row.smart === true ? (
+                          <Check size={20} color="#4CAF50" />
+                        ) : row.smart === false ? (
+                          <X size={20} color="#F44336" />
+                        ) : (
+                          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.85rem", color: "#D4AF37" }}>{row.smart}</Typography>
+                        )}
                       </Grid>
                       <Grid item xs={3} textAlign="center">
                         {row.trad === true ? (
@@ -183,7 +206,7 @@ const ResortComparison = () => {
                         ) : row.trad === false ? (
                           <X size={20} color="#F44336" />
                         ) : (
-                          <Typography sx={{ fontSize: "0.85rem", color: "rgba(245,245,240,0.4)" }}>{row.trad}</Typography>
+                          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.85rem", color: "rgba(245,245,240,0.6)" }}>{row.trad}</Typography>
                         )}
                       </Grid>
                     </Grid>

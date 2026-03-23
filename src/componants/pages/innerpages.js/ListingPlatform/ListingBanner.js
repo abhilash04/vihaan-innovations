@@ -5,29 +5,24 @@ import ListAltIcon from '@mui/icons-material/ListAlt';
 import SpeedIcon from '@mui/icons-material/Speed';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import img from "../../../../assets/listingimage.png";
-const StatRow = ({ icon: Icon, label, value, delay }) => (
+const StatRow = ({ icon: Icon, text, delay }) => (
   <motion.div
     initial={{ opacity: 0, x: 20 }}
     animate={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.5, delay }}
   >
-    <Box sx={{ display: "flex", alignItems: "center", gap: 3, mb: 3 }}>
+    <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 1.5 }}>
       <Box sx={{
-        width: 48, height: 48, borderRadius: "50%",
-        bgcolor: "rgba(34, 197, 94, 0.1)", // Light green tint based on mock
+        width: 32, height: 32, borderRadius: "50%",
+        bgcolor: "rgba(34, 197, 94, 0.1)",
         display: "flex", justifyContent: "center", alignItems: "center",
         color: "#22c55e"
       }}>
-        <Icon sx={{ fontSize: 24 }} />
+        <Icon sx={{ fontSize: 18 }} />
       </Box>
-      <Box>
-        <Typography sx={{ color: "#666", fontSize: "14px", fontWeight: 600 }}>
-          {label}
-        </Typography>
-        <Typography sx={{ color: "#1a1a1a", fontSize: "20px", fontWeight: 800 }}>
-          {value}
-        </Typography>
-      </Box>
+      <Typography sx={{ color: "#444", fontSize: "15px", fontWeight: 600 }}>
+        {text}
+      </Typography>
     </Box>
   </motion.div>
 );
@@ -59,12 +54,16 @@ const ListingBanner = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <Typography variant="h1" sx={{ color: "#1a1a1a", fontWeight: 800, fontSize: { xs: "36px", md: "52px" }, lineHeight: 1.1, mb: 3 }}>
-                Launch a Listing Platform Your Users Keep Coming Back To.
+              <Typography variant="h1" sx={{ color: "#1a1a1a", fontWeight: 800, fontSize: { xs: "36px", md: "52px" }, lineHeight: 1.1, mb: 2 }}>
+                Launch High-Performance Business Listing Website India & Product Listing Websites
               </Typography>
 
-              <Typography sx={{ color: "#444", fontSize: "16px", lineHeight: 1.6, mb: 5, maxWidth: "500px" }}>
-                We build custom listing websites and directories for any vertical—jobs, real estate, vehicles, services, classifieds, rentals, and more.
+              <Typography variant="h2" sx={{ color: "#2563eb", fontWeight: 700, fontSize: { xs: "20px", md: "24px" }, mb: 2 }}>
+                Build scalable business listing website India solutions, product listing websites, CRMs, dashboards, and custom portals tailored for every industry.
+              </Typography>
+
+              <Typography sx={{ color: "#444", fontSize: "16px", lineHeight: 1.6, mb: 4, maxWidth: "550px" }}>
+                We develop powerful and user-friendly product listing websites and directory platforms for startups and enterprises. From food delivery apps to real estate portals and service marketplaces, our solutions are designed to boost engagement, conversions, and growth.
               </Typography>
 
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
@@ -86,28 +85,14 @@ const ListingBanner = () => {
                     },
                   }}
                 >
-                  See a Demo
+                  Get a Free Demo
                 </Button>
+              </Box>
 
-                <Button
-                  variant="outlined"
-                  sx={{
-                    borderColor: "#2563eb",
-                    color: "#2563eb",
-                    fontWeight: 600,
-                    fontSize: "14px",
-                    px: 4,
-                    py: 1.5,
-                    borderRadius: "8px",
-                    textTransform: "none",
-                    "&:hover": {
-                      borderColor: "#1d4ed8",
-                      bgcolor: "rgba(37, 99, 235, 0.05)",
-                    }
-                  }}
-                >
-                  Explore Features
-                </Button>
+              <Box sx={{ mt: 5, display: "flex", flexDirection: "column", gap: 1 }}>
+                <StatRow icon={CheckCircleOutlineIcon} text="100+ Projects Delivered" delay={0.2} />
+                <StatRow icon={SpeedIcon} text="Scalable & Secure Solutions" delay={0.4} />
+                <StatRow icon={ListAltIcon} text="Custom Built for Every Industry" delay={0.6} />
               </Box>
             </motion.div>
           </Grid>

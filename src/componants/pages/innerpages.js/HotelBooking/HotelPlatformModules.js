@@ -11,14 +11,14 @@ import ConfirmationNumberIcon from '@mui/icons-material/ConfirmationNumber';
 import PaymentIcon from '@mui/icons-material/Payment';
 
 const modules = [
-  { icon: HouseIcon, title: "Front Desk & Reception", color: "#0f766e" },
-  { icon: SyncAltIcon, title: "Channel Manager Integration", color: "#d4a017" },
-  { icon: LocalOfferIcon, title: "Promotions & Packages", color: "#3b82f6" },
-  { icon: CleaningServicesIcon, title: "Housekeeping Management", color: "#16a34a" },
-  { icon: BarChartIcon, title: "Revenue & Analytics", color: "#7c3aed" },
-  { icon: RateReviewIcon, title: "Guest Reviews & Feedback", color: "#ec4899" },
-  { icon: ConfirmationNumberIcon, title: "Booking & Reservation Engine", color: "#f97316" },
-  { icon: PaymentIcon, title: "Billing & Invoice Module", color: "#0ea5e9" },
+  { icon: HouseIcon, title: "Front desk & reception management", color: "#0f766e" },
+  { icon: SyncAltIcon, title: "Channel manager integration", color: "#d4a017" },
+  { icon: LocalOfferIcon, title: "Offers & promotions management", color: "#3b82f6" },
+  { icon: CleaningServicesIcon, title: "Housekeeping task management", color: "#16a34a" },
+  { icon: BarChartIcon, title: "Revenue reports & analytics", color: "#7c3aed" },
+  { icon: RateReviewIcon, title: "Guest reviews & feedback system", color: "#ec4899" },
+  { icon: ConfirmationNumberIcon, title: "Booking & reservation management", color: "#f97316" },
+  { icon: PaymentIcon, title: "Billing & invoice management", color: "#0ea5e9" },
 ];
 
 const HotelPlatformModules = () => (
@@ -26,7 +26,10 @@ const HotelPlatformModules = () => (
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 3 }}>
         <Typography sx={{ color: "#0f766e", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>Platform Modules</Typography>
-        <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>Explore Our Full Suite of Modules</Typography>
+        <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>Explore Our Complete Module Suite</Typography>
+        <Typography sx={{ color: "#475569", fontSize: "16px", maxWidth: "700px", mx: "auto" }}>
+          Built with advanced hotel app development, our platform provides powerful tools to manage every part of your hotel operations.
+        </Typography>
       </Box>
       <Grid container spacing={3} sx={{ mt: 4 }}>
         {modules.map((mod, i) => {

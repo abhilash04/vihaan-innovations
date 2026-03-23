@@ -84,7 +84,7 @@ const PortalHero = () => {
                   mb: 2,
                 }}
               >
-                Next-Gen <br />
+                Real Estate Portal Development <br />
                 <Box
                   component="span"
                   sx={{
@@ -104,9 +104,8 @@ const PortalHero = () => {
                     },
                   }}
                 >
-                  Real Estate
-                </Box>{" "}
-                Portal Development
+                  for Modern Property Businesses
+                </Box>
               </Typography>
             </motion.div>
 
@@ -127,8 +126,7 @@ const PortalHero = () => {
                   mb: 4,
                 }}
               >
-                Build full-throttle PropTech portals that unify listings, brokers, and
-                investors with direct data control and enterprise integrity.
+                We build scalable real estate portal development solutions including property listing platforms, CRM integrations, agent dashboards, and mobile-ready portals. Launch your own real estate marketplace similar to Zillow or MagicBricks with advanced search, property management tools, and lead generation features.
               </Typography>
             </motion.div>
 
@@ -178,7 +176,7 @@ const PortalHero = () => {
                   },
                 }}
               >
-                Build Your Portal
+                View portal Demo
               </Button>
             </motion.div>
           </Grid>

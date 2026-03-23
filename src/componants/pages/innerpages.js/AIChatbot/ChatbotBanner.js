@@ -36,13 +36,13 @@ const ChatbotBanner = () => (
             </Box>
             <Typography variant="h1" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "36px", md: "56px" }, lineHeight: 1.1, mb: 3 }}>
               Your Business.<br />
-              Always On.<br />
+              Always Active.<br />
               <Box component="span" sx={{ color: "#06b6d4", WebkitTextFillColor: "transparent", background: "linear-gradient(90deg, #06b6d4, #8b5cf6)", WebkitBackgroundClip: "text" }}>
-                Always Answering.
+                Always Responding.
               </Box>
             </Typography>
             <Typography sx={{ color: "rgba(255,255,255,0.6)", fontSize: "16px", lineHeight: 1.7, mb: 5, maxWidth: "480px" }}>
-              We build custom AI chatbots for websites, WhatsApp, and apps — trained on your business data to handle leads, support, bookings, and FAQs without human intervention.
+              As a leading AI Chatbot Development Company, we build custom AI chatbots for websites, WhatsApp, and mobile apps. These chatbots are trained on your business data to handle leads, customer support, bookings, and FAQs automatically—without manual effort.
             </Typography>
             <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mb: 6 }}>
               <Button variant="contained" sx={{ bgcolor: "#06b6d4", color: "#ffffff", fontWeight: 800, px: 4, py: 1.6, borderRadius: "10px", textTransform: "none", fontSize: "15px", boxShadow: "0 6px 25px rgba(6,182,212,0.4)", "&:hover": { bgcolor: "#0891b2", transform: "translateY(-2px)", boxShadow: "0 10px 35px rgba(6,182,212,0.5)" }, transition: "all 0.3s" }}>
@@ -54,7 +54,7 @@ const ChatbotBanner = () => (
             </Box>
             {/* Stat chips */}
             <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
-              {[{ v: "80%", l: "Queries Automated", icon: TrendingUpIcon, c: "#06b6d4" }, { v: "3s", l: "Response Time", icon: AccessTimeIcon, c: "#8b5cf6" }, { v: "24/7", l: "Always Active", icon: SmartToyIcon, c: "#22c55e" }].map((s, i) => {
+              {[{ v: "80%", l: "Automated Queries", icon: TrendingUpIcon, c: "#06b6d4" }, { v: "3s", l: "Response Time", icon: AccessTimeIcon, c: "#8b5cf6" }, { v: "24/7", l: "Availability", icon: SmartToyIcon, c: "#22c55e" }].map((s, i) => {
                 const Icon = s.icon;
                 return (
                   <Paper key={i} elevation={0} sx={{ px: 3, py: 1.5, borderRadius: "12px", bgcolor: "rgba(255,255,255,0.05)", border: `1px solid ${s.c}40`, display: "flex", alignItems: "center", gap: 1.5, backdropFilter: "blur(10px)" }}>
@@ -84,10 +84,10 @@ const ChatbotBanner = () => (
                   </Box>
                   {/* Chat bubbles */}
                   {[
-                    { msg: "Hi! I'd like to book a room.", out: true },
-                    { msg: "Sure! Which dates work for you? 🏨", out: false },
-                    { msg: "25–27 March, 2 guests", out: true },
-                    { msg: "Great! Let me check availability... ✅ We have rooms available at ₹3,500/night.", out: false },
+                    { msg: "Hi! I want to book a room", out: true },
+                    { msg: "What dates are you planning?", out: false },
+                    { msg: "[ Select Dates ]", out: true },
+                    { msg: "Rooms available from ₹3,500/night\n\n[ Book Now ]  [ View Rooms ]  [ Talk to Agent ]", out: false },
                   ].map((chat, i) => (
                     <motion.div key={i} initial={{ opacity: 0, x: chat.out ? 20 : -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 + i * 0.3, duration: 0.4 }}>
                       <Box sx={{ display: "flex", justifyContent: chat.out ? "flex-end" : "flex-start", mb: 1.5 }}>

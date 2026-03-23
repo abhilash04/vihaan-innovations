@@ -19,7 +19,6 @@ import HotelGuestCRM from "./HotelGuestCRM";
 import HotelIntegrations from "./HotelIntegrations";
 import HotelWhyUs from "./HotelWhyUs";
 import HotelTestimonial from "./HotelTestimonial";
-import HotelFAQ from "./HotelFAQ";
 import HotelCTA from "./HotelCTA";
 
 const HotelHomepage = () => {
@@ -44,7 +43,6 @@ const HotelHomepage = () => {
         <HotelIntegrations />
         <HotelWhyUs />
         <HotelTestimonial />
-        <HotelFAQ />
         <HotelCTA />
       </Box>
       <FooterAndPopup />

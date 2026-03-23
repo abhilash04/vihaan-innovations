@@ -9,12 +9,12 @@ import PriceChangeIcon from '@mui/icons-material/PriceChange';
 import UpcomingIcon from '@mui/icons-material/Upcoming';
 
 const revenueFeatures = [
-  { icon: TrendingUpIcon, title: "Dynamic Pricing Policy", desc: "Adjust rates automatically based on occupancy, demand, and season.", color: "#d4a017" },
-  { icon: CalendarMonthIcon, title: "Revenue Plans", desc: "Frequency spend, length of stay & early bird discount strategies.", color: "#0f766e" },
-  { icon: CompareIcon, title: "Competitor Rate Monitoring", desc: "Real-time parity checks across Booking.com, Airbnb, and Expedia.", color: "#3b82f6" },
-  { icon: CardGiftcardIcon, title: "Package Builder", desc: "Build meal plans, spa combos, and seasonal packages effortlessly.", color: "#7c3aed" },
-  { icon: PriceChangeIcon, title: "Upsell Prompts", desc: "Smart mid-booking upsell for room upgrades, early check-in, etc.", color: "#f97316" },
-  { icon: UpcomingIcon, title: "Competitor Real Monitoring", desc: "Auto alert when competitor rates drop below your floor price.", color: "#ec4899" },
+  { icon: TrendingUpIcon, title: "Dynamic Pricing Strategy", desc: "Room prices are automatically adjusted based on demand, occupancy levels, and seasonal trends to increase revenue.", color: "#d4a017" },
+  { icon: CalendarMonthIcon, title: "Revenue Planning Tools", desc: "Plan and manage pricing strategies based on stay duration, booking trends, and early booking offers.", color: "#0f766e" },
+  { icon: CompareIcon, title: "Competitor Rate Tracking", desc: "Track competitor pricing in real time across major booking platforms to stay competitive in the market.", color: "#3b82f6" },
+  { icon: CardGiftcardIcon, title: "Package Creation Tool", desc: "Create custom packages such as meal plans, spa services, and seasonal offers to attract more bookings.", color: "#7c3aed" },
+  { icon: PriceChangeIcon, title: "Upsell Opportunities", desc: "Increase revenue by offering room upgrades and additional services during the booking process.", color: "#f97316" },
+  { icon: UpcomingIcon, title: "Competitor Price Alerts", desc: "Get instant alerts when competitor prices drop below your rates, allowing you to adjust pricing quickly.", color: "#ec4899" },
 ];
 
 const HotelRevenueManagement = () => (
@@ -23,9 +23,11 @@ const HotelRevenueManagement = () => (
       <Box sx={{ textAlign: "center", mb: 3 }}>
         <Typography sx={{ color: "#d4a017", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>Revenue Management</Typography>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "34px" }, mb: 2 }}>
-          Revenue Management Features
+          Smart Revenue Management Features
         </Typography>
-        <Typography sx={{ color: "#64748b", fontSize: "16px" }}>Maximize RevPAR with Smart Pricing and End Business</Typography>
+        <Typography sx={{ color: "#64748b", fontSize: "16px", maxWidth: "700px", mx: "auto" }}>
+          Built with advanced hotel booking app development services, these features help maximise revenue using smart pricing and data-driven strategies.
+        </Typography>
       </Box>
       <Grid container spacing={3} sx={{ mt: 5 }}>
         {revenueFeatures.map((f, i) => {

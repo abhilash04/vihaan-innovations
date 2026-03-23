@@ -37,19 +37,33 @@ const MatrimonyProvenImpact = () => {
     <Box sx={{ bgcolor: "#0B2046", py: 8, borderBottom: "1px solid rgba(255,255,255,0.05)" }}> {/* Same navy blue as Privacy & Trust */}
       <Container maxWidth="lg">
 
-        {/* The design just shows 4 stats in a row, no header */}
+        {/* Header Section added */}
+        <Box sx={{ textAlign: "center", mb: 8 }}>
+          <Box sx={{ display: "inline-block", mb: 2 }}>
+            <Typography sx={{
+              fontWeight: 800, color: "#ffffff", fontSize: "28px",
+              alignItems: "center", justifyContent: "center"
+            }}>
+              Real Results That Power Modern Matrimony Platforms
+            </Typography>
+          </Box>
+          <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
+            Our solutions deliver measurable impact for businesses using professional matrimony platforms.
+          </Typography>
+        </Box>
+
         <Grid container spacing={4} justifyContent="center" alignItems="center">
           <Grid item xs={6} md={3}>
-            <StatBox icon={SpeedIcon} value="70%+" label="Faster matching" delay={0.1} />
+            <StatBox icon={SpeedIcon} value="70%+" label="Faster Matching" delay={0.1} />
           </Grid>
           <Grid item xs={6} md={3}>
-            <StatBox icon={AccessTimeIcon} value="30+" label="Hours saved per week" delay={0.2} />
+            <StatBox icon={AccessTimeIcon} value="30+" label="Hours Saved / Week" delay={0.2} />
           </Grid>
           <Grid item xs={6} md={3}>
-            <StatBox icon={TrendingUpIcon} value="25%" label="Increase in conversion" delay={0.3} />
+            <StatBox icon={TrendingUpIcon} value="25%" label="Conversion Growth" delay={0.3} />
           </Grid>
           <Grid item xs={6} md={3}>
-            <StatBox icon={AnalyticsIcon} value="3-4" label="Months average launch" delay={0.4} />
+            <StatBox icon={AnalyticsIcon} value="3-4" label="Months to Launch" delay={0.4} />
           </Grid>
         </Grid>
 

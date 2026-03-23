@@ -6,20 +6,20 @@ import { ArrowRight } from "lucide-react";
 const posts = [
   {
     category: "Insights",
-    title: "AI & The Future of Property Valuations",
-    desc: "How predictive modeling index buffers accurately pricing hyperloops correctly.",
+    title: "How Real Estate Portals Are Transforming Property Businesses",
+    desc: "Discover how modern real estate portals help agencies manage listings, attract buyers, and streamline property transactions with advanced digital platforms.",
     img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80",
   },
   {
     category: "Tech",
-    title: "Unifying MLS Feeds In Under 72 Hours",
-    desc: "Direct audit lockboxes syncing confluent driver nodes transparently.",
+    title: "The Future of Digital Transformation in Real Estate",
+    desc: "Explore how emerging technologies like automation, AI, and data analytics are reshaping the real estate industry and improving operational efficiency.",
     img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=500&q=80",
   },
   {
     category: "Growth",
-    title: "Hyperlocal SEO For Broker Networks",
-    desc: "Gain confluent drives multiplying landing index visibility matrices correctly.",
+    title: "Why Every Real Estate Business Needs a Smart Property Platform",
+    desc: "Learn how scalable real estate platforms help developers, brokers, and property marketplaces manage listings, generate leads, and deliver better customer experiences.",
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80",
   },
 ];
@@ -52,18 +52,18 @@ const PortalBlog = () => {
                 mb: 1.5,
               }}
             >
-              Resources & Insights
+              Explore Our Resources on Real Estate Solutions
             </Typography>
             <Typography
               variant="body1"
               sx={{
                 fontFamily: "'Inter', sans-serif",
                 color: "rgba(255, 255, 255, 0.6)",
-                maxWidth: "600px",
+                maxWidth: "700px",
                 margin: "0 auto",
               }}
             >
-              Stay ahead of the curve with our latest updates on PropTech and data architecture.
+              Stay updated with the latest insights, trends, and technologies shaping the real estate industry. Explore expert articles on property platforms, digital transformation, and smart real estate solutions.
             </Typography>
           </motion.div>
         </Box>

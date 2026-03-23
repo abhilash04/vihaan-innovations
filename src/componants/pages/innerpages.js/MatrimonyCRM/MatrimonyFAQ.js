@@ -41,6 +41,11 @@ const MatrimonyFAQ = () => {
               display: "flex", alignItems: "center", gap: 1,
               justifyContent: "center"
             }}>
+              <Box component="span" sx={{
+                width: 32, height: 32, borderRadius: "50%",
+                border: "2px solid #0B2046", display: "flex",
+                alignItems: "center", justifyContent: "center", fontSize: "18px"
+              }}>14</Box>
               FAQ — Address Last-Mile Objections
             </Typography>
           </Box>

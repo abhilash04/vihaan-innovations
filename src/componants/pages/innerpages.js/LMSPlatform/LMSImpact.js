@@ -3,10 +3,10 @@ import { Box, Container, Typography, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "35%", label: "Improvement in course completion rate", color: "#22c55e" },
-  { value: "12", label: "Hours saved per instructor per week", color: "#3b82f6" },
-  { value: "28%", label: "Increase in student re-enrolment", color: "#f59e0b" },
-  { value: "90-Day", label: "Average launch timeline", color: "#8b5cf6" },
+  { value: "35%", label: "Boosted course completion rates", color: "#22c55e" },
+  { value: "12", label: "Hours saved per instructor every week", color: "#3b82f6" },
+  { value: "28%", label: "Growth in student re-enrollment and retention rates", color: "#f59e0b" },
+  { value: "90-Day", label: "Average time to launch a complete LMS platform with us", color: "#8b5cf6" },
 ];
 
 const LMSImpact = () => (

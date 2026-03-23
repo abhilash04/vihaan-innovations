@@ -92,12 +92,15 @@ const MatrimonyBanner = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <Typography variant="h1" sx={{ color: "#ffffff", fontWeight: 800, fontSize: { xs: "36px", md: "56px" }, lineHeight: 1.1, mb: 3 }}>
-                Build a <Box component="span" sx={{ color: "#00B4D8" }}>Matrimony</Box> Platform That Families Actually Trust
+              <Typography sx={{ color: "#00B4D8", fontWeight: 700, letterSpacing: 1.5, mb: 1.5, fontSize: "12px", textTransform: "uppercase" }}>
+                TRUSTED MATCHMAKING TECHNOLOGY
+              </Typography>
+              <Typography variant="h1" sx={{ color: "#ffffff", fontWeight: 800, fontSize: { xs: "32px", md: "48px" }, lineHeight: 1.1, mb: 3 }}>
+                Trusted <Box component="span" sx={{ color: "#00B4D8" }}>Matrimony App</Box> Development Company for Modern Matchmaking Platforms
               </Typography>
 
-              <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", lineHeight: 1.6, mb: 5, maxWidth: "500px" }}>
-                Custom matrimony portals, matchmaking CRMs, and profile management systems for matrimony businesses, community platforms, and matchmaking agencies.
+              <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", lineHeight: 1.6, mb: 5, maxWidth: "550px" }}>
+                As an experienced matrimony app development company, we create modern matchmaking apps that help matrimony businesses manage profiles, connect matches, and grow their platform efficiently.
               </Typography>
 
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
@@ -121,7 +124,7 @@ const MatrimonyBanner = () => {
                     transition: "all 0.3s"
                   }}
                 >
-                  See a Demo
+                  Start Your Matrimony App
                 </Button>
 
                 <Button
@@ -142,8 +145,22 @@ const MatrimonyBanner = () => {
                     }
                   }}
                 >
-                  Explore Features
+                  View Features
                 </Button>
+              </Box>
+
+              {/* Stats below buttons */}
+              <Box sx={{ display: "flex", flexWrap: "wrap", gap: { xs: 2, md: 4 }, mt: 5, pt: 3, borderTop: "1px solid rgba(255,255,255,0.1)" }}>
+                {[
+                  { value: "50K+", label: "Profiles Managed" },
+                  { value: "85%+", label: "Match Success Rate" },
+                  { value: "4× Faster", label: "User Response Time" },
+                ].map((stat, i) => (
+                  <Box key={i}>
+                    <Typography sx={{ color: "#ffffff", fontWeight: 800, fontSize: "20px" }}>{stat.value}</Typography>
+                    <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "12px", fontWeight: 600, textTransform: "uppercase", mt: 0.5 }}>{stat.label}</Typography>
+                  </Box>
+                ))}
               </Box>
             </motion.div>
           </Grid>

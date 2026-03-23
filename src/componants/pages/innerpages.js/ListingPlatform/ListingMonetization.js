@@ -8,26 +8,26 @@ import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 
 const strategies = [
   {
-    title: "Featured Listing tiers",
-    desc: "Feature directories entries, endorsements via notifications...  \nFeatured Listing Tiers",
+    title: "Featured Listing Tiers",
+    desc: "• Highlight businesses with premium visibility\n• Tiered pricing for listings based on placement, duration, and endorsements\n• Notifications to users about featured listings",
     icon: <MonetizationOnIcon />,
     color: "#eab308" // Gold/Yellow
   },
   {
-    title: "Banner Ad placements",
-    desc: "Banners ad placement metrics for monetization plans...  \n- Banner Ad placements",
+    title: "Banner Ad Placements",
+    desc: "• Strategic banner placements for maximum clicks\n• Detailed metrics for impressions and ROI\n• Flexible options for campaigns and ad rotation",
     icon: <WebAssetIcon />,
     color: "#22c55e" // Green
   },
   {
-    title: "Banno Ties",
-    desc: "Subscription plans placements max used monetization listing plans.",
+    title: "Subscription Plans",
+    desc: "• Offer recurring subscription plans for businesses\n• Easy plan management and renewal options\n• Tiered subscriptions for different features",
     icon: <CreditCardIcon />,
     color: "#3b82f6" // Blue
   },
   {
-    title: "Subscription plans",
-    desc: "Stripe, Razorpay plans integrations on time advanced transaction management.\nSubscription plans via Stripe/Razorpay",
+    title: "Payment Gateway Integrations",
+    desc: "• Accept payments via Stripe and Razorpay\n• Automated invoicing and transaction management\n• Secure, real-time processing for payments",
     icon: <LocalAtmIcon />,
     color: "#6366f1" // Indigo
   }
@@ -91,12 +91,15 @@ const ListingMonetization = () => {
       <Container maxWidth="lg">
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 6 }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+        <Box sx={{ textAlign: "center", mb: 8 }}>
+          <Typography sx={{ color: "#2563eb", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: 1, mb: 1 }}>
             Monetization & Revenue
           </Typography>
-          <Typography sx={{ color: "#666", fontSize: "16px" }}>
-            Monetization and representations gross networks and conditions.
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+            Revenue Streams for Every Business Listing Website India
+          </Typography>
+          <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "700px", margin: "0 auto" }}>
+            Maximize earnings and manage transactions effortlessly on your business listing website India with featured listings, ad placements, and subscription plans integrated with modern payment gateways.
           </Typography>
         </Box>
 
@@ -109,6 +112,34 @@ const ListingMonetization = () => {
           ))}
         </Grid>
 
+        {/* Footer CTA */}
+        <Box sx={{ textAlign: "center", mt: 6 }}>
+          <Typography sx={{ color: "#1a1a1a", fontWeight: 700, fontSize: "18px", mb: 2 }}>
+            Start Monetizing Today
+          </Typography>
+          <Box
+            component="button"
+            sx={{
+              bgcolor: "#2563eb",
+              color: "#ffffff",
+              fontWeight: 700,
+              fontSize: "15px",
+              px: { xs: 4, md: 5 },
+              py: 1.5,
+              borderRadius: "8px",
+              textTransform: "none",
+              cursor: "pointer",
+              border: "none",
+              boxShadow: "0 4px 14px rgba(37, 99, 235, 0.3)",
+              "&:hover": {
+                bgcolor: "#1d4ed8",
+                boxShadow: "0 6px 20px rgba(37, 99, 235, 0.4)",
+              },
+            }}
+          >
+            Get Started with Your Business Listing Website India
+          </Box>
+        </Box>
       </Container>
     </Box>
   );

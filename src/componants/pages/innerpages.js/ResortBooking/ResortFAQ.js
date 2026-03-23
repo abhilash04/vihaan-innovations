@@ -4,22 +4,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus, ArrowRight } from "lucide-react";
 
 const faqs = [
-  {
-    q: "What does the onboarding process look like?",
-    a: "We start with a property audit layout to configure room grids, synchronize OTAs with dynamic keys, and map staff permissions dashboards in under 72 hours.",
-  },
-  {
-    q: "Can it integrate with our existing accounting tool?",
-    a: "Yes, our Secure hooks support deep exports to Tally, Quickbooks, and custom ERP files automatically with monthly audit locks.",
-  },
-  {
-    q: "How does the housekeeping dispatch work?",
-    a: "Ground staff receive instant push alerts on their digital dashboard cards detailing checklist priority and inventory stock clearance hooks.",
-  },
-  {
-    q: "Is there support for multi-currency property lists?",
-    a: "Absolutely. Multi-node setups accommodate global rate cards, automated tax lockboxes, and consolidated revenue graphs intuitively.",
-  },
+  { q: "What is resort website design?", a: "It is a website made for resorts to show rooms, services, and allow online bookings." },
+  { q: "Why do I need it?", a: "It helps attract more guests and allows easy online booking." },
+  { q: "What is a resort management system?", a: "It is software that helps manage bookings, guests, payments, and operations." },
+  { q: "How does it help?", a: "It automates tasks and reduces manual work." },
+  { q: "Can I accept bookings online?", a: "Yes, guests can book rooms directly on your website." },
+  { q: "Is it mobile-friendly?", a: "Yes, you can use it on mobile, tablet, or desktop." },
+  { q: "Will it increase bookings?", a: "Yes, faster and easier booking improves occupancy." },
+  { q: "Can it be customized?", a: "Yes, it can match your resort’s brand and style." },
+  { q: "Is it secure?", a: "Yes, it uses secure systems to protect data." },
+  { q: "How do I start?", a: "Contact us and we’ll build a custom solution for your resort." },
 ];
 
 const ResortFAQ = () => {
@@ -66,8 +60,6 @@ const ResortFAQ = () => {
                 margin: "0 auto",
               }}
             >
-              Everything you need to know about integrating our intelligent resort
-              booking engine.
             </Typography>
           </motion.div>
         </Box>
@@ -166,7 +158,7 @@ const ResortFAQ = () => {
                 mb: 1.5,
               }}
             >
-              Ready to Streamline Your Resort?
+              Ready to Build a Powerful Resort Website?
             </Typography>
             <Typography
               variant="body1"
@@ -178,7 +170,7 @@ const ResortFAQ = () => {
                 fontSize: "0.95rem",
               }}
             >
-              Book a 15-minute consultation with our deployment specialist today.
+              Improve your resort business with a smart website and management system.
             </Typography>
             <Button
               variant="contained"
@@ -197,7 +189,7 @@ const ResortFAQ = () => {
                 "&:hover": { bgcolor: "#E5C158" },
               }}
             >
-              Request 1:1 Live Demo
+              Get Your Resort Website Today
             </Button>
           </Box>
         </motion.div>

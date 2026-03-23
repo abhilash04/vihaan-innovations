@@ -9,12 +9,12 @@ import CampaignIcon from '@mui/icons-material/Campaign';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 
 const features = [
-  { icon: LocalFireDepartmentIcon, title: "Streak tracking count", color: "#f97316", bg: "#fff7ed" },
-  { icon: EmojiEventsIcon, title: "Badge collection", color: "#f59e0b", bg: "#fffbeb" },
-  { icon: AutoAwesomeIcon, title: "Personalised path recommendations", color: "#8b5cf6", bg: "#f5f3ff" },
-  { icon: WhatsAppIcon, title: "WhatsApp reminders", color: "#22c55e", bg: "#f0fdf4" },
-  { icon: CampaignIcon, title: "Instructor announcements", color: "#2563eb", bg: "#eff6ff" },
-  { icon: PlayCircleIcon, title: "Interactive video with embedded questions", color: "#06b6d4", bg: "#ecfeff" },
+  { icon: LocalFireDepartmentIcon, title: "Learning streak tracking", color: "#f97316", bg: "#fff7ed" },
+  { icon: EmojiEventsIcon, title: "Achievement badges & rewards", color: "#f59e0b", bg: "#fffbeb" },
+  { icon: AutoAwesomeIcon, title: "Personalised learning path recommendations", color: "#8b5cf6", bg: "#f5f3ff" },
+  { icon: WhatsAppIcon, title: "WhatsApp notifications & reminders", color: "#22c55e", bg: "#f0fdf4" },
+  { icon: CampaignIcon, title: "Instructor announcements & updates", color: "#2563eb", bg: "#eff6ff" },
+  { icon: PlayCircleIcon, title: "Interactive videos with in-built questions", color: "#06b6d4", bg: "#ecfeff" },
 ];
 
 const LMSEngagement = () => (

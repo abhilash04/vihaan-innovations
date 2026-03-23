@@ -7,10 +7,10 @@ import SpeedIcon from '@mui/icons-material/Speed';
 import ScaleIcon from '@mui/icons-material/Scale';
 
 const reasons = [
-  { icon: DownloadIcon, num: "01", title: "Download EdTech Portals", desc: "Over X EdTech Portals (Your Brand Domain, Data). Built and launched for edtech companies, coaching institutes and corporate L&D teams.", color: "#3b82f6" },
-  { icon: BrandingWatermarkIcon, num: "02", title: "Custom Platform", desc: "Provide platform (Your Brand Domain, Data). Completely white-label delivery, zero Vihaan branding.", color: "#22c55e" },
-  { icon: SpeedIcon, num: "03", title: "Fast Assessment & Technology", desc: "Scalable from 100 to 1,00,000+ Certificates. Enterprise-ready infrastructure from day one.", color: "#f59e0b" },
-  { icon: ScaleIcon, num: "04", title: "Scalable from 100 to 1,00,000+", desc: "Scalable from 100 to 1,00,000+ courses and students. We grow with you.", color: "#8b5cf6" },
+  { icon: DownloadIcon, num: "01", title: "Proven EdTech Solutions", desc: "Built and launched multiple platforms through expert LMS Application Development for edtech companies, coaching institutes, and corporate training teams.", color: "#3b82f6" },
+  { icon: BrandingWatermarkIcon, num: "02", title: "Fully Custom Platform", desc: "Get a branded platform with your domain and data, delivered as a complete white-label solution without external branding.", color: "#22c55e" },
+  { icon: SpeedIcon, num: "03", title: "Fast & Scalable Technology", desc: "Reliable and scalable system supporting from 100 to 1,00,000+ users, with enterprise-ready infrastructure from the start.", color: "#f59e0b" },
+  { icon: ScaleIcon, num: "04", title: "Scales with Your Growth", desc: "Designed to handle increasing users, courses, and content as your learning platform expands.", color: "#8b5cf6" },
 ];
 
 const LMSWhyUs = () => (

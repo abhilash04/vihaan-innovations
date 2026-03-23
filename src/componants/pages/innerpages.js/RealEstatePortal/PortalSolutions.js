@@ -1,15 +1,15 @@
 import React from "react";
 import { Box, Typography, Grid, Container, Link } from "@mui/material";
 import { motion } from "framer-motion";
-import { ArrowRight, Building, Home, Key, Percent, FileText, Layout } from "lucide-react";
+import { ArrowRight, Building, Home, Key, FileText, Users, Database, Calendar, TrendingUp, Wrench, Briefcase, CreditCard, Laptop, Target, Archive } from "lucide-react";
 
 const solutions = [
-  { icon: <Home size={22} />, title: "B2C Portals", desc: "For sale & rent listing indices facing buyers directly." },
-  { icon: <Building size={22} />, title: "B2B Dashboards", desc: "Corporate property managers with deep analytic rollups." },
-  { icon: <Key size={22} />, title: "Tenant Portals", desc: "Payment hooks and automated dispatch maintenance." },
-  { icon: <Percent size={22} />, title: "Broker CRM", desc: "Lead routing pipelines with integrated contract triggers." },
-  { icon: <FileText size={22} />, title: "Auction Blocks", desc: "Real-time transparent bid locks with digital signatures." },
-  { icon: <Layout size={22} />, title: "Builder Modules", desc: "Project phase tracking with floorplan overlay matrices." },
+  { icon: <Users size={22} />, title: "CRM for Real Estate Agents", desc: "Help agents manage leads, track client chats, set up automatic replies, and close more deals easily." },
+  { icon: <Database size={22} />, title: "Real Estate ERP Solution", desc: "An all-in-one system to handle property sales, billing, stock, and money reports in one single place." },
+  { icon: <Calendar size={22} />, title: "Property Booking Management", desc: "Easy tools to handle property bookings, check what is available, and manage customer details automatically." },
+  { icon: <TrendingUp size={22} />, title: "Real Estate Valuation Engine", desc: "Smart tools that check market data to find the right property prices and spot good investments." },
+  { icon: <Wrench size={22} />, title: "Facility Management System", desc: "A simple platform built to track building repairs, service requests, and daily property upkeep." },
+  { icon: <Briefcase size={22} />, title: "Investment Software Development", desc: "Software to keep track of your property investments and see how well your portfolio is doing." },
 ];
 
 const PortalSolutions = () => {
@@ -63,9 +63,9 @@ const PortalSolutions = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Solutions <br />
+                Our Real Estate Software <br />
                 <Box component="span" sx={{ color: "#3B82F6" }}>
-                  Expertise
+                  Solutions Expertise
                 </Box>
               </Typography>
               <Typography
@@ -78,16 +78,8 @@ const PortalSolutions = () => {
                   mb: 3,
                 }}
               >
-                From single brokers onwards up to global asset portfolios—our framework supports 360-degree digital mapping correctly.
+                As an experienced real estate website design agency, we create smart digital platforms that help property businesses manage assets, automate operations, and improve client experiences.
               </Typography>
-              <Box
-                sx={{
-                  width: "100px",
-                  height: "2px",
-                  bgcolor: "rgba(59, 130, 246, 0.4)",
-                  borderRadius: "1px",
-                }}
-              />
             </motion.div>
           </Grid>
 

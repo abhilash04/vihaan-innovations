@@ -17,22 +17,22 @@ import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 const listerSteps = [
-  { label: "Register", icon: AccountCircleOutlinedIcon },
-  { label: "Create Listing", icon: AddBoxOutlinedIcon },
-  { label: "Upload Media", icon: CloudUploadOutlinedIcon },
-  { label: "Submit Review", icon: SendOutlinedIcon },
-  { label: "Go Live", icon: SensorsIcon, highlightColor: "#10b981" }, // Green for live
-  { label: "Get Enquiries", icon: ChatBubbleOutlineIcon },
-  { label: "Renew Account", icon: AutorenewOutlinedIcon },
+  { label: "Register Account", desc: "Create your profile on the business listing website India platform.", icon: AccountCircleOutlinedIcon },
+  { label: "Create Listing", desc: "Add business details, categories, and services.", icon: AddBoxOutlinedIcon },
+  { label: "Upload Media", desc: "Showcase images, videos, and key highlights.", icon: CloudUploadOutlinedIcon },
+  { label: "Submit for Review", desc: "Admin verifies and approves the listing.", icon: SendOutlinedIcon },
+  { label: "Go Live", desc: "Your listing becomes visible to users.", icon: SensorsIcon, highlightColor: "#10b981" },
+  { label: "Receive Enquiries", desc: "Start getting leads and customer interactions.", icon: ChatBubbleOutlineIcon },
+  { label: "Renew & Upgrade", desc: "Manage plans and boost listing visibility.", icon: AutorenewOutlinedIcon },
 ];
 
 const userSteps = [
-  { label: "Land Page", icon: VisibilityOutlinedIcon },
-  { label: "Smart Search", icon: SearchOutlinedIcon },
-  { label: "Browse Grid", icon: ViewListOutlinedIcon },
-  { label: "Save Favourites", icon: FavoriteBorderOutlinedIcon, highlightColor: "#ec4899" }, // Special pink
-  { label: "Send Enquiry", icon: EmailOutlinedIcon },
-  { label: "Submit Review", icon: StarOutlineIcon },
+  { label: "Landing Page Visit", desc: "Users enter the business listing website India platform.", icon: VisibilityOutlinedIcon },
+  { label: "Smart Search", desc: "Find businesses using filters and keywords.", icon: SearchOutlinedIcon },
+  { label: "Browse Listings", desc: "Explore results in grid or list view.", icon: ViewListOutlinedIcon },
+  { label: "Save Favorites", desc: "Bookmark listings for later comparison.", icon: FavoriteBorderOutlinedIcon, highlightColor: "#ec4899" },
+  { label: "Send Enquiry", desc: "Contact businesses directly.", icon: EmailOutlinedIcon },
+  { label: "Submit Reviews", desc: "Share feedback and ratings.", icon: StarOutlineIcon },
 ];
 
 // Sub-component for a single glowing sphere
@@ -136,10 +136,15 @@ const VerticalFlow = ({ steps, title, direction = "left" }) => {
                     }
                   }}
                 >
-                  <Icon sx={{ fontSize: 18, color: step.highlightColor ? color : "#333" }} />
-                  <Typography sx={{ fontWeight: 700, fontSize: "12.5px", whiteSpace: "nowrap" }}>
-                    {step.label}
-                  </Typography>
+                  <Icon sx={{ fontSize: 24, color: step.highlightColor ? color : "#333", mt: 0.5 }} />
+                  <Box>
+                    <Typography sx={{ fontWeight: 800, fontSize: "14px", color: color }}>
+                      {step.label}
+                    </Typography>
+                    <Typography sx={{ fontSize: "12.5px", color: "#666", lineHeight: 1.3 }}>
+                      {step.desc}
+                    </Typography>
+                  </Box>
                 </Paper>
               </motion.div>
 
@@ -180,21 +185,23 @@ const ListingPlatformJourney = () => {
 
       <Container maxWidth="md" sx={{ position: "relative", zIndex: 1 }}>
 
-        {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 6 }}>
+        <Box sx={{ textAlign: "center", mb: 8 }}>
+          <Typography sx={{ color: "#2563eb", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: 1, mb: 1 }}>
+            Platform Journey
+          </Typography>
           <Typography 
             variant="h2" 
             sx={{ 
               fontWeight: 800, 
               color: "#1a1a1a", 
               fontSize: { xs: "26px", md: "34px" }, 
-              mb: 1.5 
+              mb: 2 
             }}
           >
-            The Platform Journey
+            How a Business Listing Website India Works - From Listing to Conversion
           </Typography>
-          <Typography sx={{ color: "#666", fontSize: "15px" }}>
-            A synchronized flow from listing creation to user discovery.
+          <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "700px", margin: "0 auto" }}>
+            A seamless and synchronized workflow designed for every business listing website India, connecting listers and users from creation to discovery and engagement.
           </Typography>
         </Box>
 
@@ -236,6 +243,35 @@ const ListingPlatformJourney = () => {
 
           </Grid>
         </Paper>
+
+        {/* Footer CTA */}
+        <Box sx={{ textAlign: "center", mt: 8 }}>
+          <Typography sx={{ color: "#1a1a1a", fontWeight: 700, fontSize: "18px", mb: 2 }}>
+            Launch Your Business Listing Website India Today
+          </Typography>
+          <Box
+            component="button"
+            sx={{
+              bgcolor: "#2563eb",
+              color: "#ffffff",
+              fontWeight: 700,
+              fontSize: "15px",
+              px: { xs: 4, md: 5 },
+              py: 1.5,
+              borderRadius: "8px",
+              textTransform: "none",
+              cursor: "pointer",
+              border: "none",
+              boxShadow: "0 4px 14px rgba(37, 99, 235, 0.3)",
+              "&:hover": {
+                bgcolor: "#1d4ed8",
+                boxShadow: "0 6px 20px rgba(37, 99, 235, 0.4)",
+              },
+            }}
+          >
+            Get Started
+          </Box>
+        </Box>
 
       </Container>
     </Box>

@@ -20,7 +20,7 @@ const LMSTestimonial = () => (
             {[...Array(5)].map((_, i) => <StarIcon key={i} sx={{ color: "#f59e0b", fontSize: 22 }} />)}
           </Box>
           <Typography sx={{ fontWeight: 600, color: "#1e293b", fontSize: { xs: "18px", md: "22px" }, lineHeight: 1.6, textAlign: "center", mb: 6, position: "relative" }}>
-            "Platform sold-all the important social learning tasks and Vihaan demonstrated complete learning tasks and little extra social learning tasks. They built our entire edtech platform from scratch including mobile app, quizzes, certificates, and live lectures in record time."
+            "Vihaan delivered a complete solution covering all essential learning features with advanced LMS Website Development. They built our entire edtech platform from scratch, including a mobile app, quizzes, certificates, and live classes in a very short time."
           </Typography>
           <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 2.5 }}>
             <Box sx={{ width: 54, height: 54, borderRadius: "50%", bgcolor: "#dbeafe", display: "flex", justifyContent: "center", alignItems: "center" }}>

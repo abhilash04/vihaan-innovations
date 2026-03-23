@@ -11,33 +11,33 @@ import RestaurantIcon from '@mui/icons-material/Restaurant';
 const features = [
   {
     icon: BookOnlineIcon, color: "#d4a017",
-    title: "Direct Booking Engine",
-    desc: "Commission-free white-label booking engine on your domain. Real-time availability calendar, instant confirmation, coupon codes, and multi-room bookings.",
+    title: "Direct Booking System",
+    desc: "Enable commission-free bookings on your website with real-time availability, instant confirmations, offers, and multi-room booking options.",
   },
   {
     icon: DashboardIcon, color: "#0f766e",
     title: "Property Management System (PMS)",
-    desc: "Centralized reservation management, front desk operations, check-in/check-out, folio billing, and room assignment automation.",
+    desc: "Manage reservations, front desk operations, check-ins/check-outs, billing, and room allocation in one place.",
   },
   {
     icon: SyncAltIcon, color: "#3b82f6",
     title: "Channel Manager",
-    desc: "Two-way sync with Booking.com, Airbnb, Expedia, MakeMyTrip, Agoda, and more. No overbooking. Live rate updates across all OTAs.",
+    desc: "Sync your room inventory across platforms like Booking.com, Airbnb, and others to avoid overbooking and keep updates in real time.",
   },
   {
     icon: KingBedIcon, color: "#7c3aed",
-    title: "Room & Rate Management",
-    desc: "Flexible rate plans, room categories, seasonal pricing, early-bird discounts, and length-of-stay restrictions via a single panel.",
+    title: "Room & Pricing Management",
+    desc: "Control room types, pricing plans, seasonal rates, and special offers from a single dashboard.",
   },
   {
     icon: PeopleIcon, color: "#ec4899",
-    title: "Guest Profile & CRM",
-    desc: "Unified guest history, loyalty points, preference tags, automated birthday/anniversary messages, and post-stay review requests.",
+    title: "Guest Management & CRM",
+    desc: "Store guest details, track preferences, and manage communication with automated and personalised engagement.",
   },
   {
     icon: RestaurantIcon, color: "#f97316",
-    title: "Restaurant & In-room Dining",
-    desc: "Digital menu, table reservations, QR-code ordering, in-room food delivery tracking, and kitchen display integration.",
+    title: "Restaurant & In-room Services",
+    desc: "Handle digital menus, table reservations, QR-based ordering, and room service with an integrated system.",
   },
 ];
 
@@ -47,7 +47,10 @@ const HotelFeatures = () => (
       <Box sx={{ textAlign: "center", mb: 3 }}>
         <Typography sx={{ color: "#0f766e", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>Feature Overview</Typography>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
-          Our Core Capabilities for Hospitality Excellence
+          Core Features for Hospitality Growth
+        </Typography>
+        <Typography sx={{ color: "#475569", fontSize: "16px", maxWidth: "700px", mx: "auto" }}>
+          Built by a leading hotel booking app development company, our solution helps streamline operations and increase direct bookings.
         </Typography>
       </Box>
       <Grid container spacing={4} sx={{ mt: 4 }}>

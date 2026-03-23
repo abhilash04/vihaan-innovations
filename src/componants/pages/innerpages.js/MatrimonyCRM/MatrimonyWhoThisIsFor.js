@@ -9,12 +9,12 @@ import ShareIcon from '@mui/icons-material/Share';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 
 const audiences = [
-  { icon: <LocationCityIcon />, title: "Community-based\nMatrimony Platforms" },
-  { icon: <PublicIcon />, title: "Regional / Religion-\nspecific Portals" },
-  { icon: <HandshakeIcon />, title: "Professional\nMatchmaking Agencies" },
-  { icon: <HomeIcon />, title: "Family-run bureaus\ngoing digital" },
-  { icon: <ShareIcon />, title: "Matrimony Franchise\nNetworks" },
-  { icon: <FlightTakeoffIcon />, title: "NRI & Diaspora\nMatch Platforms" }
+  { icon: <LocationCityIcon />, title: "Profile System" },
+  { icon: <PublicIcon />, title: "Matchmaking AI" },
+  { icon: <HandshakeIcon />, title: "Advanced Search" },
+  { icon: <HomeIcon />, title: "Secure Messaging" },
+  { icon: <ShareIcon />, title: "Admin Dashboard" },
+  { icon: <FlightTakeoffIcon />, title: "Mobile Friendly" }
 ];
 
 const AudienceCard = ({ icon, title, delay }) => (
@@ -76,15 +76,21 @@ const MatrimonyWhoThisIsFor = () => {
 
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 4 }}>
-          <Box sx={{ display: "inline-block", mb: 1 }}>
+          <Box sx={{ display: "inline-block", mb: 2 }}>
             <Typography sx={{
               fontWeight: 800, color: "#0B2046", fontSize: "28px",
               display: "flex", alignItems: "center", gap: 1,
               justifyContent: "center"
             }}>
-              Who This Is For
+              Powerful Features Built by a Leading Matrimony Web Design Company
             </Typography>
           </Box>
+          <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "800px", margin: "0 auto", mb: 2 }}>
+            As an experienced matrimony web design company, we build advanced matchmaking platforms designed to simplify partner search, manage profiles efficiently, and deliver a secure experience for families and communities.
+          </Typography>
+          <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
+            Our matrimony platforms include intelligent matchmaking tools, powerful admin dashboards, and user-friendly interfaces that make the matchmaking process seamless.
+          </Typography>
         </Box>
 
         {/* Audience Grid - 3x2 Layout exact match to image */}

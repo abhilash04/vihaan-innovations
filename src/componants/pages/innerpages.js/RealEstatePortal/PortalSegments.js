@@ -6,26 +6,26 @@ import { CheckCircle2 } from "lucide-react";
 const segments = [
   {
     title: "Residential",
-    desc: "Scale accurate matching for single-family, condo, and luxury estate listing indices.",
-    bullets: ["MLS Direct Synchronization", "3D Virtual walkthrough embeds", "Open house scheduler matrices"],
+    desc: "Deliver better experiences for home buyers and sellers with modern software solutions designed to simplify property sales, lead management, and customer engagement.",
+    bullets: ["Gain valuable insights into property operations", "Track sales and acquisition data in real time", "Generate high-quality leads for better conversions"],
     img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=500&q=80",
   },
   {
     title: "Commercial",
-    desc: "Enterprise spaces, offices, and retail park management grids.",
-    bullets: ["Lease roll-up analytics", "CAM fee direct auditing", "Space availability triggers"],
+    desc: "Optimize commercial property operations with advanced platforms that streamline leasing, property management, and business transactions.",
+    bullets: ["Gain valuable insights into property operations", "Track sales and acquisition data in real time", "Generate high-quality leads for better conversions"],
     img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=500&q=80",
   },
   {
     title: "Industrial",
-    desc: "Logistics hubs, warehouses, and factories supporting heavyweight asset tracking.",
-    bullets: ["Loading dock allocations", "Ceiling height volume indices", "Power grid grid layouts"],
+    desc: "Manage large-scale industrial property operations with powerful tools that handle logistics, asset tracking, and property workflows efficiently.",
+    bullets: ["Gain valuable insights into property operations", "Track sales and acquisition data in real time", "Generate high-quality leads for better conversions"],
     img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=500&q=80",
   },
   {
     title: "Marketplace",
-    desc: "Aggregators sourcing multi-broker feeds carrying global property caches.",
-    bullets: ["Direct advertising matrices", "Bid transparent locks", "Multi-currency rate boxes"],
+    desc: "Build scalable property marketplaces that showcase listings, attract buyers, and enable seamless property discovery with advanced search features.",
+    bullets: ["Gain valuable insights into property operations", "Track sales and acquisition data in real time", "Generate high-quality leads for better conversions"],
     img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=500&q=80",
   },
 ];
@@ -63,7 +63,7 @@ const PortalSegments = () => {
                 color: "#1a1a1a",
               }}
             >
-              Segments We Serve
+              Different Real Estate Segments We Serve
             </Typography>
             <Typography
               variant="body1"
@@ -74,7 +74,7 @@ const PortalSegments = () => {
                 margin: "0 auto",
               }}
             >
-              Modular layouts adapting seamlessly across asset scopes correctly.
+              We build powerful digital solutions for businesses across every segment of the real estate industry. Our platforms are designed to support operations, improve efficiency, and help real estate businesses grow with scalable technology.
             </Typography>
           </motion.div>
         </Box>
