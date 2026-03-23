@@ -148,8 +148,9 @@ const FoodOrdering = () => {
         <Box sx={{
           display: "grid",
           gridTemplateColumns: { xs: "1fr", sm: "repeat(2, 1fr)", md: "repeat(3, 1fr)" },
-          gap: { xs: "20px", md: "30px" },
-          mb: 8
+          rowGap: { xs: "20px", md: "80px" },
+          columnGap: { xs: "20px", md: "30px" },
+          mb: 8,
         }}>
           <FeatureCard
             icon={SmartphoneIcon}
