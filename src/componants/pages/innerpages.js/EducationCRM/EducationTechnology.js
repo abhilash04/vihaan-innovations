@@ -7,7 +7,7 @@ import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import LinkIcon from '@mui/icons-material/Link';
 
 const techStack = [
-  "React.js", "Next.js", "Node.js", "PostgreSQL", "AWS / GCP", 
+  "React.js", "Next.js", "Node.js", "PostgreSQL", "AWS / GCP",
   "REST APIs", "WhatsApp API", "Payment Gateway", "DocuSign / eSign", "Google Maps API"
 ];
 
@@ -46,19 +46,19 @@ const FeatureIcon = ({ icon: Icon, label, delay }) => (
 const EducationTechnology = () => {
   return (
     <Box sx={{ position: "relative", bgcolor: "#0B2046", pt: 16, pb: 12 }}>
-      
+
       {/* Top Wave SVG intersecting with the previous section's light blue */}
       <Box sx={{ position: "absolute", top: 0, left: 0, width: "100%", overflow: "hidden", lineHeight: 0 }}>
         <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%", height: "auto" }}>
-          <path d="M0 0H1440V104.148C1087.64 45.4199 824.717 197.669 367.653 104.148C143.498 58.2618 0 120 0 120V0Z" fill="#e0fbfc"/>
+          <path d="M0 0H1440V104.148C1087.64 45.4199 824.717 197.669 367.653 104.148C143.498 58.2618 0 120 0 120V0Z" fill="#e0fbfc" />
         </svg>
       </Box>
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
-        
+
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8, maxWidth: "800px", mx: "auto" }}>
-          <Typography sx={{ color: "#00B4D8", fontWeight: 600, mb: 2, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px" }}>
+        <Box sx={{ textAlign: "center", mb: 6, maxWidth: "800px", mx: "auto" }}>
+          <Typography sx={{ color: "#00B4D8", fontWeight: 600, mb: 2, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px", pt: 6 }}>
             Technology
           </Typography>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", mb: 3, fontSize: { xs: "32px", md: "46px" }, lineHeight: 1.2 }}>
@@ -79,12 +79,12 @@ const EducationTechnology = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
             >
-              <Chip 
-                label={tech} 
-                variant="outlined" 
-                sx={{ 
-                  color: "#ffffff", 
-                  borderColor: "rgba(255,255,255,0.2)",
+              <Chip
+                label={tech}
+                variant="outlined"
+                sx={{
+                  color: "#ffffff",
+                  borderColor: "#00B4D8",
                   bgcolor: "rgba(255,255,255,0.03)",
                   fontSize: "15px",
                   fontWeight: 500,
@@ -92,10 +92,10 @@ const EducationTechnology = () => {
                   px: 1,
                   borderRadius: "30px",
                   "&:hover": {
-                    borderColor: "#00B4D8",
+                    borderColor: "rgba(255,255,255,0.2)",
                     bgcolor: "rgba(0, 180, 216, 0.1)"
                   }
-                }} 
+                }}
               />
             </motion.div>
           ))}

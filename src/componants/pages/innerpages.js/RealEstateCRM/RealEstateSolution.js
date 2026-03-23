@@ -60,7 +60,7 @@ const SolutionCard = ({ icon: Icon, title, delay }) => (
 
 const RealEstateSolution = () => {
   return (
-    <Box sx={{ position: "relative", py: 12, overflow: "hidden" }}>
+    <Box sx={{ position: "relative", pb: 12, pt: 8, overflow: "hidden" }}>
 
       {/* Background shape */}
       <Box sx={{
@@ -77,7 +77,7 @@ const RealEstateSolution = () => {
       }} />
 
       {/* Decorative Arrow */}
-      <Box sx={{ position: 'relative', zIndex: 1, display: 'flex', justifyContent: 'center', mb: 6 }}>
+      <Box sx={{ position: 'relative', zIndex: 1, display: 'flex', justifyContent: 'center', mb: 4 }}>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
@@ -89,7 +89,7 @@ const RealEstateSolution = () => {
       <Container maxWidth="md" sx={{ position: "relative", zIndex: 2 }}>
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography sx={{ color: "#0B2046", fontWeight: 600, mb: 1, fontSize: "16px", textTransform: "uppercase", letterSpacing: "1px" }}>
             Our Solution
           </Typography>
@@ -105,7 +105,7 @@ const RealEstateSolution = () => {
         <Grid
           container
           columnSpacing={3}
-          rowSpacing={15}
+          rowSpacing={12}
           justifyContent="center"
           sx={{ maxWidth: "800px", mx: "auto" }}
         >

@@ -38,9 +38,9 @@ const FeatureCard = ({ icon: Icon, title, delay }) => (
         }
       }}
     >
-      <Box 
-        sx={{ 
-          width: 80, height: 80, 
+      <Box
+        sx={{
+          width: 80, height: 80,
           borderRadius: "20px",
           bgcolor: "#ffffff",
           display: "flex", justifyContent: "center", alignItems: "center",
@@ -69,20 +69,20 @@ const EducationFeatures = () => {
       </Box>
 
       {/* Decorative large faint text in background */}
-      <Typography sx={{ 
-        position: "absolute", top: "10%", left: "5%", 
-        fontSize: "12vw", fontWeight: 900, color: "rgba(255,255,255,0.05)", 
-        whiteSpace: "nowrap", pointerEvents: "none", zIndex: 0 
+      <Typography sx={{
+        position: "absolute", top: "10%", left: "5%",
+        fontSize: "12vw", fontWeight: 900, color: "rgba(255,255,255,0.05)",
+        whiteSpace: "nowrap", pointerEvents: "none", zIndex: 0
       }}>
         FEATURES
       </Typography>
 
       <Container maxWidth="md" sx={{ position: "relative", zIndex: 2 }}>
-        
+
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
           <Typography sx={{ color: "#ffffff", fontSize: "16px", mb: 1, letterSpacing: "0.5px" }}>
-            From listing management to post-sale documentation, we design <br/> and develop every piece your team actually uses.
+            From listing management to post-sale documentation, we design <br /> and develop every piece your team actually uses.
           </Typography>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "32px", md: "46px" } }}>
             What We Build — Feature Overview
@@ -90,7 +90,7 @@ const EducationFeatures = () => {
         </Box>
 
         {/* 3x2 Grid */}
-        <Grid container spacing={3} justifyContent="center">
+        <Grid container spacing={3} justifyContent="center" rowSpacing={12}>
           <Grid item xs={12} sm={6} md={4}>
             <FeatureCard icon={DomainOutlinedIcon} title="Property Listing Portal" delay={0.1} />
           </Grid>

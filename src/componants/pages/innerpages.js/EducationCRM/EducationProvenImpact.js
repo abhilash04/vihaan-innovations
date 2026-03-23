@@ -58,8 +58,8 @@ const FeatureCard = ({ num, icon: Icon, title, delay }) => (
 
 const EducationProvenImpact = () => {
   return (
-    <Box sx={{ position: "relative", bgcolor: "#f8f9fe", pt: 16, pb: 12 }}>
-      
+    <Box sx={{ position: "relative", bgcolor: "#f8f9fe", pt: 14, pb: 12 }}>
+
       {/* Decorative arrow pointing to Proven Impact */}
       <Box sx={{ position: "absolute", top: -20, left: "50%", transform: "translateX(-50%)", zIndex: 1, display: { xs: 'none', md: 'block' } }}>
         <svg width="40" height="80" viewBox="0 0 40 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,7 +68,7 @@ const EducationProvenImpact = () => {
       </Box>
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
-        
+
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "32px", md: "42px" } }}>
@@ -77,11 +77,11 @@ const EducationProvenImpact = () => {
         </Box>
 
         {/* 4 Stat Cards */}
-        <Paper 
-          elevation={0} 
-          sx={{ 
-            borderRadius: "24px", 
-            bgcolor: "#ffffff", 
+        <Paper
+          elevation={0}
+          sx={{
+            borderRadius: "24px",
+            bgcolor: "#ffffff",
             boxShadow: "0 20px 50px rgba(0,0,0,0.05)",
             border: "1px solid rgba(0,0,0,0.05)",
             overflow: "hidden",
@@ -90,13 +90,13 @@ const EducationProvenImpact = () => {
         >
           <Grid container>
             <Grid item xs={6} md={3}>
-              <StatCard value="3x" label={<>Increase in<br/>Lead-to-Site Visit<br/>Conversion</>} delay={0.1} />
+              <StatCard value="3x" label={<>Increase in<br />Lead-to-Site Visit<br />Conversion</>} delay={0.1} />
             </Grid>
             <Grid item xs={6} md={3}>
-              <StatCard value="68%" label={<>Reduction in<br/>Manual Follow-up<br/>Effort</>} delay={0.2} />
+              <StatCard value="68%" label={<>Reduction in<br />Manual Follow-up<br />Effort</>} delay={0.2} />
             </Grid>
             <Grid item xs={6} md={3}>
-              <StatCard value="40%" label={<>Faster Booking-<br/>to-Registration<br/>Cycle</>} delay={0.3} />
+              <StatCard value="40%" label={<>Faster Booking-<br />to-Registration<br />Cycle</>} delay={0.3} />
             </Grid>
             <Grid item xs={6} md={3}>
               <Box sx={{ p: 3, textAlign: "center", height: "100%" }}>
@@ -110,7 +110,7 @@ const EducationProvenImpact = () => {
                     90
                   </Typography>
                   <Typography sx={{ color: "#0B2046", fontWeight: 600, fontSize: "14px", lineHeight: 1.4 }}>
-                    Average Days to<br/>Full Platform<br/>Launch
+                    Average Days to<br />Full Platform<br />Launch
                   </Typography>
                 </motion.div>
               </Box>

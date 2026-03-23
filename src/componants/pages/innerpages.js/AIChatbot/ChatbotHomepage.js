@@ -13,7 +13,7 @@ import ChatbotWhyUs from "./ChatbotWhyUs";
 const ChatbotHomepage = () => {
   return (
     <Box sx={{ minHeight: "100vh", bgcolor: "#060d1a" }}>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <Box sx={{ pt: 10 }}>
         <ChatbotBanner />

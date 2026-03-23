@@ -6,8 +6,8 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 // Reusing the starry background from Real Estate as it perfectly matches the mock's bottom section
 const EducationCTA = () => {
   return (
-    <Box sx={{ position: "relative", bgcolor: "#0B1528", py: 20, overflow: "hidden" }}>
-      
+    <Box sx={{ position: "relative", bgcolor: "#0B1528", pt: 15, pb: 10, overflow: "hidden" }}>
+
       {/* Top Wave linking from Proven Impact/Why Us */}
       <Box sx={{ position: "absolute", top: -1, left: 0, width: "100%", zIndex: 1, transform: "rotate(180deg)" }}>
         <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
@@ -21,7 +21,7 @@ const EducationCTA = () => {
         <motion.div animate={{ opacity: [0.2, 0.7, 0.2] }} transition={{ repeat: Infinity, duration: 4, delay: 1 }} style={{ position: "absolute", top: "60%", left: "10%", color: "#00B4D8", fontSize: "14px" }}>✦</motion.div>
         <motion.div animate={{ opacity: [0.5, 1, 0.5] }} transition={{ repeat: Infinity, duration: 2.5, delay: 0.5 }} style={{ position: "absolute", top: "30%", right: "20%", color: "#ffffff", fontSize: "24px" }}>✦</motion.div>
         <motion.div animate={{ opacity: [0.1, 0.6, 0.1] }} transition={{ repeat: Infinity, duration: 5, delay: 2 }} style={{ position: "absolute", bottom: "25%", right: "15%", color: "#00B4D8", fontSize: "30px" }}>✦</motion.div>
-        
+
         {/* Soft bottom glow */}
         <Box sx={{ position: "absolute", bottom: "-30%", left: "50%", transform: "translateX(-50%)", width: "80%", height: "60%", background: "radial-gradient(ellipse, rgba(0, 180, 216, 0.3) 0%, rgba(11, 21, 40, 0) 70%)", filter: "blur(60px)" }} />
       </Box>
@@ -34,16 +34,16 @@ const EducationCTA = () => {
           transition={{ duration: 0.8 }}
         >
           <Box sx={{ textAlign: "center" }}>
-            
+
             <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "36px", md: "52px" }, mb: 3, lineHeight: 1.2 }}>
               Ready to Build your<br />real estate platform?
             </Typography>
-            
+
             <Typography sx={{ color: "rgba(255,255,255,0.8)", fontSize: "18px", mb: 6, maxWidth: "600px", mx: "auto", lineHeight: 1.6 }}>
-              Let's map out your ideal admissions system.<br/>
+              Let's map out your ideal admissions system.<br />
               Book a free 45-minute discovery call. We'll map out the right solution for your business — no generic decks, just a conversation about your actual challenges.
             </Typography>
-            
+
             <Box sx={{ display: "flex", flexDirection: "column", gap: 3, alignItems: "center" }}>
               <Button
                 variant="extended"
@@ -67,7 +67,7 @@ const EducationCTA = () => {
               >
                 View Features Again
               </Button>
-              
+
               <Box sx={{ display: "flex", alignItems: "center", gap: 1, color: "rgba(255,255,255,0.6)", cursor: "pointer", "&:hover": { color: "#ffffff" }, transition: "color 0.3s" }}>
                 <Typography sx={{ fontWeight: 600, fontSize: "15px" }}>Vihaan Innovations</Typography>
               </Box>

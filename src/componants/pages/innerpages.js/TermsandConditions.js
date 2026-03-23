@@ -8,7 +8,7 @@ import TermsandConditionSection from "../sections/TermsandConditionSection";
 const TermsandConditions = () => {
   return (
     <Grid>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <TermsandConditionSection />
       <Footer />

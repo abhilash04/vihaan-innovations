@@ -40,11 +40,11 @@ const FeatureCard = ({ icon: Icon, title, delay }) => (
         }
       }}
     >
-      <Box 
-        sx={{ 
-          color: "#0B2046", 
+      <Box
+        sx={{
+          color: "#0B2046",
           mb: 2,
-          "& > svg": { fontSize: 40 } 
+          "& > svg": { fontSize: 40 }
         }}
       >
         {Icon}
@@ -69,29 +69,24 @@ const featureData = [
 
 const MatrimonyFeatures = () => {
   return (
-    <Box sx={{ bgcolor: "#e3f2fd", py: 12 }}> {/* Matching the light sky blue background color */}
+    <Box sx={{ bgcolor: "#e3f2fd", pb: 12, pt: 6 }}> {/* Matching the light sky blue background color */}
       <Container maxWidth="lg">
-        
+
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
           <Box sx={{ display: "inline-block", mb: 1 }}>
-            <Typography sx={{ 
-              fontWeight: 800, color: "#0B2046", fontSize: "28px", 
-              display: "flex", alignItems: "center", gap: 1, 
-              justifyContent: "center" 
+            <Typography sx={{
+              fontWeight: 800, color: "#0B2046", fontSize: "28px",
+              display: "flex", alignItems: "center", gap: 1,
+              justifyContent: "center"
             }}>
-              <Box component="span" sx={{ 
-                width: 32, height: 32, borderRadius: "50%", 
-                border: "2px solid #0B2046", display: "flex", 
-                alignItems: "center", justifyContent: "center", fontSize: "18px" 
-              }}>4</Box>
               What We Build — Feature Overview
             </Typography>
           </Box>
         </Box>
 
         {/* 4x2 Grid */}
-        <Grid container spacing={3} justifyContent="center" sx={{ maxWidth: "900px", mx: "auto" }}>
+        <Grid container spacing={3} justifyContent="center" rowSpacing={9} sx={{ maxWidth: "900px", mx: "auto" }}>
           {featureData.map((feature, index) => (
             <Grid item xs={6} sm={4} md={3} key={index}>
               <FeatureCard icon={feature.icon} title={feature.title} delay={index * 0.1} />

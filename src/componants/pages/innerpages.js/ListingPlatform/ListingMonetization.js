@@ -62,16 +62,16 @@ const MoneyCard = ({ title, desc, icon, color, delay }) => (
       }}
     >
       {/* Icon Area */}
-      <Box sx={{ 
-        color: color, 
+      <Box sx={{
+        color: color,
         p: 1.5,
         borderRadius: "12px",
         bgcolor: `${color}15`, // 15% opacity background of the primary color
-        "& > svg": { fontSize: 32 } 
+        "& > svg": { fontSize: 32 }
       }}>
         {icon}
       </Box>
-      
+
       {/* Text Area */}
       <Box>
         <Typography sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: "16px", mb: 1 }}>
@@ -87,11 +87,11 @@ const MoneyCard = ({ title, desc, icon, color, delay }) => (
 
 const ListingMonetization = () => {
   return (
-    <Box sx={{ bgcolor: "#f8fafc", py: 14 }}> {/* Light grayish background */}
+    <Box sx={{ bgcolor: "#f8fafc", py: 8 }}> {/* Light grayish background */}
       <Container maxWidth="lg">
-        
+
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
             Monetization & Revenue
           </Typography>
@@ -101,7 +101,7 @@ const ListingMonetization = () => {
         </Box>
 
         {/* 2x2 Grid */}
-        <Grid container spacing={4}>
+        <Grid container spacing={4} rowSpacing={12} mb={8}>
           {strategies.map((strategy, index) => (
             <Grid item xs={12} md={6} key={index}>
               <MoneyCard {...strategy} delay={index * 0.1} />

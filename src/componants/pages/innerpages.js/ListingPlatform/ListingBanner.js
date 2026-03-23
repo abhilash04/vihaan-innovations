@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import SpeedIcon from '@mui/icons-material/Speed';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-
+import img from "../../../../assets/listingimage.png";
 const StatRow = ({ icon: Icon, label, value, delay }) => (
   <motion.div
     initial={{ opacity: 0, x: 20 }}
@@ -12,8 +12,8 @@ const StatRow = ({ icon: Icon, label, value, delay }) => (
     transition={{ duration: 0.5, delay }}
   >
     <Box sx={{ display: "flex", alignItems: "center", gap: 3, mb: 3 }}>
-      <Box sx={{ 
-        width: 48, height: 48, borderRadius: "50%", 
+      <Box sx={{
+        width: 48, height: 48, borderRadius: "50%",
         bgcolor: "rgba(34, 197, 94, 0.1)", // Light green tint based on mock
         display: "flex", justifyContent: "center", alignItems: "center",
         color: "#22c55e"
@@ -37,7 +37,7 @@ const ListingBanner = () => {
     <Box
       sx={{
         position: "relative",
-        minHeight: "90vh",
+        minHeight: "60vh",
         background: "linear-gradient(135deg, #f8fafc 0%, #f0fdf4 100%)", // Very light bluish-green to white
         overflow: "hidden",
         display: "flex",
@@ -51,7 +51,7 @@ const ListingBanner = () => {
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
         <Grid container spacing={6} alignItems="center">
-          
+
           {/* Left Text Area */}
           <Grid item xs={12} md={6}>
             <motion.div
@@ -62,11 +62,11 @@ const ListingBanner = () => {
               <Typography variant="h1" sx={{ color: "#1a1a1a", fontWeight: 800, fontSize: { xs: "36px", md: "52px" }, lineHeight: 1.1, mb: 3 }}>
                 Launch a Listing Platform Your Users Keep Coming Back To.
               </Typography>
-              
+
               <Typography sx={{ color: "#444", fontSize: "16px", lineHeight: 1.6, mb: 5, maxWidth: "500px" }}>
                 We build custom listing websites and directories for any vertical—jobs, real estate, vehicles, services, classifieds, rentals, and more.
               </Typography>
-              
+
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 <Button
                   variant="contained"
@@ -88,7 +88,7 @@ const ListingBanner = () => {
                 >
                   See a Demo
                 </Button>
-                
+
                 <Button
                   variant="outlined"
                   sx={{
@@ -122,7 +122,7 @@ const ListingBanner = () => {
               <Paper
                 elevation={0}
                 sx={{
-                  p: { xs: 4, md: 5 },
+                  p: { xs: 3, md: 4 },
                   borderRadius: "24px",
                   bgcolor: "rgba(255, 255, 255, 0.9)",
                   backdropFilter: "blur(20px)",
@@ -133,17 +133,17 @@ const ListingBanner = () => {
                   ml: { md: "auto" }
                 }}
               >
-                <Typography sx={{ color: "#1a1a1a", fontWeight: 800, fontSize: "16px", mb: 4, textAlign: "center" }}>
-                  Quick Stats
-                </Typography>
-                
-                <StatRow icon={ListAltIcon} label="Listings Managed" value="[1M+]" delay={0.4} />
-                <StatRow icon={SpeedIcon} label="Search Speed" value="[<1s]" delay={0.5} />
-                <StatRow icon={CheckCircleOutlineIcon} label="Monetization Ready" value="[Yes]" delay={0.6} />
+                <img src={img} alt="Listing Image"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                />
               </Paper>
             </motion.div>
           </Grid>
-          
+
         </Grid>
       </Container>
     </Box>

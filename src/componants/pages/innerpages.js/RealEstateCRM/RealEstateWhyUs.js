@@ -19,10 +19,10 @@ const WhyCard = ({ num, icon: Icon, title, delay }) => (
       <Typography sx={{ color: "#b0b8c4", fontSize: "16px", fontWeight: 700, mr: 2, minWidth: "20px" }}>
         {num}
       </Typography>
-      <Box sx={{ 
-        width: 50, height: 50, borderRadius: "12px", 
-        bgcolor: "#f0f8ff", color: "#00B4D8", 
-        display: "flex", justifyContent: "center", alignItems: "center", mr: 2 
+      <Box sx={{
+        width: 50, height: 50, borderRadius: "12px",
+        bgcolor: "#f0f8ff", color: "#00B4D8",
+        display: "flex", justifyContent: "center", alignItems: "center", mr: 2
       }}>
         <Icon sx={{ fontSize: 24 }} />
       </Box>
@@ -39,11 +39,11 @@ const RealEstateWhyUs = () => {
   return (
     <Box sx={{
       bgcolor: "#ffffff",
-      py: 12,
+      py: 6,
       position: "relative",
       overflow: "hidden"
     }}>
-      
+
       {/* Background shape matching the mock design top wave from the bottom section */}
       <Box sx={{
         position: 'absolute',
@@ -51,13 +51,13 @@ const RealEstateWhyUs = () => {
         left: 0,
         right: 0,
         height: '30%',
-        background: 'linear-gradient(180deg, rgba(255,255,255,0) 0%, #0c1b44 100%)',
+        background: 'linear-gradient(0deg, #0c1b44 0%, rgba(255,255,255,0) 100%)',
         zIndex: 0,
         clipPath: "ellipse(150% 100% at 50% 100%)"
       }} />
 
       {/* Decorative Arrow */}
-      <Box sx={{ position: 'relative', zIndex: 1, display: 'flex', justifyContent: 'center', mb: 8 }}>
+      <Box sx={{ position: 'relative', zIndex: 1, display: 'flex', justifyContent: 'center', mb: 6 }}>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
@@ -67,18 +67,18 @@ const RealEstateWhyUs = () => {
       </Box>
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
-        
+
         <Box sx={{ textAlign: "center", mb: 8 }}>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "32px", md: "42px" }, mb: 2 }}>
             Why Vihaan Innovations
           </Typography>
           <Typography sx={{ color: "#555", fontSize: "20px", fontWeight: 600 }}>
-            We don’t just provide software.<br/>We deliver powerful Real Estate CRM System solutions that solve real estate business challenges.
+            We don’t just provide software.<br />We deliver powerful Real Estate CRM System solutions that solve real estate business challenges.
           </Typography>
         </Box>
 
         <Grid container spacing={8} alignItems="center">
-          
+
           {/* Left Grid with 4 Features */}
           <Grid item xs={12} md={6}>
             <Grid container spacing={2}>

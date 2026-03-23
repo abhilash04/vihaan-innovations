@@ -10,7 +10,7 @@ const stats = [
 ];
 
 const LMSImpact = () => (
-  <Box sx={{ bgcolor: "#ffffff", py: 14 }}>
+  <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 10 }}>
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>Results & Impact Numbers</Typography>

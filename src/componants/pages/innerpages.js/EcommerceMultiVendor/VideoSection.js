@@ -114,7 +114,7 @@ const VideoSection = () => {
                 fontWeight: 800,
                 fontSize: { xs: "2.4rem", md: "46px" }, // Slightly larger
                 lineHeight: 1.1,
-                mb: 3,
+                my: 3,
                 maxWidth: "850px", // Increased width
                 letterSpacing: "-0.02em",
                 textShadow: "0 2px 10px rgba(0,0,0,0.3)",

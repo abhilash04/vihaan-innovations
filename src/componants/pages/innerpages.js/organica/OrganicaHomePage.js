@@ -13,7 +13,7 @@ import OrganicaExtras from "./OrganicaExtras";
 const OrganicaHomePage = () => {
   return (
     <Grid>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <TrustStrip />
       <OrganicaBestSellers />

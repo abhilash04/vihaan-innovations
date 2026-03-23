@@ -44,7 +44,7 @@ const ContactUs = () => {
           backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          py: 8,
+          py: 15,
         }}
       >
         <Container maxWidth="lg">

@@ -15,7 +15,7 @@ const problems = [
 ];
 
 const HotelProblem = () => (
-  <Box sx={{ bgcolor: "#fffdf0", py: 14, position: "relative", overflow: "hidden" }}>
+  <Box sx={{ bgcolor: "#fffdf0", py: 8, position: "relative", overflow: "hidden" }}>
     <Box sx={{ position: "absolute", bottom: -80, right: -80, width: 350, height: 350, borderRadius: "50%", background: "radial-gradient(circle, rgba(212,160,23,0.12) 0%, transparent 70%)" }} />
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 10 }}>

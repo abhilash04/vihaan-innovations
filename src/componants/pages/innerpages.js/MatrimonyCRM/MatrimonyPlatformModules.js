@@ -34,22 +34,17 @@ const MatrimonyPlatformModules = () => {
   const currentContent = moduleDetails[activeTab];
 
   return (
-    <Box sx={{ bgcolor: "#5981B6", py: 12 }}> {/* Medium blue from the mock section background */}
+    <Box sx={{ bgcolor: "#5981B6", pb: 10, pt: 6 }}> {/* Medium blue from the mock section background */}
       <Container maxWidth="lg">
-        
+
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
           <Box sx={{ display: "inline-block", mb: 1 }}>
-            <Typography sx={{ 
-              fontWeight: 800, color: "#ffffff", fontSize: "28px", 
-              display: "flex", alignItems: "center", gap: 1, 
-              justifyContent: "center" 
+            <Typography sx={{
+              fontWeight: 800, color: "#ffffff", fontSize: "28px",
+              display: "flex", alignItems: "center", gap: 1,
+              justifyContent: "center"
             }}>
-              <Box component="span" sx={{ 
-                width: 32, height: 32, borderRadius: "50%", 
-                border: "2px solid #ffffff", display: "flex", 
-                alignItems: "center", justifyContent: "center", fontSize: "18px" 
-              }}>5</Box>
               Platform Modules — Tabbed Deep Dive
             </Typography>
           </Box>
@@ -67,18 +62,18 @@ const MatrimonyPlatformModules = () => {
         >
           {/* Top Tabs */}
           <Box sx={{ bgcolor: "#0B2046" }}> {/* Dark navy background for tabs */}
-            <Tabs 
-              value={activeTab} 
-              onChange={handleTabChange} 
+            <Tabs
+              value={activeTab}
+              onChange={handleTabChange}
               variant="fullWidth"
               sx={{
                 '& .MuiTabs-indicator': { backgroundColor: '#ffffff', height: 4 },
-                '& .MuiTab-root': { 
-                  textTransform: 'none', 
-                  fontWeight: 700, 
-                  fontSize: { xs: "12px", md: "15px" }, 
-                  color: "rgba(255,255,255,0.6)", 
-                  py: 3, 
+                '& .MuiTab-root': {
+                  textTransform: 'none',
+                  fontWeight: 700,
+                  fontSize: { xs: "12px", md: "15px" },
+                  color: "rgba(255,255,255,0.6)",
+                  py: 3,
                   px: 2,
                   borderRight: "1px solid rgba(255,255,255,0.1)"
                 },
@@ -103,7 +98,7 @@ const MatrimonyPlatformModules = () => {
               >
                 <Grid container>
                   {/* Left Column (What it does) */}
-                  <Grid item xs={12} md={6} sx={{ p: { xs: 4, md: 6 }, borderRight: { md: "1px solid rgba(0,0,0,0.1)" } }}>
+                  <Grid item xs={12} sm={6} sx={{ p: { xs: 4, md: 6 }, borderRight: { sm: "1px solid rgba(0,0,0,0.1)" } }}>
                     <Typography sx={{ fontWeight: 800, color: "#1a1a1a", mb: 2, fontSize: "15px", textTransform: "uppercase" }}>
                       what it does
                     </Typography>
@@ -112,7 +107,7 @@ const MatrimonyPlatformModules = () => {
                         <li key={idx}>{item}</li>
                       ))}
                     </Box>
-                    
+
                     {/* Placeholder for avatars seen in the mock */}
                     {activeTab === 0 && (
                       <Box sx={{ mt: 5, color: "#5981B6" }}>
@@ -124,7 +119,7 @@ const MatrimonyPlatformModules = () => {
                   </Grid>
 
                   {/* Right Column (Who uses it) */}
-                  <Grid item xs={12} md={6} sx={{ p: { xs: 4, md: 6 }, bgcolor: "#f8f9fe" }}>
+                  <Grid item xs={12} sm={6} sx={{ p: { xs: 4, md: 6 }, bgcolor: "#f8f9fe" }}>
                     <Typography sx={{ fontWeight: 800, color: "#1a1a1a", mb: 2, fontSize: "15px", textTransform: "uppercase" }}>
                       who uses it
                     </Typography>

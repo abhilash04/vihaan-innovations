@@ -22,8 +22,8 @@ import CareerHomepage from "./componants/pages/innerpages.js/career page/CareerH
 import PortfolioHomepage from "./componants/pages/innerpages.js/portfolio page/PortofolioHomepage";
 import Blog from "./componants/pages/innerpages.js/Blog";
 import FoodBookingHomepage from "./componants/pages/innerpages.js/Foof Booking/FoodBookingHomepage";
-import Hostelpage from "./componants/pages/innerpages.js/pg and hostel management/Hostelpage";
-import RealEstateHomePage from "./componants/pages/innerpages.js/RealEstate/RealEstateHomePage";
+import ResortLandingPage from "./componants/pages/innerpages.js/ResortBooking/ResortLandingPage";
+import PortalLandingPage from "./componants/pages/innerpages.js/RealEstatePortal/PortalLandingPage";
 import OrganicaHomePage from "./componants/pages/innerpages.js/organica/OrganicaHomePage";
 
 import RealEstateCRMHomepage from "./componants/pages/innerpages.js/RealEstateCRM/RealEstateCRMHomepage";
@@ -63,11 +63,11 @@ function App() {
             <Route path="/company-portfolio" element={<PortfolioHomepage />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/food-booking" element={<FoodBookingHomepage />} />
-            <Route path="/resort-booking-management" element={<Hostelpage />} />
+            <Route path="/resort-booking-management" element={<ResortLandingPage />} />
 
             {/* abhilash */}
 
-            <Route path="/real-estate-portal" element={<RealEstateHomePage />} />
+            <Route path="/real-estate-portal" element={<PortalLandingPage />} />
             <Route path="/real-estate-crm" element={<RealEstateCRMHomepage />} />
             <Route path="/education-crm" element={<EducationCRMHomepage />} />
             <Route path="/matrimony-crm" element={<MatrimonyHomepage />} />

@@ -22,7 +22,7 @@ const otaProblems = [
 ];
 
 const HotelDirectVsOTA = () => (
-  <Box sx={{ bgcolor: "#1e3a5f", py: 14, position: "relative", overflow: "hidden" }}>
+  <Box sx={{ bgcolor: "#1e3a5f", py: 8, position: "relative", overflow: "hidden" }}>
     <Box sx={{ position: "absolute", top: -80, right: -80, width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(212,160,23,0.1) 0%, transparent 70%)" }} />
     <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
       <Box sx={{ textAlign: "center", mb: 10 }}>

@@ -14,9 +14,9 @@ const ProblemItem = ({ icon: Icon, title, align = "left", delay }) => (
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay }}
   >
-    <Box sx={{ 
-      display: "flex", 
-      flexDirection: "column", 
+    <Box sx={{
+      display: "flex",
+      flexDirection: "column",
       alignItems: "center",
       textAlign: "center",
       mb: { xs: 4, md: 0 }
@@ -50,22 +50,17 @@ const ProblemItem = ({ icon: Icon, title, align = "left", delay }) => (
 
 const EducationProblem = () => {
   return (
-    <Box sx={{ bgcolor: "#ffffff", pt: 12, pb: 16, position: "relative" }}>
+    <Box sx={{ bgcolor: "#ffffff", pt: 8, pb: 16, position: "relative" }}>
       <Container maxWidth="lg">
-        
+
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 10 }}>
           <Box sx={{ display: "inline-block", mb: 1 }}>
-            <Typography sx={{ 
-              fontWeight: 800, color: "#0B2046", fontSize: "28px", 
-              display: "flex", alignItems: "center", gap: 1, 
-              justifyContent: "center" 
+            <Typography sx={{
+              fontWeight: 800, color: "#0B2046", fontSize: "28px",
+              display: "flex", alignItems: "center", gap: 1,
+              justifyContent: "center"
             }}>
-              <Box component="span" sx={{ 
-                width: 32, height: 32, borderRadius: "50%", 
-                border: "2px solid #0B2046", display: "flex", 
-                alignItems: "center", justifyContent: "center", fontSize: "18px" 
-              }}>3</Box>
               The Problem
             </Typography>
           </Box>
@@ -76,7 +71,7 @@ const EducationProblem = () => {
 
         {/* Infographic Layout */}
         <Box sx={{ position: "relative", maxWidth: "900px", mx: "auto", minHeight: { xs: "auto", md: "400px" } }}>
-          
+
           {/* Decorative Pipes SVG (Visible on MD and up) */}
           <Box sx={{ display: { xs: 'none', md: 'block' }, position: "absolute", top: "20%", left: "10%", width: "80%", height: "60%", zIndex: 0 }}>
             <svg width="100%" height="100%" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,17 +87,17 @@ const EducationProblem = () => {
           </Box>
 
           {/* Central Figure Mockup */}
-          <Box sx={{ 
+          <Box sx={{
             display: "flex", justifyContent: "center", mb: { xs: 6, md: 0 },
-            position: { md: "absolute" }, top: { md: "30%" }, left: { md: "50%" }, 
+            position: { md: "absolute" }, top: { md: "30%" }, left: { md: "50%" },
             transform: { md: "translateX(-50%)" }, zIndex: 1
           }}>
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
             >
-              <Box sx={{ 
-                width: 150, height: 150, borderRadius: "50%", 
+              <Box sx={{
+                width: 150, height: 150, borderRadius: "50%",
                 bgcolor: "#f8f9fe", border: "4px solid #00B4D8",
                 display: "flex", justifyContent: "center", alignItems: "center",
                 boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
@@ -114,17 +109,17 @@ const EducationProblem = () => {
 
           {/* 4 Pain Points scattered around */}
           <Grid container spacing={4} sx={{ position: "relative", zIndex: 2, height: "100%" }}>
-            
+
             {/* Top Left */}
             <Grid item xs={6} md={3} sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
               <ProblemItem icon={AssignmentOutlinedIcon} title="No Central Lead System" delay={0.1} />
             </Grid>
-            
+
             {/* Top Right */}
             <Grid item xs={6} md={3} sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-end" }, ml: { md: "auto" } }}>
               <ProblemItem icon={ListAltOutlinedIcon} title="Property Listings Are a Nightmare" delay={0.2} />
             </Grid>
-            
+
             {/* Spacer for MD screens to push the next row down */}
             <Grid item xs={12} sx={{ display: { xs: 'none', md: 'block' }, height: "150px" }} />
 

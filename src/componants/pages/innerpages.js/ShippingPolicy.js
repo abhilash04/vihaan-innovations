@@ -8,7 +8,7 @@ import ShippingPolicySection from "../sections/ShippingPolicySection";
 const ShippingPolicy = () => {
   return (
     <Grid>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <ShippingPolicySection />
       <Footer />

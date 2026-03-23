@@ -83,10 +83,10 @@ const RealEstatePlatformModules = () => {
   const [activeModule, setActiveModule] = useState(modulesData[0]);
 
   return (
-    <Box sx={{ py: 12, bgcolor: "#f8f9fe" }}>
+    <Box sx={{ py: 6, bgcolor: "#f8f9fe" }}>
       <Container maxWidth="lg">
         {/* Header Section */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, mb: 2, color: "#1a1a1a" }}>
             Platform Modules
           </Typography>

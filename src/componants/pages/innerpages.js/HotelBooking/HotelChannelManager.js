@@ -7,7 +7,7 @@ const otas = ["Booking.com", "Airbnb", "Expedia", "MakeMyTrip", "Agoda", "Goibib
 const colors = ["#003580", "#FF5A5F", "#F5A623", "#e31837", "#d32c2c", "#e84393"];
 
 const HotelChannelManager = () => (
-  <Box sx={{ bgcolor: "#f0faf8", py: 14 }}>
+  <Box sx={{ bgcolor: "#f0faf8", py: 8 }}>
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 3 }}>
         <Typography sx={{ color: "#0f766e", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>Channel Manager</Typography>

@@ -25,7 +25,8 @@ function PgBanner() {
         justifyContent="center"
         sx={{
           color: "white",
-          py: { xs: 3, md: 6 },
+          pt: { xs: 8, md: 16 },
+          pb: { xs: 3, md: 6 },
           maxWidth: 1200,
           mx: "auto",
         }}

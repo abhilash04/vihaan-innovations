@@ -20,7 +20,7 @@ const ProblemCard = ({ icon: Icon, title, align = "left", delay }) => (
       sx={{
         p: 3,
         borderRadius: "12px",
-        bgcolor: "#cbf1f5", // Light cyan background based on the problem cards in the mock
+        bgcolor: "#e3f2fd", // Light cyan background based on the problem cards in the mock
         border: "1px solid rgba(0, 180, 216, 0.4)",
         boxShadow: "0 4px 15px rgba(0, 0, 0, 0.05)",
         display: "flex",
@@ -42,10 +42,10 @@ const ProblemCard = ({ icon: Icon, title, align = "left", delay }) => (
       <Typography sx={{ fontWeight: 700, color: "#1a1a1a", fontSize: "15px", lineHeight: 1.4, maxWidth: "70%" }}>
         {title}
       </Typography>
-      <Box sx={{ 
-        width: 48, height: 48, borderRadius: "50%", 
-        bgcolor: "rgba(0, 180, 216, 0.15)", color: "#0B2046",
-        display: "flex", justifyContent: "center", alignItems: "center" 
+      <Box sx={{
+        width: 48, height: 48, borderRadius: "50%",
+        bgcolor: "#FFF", color: "#0B2046",
+        display: "flex", justifyContent: "center", alignItems: "center"
       }}>
         <Icon sx={{ fontSize: 24 }} />
       </Box>
@@ -55,22 +55,17 @@ const ProblemCard = ({ icon: Icon, title, align = "left", delay }) => (
 
 const MatrimonyProblem = () => {
   return (
-    <Box sx={{ bgcolor: "#F8FAFC", py: 12, position: "relative" }}>
+    <Box sx={{ bgcolor: "#F8FAFC", pb: 10, pt: 6, position: "relative" }}>
       <Container maxWidth="md">
-        
+
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 4 }}>
           <Box sx={{ display: "inline-block", mb: 1 }}>
-            <Typography sx={{ 
-              fontWeight: 800, color: "#0B2046", fontSize: "28px", 
-              display: "flex", alignItems: "center", gap: 1, 
-              justifyContent: "center" 
+            <Typography sx={{
+              fontWeight: 800, color: "#0B2046", fontSize: "28px",
+              display: "flex", alignItems: "center", gap: 1,
+              justifyContent: "center"
             }}>
-              <Box component="span" sx={{ 
-                width: 32, height: 32, borderRadius: "50%", 
-                border: "2px solid #0B2046", display: "flex", 
-                alignItems: "center", justifyContent: "center", fontSize: "18px" 
-              }}>3</Box>
               The Problem
             </Typography>
           </Box>
@@ -80,21 +75,21 @@ const MatrimonyProblem = () => {
         </Box>
 
         {/* Staggered Grid */}
-        <Grid container spacing={3} sx={{ position: "relative", zIndex: 1 }}>
+        <Grid container spacing={3} sx={{ position: "relative", zIndex: 1 }} columnSpacing={10}>
           <Grid item xs={12} md={6}>
             <ProblemCard align="left" icon={GroupsIcon} title="Profiles scattered across WhatsApp groups/spreadsheets" delay={0.1} />
           </Grid>
           <Grid item xs={12} md={6}>
             <ProblemCard align="right" icon={FilterAltIcon} title="Manual filtering for hours" delay={0.2} />
           </Grid>
-          
+
           <Grid item xs={12} md={6}>
             <ProblemCard align="left" icon={SecurityIcon} title="Generic platforms lack privacy/trust" delay={0.3} />
           </Grid>
           <Grid item xs={12} md={6}>
             <ProblemCard align="right" icon={RequestQuoteIcon} title="Manual payment tracking revenue leakage" delay={0.4} />
           </Grid>
-          
+
           <Grid item xs={12} md={6}>
             <ProblemCard align="left" icon={CompareArrowsIcon} title="Match suggestion failure tracking" delay={0.5} />
           </Grid>

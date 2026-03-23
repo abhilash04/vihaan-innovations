@@ -11,7 +11,7 @@ const deliverySteps = [
 ];
 
 const LMSDeliveryProcess = () => (
-  <Box sx={{ bgcolor: "#1e3a5f", py: 14 }}>
+  <Box sx={{ bgcolor: "#1e3a5f", py: 8 }}>
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 10 }}>
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>Our Delivery Process</Typography>

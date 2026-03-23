@@ -16,7 +16,7 @@ const reasons = [
 ];
 
 const ChatbotWhyUs = () => (
-  <Box sx={{ background: "linear-gradient(180deg, #060d1a 0%, #071225 100%)", py: 14, position: "relative", overflow: "hidden" }}>
+  <Box sx={{ background: "linear-gradient(180deg, #060d1a 0%, #071225 100%)", py: 8, position: "relative", overflow: "hidden" }}>
     <Box sx={{ position: "absolute", top: "20%", right: "-5%", width: 350, height: 350, borderRadius: "50%", background: "radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 70%)", filter: "blur(60px)" }} />
     <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
       <Grid container spacing={5} alignItems="flex-start">

@@ -23,7 +23,7 @@ import LMSCTA from "./LMSCTA";
 const LMSHomepage = () => {
   return (
     <Box sx={{ minHeight: "100vh" }}>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <Box sx={{ pt: 10 }}>
         <LMSBanner />

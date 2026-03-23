@@ -20,7 +20,7 @@ import MatrimonyCTA from "./MatrimonyCTA";
 const MatrimonyHomepage = () => {
   return (
     <Box sx={{ minHeight: "100vh" }}>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <Box sx={{ pt: 10 }}> {/* Offset for Navbar */}
         <MatrimonyBanner />

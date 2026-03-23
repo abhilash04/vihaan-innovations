@@ -9,7 +9,7 @@ import PrivacyPolicySection from "../sections/PrivacyPolicySection";
 const PrivacyPolicy = () => {
   return (
     <Grid>
-      <Header />
+      {/* <Header /> */}
       <HeaderSec />
       <PrivacyPolicySection />
       <Footer />
