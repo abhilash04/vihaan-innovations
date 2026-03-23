@@ -50,15 +50,9 @@ const PortalStats = () => {
   return (
     <Box
       sx={{
-<<<<<<< Updated upstream
         py: 8,
-        background: "#fff", // Deep Blue
+        background: "#fff",
         color: "#000",
-=======
-        py: 12,
-        background: "#F8F6F2", // Light Background matching other sections
-        color: "#1a1a1a",
->>>>>>> Stashed changes
         position: "relative",
         overflow: "hidden",
       }}

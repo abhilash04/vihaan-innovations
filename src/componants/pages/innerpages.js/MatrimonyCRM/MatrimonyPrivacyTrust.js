@@ -63,21 +63,12 @@ const MatrimonyPrivacyTrust = () => {
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Box sx={{ display: "inline-block", mb: 1 }}>
-<<<<<<< Updated upstream
             <Typography sx={{
               fontWeight: 800, color: "#ffffff", fontSize: "28px",
               display: "flex", alignItems: "center", gap: 1,
-              justifyContent: "center"
-            }}>
-              Privacy & Trust Architecture
-=======
-            <Typography sx={{ 
-              fontWeight: 800, color: "#ffffff", fontSize: "28px", 
-              display: "flex", alignItems: "center", gap: 1, 
-              justifyContent: "center", mb: 2 
+              justifyContent: "center", mb: 2
             }}>
               Built for Privacy. Designed for Trust.
->>>>>>> Stashed changes
             </Typography>
           </Box>
           <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>

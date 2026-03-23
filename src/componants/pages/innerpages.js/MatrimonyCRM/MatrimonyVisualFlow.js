@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import img from '../../../../assets/Matchmaking process flowchart in blue.png'
+import img from '../../../../assets/Matchmaking process flowchart in blue.png';
 
 const MatrimonyVisualFlow = () => {
   return (
@@ -13,23 +13,13 @@ const MatrimonyVisualFlow = () => {
             fontWeight: 800,
             color: "#0B2046",
             fontSize: { xs: "24px", md: "32px" },
+            mb: 1
           }}>
-            The Member Journey <span style={{ fontWeight: 600 }}>-</span> Visual Flow
+            The Journey From Profile Creation to Perfect Match
           </Typography>
-          <Box sx={{ textAlign: "center", mb: 4 }}>
-            <Box sx={{ display: "inline-block" }}>
-              <Typography sx={{
-                fontWeight: 800, color: "#0B2046", fontSize: "28px",
-                display: "flex", alignItems: "center", gap: 1,
-                justifyContent: "center", mb: 2
-              }}>
-                The Journey From Profile Creation to Perfect Match
-              </Typography>
-            </Box>
-            <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
-              Our matrimony app development platforms guide members through a seamless journey-from profile registration and verification to match discovery, communication, and successful marriage connections.
-            </Typography>
-          </Box>
+          <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "800px", margin: "0 auto", mb: 4 }}>
+            Our matrimony app development platforms guide members through a seamless journey — from profile registration and verification to match discovery, communication, and successful marriage connections.
+          </Typography>
 
           {/* Image Container */}
           <Box sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
@@ -41,14 +31,14 @@ const MatrimonyVisualFlow = () => {
                 height: "auto",
                 display: "block",
                 borderRadius: '20px',
-                // boxShadow: '0 8px 30px rgba(11, 32, 70, 0.08)'
               }}
             />
           </Box>
-
         </Box>
+
       </Box>
-      );
+    </Box>
+  );
 };
 
-      export default MatrimonyVisualFlow;
+export default MatrimonyVisualFlow;
