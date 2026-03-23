@@ -64,37 +64,37 @@ const MatrimonyProblem = () => {
             <Typography sx={{
               fontWeight: 800, color: "#0B2046", fontSize: "28px",
               display: "flex", alignItems: "center", gap: 1,
-              justifyContent: "center"
+              justifyContent: "center", mb: 2
             }}>
-              The Problem
+              Challenges Matrimony Businesses Face Without Proper Matrimony Website Development
             </Typography>
           </Box>
-          <Typography sx={{ color: "#666", fontSize: "16px" }}>
-            Make it real (staggered or sequential pain points)
+          <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
+            Traditional matchmaking methods are time-consuming and difficult to scale. With advanced matrimony website development, businesses can manage profiles, automate matches, and streamline matrimony operations efficiently.
           </Typography>
         </Box>
 
         {/* Staggered Grid */}
         <Grid container spacing={3} sx={{ position: "relative", zIndex: 1 }} columnSpacing={10}>
           <Grid item xs={12} md={6}>
-            <ProblemCard align="left" icon={GroupsIcon} title="Profiles scattered across WhatsApp groups/spreadsheets" delay={0.1} />
+            <ProblemCard align="left" icon={GroupsIcon} title="Profiles Chaos (Scattered Across Platforms)" delay={0.1} />
           </Grid>
           <Grid item xs={12} md={6}>
-            <ProblemCard align="right" icon={FilterAltIcon} title="Manual filtering for hours" delay={0.2} />
-          </Grid>
-
-          <Grid item xs={12} md={6}>
-            <ProblemCard align="left" icon={SecurityIcon} title="Generic platforms lack privacy/trust" delay={0.3} />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <ProblemCard align="right" icon={RequestQuoteIcon} title="Manual payment tracking revenue leakage" delay={0.4} />
+            <ProblemCard align="right" icon={FilterAltIcon} title="Manual Filtering (Hours Spent Formatting)" delay={0.2} />
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <ProblemCard align="left" icon={CompareArrowsIcon} title="Match suggestion failure tracking" delay={0.5} />
+            <ProblemCard align="left" icon={SecurityIcon} title="Privacy Issues (Lack of Privacy on Generic Platforms)" delay={0.3} />
           </Grid>
           <Grid item xs={12} md={6}>
-            <ProblemCard align="right" icon={SupportAgentIcon} title="500+ profile chaos bureau follow-up" delay={0.6} />
+            <ProblemCard align="right" icon={RequestQuoteIcon} title="Payment Errors (Manual Tracking & Revenue Leakage)" delay={0.4} />
+          </Grid>
+
+          <Grid item xs={12} md={6}>
+            <ProblemCard align="left" icon={CompareArrowsIcon} title="Match Tracking (Poor Suggestion Tracking)" delay={0.5} />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <ProblemCard align="right" icon={SupportAgentIcon} title="Profile Overload (Managing 500+ Profiles is Chaos)" delay={0.6} />
           </Grid>
         </Grid>
 

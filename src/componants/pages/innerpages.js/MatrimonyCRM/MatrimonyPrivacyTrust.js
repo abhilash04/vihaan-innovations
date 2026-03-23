@@ -44,16 +44,15 @@ const PrivacyCard = ({ icon: Icon, title, delay }) => (
 );
 
 const topCards = [
-  { icon: VerifiedUserIcon, title: "Tiered photo\nvisibility" },
-  { icon: DialpadIcon, title: "Mobile number\nmasking until\nagreed" },
-  { icon: FactCheckIcon, title: "Profile approval\nworkflow\nbefore live" },
-  { icon: AdminPanelSettingsIcon, title: "Admin\nmoderation panel\nfor flagged" }
+  { icon: VerifiedUserIcon, title: "Photo Privacy" },
+  { icon: DialpadIcon, title: "Phone Masking" },
+  { icon: FactCheckIcon, title: "Profile Approval" }
 ];
 
 const bottomCards = [
-  { icon: BlockIcon, title: "Report & block" },
-  { icon: SupportAgentIcon, title: "Admin moderator\nqueue" },
-  { icon: EnhancedEncryptionIcon, title: "Data encryption,\nGDPR-ready" }
+  { icon: BlockIcon, title: "Report & Block" },
+  { icon: SupportAgentIcon, title: "Admin Moderation" },
+  { icon: EnhancedEncryptionIcon, title: "Data Security" }
 ];
 
 const MatrimonyPrivacyTrust = () => {
@@ -67,11 +66,14 @@ const MatrimonyPrivacyTrust = () => {
             <Typography sx={{
               fontWeight: 800, color: "#ffffff", fontSize: "28px",
               display: "flex", alignItems: "center", gap: 1,
-              justifyContent: "center"
+              justifyContent: "center", mb: 2
             }}>
-              Privacy & Trust Architecture
+              Built for Privacy. Designed for Trust.
             </Typography>
           </Box>
+          <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
+            As a trusted matrimony app development company, we build secure matchmaking platforms with advanced privacy controls, profile verification, and encrypted data systems to ensure safe and trusted connections.
+          </Typography>
         </Box>
 
         {/* Central Content Box */}
@@ -84,7 +86,7 @@ const MatrimonyPrivacyTrust = () => {
             </Typography>
             <Grid container spacing={2}>
               {topCards.map((card, index) => (
-                <Grid item xs={6} sm={3} key={index}>
+                <Grid item xs={12} sm={4} key={index}>
                   <PrivacyCard icon={card.icon} title={card.title} delay={index * 0.1} />
                 </Grid>
               ))}

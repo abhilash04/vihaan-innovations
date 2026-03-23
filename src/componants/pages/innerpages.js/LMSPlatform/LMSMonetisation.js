@@ -7,10 +7,10 @@ import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import DiscountIcon from '@mui/icons-material/Discount';
 
 const strategies = [
-  { icon: MonetizationOnIcon, title: "Course Pricing", desc: "Free, one-time, and fixed pricing per course or module.", color: "#f59e0b" },
-  { icon: ReceiptLongIcon, title: "Subscription Plans", desc: "Monthly/Annual access to course bundles.", color: "#3b82f6" },
-  { icon: LibraryBooksIcon, title: "Bundle Courses", desc: "Combine courses into bundled offerings for upsell.", color: "#22c55e" },
-  { icon: DiscountIcon, title: "Coupon Codes", desc: "Promo codes, time-limited offers, and discount tiers.", color: "#ec4899" },
+  { icon: MonetizationOnIcon, title: "Course Pricing", desc: "Flexible pricing options like free, one-time, or fixed pricing per course or module", color: "#f59e0b" },
+  { icon: ReceiptLongIcon, title: "Subscription Plans", desc: "Monthly and yearly plans for accessing course bundles", color: "#3b82f6" },
+  { icon: LibraryBooksIcon, title: "Course Bundles", desc: "Combine multiple courses into packages to increase sales", color: "#22c55e" },
+  { icon: DiscountIcon, title: "Discount & Coupon Codes", desc: "Create promo codes, limited-time offers, and discount campaigns", color: "#ec4899" },
 ];
 
 const paymentLogos = ["Razorpay", "PayU", "Stripe", "Affiliate Commission Tracking"];

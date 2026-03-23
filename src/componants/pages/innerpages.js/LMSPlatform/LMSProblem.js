@@ -7,8 +7,8 @@ import GroupsIcon from '@mui/icons-material/Groups';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 
 const problemCards = [
-  { icon: <LaptopIcon sx={{ fontSize: 40, color: "#3b82f6" }} />, title: "Course Building\nPlatforms", sub: "Admin control and lack of access in many LMS Software Development systems" },
-  { icon: <VideocamIcon sx={{ fontSize: 40, color: "#22c55e" }} />, title: "Live Class &\nWebinar Integration", sub: "Trainers spend extra time handling manual setup and content management" },
+  { icon: <LaptopIcon sx={{ fontSize: 40, color: "#3b82f6" }} />, title: "Course Creation\nPlatforms", sub: "Limited admin control and lack of access in many LMS Software Development systems" },
+  { icon: <VideocamIcon sx={{ fontSize: 40, color: "#22c55e" }} />, title: "Live Classes &\nWebinar Integration", sub: "Trainers spend extra time handling manual setup and content management" },
   { icon: <GroupsIcon sx={{ fontSize: 40, color: "#f59e0b" }} />, title: "Corporate Training\n& L&D Teams", sub: "Disconnected payment systems and difficulty in tracking compliance" },
 ];
 

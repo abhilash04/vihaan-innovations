@@ -64,7 +64,7 @@ const RealEstateTechnology = () => {
             Built with a modern and scalable technology stack
           </Typography>
           <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "18px", lineHeight: 1.6 }}>
-            Developed using advanced technologies specially designed for <span><strong>Real Estate CRM Development Software India</strong></span>, ensuring high security, and smooth integrations for real estate platforms.
+            Developed using advanced technologies specially designed for Real Estate CRM Development Software India, ensuring high security, reliable performance, and smooth integrations for real estate platforms.
           </Typography>
         </Box>
 

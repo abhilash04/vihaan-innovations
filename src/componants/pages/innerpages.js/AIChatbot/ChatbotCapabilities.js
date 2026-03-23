@@ -9,12 +9,12 @@ import TranslateIcon from '@mui/icons-material/Translate';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 
 const capabilities = [
-  { icon: StorageIcon, title: "Trained on Your Business Data", desc: "Fed website, product catalogue, FAQs, pricing, and documents for accurate answers.", color: "#06b6d4" },
-  { icon: DevicesIcon, title: "Multi-channel Deployment", desc: "One bot deployed simultaneously across website, Instagram DMs, Instagram Business, and mobile app.", color: "#8b5cf6" },
-  { icon: FilterListIcon, title: "Lead Capture & Qualification", desc: "Collects name, number, requirement, and budget. Scores and routes for leads to the sales team instantly.", color: "#22c55e" },
-  { icon: SupportAgentIcon, title: "Live Agent Handoff", desc: "Seamlessly transfers complex queries to a human agent with full context intact.", color: "#f59e0b" },
-  { icon: TranslateIcon, title: "Multilingual Support", desc: "Conversates fluently in English, Hindi, and regional Indian languages based on user input.", color: "#ec4899" },
-  { icon: IntegrationInstructionsIcon, title: "CRM & Tool Integration", desc: "Pushes captured leads and conversations directly into your CRM, Google Sheets, email, or WhatsApp notifications.", color: "#f97316" },
+  { icon: StorageIcon, title: "Trained on Your Business Data", desc: "The AI bot is trained using your website, product details, FAQs, pricing, and documents to give accurate responses.", color: "#06b6d4" },
+  { icon: DevicesIcon, title: "Multi-channel Deployment", desc: "Deploy your AI bot across websites, Instagram DMs, Instagram Business, and mobile apps from one platform.", color: "#8b5cf6" },
+  { icon: FilterListIcon, title: "Lead Capture & Qualification", desc: "Automatically collect user details like name, contact, requirements, and budget, and qualify leads instantly.", color: "#22c55e" },
+  { icon: SupportAgentIcon, title: "Live Agent Handoff", desc: "Transfer complex conversations to human agents with full chat history and context.", color: "#f59e0b" },
+  { icon: TranslateIcon, title: "Multilingual Support", desc: "Communicate with users in English, Hindi, and regional languages based on their preference.", color: "#ec4899" },
+  { icon: IntegrationInstructionsIcon, title: "CRM & Tool Integration", desc: "Integrate with CRM systems, Google Sheets, email, and WhatsApp to sync leads and conversations in real time.", color: "#f97316" },
 ];
 
 const ChatbotCapabilities = () => (
@@ -25,8 +25,8 @@ const ChatbotCapabilities = () => (
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "26px", md: "36px" }, mb: 2 }}>
           What We Build — Core Capabilities
         </Typography>
-        <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "15px" }}>
-          Everything needed to automate your customer conversations.
+        <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "15px", maxWidth: "600px", mx: "auto" }}>
+          Everything you need to automate customer conversations with a powerful AI bot application.
         </Typography>
       </Box>
       <Grid container spacing={3}>

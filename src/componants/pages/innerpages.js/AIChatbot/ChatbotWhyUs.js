@@ -9,10 +9,10 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 
 const reasons = [
-  { icon: BuildIcon, title: "Build and train a bot specific to your business/industry workflows (not a generic builder)", color: "#06b6d4" },
-  { icon: DataObjectIcon, title: "Trained on real data not scripted buttons/decision trees", color: "#8b5cf6" },
-  { icon: LanguageIcon, title: "We handle deployment, testing, and retraining", color: "#22c55e" },
-  { icon: SupportAgentIcon, title: "Works in Indian languages, integrates with Indian tools, understands Indian customer behaviour.", color: "#f59e0b" },
+  { icon: BuildIcon, title: "Custom AI Bot Development for Your Business", desc: "We design and train AI bot solutions based on your specific industry workflows—not generic templates.", color: "#06b6d4" },
+  { icon: DataObjectIcon, title: "Trained on Real Business Data", desc: "Our AI bots use real business data instead of fixed scripts, enabling smarter and more accurate responses.", color: "#8b5cf6" },
+  { icon: LanguageIcon, title: "End-to-End Setup & Support", desc: "We handle the complete process, including development, deployment, testing, and ongoing improvements.", color: "#22c55e" },
+  { icon: SupportAgentIcon, title: "Built for Indian Businesses", desc: "Our AI solutions support Indian languages, integrate with local tools, and are designed to match user behaviour in India.", color: "#f59e0b" },
 ];
 
 const ChatbotWhyUs = () => (
@@ -26,7 +26,7 @@ const ChatbotWhyUs = () => (
             <Typography variant="h2" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "26px", md: "34px" }, mb: 2 }}>
               Why Vihaan Innovations
             </Typography>
-            <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "15px" }}>Why us:</Typography>
+            <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "15px" }}>Why Choose Us</Typography>
           </Box>
           <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
             {reasons.map((r, i) => {
@@ -37,7 +37,10 @@ const ChatbotWhyUs = () => (
                     <Box sx={{ width: 48, height: 48, borderRadius: "12px", bgcolor: `${r.color}18`, display: "flex", justifyContent: "center", alignItems: "center", color: r.color, flexShrink: 0, border: `1px solid ${r.color}25` }}>
                       <Icon sx={{ fontSize: 24 }} />
                     </Box>
-                    <Typography sx={{ color: "rgba(255,255,255,0.8)", fontSize: "14px", lineHeight: 1.6, fontWeight: 500 }}>{r.title}</Typography>
+                    <Box>
+                      <Typography sx={{ color: "#ffffff", fontSize: "15px", fontWeight: 700, mb: 0.5 }}>{r.title}</Typography>
+                      <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "14px", lineHeight: 1.6 }}>{r.desc}</Typography>
+                    </Box>
                   </Paper>
                 </motion.div>
               );
@@ -51,16 +54,16 @@ const ChatbotWhyUs = () => (
             <Paper elevation={0} sx={{ p: 5, borderRadius: "24px", background: "linear-gradient(135deg, rgba(6,182,212,0.15) 0%, rgba(139,92,246,0.15) 100%)", border: "1.5px solid rgba(6,182,212,0.3)", backdropFilter: "blur(20px)", boxShadow: "0 0 60px rgba(6,182,212,0.1)", textAlign: "center", position: "sticky", top: "100px" }}>
               <SmartToyIcon sx={{ fontSize: 56, color: "#06b6d4", mb: 2 }} />
               <Typography sx={{ fontWeight: 900, color: "#ffffff", fontSize: "22px", mb: 2, lineHeight: 1.3 }}>
-                CTA block<br />
-                <Box component="span" sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", fontWeight: 500 }}>Let's build a bot that works while you sleep.</Box>
+                Get Started with Your AI Bot<br />
+                <Box component="span" sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", fontWeight: 500 }}>Let’s build a chatbot that works for your business 24/7 — even when you’re offline.</Box>
               </Typography>
               <Button variant="contained" sx={{ bgcolor: "#06b6d4", color: "#000", fontWeight: 800, px: 5, py: 1.8, borderRadius: "12px", textTransform: "none", fontSize: "15px", boxShadow: "0 8px 30px rgba(6,182,212,0.4)", width: "100%", mb: 2, "&:hover": { bgcolor: "#0891b2", transform: "translateY(-2px)", boxShadow: "0 12px 40px rgba(6,182,212,0.5)" }, transition: "all 0.3s" }}>
-                Book a free 30-min discovery call.
+                Book Your Free 30-Minute Consultation
               </Button>
               <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 1, mt: 2, cursor: "pointer" }}>
                 <WhatsAppIcon sx={{ fontSize: 18, color: "#22c55e" }} />
                 <Typography sx={{ color: "rgba(255,255,255,0.6)", fontSize: "13px", textDecoration: "underline" }}>
-                  See a live demo on WhatsApp right now.
+                  👉 Try a Live Demo on WhatsApp Now
                 </Typography>
               </Box>
             </Paper>

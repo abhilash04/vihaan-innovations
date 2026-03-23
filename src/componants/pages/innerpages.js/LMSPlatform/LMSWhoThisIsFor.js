@@ -11,12 +11,12 @@ import SelfImprovementIcon from '@mui/icons-material/SelfImprovement';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 
 const audiences = [
-  { icon: CastForEducationIcon, title: "Coaching Institutes", color: "#3b82f6", bg: "#eff6ff" },
+  { icon: CastForEducationIcon, title: "Coaching Centers", color: "#3b82f6", bg: "#eff6ff" },
   { icon: DevicesOtherIcon, title: "EdTech Startups & Groups", color: "#8b5cf6", bg: "#f5f3ff" },
   { icon: BusinessCenterIcon, title: "Corporate Training Programs", color: "#14b8a6", bg: "#f0fdfa" },
-  { icon: AccountBalanceIcon, title: "Universities & Colleges", color: "#f59e0b", bg: "#fffbeb" },
-  { icon: TrendingUpIcon, title: "Learning and Development Teams", color: "#22c55e", bg: "#f0fdf4" },
-  { icon: VerifiedIcon, title: "Government and Certification Bodies", color: "#ef4444", bg: "#fef2f2" },
+  { icon: AccountBalanceIcon, title: "Colleges & Universities", color: "#f59e0b", bg: "#fffbeb" },
+  { icon: TrendingUpIcon, title: "Learning & Development Teams", color: "#22c55e", bg: "#f0fdf4" },
+  { icon: VerifiedIcon, title: "Government & Certification Bodies", color: "#ef4444", bg: "#fef2f2" },
   { icon: SelfImprovementIcon, title: "Professional Training Institutes", color: "#0ea5e9", bg: "#f0f9ff" },
   { icon: WorkspacePremiumIcon, title: "Talent & Online Learning Platforms", color: "#f97316", bg: "#fff7ed" },
 ];

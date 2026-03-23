@@ -70,21 +70,100 @@ const ListingMultiVertical = () => {
     <Box sx={{ bgcolor: "#f8fafc", py: 8 }}>
       <Container maxWidth="lg">
 
-        {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
-            Multi-vertical Capability
-          </Typography>
-        </Box>
+        <Grid container spacing={8} alignItems="center">
+          
+          {/* Left Text Content */}
+          <Grid item xs={12} md={5}>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <Typography sx={{ color: "#2563eb", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: 1, mb: 1 }}>
+                Multi-vertical Capability
+              </Typography>
+              <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+                One Core Engine, Endless Business Listing Website India Possibilities
+              </Typography>
+              <Typography sx={{ color: "#666", fontSize: "16px", mb: 4, lineHeight: 1.6 }}>
+                We build flexible listing and directory solutions that can be customized for any industry, ensuring your business listing website India scales as your business grows.
+              </Typography>
 
-        {/* Two dashboard mockups */}
-        <Grid container spacing={6}>
-          <Grid item xs={12} md={6}>
-            <DashboardMock theme="light" title="Job Portal Dashboard" delay={0.1} />
+              <Typography sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: "16px", mb: 2 }}>INDUSTRIES WE SERVE</Typography>
+
+              <Box component="ul" sx={{
+                pl: 0, m: 0, listStyle: "none",
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                columnGap: 2,
+                '& li': {
+                  position: "relative",
+                  pl: "20px",
+                  mb: 2,
+                  color: "#444",
+                  fontSize: "14px",
+                  "&::before": {
+                    content: '""',
+                    position: "absolute",
+                    left: 0,
+                    top: "6px",
+                    width: "6px",
+                    height: "6px",
+                    borderRadius: "50%",
+                    bgcolor: "#a855f7"
+                  }
+                }
+              }}>
+                <li>Real Estate Portals</li>
+                <li>B2B & B2C Directories</li>
+                <li>Job & Recruitment Boards</li>
+                <li>Food Delivery & Services</li>
+                <li>Automotive & Dealership</li>
+                <li>Events & Entertainment</li>
+                <li>Healthcare & Booking</li>
+                <li>Travel & Tourism</li>
+              </Box>
+
+              <Box sx={{ mt: 5 }}>
+                <Box
+                  component="button"
+                  sx={{
+                    bgcolor: "#2563eb",
+                    color: "#ffffff",
+                    fontWeight: 700,
+                    fontSize: "15px",
+                    px: { xs: 4, md: 5 },
+                    py: 1.5,
+                    borderRadius: "8px",
+                    textTransform: "none",
+                    cursor: "pointer",
+                    border: "none",
+                    boxShadow: "0 4px 14px rgba(37, 99, 235, 0.3)",
+                    "&:hover": {
+                      bgcolor: "#1d4ed8",
+                      boxShadow: "0 6px 20px rgba(37, 99, 235, 0.4)",
+                    },
+                  }}
+                >
+                  View Industry Solutions
+                </Box>
+              </Box>
+            </motion.div>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <DashboardMock theme="dark" title="Real Estate Platform" delay={0.3} />
+
+          {/* Right Mockups */}
+          <Grid item xs={12} md={7}>
+            <Grid container spacing={3}>
+              <Grid item xs={12} sm={6}>
+                <DashboardMock theme="light" title="Job Portal Dashboard" delay={0.1} />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <DashboardMock theme="dark" title="Real Estate Platform" delay={0.3} />
+              </Grid>
+            </Grid>
           </Grid>
+          
         </Grid>
 
       </Container>

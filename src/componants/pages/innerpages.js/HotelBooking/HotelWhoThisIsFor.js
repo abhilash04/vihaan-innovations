@@ -11,14 +11,14 @@ import TempleHinduIcon from '@mui/icons-material/TempleHindu';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 
 const propertyTypes = [
-  { icon: ApartmentIcon, title: "Independent Hotels\n& Boutique Properties", color: "#0f766e", bg: "#f0fdf4" },
-  { icon: BeachAccessIcon, title: "Resort & Spa\nChains", color: "#0ea5e9", bg: "#f0f9ff" },
-  { icon: CottageIcon, title: "Homestays & Vacation\nRentals", color: "#d4a017", bg: "#fefce8" },
-  { icon: AccountBalanceIcon, title: "Hotel Management\nGroups & Chains", color: "#7c3aed", bg: "#f5f3ff" },
-  { icon: BusinessIcon, title: "Serviced Apartments\n& Corporate Stay Properties", color: "#1e3a5f", bg: "#eff6ff" },
-  { icon: HotelIcon, title: "Hostels & Budget\nAccommodation Providers", color: "#16a34a", bg: "#f0fdf4" },
-  { icon: TempleHinduIcon, title: "Pilgrimage &\nReligious Guest Houses", color: "#dc2626", bg: "#fef2f2" },
-  { icon: FlightTakeoffIcon, title: "Travel Agencies\n(white-label portals)", color: "#f97316", bg: "#fff7ed" },
+  { icon: ApartmentIcon, title: "Independent hotels\n& boutique stays", color: "#0f766e", bg: "#f0fdf4" },
+  { icon: BeachAccessIcon, title: "Resorts & spa\nchains", color: "#0ea5e9", bg: "#f0f9ff" },
+  { icon: CottageIcon, title: "Homestays &\nvacation rentals", color: "#d4a017", bg: "#fefce8" },
+  { icon: AccountBalanceIcon, title: "Hotel chains &\nmanagement groups", color: "#7c3aed", bg: "#f5f3ff" },
+  { icon: BusinessIcon, title: "Serviced apartments\n& corporate stays", color: "#1e3a5f", bg: "#eff6ff" },
+  { icon: HotelIcon, title: "Hostels & budget\nstay providers", color: "#16a34a", bg: "#f0fdf4" },
+  { icon: TempleHinduIcon, title: "Pilgrimage\nguest houses", color: "#dc2626", bg: "#fef2f2" },
+  { icon: FlightTakeoffIcon, title: "Travel agencies\n(white-label booking portals)", color: "#f97316", bg: "#fff7ed" },
 ];
 
 const PropertyCard = ({ icon: Icon, title, color, bg, delay }) => (
@@ -36,8 +36,11 @@ const HotelWhoThisIsFor = () => (
   <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 8 }}>
-        <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "36px" }, mb: 1, lineHeight: 1.2 }}>
-          The Ideal Solution For<br />Every Property Type
+        <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "36px" }, mb: 2, lineHeight: 1.2 }}>
+          The Perfect Solution for Every Property Type
+        </Typography>
+        <Typography sx={{ color: "#475569", fontSize: "18px", maxWidth: "600px", mx: "auto" }}>
+          Built by a trusted hotel booking website development company, our solution supports all types of hospitality businesses.
         </Typography>
       </Box>
       <Grid container spacing={3}>

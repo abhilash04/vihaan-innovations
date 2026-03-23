@@ -7,10 +7,10 @@ import FactCheckIcon from '@mui/icons-material/FactCheck';
 import BusinessIcon from '@mui/icons-material/Business';
 
 const corpFeatures = [
-  { icon: AssessmentIcon, title: "Progress report & analytics", desc: "Manager, HR & department-level reports." },
-  { icon: ManageAccountsIcon, title: "Manager dashboards", desc: "Track team progress, learning hours, completion rates." },
-  { icon: FactCheckIcon, title: "Compliance tracking", desc: "Auto-track mandatory courses and certifications." },
-  { icon: BusinessIcon, title: "Multi-department structure", desc: "Separate spaces per team, batch or geography." },
+  { icon: AssessmentIcon, title: "Progress Reports & Analytics", desc: "Detailed reports for managers, HR teams, and departments" },
+  { icon: ManageAccountsIcon, title: "Manager Dashboards", desc: "Track team progress, learning hours, and completion rates" },
+  { icon: FactCheckIcon, title: "Compliance Tracking", desc: "Automatically monitor required courses and certifications" },
+  { icon: BusinessIcon, title: "Multi-Department Structure", desc: "Separate dashboards for teams, batches, and locations" },
 ];
 
 const LMSCorporate = () => (

@@ -9,12 +9,12 @@ import CakeIcon from '@mui/icons-material/Cake';
 import LoyaltyIcon from '@mui/icons-material/Loyalty';
 
 const crmFeatures = [
-  { icon: FavoriteIcon, title: "Guest Preference Tags", desc: "Remember food preferences, room types, pillow choices, and allergies.", color: "#ec4899" },
-  { icon: EmailIcon, title: "Automated Email Journeys", desc: "Pre-arrival, post-stay, win-back, and review-request sequences.", color: "#0f766e" },
-  { icon: WhatsAppIcon, title: "WhatsApp Guest Communication", desc: "Send booking confirmation, check-in links and offers via WhatsApp.", color: "#22c55e" },
-  { icon: StarIcon, title: "Loyalty Points System", desc: "Award points for direct bookings, dining, and spa spend.", color: "#d4a017" },
-  { icon: CakeIcon, title: "Birthday & Anniversary Offers", desc: "Auto-trigger special rate or complimentary package on special dates.", color: "#f97316" },
-  { icon: LoyaltyIcon, title: "Repeat Guest Recognition", desc: "Flag VIP guests at check-in, auto-apply loyalty benefits.", color: "#7c3aed" },
+  { icon: FavoriteIcon, title: "Guest Profile & Tags", desc: "Save preferences like room type, food allergies, and special requests for personalized service.", color: "#ec4899" },
+  { icon: EmailIcon, title: "Automated Email Campaigns", desc: "Set up automatic emails for booking confirmations, pre-arrival details, and post-stay reviews.", color: "#0f766e" },
+  { icon: WhatsAppIcon, title: "Direct Guest Messaging", desc: "Communicate with guests seamlessly via WhatsApp and SMS integrations.", color: "#22c55e" },
+  { icon: StarIcon, title: "Loyalty Programs", desc: "Reward repeat guests with points, exclusive discounts, and member-only pricing.", color: "#d4a017" },
+  { icon: CakeIcon, title: "Special Occasion Offers", desc: "Automatically send special offers and packages for birthdays and anniversaries.", color: "#f97316" },
+  { icon: LoyaltyIcon, title: "VIP Guest Tracking", desc: "Identify returning VIP guests at check-in to provide priority services and upgrades.", color: "#7c3aed" },
 ];
 
 const HotelGuestCRM = () => (
@@ -22,8 +22,11 @@ const HotelGuestCRM = () => (
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 3 }}>
         <Typography sx={{ color: "#0f766e", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>Guest CRM & Loyalty</Typography>
-        <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "34px" } }}>
-          Build Repeat Guests and Foster Loyalty
+        <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "34px" }, mb: 2 }}>
+          Build Lasting Relationships with Repeat Guests
+        </Typography>
+        <Typography sx={{ color: "#64748b", fontSize: "16px", maxWidth: "700px", mx: "auto" }}>
+          Our built-in CRM helps you store guest preferences, run loyalty programs, and automate communication to keep guests coming back.
         </Typography>
       </Box>
       <Grid container spacing={3} sx={{ mt: 5 }}>

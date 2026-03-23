@@ -2,29 +2,30 @@ import React, { useState } from "react";
 import { Box, Container, Typography, Grid, Paper, Tabs, Tab } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 
-const tabs = ["What it does", "Live Class & Webinar Integration", "Assessment Engine", "Payments", "Admin Panel", "Analytics"];
+const tabs = ["Live Classes", "Assessment Engine", "Payments", "Admin Panel", "Analytics"];
 
 const moduleContent = {
   0: {
-    left: { title: "What it does", items: ["Upload structuring questions, quizzes, and drills", "Handle quizzes course categories and quizzes", "Support many question types: MCQ, Fill, Matching", "Timer mode", "Result grading", "Proctoring"] },
-    right: { title: "Who uses it", items: ["Student", "Admin", "Instructor", "Results analyst per student and batch"] }
+    left: { title: "What it does", items: ["Run live classes and webinars in one place", "Schedule sessions and send reminders", "Allow live chat and interaction during sessions", "Record classes for later viewing", "Easily connect with video meeting tools"] },
+    right: { title: "Who uses it", items: ["Students", "Teachers", "Admins", "View attendance and simple reports"] }
   },
   1: {
-    left: { title: "What it does", items: ["Integrate Zoom, Google Meet, or custom RTMP", "Schedule and notify students and instructors", "Record and replay sessions", "Attendance tracking", "Live quiz during sessions"] },
-    right: { title: "Who uses it", items: ["Instructors host", "Students join", "Admins monitor", "Parents review replays"] }
+    left: { title: "What it does", items: ["Create quizzes, tests, and practice exams easily", "Add different question types like MCQ and fill-in-the-blanks", "Set timers for tests", "Automatically check answers and give scores", "Monitor online exams for fairness"] },
+    right: { title: "Who uses it", items: ["Students", "Teachers", "Admins", "Organisations"] }
   },
   2: {
-    left: { title: "What it does", items: ["MCQ, fill-blank, code questions", "Auto-grading and result dashboards", "Proctoring mode integration", "Certificate triggers on pass"] },
-    right: { title: "Who uses it", items: ["Students attempt", "Instructors grade", "Admins analyze results"] }
+    left: { title: "What it does", items: ["Accept online payments for courses and services", "Support multiple payment methods (UPI, cards, net banking)", "Generate invoices and payment receipts", "Track all transactions in one place", "Ensure secure payment processing"] },
+    right: { title: "Who uses it", items: ["Students", "Admins", "View payment history and reports"] }
   },
+  3: {
+    left: { title: "What it does", items: ["Manage users, courses, and content easily", "Control access and permissions", "Monitor platform activity", "Update and organise system settings", "Handle support and user issues"] },
+    right: { title: "Who uses it", items: ["Admins", "Get full control over the platform"] }
+  },
+  4: {
+    left: { title: "What it does", items: ["Track student performance and activity", "View course progress and engagement", "Generate simple reports and insights", "Identify trends and improvements", "Make better decisions using data"] },
+    right: { title: "Who uses it", items: ["Admins", "Teachers", "Access detailed performance reports"] }
+  }
 };
-// Fill in remaining tabs
-[3,4,5].forEach(i => {
-  moduleContent[i] = {
-    left: { title: "What it does", items: ["Custom module functionality", "API integrations", "Dashboard management", "Role-based controls"] },
-    right: { title: "Who uses it", items: ["Admin", "Instructor", "Student", "Organisation"] }
-  };
-});
 
 const LMSPlatformModules = () => {
   const [active, setActive] = useState(0);

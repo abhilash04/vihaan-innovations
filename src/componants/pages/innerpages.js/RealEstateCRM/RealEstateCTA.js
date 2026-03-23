@@ -57,7 +57,7 @@ const RealEstateCTA = () => {
             Schedule a free 45-minute consultation call. We’ll help you find the right Real Estate CRM Development solution for your business — no generic presentations, just a focused discussion about your real business needs and challenges.
           </Typography>
 
-          <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 3 }}>
+          <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" }, alignItems: "center", justifyContent: "center", gap: 3 }}>
             
             <Button
               variant="contained"
@@ -82,6 +82,27 @@ const RealEstateCTA = () => {
             >
               Book a Free Call
             </Button>            
+            
+            <Button
+              variant="outlined"
+              sx={{
+                borderColor: "rgba(255, 255, 255, 0.3)",
+                color: "#ffffff",
+                fontWeight: 600,
+                fontSize: "16px",
+                px: 4,
+                py: 2,
+                borderRadius: "40px",
+                textTransform: "none",
+                "&:hover": {
+                  borderColor: "#00F2FE",
+                  bgcolor: "rgba(0, 242, 254, 0.05)"
+                }
+              }}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              Explore Features Again?
+            </Button>
           </Box>
         </motion.div>
 

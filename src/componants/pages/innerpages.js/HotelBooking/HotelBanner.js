@@ -36,16 +36,15 @@ const HotelBanner = () => (
         <Grid item xs={12} md={6}>
           <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
             <Typography variant="h1" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "36px", md: "54px" }, lineHeight: 1.1, mb: 3 }}>
-              Your Own Booking Engine.<br />
-              <Box component="span" sx={{ color: "#0f766e" }}>Zero Commission.</Box><br />
-              Full Control.
+              Create Your Own Booking Platform<br />
+              <Box component="span" sx={{ color: "#0f766e", fontSize: "40px", display: "block", mt: 1 }}>No commission. Full control.</Box>
             </Typography>
             <Typography sx={{ color: "#475569", fontSize: "16px", lineHeight: 1.7, mb: 5, maxWidth: "480px" }}>
-              Build a custom hotel booking platform, property management system, and guest experience portal for hotels, resorts, homestays, and hospitality chains.
+              Build a custom booking solution with our hotel booking app development services. We provide booking platforms, property management systems, and guest experience portals for hotels, resorts, homestays, and hospitality businesses.
             </Typography>
             <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mb: 6 }}>
               <Button variant="contained" sx={{ bgcolor: "#d4a017", color: "#fff", fontWeight: 800, px: 4, py: 1.5, borderRadius: "10px", textTransform: "none", fontSize: "15px", boxShadow: "0 6px 20px rgba(212,160,23,0.4)", "&:hover": { bgcolor: "#b8891a", transform: "translateY(-2px)" }, transition: "all 0.3s" }}>
-                See a Demo
+                View Demo
               </Button>
               <Button variant="outlined" sx={{ borderColor: "#0f766e", color: "#0f766e", fontWeight: 700, px: 4, py: 1.5, borderRadius: "10px", textTransform: "none", fontSize: "15px", "&:hover": { bgcolor: "rgba(15,118,110,0.06)" } }}>
                 Explore Features
@@ -53,9 +52,9 @@ const HotelBanner = () => (
             </Box>
             {/* Stats */}
             <Box sx={{ display: "flex", flexDirection: "column", gap: 2, maxWidth: "380px" }}>
-              <StatBadge value="99%" label="Direct Booking Increase" icon={TrendingUpIcon} color="#d4a017" delay={0.5} />
-              <StatBadge value="0%" label="OTA Commission Paid" icon={AttachMoneyIcon} color="#0f766e" delay={0.65} />
-              <StatBadge value="20%" label="Check-in Time Reduced" icon={AccessTimeIcon} color="#3b82f6" delay={0.8} />
+              <StatBadge value="99%" label="Increase in direct bookings" icon={TrendingUpIcon} color="#d4a017" delay={0.5} />
+              <StatBadge value="0%" label="No Third-Party Fees" icon={AttachMoneyIcon} color="#0f766e" delay={0.65} />
+              <StatBadge value="20%" label="Faster Check-in" icon={AccessTimeIcon} color="#3b82f6" delay={0.8} />
             </Box>
           </motion.div>
         </Grid>
@@ -66,11 +65,11 @@ const HotelBanner = () => (
             <Box sx={{ position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
               <Paper elevation={0} sx={{ p: 5, borderRadius: "28px", bgcolor: "rgba(255,255,255,0.85)", border: "1px solid rgba(212,160,23,0.15)", backdropFilter: "blur(20px)", boxShadow: "0 25px 60px rgba(0,0,0,0.08)", textAlign: "center", maxWidth: "400px", mx: "auto" }}>
                 <HotelIcon sx={{ fontSize: 100, color: "#d4a017", mb: 2, opacity: 0.85 }} />
-                <Typography sx={{ fontWeight: 800, color: "#0f172a", fontSize: "20px", mb: 1 }}>Hotel Management Platform</Typography>
+                <Typography sx={{ fontWeight: 800, color: "#0f172a", fontSize: "20px", mb: 1 }}>Hotel Dashboard</Typography>
                 <Typography sx={{ color: "#64748b", fontSize: "14px", mb: 3 }}>PMS + Booking Engine + Channel Manager</Typography>
                 {/* Mini dashboard mock */}
                 <Box sx={{ bgcolor: "#f8fafc", borderRadius: "12px", p: 2.5, textAlign: "left" }}>
-                  {["Room Availability", "Today's Arrivals", "Revenue Today"].map((label, i) => (
+                  {["Rooms Available", "Today's Check-ins", "Today's Revenue"].map((label, i) => (
                     <Box key={i} sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: i < 2 ? 1.5 : 0 }}>
                       <Typography sx={{ fontSize: "12px", color: "#64748b", fontWeight: 500 }}>{label}</Typography>
                       <Box sx={{ width: `${40 + i * 15}%`, height: "8px", borderRadius: "4px", bgcolor: i === 0 ? "#0f766e" : i === 1 ? "#d4a017" : "#3b82f6", opacity: 0.8 }} />

@@ -9,12 +9,12 @@ import BadgeIcon from '@mui/icons-material/Badge';
 import LocalParkingIcon from '@mui/icons-material/LocalParking';
 
 const tools = [
-  { icon: CleaningServicesIcon, title: "Housekeeping Task Manager", desc: "Real-time room status, task assignment, completion tracking.", color: "#0f766e" },
-  { icon: DeskIcon, title: "Front Desk & Check-in Kiosk", desc: "Digital check-in, key handover, passport scan integration.", color: "#d4a017" },
-  { icon: RestaurantIcon, title: "F&B POS Integration", desc: "Restaurant POS synced with room folios and guest billing.", color: "#f97316" },
-  { icon: BuildIcon, title: "Maintenance Request System", desc: "Guests or staff raise tickets; automated assignment and tracking.", color: "#7c3aed" },
-  { icon: BadgeIcon, title: "Staff Scheduling & HR", desc: "Shift planning, attendance, and performance dashboards.", color: "#0ea5e9" },
-  { icon: LocalParkingIcon, title: "Parking & Amenity Booking", desc: "Manage parking slots, spa, gym, and activity bookings.", color: "#16a34a" },
+  { icon: CleaningServicesIcon, title: "Housekeeping Management", desc: "Keep track of room status, assign work, and follow progress live", color: "#0f766e" },
+  { icon: DeskIcon, title: "Front Desk & Check-in System", desc: "Enable quick digital check-ins, key management, and ID/passport verification", color: "#d4a017" },
+  { icon: RestaurantIcon, title: "F&B POS Integration", desc: "Sync restaurant billing directly with guest room accounts for a smooth experience", color: "#f97316" },
+  { icon: BuildIcon, title: "Maintenance Management System", desc: "Log, assign, and track maintenance requests with automated workflows", color: "#7c3aed" },
+  { icon: BadgeIcon, title: "Staff Scheduling & HR Management", desc: "Manage shifts, attendance, and team performance from a single dashboard", color: "#0ea5e9" },
+  { icon: LocalParkingIcon, title: "Parking & Facility Booking", desc: "Easily handle parking, spa, gym, and other amenity reservations", color: "#16a34a" },
 ];
 
 const HotelOperationsStaff = () => (
@@ -23,7 +23,10 @@ const HotelOperationsStaff = () => (
       <Box sx={{ textAlign: "center", mb: 3 }}>
         <Typography sx={{ color: "#0f766e", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>Operations & Staff Tools</Typography>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "34px" }, mb: 2 }}>
-          Streamline Operations and Empower Back of House Staff
+          Simplify Hotel Operations and Empower Your Team
+        </Typography>
+        <Typography sx={{ color: "#64748b", fontSize: "16px", mb: 1, maxWidth: "700px", mx: "auto" }}>
+          Built by an expert hotel website development company, these tools are designed to streamline daily workflows and improve staff efficiency across your property.
         </Typography>
       </Box>
       <Grid container spacing={3} sx={{ mt: 4 }}>

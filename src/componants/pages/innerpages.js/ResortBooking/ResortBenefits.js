@@ -1,46 +1,46 @@
 import React from "react";
 import { Box, Typography, Grid, Container, Button } from "@mui/material";
 import { motion } from "framer-motion";
-import { TrendingUp, Heart, Zap, Shield, HelpCircle } from "lucide-react";
+import { Globe, Zap, Target, TrendingUp, Shield } from "lucide-react";
 
 const benefits = [
   {
-    icon: <TrendingUp size={32} color="#D4AF37" />,
-    title: "Increased Revenue",
-    desc: "Maximize occupancy with intelligent booking yield management.",
-    bullets: ["Dynamic pricing triggers", "Up-sell amenity workflows"],
+    icon: <Globe size={32} color="#D4AF37" />,
+    title: "24/7 Visibility",
+    desc: "Manage your resort anytime, anywhere.",
+    bullets: ["Track bookings in real time", "Access data from any device", "Monitor guest activity"],
     glow: "rgba(212, 175, 55, 0.15)",
   },
   {
-    icon: <Heart size={32} color="#D4AF37" />,
-    title: "Enhanced Guest Loyalty",
-    desc: "Personalized experiences that drive five-star reviews.",
-    bullets: ["Guest preference maps", "Loyalty discount hooks"],
-    glow: "rgba(255, 105, 180, 0.1)",
+    icon: <Zap size={32} color="#D4AF37" />,
+    title: "Save Time with Automation",
+    desc: "Reduce manual work.",
+    bullets: ["Automatic booking confirmations", "Easy payment handling", "Faster check-in/check-out"],
+    glow: "rgba(0, 191, 255, 0.1)",
   },
   {
-    icon: <Zap size={32} color="#D4AF37" />,
-    title: "Operational Efficiency",
-    desc: "Free up staff that matter to focus on the guest experience.",
-    bullets: ["Task auto-delegates", "Live stock check triggers"],
-    glow: "rgba(0, 191, 255, 0.1)",
+    icon: <Target size={32} color="#D4AF37" />,
+    title: "Improve Accuracy",
+    desc: "Avoid mistakes and keep records clean.",
+    bullets: ["Centralized data", "Accurate billing", "No paperwork"],
+    glow: "rgba(255, 105, 180, 0.1)",
   },
 ];
 
 const bottomBenefits = [
   {
-    icon: <Shield size={32} color="#D4AF37" />,
-    title: "Staff Transparency",
-    desc: "No missed handovers or pending room clean notifications.",
-    bullets: ["Shift audit reports", "Real-time task completion flags"],
-    glow: "rgba(50, 205, 50, 0.1)",
+    icon: <TrendingUp size={32} color="#D4AF37" />,
+    title: "Real-Time Insights",
+    desc: "Make better business decisions.",
+    bullets: ["Revenue reports", "Occupancy data", "Guest insights"],
+    glow: "rgba(147, 112, 219, 0.1)",
   },
   {
-    icon: <HelpCircle size={32} color="#D4AF37" />,
-    title: "Data Intelligence",
-    desc: "Make decisions backed by historical yield and performance graphs.",
-    bullets: ["Yield variance visual", "Consolidated monthly analytics"],
-    glow: "rgba(147, 112, 219, 0.1)",
+    icon: <Shield size={32} color="#D4AF37" />,
+    title: "Secure Data",
+    desc: "Keep your data safe.",
+    bullets: ["Encrypted information", "Secure storage", "Cloud backups"],
+    glow: "rgba(50, 205, 50, 0.1)",
   },
 ];
 
@@ -71,19 +71,7 @@ const ResortBenefits = () => {
                 mb: 2,
               }}
             >
-              The Business Advantage
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{
-                fontFamily: "'Outfit', sans-serif",
-                color: "rgba(245, 245, 240, 0.6)",
-                maxWidth: "600px",
-                margin: "0 auto",
-              }}
-            >
-              Discover how next-gen automation translates to higher margins and
-              exclusive guest satisfaction scores.
+              Benefits of a Smart Resort Management Website
             </Typography>
           </motion.div>
         </Box>
@@ -264,8 +252,10 @@ const ResortBenefits = () => {
           ))}
         </Grid>
 
-        {/* Bottom CTA */}
-        <Box sx={{ textAlign: "center" }}>
+        <Box sx={{ textAlign: "center", mt: 6 }}>
+          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "1.1rem", color: "rgba(245,245,240,0.8)", mb: 3 }}>
+            Upgrade your resort with a smart management system today.
+          </Typography>
           <Button
             variant="contained"
             sx={{
@@ -285,7 +275,7 @@ const ResortBenefits = () => {
               },
             }}
           >
-            Start Your Transformation
+            Get Your Resort Management Website
           </Button>
         </Box>
       </Container>

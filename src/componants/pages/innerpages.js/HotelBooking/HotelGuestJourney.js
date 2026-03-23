@@ -12,14 +12,14 @@ import NightlightIcon from '@mui/icons-material/Nightlight';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
 const steps = [
-  { icon: SearchIcon, label: "Discover & Search", color: "#0ea5e9" },
-  { icon: CalendarTodayIcon, label: "Select Dates & Room", color: "#0f766e" },
-  { icon: PaymentIcon, label: "Book & Pay", color: "#d4a017" },
-  { icon: ConfirmationNumberIcon, label: "Confirmation", color: "#7c3aed" },
-  { icon: CheckInIcon, label: "Check-in", color: "#16a34a" },
-  { icon: NightlightIcon, label: "In-Stay Experience", color: "#f97316" },
-  { icon: ExitToAppIcon, label: "Check-out", color: "#ec4899" },
-  { icon: StarIcon, label: "Review & Loyalty", color: "#d4a017" },
+  { icon: SearchIcon, label: "Search and explore properties", color: "#0ea5e9" },
+  { icon: CalendarTodayIcon, label: "Select dates and room type", color: "#0f766e" },
+  { icon: PaymentIcon, label: "Book and make payment", color: "#d4a017" },
+  { icon: ConfirmationNumberIcon, label: "Get instant booking confirmation", color: "#7c3aed" },
+  { icon: CheckInIcon, label: "Quick and easy check-in", color: "#16a34a" },
+  { icon: NightlightIcon, label: "Enjoy a comfortable in-stay experience", color: "#f97316" },
+  { icon: ExitToAppIcon, label: "Simple and fast check-out", color: "#ec4899" },
+  { icon: StarIcon, label: "Share reviews and access loyalty programs", color: "#d4a017" },
 ];
 
 const HotelGuestJourney = () => (
@@ -27,8 +27,11 @@ const HotelGuestJourney = () => (
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 10 }}>
         <Typography sx={{ color: "#d4a017", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>The Guest Journey</Typography>
-        <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "34px" } }}>
-          Creating Memorable End-to-End Guest Journeys
+        <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "34px" }, mb: 2 }}>
+          Seamless Experience from Booking to Checkout
+        </Typography>
+        <Typography sx={{ color: "#475569", fontSize: "16px", maxWidth: "600px", mx: "auto" }}>
+          Designed with advanced hotel booking app development services to ensure a smooth journey for every guest.
         </Typography>
       </Box>
 

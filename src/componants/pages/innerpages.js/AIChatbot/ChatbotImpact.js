@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 const bigStats = [
-  { value: "80%", label: "of routine queries handled without human agents", color: "#06b6d4", size: "72px" },
-  { value: "3×", label: "more leads captured from website visitors outside business hours", color: "#8b5cf6", size: "72px" },
-  { value: "60%", label: "reduction in repetitive support workload", color: "#22c55e", size: "72px" },
-  { value: "2–3 weeks", label: "Bots go live in as little as 2–3 weeks", color: "#f59e0b", size: "48px" },
+  { value: "80%", label: "Automated Queries: Most customer questions are handled without human involvement.", color: "#06b6d4", size: "72px" },
+  { value: "3x", label: "More Leads: Capture more leads even when your business is closed.", color: "#8b5cf6", size: "72px" },
+  { value: "60%", label: "Less Support Work: Reduce repetitive tasks and save your team’s time.", color: "#22c55e", size: "72px" },
+  { value: "2–3 Weeks", label: "Setup: Your chatbot can be ready and live within a few weeks.", color: "#f59e0b", size: "48px" },
 ];
 
 const ChatbotImpact = () => (
@@ -37,14 +37,14 @@ const ChatbotImpact = () => (
             <Grid item xs={12} md={6} sx={{ textAlign: "center" }}>
               <AccessTimeIcon sx={{ fontSize: 48, color: "#06b6d4", mb: 1 }} />
               <Typography sx={{ fontWeight: 900, color: "#06b6d4", fontSize: "56px", lineHeight: 1 }}>3s</Typography>
-              <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "14px", mt: 1 }}>Average response time — AI bot</Typography>
+              <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "14px", mt: 1 }}>Response Time: Instant replies from the AI chatbot.</Typography>
             </Grid>
             <Grid item xs={12} md={2} sx={{ textAlign: "center" }}>
               <Typography sx={{ fontWeight: 900, color: "#64748b", fontSize: "32px" }}>VS</Typography>
             </Grid>
             <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
               <Typography sx={{ fontWeight: 900, color: "#64748b", fontSize: "56px", lineHeight: 1 }}>6h+</Typography>
-              <Typography sx={{ color: "rgba(255,255,255,0.4)", fontSize: "14px", mt: 1 }}>Average wait for human reply</Typography>
+              <Typography sx={{ color: "rgba(255,255,255,0.6)", fontSize: "14px", mt: 1 }}>Human Response: Significantly faster compared to typical human response times.</Typography>
             </Grid>
           </Grid>
         </Paper>

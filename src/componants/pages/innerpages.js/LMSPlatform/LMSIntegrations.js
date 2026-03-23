@@ -12,7 +12,7 @@ const integrations = [
   { name: "AWS S3", color: "#f59e0b", letter: "AWS" },
   { name: "Google & Facebook Login", color: "#3b82f6", letter: "G" },
   { name: "Zapier", color: "#f97316", letter: "Z" },
-  { name: "ZOOM & API", color: "#2563eb", letter: "ZA" },
+  { name: "Zoom API Integration", color: "#2563eb", letter: "ZA" },
 ];
 
 const LMSIntegrations = () => (

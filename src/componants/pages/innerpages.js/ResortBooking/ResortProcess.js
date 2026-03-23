@@ -1,37 +1,37 @@
 import React from "react";
-import { Box, Typography, Container } from "@mui/material";
+import { Box, Typography, Container, Button } from "@mui/material";
 import { motion } from "framer-motion";
 
 const steps = [
   {
-    num: "1",
-    title: "Onboarding",
-    desc: "We configure your resort's digital map and room categories.",
-    bullets: ["Floorplan sync", "Rates structure", "Staff allocation"],
+    num: "01",
+    title: "Discovery & Planning",
+    desc: "We understand your resort and goals.",
+    bullets: ["Research your brand", "Analyze competitors", "Plan booking flow"],
   },
   {
-    num: "2",
-    title: "System Integration",
-    desc: "Connect OTAs and payment gateways safely with our secure hooks.",
-    bullets: ["API lockbox", "Live rate push", "Test booking verification"],
+    num: "02",
+    title: "Design",
+    desc: "We create a beautiful and user-friendly design.",
+    bullets: ["Modern layout", "Mobile-friendly design", "Smooth user experience"],
   },
   {
-    num: "3",
-    title: "Staff Training",
-    desc: "Personalized onboarding for housekeeping, operations and desk staff.",
-    bullets: ["Role dashboard map", "App setup for ground staff", "Simulation runs"],
+    num: "03",
+    title: "Development",
+    desc: "We build your website with smart features.",
+    bullets: ["Booking system integration", "Secure payment setup", "Fast performance"],
   },
   {
-    num: "4",
-    title: "Double Check",
-    desc: "Run end-to-end booking streams to verify channel syncs.",
-    bullets: ["Stress test load", "Notification audit", "Analytics trigger"],
+    num: "04",
+    title: "Testing",
+    desc: "We make sure everything works perfectly.",
+    bullets: ["Speed testing", "Device compatibility", "Booking system testing"],
   },
   {
-    num: "5",
-    title: "Go-Live",
-    desc: "Flip the switch and manage operations with 100% cloud precision.",
-    bullets: ["Live ops support", "Hourly dashboard audit", "Growth reports"],
+    num: "05",
+    title: "Launch & Growth",
+    desc: "We help you grow after launch.",
+    bullets: ["SEO setup", "Performance tracking", "Continuous improvements"],
   },
 ];
 
@@ -64,7 +64,7 @@ const ResortProcess = () => {
                 mb: 2,
               }}
             >
-              Our Deployment Process
+              Our Resort Website Design Process
             </Typography>
             <Typography
               variant="body1"
@@ -76,8 +76,7 @@ const ResortProcess = () => {
                 fontSize: "0.95rem",
               }}
             >
-              A seamless 5-step onboarding timeline to get your resort operations
-              fully automated with zero downtime.
+              We follow a simple step-by-step process to build a website that brings you more bookings.
             </Typography>
           </motion.div>
         </Box>
@@ -195,6 +194,33 @@ const ResortProcess = () => {
               </Box>
             </motion.div>
           ))}
+        </Box>
+        {/* CTA */}
+        <Box sx={{ textAlign: "center", mt: 10, mb: 4 }}>
+          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "1.1rem", color: "rgba(245,245,240,0.8)", mb: 3 }}>
+            Start building your resort website today and turn visitors into guests.
+          </Typography>
+          <Button
+            variant="contained"
+            sx={{
+              fontFamily: "'Outfit', sans-serif",
+              background: "linear-gradient(90deg, #D4AF37, #B08D28)",
+              color: "#0A111E",
+              px: 5,
+              py: 1.8,
+              borderRadius: "30px",
+              fontWeight: 700,
+              textTransform: "none",
+              fontSize: "1rem",
+              boxShadow: "0 10px 20px rgba(212,175,55,0.2)",
+              "&:hover": {
+                transform: "scale(1.02)",
+                boxShadow: "0 15px 25px rgba(212,175,55,0.3)",
+              },
+            }}
+          >
+            Start Your Resort Website Project
+          </Button>
         </Box>
       </Container>
     </Box>

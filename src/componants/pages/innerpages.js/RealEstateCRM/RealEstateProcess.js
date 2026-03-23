@@ -39,7 +39,7 @@ const RealEstateProcess = () => {
                 Clear Process for Real Estate CRM Development
               </Typography>
               <Typography sx={{ color: "#666", fontSize: "18px", lineHeight: 1.6 }}>
-                We follow a proven process to design and launch a customised Real Estate CRM System Software India quickly and efficiently. No confusion or guesswork - just a clear development strategy that aligns with your project timeline and business objectives.
+                We follow a proven process to design and launch a customised Real Estate CRM System Software India quickly and efficiently. No confusion or guesswork — just a clear development strategy that aligns with your project timeline and business objectives.
               </Typography>
             </motion.div>
           </Grid>

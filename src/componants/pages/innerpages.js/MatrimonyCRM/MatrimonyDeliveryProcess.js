@@ -75,27 +75,30 @@ const MatrimonyDeliveryProcess = () => {
               display: "flex", alignItems: "center", gap: 1,
               justifyContent: "center"
             }}>
-              Our Delivery Process
+              Our Delivery Process for Matrimony Platform Development
             </Typography>
           </Box>
+          <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
+            As a professional matrimony web design company, we follow a structured process to build scalable and revenue-ready matrimony platforms. From membership configuration to secure payment integration, our development approach ensures your platform runs smoothly while providing a seamless experience for users.
+          </Typography>
         </Box>
 
         {/* 4 Cards mimicking the monetization structure from the mock */}
         <Grid container spacing={4} sx={{ position: "relative", zIndex: 2, mb: 6 }}>
           <Grid item xs={12} sm={6} md={3}>
-            <DeliveryCard isTop={true} title="Free vs. Premium tier configuration" icon={AccountBalanceWalletIcon} delay={0.1} />
+            <DeliveryCard isTop={true} title="Membership Setup" icon={AccountBalanceWalletIcon} delay={0.1} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <DeliveryCard isTop={true} title="Auto-expiry and renewal reminders" icon={UpdateIcon} delay={0.2} />
+            <DeliveryCard isTop={true} title="Renewal Automation" icon={UpdateIcon} delay={0.2} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <DeliveryCard isTop={false} title="Gateway integration: / PayU, Stripe" icon={PriceCheckIcon} delay={0.3} />
+            <DeliveryCard isTop={false} title="Payment Integration" icon={PriceCheckIcon} delay={0.3} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <DeliveryCard isTop={false} title="Revenue dashboard" icon={InsertChartOutlinedIcon} delay={0.4} />
+            <DeliveryCard isTop={false} title="Revenue Dashboard" icon={InsertChartOutlinedIcon} delay={0.4} />
           </Grid>
         </Grid>
 

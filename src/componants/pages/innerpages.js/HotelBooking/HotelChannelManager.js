@@ -12,10 +12,10 @@ const HotelChannelManager = () => (
       <Box sx={{ textAlign: "center", mb: 3 }}>
         <Typography sx={{ color: "#0f766e", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>Channel Manager</Typography>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "34px" }, mb: 2 }}>
-          Synchronize from Inventory and Prevent Overbooking
+          Sync Your Inventory & Avoid Overbooking
         </Typography>
         <Typography sx={{ color: "#64748b", fontSize: "16px", mb: 1, maxWidth: "600px", mx: "auto" }}>
-          Two-way live sync ensures your rooms are always up-to-date across every OTA and channel — no double bookings, ever.
+          Built by a reliable hotel website development company, this system keeps your room availability updated across all booking platforms, ensuring smooth operations without double bookings.
         </Typography>
       </Box>
 
@@ -39,7 +39,7 @@ const HotelChannelManager = () => (
         <motion.div animate={{ scale: [1, 1.05, 1] }} transition={{ repeat: Infinity, duration: 3 }} style={{ position: "relative", zIndex: 3 }}>
           <Paper elevation={0} sx={{ width: 120, height: 120, borderRadius: "24px", bgcolor: "#0f766e", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", boxShadow: "0 15px 35px rgba(15,118,110,0.3)", zIndex: 3 }}>
             <SyncAltIcon sx={{ fontSize: 36, color: "#ffffff", mb: 0.5 }} />
-            <Typography sx={{ color: "#ffffff", fontWeight: 800, fontSize: "11px", textAlign: "center", lineHeight: 1.2 }}>Your Hotel<br />System</Typography>
+            <Typography sx={{ color: "#ffffff", fontWeight: 800, fontSize: "11px", textAlign: "center", lineHeight: 1.2 }}>Your Hotel<br />Dashboard</Typography>
           </Paper>
         </motion.div>
 
@@ -62,7 +62,7 @@ const HotelChannelManager = () => (
 
       {/* Benefits row */}
       <Grid container spacing={3} justifyContent="center" sx={{ mt: 8 }}>
-        {["Real-time Inventory Sync", "No Overbooking", "One Dashboard for All", "Rate Parity Management"].map((benefit, i) => (
+        {["Real-time inventory updates", "No overbooking issues", "Single dashboard for all channels", "Consistent pricing across platforms"].map((benefit, i) => (
           <Grid item xs={6} md={3} key={i}>
             <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }}>
               <Paper elevation={0} sx={{ p: 2.5, borderRadius: "14px", bgcolor: "#ffffff", border: "1px solid rgba(15,118,110,0.15)", textAlign: "center" }}>

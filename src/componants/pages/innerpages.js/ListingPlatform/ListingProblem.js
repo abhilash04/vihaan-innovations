@@ -84,15 +84,15 @@ const ListingProblem = () => {
               transition={{ duration: 0.6 }}
             >
               <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "32px", md: "46px" }, mb: 2 }}>
-                The Problem
+                The Hidden Problems Behind Most Top Listing Sites
               </Typography>
 
-              <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", mb: 5, lineHeight: 1.6, maxWidth: "450px" }}>
-                Platforms force restrictive experiences that hurt mostly paid listings.
+              <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", mb: 5, lineHeight: 1.6, maxWidth: "500px" }}>
+                Many top listing sites look good on the surface but fail where it matters—performance, scalability, and revenue generation.
               </Typography>
 
               <Box component="ul" sx={{
-                p: 0, m: 0, listStyle: "none",
+                p: 0, m: 0, listStyle: "none", mb: 4,
                 "& li": {
                   position: "relative",
                   paddingLeft: "30px",
@@ -112,12 +112,33 @@ const ListingProblem = () => {
                   }
                 }
               }}>
-                <li>WP plugins = zero control</li>
-                <li>Spam/duplicates</li>
-                <li>Poor mobile experience</li>
-                <li>Manual monetization</li>
-                <li>Zero analytics</li>
+                <li>Limited control with plugin-based systems</li>
+                <li>Spam and duplicate listings reduce trust</li>
+                <li>Poor mobile experience affects user engagement</li>
+                <li>Manual monetization with no automation</li>
+                <li>Lack of analytics and performance insights</li>
               </Box>
+
+              <Button
+                  variant="contained"
+                  sx={{
+                    bgcolor: "#ef4444",
+                    color: "#ffffff",
+                    fontWeight: 700,
+                    fontSize: "15px",
+                    px: { xs: 4, md: 5 },
+                    py: 1.5,
+                    borderRadius: "8px",
+                    textTransform: "none",
+                    boxShadow: "0 4px 14px rgba(239, 68, 68, 0.3)",
+                    "&:hover": {
+                      bgcolor: "#dc2626",
+                      boxShadow: "0 6px 20px rgba(239, 68, 68, 0.4)",
+                    },
+                  }}
+                >
+                  Get Started
+                </Button>
             </motion.div>
           </Grid>
 

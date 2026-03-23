@@ -94,10 +94,10 @@ const RealEstateSolution = () => {
             Our Solution
           </Typography>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", mb: 3, fontSize: { xs: "32px", md: "46px" }, lineHeight: 1.2 }}>
-            Everything your real estate business requires, built into a single platform.
+            Everything your real estate business requires, built into a single platform
           </Typography>
           <Typography sx={{ color: "#333", fontSize: "18px", lineHeight: 1.6 }}>
-            Our real estate CRM software helps manage everything from property listings management  to post-sale work in one place. It makes it easy for your team to handle leads, clients, and deals efficiently.
+            From property listing management to post-sale documentation, our Real Estate CRM App Software India helps streamline every stage of your business process. We design and develop a complete solution that your real estate team can easily use to manage leads, clients, and transactions efficiently.
           </Typography>
         </Box>
 

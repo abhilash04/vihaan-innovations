@@ -3,11 +3,12 @@ import { Box, Container, Typography, Grid } from "@mui/material";
 import { motion } from "framer-motion";
 
 const steps = [
-  { label: "Discovery", sub: "Search speed\n(X% faster)" },
-  { label: "Design", sub: "" },
-  { label: "Development", sub: "" },
-  { label: "Beta Testing", sub: "Conversion\n(5% increase)" },
-  { label: "Launch &\nGrowth Support", sub: "Revenue\ngenerated (X%)" },
+  { label: "Concept & Strategy", sub: "Discovery & requirement analysis" },
+  { label: "UX/UI Design", sub: "Wireframes & prototyping" },
+  { label: "Core Development", sub: "Frontend & Backend integration" },
+  { label: "Testing & QA", sub: "Security, load, & bug testing" },
+  { label: "Launch & Deployment", sub: "Server setup & going live" },
+  { label: "Growth & Maintenance", sub: "Post-launch support & SEO" },
 ];
 
 const ListingDeliveryProcess = () => {
@@ -17,11 +18,14 @@ const ListingDeliveryProcess = () => {
 
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 10 }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
-            Delivery Process
+          <Typography sx={{ color: "#2563eb", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: 1, mb: 1 }}>
+            Concept to Launch
           </Typography>
-          <Typography sx={{ color: "#666", fontSize: "16px" }}>
-            Given an achievement over a full-responsive timeline chart.
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+            How We Build Your Business Listing Website India
+          </Typography>
+          <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "700px", margin: "0 auto" }}>
+            A transparent, milestone-driven development process from discovery to launch, ensuring we deliver a high-performance business listing website India on time and on budget.
           </Typography>
         </Box>
 
@@ -31,7 +35,7 @@ const ListingDeliveryProcess = () => {
             display: "flex",
             flexDirection: "row",
             alignItems: "flex-start",
-            minWidth: "700px",
+            minWidth: "900px",
             position: "relative",
             px: 4
           }}>
@@ -89,7 +93,7 @@ const ListingDeliveryProcess = () => {
                       {step.label}
                     </Typography>
                     {step.sub && (
-                      <Typography sx={{ color: "#3b82f6", fontSize: "12px", fontWeight: 600, lineHeight: 1.3, whiteSpace: "pre-line", textAlign: "center" }}>
+                      <Typography sx={{ color: "#3b82f6", fontSize: "12px", fontWeight: 600, lineHeight: 1.3, textAlign: "center", mt: 0.5, px: 1 }}>
                         {step.sub}
                       </Typography>
                     )}
@@ -98,6 +102,35 @@ const ListingDeliveryProcess = () => {
                 </Box>
               );
             })}
+          </Box>
+        </Box>
+
+        {/* Footer CTA */}
+        <Box sx={{ textAlign: "center", mt: 8 }}>
+          <Typography sx={{ color: "#1a1a1a", fontWeight: 700, fontSize: "18px", mb: 2 }}>
+            Build Your Platform Today
+          </Typography>
+          <Box
+            component="button"
+            sx={{
+              bgcolor: "#2563eb",
+              color: "#ffffff",
+              fontWeight: 700,
+              fontSize: "15px",
+              px: { xs: 4, md: 5 },
+              py: 1.5,
+              borderRadius: "8px",
+              textTransform: "none",
+              cursor: "pointer",
+              border: "none",
+              boxShadow: "0 4px 14px rgba(37, 99, 235, 0.3)",
+              "&:hover": {
+                bgcolor: "#1d4ed8",
+                boxShadow: "0 6px 20px rgba(37, 99, 235, 0.4)",
+              },
+            }}
+          >
+            Get Free Proposal
           </Box>
         </Box>
 

@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 const stats = [
   { value: "35%", label: "Increase in direct bookings within 90 days", color: "#d4a017" },
-  { value: "22%", label: "Reduction in OTA commission dependency", color: "#0f766e" },
-  { value: "40%", label: "Improvement in housekeeping task turnaround", color: "#3b82f6" },
-  { value: "3 Min", label: "Average online check-in time using the platform", color: "#7c3aed" },
+  { value: "22%", label: "Drop in OTA commissions paid", color: "#0f766e" },
+  { value: "40%", label: "Faster room turnover with housekeeping tech", color: "#3b82f6" },
+  { value: "3 Mins", label: "Average digital check-in time", color: "#7c3aed" },
 ];
 
 const HotelImpact = () => (
@@ -14,7 +14,10 @@ const HotelImpact = () => (
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 10 }}>
         <Typography sx={{ color: "#d4a017", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>Results & Impact</Typography>
-        <Typography variant="h2" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "28px", md: "36px" } }}>Results & Impact Numbers</Typography>
+        <Typography variant="h2" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>Platform Performance & Business Impact</Typography>
+        <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", maxWidth: "700px", mx: "auto" }}>
+          These metrics show the average growth and performance improvement our clients experience after upgrading to our booking solutions.
+        </Typography>
       </Box>
       <Grid container spacing={4} justifyContent="center">
         {stats.map((stat, i) => (

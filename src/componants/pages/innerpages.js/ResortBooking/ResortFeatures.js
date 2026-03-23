@@ -13,39 +13,39 @@ import {
 const features = [
   {
     icon: <CalendarDays size={24} color="#D4AF37" />,
-    title: "Smart Booking Engine",
-    desc: "Automate room allocations and optimize occupancy with dynamic pricing algorithms.",
-    bullets: ["Real-time availability", "Group bookings setup", "Dynamic rate cards"],
-  },
-  {
-    icon: <Users size={24} color="#D4AF37" />,
-    title: "Guest Relationship (CRM)",
-    desc: "Single view guest profile to deliver personalized stays and manage loyalty programs.",
-    bullets: ["Guest preferences tracking", "Stay history sync", "Automated email workflows"],
+    title: "Resort Property Management",
+    desc: "Manage all your resort properties from one dashboard.",
+    bullets: ["Add and manage multiple properties", "List rooms and villas easily", "Control admin roles and permissions", "Switch between properties quickly"],
   },
   {
     icon: <Globe size={24} color="#D4AF37" />,
-    title: "Multi-Channel Distribution",
-    desc: "Sync with OTAs instantly with 0% overbooking risk and unified dashboard control.",
-    bullets: ["Instant stock update", "Unified rate push", "OTA performance tracking"],
+    title: "Online Booking & Reservation System",
+    desc: "Make booking simple for your guests.",
+    bullets: ["Show real-time room availability", "Instant booking confirmation", "Secure online payments", "Automatic booking notifications"],
   },
   {
-    icon: <BarChart2 size={24} color="#D4AF37" />,
-    title: "Operations Dashboard",
-    desc: "Monitor housekeeping, maintenance workflows, and audit reports on the go.",
-    bullets: ["Staff routing triggers", "Task tracking board", "Consolidated P&L report"],
-  },
-  {
-    icon: <Bell size={24} color="#D4AF37" />,
-    title: "Housekeeping Control",
-    desc: "Delegate tasks instantly with live status feedback from resort floor staff.",
-    bullets: ["Inspection checklist", "Supply stock alert", "Room ready alerts"],
+    icon: <Users size={24} color="#D4AF37" />,
+    title: "Guest Management System",
+    desc: "Keep all guest details organized.",
+    bullets: ["Store complete guest profiles", "Track booking history", "Manage guest requests and feedback", "Allow booking changes easily"],
   },
   {
     icon: <CheckCircle size={24} color="#D4AF37" />,
-    title: "Operations Audit",
-    desc: "Generate smart compliance and audit reports with digital trails for every action.",
-    bullets: ["Audit trail tracking", "Compliance checklists", "Activity sync checks"],
+    title: "Room & Availability Management",
+    desc: "Avoid overbooking and manage rooms better.",
+    bullets: ["Real-time room availability", "Track occupancy", "Smart room allocation", "Calendar-based dashboard"],
+  },
+  {
+    icon: <Bell size={24} color="#D4AF37" />,
+    title: "Resort Operations Management",
+    desc: "Handle daily operations smoothly.",
+    bullets: ["Manage staff and services", "Track maintenance requests", "Monitor expenses and utilities", "Store documents digitally"],
+  },
+  {
+    icon: <BarChart2 size={24} color="#D4AF37" />,
+    title: "Reports & Analytics Dashboard",
+    desc: "Understand your business performance.",
+    bullets: ["Booking and revenue reports", "Occupancy insights", "Guest behavior analysis", "Export reports (PDF/Excel)"],
   },
 ];
 
@@ -77,7 +77,19 @@ const ResortFeatures = () => {
                 mb: 2,
               }}
             >
-              Streamlined Resort Management
+              Comprehensive Resort Website Development Features
+            </Typography>
+            <Typography
+              sx={{
+                fontFamily: "'Outfit', sans-serif",
+                color: "rgba(245, 245, 240, 0.7)",
+                fontSize: "1.1rem",
+                maxWidth: "700px",
+                margin: "0 auto",
+                mb: 4,
+              }}
+            >
+              We provide everything your resort needs to build a strong online presence and manage bookings easily. Our system helps you attract more guests and increase direct bookings.
             </Typography>
             {/* Underline Animation */}
             <motion.div
