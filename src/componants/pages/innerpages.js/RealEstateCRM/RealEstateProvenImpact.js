@@ -14,7 +14,7 @@ const StatCard = ({ value, label, delay }) => (
     <Paper
       elevation={0}
       sx={{
-        p: 4,
+        p: 3,
         borderRadius: "20px",
         bgcolor: "#ffffff",
         boxShadow: "0 15px 35px rgba(0,0,0,0.05)",
@@ -43,8 +43,8 @@ const StatCard = ({ value, label, delay }) => (
 
 const RealEstateProvenImpact = () => {
   return (
-    <Box sx={{ position: "relative", py: 12, overflow: "hidden" }}>
-      
+    <Box sx={{ position: "relative", pb: 14, pt: 6, overflow: "hidden" }}>
+
       {/* Background shape */}
       <Box sx={{
         position: 'absolute',
@@ -57,7 +57,7 @@ const RealEstateProvenImpact = () => {
       }} />
 
       {/* Decorative Arrow from Previous section */}
-      <Box sx={{ position: 'relative', zIndex: 1, display: 'flex', justifyContent: 'center', mb: 6 }}>
+      <Box sx={{ position: 'relative', zIndex: 1, display: 'flex', justifyContent: 'center', mb: 4 }}>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
@@ -67,7 +67,7 @@ const RealEstateProvenImpact = () => {
       </Box>
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
-        
+
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "32px", md: "46px" } }}>
@@ -78,31 +78,31 @@ const RealEstateProvenImpact = () => {
         {/* 4 Stat Cards Grid */}
         <Grid container spacing={3} justifyContent="center">
           <Grid item xs={12} sm={6} md={3}>
-            <StatCard 
-              value="3x" 
-              label={<>More site visit leads.</>} 
-              delay={0.1} 
+            <StatCard
+              value="3x"
+              label={<>More site visit leads.</>}
+              delay={0.1}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <StatCard 
-              value="68%" 
-              label={<>Less manual follow-up work.</>} 
-              delay={0.2} 
+            <StatCard
+              value="68%"
+              label={<>Less manual follow-up work.</>}
+              delay={0.2}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <StatCard 
-              value="40%" 
-              label={<>Faster booking to registration.</>} 
-              delay={0.3} 
+            <StatCard
+              value="40%"
+              label={<>Faster booking to registration.</>}
+              delay={0.3}
             />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <StatCard 
-              value="90" 
-              label={<>Complete platform launch time.</>} 
-              delay={0.4} 
+            <StatCard
+              value="90"
+              label={<>Complete platform launch time.</>}
+              delay={0.4}
             />
           </Grid>
         </Grid>

@@ -10,7 +10,7 @@ const PortalCTABand = () => {
         py: 12,
         position: "relative",
         overflow: "hidden",
-        bgcolor: "#081226", // Base
+        bgcolor: "#081226", // Base Dark Section remains dark
       }}
     >
       <Container maxWidth="lg">
@@ -24,12 +24,12 @@ const PortalCTABand = () => {
             sx={{
               p: { xs: 5, md: 8 },
               borderRadius: "24px",
-              background: "linear-gradient(135deg, #0A2540 0%, #001025 100%)", // Deep blue gradient
-              border: "1px solid rgba(59, 130, 246, 0.2)",
+              background: "#F8F6F2", // Inner Card takes Light Theme Background
+              border: "1px solid rgba(0, 0, 0, 0.05)",
               textAlign: "center",
               position: "relative",
               overflow: "hidden",
-              boxShadow: "0 20px 40px rgba(0,0,0,0.4)",
+              boxShadow: "0 15px 40px rgba(0,0,0,0.5)", // Stronger shadow in dark section
             }}
           >
             {/* Ambient Background Lights */}
@@ -38,9 +38,9 @@ const PortalCTABand = () => {
                 position: "absolute",
                 width: "250px",
                 height: "250px",
-                bgcolor: "#3B82F6",
+                bgcolor: "#3B82F6", // Light Blue
                 filter: "blur(80px)",
-                opacity: 0.15,
+                opacity: 0.12,
                 top: "-10%",
                 left: "-10%",
                 zIndex: 0,
@@ -69,6 +69,7 @@ const PortalCTABand = () => {
                   fontSize: { xs: "2rem", md: "3rem" },
                   mb: 2,
                   lineHeight: 1.2,
+                  color: "#1A1A1A", // Dark Text Customization
                 }}
               >
                 Supercharge Your PropTech <br />
@@ -80,7 +81,7 @@ const PortalCTABand = () => {
                 variant="body1"
                 sx={{
                   fontFamily: "'Inter', sans-serif",
-                  color: "rgba(255, 255, 255, 0.7)",
+                  color: "#4A5568", // Muted Dark Text
                   maxWidth: "600px",
                   margin: "0 auto 4px auto",
                   fontSize: "1rem",
@@ -111,7 +112,6 @@ const PortalCTABand = () => {
                   "@keyframes glowPulse": {
                     "0%": { boxShadow: "0 0 0 0 rgba(245, 158, 11, 0.4)" },
                     "70%": { boxShadow: "0 0 0 15px rgba(245, 158, 11, 0)" },
-                    "100%": { boxShadow: "0 0 0 0 rgba(245, 158, 11, 0)" },
                   },
                 }}
               >

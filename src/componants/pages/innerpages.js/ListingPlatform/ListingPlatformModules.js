@@ -3,12 +3,12 @@ import { Box, Container, Typography, Grid, Paper, Tabs, Tab } from "@mui/materia
 import { motion, AnimatePresence } from "framer-motion";
 
 const tabNames = [
-  "Listing CMS", 
-  "Search Engine", 
-  "Lister Dashboard", 
-  "Payments", 
-  "Admin Panel", 
-  "SEO Tools", 
+  "Listing CMS",
+  "Search Engine",
+  "Lister Dashboard",
+  "Payments",
+  "Admin Panel",
+  "SEO Tools",
   "Analytics"
 ];
 
@@ -71,9 +71,9 @@ const ListingPlatformModules = () => {
   const currentContent = moduleData[activeTab];
 
   return (
-    <Box sx={{ bgcolor: "#ffffff", py: 12 }}>
+    <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
       <Container maxWidth="lg">
-        
+
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
@@ -84,19 +84,19 @@ const ListingPlatformModules = () => {
         {/* Custom Tabs Implementation matching the image */}
         <Box sx={{ width: "100%" }}>
           <Box sx={{ borderBottom: "none", overflowX: "auto", pb: 2 }}>
-            <Tabs 
-              value={activeTab} 
-              onChange={handleTabChange} 
+            <Tabs
+              value={activeTab}
+              onChange={handleTabChange}
               variant="scrollable"
               scrollButtons="auto"
               sx={{
                 minHeight: "48px",
                 '& .MuiTabs-indicator': { display: "none" },
-                '& .MuiTab-root': { 
-                  textTransform: 'none', 
-                  fontWeight: 600, 
-                  fontSize: "14px", 
-                  color: "#666", 
+                '& .MuiTab-root': {
+                  textTransform: 'none',
+                  fontWeight: 600,
+                  fontSize: "14px",
+                  color: "#666",
                   bgcolor: "#f1f5f9",
                   borderRadius: "8px",
                   mx: 0.5,
@@ -105,9 +105,9 @@ const ListingPlatformModules = () => {
                   px: 3,
                   transition: "all 0.2s",
                 },
-                '& .Mui-selected': { 
+                '& .Mui-selected': {
                   color: '#ffffff !important',
-                  bgcolor: "#3b82f6 !important", 
+                  bgcolor: "#3b82f6 !important",
                   boxShadow: "0 4px 10px rgba(59, 130, 246, 0.4)"
                 },
               }}
@@ -138,7 +138,7 @@ const ListingPlatformModules = () => {
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3 }}
               >
-                
+
                 {/* Description Text */}
                 <Typography sx={{ color: "#444", fontSize: "15px", lineHeight: 1.6, mb: 5 }}>
                   {currentContent.description}
@@ -150,13 +150,13 @@ const ListingPlatformModules = () => {
                     <Typography sx={{ fontWeight: 800, color: "#1a1a1a", mb: 3, fontSize: "15px" }}>
                       For listers, admins scenarios for listers
                     </Typography>
-                    <Box component="ul" sx={{ 
+                    <Box component="ul" sx={{
                       pl: 0, m: 0, listStyle: "none",
-                      '& li': { 
+                      '& li': {
                         position: "relative",
                         pl: "24px",
-                        mb: 2, 
-                        color: "#666", 
+                        mb: 2,
+                        color: "#666",
                         fontSize: "14px",
                         "&::before": {
                           content: '""',
@@ -168,7 +168,7 @@ const ListingPlatformModules = () => {
                           borderRadius: "50%",
                           bgcolor: "#94a3b8"
                         }
-                      } 
+                      }
                     }}>
                       {currentContent.listerContent.map((item, idx) => (
                         <li key={idx}>{item}</li>
@@ -181,13 +181,13 @@ const ListingPlatformModules = () => {
                     <Typography sx={{ fontWeight: 800, color: "#1a1a1a", mb: 3, fontSize: "15px" }}>
                       End users, comprehensions and admins
                     </Typography>
-                    <Box component="ul" sx={{ 
+                    <Box component="ul" sx={{
                       pl: 0, m: 0, listStyle: "none",
-                      '& li': { 
+                      '& li': {
                         position: "relative",
                         pl: "24px",
-                        mb: 2, 
-                        color: "#666", 
+                        mb: 2,
+                        color: "#666",
                         fontSize: "14px",
                         "&::before": {
                           content: '""',
@@ -199,7 +199,7 @@ const ListingPlatformModules = () => {
                           borderRadius: "50%",
                           bgcolor: "#94a3b8"
                         }
-                      } 
+                      }
                     }}>
                       {currentContent.userContent.map((item, idx) => (
                         <li key={idx}>{item}</li>

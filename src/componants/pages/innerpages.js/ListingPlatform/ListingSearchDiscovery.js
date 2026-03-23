@@ -7,10 +7,10 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 // Mock UI for the Search & Maps feature
 const FilterDropdownMock = ({ label }) => (
-  <Box sx={{ 
-    display: "flex", justifyContent: "space-between", alignItems: "center", 
-    p: 1.5, mb: 1, border: "1px solid #e2e8f0", borderRadius: "6px", 
-    bgcolor: "#ffffff" 
+  <Box sx={{
+    display: "flex", justifyContent: "space-between", alignItems: "center",
+    p: 1.5, mb: 1, border: "1px solid #e2e8f0", borderRadius: "6px",
+    bgcolor: "#ffffff"
   }}>
     <Typography sx={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>{label}</Typography>
     <KeyboardArrowDownIcon sx={{ fontSize: 16, color: "#94a3b8" }} />
@@ -19,8 +19,8 @@ const FilterDropdownMock = ({ label }) => (
 
 const ListingSearchDiscovery = () => {
   return (
-    <Box sx={{ bgcolor: "#ffffff", py: 14, overflow: "hidden" }}>
-      
+    <Box sx={{ bgcolor: "#ffffff", py: 8, overflow: "hidden" }}>
+
       {/* Top Header section that appears above the split */}
       <Container maxWidth="lg" sx={{ mb: 8, textAlign: "center" }}>
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
@@ -34,7 +34,7 @@ const ListingSearchDiscovery = () => {
 
       <Container maxWidth="lg">
         <Grid container spacing={8} alignItems="center">
-          
+
           {/* Left Text Features */}
           <Grid item xs={12} md={5}>
             <motion.div
@@ -46,18 +46,18 @@ const ListingSearchDiscovery = () => {
               <Typography variant="h3" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: "24px", mb: 2 }}>
                 Search-Filtering Engine
               </Typography>
-              
+
               <Typography sx={{ color: "#666", fontSize: "15px", mb: 4, lineHeight: 1.6 }}>
                 The backbone of modern commerce requires ultra-fast localized autocomplete, advanced filtering algorithms, and robust discovery queues.
               </Typography>
-              
-              <Box component="ul" sx={{ 
+
+              <Box component="ul" sx={{
                 pl: 0, m: 0, listStyle: "none",
-                '& li': { 
+                '& li': {
                   position: "relative",
                   pl: "24px",
-                  mb: 2.5, 
-                  color: "#444", 
+                  mb: 2.5,
+                  color: "#444",
                   fontSize: "15px",
                   "&::before": {
                     content: '""',
@@ -69,7 +69,7 @@ const ListingSearchDiscovery = () => {
                     borderRadius: "50%",
                     bgcolor: "#3b82f6" // Blue bullet for listing mock
                   }
-                } 
+                }
               }}>
                 <li><strong>Autocomplete</strong> autocomplete</li>
                 <li><strong>Saved searches</strong> suggestions and categories</li>
@@ -110,13 +110,13 @@ const ListingSearchDiscovery = () => {
 
                 {/* Browser Content Split: Left Filters, Right Map */}
                 <Box sx={{ display: "flex", height: "400px" }}>
-                  
+
                   {/* Left Filters Box */}
                   <Box sx={{ width: "35%", p: 3, borderRight: "1px solid #e2e8f0", bgcolor: "#ffffff" }}>
                     <Typography sx={{ fontWeight: 800, fontSize: "14px", color: "#1a1a1a", mb: 3 }}>
                       Filters
                     </Typography>
-                    
+
                     <FilterDropdownMock label="Location" />
                     <FilterDropdownMock label="Autocomplete" />
                     <FilterDropdownMock label="Category" />
@@ -151,7 +151,7 @@ const ListingSearchDiscovery = () => {
                     <motion.div style={{ position: "absolute", top: "30%", left: "40%", zIndex: 3, color: "#3b82f6" }} animate={{ y: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 2 }}>
                       <LocationOnIcon sx={{ fontSize: 36, filter: 'drop-shadow(0px 4px 4px rgba(0,0,0,0.2))' }} />
                     </motion.div>
-                    
+
                     <motion.div style={{ position: "absolute", top: "60%", left: "20%", zIndex: 3, color: "#ef4444" }} animate={{ y: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 2.5, delay: 0.5 }}>
                       <LocationOnIcon sx={{ fontSize: 32, filter: 'drop-shadow(0px 4px 4px rgba(0,0,0,0.2))' }} />
                     </motion.div>

@@ -14,7 +14,7 @@ const corpFeatures = [
 ];
 
 const LMSCorporate = () => (
-  <Box sx={{ bgcolor: "#1e293b", py: 14, position: "relative", overflow: "hidden" }}>
+  <Box sx={{ bgcolor: "#1e293b", py: 8, position: "relative", overflow: "hidden" }}>
     <Box sx={{ position: "absolute", top: -100, right: -100, width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(37,99,235,0.2) 0%, transparent 70%)" }} />
     <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
       <Box sx={{ textAlign: "center", mb: 8 }}>

@@ -13,7 +13,7 @@ const problemCards = [
 ];
 
 const LMSProblem = () => (
-  <Box sx={{ bgcolor: "#1e3a5f", py: 14, position: "relative", overflow: "hidden" }}>
+  <Box sx={{ bgcolor: "#1e3a5f", py: 8, position: "relative", overflow: "hidden" }}>
     <Box sx={{ position: "absolute", top: "20%", left: "5%", width: 300, height: 300, borderRadius: "50%", background: "radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%)" }} />
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 10 }}>

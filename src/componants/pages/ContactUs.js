@@ -65,7 +65,7 @@ const ContactUs = () => {
                   solution. over your business an all in one business data.
                 </Typography>
 
-                <Typography
+                <Typography 
                   variant="body1"
                   sx={{
                     fontWeight: 500,

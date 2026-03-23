@@ -30,8 +30,9 @@ const EducationCRMHomepage = () => {
         <EducationDeliveryProcess />
         <EducationTechnology />
         <EducationProvenImpact />
-        <EducationWhyUs />
+
         <EducationCTA />
+        <EducationWhyUs />
       </Box>
       <FooterAndPopup />
     </Box>

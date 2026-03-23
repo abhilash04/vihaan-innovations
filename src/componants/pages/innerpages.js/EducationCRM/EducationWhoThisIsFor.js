@@ -46,11 +46,11 @@ const AudienceCard = ({ icon, title, delay }) => (
         }
       }}
     >
-      <Box 
-        sx={{ 
-          color: "#00B4D8", 
+      <Box
+        sx={{
+          color: "#00B4D8",
           mb: 1.5,
-          "& > svg": { fontSize: 36 } 
+          "& > svg": { fontSize: 36 }
         }}
       >
         {icon}
@@ -64,8 +64,8 @@ const AudienceCard = ({ icon, title, delay }) => (
 
 const EducationWhoThisIsFor = () => {
   return (
-    <Box sx={{ position: "relative", bgcolor: "#cbf3f0", pt: 6, pb: 20, overflow: "hidden" }}>
-      
+    <Box sx={{ position: "relative", bgcolor: "#cbf3f0", pt: 4, pb: 22, overflow: "hidden" }}>
+
       {/* Background Bottom Wave separating this from the next (Problem) section */}
       <Box sx={{ position: "absolute", bottom: -5, left: 0, width: "100%", zIndex: 1 }}>
         <svg viewBox="0 0 1440 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
@@ -75,20 +75,16 @@ const EducationWhoThisIsFor = () => {
       </Box>
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
-        
+
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Box sx={{ display: "inline-block", mb: 1 }}>
-            <Typography sx={{ 
-              fontWeight: 800, color: "#0B2046", fontSize: "28px", 
-              display: "flex", alignItems: "center", gap: 1, 
-              justifyContent: "center" 
+            <Typography sx={{
+              fontWeight: 800, color: "#0B2046", fontSize: "28px",
+              display: "flex", alignItems: "center", gap: 1,
+              justifyContent: "center"
             }}>
-              <Box component="span" sx={{ 
-                width: 32, height: 32, borderRadius: "50%", 
-                border: "2px solid #0B2046", display: "flex", 
-                alignItems: "center", justifyContent: "center", fontSize: "18px" 
-              }}>2</Box>
+
               Who This Is For
             </Typography>
           </Box>
@@ -98,10 +94,10 @@ const EducationWhoThisIsFor = () => {
         <Grid container spacing={2} justifyContent="center" sx={{ mb: 6 }}>
           {audiences.map((audience, index) => (
             <Grid item xs={6} sm={4} md={2} key={index}>
-              <AudienceCard 
-                icon={audience.icon} 
-                title={audience.title} 
-                delay={index * 0.1} 
+              <AudienceCard
+                icon={audience.icon}
+                title={audience.title}
+                delay={index * 0.1}
               />
             </Grid>
           ))}
@@ -109,7 +105,7 @@ const EducationWhoThisIsFor = () => {
 
         {/* Small descriptive text below */}
         <Box sx={{ textAlign: "center", maxWidth: "600px", mx: "auto" }}>
-          <Typography sx={{ color: "#444", fontSize: "14px", lineHeight: 1.6, fontStyle: "italic", opacity: 0.8 }}>
+          <Typography sx={{ color: "#444", fontSize: "14px", lineHeight: 1.6, fontStyle: "italic", opacity: 0.8, pt: 4 }}>
             Women tech leaders, developers, and educators across state — and the same bottlenecks keep appearing. We fix them.
           </Typography>
         </Box>

@@ -11,7 +11,7 @@ const bigStats = [
 ];
 
 const ChatbotImpact = () => (
-  <Box sx={{ background: "linear-gradient(135deg, #060d1a 0%, #0a1628 100%)", py: 14, position: "relative", overflow: "hidden" }}>
+  <Box sx={{ background: "linear-gradient(135deg, #060d1a 0%, #0a1628 100%)", py: 8, position: "relative", overflow: "hidden" }}>
     <Box sx={{ position: "absolute", top: "40%", left: "-5%", width: 350, height: 350, borderRadius: "50%", background: "radial-gradient(circle, rgba(6,182,212,0.08) 0%, transparent 70%)", filter: "blur(60px)" }} />
     <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
       <Box sx={{ textAlign: "center", mb: 10 }}>

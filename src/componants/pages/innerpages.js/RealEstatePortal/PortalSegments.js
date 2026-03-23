@@ -36,11 +36,11 @@ const PortalSegments = () => {
   return (
     <Box
       sx={{
-        py: 12,
-        bgcolor: "#0C1424", // Lighter base Dark
-        color: "#FFFFFF",
+        py: 8,
+        bgcolor: "#F8F6F2", // Light Background
+        color: "#1a1a1a", // Dark Text
         position: "relative",
-        backgroundImage: "linear-gradient(rgba(255,255,255,0.01) 1px, transparent 1px)",
+        backgroundImage: "linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px)", // Light grid
         backgroundSize: "100% 40px",
       }}
     >
@@ -60,6 +60,7 @@ const PortalSegments = () => {
                 fontWeight: 800,
                 fontSize: { xs: "2.2rem", md: "2.8rem" },
                 mb: 2,
+                color: "#1a1a1a",
               }}
             >
               Segments We Serve
@@ -68,7 +69,7 @@ const PortalSegments = () => {
               variant="body1"
               sx={{
                 fontFamily: "'Inter', sans-serif",
-                color: "rgba(255, 255, 255, 0.6)",
+                color: "#4a5568", // Muted dark text
                 maxWidth: "600px",
                 margin: "0 auto",
               }}
@@ -97,16 +98,17 @@ const PortalSegments = () => {
                 fontWeight: 600,
                 fontSize: "0.85rem",
                 textTransform: "none",
-                color: activeTab === index ? "#FFFFFF" : "rgba(255,255,255,0.5)",
-                bgcolor: activeTab === index ? "#3B82F6" : "rgba(255,255,255,0.02)",
+                color: activeTab === index ? "#FFFFFF" : "#4a5568",
+                bgcolor: activeTab === index ? "#3B82F6" : "#f1f5f9", // Light BG for inactive
                 px: 3,
                 py: 1.2,
                 borderRadius: "20px",
                 transition: "all 0.3s ease",
                 border: "1px solid",
-                borderColor: activeTab === index ? "transparent" : "rgba(255,255,255,0.05)",
+                borderColor: activeTab === index ? "transparent" : "#e2e8f0",
+                boxShadow: activeTab === index ? "0 4px 12px rgba(59, 130, 246, 0.3)" : "none",
                 "&:hover": {
-                  bgcolor: activeTab === index ? "#2563EB" : "rgba(255,255,255,0.05)",
+                  bgcolor: activeTab === index ? "#2563EB" : "#e2e8f0",
                 },
               }}
             >
@@ -136,6 +138,7 @@ const PortalSegments = () => {
                         fontWeight: 800,
                         fontSize: "1.8rem",
                         mb: 1.5,
+                        color: "#1a1a1a",
                       }}
                     >
                       {segments[activeTab].title} Software
@@ -144,7 +147,7 @@ const PortalSegments = () => {
                       variant="body1"
                       sx={{
                         fontFamily: "'Inter', sans-serif",
-                        color: "rgba(255, 255, 255, 0.7)",
+                        color: "#4a5568",
                         fontSize: "0.95rem",
                         lineHeight: 1.6,
                         mb: 3,
@@ -164,7 +167,7 @@ const PortalSegments = () => {
                           style={{ display: "flex", alignItems: "center", gap: 10 }}
                         >
                           <CheckCircle2 size={18} color="#10B981" />
-                          <Typography sx={{ fontFamily: "'Inter', sans-serif", fontSize: "0.88rem", color: "rgba(255,255,255,0.8)" }}>
+                          <Typography sx={{ fontFamily: "'Inter', sans-serif", fontSize: "0.88rem", color: "#4a5568" }}>
                             {bullet}
                           </Typography>
                         </motion.div>
@@ -181,8 +184,8 @@ const PortalSegments = () => {
                       borderRadius: "16px",
                       position: "relative",
                       overflow: "hidden",
-                      border: "1px solid rgba(255, 255, 255, 0.05)",
-                      boxShadow: "0 15px 30px rgba(0,0,0,0.4)",
+                      border: "1px solid #e2e8f0",
+                      boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
                     }}
                   >
                     <Box
@@ -196,7 +199,7 @@ const PortalSegments = () => {
                         transition: "transform 0.5s ease",
                       }}
                     />
-                    {/* Gradient Overlay */}
+                    {/* Gradient Overlay to blend into White Background */}
                     <Box
                       sx={{
                         position: "absolute",
@@ -204,7 +207,7 @@ const PortalSegments = () => {
                         left: 0,
                         width: "100%",
                         height: "100%",
-                        background: "linear-gradient(to right, #0C1424 0%, transparent 40%)",
+                        background: "linear-gradient(to right, #ffffff 0%, transparent 40%)",
                       }}
                     />
                   </Box>

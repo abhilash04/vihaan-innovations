@@ -37,9 +37,10 @@ const ListingHomepage = () => {
         <ListingMultiVertical />
         <ListingDeliveryProcess />
         <ListingIntegrations />
-        <ListingWhyUs />
+
         <ListingFAQ />
         <ListingCTA />
+        <ListingWhyUs />
       </Box>
       <FooterAndPopup />
     </Box>

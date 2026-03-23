@@ -7,7 +7,7 @@ const CountUpNumber = ({ value, duration = 2 }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  
+
   // Extract number from string (e.g., "1,000+" -> 1000)
   const numericValue = parseInt(value.replace(/[^0-9]/g, ""), 10);
   const suffix = value.replace(/[0-9,]/g, ""); // Keep +, M, etc.
@@ -51,8 +51,8 @@ const PortalStats = () => {
     <Box
       sx={{
         py: 12,
-        background: "linear-gradient(135deg, #0A2540 0%, #081B33 100%)", // Deep Blue
-        color: "#FFFFFF",
+        background: "#fff", // Deep Blue
+        color: "#000",
         position: "relative",
         overflow: "hidden",
       }}
@@ -153,7 +153,7 @@ const PortalStats = () => {
                   variant="body2"
                   sx={{
                     fontFamily: "'Inter', sans-serif",
-                    color: "rgba(255, 255, 255, 0.6)",
+                    color: "#000",
                     fontSize: "0.85rem",
                     lineHeight: 1.5,
                     maxWidth: "240px",

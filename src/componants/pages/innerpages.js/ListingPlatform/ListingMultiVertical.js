@@ -67,7 +67,7 @@ const DashboardMock = ({ theme, title, delay }) => (
 
 const ListingMultiVertical = () => {
   return (
-    <Box sx={{ bgcolor: "#f8fafc", py: 14 }}>
+    <Box sx={{ bgcolor: "#f8fafc", py: 8 }}>
       <Container maxWidth="lg">
 
         {/* Header */}

@@ -16,11 +16,11 @@ const PortalTrustedBy = () => {
     <Box
       sx={{
         py: 10,
-        bgcolor: "#0C1424", // Slightly lighter dark
-        color: "#FFFFFF",
+        bgcolor: "#F8F6F2", // Light Background Template
+        color: "#1A1A1A", // Primary Dark Text
         position: "relative",
-        borderTop: "1px solid rgba(255, 255, 255, 0.03)",
-        borderBottom: "1px solid rgba(255, 255, 255, 0.03)",
+        borderTop: "1px solid rgba(0, 0, 0, 0.04)",
+        borderBottom: "1px solid rgba(0, 0, 0, 0.04)",
       }}
     >
       <Container maxWidth="lg">
@@ -50,7 +50,7 @@ const PortalTrustedBy = () => {
               variant="body1"
               sx={{
                 fontFamily: "'Inter', sans-serif",
-                color: "rgba(255, 255, 255, 0.6)",
+                color: "#4A5568", // Dark Muted Text
                 maxWidth: "600px",
                 margin: "0 auto",
                 fontSize: "0.95rem",
@@ -79,15 +79,16 @@ const PortalTrustedBy = () => {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    bgcolor: "rgba(255, 255, 255, 0.02)",
+                    bgcolor: "#0C1424", // White cards on off-white background
                     borderRadius: "12px",
-                    border: "1px solid rgba(255, 255, 255, 0.05)",
+                    border: "1px solid rgba(0, 0, 0, 0.05)",
                     p: 2,
                     transition: "all 0.3s ease",
+                    boxShadow: "0 4px 12px rgba(0,0,0,0.02)",
                     "&:hover": {
-                      bgcolor: "rgba(255, 255, 255, 0.04)",
+                      bgcolor: "rgba(21, 21, 21, 1)",
                       borderColor: "rgba(59, 130, 246, 0.3)",
-                      boxShadow: "0 10px 20px rgba(0,0,0,0.3)",
+                      boxShadow: "0 10px 25px rgba(0,0,0,0.05)",
                     },
                   }}
                 >
@@ -95,8 +96,8 @@ const PortalTrustedBy = () => {
                     sx={{
                       fontFamily: "'Urbanist', sans-serif",
                       fontWeight: 700,
-                      color: "rgba(255,255,255,0.4)",
-                      fontSize: "1.1rem",
+                      color: "#fff", // Visible Logo Name Text
+                      fontSize: "1.05rem",
                       letterSpacing: "0.5px",
                     }}
                   >
@@ -114,7 +115,7 @@ const PortalTrustedBy = () => {
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "space-around",
-            borderTop: "1px solid rgba(255, 255, 255, 0.05)",
+            borderTop: "1px solid rgba(0, 0, 0, 0.06)",
             pt: 6,
             gap: 4,
           }}
@@ -140,7 +141,7 @@ const PortalTrustedBy = () => {
                   fontSize: { xs: "2.5rem", md: "3.5rem" },
                   color: "#3B82F6", // Electric Blue
                   mb: 0.5,
-                  textShadow: "0 0 20px rgba(59,130,246,0.15)",
+                  textShadow: "0 0 20px rgba(59,130,246,0.1)",
                 }}
               >
                 {stat.value}
@@ -149,7 +150,7 @@ const PortalTrustedBy = () => {
                 variant="body2"
                 sx={{
                   fontFamily: "'Inter', sans-serif",
-                  color: "rgba(255, 255, 255, 0.5)",
+                  color: "#4A5568", // Accessible Muted Text
                   letterSpacing: "1px",
                   textTransform: "uppercase",
                   fontSize: "0.75rem",

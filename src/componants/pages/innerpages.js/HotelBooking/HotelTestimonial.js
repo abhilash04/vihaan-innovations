@@ -6,7 +6,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import StarIcon from '@mui/icons-material/Star';
 
 const HotelTestimonial = () => (
-  <Box sx={{ bgcolor: "#fffdf0", py: 14 }}>
+  <Box sx={{ bgcolor: "#fffdf0", py: 8 }}>
     <Container maxWidth="md">
       <Box sx={{ textAlign: "center", mb: 8 }}>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "34px" } }}>What Our Partners in Hospitality Say</Typography>

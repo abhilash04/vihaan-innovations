@@ -2,19 +2,19 @@ import React from "react";
 import { Box, Typography, Button, Grid, Container } from "@mui/material";
 import { motion } from "framer-motion";
 import { ArrowRight, Home, MapPin } from "lucide-react";
-
+import img from '../../../../assets/Real-estate-listings.png'
 const PortalHero = () => {
   return (
     <Box
       sx={{
         position: "relative",
-        minHeight: "100vh",
+        minHeight: "95vh",
         display: "flex",
         alignItems: "center",
         bgcolor: "#081226", // Dark Midnight Blue
         color: "#FFFFFF",
         overflow: "hidden",
-        pt: { xs: 12, md: 8 },
+        pt: { xs: 8, md: 6 },
         backgroundImage: `linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), 
                         linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)`,
         backgroundSize: "40px 40px",
@@ -48,17 +48,17 @@ const PortalHero = () => {
                   p: "6px 16px",
                   borderRadius: "20px",
                   border: "1px solid rgba(59, 130, 246, 0.4)",
-                  bgcolor: "rgba(59, 130, 246, 0.05)",
+                  bgcolor: "rgba(15, 107, 255, 0.05)",
                   mb: 3,
                   boxShadow: "0 0 15px rgba(59, 130, 246, 0.15)",
                 }}
               >
-                <Home size={14} color="#3B82F6" />
+                <Home size={14} color="#fff" />
                 <Typography
                   sx={{
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "0.75rem",
-                    color: "#3B82F6",
+                    color: "#fff",
                     fontWeight: 600,
                     letterSpacing: "0.5px",
                   }}
@@ -197,7 +197,7 @@ const PortalHero = () => {
                   position: "absolute",
                   width: "120%",
                   height: "120%",
-                  background: "radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 60%)",
+                  background: "radial-gradient(circle, rgba(249, 248, 240, 0.08) 0%, transparent 60%)",
                   top: "-10%",
                   left: "-10%",
                   zIndex: 0,
@@ -226,7 +226,7 @@ const PortalHero = () => {
                     sx={{
                       height: "240px",
                       position: "relative",
-                      backgroundImage: "url('https://images.unsplash.com/photo-1570129477492-45c003fed244?auto=format&fit=crop&w=600&q=80')",
+                      backgroundImage: `url(${img})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                     }}

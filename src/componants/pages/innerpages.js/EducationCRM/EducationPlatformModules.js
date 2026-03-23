@@ -39,8 +39,8 @@ const EducationPlatformModules = () => {
   const currentContent = moduleDetails[activeTab];
 
   return (
-    <Box sx={{ bgcolor: "#F8FAFC", py: 16, position: "relative" }}>
-      
+    <Box sx={{ bgcolor: "#F8FAFC", py: 10, position: "relative" }}>
+
       {/* Decorative arrow pointing down */}
       <Box sx={{ position: "absolute", top: -20, left: "50%", transform: "translateX(-50%)", zIndex: 1 }}>
         <Box sx={{ width: 2, height: 60, bgcolor: "rgba(0, 180, 216, 0.3)", mx: "auto", position: "relative" }}>
@@ -49,7 +49,7 @@ const EducationPlatformModules = () => {
       </Box>
 
       <Container maxWidth="lg">
-        
+
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "32px", md: "42px" }, mb: 2 }}>
@@ -79,9 +79,9 @@ const EducationPlatformModules = () => {
           >
             {/* Top Tabs */}
             <Box sx={{ borderBottom: 1, borderColor: 'divider', bgcolor: "#f8f9fe" }}>
-              <Tabs 
-                value={activeTab} 
-                onChange={handleTabChange} 
+              <Tabs
+                value={activeTab}
+                onChange={handleTabChange}
                 variant="scrollable"
                 scrollButtons="auto"
                 sx={{
@@ -98,7 +98,7 @@ const EducationPlatformModules = () => {
 
             {/* Inner Content Layout */}
             <Grid container sx={{ minHeight: "450px" }}>
-              
+
               {/* Left Sidebar Menu */}
               <Grid item xs={12} md={4} sx={{ borderRight: { xs: 'none', md: '1px solid rgba(0,0,0,0.08)' }, bgcolor: "#fafbfc" }}>
                 <Box sx={{ p: 4 }}>
@@ -123,13 +123,13 @@ const EducationPlatformModules = () => {
                             '&:hover': { bgcolor: activeSidebarIndex === idx ? "#ffffff" : "rgba(0,0,0,0.02)" }
                           }}
                         >
-                          <ListItemText 
-                            primary={item} 
-                            primaryTypographyProps={{ 
-                              fontSize: "14px", 
+                          <ListItemText
+                            primary={item}
+                            primaryTypographyProps={{
+                              fontSize: "14px",
                               fontWeight: activeSidebarIndex === idx ? 700 : 500,
-                              color: activeSidebarIndex === idx ? "#1a1a1a" : "#666" 
-                            }} 
+                              color: activeSidebarIndex === idx ? "#1a1a1a" : "#666"
+                            }}
                           />
                           {activeSidebarIndex === idx && <ArrowForwardIosIcon sx={{ fontSize: 12, color: "#00B4D8" }} />}
                         </ListItemButton>
@@ -169,10 +169,10 @@ const EducationPlatformModules = () => {
                   </AnimatePresence>
 
                   {/* Bottom Avatar Section inside the mock window */}
-                  <Box sx={{ 
-                    mt: "auto", pt: 4, 
+                  <Box sx={{
+                    mt: "auto", pt: 4,
                     display: "flex", alignItems: "center", justifyContent: "space-between",
-                    borderTop: "1px solid rgba(0,0,0,0.05)" 
+                    borderTop: "1px solid rgba(0,0,0,0.05)"
                   }}>
                     <AvatarGroup max={4} sx={{ '& .MuiAvatar-root': { width: 40, height: 40, border: '2px solid #fff' } }}>
                       <Avatar sx={{ bgcolor: "#cbf3f0", color: "#00B4D8" }}>U1</Avatar>

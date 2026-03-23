@@ -33,7 +33,7 @@ const PropertyCard = ({ icon: Icon, title, color, bg, delay }) => (
 );
 
 const HotelWhoThisIsFor = () => (
-  <Box sx={{ bgcolor: "#ffffff", py: 14 }}>
+  <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 8 }}>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "36px" }, mb: 1, lineHeight: 1.2 }}>

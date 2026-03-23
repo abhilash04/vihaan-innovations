@@ -17,8 +17,8 @@ const PortalSolutions = () => {
     <Box
       sx={{
         py: 12,
-        bgcolor: "#0C1424", // Lighter Dark
-        color: "#FFFFFF",
+        bgcolor: "#F8F6F2", // Lighter Dark
+        color: "#0C1424",
         position: "relative",
         overflow: "hidden",
       }}
@@ -72,7 +72,7 @@ const PortalSolutions = () => {
                 variant="body1"
                 sx={{
                   fontFamily: "'Inter', sans-serif",
-                  color: "rgba(255, 255, 255, 0.6)",
+                  color: "#000",
                   fontSize: "0.95rem",
                   lineHeight: 1.6,
                   mb: 3,
@@ -106,15 +106,15 @@ const PortalSolutions = () => {
                       sx={{
                         p: 3,
                         borderRadius: "12px",
-                        bgcolor: "rgba(0, 0, 0, 0.2)",
+                        bgcolor: "rgba(172, 206, 255, 0.2)",
                         border: "1px solid rgba(255, 255, 255, 0.03)",
                         height: "100%",
                         display: "flex",
                         flexDirection: "column",
                         transition: "all 0.3s ease",
                         "&:hover": {
-                          bgcolor: "rgba(25, 30, 43, 0.4)",
-                          borderColor: "rgba(59, 130, 246, 0.2)",
+                          bgcolor: "rgba(97, 142, 255, 0.4)",
+                          borderColor: "rgba(36, 120, 255, 0.2)",
                           transform: "translateY(-4px)",
                           "& .read-more-icon": { transform: "translateX(4px)", color: "#3B82F6" },
                         },
@@ -136,7 +136,7 @@ const PortalSolutions = () => {
                         variant="body2"
                         sx={{
                           fontFamily: "'Inter', sans-serif",
-                          color: "rgba(255, 255, 255, 0.5)",
+                          color: "#000",
                           fontSize: "0.85rem",
                           lineHeight: 1.5,
                           mb: 2,
@@ -151,7 +151,7 @@ const PortalSolutions = () => {
                           display: "inline-flex",
                           alignItems: "center",
                           gap: 0.5,
-                          color: "rgba(255,255,255,0.7)",
+                          color: "#000",
                           textDecoration: "none",
                           fontSize: "0.80rem",
                           fontWeight: 600,

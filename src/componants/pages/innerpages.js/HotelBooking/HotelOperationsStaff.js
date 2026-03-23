@@ -18,7 +18,7 @@ const tools = [
 ];
 
 const HotelOperationsStaff = () => (
-  <Box sx={{ bgcolor: "#ffffff", py: 14 }}>
+  <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 3 }}>
         <Typography sx={{ color: "#0f766e", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>Operations & Staff Tools</Typography>

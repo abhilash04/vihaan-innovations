@@ -50,14 +50,14 @@ const AudienceCard = ({ icon, title, delay }) => (
       }}
     >
       <Box sx={{ position: "absolute", top: 0, left: 0, width: "100%", height: "4px", bgcolor: "transparent", transition: "all 0.3s", ".MuiPaper-root:hover &": { bgcolor: "#00B4D8" } }} />
-      <Box 
-        sx={{ 
+      <Box
+        sx={{
           width: 60, height: 60, borderRadius: "50%",
           bgcolor: "rgba(0, 180, 216, 0.1)",
-          color: "#0B2046", 
+          color: "#0B2046",
           mb: 2,
           display: "flex", justifyContent: "center", alignItems: "center",
-          "& > svg": { fontSize: 28 } 
+          "& > svg": { fontSize: 28 }
         }}
       >
         {icon}
@@ -71,35 +71,30 @@ const AudienceCard = ({ icon, title, delay }) => (
 
 const MatrimonyWhoThisIsFor = () => {
   return (
-    <Box sx={{ bgcolor: "#e3f2fd", py: 12 }}> {/* Light sky blue */}
+    <Box sx={{ bgcolor: "#e3f2fd", pb: 12, pt: 6 }}> {/* Light sky blue */}
       <Container maxWidth="md">
-        
+
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 4 }}>
           <Box sx={{ display: "inline-block", mb: 1 }}>
-            <Typography sx={{ 
-              fontWeight: 800, color: "#0B2046", fontSize: "28px", 
-              display: "flex", alignItems: "center", gap: 1, 
-              justifyContent: "center" 
+            <Typography sx={{
+              fontWeight: 800, color: "#0B2046", fontSize: "28px",
+              display: "flex", alignItems: "center", gap: 1,
+              justifyContent: "center"
             }}>
-              <Box component="span" sx={{ 
-                width: 32, height: 32, borderRadius: "50%", 
-                border: "2px solid #0B2046", display: "flex", 
-                alignItems: "center", justifyContent: "center", fontSize: "18px" 
-              }}>2</Box>
               Who This Is For
             </Typography>
           </Box>
         </Box>
 
         {/* Audience Grid - 3x2 Layout exact match to image */}
-        <Grid container spacing={3} justifyContent="center">
+        <Grid container spacing={3} justifyContent="center" rowSpacing={10}>
           {audiences.map((audience, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
-              <AudienceCard 
-                icon={audience.icon} 
-                title={audience.title} 
-                delay={index * 0.1} 
+              <AudienceCard
+                icon={audience.icon}
+                title={audience.title}
+                delay={index * 0.1}
               />
             </Grid>
           ))}

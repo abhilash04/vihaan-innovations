@@ -5,11 +5,11 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
 const ListingSEO = () => {
   return (
-    <Box sx={{ bgcolor: "#ffffff", py: 14 }}>
+    <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
       <Container maxWidth="lg">
 
         {/* SEO & Growth Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
             SEO & Growth
           </Typography>
@@ -30,7 +30,7 @@ const ListingSEO = () => {
               transition={{ duration: 0.6 }}
             >
               <Paper elevation={0} sx={{ p: 4, bgcolor: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: "16px", boxShadow: "0 10px 30px rgba(0,0,0,0.03)" }}>
-                
+
                 {/* Chart Title Mock */}
                 <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 3 }}>
                   <Typography sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: "14px" }}>Rising traffic</Typography>
@@ -51,10 +51,10 @@ const ListingSEO = () => {
                       </linearGradient>
                     </defs>
                     <path d="M0 130 L50 110 L100 120 L150 90 L200 80 L250 60 L300 40 L350 20 L400 10 L400 150 L0 150 Z" fill="url(#trafficGrad)" />
-                    <motion.path 
-                      d="M0 130 L50 110 L100 120 L150 90 L200 80 L250 60 L300 40 L350 20 L400 10" 
-                      fill="none" 
-                      stroke="#22c55e" 
+                    <motion.path
+                      d="M0 130 L50 110 L100 120 L150 90 L200 80 L250 60 L300 40 L350 20 L400 10"
+                      fill="none"
+                      stroke="#22c55e"
                       strokeWidth="3"
                       initial={{ pathLength: 0 }}
                       whileInView={{ pathLength: 1 }}
@@ -89,7 +89,7 @@ const ListingSEO = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <Paper elevation={0} sx={{ p: 4, bgcolor: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: "16px", boxShadow: "0 10px 30px rgba(0,0,0,0.03)" }}>
-                
+
                 {/* Browser top bar */}
                 <Box sx={{ display: "flex", gap: 1, mb: 3 }}>
                   <Box sx={{ width: 10, height: 10, borderRadius: "50%", bgcolor: "#ef4444" }} />

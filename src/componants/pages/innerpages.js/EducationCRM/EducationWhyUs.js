@@ -16,11 +16,11 @@ const whyPoints = [
 
 const EducationWhyUs = () => {
   return (
-    <Box sx={{ position: "relative", bgcolor: "#f8f9fe", pt: 4, pb: 20 }}>
+    <Box sx={{ position: "relative", bgcolor: "#f8f9fe", pt: 6, pb: 12 }}>
       {/* Continuing faint background gradient if needed, but keeping it clean like the mock */}
-      
+
       <Container maxWidth="lg">
-        
+
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "32px", md: "46px" }, mb: 2 }}>
@@ -35,7 +35,7 @@ const EducationWhyUs = () => {
         </Box>
 
         <Grid container spacing={8} alignItems="center">
-          
+
           {/* Left Grid of 4 Points */}
           <Grid item xs={12} md={6}>
             <Grid container spacing={4}>
@@ -86,16 +86,16 @@ const EducationWhyUs = () => {
                 }}
               >
                 {/* Decorative Quote Icon Overhang */}
-                <Box sx={{ 
-                  position: "absolute", top: -20, left: 30, 
-                  bgcolor: "#0B2046", color: "#ffffff", 
+                <Box sx={{
+                  position: "absolute", top: -20, left: 30,
+                  bgcolor: "#0B2046", color: "#ffffff",
                   width: 50, height: 50, borderRadius: "50%",
                   display: "flex", justifyContent: "center", alignItems: "center",
                   boxShadow: "0 10px 20px rgba(11, 32, 70, 0.2)"
                 }}>
                   <FormatQuoteIcon sx={{ fontSize: 30 }} />
                 </Box>
-                
+
                 <Typography sx={{ color: "#1a1a1a", fontSize: "16px", lineHeight: 1.8, fontStyle: "italic", mb: 4, pt: 2 }}>
                   The platform Vihaan built replaced three separate tools we were paying for. Our agents now spend 80% of their time selling, not updating spreadsheets.
                 </Typography>
@@ -107,7 +107,7 @@ const EducationWhyUs = () => {
                   <Typography sx={{ color: "#666", fontSize: "14px" }}>
                     Residential Developer, Pune
                   </Typography>
-                  
+
                   {/* Small decorative sparkle */}
                   <Box sx={{ position: "absolute", right: 0, bottom: 0, color: "#f9a826", fontSize: "24px" }}>
                     ✦

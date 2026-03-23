@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import PeopleIcon from '@mui/icons-material/People';
 import SpeedIcon from '@mui/icons-material/Speed';
-
+import img from '../../../../assets/Building trusted matrimony platforms infographic.png'
 const StatCard = ({ icon: Icon, value, label, delay }) => (
   <motion.div
     initial={{ opacity: 0, x: 50 }}
@@ -44,8 +44,8 @@ const StatCard = ({ icon: Icon, value, label, delay }) => (
       <Box sx={{ color: "#00B4D8", opacity: 0.5 }}>
         {/* Abstract graph/wave representation for the right side of the card as seen in the design */}
         <svg width="60" height="30" viewBox="0 0 60 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 25 L15 15 L30 20 L45 5 L60 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M0 30 L15 20 L30 25 L45 10 L60 15 L60 30 Z" fill="currentColor" opacity="0.2"/>
+          <path d="M0 25 L15 15 L30 20 L45 5 L60 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M0 30 L15 20 L30 25 L45 10 L60 15 L60 30 Z" fill="currentColor" opacity="0.2" />
         </svg>
       </Box>
     </Paper>
@@ -57,25 +57,25 @@ const MatrimonyBanner = () => {
     <Box
       sx={{
         position: "relative",
-        minHeight: "100vh",
+        minHeight: "90vh",
         bgcolor: "#0B1528", // Deep rich blue
         overflow: "hidden",
         display: "flex",
         alignItems: "center",
-        pt: { xs: 15, md: 5 },
-        pb: { xs: 10, md: 5 }
+        pt: { xs: 15, md: 0 },
+        pb: { xs: 10, md: 0 }
       }}
     >
       {/* Background Graphic Elements */}
       <Box sx={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0 }}>
         {/* Glow behind text */}
         <Box sx={{ position: "absolute", top: "30%", left: "-10%", width: "50%", height: "50%", background: "radial-gradient(circle, rgba(0, 180, 216, 0.15) 0%, rgba(11, 21, 40, 0) 70%)", borderRadius: "50%", filter: "blur(60px)" }} />
-        
+
         {/* Tech line grid overlay faint */}
-        <Box sx={{ 
-          position: "absolute", top: 0, left: 0, width: "100%", height: "100%", 
+        <Box sx={{
+          position: "absolute", top: 0, left: 0, width: "100%", height: "100%",
           backgroundImage: "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
-          backgroundSize: "40px 40px", opacity: 0.5 
+          backgroundSize: "40px 40px", opacity: 0.5
         }} />
       </Box>
 
@@ -84,7 +84,7 @@ const MatrimonyBanner = () => {
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
         <Grid container spacing={6} alignItems="center">
-          
+
           {/* Left Text Area */}
           <Grid item xs={12} md={6}>
             <motion.div
@@ -95,11 +95,11 @@ const MatrimonyBanner = () => {
               <Typography variant="h1" sx={{ color: "#ffffff", fontWeight: 800, fontSize: { xs: "36px", md: "56px" }, lineHeight: 1.1, mb: 3 }}>
                 Build a <Box component="span" sx={{ color: "#00B4D8" }}>Matrimony</Box> Platform That Families Actually Trust
               </Typography>
-              
+
               <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", lineHeight: 1.6, mb: 5, maxWidth: "500px" }}>
                 Custom matrimony portals, matchmaking CRMs, and profile management systems for matrimony businesses, community platforms, and matchmaking agencies.
               </Typography>
-              
+
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 <Button
                   variant="contained"
@@ -123,7 +123,7 @@ const MatrimonyBanner = () => {
                 >
                   See a Demo
                 </Button>
-                
+
                 <Button
                   variant="outlined"
                   sx={{
@@ -150,13 +150,9 @@ const MatrimonyBanner = () => {
 
           {/* Right Floating Stats Area */}
           <Grid item xs={12} md={6}>
-            <Box sx={{ pt: { xs: 4, md: 0 }, mt: { xs: 2, md: 0 } }}>
-              <StatCard icon={PeopleIcon} value="50k+" label="Profiles Managed" delay={0.2} />
-              <StatCard icon={TrendingUpIcon} value="85%+" label="Match Success Rate" delay={0.4} />
-              <StatCard icon={SpeedIcon} value="4x faster" label="Response Time Improvement" delay={0.6} />
-            </Box>
+            <img src={img} alt="Building trusted matrimony platforms infographic" style={{ width: "110%", height: 'auto', borderRadius: '20px' }} />
           </Grid>
-          
+
         </Grid>
       </Container>
     </Box>

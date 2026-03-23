@@ -18,7 +18,7 @@ const capabilities = [
 ];
 
 const ChatbotCapabilities = () => (
-  <Box sx={{ background: "linear-gradient(180deg, #0a1628 0%, #0d1f35 100%)", py: 14, position: "relative", overflow: "hidden" }}>
+  <Box sx={{ background: "linear-gradient(180deg, #0a1628 0%, #0d1f35 100%)", py: 8, position: "relative", overflow: "hidden" }}>
     <Box sx={{ position: "absolute", top: "50%", right: "-10%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(6,182,212,0.08) 0%, transparent 70%)", filter: "blur(40px)" }} />
     <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
       <Box sx={{ textAlign: "center", mb: 8 }}>
