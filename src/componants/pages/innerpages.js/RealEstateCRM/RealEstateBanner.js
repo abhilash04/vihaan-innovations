@@ -166,7 +166,7 @@ const RealEstateBanner = () => {
                     }
                   }}
                 >
-                  See a Live Demo
+                  Request a Live Demo
                 </Button>
 
                 <Button
@@ -186,7 +186,7 @@ const RealEstateBanner = () => {
                     }
                   }}
                 >
-                  Explore Features
+                  View Features
                 </Button>
               </Box>
             </motion.div>

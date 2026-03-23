@@ -41,9 +41,9 @@ const PortalTrustedBy = () => {
                 mb: 1.5,
               }}
             >
-              Trusted By Global{" "}
+              Trusted by Growing{" "}
               <Box component="span" sx={{ color: "#3B82F6" }}>
-                Real Estate Businesses
+                Real Estate Businesses Worldwide
               </Box>
             </Typography>
             <Typography
@@ -56,8 +56,7 @@ const PortalTrustedBy = () => {
                 fontSize: "0.95rem",
               }}
             >
-              Powering data-driven brokerage portals, enterprise multiple-listing
-              services, and investment dashboards worldwide.
+              We help agencies, developers, and property platforms grow online through expert website development for real estate. As a trusted real estate website development company, our solutions power modern property portals, CRMs, and real estate dashboards used by businesses worldwide.
             </Typography>
           </motion.div>
         </Box>
@@ -121,9 +120,9 @@ const PortalTrustedBy = () => {
           }}
         >
           {[
-            { value: "500+", label: "Portals Developed" },
-            { value: "20M+", label: "Monthly Data Users" },
-            { value: "100+", label: "Property Markets" },
+            { value: "150+", label: "Projects" },
+            { value: "50+", label: "Real Estate Platforms" },
+            { value: "20+", label: "Countries" },
           ].map((stat, index) => (
             <motion.div
               key={index}

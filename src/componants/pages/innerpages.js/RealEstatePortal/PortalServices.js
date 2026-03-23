@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 import { Search, Shield, Users, BarChart2, MessageSquare, Globe, Cpu, Smartphone } from "lucide-react";
 
 const services = [
-  { icon: <Search size={24} />, title: "Listing Scraper", desc: "Automate dynamic feeds setup directly via MLS ports." },
-  { icon: <Shield size={24} />, title: "Secure Data Escrow", desc: "Compliance lockbox auditing digital deeds accurately." },
-  { icon: <Users size={24} />, title: "Broker Management", desc: "Track performance routing commission tier dashboards." },
-  { icon: <BarChart2 size={24} />, title: "Market Analytics", desc: "Real-time pricing trend index and prediction layers." },
-  { icon: <MessageSquare size={24} />, title: "Lead AI Nurture", desc: "Automated chat response routing warm buyer intents." },
-  { icon: <Globe size={24} />, title: "Multi-Region SEO", desc: "Hyperlocal landing page multipliers ranking fast." },
-  { icon: <Cpu size={24} />, title: "VR Smart Tours", desc: "Embed 3D walkthrough framing directly onto map view nodes." },
-  { icon: <Smartphone size={24} />, title: "App Layout Deploy", desc: "Mirror web portal frame into iOS/Android native grids." },
+  { icon: <Search size={24} />, title: "Real Estate Technology Consulting", desc: "Strategic consulting to help businesses choose the right architecture, features, and technology for scalable real estate platforms." },
+  { icon: <Shield size={24} />, title: "Property Management Software Development", desc: "Custom solutions for managing tenants, properties, payments, and maintenance through powerful dashboards." },
+  { icon: <Users size={24} />, title: "Real Estate Vendor Management", desc: "Manage contractors, brokers, and vendors efficiently with centralized tools and automated workflows." },
+  { icon: <Smartphone size={24} />, title: "Real Estate App Development", desc: "Mobile apps for buyers, sellers, and agents that integrate seamlessly with your real estate website platform." },
+  { icon: <Globe size={24} />, title: "Property Listing Marketplace", desc: "Build high-performance property listing marketplaces with advanced search filters and map-based property discovery." },
+  { icon: <Cpu size={24} />, title: "Construction Management Software", desc: "Digital tools to track construction progress, budgets, documentation, and contractor coordination." },
+  { icon: <BarChart2 size={24} />, title: "Real Estate Software Modernization", desc: "Upgrade outdated systems into modern cloud-based platforms with improved speed, security, and scalability." },
+  { icon: <MessageSquare size={24} />, title: "Third-Party Integrations", desc: "Integrate CRM, payment gateways, MLS listings, maps, and analytics tools into your real estate ecosystem." },
 ];
 
 const PortalServices = () => {
@@ -44,7 +44,7 @@ const PortalServices = () => {
                 mb: 1.5,
               }}
             >
-              Comprehensive{" "}
+              Real Estate Website{" "}
               <Box
                 component="span"
                 sx={{
@@ -63,9 +63,8 @@ const PortalServices = () => {
                   },
                 }}
               >
-                Services
-              </Box>{" "}
-              Grid
+                Development Services
+              </Box>
             </Typography>
             <Typography
               variant="body1"
@@ -76,7 +75,7 @@ const PortalServices = () => {
                 margin: "0 auto",
               }}
             >
-              Every module you need to build a high-performance, enterprise-ready real estate ecosystem.
+              We deliver modern real estate website development services designed for agencies, developers, and property marketplaces. As an experienced real estate portal development company, we build scalable platforms with smart search, listings, and seamless integrations.
             </Typography>
           </motion.div>
         </Box>

@@ -23,11 +23,14 @@ const ListingSearchDiscovery = () => {
 
       {/* Top Header section that appears above the split */}
       <Container maxWidth="lg" sx={{ mb: 8, textAlign: "center" }}>
-        <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+        <Typography sx={{ color: "#2563eb", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: 1, mb: 1 }}>
           Search & Discovery
         </Typography>
-        <Typography sx={{ color: "#666", fontSize: "16px", mb: 1 }}>
-          Build selected autocomplete and exact search engine.
+        <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+          Advanced Search & Discovery for Business Listing Website India
+        </Typography>
+        <Typography sx={{ color: "#666", fontSize: "16px", mb: 1, maxWidth: "700px", margin: "0 auto" }}>
+          Deliver a seamless search experience for every business listing website India with intelligent autocomplete, powerful filters, and location-based discovery that helps users find exactly what they need faster.
         </Typography>
       </Container>
 
@@ -48,7 +51,7 @@ const ListingSearchDiscovery = () => {
               </Typography>
 
               <Typography sx={{ color: "#666", fontSize: "15px", mb: 4, lineHeight: 1.6 }}>
-                The backbone of modern commerce requires ultra-fast localized autocomplete, advanced filtering algorithms, and robust discovery queues.
+                The backbone of every business listing website India is a high-performance search engine designed for speed, accuracy, and personalized discovery.
               </Typography>
 
               <Box component="ul" sx={{
@@ -71,11 +74,11 @@ const ListingSearchDiscovery = () => {
                   }
                 }
               }}>
-                <li><strong>Autocomplete</strong> autocomplete</li>
-                <li><strong>Saved searches</strong> suggestions and categories</li>
-                <li><strong>Autocomplete suggestions</strong></li>
-                <li><strong>Manual monetization</strong> and monetizations</li>
-                <li><strong>Map view</strong> view</li>
+                <li><strong>Smart Autocomplete</strong><br />Instant suggestions with keyword predictions and category-based results.</li>
+                <li><strong>Saved Searches & Suggestions</strong><br />Users can save searches and get personalized recommendations.</li>
+                <li><strong>Advanced Filtering System</strong><br />Refine results using multiple dynamic filters for better discovery.</li>
+                <li><strong>Monetization-Ready Search</strong><br />Promote featured listings within search results for higher visibility.</li>
+                <li><strong>Map-Based Discovery</strong><br />Interactive map view for location-based listing exploration.</li>
               </Box>
             </motion.div>
           </Grid>
@@ -164,6 +167,35 @@ const ListingSearchDiscovery = () => {
           </Grid>
 
         </Grid>
+
+        {/* Footer CTA */}
+        <Box sx={{ textAlign: "center", mt: 8 }}>
+          <Typography sx={{ color: "#1a1a1a", fontWeight: 700, fontSize: "18px", mb: 2 }}>
+            Build a Smart Search Experience for Your Business Listing Website India
+          </Typography>
+          <Box
+            component="button"
+            sx={{
+              bgcolor: "#2563eb",
+              color: "#ffffff",
+              fontWeight: 700,
+              fontSize: "15px",
+              px: { xs: 4, md: 5 },
+              py: 1.5,
+              borderRadius: "8px",
+              textTransform: "none",
+              cursor: "pointer",
+              border: "none",
+              boxShadow: "0 4px 14px rgba(37, 99, 235, 0.3)",
+              "&:hover": {
+                bgcolor: "#1d4ed8",
+                boxShadow: "0 6px 20px rgba(37, 99, 235, 0.4)",
+              },
+            }}
+          >
+            Request Demo
+          </Box>
+        </Box>
       </Container>
     </Box>
   );

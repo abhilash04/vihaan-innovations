@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import { Home, Compass, Key, Briefcase, FileText, Globe } from "lucide-react";
 
 const solutions = [
-  { icon: <Home size={28} />, title: "Residential", color: "#3B82F6", desc: "B2C portals facing buyers with deep sync hooks." },
-  { icon: <Briefcase size={28} />, title: "Commercial", color: "#10B981", desc: "Lease rollup analytics supporting asset scale." },
-  { icon: <Compass size={28} />, title: "Industrial Hubs", color: "#F59E0B", desc: "Logistics tracking mapping payload allocations." },
-  { icon: <Key size={28} />, title: "Prop Management", color: "#EC4899", desc: "Rent collection pipelines audit direct triggers." },
-  { icon: <FileText size={28} />, title: "Secure Data", color: "#8B5CF6", desc: "Deed locks securing compliance transparently." },
-  { icon: <Globe size={28} />, title: "Marketplace GL", color: "#EF4444", desc: "Hyperlocal landing multiplier node indexes." },
+  { icon: <Home size={28} />, title: "Mortgage Calculator Integration", color: "#3B82F6", desc: "Provide buyers with a clear understanding of property financing through smart mortgage calculators that estimate monthly payments, loan terms, and interest rates to support better purchase decisions." },
+  { icon: <Briefcase size={28} />, title: "Condominium Management System", color: "#10B981", desc: "Simplify the management of shared residential properties with centralized tools that help monitor amenities, track maintenance, and manage condominium operations efficiently." },
+  { icon: <Compass size={28} />, title: "Broker Management Platform", color: "#F59E0B", desc: "Manage real estate brokers with ease using digital tools that help track performance, manage commissions, assign listings, and streamline communication." },
+  { icon: <Key size={28} />, title: "Tenant Management Solution", color: "#EC4899", desc: "Enhance tenant relationships with automated tenant management systems that handle rent payments, lease tracking, maintenance requests, and communication." },
+  { icon: <FileText size={28} />, title: "Real Estate CRM with MLS Integration", color: "#8B5CF6", desc: "Improve property recommendations and client experiences with a powerful CRM integrated with MLS listings, enabling agents to match buyers with the right properties quickly." },
+  { icon: <Globe size={28} />, title: "Smart Home Automation Integration", color: "#EF4444", desc: "Enable modern living experiences by integrating smart home automation systems that allow property owners to control lighting, security, climate, and appliances through intelligent platforms." },
 ];
 
 const PortalTopGrid = () => {
@@ -40,7 +40,7 @@ const PortalTopGrid = () => {
                 mb: 1.5,
               }}
             >
-              Top Solutions Framework
+              Top Real Estate Solutions for Diverse Business Needs
             </Typography>
             <Typography
               variant="body1"
@@ -51,8 +51,7 @@ const PortalTopGrid = () => {
                 margin: "0 auto",
               }}
             >
-              Contextual fighter brightens or gradient wash on hover supporting
-              smooth matrix scaling correctly.
+              Every real estate business has different operational requirements. We develop advanced digital solutions that help agencies, developers, brokers, and property managers streamline processes, improve customer experiences, and grow their real estate operations efficiently.
             </Typography>
           </motion.div>
         </Box>

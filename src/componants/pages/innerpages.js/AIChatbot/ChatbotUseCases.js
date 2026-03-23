@@ -9,12 +9,12 @@ import WorkIcon from '@mui/icons-material/Work';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 
 const useCases = [
-  { icon: HomeIcon, title: "Real Estate", desc: "Qualify leads, share property details, schedule site visits automatically.", color: "#06b6d4" },
-  { icon: SchoolIcon, title: "Education", desc: "Answer admission queries, collect student details, share course info 24/7.", color: "#8b5cf6" },
-  { icon: HotelIcon, title: "Hotel & Hospitality", desc: "Handle room enquiries, take bookings, answer guest FAQs.", color: "#f59e0b" },
-  { icon: LocalHospitalIcon, title: "Healthcare", desc: "Book appointments, answer clinic FAQs, collect patient symptoms.", color: "#22c55e" },
-  { icon: WorkIcon, title: "HR & Recruitment", desc: "Pre-screen candidates, answer job queries, schedule interviews.", color: "#ec4899" },
-  { icon: AccountBalanceIcon, title: "Financial Services", desc: "Answer policy queries, collect loan applications, route to advisors.", color: "#f97316" },
+  { icon: HomeIcon, title: "Real Estate", desc: "Generate qualified leads, share property details, and schedule site visits automatically.", color: "#06b6d4" },
+  { icon: SchoolIcon, title: "Education", desc: "Handle admission enquiries, collect student data, and provide course information 24/7.", color: "#8b5cf6" },
+  { icon: HotelIcon, title: "Hotel & Hospitality", desc: "Manage room enquiries, process bookings, and respond to guest FAQs easily.", color: "#f59e0b" },
+  { icon: LocalHospitalIcon, title: "Healthcare", desc: "Schedule appointments, answer patient queries, and collect basic details efficiently.", color: "#22c55e" },
+  { icon: WorkIcon, title: "HR & Recruitment", desc: "Screen candidates, handle job-related queries, and automate interview scheduling.", color: "#ec4899" },
+  { icon: AccountBalanceIcon, title: "Financial Services", desc: "Answer policy questions, capture loan applications, and connect users with advisors.", color: "#f97316" },
 ];
 
 const ChatbotUseCases = () => (
@@ -23,10 +23,10 @@ const ChatbotUseCases = () => (
     <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
       <Box sx={{ textAlign: "center", mb: 8 }}>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "26px", md: "36px" }, mb: 2 }}>
-          Who This Is For & Use Cases
+          Who Can Use This & Use Cases
         </Typography>
-        <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "15px" }}>
-          Our AI chatbots adapt to any industry, any usecase.
+        <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "15px", maxWidth: "600px", mx: "auto" }}>
+          AI chatbot development solutions are designed to work across multiple industries and business needs.
         </Typography>
       </Box>
       <Grid container spacing={3}>

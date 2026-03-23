@@ -57,14 +57,14 @@ const FeatureCard = ({ icon: Icon, title, delay }) => (
 );
 
 const featureData = [
-  { icon: <FactCheckOutlinedIcon />, title: "Profile Registration\n& Verification" },
-  { icon: <InsightsOutlinedIcon />, title: "Smart Match\nEngine" },
+  { icon: <FactCheckOutlinedIcon />, title: "Profile System" },
+  { icon: <InsightsOutlinedIcon />, title: "Smart Match AI" },
   { icon: <VpnKeyOutlinedIcon />, title: "Privacy Controls" },
-  { icon: <ChatBubbleOutlineOutlinedIcon />, title: "Interest &\nCommunication" },
-  { icon: <AutoFixHighOutlinedIcon />, title: "Horoscope &\nCompatibility Module" },
-  { icon: <CreditCardOutlinedIcon />, title: "Subscription &\nPayment Management" },
-  { icon: <DashboardCustomizeOutlinedIcon />, title: "Admin CRM for\nAgents" },
-  { icon: <FavoriteBorderOutlinedIcon />, title: "Success Story\nManagement" }
+  { icon: <ChatBubbleOutlineOutlinedIcon />, title: "Communication" },
+  { icon: <AutoFixHighOutlinedIcon />, title: "Horoscope Module" },
+  { icon: <CreditCardOutlinedIcon />, title: "Subscription System" },
+  { icon: <DashboardCustomizeOutlinedIcon />, title: "Admin CRM" },
+  { icon: <FavoriteBorderOutlinedIcon />, title: "Success Stories" }
 ];
 
 const MatrimonyFeatures = () => {
@@ -80,9 +80,12 @@ const MatrimonyFeatures = () => {
               display: "flex", alignItems: "center", gap: 1,
               justifyContent: "center"
             }}>
-              What We Build — Feature Overview
+              What We Build – Matrimony Platform Feature Overview
             </Typography>
           </Box>
+          <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "800px", margin: "0 auto", mb: 2 }}>
+            As a trusted matrimony app development company and experienced matrimony website developer, we build powerful matchmaking platforms with smart profile management, intelligent match engines, secure communication, and advanced admin tools.
+          </Typography>
         </Box>
 
         {/* 4x2 Grid */}

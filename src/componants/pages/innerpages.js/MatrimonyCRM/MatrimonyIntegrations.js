@@ -44,13 +44,13 @@ const MatrimonyIntegrations = () => {
             <Typography sx={{
               fontWeight: 800, color: "#0B2046", fontSize: "28px",
               display: "flex", alignItems: "center", gap: 1,
-              justifyContent: "center"
+              justifyContent: "center", mb: 2
             }}>
-              Integrations & Compatibility
+              Powerful Integrations for a Seamless Matrimony Platform
             </Typography>
           </Box>
-          <Typography sx={{ color: "#666", fontSize: "16px" }}>
-            All re-rendered to be simplified
+          <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
+            Our solutions are designed to connect your platform with essential tools and services. These integrations help automate communication, manage payments, analyze user behavior, and improve the overall efficiency of your matrimony platform.
           </Typography>
         </Box>
 
@@ -80,8 +80,8 @@ const MatrimonyIntegrations = () => {
           {/* Left Column External Services */}
           <Box sx={{ display: "flex", flexDirection: "column", gap: 6, zIndex: 1, alignItems: "flex-end", flex: 1 }}>
             <IntegrationNode icon={WhatsAppIcon} label="WhatsApp Business" subLabel="" side="left" delay={0.2} />
-            <IntegrationNode icon={ChatIcon} label="" subLabel="/ Razorpay / PayU / CCAvenue" side="left" delay={0.3} />
-            <IntegrationNode icon={MessageIcon} label="SMS gateway" subLabel="" side="left" delay={0.4} />
+            <IntegrationNode icon={ChatIcon} label="Payments" subLabel="" side="left" delay={0.3} />
+            <IntegrationNode icon={MessageIcon} label="SMS Gateway Notifications" subLabel="" side="left" delay={0.4} />
           </Box>
 
           {/* Central CRM Hub */}
@@ -109,7 +109,7 @@ const MatrimonyIntegrations = () => {
               >
                 <AccountTreeIcon sx={{ color: "#ffffff", fontSize: 40, mb: 1 }} />
                 <Typography sx={{ color: "#ffffff", fontWeight: 800, fontSize: "12px", lineHeight: 1.2 }}>
-                  Central<br />matrimony<br />CRM
+                  Matrimony<br />CRM Admin<br />System
                 </Typography>
               </Paper>
             </motion.div>
@@ -117,9 +117,9 @@ const MatrimonyIntegrations = () => {
 
           {/* Right Column External Services */}
           <Box sx={{ display: "flex", flexDirection: "column", gap: 6, zIndex: 1, alignItems: "flex-start", flex: 1 }}>
-            <IntegrationNode icon={FacebookIcon} label="Google / Facebook" subLabel="" side="right" delay={0.5} />
+            <IntegrationNode icon={FacebookIcon} label="Social Login" subLabel="" side="right" delay={0.5} />
             <IntegrationNode icon={AutoAwesomeIcon} label="Astrology APIs" subLabel="" side="right" delay={0.6} />
-            <IntegrationNode icon={BarChartIcon} label="Google Analytics" subLabel="" side="right" delay={0.7} />
+            <IntegrationNode icon={BarChartIcon} label="Analytics" subLabel="" side="right" delay={0.7} />
           </Box>
 
         </Box>

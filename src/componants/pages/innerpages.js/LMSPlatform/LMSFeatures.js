@@ -12,15 +12,15 @@ import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 
 const features = [
-  { icon: EditNoteIcon, title: "Course Builder & Content Management", desc: "Create courses, upload videos, quizzes, categories, and manage schedules easily.", color: "#3b82f6" },
-  { icon: LiveTvIcon, title: "Live Class & Webinar Integration", desc: "Plan and conduct live sessions with seamless scheduling and integration.", color: "#8b5cf6" },
-  { icon: QuizIcon, title: "Assessment & Quiz Engine", desc: "Support for MCQs, Q&A formats, and time-based assessments.", color: "#22c55e" },
-  { icon: ShowChartIcon, title: "Student Progress Management", desc: "Monitor learner performance with detailed reports and analytics", color: "#f59e0b" },
-  { icon: GroupWorkIcon, title: "Batch & Cohort Management", desc: "Manage student groups, batches, and automate enrollments.", color: "#06b6d4" },
-  { icon: WorkspacePremiumIcon, title: "Certificate Generation Module", desc: "Generate secure certificates with unique IDs and QR verification.", color: "#ec4899" },
-  { icon: CreditCardIcon, title: "Subscription & Payment Management", desc: "Flexible pricing plans, bundles, and offline payment options.", color: "#f97316" },
-  { icon: PhoneAndroidIcon, title: "Mobile-first Learner App", desc: "Fully responsive apps for Android and iOS users", color: "#14b8a6" },
-  { icon: AdminPanelSettingsIcon, title: "Admin & Instructor Dashboard", desc: "Manage courses, students, revenue, and reports from a single dashboard.", color: "#7c3aed" },
+  { icon: EditNoteIcon, title: "Course Builder & Content Management", desc: "Create courses, upload videos, quizzes, categories, and manage schedules easily", color: "#3b82f6" },
+  { icon: LiveTvIcon, title: "Live Classes & Webinar Integration", desc: "Plan and conduct live sessions with seamless scheduling and integration", color: "#8b5cf6" },
+  { icon: QuizIcon, title: "Assessment & Quiz System", desc: "Support for MCQs, Q&A formats, and time-based assessments", color: "#22c55e" },
+  { icon: ShowChartIcon, title: "Student Progress Tracking", desc: "Monitor learner performance with detailed reports and analytics", color: "#f59e0b" },
+  { icon: GroupWorkIcon, title: "Batch & Cohort Management", desc: "Manage student groups, batches, and automate enrollments", color: "#06b6d4" },
+  { icon: WorkspacePremiumIcon, title: "Certificate Generation Module", desc: "Generate secure certificates with unique IDs and QR verification", color: "#ec4899" },
+  { icon: CreditCardIcon, title: "Subscription & Payment Management", desc: "Flexible pricing plans, bundles, and offline payment options", color: "#f97316" },
+  { icon: PhoneAndroidIcon, title: "Mobile Learning App", desc: "Fully responsive apps for Android and iOS users", color: "#14b8a6" },
+  { icon: AdminPanelSettingsIcon, title: "Admin & Instructor Dashboard", desc: "Manage courses, students, revenue, and reports from a single dashboard", color: "#7c3aed" },
 ];
 
 const LMSFeatures = () => (

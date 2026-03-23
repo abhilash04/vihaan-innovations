@@ -3,16 +3,16 @@ import { Box, Container, Typography, Grid, Paper, Tabs, Tab } from "@mui/materia
 import { motion, AnimatePresence } from "framer-motion";
 import GroupAddIcon from '@mui/icons-material/GroupAdd'; // Generic avatars placeholder
 
-const tabData = ["Member Profile Portal", "Matchmaking Engine", "Messaging & Interest", "Subscription & Payments"];
+const tabData = ["Match Search", "Profile System", "Payments", "CRM"];
 
 const moduleDetails = {
   0: {
-    whatItDoes: ["Filter by gotra, caste", "Advanced search", "Verified badge display"],
-    whoUsesIt: ["WhatsApp alerts", "Custom filters", "Gotra search"]
+    whatItDoes: ["Filter by caste & gotra", "Advanced search parameters", "Verified badge display"],
+    whoUsesIt: ["Platform users", "Matchmaking agents", "Community admins"]
   },
   1: {
     whatItDoes: ["AI-driven matchmaking", "Compatibility scores", "Automated daily matches"],
-    whoUsesIt: ["Agent/Staff Panel", "WhatsApp alerts", "Custom filters", "Gotra search"] // Mimicking the repeated text block in the mock for visual fidelity
+    whoUsesIt: ["Agent/Staff Panel", "WhatsApp alerts", "Custom filters"] 
   },
   2: {
     whatItDoes: ["Secure in-app chat", "Interest express/accept", "Read receipts"],
@@ -43,11 +43,14 @@ const MatrimonyPlatformModules = () => {
             <Typography sx={{
               fontWeight: 800, color: "#ffffff", fontSize: "28px",
               display: "flex", alignItems: "center", gap: 1,
-              justifyContent: "center"
+              justifyContent: "center", mb: 2
             }}>
-              Platform Modules — Tabbed Deep Dive
+              Platform Modules - Smart Features Built Through Matrimony App Development
             </Typography>
           </Box>
+          <Typography sx={{ color: "rgba(255,255,255,0.8)", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
+            Our matrimony app development solutions include powerful platform modules that simplify matchmaking, improve profile discovery, and enhance user experience. Each module is designed to help matrimony platforms deliver faster match suggestions, better profile management, and secure communication for families.
+          </Typography>
         </Box>
 
         {/* Mock UI Container */}

@@ -51,7 +51,7 @@ const PortalStats = () => {
     <Box
       sx={{
         py: 8,
-        background: "#fff", // Deep Blue
+        background: "#fff",
         color: "#000",
         position: "relative",
         overflow: "hidden",
@@ -88,11 +88,45 @@ const PortalStats = () => {
       />
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
+        <Box sx={{ textAlign: "center", mb: 8 }}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <Typography
+              variant="h2"
+              sx={{
+                fontFamily: "'Urbanist', sans-serif",
+                fontWeight: 800,
+                fontSize: { xs: "2.2rem", md: "2.8rem" },
+                mb: 1.5,
+                color: "#1a1a1a",
+              }}
+            >
+              Real Estate Solutions in Numbers
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                fontFamily: "'Inter', sans-serif",
+                color: "#4a5568",
+                maxWidth: "700px",
+                margin: "0 auto",
+                fontSize: "1.05rem",
+              }}
+            >
+              Our expertise in real estate technology is reflected in the results we deliver. From property listings to management platforms, our solutions help businesses scale efficiently while improving operational performance.
+            </Typography>
+          </motion.div>
+        </Box>
+
         <Grid container spacing={4} justifyContent="center" alignItems="center">
           {[
-            { value: "1,000+", title: "Solid Title", desc: "Gain confluent drives gain within capture systems." },
-            { value: "250M+", title: "Description", desc: "Real-time metrics supporting asset scale triggers." },
-            { value: "50+", title: "Stat Counter", desc: "Consolidated revenue graphs intuitively mapped." },
+            { value: "100K+", title: "Properties Listed on MLS", desc: "Supporting large-scale property listings with advanced MLS integrations and intelligent search features." },
+            { value: "5K+", title: "Condominium Properties Managed", desc: "Helping property managers streamline condominium operations through powerful management software." },
+            { value: "50K+", title: "Work Orders Managed", desc: "Automating property maintenance and service requests through smart work order management systems." },
           ].map((stat, index) => (
             <Grid
               item
@@ -109,7 +143,7 @@ const PortalStats = () => {
                   top: "20%",
                   height: "60%",
                   width: "1px",
-                  bgcolor: "rgba(255, 255, 255, 0.08)",
+                  bgcolor: "rgba(0, 0, 0, 0.08)",
                   display: { xs: "none", md: "block" },
                 },
               }}
@@ -130,9 +164,9 @@ const PortalStats = () => {
                     fontSize: { xs: "3rem", md: "4rem" },
                     color: "#3B82F6", // Primary Accent
                     mb: 1,
-                    textShadow: "0 0 30px rgba(59,130,246,0.3)",
+                    textShadow: "0 0 10px rgba(59,130,246,0.1)",
                     transition: "all 0.3s ease",
-                    "&:hover": { color: "#10B981", textShadow: "0 0 30px rgba(16,185,129,0.4)" }, // Accent Green Glow on hover
+                    "&:hover": { color: "#10B981", textShadow: "0 0 10px rgba(16,185,129,0.2)" }, // Accent Green Glow on hover
                   }}
                 >
                   <CountUpNumber value={stat.value} />
@@ -145,6 +179,7 @@ const PortalStats = () => {
                     fontSize: "1.1rem",
                     mb: 1,
                     letterSpacing: "0.5px",
+                    color: "#1a1a1a",
                   }}
                 >
                   {stat.title}
@@ -153,10 +188,10 @@ const PortalStats = () => {
                   variant="body2"
                   sx={{
                     fontFamily: "'Inter', sans-serif",
-                    color: "#000",
-                    fontSize: "0.85rem",
+                    color: "#4a5568",
+                    fontSize: "0.95rem",
                     lineHeight: 1.5,
-                    maxWidth: "240px",
+                    maxWidth: "280px",
                     margin: "0 auto",
                     transition: "transform 0.3s ease",
                     "&:hover": { transform: "translateY(-2px)" },

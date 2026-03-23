@@ -24,12 +24,12 @@ const ListingCTA = () => {
           <Box sx={{ textAlign: "center" }}>
 
 
-            <Typography sx={{ color: "#ffffff", fontSize: "24px", mb: 2, lineHeight: 1.6, fontWeight: 600 }}>
-              Let's build a listing platform that owns its category.
+            <Typography sx={{ color: "#ffffff", fontSize: { xs: "28px", md: "36px" }, mb: 2, lineHeight: 1.3, fontWeight: 800 }}>
+              Launch Your High-Performance Business Listing Website India Today
             </Typography>
 
-            <Typography sx={{ color: "#ffffff", fontSize: "18px", mb: 7 }}>
-              Let's talk. First call free.
+            <Typography sx={{ color: "#ffffff", fontSize: "18px", mb: 7, opacity: 0.9 }}>
+              Let's build a powerful, scalable, and feature-rich directory platform that dominates your industry.
             </Typography>
 
             <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 3 }}>
@@ -53,15 +53,12 @@ const ListingCTA = () => {
                   transition: "all 0.3s"
                 }}
               >
-                Book a Free Call
+                Get Started Now
               </Button>
 
               <Box sx={{ display: "flex", gap: 3 }}>
-                <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "13px", textDecoration: "underline", cursor: "pointer" }}>
-                  View Live Demo
-                </Typography>
-                <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "13px", textDecoration: "underline", cursor: "pointer" }}>
-                  Feature Checklist
+                <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "14px", textDecoration: "underline", cursor: "pointer", "&:hover": { color: "#ffffff" } }}>
+                  Request Free Proposal
                 </Typography>
               </Box>
             </Box>

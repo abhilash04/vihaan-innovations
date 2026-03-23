@@ -21,7 +21,6 @@ const ResortLandingPage = () => {
       <ResortProcess />
       <ResortBenefits />
       <ResortAudience />
-      <ResortVisualBreak />
       <ResortFAQ />
       <FooterAndPopup />
     </Box>

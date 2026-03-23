@@ -40,8 +40,8 @@ const ResortHero = () => {
                   mb: 2,
                 }}
               >
-                Elevate Your <br />
-                Hospitality: Next-Gen{" "}
+                Complete <br />
+                Resort Booking{" "}
                 <Box
                   component="span"
                   sx={{
@@ -60,9 +60,10 @@ const ResortHero = () => {
                     },
                   }}
                 >
-                  Resort
+                  Software
                 </Box>{" "}
-                Booking
+                <br />
+                & Guest App
               </Typography>
             </motion.div>
 
@@ -77,14 +78,14 @@ const ResortHero = () => {
                   fontFamily: "'Outfit', sans-serif",
                   fontSize: { xs: "1rem", md: "1.15rem" },
                   color: "rgba(245, 245, 240, 0.8)",
-                  maxWidth: "500px",
+                  maxWidth: "550px",
                   lineHeight: 1.6,
                   mb: 4,
                 }}
               >
-                Build a premium guest experience with our intelligent resort
-                management software. Steamlined booking, staff routing, and operational
-                command all in one beautiful dashboard.
+                Make your resort operations simple and stress-free with our resort booking software. It helps you manage bookings, guests, payments, and room availability all in one place.
+                <br /><br />
+                Our cloud-based system and mobile app allow you to handle everything easily—from reservations to guest check-ins—while improving your guest experience and increasing your revenue.
               </Typography>
             </motion.div>
 
@@ -125,7 +126,7 @@ const ResortHero = () => {
                     },
                   }}
                 >
-                  Request Demo
+                  Start Free Trial
                 </Button>
                 <Button
                   variant="outlined"
@@ -143,7 +144,7 @@ const ResortHero = () => {
                     },
                   }}
                 >
-                  Learn More
+                  View Features
                 </Button>
               </Box>
             </motion.div>
@@ -159,9 +160,9 @@ const ResortHero = () => {
               }}
             >
               {[
-                { value: "500+", label: "Resorts" },
-                { value: "99.9%", label: "Uptime" },
-                { value: "24/7", label: "Support" },
+                { value: "800+", label: "Resorts Managed" },
+                { value: "25K+", label: "Guest Bookings" },
+                { value: "30+", label: "Tourist Locations" },
               ].map((stat, index) => (
                 <motion.div
                   key={index}

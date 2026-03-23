@@ -11,12 +11,10 @@ import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import PersonIcon from '@mui/icons-material/Person';
 
 const differentiators = [
-  { num: "01", icon: OpenWithIcon, title: "Scaling Expertise", desc: "Scaling entities across listing platforms specific to testing websites" },
-  { num: "02", icon: SearchIcon, title: "SEO Foundation", desc: "SEO-first architecture with extensive qualities" },
-  { num: "03", icon: AdminPanelSettingsIcon, title: "Admin Panel Focus", desc: "Admin panels designed for listing websites" },
-  { num: "04", icon: ManageAccountsIcon, title: "Admin Panel Focus", desc: "Providing athlete users and platform customers" },
-  { num: "05", icon: FiberSmartRecordIcon, title: "SEO Foundation", desc: "Providing excellent revenue for excellent customers" },
-  { num: "06", icon: MonetizationOnIcon, title: "Flexible Monetization", desc: "Flexible search testing platform modules" },
+  { num: "01", icon: OpenWithIcon, title: "Custom-Built Solutions", desc: "We design scalable business listing website India platforms tailored to your specific industry needs." },
+  { num: "02", icon: SearchIcon, title: "Advanced Search & SEO", desc: "Integrated high-speed search and SEO optimization to help your platform rank higher and load faster." },
+  { num: "03", icon: AdminPanelSettingsIcon, title: "End-to-End Support", desc: "From concept and development to launch and maintenance, we offer full-cycle support." },
+  { num: "04", icon: ManageAccountsIcon, title: "Seamless Integrations", desc: "Easy integration with third-party APIs, CRMs, and payment gateways for a complete ecosystem." }
 ];
 
 const ListingWhyUs = () => {
@@ -26,20 +24,23 @@ const ListingWhyUs = () => {
 
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
-            Why Vihaan Innovations
+          <Typography sx={{ color: "#2563eb", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: 1, mb: 1 }}>
+            Why Choose Us
           </Typography>
-          <Typography sx={{ color: "#666", fontSize: "16px" }}>
-            Listing platforms specific to listing differences.
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+            Why Choose Vihaan Innovations for Your Business Listing Website India
+          </Typography>
+          <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "700px", margin: "0 auto" }}>
+            We don't just build listing websites; we create scalable, feature-rich platforms that drive engagement, conversions, and growth for your business.
           </Typography>
         </Box>
 
-        {/* 3x2 Grid Differentiators */}
-        <Grid container spacing={3} sx={{ mb: 14 }} rowSpacing={10}>
+        {/* 2x2 Grid Differentiators */}
+        <Grid container spacing={4} sx={{ mb: 14 }}>
           {differentiators.map((item, index) => {
             const Icon = item.icon;
             return (
-              <Grid item xs={12} sm={6} md={4} key={index}>
+              <Grid item xs={12} sm={6} md={6} key={index}>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}

@@ -3,11 +3,11 @@ import { Box, Container, Typography, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 
 const deliverySteps = [
-  { num: "01", title: "Discovery &\nCurriculum Mapping", sub: "" },
-  { num: "02", title: "UX Design\n& Prototype", sub: "" },
-  { num: "03", title: "Development\nSprints", sub: "" },
-  { num: "04", title: "Content Migration\n& Testing", sub: "" },
-  { num: "05", title: "Launch &\nGrowth Support", sub: "" },
+  { num: "01", title: "Requirement Analysis\n& Planning", sub: "Understand your goals and map learning structure" },
+  { num: "02", title: "UI/UX Design\n& Prototyping", sub: "Create user-friendly designs and interactive prototypes" },
+  { num: "03", title: "Development\nSprints", sub: "Build and integrate LMS features in phases" },
+  { num: "04", title: "Content Setup\n& Testing", sub: "Upload content, test functionality, and ensure quality" },
+  { num: "05", title: "Launch &\nOngoing Support", sub: "Deploy the platform and provide continuous support" },
 ];
 
 const LMSDeliveryProcess = () => (
@@ -28,7 +28,8 @@ const LMSDeliveryProcess = () => (
                 </Box>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.12 + 0.2 }}>
-                <Typography sx={{ fontWeight: 700, color: "#ffffff", fontSize: "13px", textAlign: "center", whiteSpace: "pre-line", lineHeight: 1.4 }}>{step.title}</Typography>
+                <Typography sx={{ fontWeight: 700, color: "#ffffff", fontSize: "13px", textAlign: "center", whiteSpace: "pre-line", lineHeight: 1.4, mb: 1 }}>{step.title}</Typography>
+                <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "12px", textAlign: "center", lineHeight: 1.3 }}>{step.sub}</Typography>
               </motion.div>
             </Box>
           ))}

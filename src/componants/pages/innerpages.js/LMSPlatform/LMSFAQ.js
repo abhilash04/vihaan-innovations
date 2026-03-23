@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const faqs = [
-  { q: "Can students download videos for offline viewing?", a: "Yes, our mobile apps support offline video downloads for learners who want to study without internet access." },
-  { q: "Do you support regional and multiple languages?", a: "Absolutely. Our LMS supports multi-language content, UI localization, and regional language course delivery." },
-  { q: "Can we migrate our existing courses?", a: "Yes, we can import existing courses, user data, quiz content, and progress records from any existing platform." },
-  { q: "Is the platform web-only?", a: "No. We deliver fully native iOS and Android mobile apps alongside the web platform, optimized for learning on the go." },
-  { q: "Do instructors get separate dashboards?", a: "Yes. Instructors get a dedicated portal to manage courses, track student progress, conduct live classes, and view earnings." },
-  { q: "How is video content protected?", a: "All video content is DRM protected, hosted on secure CDN (AWS/Cloudflare), with per-user streaming and no direct download URLs." },
-  { q: "How do we handle content piracy?", a: "We implement watermarking, screenshot prevention on mobile apps, and DRM encryption to prevent unauthorized content distribution." },
-  { q: "Can we white-label the platform completely?", a: "100%. You get your own branding, custom domain, app store listings under your name, and zero Vihaan watermarks anywhere." },
+  { q: "Can students download videos for offline viewing?", a: "Yes, our mobile apps built through LMS Website Development support offline video downloads so learners can study without internet access." },
+  { q: "Do you support regional and multiple languages?", a: "Yes, the platform supports multiple languages to provide a better learning experience for diverse users." },
+  { q: "Can we migrate our existing courses?", a: "Yes, we help you easily transfer your existing courses and content to the new LMS platform." },
+  { q: "Is the platform web-only?", a: "No, it works on web, mobile, and tablets for a seamless multi-device experience." },
+  { q: "Do instructors get separate dashboards?", a: "Yes, instructors have dedicated dashboards to manage courses, students, and performance." },
+  { q: "How is video content protected?", a: "We use secure streaming, encryption, and access controls to protect your content." },
+  { q: "How do you handle content piracy?", a: "Advanced security features like DRM, watermarking, and restricted access help prevent piracy." },
+  { q: "Can we white-label the platform completely?", a: "Yes, we provide fully white-labeled solutions with your branding, domain, and customisation." },
 ];
 
 const LMSFAQ = () => {
@@ -20,7 +20,7 @@ const LMSFAQ = () => {
     <Box sx={{ bgcolor: "#f8fafc", py: 12 }}>
       <Container maxWidth="md">
         <Box sx={{ textAlign: "center", mb: 8 }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>FAQ – Address Last-Mile Objections</Typography>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>FAQ – Common Questions</Typography>
         </Box>
         {faqs.map((faq, i) => (
           <motion.div key={i} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.06 }}>

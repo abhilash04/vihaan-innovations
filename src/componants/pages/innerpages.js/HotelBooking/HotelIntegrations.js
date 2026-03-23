@@ -14,16 +14,19 @@ const integrations = [
   { name: "Zapier", color: "#f97316", letter: "Z" },
   { name: "Google Hotel\nAds", color: "#4285F4", letter: "G" },
   { name: "Twilio\nSMS", color: "#f22f46", letter: "T" },
-  { name: "Vihaan\nCentral API", color: "#0f766e", letter: "V" },
+  { name: "Custom\nAPIs", color: "#0f766e", letter: "C" },
 ];
 
 const HotelIntegrations = () => (
   <Box sx={{ bgcolor: "#f8fafc", py: 8 }}>
     <Container maxWidth="md">
       <Box sx={{ textAlign: "center", mb: 8 }}>
-        <Typography sx={{ color: "#0f766e", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>Integrations</Typography>
+        <Typography sx={{ color: "#0f766e", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>Third-Party Integrations</Typography>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "34px" }, mb: 2 }}>
-          Seamless Integration with the Hospitality Ecosystem
+          Connect Your Ecosystem
+        </Typography>
+        <Typography sx={{ color: "#64748b", fontSize: "16px", maxWidth: "700px", mx: "auto" }}>
+          Our custom hotel management software connects smoothly with the third-party platforms your business already uses.
         </Typography>
       </Box>
       <Paper elevation={0} sx={{ p: 6, borderRadius: "28px", bgcolor: "#ffffff", border: "1px solid rgba(0,0,0,0.06)", boxShadow: "0 15px 50px rgba(0,0,0,0.04)" }}>

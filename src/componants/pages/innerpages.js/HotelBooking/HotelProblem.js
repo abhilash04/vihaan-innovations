@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 import CancelIcon from '@mui/icons-material/Cancel';
 
 const problems = [
-  "Paying 15–23% commissions to OTAs",
-  "No direct booking on hotel website",
-  "Reservations scattered without a single system",
-  "Overbooking and double-booking fixes",
-  "Guest information scattered",
-  "Manual check-in/out paperwork wastes time",
-  "No visibility on revenue per room/occupancy",
-  "Housekeeping has no digital task management",
+  "Paying 15–25% commission to booking platforms",
+  "No direct bookings from your own website",
+  "Reservations spread across multiple systems",
+  "Overbooking and duplicate booking issues",
+  "Guest data not properly organised",
+  "Manual check-in and check-out processes",
+  "No clear view of room revenue and occupancy",
+  "Housekeeping is not managed digitally",
 ];
 
 const HotelProblem = () => (
@@ -23,10 +23,13 @@ const HotelProblem = () => (
           The Problem
         </Typography>
         <Typography sx={{ fontWeight: 700, color: "#dc2626", fontSize: { xs: "18px", md: "22px" }, mb: 1 }}>
-          OTAs Eating Into Your Revenue?
+          Are you losing revenue to third-party booking platforms?
         </Typography>
-        <Typography sx={{ fontWeight: 600, color: "#475569", fontSize: "18px" }}>
-          Clunky Systems Affecting Guest Experience?
+        <Typography sx={{ fontWeight: 600, color: "#475569", fontSize: "18px", mb: 2 }}>
+          Are outdated systems affecting your guest experience?
+        </Typography>
+        <Typography sx={{ color: "#64748b", fontSize: "16px", maxWidth: "600px", mx: "auto" }}>
+          Many businesses running hotel booking websites face these common challenges:
         </Typography>
       </Box>
       <Grid container spacing={6} alignItems="center">
@@ -37,7 +40,7 @@ const HotelProblem = () => (
               {/* OTA commission illustration mock */}
               <Box sx={{ mb: 3 }}>
                 <Typography sx={{ fontWeight: 900, color: "#dc2626", fontSize: "48px", lineHeight: 1 }}>23%</Typography>
-                <Typography sx={{ color: "#64748b", fontSize: "14px", fontWeight: 600 }}>Commission to OTAs per booking</Typography>
+                <Typography sx={{ color: "#64748b", fontSize: "14px", fontWeight: 600 }}>Up to 23% commission lost on every booking</Typography>
               </Box>
               <Box sx={{ display: "flex", justifyContent: "space-around", mb: 2 }}>
                 {["Booking.com", "Airbnb", "Expedia"].map((ota, i) => (
@@ -52,7 +55,7 @@ const HotelProblem = () => (
               <Box sx={{ height: "6px", bgcolor: "#fef2f2", borderRadius: "3px", overflow: "hidden", mx: 2 }}>
                 <motion.div initial={{ width: "0%" }} whileInView={{ width: "75%" }} viewport={{ once: true }} transition={{ duration: 1.5 }} style={{ height: "100%", background: "#dc2626", borderRadius: "3px" }} />
               </Box>
-              <Typography sx={{ mt: 1.5, fontSize: "12px", color: "#dc2626", fontWeight: 600 }}>Revenue leaking to OTAs</Typography>
+              <Typography sx={{ mt: 1.5, fontSize: "12px", color: "#dc2626", fontWeight: 600 }}>Revenue continues to leak through third-party platforms</Typography>
             </Paper>
           </motion.div>
         </Grid>

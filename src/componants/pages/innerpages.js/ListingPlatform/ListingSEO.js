@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
@@ -8,28 +8,93 @@ const ListingSEO = () => {
     <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
       <Container maxWidth="lg">
 
-        {/* SEO & Growth Header */}
-        <Box sx={{ textAlign: "center", mb: 6 }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
-            SEO & Growth
-          </Typography>
-          <Typography sx={{ color: "#666", fontSize: "16px" }}>
-            Rising traffic and ratios on search results in rich snippets.
-          </Typography>
-        </Box>
+        <Grid container spacing={8} alignItems="center">
 
-        {/* Two Mockup Panels */}
-        <Grid container spacing={6} alignItems="center">
+          {/* Left: SEO Text Content */}
+          <Grid item xs={12} md={5}>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <Typography sx={{ color: "#2563eb", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: 1, mb: 1 }}>
+                SEO & Growth
+              </Typography>
+              <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+                Boost Visibility and Traffic on Your Business Listing Website India
+              </Typography>
+              <Typography sx={{ color: "#666", fontSize: "16px", mb: 4, lineHeight: 1.6 }}>
+                Increase organic reach, traffic, and engagement with rich snippets, advanced analytics, and smart SEO features designed for every business listing website India.
+              </Typography>
 
-          {/* Left: Analytics Chart mockup */}
-          <Grid item xs={12} md={6}>
+              <Typography sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: "16px", mb: 2 }}>CORE SEO & GROWTH BLOCKS</Typography>
+
+              <Box component="ul" sx={{
+                pl: 0, m: 0, listStyle: "none",
+                '& li': {
+                  position: "relative",
+                  pl: "24px",
+                  mb: 2.5,
+                  color: "#444",
+                  fontSize: "15px",
+                  "&::before": {
+                    content: '""',
+                    position: "absolute",
+                    left: 0,
+                    top: "8px",
+                    width: "6px",
+                    height: "6px",
+                    borderRadius: "50%",
+                    bgcolor: "#22c55e"
+                  }
+                }
+              }}>
+                <li>Track keyword performance and rankings continuously.</li>
+                <li>Generate XML sitemaps and meta tags automatically.</li>
+                <li>Monitor click-through rates (CTR) for listings.</li>
+                <li>Optimize category and listing pages for rich snippets.</li>
+              </Box>
+
+              <Box sx={{ mt: 5 }}>
+                <Typography sx={{ color: "#1a1a1a", fontWeight: 700, fontSize: "16px", mb: 2 }}>
+                  Optimize Your Business Listing Website India for Maximum Traffic
+                </Typography>
+                <Box
+                  component="button"
+                  sx={{
+                    bgcolor: "#2563eb",
+                    color: "#ffffff",
+                    fontWeight: 700,
+                    fontSize: "15px",
+                    px: { xs: 4, md: 5 },
+                    py: 1.5,
+                    borderRadius: "8px",
+                    textTransform: "none",
+                    cursor: "pointer",
+                    border: "none",
+                    boxShadow: "0 4px 14px rgba(37, 99, 235, 0.3)",
+                    "&:hover": {
+                      bgcolor: "#1d4ed8",
+                      boxShadow: "0 6px 20px rgba(37, 99, 235, 0.4)",
+                    },
+                  }}
+                >
+                  Get Started Today
+                </Box>
+              </Box>
+            </motion.div>
+          </Grid>
+
+          {/* Right: Analytics Mockup Stack */}
+          <Grid item xs={12} md={7}>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Paper elevation={0} sx={{ p: 4, bgcolor: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: "16px", boxShadow: "0 10px 30px rgba(0,0,0,0.03)" }}>
+              <Paper elevation={0} sx={{ mb: 4, p: 4, bgcolor: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: "16px", boxShadow: "0 10px 30px rgba(0,0,0,0.03)" }}>
 
                 {/* Chart Title Mock */}
                 <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 3 }}>
@@ -78,10 +143,7 @@ const ListingSEO = () => {
                 </Box>
               </Paper>
             </motion.div>
-          </Grid>
 
-          {/* Right: Google SERP Mockup */}
-          <Grid item xs={12} md={6}>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -109,10 +171,11 @@ const ListingSEO = () => {
               </Paper>
             </motion.div>
           </Grid>
+
         </Grid>
 
       </Container>
-    </Box>
+    </Box >
   );
 };
 

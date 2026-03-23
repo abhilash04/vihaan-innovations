@@ -6,23 +6,28 @@ import { Building, Home, Key, Star, ArrowRight } from "lucide-react";
 const audiences = [
   {
     icon: <Building size={24} />,
-    title: "Boutique Resorts",
-    desc: "Tailored operations for 50-200 room luxury escapes.",
+    title: "Resort Owners",
+    desc: "Manage bookings easily • Track revenue • Monitor performance",
   },
   {
     icon: <Home size={24} />,
-    title: "Vacation Rentals",
-    desc: "Single or multi-property portfolios with unified view.",
+    title: "Resort Chains",
+    desc: "Manage multiple locations • Central booking control • Consistent guest experience",
   },
   {
     icon: <Key size={24} />,
-    title: "Eco-Lodges",
-    desc: "Streamlined inventory for sustainable retreats.",
+    title: "Boutique Resorts & Villas",
+    desc: "Showcase luxury rooms • Manage bookings smoothly • Improve guest experience",
   },
   {
     icon: <Star size={24} />,
-    title: "Luxury Hotels",
-    desc: "High-end chains requiring multi-currency & deep analytics.",
+    title: "Operations Managers",
+    desc: "Handle daily tasks • Track maintenance • Manage staff",
+  },
+  {
+    icon: <Building size={24} />,
+    title: "Travel Businesses",
+    desc: "Manage bookings easily • Communicate with guests • Track performance",
   },
 ];
 
@@ -55,18 +60,7 @@ const ResortAudience = () => {
                 mb: 2,
               }}
             >
-              Who Benefits From Our Software
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{
-                fontFamily: "'Outfit', sans-serif",
-                color: "rgba(245, 245, 240, 0.6)",
-                maxWidth: "600px",
-                margin: "0 auto",
-              }}
-            >
-              Whether you manage a boutique escape or a luxury resort chain, our modules adapt to your operational layout.
+              Who Should Use a Resort Management System
             </Typography>
           </motion.div>
         </Box>

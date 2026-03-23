@@ -3,11 +3,11 @@ import { Box, Container, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 
 const steps = [
-  { num: "01", title: "Full Stack\nPlanning", sub: "Discovery, scope, requirements" },
-  { num: "02", title: "UX Design\n& Prototype", sub: "Wireframes, UI approval" },
-  { num: "03", title: "Development\nSprints", sub: "Agile 2-week build cycles" },
-  { num: "04", title: "3D Custom\nSupport", sub: "QA, testing, content migration" },
-  { num: "05", title: "Launch &\nGrowth Support", sub: "Go-live + 60 days support" },
+  { num: "01", title: "Project Planning", sub: "We start by understanding your requirements, business goals, and project scope. This helps us create a strong foundation for the entire project." },
+  { num: "02", title: "UI/UX Design\n& Prototype", sub: "Our team designs wireframes and user-friendly interfaces to ensure a smooth and engaging user experience before development begins." },
+  { num: "03", title: "Development Phases", sub: "We use an agile development approach with regular updates, allowing flexibility and continuous improvements during the development process." },
+  { num: "04", title: "Testing &\nQuality Assurance", sub: "The platform is thoroughly tested to identify and fix bugs, ensuring smooth performance and system stability." },
+  { num: "05", title: "Launch &\nOngoing Support", sub: "After deployment, we provide continuous support, updates, and improvements to keep the platform running efficiently." },
 ];
 
 const HotelDeliveryProcess = () => (
@@ -15,8 +15,11 @@ const HotelDeliveryProcess = () => (
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 10 }}>
         <Typography sx={{ color: "#0f766e", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>Our Delivery Process</Typography>
-        <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "34px" } }}>
-          Step-by-Step Delivery Method for Custom Platforms
+        <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "34px" }, mb: 2 }}>
+          Step-by-Step Development Approach for Custom Platforms
+        </Typography>
+        <Typography sx={{ color: "#64748b", fontSize: "16px", mb: 1, maxWidth: "600px", mx: "auto" }}>
+          As a trusted hotel booking app development company, we follow a clear and structured process to deliver scalable and high-performance booking solutions.
         </Typography>
       </Box>
       <Box sx={{ overflowX: "auto" }}>
