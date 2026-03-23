@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import SearchIcon from '@mui/icons-material/Search';
 import CancelIcon from '@mui/icons-material/Cancel';
@@ -120,25 +120,25 @@ const ListingProblem = () => {
               </Box>
 
               <Button
-                  variant="contained"
-                  sx={{
-                    bgcolor: "#ef4444",
-                    color: "#ffffff",
-                    fontWeight: 700,
-                    fontSize: "15px",
-                    px: { xs: 4, md: 5 },
-                    py: 1.5,
-                    borderRadius: "8px",
-                    textTransform: "none",
-                    boxShadow: "0 4px 14px rgba(239, 68, 68, 0.3)",
-                    "&:hover": {
-                      bgcolor: "#dc2626",
-                      boxShadow: "0 6px 20px rgba(239, 68, 68, 0.4)",
-                    },
-                  }}
-                >
-                  Get Started
-                </Button>
+                variant="contained"
+                sx={{
+                  bgcolor: "#ef4444",
+                  color: "#ffffff",
+                  fontWeight: 700,
+                  fontSize: "15px",
+                  px: { xs: 4, md: 5 },
+                  py: 1.5,
+                  borderRadius: "8px",
+                  textTransform: "none",
+                  boxShadow: "0 4px 14px rgba(239, 68, 68, 0.3)",
+                  "&:hover": {
+                    bgcolor: "#dc2626",
+                    boxShadow: "0 6px 20px rgba(239, 68, 68, 0.4)",
+                  },
+                }}
+              >
+                Get Started
+              </Button>
             </motion.div>
           </Grid>
 
