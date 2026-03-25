@@ -49,9 +49,8 @@ const categories = [
 ];
 
 const CategoryCard = styled(Paper)(({ theme, bordercolor }) => ({
-  background: "rgba(255, 255, 255, 0.03)",
-  backdropFilter: "blur(12px)",
-  border: "1px solid rgba(255, 255, 255, 0.08)",
+  background: "#ffffff",
+  border: "1px solid rgba(0, 0, 0, 0.04)",
   borderRadius: "20px",
   padding: "32px",
   textAlign: "left",
@@ -62,11 +61,10 @@ const CategoryCard = styled(Paper)(({ theme, bordercolor }) => ({
   display: "flex",
   flexDirection: "column",
   height: "100%",
+  boxShadow: "0 10px 30px rgba(0, 0, 0, 0.02)",
   "&:hover": {
     transform: "translateY(-10px)",
-    background: "rgba(255, 255, 255, 0.06)",
-    borderColor: `${bordercolor}40`,
-    boxShadow: `0 20px 40px ${bordercolor}15`,
+    boxShadow: `0 20px 40px rgba(0, 0, 0, 0.04)`,
   },
 }));
 
@@ -81,54 +79,61 @@ const IconBox = styled(Box)(({ gradient }) => ({
   color: "#ffffff",
   marginBottom: "24px",
   transition: "all 0.3s ease",
-  boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
+  boxShadow: "0 8px 20px rgba(0,0,0,0.05)",
 }));
 
-const ServicesOverview = () => {
+const ServicesOverview = ({ data }) => {
+  const { 
+    subtitle = "WHAT WE OFFER",
+    title = "Comprehensive Technology Services",
+    description = "We empower businesses using advanced digital enablement from custom codes overlays to strategic marketing pillars.",
+    list = categories 
+  } = data || {};
+
   return (
-    <Box sx={{ bgcolor: "#0a1628", py: { xs: 10, md: 14 }, position: "relative" }}>
+    <Box sx={{ bgcolor: "#f1f5f9", py: { xs: 6, md: 8 }, position: "relative" }}>
       <Container maxWidth="lg">
         {/* Heading Block */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
           <Box sx={{ display: "inline-flex", alignItems: "center", gap: 1, mb: 1.5 }}>
-            <Box sx={{ width: "30px", height: "1.5px", bgcolor: "#06b6d4" }} />
-            <Typography sx={{ color: "#06b6d4", fontWeight: 600, fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase" }}>
-              WHAT WE OFFER
+            <Box sx={{ width: "30px", height: "1.5px", bgcolor: "#0087c9" }} />
+            <Typography sx={{ color: "#0087c9", fontWeight: 700, fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase" }}>
+              {subtitle}
             </Typography>
           </Box>
-          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "32px", md: "48px" }, fontFamily: "Urbanist, sans-serif", color: "#ffffff", mb: 2 }}>
-            Comprehensive Technology Services
+          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "32px", md: "44px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2 }}>
+            {title}
           </Typography>
-          <Typography sx={{ color: "#94a3b8", maxWidth: "560px", mx: "auto", fontSize: "16px", lineHeight: 1.7 }}>
-            We empower businesses using advanced digital enablement from custom codes overlays to strategic marketing pillars.
+          <Typography sx={{ color: "#475569", maxWidth: "560px", mx: "auto", fontSize: "16px", lineHeight: 1.7 }}>
+            {description}
           </Typography>
         </Box>
 
         {/* Categories Grid */}
         <Grid container spacing={3}>
-          {categories.map((cat, i) => {
+          {list.map((cat, i) => {
             const SvgIcon = cat.icon;
             return (
-              <Grid item xs={12} sm={6} md={3} key={i}>
+              <Grid item xs={12} sm={6} md={3} key={i} mb={6}>
                 <CategoryCard bordercolor={cat.color}>
                   <IconBox gradient={cat.gradient}>
                     <SvgIcon sx={{ fontSize: 28 }} />
                   </IconBox>
-                  <Typography variant="h6" sx={{ color: "#ffffff", fontWeight: 700, mb: 1, fontSize: "20px", fontFamily: "Urbanist, sans-serif" }}>
+                  <Typography variant="h6" sx={{ color: "#0a2233", fontWeight: 800, mb: 1, fontSize: "19px", fontFamily: "Urbanist, sans-serif" }}>
                     {cat.title}
                   </Typography>
-                  <Typography sx={{ color: "#94a3b8", fontSize: "14px", lineHeight: 1.6, mb: 3, flexGrow: 1 }}>
+                  <Typography sx={{ color: "#64748b", fontSize: "14px", lineHeight: 1.6, flexGrow: 1 }}>
                     {cat.description}
                   </Typography>
-                  
+
                   <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", mt: "auto" }}>
-                    <Box sx={{ bgcolor: "rgba(6, 182, 212, 0.1)", border: "1px solid rgba(6, 182, 212, 0.2)", px: 1.5, py: 0.5, borderRadius: "20px" }}>
-                      <Typography sx={{ color: "#06b6d4", fontSize: "11px", fontWeight: 600 }}>
+                    <Box sx={{ bgcolor: "rgba(0, 135, 201, 0.08)", border: "1px solid rgba(0, 135, 201, 0.15)", px: 1.5, py: 0.5, borderRadius: "20px" }}>
+                      <Typography sx={{ color: "#0087c9", fontSize: "11px", fontWeight: 700 }}>
                         {cat.count}
                       </Typography>
                     </Box>
-                    <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, color: "#06b6d4", cursor: "pointer", "&:hover": { color: "#ffffff" } }}>
-                      <Typography sx={{ fontSize: "13px", fontWeight: 600 }}>Explore</Typography>
+                    <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, color: "#0087c9", cursor: "pointer", "&:hover": { color: "#005885" } }}>
+                      <Typography sx={{ fontSize: "13px", fontWeight: 700 }}>Explore</Typography>
                       <CallMadeIcon sx={{ fontSize: 14 }} />
                     </Box>
                   </Box>

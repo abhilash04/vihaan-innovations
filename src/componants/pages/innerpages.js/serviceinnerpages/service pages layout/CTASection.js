@@ -2,7 +2,23 @@ import React from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
 
-const CTASection = () => {
+const CTASection = ({ data }) => {
+  const {
+    title = (
+      <>
+        Ready to Transform Your<br />Business With Technology?
+      </>
+    ),
+    description = (
+      <>
+        Let's map out your ideal solution.<br />
+        Book a free 45-minute discovery call. We'll formulate a custom strategy breakdown for your enterprise
+      </>
+    ),
+    buttonText = "Get Started Today",
+    brandText = "Vihaan Innovations"
+  } = data || {};
+
   return (
     <Box sx={{ position: "relative", background: "linear-gradient(135deg, #fce7f3 0%, #e0f2fe 40%, #ccfbf1 100%)", pt: 12, pb: 6, overflow: "hidden" }}>
 
@@ -34,12 +50,11 @@ const CTASection = () => {
           <Box sx={{ textAlign: "center" }}>
 
             <Typography variant="h2" sx={{ fontWeight: 800, color: "#0a1628", fontSize: { xs: "36px", md: "52px" }, mb: 3, lineHeight: 1.2, fontFamily: "Urbanist, sans-serif" }}>
-              Ready to Transform Your<br />Business With Technology?
+              {title}
             </Typography>
 
             <Typography sx={{ color: "#3b4656", fontSize: "18px", mb: 6, maxWidth: "600px", mx: "auto", lineHeight: 1.6, fontFamily: "Inter, sans-serif" }}>
-              Let's map out your ideal solution.<br />
-              Book a free 45-minute discovery call. We'll formulate a custom strategy breakdown for your enterprise
+              {description}
             </Typography>
 
             <Box sx={{ display: "flex", flexDirection: "column", gap: 3, alignItems: "center" }}>
@@ -66,7 +81,7 @@ const CTASection = () => {
               </Button>
 
               <Box sx={{ display: "flex", alignItems: "center", gap: 1, color: "#64748b", cursor: "pointer", "&:hover": { color: "#0a1628" }, transition: "color 0.3s" }}>
-                <Typography sx={{ fontWeight: 600, fontSize: "15px", fontFamily: "Inter, sans-serif" }}>Vihaan Innovations</Typography>
+                <Typography sx={{ fontWeight: 600, fontSize: "15px", fontFamily: "Inter, sans-serif" }}>{brandText}</Typography>
               </Box>
             </Box>
 
