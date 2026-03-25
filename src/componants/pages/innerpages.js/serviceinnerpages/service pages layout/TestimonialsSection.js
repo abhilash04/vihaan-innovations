@@ -51,17 +51,25 @@ const TestimonialCard = styled(Paper)(({ theme }) => ({
   },
 }));
 
-const TestimonialsSection = () => {
+const TestimonialsSection = ({ data }) => {
+  const {
+    subtitle = "CLIENT LOVE",
+    title = "What Our Clients Say About Us",
+    list = testimonials,
+    rating = "4.9/5",
+    reviews = "500+"
+  } = data || {};
+
   return (
     <Box sx={{ bgcolor: "#ffffff", py: { xs: 6, md: 8 }, position: "relative", overflow: "hidden" }}>
       <Container maxWidth="lg">
         {/* Heading */}
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography sx={{ color: "#0087c9", fontWeight: 700, fontSize: "12px", letterSpacing: "1px", mb: 1.5 }}>
-            CLIENT LOVE
+            {subtitle}
           </Typography>
           <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "32px", md: "44px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2 }}>
-            What Our Clients Say About Us
+            {title}
           </Typography>
         </Box>
       </Container>
@@ -69,7 +77,7 @@ const TestimonialsSection = () => {
       {/* Row 1 Scrolling Left */}
       <Box sx={{ mb: 4 }}>
         <TickerContainer speed="30s" direction="left">
-          {[...testimonials, ...testimonials].map((item, i) => (
+          {[...list, ...list].map((item, i) => (
             <TestimonialCard key={i} elevation={0}>
               <Box sx={{ display: "flex", gap: 0.5, color: "#f59e0b" }}>
                 {[...Array(5)].map((_, j) => <StarIcon key={j} sx={{ fontSize: 16 }} />)}
@@ -99,11 +107,11 @@ const TestimonialsSection = () => {
       <Box sx={{ display: "flex", justifyContent: "center", }}>
         <Box sx={{ bgcolor: "rgba(0, 135, 201, 0.06)", border: "1px solid rgba(0, 135, 201, 0.15)", px: 3, py: 1, borderRadius: "50px", display: "flex", gap: 2, alignItems: "center" }}>
           <Typography sx={{ color: "#0087c9", fontSize: "13px", fontWeight: 700 }}>
-            4.9/5 Average Rating ⭐
+            {rating} Average Rating ⭐
           </Typography>
           <Box sx={{ width: "4px", height: "4px", bgcolor: "#0087c9", borderRadius: "50%" }} />
           <Typography sx={{ color: "#0087c9", fontSize: "13px", fontWeight: 700 }}>
-            500+ Reviews
+            {reviews} Reviews
           </Typography>
         </Box>
       </Box>

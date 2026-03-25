@@ -66,7 +66,19 @@ const Watermark = styled(Typography)(({ theme }) => ({
   userSelect: "none",
 }));
 
-const WhyChooseUs = () => {
+const WhyChooseUs = ({ data }) => {
+  const {
+    subtitle = "WHY VIHAAN",
+    title = "Why Leading Businesses Trust Vihaan Innovations",
+    description = "We engineering robust digital architectures bridging technical gaps efficiently. From product strategies mapping detailed timelines framing secure roll-out workflows safely.",
+    stats = [
+      { value: "500+", label: "Projects" },
+      { value: "150+", label: "Clients" },
+      { value: "10+", label: "Years" },
+    ],
+    reasons = reasonCards
+  } = data || {};
+
   return (
     <Box sx={{ bgcolor: "#f1f5f9", py: { xs: 4, md: 6 }, position: "relative" }}>
       <Container maxWidth="lg">
@@ -76,25 +88,21 @@ const WhyChooseUs = () => {
           <Grid item xs={12} md={5}>
             <Box sx={{ display: "inline-flex", alignItems: "center", gap: 1, mb: 1.5 }}>
               <Typography sx={{ color: "#0087c9", fontWeight: 700, fontSize: "12px", letterSpacing: "1px", textTransform: "uppercase" }}>
-                WHY VIHAAN
+                {subtitle}
               </Typography>
             </Box>
             <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "32px", md: "44px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2, lineHeight: 1.2 }}>
-              Why Leading Businesses Trust Vihaan Innovations
+              {title}
             </Typography>
             <Typography sx={{ color: "#475569", fontSize: "16px", lineHeight: 1.8, mb: 4 }}>
-              We engineering robust digital architectures bridging technical gaps efficiently. From product strategies mapping detailed timelines framing secure roll-out workflows safely.
+              {description}
             </Typography>
 
             <Box sx={{ borderBottom: "2px solid #0087c9", width: "40px", mb: 4 }} />
 
             {/* Stat Row */}
             <Grid container spacing={3} sx={{ mb: 4 }}>
-              {[
-                { value: "500+", label: "Projects" },
-                { value: "150+", label: "Clients" },
-                { value: "10+", label: "Years" },
-              ].map((stat, idx) => (
+              {stats.map((stat, idx) => (
                 <Grid item xs={4} key={idx}>
                   <Typography variant="h4" sx={{ fontWeight: 800, color: "#0a2233", fontFamily: "Urbanist, sans-serif" }}>
                     {stat.value}
@@ -124,7 +132,7 @@ const WhyChooseUs = () => {
           {/* Right Column - 2x2 Grid */}
           <Grid item xs={12} md={7} >
             <Grid container spacing={3}>
-              {reasonCards.map((card, i) => {
+              {reasons.map((card, i) => {
                 const SvgIcon = card.icon;
                 return (
                   <Grid item xs={12} sm={6} key={i} mb={8}>
