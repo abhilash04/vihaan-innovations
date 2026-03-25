@@ -116,11 +116,18 @@ const DashboardMockup = () => (
   </Box>
 );
 
-const DetailedServices = () => {
+const DetailedServices = ({ data }) => {
+  const {
+    subtitle = "OUR SERVICES",
+    title = "We think big and work across leading technology platforms",
+    description = "Empowering businesses through cutting-edge technology solutions across multiple domains",
+    services = serviceData
+  } = data || {};
+
   const [activeTab, setActiveTab] = useState(0);
   const [activeItem, setActiveItem] = useState(1); // Set default active row (e.g. 1 for Web Development)
 
-  const activeCat = serviceData[activeTab];
+  const activeCat = services[activeTab] || { cards: [] };
 
   return (
     <Box sx={{ bgcolor: "#ffffff", py: { xs: 8, md: 10 }, position: "relative", overflow: "hidden" }}>
@@ -138,7 +145,7 @@ const DetailedServices = () => {
               mb: 1.5,
             }}
           >
-            OUR SERVICES
+            {subtitle}
           </Typography>
           <Typography
             variant="h3"
@@ -151,9 +158,10 @@ const DetailedServices = () => {
               mb: 1.5,
             }}
           >
-            We think big and work across leading technology platforms          </Typography>
+            {title}
+          </Typography>
           <Typography sx={{ color: "text.secondary", fontSize: "15px", fontWeight: 400 }}>
-            Empowering businesses through cutting-edge technology solutions across multiple domains
+            {description}
           </Typography>
         </Box>
 
@@ -190,8 +198,9 @@ const DetailedServices = () => {
                     exit={{ opacity: 0, x: -10 }}
                     transition={{ duration: 0.2 }}
                   >
-                    {activeCat.cards.map((card, idx) => {
+                    {activeCat?.cards?.map((card, idx) => {
                       const isActive = idx === activeItem;
+                      const cardsLen = activeCat?.cards?.length || 0;
                       return (
                         <Box
                           key={idx}
@@ -201,13 +210,13 @@ const DetailedServices = () => {
                             alignItems: "center",
                             gap: 2,
                             p: 2,
-                            mb: idx !== activeCat.cards.length - 1 ? 0 : 0, // removed mb, using border stack
+                            mb: idx !== cardsLen - 1 ? 0 : 0, // removed mb, using border stack
                             borderRadius: isActive ? "10px" : "0px",
                             bgcolor: isActive ? "#e8f1ffff" : "#fafdfdff",
                             border: isActive ? "1px solid #3B82F6" : "1px solid transparent",
                             cursor: "pointer",
                             transition: "all 0.2s ease",
-                            borderBottom: !isActive && idx !== activeCat.cards.length - 1 ? "1px solid #F3F4F6" : "none",
+                            borderBottom: !isActive && idx !== cardsLen - 1 ? "1px solid #F3F4F6" : "none",
                             "&:hover": {
                               bgcolor: isActive ? "#F0F7FF" : "rgba(0,0,0,0.015)",
                             },

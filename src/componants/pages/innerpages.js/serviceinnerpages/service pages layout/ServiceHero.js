@@ -100,7 +100,15 @@ const FloatingOrb = ({ size, color, delay, top, left, bottom, right }) => (
   />
 );
 
-const ServiceHero = () => {
+const ServiceHero = ({ data }) => {
+  const {
+    title = "Web Design And Development Services in Bangalore",
+    subtitle = "Delivering Premium Websites at Affordable Price.",
+    badgeText = "Grow Your Business Online!",
+    buttonText = "Enquiry Now",
+    features = listItems
+  } = data || {};
+
   return (
     <HeroWrapper>
       {/* Background Orbs */}
@@ -115,16 +123,16 @@ const ServiceHero = () => {
           <Grid item xs={12} md={6.5}>
             <Box component={motion.div} initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, ease: "easeOut" }}>
               <Typography variant="h1" sx={{ fontWeight: 800, fontSize: { xs: "36px", md: "52px" }, fontFamily: "Urbanist, sans-serif", color: "#0a1628", lineHeight: 1.15, mb: 1 }}>
-                Web Design And Development Services in Bangalore
+                {title}
               </Typography>
 
               <Typography component={motion.div} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} sx={{ color: "#3b4656ff", fontSize: "18px", fontWeight: 500, fontFamily: "Inter, sans-serif", mb: 4 }}>
-                Delivering Premium Websites at Affordable Price.
+                {subtitle}
               </Typography>
 
               {/* Grid List */}
               <Grid container spacing={2} sx={{ mb: 4 }}>
-                {listItems.map((item, index) => {
+                {features.map((item, index) => {
                   const SvgIcon = item.icon;
                   return (
                     <Grid item xs={12} sm={6} key={index}>
@@ -138,11 +146,11 @@ const ServiceHero = () => {
               </Grid>
 
               <Typography component={motion.div} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 1.1 }} sx={{ color: "#0a1628", fontWeight: 800, fontSize: "16px", mb: 2.5, fontFamily: "Urbanist, sans-serif" }}>
-                Grow Your Business Online!
+                {badgeText}
               </Typography>
 
               <GradientButton component={motion.div} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ type: "spring", stiffness: 120, delay: 1.3 }}>
-                Enquiry Now
+                {buttonText}
               </GradientButton>
             </Box>
           </Grid>

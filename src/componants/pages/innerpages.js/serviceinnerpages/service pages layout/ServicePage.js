@@ -13,21 +13,21 @@ import CTASection from "./CTASection";
 import Header from "../../../../common/HeaderSec";
 import FooterAndPopup from "../../../../common/Footer";
 
-const ServicePage = () => {
+const ServicePage = ({ serviceData = {} }) => {
   return (
     <Box sx={{ bgcolor: "#ffffff", color: "#1e293b", overflow: "hidden", fontFamily: "Inter, sans-serif" }}>
       <Header />
-      <ServiceHero />
-      <ServicesOverview />
-      <DetailedServices />
-      <WhyChooseUs />
-      <ProcessSection />
-      <IndustryExpertise />
-      <AwardsSection />
-      <TechStack />
-      <TestimonialsSection />
+      <ServiceHero data={serviceData.hero} />
+      <ServicesOverview data={serviceData.overview} />
+      <DetailedServices data={serviceData.detailed} />
+      <WhyChooseUs data={serviceData.whyChooseUs} />
+      <ProcessSection data={serviceData.process} />
+      <IndustryExpertise data={serviceData.industry} />
+      <AwardsSection data={serviceData.awards} />
+      <TechStack data={serviceData.techStack} />
+      <TestimonialsSection data={serviceData.testimonials} />
 
-      <CTASection />
+      <CTASection data={serviceData.cta} />
       <FooterAndPopup />
     </Box>
   );

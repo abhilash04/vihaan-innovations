@@ -34,16 +34,17 @@ const CardFace = styled(Paper)(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   borderRadius: "20px",
-  background: "rgba(255, 255, 255, 0.03)",
-  backdropFilter: "blur(12px)",
-  border: "1px solid rgba(255, 255, 255, 0.06)",
+  background: "#f8fafc",
+  border: "1px solid rgba(0, 0, 0, 0.04)",
   gap: "12px",
+  boxShadow: "none",
 }));
 
 const BackFace = styled(CardFace)(({ theme, bgcolor }) => ({
   transform: "rotateY(180deg)",
-  background: `linear-gradient(135deg, ${bgcolor}20, rgba(255,255,255,0.02))`,
-  borderColor: `${bgcolor}40`,
+  background: `linear-gradient(135deg, ${bgcolor}10, #ffffff)`,
+  borderColor: `${bgcolor}30`,
+  boxShadow: "0 10px 25px rgba(0,0,0,0.02)",
 }));
 
 const FlipCard = styled(Box)(({ theme }) => ({
@@ -53,34 +54,39 @@ const FlipCard = styled(Box)(({ theme }) => ({
   },
 }));
 
-const AwardsSection = () => {
+const AwardsSection = ({ data }) => {
+  const {
+    title = "Recognized for Excellence & Quality",
+    list = awards
+  } = data || {};
+
   return (
-    <Box sx={{ bgcolor: "#0d1f35", py: { xs: 8, md: 12 }, position: "relative" }}>
+    <Box sx={{ bgcolor: "#ffffff", py: { xs: 6, md: 8 }, position: "relative" }}>
       <Container maxWidth="lg">
-        <Typography variant="h3" sx={{ fontWeight: 800, fontSize: "24px", fontFamily: "Urbanist, sans-serif", color: "#ffffff", textAlign: "center", mb: 6, letterSpacing: "0.5px" }}>
-          Recognized for Excellence & Quality
+        <Typography variant="h3" sx={{ fontWeight: 800, fontSize: "24px", fontFamily: "Urbanist, sans-serif", color: "#0a2233", textAlign: "center", mb: 6, letterSpacing: "0.5px" }}>
+          {title}
         </Typography>
 
         <Grid container spacing={2} justifyContent="center">
-          {awards.map((award, i) => {
+          {list.map((award, i) => {
             const SvgIcon = award.icon;
             return (
               <Grid item xs={6} sm={4} md={2.4} key={i}>
                 <FlipCard>
                   <FlipCardInner className="flip-card-inner">
                     {/* Front */}
-                    <CardFace>
+                    <CardFace elevation={0}>
                       <SvgIcon sx={{ fontSize: 40, color: award.color }} />
-                      <Typography sx={{ color: "#ffffff", fontWeight: 700, fontSize: "14px" }}>
+                      <Typography sx={{ color: "#0a2233", fontWeight: 800, fontSize: "14px", fontFamily: "Urbanist, sans-serif" }}>
                         {award.title}
                       </Typography>
                     </CardFace>
                     {/* Back */}
-                    <BackFace bgcolor={award.color}>
-                      <Typography sx={{ color: "#ffffff", fontWeight: 700, fontSize: "14px" }}>
+                    <BackFace bgcolor={award.color} elevation={0}>
+                      <Typography sx={{ color: "#0a2233", fontWeight: 800, fontSize: "14px", fontFamily: "Urbanist, sans-serif" }}>
                         {award.body}
                       </Typography>
-                      <Typography sx={{ color: award.color, fontSize: "12px", fontWeight: 600 }}>
+                      <Typography sx={{ color: award.color, fontSize: "12px", fontWeight: 700 }}>
                         {award.year}
                       </Typography>
                     </BackFace>

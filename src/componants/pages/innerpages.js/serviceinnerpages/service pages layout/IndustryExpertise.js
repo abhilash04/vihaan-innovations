@@ -12,46 +12,67 @@ const industryData = {
   0: { // Healthcare
     title: "Healthcare",
     desc: "Building secure, HIPAA-compliant patient portals, doctor appointment engines, and data analytics dashboards.",
-    checks: ["Telemedicine Apps", "Patient Records (EHR)", "Inventory Management", "Medical Billing"],
+    desc1: "Building secure, HIPAA-compliant patient portals, doctor appointment engines, and data analytics dashboards.",
+    checks: ["Telemedicine Apps", "Patient Records (EHR)", "Inventory Management", "Medical Billing", "Inventory Management", "Medical Billing"],
     cards: [
       { title: "Telemedicine Platform", desc: "Secure video consulting with integrated prescription piping formats." },
       { title: "EHR Backend", desc: "Scaling database nodes securely caching patient logs efficiently data." },
+      { title: "Telemedicine Platform", desc: "Secure video consulting with integrated prescription piping formats." },
+      { title: "EHR Backend", desc: "Scaling database nodes securely caching patient logs efficiently data." },
+
     ]
   },
   1: { // Education
     title: "Education & E-Learning",
     desc: "Scalable interactive learning management modules with virtual zoom sessions & content delivery pipelines.",
-    checks: ["LMS Development", "Live Classes", "Student Portals", "Online Exams"],
+    desc1: "Scalable interactive learning management modules with virtual zoom sessions & content delivery pipelines.",
+    checks: ["LMS Development", "Live Classes", "Student Portals", "Online Exams", "Inventory Management", "Medical Billing"],
     cards: [
       { title: "LMS Portal", desc: "Handling course curriculum distribution quiz score trackers maps." },
       { title: "Virtual Class", desc: "Interactive stream nodes syncing chat overlays securely files." },
+      { title: "LMS Portal", desc: "Handling course curriculum distribution quiz score trackers maps." },
+      { title: "Virtual Class", desc: "Interactive stream nodes syncing chat overlays securely files." },
+
     ]
   },
   2: { // Real Estate
     title: "Real Estate & PropTech",
     desc: "Intelligent property listing layouts with 3D virtual maps filtering exact configurations effortlessly.",
-    checks: ["Property MLS", "Virtual Tours", "CRM for Agents", "Lease Management"],
+    desc1: "Intelligent property listing layouts with 3D virtual maps filtering exact configurations effortlessly.",
+    checks: ["Property MLS", "Virtual Tours", "CRM for Agents", "Lease Management", "Inventory Management", "Medical Billing"],
     cards: [
       { title: "MLS Database", desc: "Syncing absolute config layouts matching query results direct links." },
       { title: "3D Virtual Map", desc: "Rendering viewport spaces rotating detailed shapes models depth." },
+      { title: "LMS Portal", desc: "Handling course curriculum distribution quiz score trackers maps." },
+      { title: "Virtual Class", desc: "Interactive stream nodes syncing chat overlays securely files." },
+
     ]
   },
   3: { // E-commerce
     title: "E-Commerce & Retail",
     desc: "Robust multi-vendor marketplaces architectures handling peak loads caching load balances instantly.",
-    checks: ["Multi-vendor Setup", "Inventory Tracking", "Secure Payments", "Logistics Integration"],
+    desc1: "Robust multi-vendor marketplaces architectures handling peak loads caching load balances instantly.",
+
+    checks: ["Multi-vendor Setup", "Inventory Tracking", "Secure Payments", "Logistics Integration", "Inventory Management", "Medical Billing"],
     cards: [
       { title: "Marketplace Setup", desc: "Piping detailed vendor dashboards layouts inventories streams boards." },
       { title: "Payment Gateway", desc: "Secure endpoints routing transaction nodes auth triggers safely." },
+      { title: "LMS Portal", desc: "Handling course curriculum distribution quiz score trackers maps." },
+      { title: "Virtual Class", desc: "Interactive stream nodes syncing chat overlays securely files." },
+
     ]
   },
   4: { // Finance
     title: "Finance & Fintech",
     desc: "Highly secure transaction pipelines managing KYC verifications ledger architectures safely.",
+    desc1: "Highly secure transaction pipelines managing KYC verifications ledger architectures safely.",
     checks: ["Micro-loans App", "Corporate Ledger", "Trading Dashboard", "Risk Analytics"],
     cards: [
       { title: "KYC Verification", desc: "Automated OCR reading identity logs validating scores directly." },
       { title: "Asset Tracker", desc: "Real-time feeds mapping stock pricing nodes buffers correctly." },
+      { title: "LMS Portal", desc: "Handling course curriculum distribution quiz score trackers maps." },
+      { title: "Virtual Class", desc: "Interactive stream nodes syncing chat overlays securely files." },
+
     ]
   }
 };
@@ -81,18 +102,25 @@ const CustomTab = styled(Tab)(({ theme }) => ({
   },
 }));
 
-const IndustryExpertise = () => {
+const IndustryExpertise = ({ data }) => {
+  const {
+    subtitle = "INDUSTRY EXPERTISE",
+    title = "Delivering Success Across Sectors",
+    industries = industryData,
+    tabs = [
+      { label: "Healthcare", icon: <LocalHospitalIcon sx={{ fontSize: 18 }} /> },
+      { label: "Education", icon: <SchoolIcon sx={{ fontSize: 18 }} /> },
+      { label: "Real Estate", icon: <HomeWorkIcon sx={{ fontSize: 18 }} /> },
+      { label: "E-commerce", icon: <ShoppingCartIcon sx={{ fontSize: 18 }} /> },
+      { label: "Finance", icon: <AccountBalanceIcon sx={{ fontSize: 18 }} /> },
+    ]
+  } = data || {};
+
   const [activeTab, setActiveTab] = useState(0);
 
-  const categoriesList = [
-    { label: "Healthcare", icon: <LocalHospitalIcon sx={{ fontSize: 18 }} /> },
-    { label: "Education", icon: <SchoolIcon sx={{ fontSize: 18 }} /> },
-    { label: "Real Estate", icon: <HomeWorkIcon sx={{ fontSize: 18 }} /> },
-    { label: "E-commerce", icon: <ShoppingCartIcon sx={{ fontSize: 18 }} /> },
-    { label: "Finance", icon: <AccountBalanceIcon sx={{ fontSize: 18 }} /> },
-  ];
+  const categoriesList = tabs;
 
-  const current = industryData[activeTab];
+  const current = industries[activeTab] || industries[0] || { title: "", desc: "", desc1: "", checks: [], cards: [] };
 
   return (
     <Box sx={{ bgcolor: "#f1f5f9", py: { xs: 6, md: 8 }, position: "relative" }}>
@@ -100,10 +128,10 @@ const IndustryExpertise = () => {
         {/* Heading */}
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography sx={{ color: "#0087c9", fontWeight: 700, fontSize: "12px", letterSpacing: "1px", mb: 1.5 }}>
-            INDUSTRY EXPERTISE
+            {subtitle}
           </Typography>
           <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "32px", md: "44px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2 }}>
-            Delivering Success Across Sectors
+            {title}
           </Typography>
         </Box>
 
@@ -140,12 +168,15 @@ const IndustryExpertise = () => {
                 <Typography variant="h3" sx={{ fontWeight: 800, color: "#0a2233", mb: 2, fontFamily: "Urbanist, sans-serif", fontSize: "28px" }}>
                   {current.title}
                 </Typography>
-                <Typography sx={{ color: "#475569", fontSize: "16px", lineHeight: 1.8, mb: 4 }}>
+                <Typography sx={{ color: "#475569", fontSize: "16px", lineHeight: 1.6, mb: 2 }}>
                   {current.desc}
+                </Typography>
+                <Typography sx={{ color: "#475569", fontSize: "16px", lineHeight: 1.6, mb: 4 }}>
+                  {current.desc1}
                 </Typography>
 
                 <Grid container spacing={1} sx={{ mb: 4 }}>
-                  {current.checks.map((check, i) => (
+                  {current?.checks?.map((check, i) => (
                     <Grid item xs={6} key={i} sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                       <Box sx={{ width: "6px", height: "6px", bgcolor: "#0087c9", borderRadius: "50%" }} />
                       <Typography sx={{ fontSize: "14px", color: "#475569", fontWeight: 500 }}>{check}</Typography>
@@ -157,8 +188,8 @@ const IndustryExpertise = () => {
               {/* Right Column - Cards Display */}
               <Grid item xs={12} md={7}>
                 <Grid container spacing={3}>
-                  {current.cards.map((card, idx) => (
-                    <Grid item xs={12} sm={6} key={idx}>
+                  {current?.cards?.map((card, idx) => (
+                    <Grid item xs={12} sm={6} key={idx} mb={3}>
                       <Paper
                         elevation={0}
                         sx={{
@@ -166,7 +197,7 @@ const IndustryExpertise = () => {
                           border: "1px solid rgba(0, 0, 0, 0.04)",
                           borderRadius: "16px",
                           padding: "24px",
-                          height: "100%",
+                          height: "80%",
                           transition: "all 0.3s ease",
                           "&:hover": {
                             transform: "translateY(-5px)",
