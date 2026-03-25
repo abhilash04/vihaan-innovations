@@ -15,7 +15,7 @@ const ChatbotBanner = () => (
   <Box sx={{
     background: "linear-gradient(135deg, #060d1a 0%, #0a1628 50%, #071225 100%)",
     position: "relative", overflow: "hidden",
-    pt: { xs: 12, md: 14 }, pb: { xs: 12, md: 16 }
+    py: { xs: 8, md: 10 },
   }}>
     {/* Glowing orbs */}
     <Box sx={{ ...glowStyle, top: -80, left: -80, width: 400, height: 400, bgcolor: "rgba(6,182,212,0.12)" }} />

@@ -16,7 +16,7 @@ const LMSProblem = () => (
   <Box sx={{ bgcolor: "#1e3a5f", py: 8, position: "relative", overflow: "hidden" }}>
     <Box sx={{ position: "absolute", top: "20%", left: "5%", width: 300, height: 300, borderRadius: "50%", background: "radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%)" }} />
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: "center", mb: 10 }}>
+      <Box sx={{ textAlign: "center", mb: 6 }}>
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "28px", md: "38px" }, mb: 2 }}>The Problem</Typography>
       </Box>
       <Grid container spacing={4} sx={{ mb: 8 }}>

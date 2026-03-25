@@ -8,13 +8,13 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 const StatBadge = ({ value, label, icon: Icon, color, delay }) => (
   <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay }}>
-    <Paper elevation={0} sx={{ px: 3, py: 2, borderRadius: "14px", bgcolor: "rgba(255,255,255,0.9)", border: "1px solid rgba(212,160,23,0.2)", boxShadow: "0 8px 24px rgba(0,0,0,0.06)", display: "flex", alignItems: "center", gap: 2, backdropFilter: "blur(10px)" }}>
-      <Box sx={{ width: 44, height: 44, borderRadius: "12px", bgcolor: `${color}18`, display: "flex", justifyContent: "center", alignItems: "center", color, flexShrink: 0 }}>
-        <Icon sx={{ fontSize: 22 }} />
+    <Paper elevation={0} sx={{ px: 2, py: 1.5, borderRadius: "12px", bgcolor: "rgba(255,255,255,0.9)", border: "1px solid rgba(212,160,23,0.2)", boxShadow: "0 6px 16px rgba(0,0,0,0.04)", display: "flex", alignItems: "center", gap: 1.5, backdropFilter: "blur(10px)" }}>
+      <Box sx={{ width: 36, height: 36, borderRadius: "10px", bgcolor: `${color}18`, display: "flex", justifyContent: "center", alignItems: "center", color, flexShrink: 0 }}>
+        <Icon sx={{ fontSize: 18 }} />
       </Box>
       <Box>
-        <Typography sx={{ fontWeight: 900, color: "#0f172a", fontSize: "20px", lineHeight: 1 }}>{value}</Typography>
-        <Typography sx={{ color: "#64748b", fontSize: "11px", fontWeight: 500, mt: 0.3 }}>{label}</Typography>
+        <Typography sx={{ fontWeight: 900, color: "#0f172a", fontSize: "16px", lineHeight: 1 }}>{value}</Typography>
+        <Typography sx={{ color: "#64748b", fontSize: "10px", fontWeight: 500, mt: 0.2 }}>{label}</Typography>
       </Box>
     </Paper>
   </motion.div>
@@ -33,7 +33,7 @@ const HotelBanner = () => (
     <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
       <Grid container spacing={6} alignItems="center">
         {/* Left */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6.5}>
           <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
             <Typography variant="h1" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "36px", md: "54px" }, lineHeight: 1.1, mb: 3 }}>
               Create Your Own Booking Platform<br />
@@ -51,7 +51,7 @@ const HotelBanner = () => (
               </Button>
             </Box>
             {/* Stats */}
-            <Box sx={{ display: "flex", flexDirection: "column", gap: 2, maxWidth: "380px" }}>
+            <Box sx={{ display: "flex", flexDirection: "row", gap: 1.5, flexWrap: "wrap", maxWidth: "100%" }}>
               <StatBadge value="99%" label="Increase in direct bookings" icon={TrendingUpIcon} color="#d4a017" delay={0.5} />
               <StatBadge value="0%" label="No Third-Party Fees" icon={AttachMoneyIcon} color="#0f766e" delay={0.65} />
               <StatBadge value="20%" label="Faster Check-in" icon={AccessTimeIcon} color="#3b82f6" delay={0.8} />
@@ -60,7 +60,7 @@ const HotelBanner = () => (
         </Grid>
 
         {/* Right Illustration */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={5.5}>
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }}>
             <Box sx={{ position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
               <Paper elevation={0} sx={{ p: 5, borderRadius: "28px", bgcolor: "rgba(255,255,255,0.85)", border: "1px solid rgba(212,160,23,0.15)", backdropFilter: "blur(20px)", boxShadow: "0 25px 60px rgba(0,0,0,0.08)", textAlign: "center", maxWidth: "400px", mx: "auto" }}>

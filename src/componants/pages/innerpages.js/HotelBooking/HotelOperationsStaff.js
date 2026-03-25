@@ -33,8 +33,8 @@ const HotelOperationsStaff = () => (
         {tools.map((tool, i) => {
           const Icon = tool.icon;
           return (
-            <Grid item xs={12} sm={6} md={4} key={i}>
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} style={{ height: "100%" }}>
+            <Grid item xs={12} sm={6} md={4} key={i} mb={3}>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} style={{ height: "75%" }}>
                 <Paper elevation={0} sx={{ p: 4, borderRadius: "20px", bgcolor: "#f8fafc", height: "100%", border: "1px solid rgba(0,0,0,0.06)", transition: "all 0.3s", "&:hover": { transform: "translateY(-5px)", boxShadow: `0 12px 28px ${tool.color}20`, borderColor: `${tool.color}40`, bgcolor: "#ffffff" } }}>
                   <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 2 }}>
                     <Box sx={{ width: 48, height: 48, borderRadius: "12px", bgcolor: `${tool.color}18`, display: "flex", justifyContent: "center", alignItems: "center", color: tool.color, flexShrink: 0 }}>

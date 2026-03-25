@@ -12,7 +12,7 @@ const stats = [
 const HotelImpact = () => (
   <Box sx={{ bgcolor: "#1e3a5f", py: 8 }}>
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: "center", mb: 10 }}>
+      <Box sx={{ textAlign: "center", mb: 6 }}>
         <Typography sx={{ color: "#d4a017", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>Results & Impact</Typography>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>Platform Performance & Business Impact</Typography>
         <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", maxWidth: "700px", mx: "auto" }}>

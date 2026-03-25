@@ -8,7 +8,7 @@ import StarIcon from '@mui/icons-material/Star';
 const HotelTestimonial = () => (
   <Box sx={{ bgcolor: "#fffdf0", py: 8 }}>
     <Container maxWidth="md">
-      <Box sx={{ textAlign: "center", mb: 8 }}>
+      <Box sx={{ textAlign: "center", mb: 6 }}>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "34px" } }}>What Hotel Owners Say</Typography>
       </Box>
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -18,7 +18,7 @@ const HotelTestimonial = () => (
           <Box sx={{ display: "flex", justifyContent: "center", gap: 0.5, mb: 4 }}>
             {[...Array(5)].map((_, i) => <StarIcon key={i} sx={{ color: "#d4a017", fontSize: 24 }} />)}
           </Box>
-          <Typography sx={{ fontWeight: 600, color: "#1e293b", fontSize: { xs: "18px", md: "22px" }, lineHeight: 1.65, textAlign: "center", mb: 6, position: "relative" }}>
+          <Typography sx={{ fontWeight: 600, color: "#1e293b", fontSize: { xs: "16px", md: "18px" }, lineHeight: 1.55, textAlign: "center", mb: 4, position: "relative" }}>
             "Since moving to our custom booking platform, direct bookings have increased by 40%, and we’ve significantly reduced OTA commissions. The system is easy to use, our staff loves the operations dashboard, and our guests find the booking process incredibly smooth. Highly recommended!"
           </Typography>
           <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 2.5 }}>

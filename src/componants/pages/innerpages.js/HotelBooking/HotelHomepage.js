@@ -42,8 +42,8 @@ const HotelHomepage = () => {
         <HotelGuestCRM />
         <HotelIntegrations />
         <HotelWhyUs />
-        <HotelTestimonial />
         <HotelCTA />
+        <HotelTestimonial />
       </Box>
       <FooterAndPopup />
     </Box>

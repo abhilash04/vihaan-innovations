@@ -28,9 +28,9 @@ const LMSFeatures = () => (
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 8 }}>
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>What We Build – Feature Overview</Typography>
-        <Typography sx={{ color: "#64748b", fontSize: "16px" }}>A leading LMS Software Development Company delivering powerful features and <br/> complete learning solutions for modern education platforms.</Typography>
+        <Typography sx={{ color: "#64748b", fontSize: "16px" }}>A leading LMS Software Development Company delivering powerful features and <br /> complete learning solutions for modern education platforms.</Typography>
       </Box>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} rowSpacing={10} mb={6}>
         {features.map((f, i) => {
           const Icon = f.icon;
           return (

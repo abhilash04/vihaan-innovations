@@ -35,7 +35,7 @@ const PropertyCard = ({ icon: Icon, title, color, bg, delay }) => (
 const HotelWhoThisIsFor = () => (
   <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: "center", mb: 8 }}>
+      <Box sx={{ textAlign: "center", mb: 6 }}>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "36px" }, mb: 2, lineHeight: 1.2 }}>
           The Perfect Solution for Every Property Type
         </Typography>
@@ -43,7 +43,7 @@ const HotelWhoThisIsFor = () => (
           Built by a trusted hotel booking website development company, our solution supports all types of hospitality businesses.
         </Typography>
       </Box>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} rowSpacing={10} mb={6}>
         {propertyTypes.map((pt, i) => (
           <Grid item xs={6} sm={3} key={i}><PropertyCard {...pt} delay={i * 0.08} /></Grid>
         ))}

@@ -35,6 +35,7 @@ import HotelHomepage from "./componants/pages/innerpages.js/HotelBooking/HotelHo
 import ChatbotHomepage from "./componants/pages/innerpages.js/AIChatbot/ChatbotHomepage";
 import HRMHomepage from "./componants/pages/innerpages.js/HRMSoftware/HRMHomepage";
 import HMSHomepage from "./componants/pages/innerpages.js/HospitalManagement/HMSHomepage";
+import ServicePageUI from "./componants/pages/innerpages.js/serviceinnerpages/ui design/ServicePage";
 
 function App() {
   return (
@@ -79,6 +80,9 @@ function App() {
             <Route path="/hrm-software" element={<HRMHomepage />} />
             <Route path="/hospital-management-system" element={<HMSHomepage />} />
             <Route path="/organica" element={<OrganicaHomePage />} />
+
+            {/* Vihaan Services */}
+            <Route path="/ui-ux-design" element={<ServicePageUI />} />
 
           </Routes>
         </Router>
