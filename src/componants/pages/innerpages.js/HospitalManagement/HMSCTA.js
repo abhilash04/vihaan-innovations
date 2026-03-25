@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
-const reassuranceBadges = ["ABDM Ready", "NABH Aligned", "TPA Enabled", "Multi-branch", "99.9% Uptime"];
+const reassuranceBadges = ["ABDM Ready", "NABH Aligned", "TPA Enabled", "Multi-branch Support", "99.9% Uptime"];
 
 const HMSCTA = () => {
   return (
@@ -29,10 +29,10 @@ const HMSCTA = () => {
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <Typography sx={{ color: "#10B981", fontWeight: 800, fontSize: "12px", mb: 1.2, letterSpacing: "1px" }}>GET STARTED TODAY</Typography>
               <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "28px", md: "40px" }, mb: 2, fontFamily: "Plus Jakarta Sans, sans-serif", lineHeight: 1.2 }}>
-                Let's Build a Hospital Management System Your Entire Team Will Use
+                Build a Hospital Management Software System Your Team Will Love
               </Typography>
               <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "14px", mb: 4, maxWidth: "520px", lineHeight: 1.6 }}>
-                Form unified operations from registration to discharge clear. Digitize EMRs and cut operational leaks efficiently setups setups triggers correctly.
+                Transform your hospital with a powerful hospital management software system that unifies operations-from registration to discharge-while digitizing EMRs and eliminating inefficiencies.
               </Typography>
 
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mb: 4 }}>

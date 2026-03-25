@@ -59,13 +59,13 @@ const EducationTechnology = () => {
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 6, maxWidth: "800px", mx: "auto" }}>
           <Typography sx={{ color: "#00B4D8", fontWeight: 600, mb: 2, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px", pt: 6 }}>
-            Technology
+            Technology Stack
           </Typography>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", mb: 3, fontSize: { xs: "32px", md: "46px" }, lineHeight: 1.2 }}>
-            Built on a modern, scalable stack
+            Technology That Powers Scalable Education CRM
           </Typography>
-          <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "18px", lineHeight: 1.6 }}>
-            Built on a modern, scalable stack create robust architecture that scale your operations gracefully.
+          <Typography variant="h5" sx={{ color: "#00B4D8", fontWeight: 700, mb: 2, fontSize: "20px" }}>
+            Built on a modern, scalable stack to deliver high-performance education CRM systems
           </Typography>
         </Box>
 

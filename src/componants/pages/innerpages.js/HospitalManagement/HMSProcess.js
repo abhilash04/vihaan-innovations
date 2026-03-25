@@ -3,11 +3,11 @@ import { Box, Container, Typography, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 
 const steps = [
-  { id: 1, title: "Audit", desc: "Workflow and data audit.", side: "top" },
-  { id: 2, title: "Config", desc: "EMR module setups configs.", side: "bottom" },
-  { id: 3, title: "Train", desc: "Staff hypercare Training setups.", side: "top" },
-  { id: 4, title: "Sync", desc: "Live dashboard data migration.", side: "bottom" },
-  { id: 5, title: "Live", desc: "Go-live client support activation.", side: "top" }
+  { id: 1, title: "Audit", desc: "Assess workflows for hospital management software setup", side: "top" },
+  { id: 2, title: "Config", desc: "Customize and configure modules", side: "bottom" },
+  { id: 3, title: "Train", desc: "Quick staff training for smooth adoption", side: "top" },
+  { id: 4, title: "Sync", desc: "Secure data migration and integration", side: "bottom" },
+  { id: 5, title: "Live", desc: "Go-live with full support", side: "top" }
 ];
 
 const HMSProcess = () => {
@@ -17,7 +17,7 @@ const HMSProcess = () => {
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography sx={{ color: "#0A2D6E", fontWeight: 800, fontSize: "12px", mb: 1, letterSpacing: "1px" }}>OUR PROCESS</Typography>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "28px", md: "36px" }, mb: 1, fontFamily: "Plus Jakarta Sans, sans-serif" }}>
-            From Discovery to Go-Live
+            From Discovery to Go-Live with Hospital Management Software
           </Typography>
         </Box>
 

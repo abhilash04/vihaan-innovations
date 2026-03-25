@@ -19,13 +19,13 @@ const HRMWhyUs = () => (
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <Paper elevation={0} sx={{ p: 4, borderRadius: "24px", background: "linear-gradient(145deg, rgba(249,115,22,0.08), rgba(139,92,246,0.08))", border: "1px solid rgba(255,255,255,0.03)", backdropFilter: "blur(10px)", textAlign: "center", position: "relative", overflow: "hidden" }}>
               <Typography variant="h3" sx={{ fontWeight: 800, color: "#ffffff", fontSize: "36px", mb: 2, fontFamily: "Fira Sans" }}>
-                Scalable HRM Tracking Development Services
+                Smarter Growth with Human Resource Software Development
               </Typography>
-              <Typography sx={{ color: "rgba(255, 255, 255, 0.89)", fontSize: "18px", mb: 2, lineHeight: 1.6 }}>
-                We develop custom scalable HRM solutions, Custom APIs integrations, Staff ERP dashboards accurately configured dashboard scalable tracking.
+              <Typography sx={{ color: "rgba(255, 255, 255, 0.89)", fontSize: "16px", mb: 2, lineHeight: 1.6 }}>
+                Transform how you manage people with intelligent human resource software development built for scalability and precision. We design tailored HRM systems, integrate powerful APIs, and craft intuitive ERP dashboards that give you full control over workforce tracking.
               </Typography>
-              <Typography sx={{ color: "rgba(255, 255, 255, 0.89)", fontSize: "18px", mb: 4, lineHeight: 1.6 }}>
-                Our HRM development services are designed to streamline HR operations, improve employee engagement, and enhance overall productivity.
+              <Typography sx={{ color: "rgba(255, 255, 255, 0.89)", fontSize: "16px", mb: 4, lineHeight: 1.6 }}>
+                From automation to analytics, our human resource software development solutions simplify operations, improve employee experiences, and drive measurable productivity.
               </Typography>
               <Box sx={{ display: "flex", gap: 2, justifyContent: "center" }}>
                 <Button variant="contained" sx={{ bgcolor: "#f97316", color: "#fff", fontWeight: 800, px: 3, borderRadius: "20px", textTransform: "none" }}>Request Consulting</Button>

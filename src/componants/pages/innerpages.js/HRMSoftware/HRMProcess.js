@@ -1,12 +1,12 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid, } from "@mui/material";
 import { motion } from "framer-motion";
 
 const steps = [
-  { id: 1, title: "Analysis", desc: "Evaluate existing workflows and data requirements through in-depth operations reviews." },
-  { id: 2, title: "Customization", desc: "Configure modules and synchronize with your existing tools and IT infrastructure." },
-  { id: 3, title: "Engineering", desc: "Create seamless automations and high-performing pipelines for administrative scale." },
-  { id: 4, title: "Testing", desc: "Validate performance through simulated loads, structured test buckets, and strict validations." },
+  { id: 1, title: "Analysis", desc: "Evaluate existing workflows, employee data, and system requirements to build a strong foundation for human resource management software development." },
+  { id: 2, title: "Customization", desc: "Configure modules and seamlessly integrate with your current tools and IT infrastructure for optimized performance." },
+  { id: 3, title: "Engineering", desc: "Develop advanced automations and high-performance systems to streamline HR operations and improve efficiency." },
+  { id: 4, title: "Testing", desc: "Ensure quality and reliability through rigorous testing, performance checks, and secure validation processes." },
 ];
 
 const HRMProcess = () => (
@@ -14,8 +14,11 @@ const HRMProcess = () => (
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 6, px: 2 }}>
         <Typography sx={{ color: "#f97316", fontWeight: 700, fontSize: "13px", mb: 1, letterSpacing: "1px" }}>OUR HRM DEVELOPMENT PROCESS</Typography>
-        <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "28px", md: "36px" }, mb: 4, fontFamily: "Fira Sans" }}>
-          Modules in Using HRM Systems
+        <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "28px", md: "36px" }, mb: 2, fontFamily: "Fira Sans" }}>
+          Human Resource Management Software Development Process
+        </Typography>
+        <Typography sx={{ color: "rgba(11, 32, 70, 0.7)", fontSize: "15px", maxWidth: "800px", mx: "auto", lineHeight: 1.6 }}>
+          Our human resource management software development approach ensures efficient, scalable, and reliable HR solutions tailored to your business needs.
         </Typography>
       </Box>
 

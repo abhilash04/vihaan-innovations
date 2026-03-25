@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const modules = [
-  { id: 0, label: "OPD & Appointment", title: "Outpatient Department", roles: ["Doctor", "Nurse", "Admin"], desc: "Manage consultations, slot bookings, and token counters smoothly.", features: ["Online Slot Booking", "Token Queue Display", "Doctor Roster Management", "Instant Prescription Upgrades"] },
-  { id: 1, label: "IPD Management", title: "Inpatient Department", roles: ["Nurse", "Admin"], desc: "Efficient bed occupancy and ward allocation setups tracking dashboards correctly.", features: ["Bed Availability Dashboard", "Admission/Discharge Sync", "Nursing Duty Allocation", "Dietary & vitals charting"] },
-  { id: 2, label: "EMR Digital Desk", title: "Electronic Medical Records", roles: ["Doctor"], desc: "Digital prescription pads and treatment histories securely centralized triggers.", features: ["SOAP Notes Template", "ICD-10 Code Search", "Lab Tests Advisory Trigger", "Patient Consent Vaults"] },
-  { id: 3, label: "Pharmacy Billing", title: "Pharmacy & Billing", roles: ["Admin", "Cashier"], desc: "Automatic invoice generation linked to EMR prescriptions directly alerts.", features: ["Prescription Auto-Sync", "Barcoded Inventory Sale", "Expiry Alert Engine", "Discount Logic Settings"] }
+  { id: 0, label: "OPD & Appointment", title: "OPD & Appointment", roles: ["Doctor", "Nurse", "Admin"], desc: "Manage consultations, appointments, and patient flow efficiently with hospital management software designed for speed and accuracy.", features: ["Online Slot Booking", "Token Queue Display", "Doctor Roster Management", "Instant Prescription Updates"] },
+  { id: 1, label: "IPD Management", title: "IPD Management", roles: ["Nurse", "Admin"], desc: "Streamline inpatient care with hospital management software that ensures smooth admissions, bed tracking, and discharge processes.", features: ["Smart Bed Allocation", "Admission & Discharge Tracking", "Nursing Workflow Management", "Inpatient Billing Integration"] },
+  { id: 2, label: "EMR Digital Desk", title: "EMR Digital Desk", roles: ["Doctor"], desc: "Access and manage patient records securely with hospital management software that centralizes all medical data in one place.", features: ["Digital Patient Records", "E-Prescriptions", "Medical History Tracking", "Secure Data Access"] },
+  { id: 3, label: "Pharmacy Billing", title: "Pharmacy Billing", roles: ["Admin", "Cashier"], desc: "Simplify pharmacy operations using hospital management software for accurate billing and real-time inventory control.", features: ["Fast Billing System", "Stock Management", "Expiry Alerts", "Supplier Integration"] }
 ];
 
 const HMSModules = () => {

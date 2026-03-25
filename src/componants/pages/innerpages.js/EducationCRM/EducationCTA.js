@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
 
 // Reusing the starry background from Real Estate as it perfectly matches the mock's bottom section
 const EducationCTA = () => {
@@ -36,12 +36,11 @@ const EducationCTA = () => {
           <Box sx={{ textAlign: "center" }}>
 
             <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "36px", md: "52px" }, mb: 3, lineHeight: 1.2 }}>
-              Ready to Build your<br />real estate platform?
+              Ready to Transform Your Admissions with Education CRM?
             </Typography>
 
             <Typography sx={{ color: "rgba(255,255,255,0.8)", fontSize: "18px", mb: 6, maxWidth: "600px", mx: "auto", lineHeight: 1.6 }}>
-              Let's map out your ideal admissions system.<br />
-              Book a free 45-minute discovery call. We'll map out the right solution for your business — no generic decks, just a conversation about your actual challenges.
+              Automate your admissions pipeline. Eliminate manual follow-ups and scale your enrollment with our custom Education CRM.
             </Typography>
 
             <Box sx={{ display: "flex", flexDirection: "column", gap: 3, alignItems: "center" }}>
@@ -65,7 +64,7 @@ const EducationCTA = () => {
                   transition: "all 0.3s"
                 }}
               >
-                View Features Again
+                Get Your Free Education CRM Demo
               </Button>
 
               <Box sx={{ display: "flex", alignItems: "center", gap: 1, color: "rgba(255,255,255,0.6)", cursor: "pointer", "&:hover": { color: "#ffffff" }, transition: "color 0.3s" }}>

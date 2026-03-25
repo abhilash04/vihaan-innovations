@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import SearchIcon from '@mui/icons-material/Search';
 import DesignServicesIcon from '@mui/icons-material/DesignServices';
@@ -101,7 +101,7 @@ const EducationDeliveryProcess = () => {
   return (
     <Box sx={{ py: 8, background: "linear-gradient(135deg, #0B2046 0%, #001D4A 100%)", position: "relative", overflow: "hidden" }}>
 
-      {/* Floating Bubbles Background Animation */}
+      {/* Floating Bubbles */}
       <Bubble size={300} color="rgba(0, 180, 216, 0.25)" top="10%" left="-10%" delay={0} />
       <Bubble size={250} color="rgba(16, 185, 129, 0.15)" bottom="10%" right="-5%" delay={1} />
       <Bubble size={400} color="rgba(59, 130, 246, 0.15)" top="40%" left="40%" delay={0.5} />
@@ -111,13 +111,13 @@ const EducationDeliveryProcess = () => {
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography sx={{ color: "#00B4D8", fontWeight: 700, mb: 1, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px" }}>
-            Our Process
+            Our Sprint Process
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "32px", md: "42px" }, lineHeight: 1.2 }}>
-            From Brief to Launch in a Structured Sprint
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "32px", md: "42px" }, lineHeight: 1.2, mb: 2 }}>
+            Our Process From Idea to Launch
           </Typography>
-          <Typography sx={{ color: "rgba(255, 255, 255, 0.7)", fontSize: "16px", mt: 1.5, maxWidth: "600px", mx: "auto" }}>
-            We follow a rigid sprint structure designed to develop tailored educational software that actually yields accurate training limits effortlessly.
+          <Typography variant="h5" sx={{ color: "#00B4D8", fontWeight: 700, mb: 2, fontSize: "20px" }}>
+            A structured sprint approach to build, test, and launch your custom digital solution faster
           </Typography>
         </Box>
 

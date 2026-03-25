@@ -83,7 +83,7 @@ const ServicesSection = () => {
               lineHeight: "26px",
             }}
           >
-            Service
+            Our Service
           </Typography>
           <Typography
             sx={{
@@ -94,7 +94,7 @@ const ServicesSection = () => {
               lineHeight: "52px",
             }}
           >
-            Specializing In
+            Specialized Digital Solutions by Vihaan Innovations
           </Typography>
         </Box>
 
@@ -172,7 +172,7 @@ const ServicesSection = () => {
                       "&:hover": {
                         color: "#ff1f8e",
                       },
-                    //   mb: 1,
+                      //   mb: 1,
                     }}
                   >
                     Learn More &gt;

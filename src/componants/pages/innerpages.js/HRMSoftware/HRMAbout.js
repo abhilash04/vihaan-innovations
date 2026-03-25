@@ -9,27 +9,27 @@ import PeopleIcon from '@mui/icons-material/People';
 
 const hrmValues = [
   { icon: AutoFixHighIcon, title: "Automate HR Processes", color: "#f97316" },
-  { icon: StorageIcon, title: "Improve Data Records", color: "#3b82f6" },
-  { icon: PointOfSaleIcon, title: "Enhance Payroll Accuracy", color: "#10b981" },
-  { icon: PeopleIcon, title: "Improve Workforce Mgmt", color: "#8b5cf6" },
-  { icon: AssessmentIcon, title: "Insightful Reports", color: "#ec4899" },
+  { icon: StorageIcon, title: "Improve Data Accuracy", color: "#3b82f6" },
+  { icon: PointOfSaleIcon, title: "Enhance Payroll Management", color: "#10b981" },
+  { icon: PeopleIcon, title: "Optimize Workforce Management", color: "#8b5cf6" },
+  { icon: AssessmentIcon, title: "Generate Insightful Reports", color: "#ec4899" },
 ];
 
 const HRMAbout = () => (
   <Box sx={{ background: "#F8FAFC", py: 8, position: "relative", overflow: "hidden" }}>
     <Container maxWidth="lg">
       <Box sx={{ textAlign: "center", mb: 6, px: 2 }}>
-        <Typography sx={{ color: "#f97316", fontWeight: 700, fontSize: "13px", mb: 1, letterSpacing: "1px" }}>ABOUT HRM SOFTWARE</Typography>
+        <Typography sx={{ color: "#f97316", fontWeight: 700, fontSize: "13px", mb: 1, letterSpacing: "1px" }}>ABOUT HR MANAGEMENT SOFTWARE</Typography>
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "28px", md: "36px" }, mb: 2, fontFamily: "Fira Sans" }}>
-          What is Human Resource Management Software?
+          What is HRM Software?
         </Typography>
         <Typography sx={{ color: "rgba(11, 32, 70, 0.7)", fontSize: "15px", maxWidth: "650px", mx: "auto", lineHeight: 1.6 }}>
-          Human Resource Management (HRM) software is a digital solution designed to manage employee data, recruitment, payroll, and performance. It automates tasks, improves records accuracy, and enhances workforce efficiency in a unified platform.
+          HR management software helps manage employees, payroll, and recruitment in one platform, making HR processes easier and more efficient.
         </Typography>
       </Box>
 
       <Typography sx={{ color: "#0B2046", fontWeight: 800, fontSize: "18px", textAlign: "center", mb: 4 }}>
-        Benefits of Using HRM Systems
+        Benefits of Using HR Management Software
       </Typography>
 
       <Grid container spacing={2} justifyContent="center" sx={{ px: 2 }}>

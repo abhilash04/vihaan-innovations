@@ -154,10 +154,9 @@ export default function ComparisonTable() {
             textAlign: "center"
           }}
         >
-          Detailed comparison highlighting our commitment to quality, professional certifications, and around-the-clock support.
+          A detailed comparison showcasing our commitment to quality, expert solutions, and 24/7 support <br />for your single vendor ecommerce website success.
         </Typography>
       </Box>
-
       <TableContainer
         component={Paper}
         elevation={0}
@@ -291,7 +290,7 @@ export default function ComparisonTable() {
 
             }}
           >
-            Choosing the right website partner ensures your business gets a professional, scalable, and growth-ready website that attracts customers and drives sales.
+            Choosing the right partner ensures your single vendor ecommerce app is professional, scalable, <br />and ready to attract customers and drive sales.
           </Typography>
           <Typography
             sx={{
@@ -305,7 +304,8 @@ export default function ComparisonTable() {
               mx: "auto"
             }}
           >
-            With Vihaan Innovations, you get expert developers, modern design, strong SEO foundations, and ongoing support to help your website succeed online.
+            With Vihaan Innovations, you get expert developers, modern design, strong SEO foundations,
+            and ongoing support to help your single vendor ecommerce app succeed online.
           </Typography>
         </Box>
 

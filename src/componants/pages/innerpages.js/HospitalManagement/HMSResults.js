@@ -3,11 +3,11 @@ import { Box, Container, Typography, Grid } from "@mui/material";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "40%", title: "Faster Onboarding", desc: "Digital admissions reducing queues." },
-  { value: "30%", title: "Less Revenue Leaks", desc: "Linked item billing auto checks." },
-  { value: "98%", title: "Data Accuracy", desc: "No manual prescription errors setups." },
-  { value: "10k+", title: "Consults/Day", desc: "Large networks driving care curves." },
-  { value: "24/7", title: "Support Desk", desc: "Ensuring 100% accurate switchovers index." }
+  { value: "40%", title: "Faster Onboarding", desc: "Digital admissions that reduce queues and wait times" },
+  { value: "30%", title: "Less Revenue Leakage", desc: "Automated billing checks for accurate transactions" },
+  { value: "98%", title: "Data Accuracy", desc: "Eliminate manual errors with smart digital records" },
+  { value: "10K+", title: "Consultations/Day", desc: "Built to handle high patient volumes with ease" },
+  { value: "24/7", title: "Support Desk", desc: "Reliable support for smooth, uninterrupted operations" }
 ];
 
 const HMSResults = () => {

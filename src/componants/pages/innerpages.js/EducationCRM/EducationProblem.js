@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import AssignmentOutlinedIcon from '@mui/icons-material/AssignmentOutlined';
 import ListAltOutlinedIcon from '@mui/icons-material/ListAltOutlined';
@@ -54,18 +54,12 @@ const EducationProblem = () => {
       <Container maxWidth="lg">
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 10 }}>
-          <Box sx={{ display: "inline-block", mb: 1 }}>
-            <Typography sx={{
-              fontWeight: 800, color: "#0B2046", fontSize: "28px",
-              display: "flex", alignItems: "center", gap: 1,
-              justifyContent: "center"
-            }}>
-              The Problem
-            </Typography>
-          </Box>
-          <Typography variant="h3" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" } }}>
-            Common Admissions Struggles
+        <Box sx={{ textAlign: "center", mb: 8 }}>
+          <Typography sx={{ color: "#00B4D8", fontWeight: 700, mb: 1, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px" }}>
+            Challenges Faced Without Education CRM Software
+          </Typography>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "32px", md: "42px" }, mb: 2 }}>
+            Admissions challenges slow your growth
           </Typography>
         </Box>
 
@@ -112,12 +106,12 @@ const EducationProblem = () => {
 
             {/* Top Left */}
             <Grid item xs={6} md={3} sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
-              <ProblemItem icon={AssignmentOutlinedIcon} title="No Central Lead System" delay={0.1} />
+              <ProblemItem icon={AssignmentOutlinedIcon} title="No Central Lead Management" delay={0.1} />
             </Grid>
 
             {/* Top Right */}
             <Grid item xs={6} md={3} sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-end" }, ml: { md: "auto" } }}>
-              <ProblemItem icon={ListAltOutlinedIcon} title="Property Listings Are a Nightmare" delay={0.2} />
+              <ProblemItem icon={ListAltOutlinedIcon} title="No Visibility on Performance" delay={0.2} />
             </Grid>
 
             {/* Spacer for MD screens to push the next row down */}
@@ -125,12 +119,12 @@ const EducationProblem = () => {
 
             {/* Bottom Left */}
             <Grid item xs={6} md={3} sx={{ display: "flex", justifyContent: { xs: "center", md: "center" } }}>
-              <ProblemItem icon={VisibilityOffOutlinedIcon} title="No visibility on agent performance" delay={0.3} />
+              <ProblemItem icon={VisibilityOffOutlinedIcon} title="Missed Follow-Ups" delay={0.3} />
             </Grid>
 
             {/* Bottom Right */}
             <Grid item xs={6} md={3} sx={{ display: "flex", justifyContent: { xs: "center", md: "center" }, ml: { md: "auto" } }}>
-              <ProblemItem icon={NotificationsOffOutlinedIcon} title="Follow-ups Fall Through the Cracks" delay={0.4} />
+              <ProblemItem icon={NotificationsOffOutlinedIcon} title="Disorganized Data Handling" delay={0.4} />
             </Grid>
 
           </Grid>

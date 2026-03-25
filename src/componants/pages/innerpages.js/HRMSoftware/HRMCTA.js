@@ -11,12 +11,15 @@ const HRMCTA = () => (
             Ready to Streamline Your<br />
             Workforce <Box component="span" sx={{ color: "#f97316", background: "linear-gradient(90deg, #f97316, #ec4899)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Operations?</Box>
           </Typography>
-          <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", mb: 5, maxWidth: "500px", mx: "auto" }}>
-            Experience an automated HR analytics ecosystem tailored securely for your teams heightening productivity safely.
+          <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", mb: 2, maxWidth: "600px", mx: "auto" }}>
+            Transform the way you manage your team with a powerful employee management system application built to automate HR tasks, boost productivity, and ensure secure workforce management.
           </Typography>
           <Box sx={{ display: "flex", gap: 2, justifyContent: "center" }}>
             <Button variant="contained" sx={{ bgcolor: "#f97316", color: "#fff", fontWeight: 800, px: 4, py: 1.5, borderRadius: "25px", textTransform: "none", boxShadow: "0 6px 20px rgba(249,115,22,0.4)", "&:hover": { bgcolor: "#ea580c" } }}>
-              Book a Free Demo
+              Start Free Trial
+            </Button>
+            <Button variant="outlined" sx={{ borderColor: "rgba(255,255,255,0.2)", color: "#fff", fontWeight: 800, px: 4, py: 1.5, borderRadius: "25px", textTransform: "none", "&:hover": { borderColor: "#fff" } }}>
+              Request Demo
             </Button>
           </Box>
         </Box>

@@ -190,11 +190,9 @@ const EcommerceSingleRenderAboutUs = () => {
                                     opacity: 0,
                                 }}
                             >
-                                At Vihaan Innovations, we help entrepreneurs and businesses
-                                establish a strong online presence with professionally designed
-                                websites. Whether you're launching a startup, online store, or
-                                service business, our expert team creates customized solutions
-                                that meet your business goals.
+                                At Vihaan Innovations, we help entrepreneurs and businesses build a
+                                strong online presence with professionally designed websites,
+                                including powerful single vendor ecommerce solutions tailored to your goals.
                             </Typography>
                             <Typography
                                 variant="body1"
@@ -207,9 +205,9 @@ const EcommerceSingleRenderAboutUs = () => {
                                     opacity: 0,
                                 }}
                             >
-                                We focus on performance, user experience, and modern design to
-                                ensure your website not only looks great but also converts
-                                visitors into customers.
+                                We focus on performance, user experience, and modern design to ensure your
+                                single vendor ecommerce website not only looks great
+                                but also converts visitors into customers.
                             </Typography>
                             <Button
                                 variant="contained"

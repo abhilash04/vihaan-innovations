@@ -32,10 +32,9 @@ const HMSHero = () => {
 
               {/* Headline */}
               <Typography variant="h1" sx={{ fontWeight: 900, color: "#1A1A1A", fontSize: { xs: "36px", md: "52px" }, lineHeight: 1.15, mb: 2, fontFamily: "Plus Jakarta Sans, sans-serif" }}>
-                <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.25 }}>Run a Smarter</motion.span><br />
-                <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.4 }}>Hospital.</motion.span><br />
+                <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.25 }}>Run a Smarter Hospital with</motion.span><br />
                 <Box component="span" sx={{ color: "#0A2D6E", position: "relative", display: "inline-block", fontSize: { xs: "24px", md: "38px" }, lineHeight: 1.15, }}>
-                  <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.55 }}>Hospital Management System</motion.span>
+                  <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.55 }}>Advanced HMS Software</motion.span>
                   {/* Underline SVG */}
                   <Box component="svg" viewBox="0 0 100 10" preserveAspectRatio="none" sx={{ position: "absolute", bottom: -5, left: 0, width: "100%", height: "8px", pointerEvents: "none", }}>
                     <motion.path d="M0 5 Q 50 2 100 5" fill="none" stroke="#0A2D6E" strokeWidth="4" strokeLinecap="round" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.8, delay: 0.8 }} />
@@ -46,7 +45,7 @@ const HMSHero = () => {
               {/* Description */}
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.7 }}>
                 <Typography sx={{ color: "#4A5568", fontSize: "15px", mb: 4, maxWidth: "480px", lineHeight: 1.8 }}>
-                  Our unified clinical interface streamlines patient queues, EMR tracking, and predictive daily analytics setups securely effortlessly.
+                  Our intelligent hospital management software streamlines patient queues, simplifies EMR tracking, and enables predictive daily analytics all within a secure and unified platform designed for modern healthcare providers.
                 </Typography>
               </motion.div>
 
@@ -54,10 +53,10 @@ const HMSHero = () => {
               <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.85 }}>
                 <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mb: 4 }}>
                   <Button variant="contained" endIcon={<ArrowForwardIcon sx={{ transition: "0.15s", ".MuiButton-root:hover &": { transform: "translateX(4px)" } }} />} sx={{ bgcolor: "#0A2D6E", color: "#fff", fontWeight: 800, px: 3.5, py: 1.5, borderRadius: "25px", textTransform: "none", boxShadow: "0 4px 15px rgba(10, 45, 110, 0.2)", "&:hover": { bgcolor: "#0e3b8a" } }}>
-                    See a Live Demo
+                    Get Free Demo
                   </Button>
                   <Button variant="outlined" sx={{ borderColor: "#0A2D6E", color: "#0A2D6E", fontWeight: 800, px: 3.5, py: 1.5, borderRadius: "25px", textTransform: "none", borderWidth: "2px", "&:hover": { borderWidth: "2px", bgcolor: "rgba(10, 45, 110, 0.03)" } }}>
-                    Explore Features
+                    View Features
                   </Button>
                 </Box>
               </motion.div>

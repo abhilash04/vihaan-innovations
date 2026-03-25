@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import StarRateIcon from '@mui/icons-material/StarRate';
 
 const diffs = [
-  { id: "01", title: "ABDM & NABH Ready", desc: "Form compliance built from day zero, no third-party hooks triggers." },
-  { id: "02", title: "99.9% Uptime Cloud", desc: "Safe, encrypted, multi-redundancies and offline sync buffers buffers." },
-  { id: "03", title: "Modular Upgrades", desc: "Pay only for diagnostics or EMRs setups, scale up as needed safely." },
-  { id: "04", title: "24/7 Hypercare Support", desc: "Live client engineers onboarding desk setup support directly." }
+  { id: "01", title: "ABDM & NABH Ready", desc: "Compliance-first hospital management software built from day one-no third-party integrations needed." },
+  { id: "02", title: "99.9% Uptime Cloud", desc: "Secure, encrypted hospital management software with multi-layer redundancy and offline sync support." },
+  { id: "03", title: "Modular Upgrades", desc: "Flexible hospital management software pay only for what you need and scale anytime." },
+  { id: "04", title: "24/7 Hypercare Support", desc: "Dedicated experts ensuring smooth onboarding and continuous support for your hospital management software." }
 ];
 
 const HMSWhyUs = () => {
@@ -57,7 +57,7 @@ const HMSWhyUs = () => {
 
                 <Box sx={{ position: "relative", zIndex: 1, textAlign: "center", px: 2 }}>
                   <Typography variant="h4" sx={{ fontStyle: "italic", fontWeight: 400, fontSize: { xs: "18px", md: "22px" }, mb: 3, fontFamily: "serif", lineHeight: 1.6 }}>
-                    "Our EMR documentation speed multiplied by 3x in weeks. The unified tracking dashboard saved us operational leaks, framing care flawlessly."
+                    "Our EMR documentation speed multiplied 3x within weeks. The unified dashboard eliminated operational gaps and improved patient care significantly."
                   </Typography>
 
                   <Box sx={{ display: "flex", justifyContent: "center", gap: 0.3, mb: 1.5 }}>

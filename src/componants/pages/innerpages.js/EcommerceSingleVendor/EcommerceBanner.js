@@ -54,8 +54,9 @@ const EcommerceBanner = () => {
                   color: '#333'
                 }}
               >
-                India's #1 E-Commerce{" "} <br />
-                <span style={{ color: "#4da6ff" }}>CRM Software</span>
+                India’s #1 {" "}
+                <span style={{ color: "#4da6ff" }}>CRM Software </span>
+                <Typography variant="body1" sx={{ fontWeight: 700, fontSize: "58px", lineHeight: "54px", fontFamily: "Fira Sans", marginBottom: 3, color: '#333' }}>for a Single Vendor <br />ECommerce Website</Typography>
               </Typography>
 
               <Typography
@@ -69,7 +70,7 @@ const EcommerceBanner = () => {
                   textAlign: 'justify',
                 }}
               >
-                Streamline your entire e-commerce workflow with a powerful CRM platform designed to manage <b>inventory, warehouse logistics, customer communication, order processing, team tasks, and hassle-free returns</b> in one place.
+                Streamline your workflow with a powerful CRM built for a single vendor ecommerce website. Manage inventory, warehouse, orders, and returns-all in one place.
               </Typography>
 
               <Typography
@@ -84,7 +85,7 @@ const EcommerceBanner = () => {
                   textAlign: 'justify'
                 }}
               >
-                Our smart E-Commerce CRM helps you track products, manage orders, and improve customer relationships-saving time and helping your business grow faster.
+                Boost efficiency by tracking products, managing customers, and reducing manual work. Grow your single vendor ecommerce website faster with an all-in-one solution.
               </Typography>
 
               <Box

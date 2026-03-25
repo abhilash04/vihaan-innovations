@@ -10,14 +10,14 @@ import CorporateFareIcon from '@mui/icons-material/CorporateFare';
 import MediationIcon from '@mui/icons-material/Mediation';
 
 const facilities = [
-  { icon: LocalHospitalIcon, label: "Multi-specialty Hospital" },
-  { icon: HealthAndSafetyIcon, label: "Single & Multi-branch Clinic" },
-  { icon: ScienceIcon, label: "Diagnostic Lab" },
-  { icon: HomeWorkIcon, label: "Nursing Home" },
-  { icon: LocalHospitalIcon, label: "Dental Clinic" },
-  { icon: SpaIcon, label: "Ayurveda Centre" },
-  { icon: CorporateFareIcon, label: "Corporate Health Unit" },
-  { icon: MediationIcon, label: "Hospital Chain" }
+  { icon: LocalHospitalIcon, label: "Multi-specialty Hospital", desc: "Manage admissions, EMRs, and staff efficiently." },
+  { icon: HealthAndSafetyIcon, label: "Single & Multi-branch Clinic", desc: "Control multiple clinics from one dashboard." },
+  { icon: ScienceIcon, label: "Diagnostic Lab", desc: "Automate reports and patient records." },
+  { icon: HomeWorkIcon, label: "Nursing Home", desc: "Simplify daily care and operations." },
+  { icon: LocalHospitalIcon, label: "Dental Clinic", desc: "Handle appointments and treatments بسهولة." },
+  { icon: SpaIcon, label: "Ayurveda Centre", desc: "Digitize and manage traditional care." },
+  { icon: CorporateFareIcon, label: "Corporate Health Unit", desc: "Track employee health records easily." },
+  { icon: MediationIcon, label: "Hospital Chain", desc: "Unify and scale multiple hospitals." }
 ];
 
 const HMSWhoThisIsFor = () => {
@@ -35,9 +35,7 @@ const HMSWhoThisIsFor = () => {
             </Box>{" "}
             Healthcare Facility
           </Typography>
-          <Typography sx={{ color: "#4A5568", fontSize: "15px", maxWidth: "560px", mx: "auto", lineHeight: 1.6 }}>
-            Our adaptive modules streamline operations from large chains to dedicated primary care clinics.
-          </Typography>
+          <Typography sx={{ color: "#0A2D6E", fontWeight: 700, fontSize: "16px", mb: 1 }}>Flexible Solutions for Hospitals, Clinics & Labs</Typography>
         </Box>
 
         <Grid container spacing={3} sx={{ px: 2 }}>
@@ -51,7 +49,7 @@ const HMSWhoThisIsFor = () => {
                       <Icon sx={{ fontSize: 20 }} />
                     </Box>
                     <Typography sx={{ color: "#0B2046", fontWeight: 800, fontSize: "15px" }}>{fac.label}</Typography>
-                    <Typography sx={{ color: "#4A5568", fontSize: "12px", lineHeight: 1.5 }}>Streamline admissions, EMRs, and staff duty rosters accurately.</Typography>
+                    <Typography sx={{ color: "#4A5568", fontSize: "12px", lineHeight: 1.5 }}>{fac.desc}</Typography>
                   </Paper>
                 </motion.div>
               </Grid>

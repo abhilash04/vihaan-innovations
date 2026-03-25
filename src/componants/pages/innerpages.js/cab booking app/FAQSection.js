@@ -5,32 +5,32 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    question: "How do I book a car on the app?",
-    answer: "Simply open the app, enter your pickup and drop location, select dates, choose from available cars, and confirm with pay to book in seconds.",
+    question: "What is a car booking management system?",
+    answer: "A car booking management system is a digital platform that allows businesses to manage vehicle bookings, drivers, payments, and ride scheduling from one centralized dashboard.",
   },
   {
-    question: "What documents do I need to rent a car?",
-    answer: "You will need a valid Driving License, Aadhar Card / Passport for ID proof, and a credit/debit card for insurance and security hold.",
+    question: "Can customers book rides online?",
+    answer: "Yes. Customers can check vehicle availability and book rides instantly through a website or mobile app. The system sends instant booking confirmation notifications.",
   },
   {
-    question: "Can I cancel or modify my booking?",
-    answer: "Yes! You can cancel or modify your booking from the 'My Bookings' tab up to 2 hours before the scheduled pickup for a full refund.",
+    question: "Does the system support multiple vehicles and fleets?",
+    answer: "Yes. You can manage multiple fleets, vehicle categories, and drivers from a single centralized dashboard with full visibility across your entire fleet.",
   },
   {
-    question: "Is there a security deposit required?",
-    answer: "A fully refundable security deposit is placed as a hold on your card for premium vehicles, which is released 24 hours after completion.",
+    question: "Can the platform integrate payment gateways?",
+    answer: "Yes. Secure payment gateways can be integrated for online ride payments. The system also supports automated invoice generation and fare calculation.",
   },
   {
-    question: "What happens if the car breaks down during my trip?",
-    answer: "We offer 24/7 Roadside Assistance. Just use the 'Help' button in the app and our team will dispatch mechanics or a replacement car ASAP.",
+    question: "Is the system mobile friendly?",
+    answer: "Yes. The platform is fully responsive and works seamlessly on desktops, tablets, and mobile devices for both customers and administrators.",
   },
   {
-    question: "Are there any hidden charges?",
-    answer: "No, our pricing is completely transparent. Fuel conditions, extra km charges, and GST are all shown clearly on the review screen before payment.",
+    question: "Can I customize the platform for my business?",
+    answer: "Absolutely. The platform can be tailored to your specific business needs — including branding, booking workflows, pricing rules, and custom reports.",
   },
   {
-    question: "Is the app available on both Android and iOS?",
-    answer: "Yes, the app is available for download on both the Google Play Store and Apple App Store. Scan the QR at the bottom for quick install.",
+    question: "Does it support driver dispatch and GPS tracking?",
+    answer: "Yes. The system includes smart driver dispatch with GPS-based ride tracking, real-time status updates, and driver performance monitoring.",
   },
 ];
 
@@ -67,7 +67,7 @@ const FAQSection = () => {
             mb: 1,
           }}
         >
-          Section 11
+          Frequently Asked Questions
         </Typography>
         <Typography
           variant="h3"
@@ -78,7 +78,7 @@ const FAQSection = () => {
         <Typography
           sx={{ textAlign: "center", color: "#666", maxWidth: 600, mx: "auto", mb: 8 }}
         >
-          Have questions? We have answers. Check out our most common queries below.
+          Common questions about our car booking management system. Can't find your answer? Contact our team.
         </Typography>
       </motion.div>
 
@@ -177,10 +177,10 @@ const FAQSection = () => {
           }}
         >
           <Typography variant="h5" sx={{ color: "#1a1a1a", fontWeight: 800, mb: 1 }}>
-            Ready to hit the road?
+            Ready to Launch Your Car Booking Platform?
           </Typography>
           <Typography sx={{ color: "#666", fontSize: "14px", mb: 3 }}>
-            Download our app and book your perfect drive today.
+            Transform your transportation business with a modern car booking management system that simplifies bookings, manages drivers, and increases ride revenue.
           </Typography>
           <Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
             <Button
@@ -195,7 +195,7 @@ const FAQSection = () => {
                 fontWeight: 600,
               }}
             >
-              Download App
+              Start Your Car Booking Platform
             </Button>
             <Button
               variant="outlined"
@@ -209,7 +209,7 @@ const FAQSection = () => {
                 "&:hover": { borderColor: "#f78361", color: "#f78361" },
               }}
             >
-              Book Now
+              View Platform Features
             </Button>
           </Box>
         </Box>
