@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import ArchitectureOutlinedIcon from '@mui/icons-material/ArchitectureOutlined';
@@ -71,8 +71,11 @@ const EducationProvenImpact = () => {
 
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "32px", md: "42px" } }}>
-            Proven Impact
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "32px", md: "42px" }, mb: 2 }}>
+            Proven Impact with Our Education CRM
+          </Typography>
+          <Typography variant="h5" sx={{ color: "#00B4D8", fontWeight: 700, fontSize: "20px" }}>
+            Real results delivered through intelligent automation and scalable systems
           </Typography>
         </Box>
 
@@ -121,16 +124,36 @@ const EducationProvenImpact = () => {
         {/* 4 Additional Info Cards */}
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={3}>
-            <FeatureCard num="01" icon={CalendarMonthOutlinedIcon} title="Understand academic calendar & admission season pressure" delay={0.5} />
+            <FeatureCard
+              num="01"
+              icon={CalendarMonthOutlinedIcon}
+              title={<>Built Around Academic Cycles<br /><Typography sx={{ fontSize: "13px", mt: 1, fontWeight: 400, color: "#666" }}>Designed to align with admission seasons and academic calendars for maximum efficiency.</Typography></>}
+              delay={0.5}
+            />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <FeatureCard num="02" icon={ArchitectureOutlinedIcon} title="Custom-built for your institute — not a generic SaaS" delay={0.6} />
+            <FeatureCard
+              num="02"
+              icon={ArchitectureOutlinedIcon}
+              title={<>Fully Custom-Built Solution<br /><Typography sx={{ fontSize: "13px", mt: 1, fontWeight: 400, color: "#666" }}>Our education crm is tailored specifically for your institution-not a one-size-fits-all SaaS.</Typography></>}
+              delay={0.6}
+            />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <FeatureCard num="03" icon={AccountTreeOutlinedIcon} title="Handles multi-branch complexity" delay={0.7} />
+            <FeatureCard
+              num="03"
+              icon={AccountTreeOutlinedIcon}
+              title={<>Multi-Branch Ready<br /><Typography sx={{ fontSize: "13px", mt: 1, fontWeight: 400, color: "#666" }}>Easily manage multiple campuses, teams, and operations from a single platform.</Typography></>}
+              delay={0.7}
+            />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
-            <FeatureCard num="04" icon={SupportAgentOutlinedIcon} title="Ongoing support through every admission cycle" delay={0.8} />
+            <FeatureCard
+              num="04"
+              icon={SupportAgentOutlinedIcon}
+              title={<>Continuous Support<br /><Typography sx={{ fontSize: "13px", mt: 1, fontWeight: 400, color: "#666" }}>Get ongoing assistance and system optimization throughout every admission cycle.</Typography></>}
+              delay={0.8}
+            />
           </Grid>
         </Grid>
 

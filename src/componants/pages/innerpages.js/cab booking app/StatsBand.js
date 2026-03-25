@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import { Gauge } from "lucide-react";
 
 // Hook for counting up number
@@ -71,10 +71,10 @@ const StatsBand = () => {
         sx={{ maxWidth: 1200, mx: "auto", position: "relative", zIndex: 1 }}
       >
         {[
-          { number: "10000", label: "Cars Available", suffix: "+" },
-          { number: "50", label: "Cities Covered", suffix: "+" },
-          { number: "500", label: "Happy Riders", suffix: "K+" },
-          { number: "48", label: "Average App Rating", suffix: "★", isRating: true }, // handles rating with decimal separately if needed
+          { number: "1200", label: "Fleets Managed", suffix: "+" },
+          { number: "80", label: "Ride Bookings", suffix: "K+" },
+          { number: "60", label: "Cities Operating", suffix: "+" },
+          { number: "500", label: "Active Drivers", suffix: "+" },
         ].map((stat, index) => (
           <Grid
             item
@@ -102,12 +102,12 @@ const StatsBand = () => {
               }}
             >
               {stat.isRating ? (
-                 <>
-                   <CountUp value="4" duration={1000} />
-                   .
-                   <CountUp value="8" duration={1500} />
-                   {stat.suffix}
-                 </>
+                <>
+                  <CountUp value="4" duration={1000} />
+                  .
+                  <CountUp value="8" duration={1500} />
+                  {stat.suffix}
+                </>
               ) : (
                 <CountUp value={stat.number} suffix={stat.suffix} />
               )}

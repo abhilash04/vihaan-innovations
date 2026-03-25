@@ -13,16 +13,16 @@ import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
 import SpeedIcon from '@mui/icons-material/Speed';
 
 const features = [
-  { icon: PersonAddAlt1Icon, title: "Patient Registration", desc: "OPD/IPD onboarding with automated queued slotting.", color: "#0A2D6E" },
-  { icon: CalendarMonthIcon, title: "Doctor Scheduling", desc: "Dynamic rosters with live booking allocation.", color: "#10B981" },
-  { icon: DescriptionIcon, title: "Electronic Records (EMR)", desc: "Secure digitized prescription pads and history.", color: "#00B4D8" },
-  { icon: MedicationIcon, title: "Pharmacy Management", desc: "Live stock tracking and billing integrations.", color: "#7C3AED" },
-  { icon: ScienceIcon, title: "Diagnostics & Labs", desc: "Sync barcode triggers with machine outputs.", color: "#F59E0B" },
-  { icon: SingleBedIcon, title: "Ward Management", desc: "Live floor map occupancy donuts tracking wards.", color: "#EF4444" },
-  { icon: InventoryIcon, title: "Inventory Control", desc: "Consumable tracking across surgery blocks.", color: "#3F51B5" },
-  { icon: ReceiptLongIcon, title: "Insurance & Claims", desc: "Auto-approve claims with TPA webhook callbacks.", color: "#E11D48" },
-  { icon: AnalyticsIcon, title: "Hospital Analytics", desc: "Heatmaps dashboard framing revenue curves dashboards.", color: "#EA580C" },
-  { icon: SpeedIcon, title: "Fast Checkout", desc: "Consolidate consulting & testing bills instantly.", color: "#10B981" }
+  { icon: PersonAddAlt1Icon, title: "Patient Registration", desc: "Quick, seamless onboarding with smart queue management.", color: "#0A2D6E" },
+  { icon: CalendarMonthIcon, title: "Doctor Scheduling", desc: "Optimize appointments with real-time availability.", color: "#10B981" },
+  { icon: DescriptionIcon, title: "Electronic Medical Records (EMR)", desc: "Secure, centralized patient data at your fingertips.", color: "#00B4D8" },
+  { icon: MedicationIcon, title: "Pharmacy Management", desc: "Track stock and billing with zero errors.", color: "#7C3AED" },
+  { icon: ScienceIcon, title: "Diagnostics & Labs", desc: "Automate reports with fast, accurate results.", color: "#F59E0B" },
+  { icon: SingleBedIcon, title: "Ward Management", desc: "Monitor bed occupancy and patient flow live.", color: "#EF4444" },
+  { icon: InventoryIcon, title: "Inventory Control", desc: "Reduce wastage with smart inventory tracking.", color: "#3F51B5" },
+  { icon: ReceiptLongIcon, title: "Insurance & Claims", desc: "Faster approvals with automated claim processing.", color: "#E11D48" },
+  { icon: AnalyticsIcon, title: "Hospital Analytics", desc: "Actionable insights to improve performance.", color: "#EA580C" },
+  { icon: SpeedIcon, title: "Fast Checkout", desc: "Speed up billing with integrated payments.", color: "#10B981" }
 ];
 
 const HMSWhatWeBuild = () => {
@@ -32,9 +32,13 @@ const HMSWhatWeBuild = () => {
         <Box sx={{ textAlign: "center", mb: 8 }}>
           <Typography sx={{ color: "#0A2D6E", fontWeight: 800, fontSize: "12px", mb: 1, letterSpacing: "1px" }}>OUR PLATFORM</Typography>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "28px", md: "36px" }, mb: 2, fontFamily: "Plus Jakarta Sans, sans-serif" }}>
-            A Complete Hospital Management System
+            Built by a Leading Hospital Software Company
           </Typography>
-          <Box sx={{ width: 60, height: "3px", bgcolor: "#0A2D6E", mx: "auto", borderRadius: "2px" }} />
+          <Typography sx={{ color: "#4A5568", fontSize: "15px", maxWidth: "800px", mx: "auto", mb: 3, lineHeight: 1.6 }}>
+            We provide an all-in-one hospital system that simplifies operations, connects departments, and improves patient care.
+          </Typography>
+          <Box sx={{ width: 60, height: "3px", bgcolor: "#0A2D6E", mx: "auto", borderRadius: "2px", mb: 4 }} />
+          <Typography sx={{ color: "#0A2D6E", fontWeight: 800, fontSize: "20px", mb: 2 }}>🚀 Core Modules</Typography>
         </Box>
 
         <Grid container spacing={3} sx={{ px: 2 }}>

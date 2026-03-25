@@ -157,18 +157,18 @@ const AppShowcase = () => {
             mb: 1,
           }}
         >
-          Section 5
+          Platform Showcase
         </Typography>
         <Typography
           variant="h3"
           sx={{ textAlign: "center", color: "#1a1a1a", fontWeight: 800, mb: 2 }}
         >
-          App Showcase
+          Smart Car Booking Platform for Taxi & Rental Businesses
         </Typography>
         <Typography
           sx={{ textAlign: "center", color: "#666", maxWidth: 600, mx: "auto", mb: 6 }}
         >
-          Explore our sleek mobile application interface that makes booking effortless
+          Run your transportation business from one intelligent platform — online booking, driver dispatching, fleet tracking, and automated payments.
         </Typography>
       </motion.div>
 

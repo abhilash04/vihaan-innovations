@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import DomainOutlinedIcon from '@mui/icons-material/DomainOutlined';
 import MagnetOutlinedIcon from '@mui/icons-material/InsightsOutlined';
@@ -80,12 +80,12 @@ const EducationFeatures = () => {
       <Container maxWidth="md" sx={{ position: "relative", zIndex: 2 }}>
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
-          <Typography sx={{ color: "#ffffff", fontSize: "16px", mb: 1, letterSpacing: "0.5px" }}>
-            From listing management to post-sale documentation, we design <br /> and develop every piece your team actually uses.
+        <Box sx={{ textAlign: "center", mb: 8, color: "white" }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "32px", md: "46px" }, mb: 2 }}>
+            What We Build
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "32px", md: "46px" } }}>
-            What We Build — Feature Overview
+          <Typography variant="h5" sx={{ fontWeight: 700, mb: 2, opacity: 0.9 }}>
+            Powerful Features Designed to Simplify Admissions & Maximize Conversions
           </Typography>
         </Box>
 
@@ -110,6 +110,7 @@ const EducationFeatures = () => {
             <FeatureCard icon={InsertChartOutlinedIcon} title="Analytics Dashboard" delay={0.6} />
           </Grid>
         </Grid>
+
 
       </Container>
     </Box>

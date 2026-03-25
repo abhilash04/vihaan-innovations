@@ -2,16 +2,16 @@ import React from "react";
 import { Box, Container, Typography, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 import DomainOutlinedIcon from '@mui/icons-material/DomainOutlined';
-import HandymanOutlinedIcon from '@mui/icons-material/HandymanOutlined';
 import TrackChangesOutlinedIcon from '@mui/icons-material/TrackChangesOutlined';
 import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
+import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined';
 
 const whyPoints = [
-  { num: "01", title: "Real Estate\nDomain Expertise", icon: <DomainOutlinedIcon /> },
-  { num: "02", title: "Custom-Not\nCookie-Cutter", icon: <HandymanOutlinedIcon /> },
-  { num: "03", title: "End-to-End\nOwnership", icon: <TrackChangesOutlinedIcon /> },
-  { num: "04", title: "Post-Launch\nPartnership", icon: <HandshakeOutlinedIcon /> }
+  { num: "01", title: "100+\nEducation Clients", icon: <DomainOutlinedIcon /> },
+  { num: "02", title: "5M+ Student\nEnquiries Managed", icon: <TrackChangesOutlinedIcon /> },
+  { num: "03", title: "24/7\nExpert Support", icon: <SupportAgentOutlinedIcon /> },
+  { num: "04", title: "Modular & Scalable\nArchitecture", icon: <HandshakeOutlinedIcon /> }
 ];
 
 const EducationWhyUs = () => {
@@ -24,13 +24,10 @@ const EducationWhyUs = () => {
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "32px", md: "46px" }, mb: 2 }}>
-            Why Vihaan Innovations
+            Why Choose Our CRM?
           </Typography>
           <Typography variant="h6" sx={{ color: "#0B2046", fontWeight: 700, mb: 1, fontSize: "20px" }}>
-            We don't sell software.
-          </Typography>
-          <Typography variant="h6" sx={{ color: "#0B2046", fontWeight: 700, fontSize: "20px" }}>
-            We solve real estate problems.
+            Trusted by schools, colleges, and consultants to power their admissions and growth
           </Typography>
         </Box>
 
@@ -97,15 +94,15 @@ const EducationWhyUs = () => {
                 </Box>
 
                 <Typography sx={{ color: "#1a1a1a", fontSize: "16px", lineHeight: 1.8, fontStyle: "italic", mb: 4, pt: 2 }}>
-                  The platform Vihaan built replaced three separate tools we were paying for. Our agents now spend 80% of their time selling, not updating spreadsheets.
+                  Their education CRM software has completely transformed our admission process. We’ve seen a 3x increase in admissions and a significant reduction in manual work.
                 </Typography>
 
                 <Box sx={{ position: "relative" }}>
                   <Typography sx={{ color: "#0B2046", fontWeight: 800, fontSize: "15px", mb: 0.5 }}>
-                    — Head of Sales,
+                    — Admissions Director,
                   </Typography>
                   <Typography sx={{ color: "#666", fontSize: "14px" }}>
-                    Residential Developer, Pune
+                    Leading International School
                   </Typography>
 
                   {/* Small decorative sparkle */}

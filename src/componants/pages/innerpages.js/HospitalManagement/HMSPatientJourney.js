@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 const opdSteps = [
-  { id: 1, label: "Online Registration", desc: "Digital queue token generation." },
-  { id: 2, label: "Vital Check & Triage", desc: "Automatic stats sync desk." },
-  { id: 3, label: "Doctor Consulting", desc: "Dynamic EMR charting desk." },
-  { id: 4, label: "Lab Diagnostic", desc: "Machine test results auto-synced." },
-  { id: 5, label: "Pharmacy Clear", desc: "Bills auto-synced triggers." },
-  { id: 6, label: "Checkout & Summary", desc: "Visit history logged safely." }
+  { id: 1, label: "Online Registration", desc: "Quick digital onboarding" },
+  { id: 2, label: "Vital Check & Triage", desc: "Instant patient assessment" },
+  { id: 3, label: "Doctor Consulting", desc: "Smart EMR-driven care" },
+  { id: 4, label: "Lab Diagnostics", desc: "Automated test processing" },
+  { id: 5, label: "Pharmacy Clearance", desc: "Integrated billing & meds" },
+  { id: 6, label: "Checkout & Summary", desc: "Fast discharge with reports" }
 ];
 
 const ipdSteps = [
-  { id: 1, label: "Admission Trigger", desc: "Bed buffer allocation links." },
-  { id: 2, label: "Ward Management", desc: "Nursing duty allocation index." },
-  { id: 3, label: "Diagnostics", desc: "Surgical block updates setups." },
-  { id: 4, label: "Continuous Vitals", desc: "Digital charts monitoring leaks." },
-  { id: 5, label: "TPA Clearance", desc: "Insurance approval links triggers." },
-  { id: 6, label: "Discharge Desk", desc: "Summary sheet generation setups." }
+  { id: 1, label: "Admission Trigger", desc: "Smooth patient admission" },
+  { id: 2, label: "Ward Management", desc: "Smart bed allocation" },
+  { id: 3, label: "Diagnostics", desc: "Seamless test integration" },
+  { id: 4, label: "Continuous Vitals", desc: "Real-time patient monitoring" },
+  { id: 5, label: "TPA Clearance", desc: "Faster insurance approvals" },
+  { id: 6, label: "Discharge Desk", desc: "Hassle-free discharge process" }
 ];
 
 const JourneyNode = ({ step, color }) => (
@@ -40,7 +40,10 @@ const HMSPatientJourney = () => {
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography sx={{ color: "#0A2D6E", fontWeight: 800, fontSize: "12px", mb: 1, letterSpacing: "1px" }}>PATIENT JOURNEY</Typography>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "28px", md: "36px" }, mb: 2, fontFamily: "Plus Jakarta Sans, sans-serif" }}>
-            End-to-End Care Integration
+            End-to-End Hospital Management System
+          </Typography>
+          <Typography sx={{ color: "#4A5568", fontSize: "15px", maxWidth: "700px", mx: "auto", lineHeight: 1.6 }}>
+            Provide seamless patient care with hospital software that unifies OPD and IPD workflows.
           </Typography>
         </Box>
 

@@ -75,10 +75,10 @@ const FinalCTA = () => {
                 fontSize: { xs: "28px", md: "42px" },
               }}
             >
-              Download the App & <br /> Drive into the Drive Today
+              Ready to Launch Your Car Booking Platform?
             </Typography>
             <Typography sx={{ color: "#555", fontSize: "16px", mb: 5, maxWidth: "500px" }}>
-              Available on iOS and Android. Book in seconds, drive in minutes. No hidden fees, fully insured rides.
+              Transform your transportation business with a modern car booking management system. Manage bookings, drivers, and fleet from one powerful cloud platform.
             </Typography>
 
             {/* Buttons Group */}
@@ -189,34 +189,34 @@ const FinalCTA = () => {
             animate={{ y: [0, -15, 0] }}
             style={{ position: "relative" }}
           >
-             <Box
-               sx={{
-                 width: "280px",
-                 height: "560px",
-                 background: "#ffffff", // Light theme internal frame simulation
-                 borderRadius: "32px",
-                 border: "8px solid #1a1a1a",
-                 boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-                 overflow: "hidden",
-                 position: "relative",
-                 "&::before": {
-                   content: '""',
-                   position: "absolute",
-                   inset: 0,
-                   background: "linear-gradient(135deg, rgba(253, 84, 78, 0.05) 0%, rgba(247, 131, 97, 0.03) 100%)",
-                   zIndex: 1,
-                 }
-               }}
-             >
-                <Box sx={{ p: 2, position: "relative", zIndex: 2, borderBottom: "1px solid rgba(0,0,0,0.05)" }}>
-                    <Typography sx={{ color: "#1a1a1a", fontWeight: 800, fontSize: "14px" }}>Cab App</Typography>
+            <Box
+              sx={{
+                width: "280px",
+                height: "560px",
+                background: "#ffffff", // Light theme internal frame simulation
+                borderRadius: "32px",
+                border: "8px solid #1a1a1a",
+                boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                overflow: "hidden",
+                position: "relative",
+                "&::before": {
+                  content: '""',
+                  position: "absolute",
+                  inset: 0,
+                  background: "linear-gradient(135deg, rgba(253, 84, 78, 0.05) 0%, rgba(247, 131, 97, 0.03) 100%)",
+                  zIndex: 1,
+                }
+              }}
+            >
+              <Box sx={{ p: 2, position: "relative", zIndex: 2, borderBottom: "1px solid rgba(0,0,0,0.05)" }}>
+                <Typography sx={{ color: "#1a1a1a", fontWeight: 800, fontSize: "14px" }}>Cab App</Typography>
+              </Box>
+              <Box sx={{ p: 2, position: "relative", zIndex: 2, display: "flex", flexDirection: "column", gap: 1.5 }}>
+                <Box sx={{ height: 100, background: "#f9f9f9", borderRadius: "12px", p: 1 }}>
+                  <Typography sx={{ fontSize: "11px", color: "#fd544e", fontWeight: 700 }}>Pickup Details</Typography>
                 </Box>
-                <Box sx={{ p: 2, position: "relative", zIndex: 2, display: "flex", flexDirection: "column", gap: 1.5 }}>
-                    <Box sx={{ height: 100, background: "#f9f9f9", borderRadius: "12px", p: 1 }}>
-                        <Typography sx={{ fontSize: "11px", color: "#fd544e", fontWeight: 700 }}>Pickup Details</Typography>
-                    </Box>
-                </Box>
-             </Box>
+              </Box>
+            </Box>
           </motion.div>
         </Grid>
       </Grid>

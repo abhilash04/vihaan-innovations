@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Box, Grid, Typography, Button, Tabs, Tab, Stack } from "@mui/material";
-import img1 from "../../assets/about-part-003.jpg";
-import img2 from "../../assets/about-part-004.jpg";
-import img3 from "../../assets/about-part-005.jpg";
-import PhoneIcon from "@mui/icons-material/Phone";
+import img1 from "../../assets/first page.png";
+import img2 from "../../assets/first page 1.png";
+import img3 from "../../assets/first page 2.png";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 const ITServiceSection = () => {
   const [tabValue, setTabValue] = useState(0);
@@ -71,7 +70,7 @@ const ITServiceSection = () => {
                       variant="body1"
                       sx={{ mt: 1, fontSize: "21px", lineHeight: "31px" }}
                     >
-                      Experience in IT <br /> Industry
+                      Powering growth through modern tech.
                     </Typography>
                   </Box>
                 ) : (
@@ -139,16 +138,16 @@ const ITServiceSection = () => {
               width: "600px",
             }}
           >
-            Your Trusted Partner for{" "}
+            Your Trusted Partner {" "}
             <span style={{ color: "#0087c9" }}>
-              IT Services <span style={{ color: "black" }}> & </span>Digital
+              for IT Services <span style={{ color: "black" }}> & </span>Digital
               Innovation
             </span>
           </Typography>
 
           <Typography sx={{ color: "text.secondary", mb: 1.5 }}>
-            Delivering reliable IT consulting, product development, and digital
-            solutions that help businesses grow with confidence.
+            At Vihaan Innovations, we deliver reliable IT consulting, product development, and
+            digital solutions that empower organizations to scale with confidence.
           </Typography>
 
           {/* Tabs */}
@@ -167,25 +166,24 @@ const ITServiceSection = () => {
           {/* Tab Content */}
           {tabValue === 0 && (
             <Typography sx={{ color: "text.secondary", mb: 1.5 }}>
-              Our mission is to empower businesses with smart, scalable, and
-              secure technology solutions. We work to simplify IT, strengthen
-              digital operations, and create value-driven products that support
-              long-term success.
+              Our mission at Vihaan Innovations is to empower businesses with smart,
+              scalable, and secure technology solutions. We strive to simplify IT operations,
+              accelerate digital transformation, and build innovative products that deliver
+              long-term value for our clients.
             </Typography>
           )}
           {tabValue === 1 && (
             <Typography sx={{ color: "text.secondary", mb: 2 }}>
-              Our vision is to build a future where businesses of all sizes can
-              access modern, efficient, and innovative digital systems that help
-              them stay ahead in a fast-changing world.
+              Our vision is to become a leading technology partner recognized for delivering
+              innovative digital solutions that help businesses adapt, grow, and succeed in
+              an ever-changing digital landscape.
             </Typography>
           )}
           {tabValue === 2 && (
             <Typography sx={{ color: "text.secondary", mb: 2 }}>
-              We believe in delivering solutions with transparency, quality, and
-              customer focus. Every project is guided by integrity, innovation,
-              and a commitment to creating technology that truly makes a
-              difference.
+              Vihaan Innovations believes in innovation, transparency, and customer success.
+              Our core values focus on quality delivery, collaboration, and continuous
+              improvement to ensure every client receives reliable technology solutions.
             </Typography>
           )}
 

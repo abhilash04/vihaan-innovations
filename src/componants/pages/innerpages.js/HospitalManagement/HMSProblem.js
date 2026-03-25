@@ -5,14 +5,14 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 
 const problems = [
-  { title: "Manual Billing Leaks", desc: "Siloed billing causes prescription leaks and lost revenue buffers." },
-  { title: "Overloaded OPD Queues", desc: "Lack of digital slotting leads to staff burnout and cancels." },
-  { title: "Siloed Department Data", desc: "Diagnostics and pharmacy records don't sync, delaying care." },
-  { title: "Paper Lab Reports", desc: "Reports degrade, get lost, or take hours to fetch safely." },
-  { title: "Disconnected Staff Scheduling", desc: "Inefficient duty rosters cause coverage gaps packs." },
-  { title: "Zero Data Insights", desc: "No real-time analytics on bed occupancy or daily revenue curves." },
-  { title: "Inventory Wastage", desc: "Consumables overstocking causes wastage leakage buffers." },
-  { title: "Delayed Insurance Claims", desc: "Manual TPA reconciliation delays settlements triggers triggers." }
+  { title: "Manual Billing Errors & Revenue Leakage", desc: "Outdated billing systems increase the risk of errors, delayed payments, and financial losses." },
+  { title: "Overloaded OPD Queues", desc: "Lack of smart scheduling systems results in long wait times, staff burnout, and patient dissatisfaction." },
+  { title: "Disconnected Department Data", desc: "When diagnostics, pharmacy, and administration systems don’t sync, it slows down decision-making and patient care." },
+  { title: "Inefficient Paper-Based Reports", desc: "Manual lab reports are prone to damage, delays, and mismanagement, affecting treatment timelines." },
+  { title: "Poor Staff Scheduling", desc: "Uncoordinated staff management leads to shift conflicts and reduced operational efficiency." },
+  { title: "No Real-Time Insights", desc: "Without analytics, hospitals cannot track occupancy rates, revenue trends, or patient flow effectively." },
+  { title: "Inventory Mismanagement", desc: "Overstocking or understocking of medical supplies results in wastage and unnecessary costs." },
+  { title: "Delayed Insurance Claims", desc: "Manual claim processing slows down reimbursements and impacts cash flow." }
 ];
 
 const HMSProblem = () => {
@@ -33,15 +33,15 @@ const HMSProblem = () => {
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <Typography sx={{ color: "#F87171", fontWeight: 800, fontSize: "12px", mb: 1, letterSpacing: "1px" }}>THE CHALLENGE</Typography>
               <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "28px", md: "36px" }, mb: 2, fontFamily: "Plus Jakarta Sans, sans-serif" }}>
-                Why Hospitals Struggle Without a Unified System
+                Hospitals Can’t Scale Without the Best HMS Software
               </Typography>
               <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "15px", mb: 4, lineHeight: 1.6 }}>
-                Every department working in silos creates delays, increases revenue leaks, and leads to patient frustration.
+                Running a hospital without the best HMS software leads to chaos slow processes, data gaps, and lost revenue. A disconnected system doesn’t just delay operations, it impacts patient care.
               </Typography>
 
               {/* Bottom Callout box list */}
               <Paper elevation={0} sx={{ p: 2, borderRadius: "12px", bgcolor: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", display: "flex", alignItems: "center", justifyContent: "space-between", cursor: "pointer", transition: "all 0.3s", "&:hover": { bgcolor: "rgba(255,255,255,0.06)", "& .arrow-icon": { transform: "translateX(4px)" } } }}>
-                <Typography sx={{ color: "#ffffff", fontSize: "13px", fontWeight: 700 }}>Sound familiar? Here's how we solve every one of these.</Typography>
+                <Typography sx={{ color: "#ffffff", fontSize: "13px", fontWeight: 700 }}>Better care. Faster operations. Higher revenue.</Typography>
                 <ArrowForwardIcon className="arrow-icon" sx={{ color: "#10B981", fontSize: 20, transition: "0.2s" }} />
               </Paper>
             </motion.div>

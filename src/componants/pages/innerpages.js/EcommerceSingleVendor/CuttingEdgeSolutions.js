@@ -99,8 +99,9 @@ const CuttingEdgeSolutions = () => {
               color: "#333",
             }}
           >
-            Our advanced tools help you automate processes, manage operations efficiently, and deliver better customer experiences across every sales channel.
-
+            Our advanced tools are built for a single vendor ecommerce
+            iOS experience, helping you automate processes, manage operations efficiently,
+            and deliver better customer experiences.
           </Typography>
         </Box>
 

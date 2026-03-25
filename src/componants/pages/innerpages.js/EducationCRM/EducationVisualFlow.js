@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import AssignmentTurnedInOutlinedIcon from '@mui/icons-material/AssignmentTurnedInOutlined';
 import CloudUploadOutlinedIcon from '@mui/icons-material/CloudUploadOutlined';
@@ -9,12 +9,12 @@ import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutli
 import CastForEducationOutlinedIcon from '@mui/icons-material/CastForEducationOutlined';
 
 const flowSteps = [
-  { id: 1, label: "Form Submission", desc: "Smart forms capture prospect lead data effortlessly.", icon: <AssignmentTurnedInOutlinedIcon /> },
-  { id: 2, label: "Document Upload", desc: "Secure simplified vaults for student verification feeds.", icon: <CloudUploadOutlinedIcon /> },
-  { id: 3, label: "Onboarding Review", desc: "Automated counsellor checks & prospect grading logs.", icon: <HowToRegOutlinedIcon /> },
-  { id: 4, label: "Fee Payment", desc: "Integrated gateways with automatic invoice reconciliations.", icon: <PaymentOutlinedIcon /> },
-  { id: 5, label: "Approval & Confirmation", desc: "Digital seat locking and welcome criteria releases.", icon: <CheckCircleOutlineOutlinedIcon /> },
-  { id: 6, label: "Classroom Entry", desc: "Seamless activation handover into live LMS modules.", icon: <CastForEducationOutlinedIcon /> }
+  { id: 1, label: "Form Submission", desc: "Smart forms within the education crm capture and organize student enquiries automatically across multiple channels.", icon: <AssignmentTurnedInOutlinedIcon /> },
+  { id: 2, label: "Document Upload", desc: "Secure document management allows students to upload and verify records directly through the education crm platform.", icon: <CloudUploadOutlinedIcon /> },
+  { id: 3, label: "Onboarding Review", desc: "Automated counsellor workflows, lead scoring, and evaluation processes ensure faster and more accurate decision-making.", icon: <HowToRegOutlinedIcon /> },
+  { id: 4, label: "Fee Payment", desc: "Integrated payment gateways inside the education crm enable smooth fee collection with automated invoices and reminders.", icon: <PaymentOutlinedIcon /> },
+  { id: 5, label: "Approval & Confirmation", desc: "Instantly approve applications, lock seats digitally, and send confirmation notifications through the system.", icon: <CheckCircleOutlineOutlinedIcon /> },
+  { id: 6, label: "Classroom Entry", desc: "Seamless transition from admission to learning with LMS integration powered by your education crm.", icon: <CastForEducationOutlinedIcon /> }
 ];
 
 const Bubble = ({ size, color, top, left, right, bottom, delay }) => (
@@ -111,13 +111,13 @@ const EducationVisualFlow = () => {
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography sx={{ color: "#00B4D8", fontWeight: 700, mb: 1, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px" }}>
-            The Admission Journey
+            Admission Lifecycle
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "32px", md: "42px" }, lineHeight: 1.2 }}>
-            The Admission Journey — Visual Flow
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "32px", md: "42px" }, lineHeight: 1.2, mb: 2 }}>
+            Your Education CRM-Powered Admission Journey
           </Typography>
-          <Typography sx={{ color: "rgba(255, 255, 255, 0.7)", fontSize: "16px", mt: 1.5, maxWidth: "600px", mx: "auto" }}>
-            A continuous tracking track designed to develop tailored educational software that yields accurate training limits effortlessly.
+          <Typography variant="h5" sx={{ color: "#00B4D8", fontWeight: 700, mb: 2, fontSize: "20px" }}>
+            A seamless, automated workflow designed to manage every step of the student lifecycle with precision
           </Typography>
         </Box>
 

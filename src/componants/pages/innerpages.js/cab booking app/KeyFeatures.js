@@ -1,38 +1,38 @@
 import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
 import { motion } from "framer-motion";
-import { Zap, Navigation, Clock, ShieldCheck, Headphones, SlidersHorizontal, Car } from "lucide-react";
+import { Car, Smartphone, Users, Navigation, CreditCard, BarChart2 } from "lucide-react";
 
 const features = [
   {
-    icon: Zap,
-    title: "Instant Booking",
-    description: "Book a car in under 60 seconds with real-time availability and instant confirmation",
+    icon: Car,
+    title: "Fleet Management",
+    description: "Manage vehicles and track fleet availability easily. Vehicle listing, category management, maintenance scheduling, and multi-fleet dashboard.",
+  },
+  {
+    icon: Smartphone,
+    title: "Online Ride Booking System",
+    description: "Allow customers to book rides instantly through your website or mobile app with real-time availability and instant booking confirmation.",
+  },
+  {
+    icon: Users,
+    title: "Driver Management System",
+    description: "Manage drivers and ride assignments efficiently with driver profiles, availability tracking, ride dispatch, and performance analytics.",
   },
   {
     icon: Navigation,
-    title: "GPS Live Tracking",
-    description: "Track your ride and vehicle location in real time from the app",
+    title: "Ride Dispatch & Scheduling",
+    description: "Automate ride dispatch with smart driver assignment, scheduled bookings, GPS ride tracking, and real-time ride status monitoring.",
   },
   {
-    icon: Clock,
-    title: "Flexible Rentals",
-    description: "Hourly, daily, weekly rental options to match any travel need",
+    icon: CreditCard,
+    title: "Payment & Billing Management",
+    description: "Simplify billing with secure payment gateway integration, automated invoice generation, fare calculation, and multiple payment methods.",
   },
   {
-    icon: ShieldCheck,
-    title: "Secure Payments",
-    description: "Multiple payment options including UPI, cards, wallets, and pay-later",
-  },
-  {
-    icon: Headphones,
-    title: "24/7 Support",
-    description: "Round-the-clock customer support via chat, call, and in-app help center",
-  },
-  {
-    icon: SlidersHorizontal,
-    title: "Smart Filters",
-    description: "Filter cars by type, fuel, transmission, brand, seats, and price range",
+    icon: BarChart2,
+    title: "Reports & Analytics Dashboard",
+    description: "Gain insights into business performance with ride booking reports, revenue analytics, driver performance reports, and PDF/Excel exports.",
   },
 ];
 
@@ -104,7 +104,7 @@ const KeyFeatures = () => {
             position: "relative",
           }}
         >
-          Section 4
+          Core Platform Features
         </Typography>
         <Typography
           variant="h3"
@@ -117,20 +117,20 @@ const KeyFeatures = () => {
             position: "relative",
           }}
         >
-          Key Features
+          Comprehensive Car Booking Management System Features
         </Typography>
         <Typography
           sx={{
             textAlign: "center",
             color: "#666", // Muted title
-            maxWidth: 600,
+            maxWidth: 700,
             mx: "auto",
             mb: 8,
             zIndex: 1,
             position: "relative",
           }}
         >
-          Everything you need for a smooth and comfortable ride booking experience.
+          Our car booking management system includes everything transportation businesses need to manage ride bookings, coordinate drivers, and operate fleets efficiently.
         </Typography>
       </motion.div>
 

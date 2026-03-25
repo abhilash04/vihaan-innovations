@@ -1,11 +1,6 @@
 import React from "react";
 import { Box, Container, Typography, Button, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import InsertChartOutlinedIcon from '@mui/icons-material/InsertChartOutlined';
-import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
-import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import img from '../../../../assets/Education CRM technology benefits infographic.png'
 const StatCard = ({ icon: Icon, value, label, delay }) => (
   <motion.div
@@ -94,15 +89,15 @@ const EducationBanner = () => {
               transition={{ duration: 0.8 }}
             >
               <Typography sx={{ color: "#00B4D8", fontWeight: 700, mb: 1.5, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px" }}>
-                Education CRM Technology
+                EDUCATION CRM SOLUTIONS
               </Typography>
 
               <Typography variant="h1" sx={{ color: "#ffffff", fontWeight: 800, fontSize: { xs: "36px", md: "52px" }, lineHeight: 1.1, mb: 3 }}>
-                Digital Enquiry forms that close deals faster
+                Education CRM for faster admissions
               </Typography>
 
               <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "18px", lineHeight: 1.6, mb: 5, maxWidth: "500px" }}>
-                We build custom CRM, property portal, lead management systems, and agile solutions — purpose-built for real estate business and ones to scale.
+                We build smart education CRM systems that simplify admissions, automate follow-ups, and increase conversions.
               </Typography>
 
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
@@ -126,7 +121,7 @@ const EducationBanner = () => {
                     transition: "all 0.3s"
                   }}
                 >
-                  See a Demo
+                  Get Free Demo
                 </Button>
 
                 <Button
@@ -146,7 +141,7 @@ const EducationBanner = () => {
                     }
                   }}
                 >
-                  Explore Features
+                  Explore Education CRM Features
                 </Button>
               </Box>
             </motion.div>
@@ -155,9 +150,6 @@ const EducationBanner = () => {
           {/* Right Floating Stats Area */}
           <Grid item xs={12} md={6}>
             <Box sx={{ position: "relative", width: "100%", ml: "auto", mr: { xs: "auto", md: 0 } }}>
-
-
-
               <img src={img} alt="Education CRM technology benefits infographic" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: '20px' }} />
             </Box>
           </Grid>

@@ -5,39 +5,39 @@ import { Star } from "lucide-react";
 
 const reviews = [
   {
-    name: "Arjun Mehta",
+    name: "Rajan Mehta",
     city: "Mumbai",
-    car: "Booked Sedan",
+    car: "Taxi Fleet Operator",
     rating: 5,
-    text: "Seamless booking process and extremely clean cars. Highly recommend for business trips!",
+    text: "The car booking management system completely transformed how we manage our 200+ taxi fleet. Driver dispatch is fully automated now.",
   },
   {
     name: "Sneha Rao",
     city: "Bangalore",
-    car: "Booked SUV",
+    car: "Car Rental Business",
     rating: 5,
-    text: "Great experience with the outstation rental. Driver was courteous and punctual.",
+    text: "Our car rental bookings increased by 40% after switching to this platform. The online booking system is seamless for customers.",
   },
   {
     name: "Rohan Das",
     city: "Delhi",
-    car: "Booked Luxury",
-    rating: 4,
-    text: "The BMW was in top notch condition. Perfect for our wedding anniversary drive.",
+    car: "Corporate Transport Manager",
+    rating: 5,
+    text: "Managing employee transportation for 500+ staff was a nightmare before. Now everything is automated — bookings, billing, and reports.",
   },
   {
     name: "Priya Sharma",
     city: "Pune",
-    car: "Booked Electric",
+    car: "Travel Agency Owner",
     rating: 5,
-    text: "Loved the Tesla rental! Very smooth ride and great support from the app team throughout.",
+    text: "The ride scheduling and payment automation features have saved us hours of manual work every week. Highly recommended platform.",
   },
   {
     name: "Vikram Singh",
     city: "Hyderabad",
-    car: "Booked Hatchback",
+    car: "Ride-Hailing Startup",
     rating: 5,
-    text: "Affordable and quick. Picked up the car in 5 mins from the hub. Ideal for city commute.",
+    text: "We launched our local ride-hailing service using this platform in under a month. The dispatch system and driver app work flawlessly.",
   },
 ];
 
@@ -153,18 +153,18 @@ const Testimonials = () => {
             mb: 1,
           }}
         >
-          Section 8
+          Client Success Stories
         </Typography>
         <Typography
           variant="h3"
           sx={{ textAlign: "center", color: "#1a1a1a", fontWeight: 800, mb: 2 }}
         >
-          User Testimonials
+          What Transportation Businesses Say
         </Typography>
         <Typography
           sx={{ textAlign: "center", color: "#666", maxWidth: 600, mx: "auto", mb: 8 }}
         >
-          See what our happy riders have to say about their journey with us.
+          See how transportation businesses are growing with our car booking management platform.
         </Typography>
       </motion.div>
 

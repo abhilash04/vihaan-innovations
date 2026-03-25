@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import CastForEducationOutlinedIcon from '@mui/icons-material/CastForEducationOutlined';
@@ -77,17 +77,16 @@ const EducationWhoThisIsFor = () => {
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 6 }}>
-          <Box sx={{ display: "inline-block", mb: 1 }}>
-            <Typography sx={{
-              fontWeight: 800, color: "#0B2046", fontSize: "28px",
-              display: "flex", alignItems: "center", gap: 1,
-              justifyContent: "center"
-            }}>
-
-              Who This Is For
-            </Typography>
-          </Box>
+        <Box sx={{ textAlign: "center", mb: 8 }}>
+          <Typography sx={{ color: "#00B4D8", fontWeight: 700, mb: 1, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px" }}>
+            Our Ideal Users
+          </Typography>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "32px", md: "42px" }, mb: 2 }}>
+            Who Benefits from Our Custom CRM Solutions
+          </Typography>
+          <Typography sx={{ color: "#444", fontSize: "16px", maxWidth: "800px", mx: "auto", lineHeight: 1.6 }}>
+            Our custom CRM solutions help institutions and consultants manage leads, automate tasks, and scale easily.
+          </Typography>
         </Box>
 
         {/* Audience Grid - 6 horizontal cards mimicking the specific design */}
@@ -103,10 +102,10 @@ const EducationWhoThisIsFor = () => {
           ))}
         </Grid>
 
-        {/* Small descriptive text below */}
-        <Box sx={{ textAlign: "center", maxWidth: "600px", mx: "auto" }}>
-          <Typography sx={{ color: "#444", fontSize: "14px", lineHeight: 1.6, fontStyle: "italic", opacity: 0.8, pt: 4 }}>
-            Women tech leaders, developers, and educators across state — and the same bottlenecks keep appearing. We fix them.
+        {/* Bottom Tagline & Button */}
+        <Box sx={{ textAlign: "center", maxWidth: "800px", mx: "auto", pt: 4 }}>
+          <Typography sx={{ color: "#0B2046", fontSize: "18px", fontWeight: 600, mb: 4, lineHeight: 1.6 }}>
+            Built with powerful custom CRM software development, our solutions eliminate manual work, improve conversion rates, and help education businesses scale faster.
           </Typography>
         </Box>
 
