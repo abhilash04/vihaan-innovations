@@ -30,11 +30,11 @@ const moduleContent = {
 const LMSPlatformModules = () => {
   const [active, setActive] = useState(0);
   return (
-    <Box sx={{ bgcolor: "#ffffff", py: 12 }}>
+    <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
       <Container maxWidth="lg">
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>Platform Modules – Tabbed Deep Dive</Typography>
-          <Typography variant="body1"sx={{ color: "#64748b", fontSize: { xs:"14px", md: "16px"} }}>Built by an expert LMS Application Development team, offering powerful modules for complete learning management.</Typography>
+          <Typography variant="body1" sx={{ color: "#64748b", fontSize: { xs: "14px", md: "16px" } }}>Built by an expert LMS Application Development team, offering powerful modules for complete learning management.</Typography>
         </Box>
         {/* Tab Bar */}
         <Tabs value={active} onChange={(_, v) => setActive(v)} variant="scrollable" scrollButtons="auto"
@@ -48,13 +48,13 @@ const LMSPlatformModules = () => {
               <Grid container>
                 <Grid item xs={12} md={6} sx={{ p: 5, borderRight: { md: "1px solid #e2e8f0" }, bgcolor: "#fbfdff" }}>
                   <Typography sx={{ fontWeight: 800, color: "#0f172a", fontSize: "15px", mb: 3 }}>{moduleContent[active]?.left.title}</Typography>
-                  <Box component="ul" sx={{ pl: 0, m: 0, listStyle: "none", '& li': { position: "relative", pl: "22px", mb: 2, color: "#475569", fontSize: "14px", "&::before": { content:'""', position:"absolute", left:0, top:"8px", width:"7px", height:"7px", borderRadius:"50%", backgroundColor:"#3b82f6" } } }}>
+                  <Box component="ul" sx={{ pl: 0, m: 0, listStyle: "none", '& li': { position: "relative", pl: "22px", mb: 2, color: "#475569", fontSize: "14px", "&::before": { content: '""', position: "absolute", left: 0, top: "8px", width: "7px", height: "7px", borderRadius: "50%", backgroundColor: "#3b82f6" } } }}>
                     {moduleContent[active]?.left.items.map((it, i) => <li key={i}>{it}</li>)}
                   </Box>
                 </Grid>
                 <Grid item xs={12} md={6} sx={{ p: 5, bgcolor: "#f8fafc" }}>
                   <Typography sx={{ fontWeight: 800, color: "#0f172a", fontSize: "15px", mb: 3 }}>{moduleContent[active]?.right.title}</Typography>
-                  <Box component="ul" sx={{ pl: 0, m: 0, listStyle: "none", '& li': { position: "relative", pl: "22px", mb: 2, color: "#475569", fontSize: "14px", "&::before": { content:'""', position:"absolute", left:0, top:"8px", width:"7px", height:"7px", borderRadius:"50%", backgroundColor:"#22c55e" } } }}>
+                  <Box component="ul" sx={{ pl: 0, m: 0, listStyle: "none", '& li': { position: "relative", pl: "22px", mb: 2, color: "#475569", fontSize: "14px", "&::before": { content: '""', position: "absolute", left: 0, top: "8px", width: "7px", height: "7px", borderRadius: "50%", backgroundColor: "#22c55e" } } }}>
                     {moduleContent[active]?.right.items.map((it, i) => <li key={i}>{it}</li>)}
                   </Box>
                 </Grid>

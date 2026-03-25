@@ -39,7 +39,7 @@ const LMSWhoThisIsFor = () => (
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>Who This Is For</Typography>
         <Typography sx={{ color: "#64748b", fontSize: "16px" }}>Custom LMS App Development solutions designed for different industries and learning needs.</Typography>
       </Box>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} rowSpacing={10}>
         {audiences.map((a, i) => (
           <Grid item xs={6} sm={3} key={i}><AudienceCard {...a} delay={i * 0.08} /></Grid>
         ))}

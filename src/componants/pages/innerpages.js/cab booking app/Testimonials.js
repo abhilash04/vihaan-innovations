@@ -1,7 +1,8 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Container, Typography, Avatar, Card } from "@mui/material";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import { styled, keyframes } from "@mui/system";
 
 const reviews = [
   {
@@ -41,98 +42,114 @@ const reviews = [
   },
 ];
 
-const Row = ({ items, reverse = false }) => {
-  const duplicatedItems = [...items, ...items, ...items];
+// Animations for infinite scroll
+const scrollRight = keyframes`
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+`;
 
-  return (
-    <Box
-      sx={{
-        display: "flex",
-        width: "max-content",
-        gap: 3,
-        position: "relative",
-      }}
-    >
-      <motion.div
-        animate={{
-          x: reverse ? ["-50%", "0%"] : ["0%", "-50%"],
-        }}
-        transition={{
-          repeat: Infinity,
-          ease: "linear",
-          duration: 30,
-        }}
-        style={{
+const scrollLeft = keyframes`
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+`;
+
+const MarqueeRow = styled(Box)(({ direction }) => ({
+  display: "flex",
+  width: "max-content",
+  animation: `${direction === "right" ? scrollRight : scrollLeft} 30s linear infinite`,
+  "&:hover": {
+    animationPlayState: "paused",
+  },
+}));
+
+const ReviewCard = styled(Card)(({ theme }) => ({
+  width: "380px",
+  minWidth: "380px",
+  margin: "0 15px",
+  padding: "24px",
+  borderRadius: "24px",
+  background: "#ffffff",
+  border: "1px solid rgba(253, 84, 78, 0.15)", // Using theme accent color (fd544e)
+  boxShadow: "0 10px 30px rgba(253, 84, 78, 0.05)",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
+  height: "160px",
+  transition: "all 0.3s ease",
+  "&:hover": {
+    transform: "translateY(-5px)",
+    boxShadow: "0 15px 40px rgba(253, 84, 78, 0.12)",
+    borderColor: "#fd544e",
+  },
+}));
+
+const ReviewCardContent = ({ item }) => (
+  <ReviewCard elevation={0}>
+    {/* Top section: Avatar and Text */}
+    <Box sx={{ display: "flex", flex: 1, gap: 2, mb: 1 }}>
+      <Avatar
+        sx={{
+          width: 110,
+          height: 110,
+          bgcolor: "#fdf5f5", // Light tint of red/coral
+          color: "#fd544e",
+          fontWeight: 800,
+          fontSize: "32px",
+          borderRadius: "50%",
+          border: "1.5px solid rgba(253, 84, 78, 0.2)",
+          overflow: "hidden",
+          flexShrink: 0,
           display: "flex",
-          gap: "24px",
+          alignItems: "center",
+          justifyContent: "center"
         }}
       >
-        {duplicatedItems.map((item, index) => (
-          <Box
-            key={index}
-            sx={{
-              width: "350px",
-              background: "#ffffff", // White background for cards
-              border: "1px solid rgba(0, 0, 0, 0.05)",
-              borderRadius: "16px",
-              p: 3,
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              cursor: "pointer",
-              boxShadow: "0 4px 15px rgba(0, 0, 0, 0.03)",
-              transition: "transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease",
-              "&:hover": {
-                transform: "translateY(-5px)",
-                borderColor: "rgba(253, 84, 78, 0.2)",
-                boxShadow: "0 8px 25px rgba(0,0,0,0.06)",
-              },
-            }}
-          >
-            <Box>
-              {/* Stars */}
-              <Box sx={{ display: "flex", gap: 0.5, mb: 1.5 }}>
-                {[...Array(item.rating)].map((_, i) => (
-                  <Star key={i} size={16} color="#ffd700" fill="#ffd700" />
-                ))}
-              </Box>
+        {item.name.charAt(0)}
+      </Avatar>
 
-              {/* Review Text */}
-              <Typography
-                sx={{
-                  color: "#444", // Dark text for reviews
-                  fontSize: "14px",
-                  lineHeight: 1.6,
-                  mb: 3,
-                }}
-              >
-                "{item.text}"
-              </Typography>
-            </Box>
-
-            {/* Reviewer Details */}
-            <Box>
-              <Typography sx={{ color: "#1a1a1a", fontWeight: 700, fontSize: "15px" }}>
-                {item.name}
-              </Typography>
-              <Typography sx={{ color: "#666", fontSize: "12px" }}>
-                {item.city} • <span style={{ color: "#fd544e", fontWeight: 600 }}>{item.car}</span>
-              </Typography>
-            </Box>
-          </Box>
-        ))}
-      </motion.div>
+      <Typography
+        sx={{
+          fontSize: "13px",
+          color: "#4a4a4a",
+          lineHeight: 1.4,
+          fontStyle: "italic",
+          display: "-webkit-box",
+          WebkitLineClamp: 4,
+          WebkitBoxOrient: "vertical",
+          overflow: "hidden",
+          flex: 1
+        }}
+      >
+        "{item.text}"
+      </Typography>
     </Box>
-  );
-};
+
+    {/* Bottom Section */}
+    <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", pt: 1.5, borderTop: "1px solid rgba(0,0,0,0.05)" }}>
+      <Box sx={{ flex: 1 }}>
+        <Typography sx={{ fontWeight: 700, color: "#1a1a1a", fontSize: "14px", lineHeight: 1.2 }}>
+          {item.name}
+        </Typography>
+        <Typography sx={{ fontSize: "11px", color: "#666666", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+          {item.city} • <span style={{ color: "#fd544e", fontWeight: 600 }}>{item.car}</span>
+        </Typography>
+      </Box>
+
+      <Box sx={{ display: "flex", gap: 0.25, color: "#ffd700", ml: 1 }}>
+        {[...Array(item.rating)].map((_, i) => (
+          <Star key={i} size={14} fill="#ffd700" color="#ffd700" />
+        ))}
+      </Box>
+    </Box>
+  </ReviewCard>
+);
 
 const Testimonials = () => {
   return (
     <Box
       sx={{
         py: 8,
-        background: "#ffffff", // Light background
-        position: "relative",
+        background: "linear-gradient(180deg, #ffffff 0%, #fffbfb 100%)", // Replaced white with subtle gradient to match premium feel
         overflow: "hidden",
       }}
     >
@@ -168,10 +185,22 @@ const Testimonials = () => {
         </Typography>
       </motion.div>
 
-      {/* Ticker Rows */}
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 3, overflow: "hidden" }}>
-        <Row items={reviews} reverse={false} />
-        <Row items={reviews} reverse={true} />
+      {/* Row 1: Scrolling Right */}
+      <Box sx={{ mb: 4 }}>
+        <MarqueeRow direction="right">
+          {[...reviews, ...reviews, ...reviews].map((item, idx) => (
+            <ReviewCardContent key={`r1-${idx}`} item={item} />
+          ))}
+        </MarqueeRow>
+      </Box>
+
+      {/* Row 2: Scrolling Left */}
+      <Box>
+        <MarqueeRow direction="left">
+          {[...reviews, ...reviews, ...reviews].map((item, idx) => (
+            <ReviewCardContent key={`r2-${idx}`} item={item} />
+          ))}
+        </MarqueeRow>
       </Box>
     </Box>
   );

@@ -33,8 +33,8 @@ const HotelRevenueManagement = () => (
         {revenueFeatures.map((f, i) => {
           const Icon = f.icon;
           return (
-            <Grid item xs={12} sm={6} md={4} key={i}>
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} style={{ height: "100%" }}>
+            <Grid item xs={12} sm={6} md={4} key={i} >
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} style={{ height: "65%" }}>
                 <Paper elevation={0} sx={{ p: 4, borderRadius: "18px", bgcolor: "#ffffff", height: "100%", border: `1.5px solid ${f.color}20`, transition: "all 0.3s", "&:hover": { transform: "translateY(-5px)", boxShadow: `0 12px 30px ${f.color}25`, borderColor: f.color } }}>
                   <Box sx={{ width: 50, height: 50, borderRadius: "14px", bgcolor: `${f.color}18`, display: "flex", justifyContent: "center", alignItems: "center", color: f.color, mb: 2 }}>
                     <Icon sx={{ fontSize: 26 }} />

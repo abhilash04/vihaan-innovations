@@ -25,7 +25,7 @@ const steps = [
 const HotelGuestJourney = () => (
   <Box sx={{ bgcolor: "#fffdf0", py: 8 }}>
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: "center", mb: 10 }}>
+      <Box sx={{ textAlign: "center", mb: 6 }}>
         <Typography sx={{ color: "#d4a017", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>The Guest Journey</Typography>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "34px" }, mb: 2 }}>
           Seamless Experience from Booking to Checkout
