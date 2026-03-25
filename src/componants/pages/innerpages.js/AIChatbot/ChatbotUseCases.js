@@ -33,8 +33,8 @@ const ChatbotUseCases = () => (
         {useCases.map((uc, i) => {
           const Icon = uc.icon;
           return (
-            <Grid item xs={12} sm={6} md={4} key={i}>
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} style={{ height: "100%" }}>
+            <Grid item xs={12} sm={6} md={4} key={i} mb={2}>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} style={{ height: "75%" }}>
                 <Paper elevation={0} sx={{ p: 4, borderRadius: "20px", bgcolor: "rgba(255,255,255,0.04)", border: `1px solid ${uc.color}30`, height: "100%", backdropFilter: "blur(10px)", transition: "all 0.3s", "&:hover": { bgcolor: "rgba(255,255,255,0.07)", borderColor: uc.color, transform: "translateY(-6px)", boxShadow: `0 14px 35px ${uc.color}20` } }}>
                   <Box sx={{ width: 54, height: 54, borderRadius: "14px", bgcolor: `${uc.color}18`, display: "flex", justifyContent: "center", alignItems: "center", color: uc.color, mb: 2.5, border: `1px solid ${uc.color}30` }}>
                     <Icon sx={{ fontSize: 28 }} />

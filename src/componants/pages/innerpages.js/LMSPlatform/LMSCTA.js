@@ -3,7 +3,7 @@ import { Box, Container, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
 
 const LMSCTA = () => (
-  <Box sx={{ position: "relative", bgcolor: "#0f172a", py: 18, overflow: "hidden" }}>
+  <Box sx={{ position: "relative", bgcolor: "#0f172a", py: 10, overflow: "hidden" }}>
     {/* Gradient glow */}
     <Box sx={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: "70%", height: "70%", background: "radial-gradient(ellipse, rgba(37,99,235,0.35) 0%, transparent 70%)", filter: "blur(80px)", zIndex: 0 }} />
     {/* Sparkles */}

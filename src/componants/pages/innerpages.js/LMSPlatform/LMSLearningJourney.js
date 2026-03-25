@@ -35,7 +35,7 @@ const FlowColumn = ({ steps, title, color, bg, titleColor }) => (
 const LMSLearningJourney = () => (
   <Box sx={{ bgcolor: "#eff6ff", py: 8 }}>
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: "center", mb: 10 }}>
+      <Box sx={{ textAlign: "center", mb: 6 }}>
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
           The Learning Journey – Two Perspectives
         </Typography>

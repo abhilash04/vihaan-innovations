@@ -57,8 +57,8 @@ const HotelFeatures = () => (
         {features.map((f, i) => {
           const Icon = f.icon;
           return (
-            <Grid item xs={12} md={6} key={i}>
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} style={{ height: "100%" }}>
+            <Grid item xs={12} md={6} key={i} mb={1.5}>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} style={{ height: "65%" }}>
                 <Paper elevation={0} sx={{ p: 4, borderRadius: "20px", bgcolor: "#ffffff", height: "100%", display: "flex", gap: 3, border: "1px solid rgba(0,0,0,0.06)", transition: "all 0.3s", "&:hover": { transform: "translateY(-5px)", boxShadow: `0 14px 35px ${f.color}20`, borderColor: `${f.color}40` } }}>
                   <Box sx={{ width: 54, height: 54, borderRadius: "14px", bgcolor: `${f.color}15`, display: "flex", justifyContent: "center", alignItems: "center", color: f.color, flexShrink: 0, mt: 0.5 }}>
                     <Icon sx={{ fontSize: 28 }} />

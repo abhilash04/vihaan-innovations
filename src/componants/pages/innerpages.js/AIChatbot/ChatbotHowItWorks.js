@@ -27,7 +27,7 @@ const ChatbotHowItWorks = () => (
           const Icon = step.icon;
           return (
             <Grid item xs={12} sm={6} md={3} key={i}>
-              <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.12 }} style={{ height: "100%" }}>
+              <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.12 }} style={{ height: "80%" }}>
                 <Paper elevation={0} sx={{ p: 4, borderRadius: "24px", bgcolor: "rgba(255,255,255,0.04)", border: `1.5px solid ${step.color}30`, height: "100%", backdropFilter: "blur(10px)", position: "relative", transition: "all 0.3s", "&:hover": { bgcolor: "rgba(255,255,255,0.07)", borderColor: step.color, boxShadow: `0 0 40px ${step.color}20` } }}>
                   {/* Step number */}
                   <Box sx={{ position: "absolute", top: -14, left: 20, width: 28, height: 28, borderRadius: "8px", bgcolor: step.color, display: "flex", justifyContent: "center", alignItems: "center", boxShadow: `0 4px 15px ${step.color}50` }}>

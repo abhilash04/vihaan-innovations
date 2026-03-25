@@ -269,7 +269,7 @@ const Header = () => {
       "Services Development": [
         {
           label: "UI / UX Design",
-          href: "ui-ux-design-training",
+          href: "/ui-ux-design",
           icon: Palette,
         },
         {
@@ -389,8 +389,8 @@ const Header = () => {
           icon: Scissors,
         },
         {
-          label: "Kinetic Typography",
-          href: "kinetic-typography-training",
+          label: "Logo Designing",
+          href: "logo-designing-training",
           icon: Type,
         },
       ],
@@ -650,7 +650,7 @@ const Header = () => {
             marginBottom: 1.5,
           }}
         >
-          <Box sx={{ flex: 1, height: "1px", backgroundColor: "#E0E0E0" }} />
+          <Box sx={{ flex: 1, height: "1px", backgroundColor: "#E0E0E0", }} />
           <Typography
             variant="subtitle2"
             sx={{
@@ -1790,7 +1790,7 @@ const Header = () => {
           backgroundColor: "white",
           backdropFilter: scrolled ? "blur(10px)" : "none",
           transition: "all 0.3s ease",
-          boxShadow: "0 2px 20px rgba(12, 129, 133, 0.1)",
+          boxShadow: "0px 0px 10px -1px #1b58b6",
           borderBottom: "1px solid rgba(7, 130, 134, 0.1)",
           height: scrolled ? "70px" : "90px",
         }}

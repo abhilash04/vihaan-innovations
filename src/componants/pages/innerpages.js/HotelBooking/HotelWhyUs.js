@@ -30,7 +30,7 @@ const HotelWhyUs = () => (
           const Icon = r.icon;
           return (
             <Grid item xs={12} sm={6} md={3} key={i}>
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} style={{ height: "100%" }}>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} style={{ height: "75%" }}>
                 <Paper elevation={0} sx={{ p: 4, borderRadius: "20px", bgcolor: "#f8fafc", height: "100%", border: "1px solid rgba(0,0,0,0.06)", transition: "all 0.3s", "&:hover": { transform: "translateY(-6px)", boxShadow: `0 14px 35px ${r.color}20`, borderColor: r.color } }}>
                   <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, mb: 3 }}>
                     <Typography sx={{ fontWeight: 900, color: "rgba(0,0,0,0.08)", fontSize: "28px", lineHeight: 1 }}>{r.num}</Typography>

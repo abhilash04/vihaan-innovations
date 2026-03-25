@@ -18,7 +18,7 @@ const HotelProblem = () => (
   <Box sx={{ bgcolor: "#fffdf0", py: 8, position: "relative", overflow: "hidden" }}>
     <Box sx={{ position: "absolute", bottom: -80, right: -80, width: 350, height: 350, borderRadius: "50%", background: "radial-gradient(circle, rgba(212,160,23,0.12) 0%, transparent 70%)" }} />
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: "center", mb: 10 }}>
+      <Box sx={{ textAlign: "center", mb: 6 }}>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "28px", md: "38px" }, mb: 2 }}>
           The Problem
         </Typography>

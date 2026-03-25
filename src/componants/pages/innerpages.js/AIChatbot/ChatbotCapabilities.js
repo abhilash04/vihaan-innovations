@@ -21,7 +21,7 @@ const ChatbotCapabilities = () => (
   <Box sx={{ background: "linear-gradient(180deg, #0a1628 0%, #0d1f35 100%)", py: 8, position: "relative", overflow: "hidden" }}>
     <Box sx={{ position: "absolute", top: "50%", right: "-10%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(6,182,212,0.08) 0%, transparent 70%)", filter: "blur(40px)" }} />
     <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
-      <Box sx={{ textAlign: "center", mb: 8 }}>
+      <Box sx={{ textAlign: "center", mb: 6 }}>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "26px", md: "36px" }, mb: 2 }}>
           What We Build — Core Capabilities
         </Typography>
@@ -33,8 +33,8 @@ const ChatbotCapabilities = () => (
         {capabilities.map((cap, i) => {
           const Icon = cap.icon;
           return (
-            <Grid item xs={12} sm={6} md={4} key={i}>
-              <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} style={{ height: "100%" }}>
+            <Grid item xs={12} sm={6} md={4} key={i} mb={1}>
+              <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} style={{ height: "75%" }}>
                 <Paper elevation={0} sx={{ p: 4, borderRadius: "20px", bgcolor: "rgba(255,255,255,0.04)", border: `1px solid rgba(255,255,255,0.08)`, height: "100%", backdropFilter: "blur(10px)", transition: "all 0.3s", "&:hover": { bgcolor: "rgba(255,255,255,0.07)", borderColor: cap.color, boxShadow: `0 0 30px ${cap.color}20` } }}>
                   <Box sx={{ width: 54, height: 54, borderRadius: "14px", bgcolor: `${cap.color}18`, display: "flex", justifyContent: "center", alignItems: "center", color: cap.color, mb: 2.5, border: `1px solid ${cap.color}25` }}>
                     <Icon sx={{ fontSize: 28 }} />
