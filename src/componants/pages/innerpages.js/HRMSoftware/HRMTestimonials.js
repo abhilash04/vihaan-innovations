@@ -18,7 +18,7 @@ const HRMTestimonials = () => (
         <Box sx={{ position: "relative", maxWidth: "800px", mx: "auto", px: { xs: 2, md: 6 }, py: 4, bgcolor: "#ffffff", border: "1px solid rgba(0,0,0,0.04)", borderRadius: "24px", boxShadow: "0 4px 20px rgba(0,0,0,0.03)" }}>
           <FormatQuoteIcon sx={{ position: "absolute", top: -10, left: { xs: 10, md: 20 }, fontSize: 70, color: "rgba(249,115,22,0.15)" }} />
           <Typography sx={{ fontWeight: 600, color: "#1A202C", fontSize: { xs: "15px", md: "18px" }, lineHeight: 1.6, textAlign: "center", mb: 4, position: "relative", zIndex: 1, fontStyle: "italic" }}>
-            "The customized HRM dashboard provided by Vihaan Innovations transformed our payroll tracking. Their scalable API integrates perfectly with our biometric setups and speeds up operations by 40%."
+            “The customized hrm software dashboard provided by Vihaan Innovations completely transformed our payroll management. Their scalable API integrates seamlessly with our biometric systems and has significantly improved our operational efficiency by nearly 40%.”
           </Typography>
           <FormatQuoteIcon sx={{ position: "absolute", bottom: 40, right: { xs: 10, md: 20 }, fontSize: 70, color: "rgba(249,115,22,0.15)", transform: "scaleX(-1)" }} />
 

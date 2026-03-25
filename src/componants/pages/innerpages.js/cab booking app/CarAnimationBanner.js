@@ -28,7 +28,7 @@ const CarAnimationBanner = () => {
     url(https://i.pinimg.com/originals/03/42/f0/0342f0d771ed35ab0cf65fe58e5293ff.png)
   `,
     backgroundSize: "contain",
-    backgroundPosition: "0 0, 100% 0", 
+    backgroundPosition: "0 0, 100% 0",
     width: "200%",
     animation: "city 20s linear infinite",
   };

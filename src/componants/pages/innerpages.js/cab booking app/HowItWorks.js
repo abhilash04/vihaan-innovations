@@ -1,28 +1,33 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import { Search, Calendar, CreditCard, Car } from "lucide-react";
+import { Search, Layout, Code2, FlaskConical, Rocket } from "lucide-react";
 
 const steps = [
   {
     icon: Search,
-    title: "Step 1 — Choose Your Car",
-    description: "Browse available vehicles by type, brand, or price range",
+    title: "01 Discovery & Strategy",
+    description: "We understand your transportation business, fleet structure, and booking workflow to plan the perfect platform.",
   },
   {
-    icon: Calendar,
-    title: "Step 2 — Pick Date & Location",
-    description: "Select pickup location, date, and time from the smart calendar",
+    icon: Layout,
+    title: "02 UI/UX Design",
+    description: "We design an intuitive interface for customers, drivers, and administrators with a fully mobile responsive layout.",
   },
   {
-    icon: CreditCard,
-    title: "Step 3 — Confirm & Pay",
-    description: "Review your booking and pay securely in seconds",
+    icon: Code2,
+    title: "03 Platform Development",
+    description: "We build a powerful ride booking engine with GPS tracking integration and secure payment gateway.",
   },
   {
-    icon: Car,
-    title: "Step 4 — Drive Away",
-    description: "Get your confirmation, pickup instructions, and enjoy the ride",
+    icon: FlaskConical,
+    title: "04 Testing & Optimization",
+    description: "We test every feature before launch — system performance, booking reliability, and security.",
+  },
+  {
+    icon: Rocket,
+    title: "05 Launch & Growth",
+    description: "We deploy on the cloud and support your growth with performance monitoring and continuous platform updates.",
   },
 ];
 
@@ -69,7 +74,7 @@ const HowItWorks = () => {
             mb: 1,
           }}
         >
-          Section 3
+          Our Development Process
         </Typography>
         <Typography
           variant="h3"
@@ -80,7 +85,7 @@ const HowItWorks = () => {
             mb: 2,
           }}
         >
-          How It Works
+          Our Car Booking Platform Development Process
         </Typography>
         <Typography
           sx={{
@@ -91,7 +96,7 @@ const HowItWorks = () => {
             mb: 10,
           }}
         >
-          Get on the road in just 4 simple steps with our smart booking flow.
+          Our development process ensures your car booking platform is scalable, reliable, and easy to manage — from concept to deployment.
         </Typography>
       </motion.div>
 

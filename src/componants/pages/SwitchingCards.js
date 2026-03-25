@@ -12,24 +12,24 @@ const sections = [
     title: "Website Development",
     subtitle: "Create Fast, Scalable, and User-Friendly Websites",
     description:
-      "We build responsive, high-performance websites tailored to your brand and business needs - from corporate sites to full e-commerce platforms.",
+      "At Vihaan Innovations, we design and develop modern websites that are responsive, secure, and optimized for performance.",
     button: "Start Building",
     icons: [
       {
         icon: <FavoriteBorder sx={{ color: "#F42222" }} />,
-        label: "Designed For One",
+        label: "Modern Responsive Design",
       },
       {
         icon: <Html sx={{ color: "#F42222" }} />,
-        label: "Page HTML",
+        label: "One Page HTML Layout",
       },
       {
         icon: <Widgets sx={{ color: "#F42222" }} />,
-        label: "Freeform Widgets",
+        label: "Freeform Widgets Integration",
       },
       {
         icon: <Folder sx={{ color: "#F42222" }} />,
-        label: "Sass Section",
+        label: "Sass Section Support",
       },
       {
         icon: <Security sx={{ color: "#F42222" }} />,
@@ -47,28 +47,28 @@ const sections = [
     title: "SEO Optimization",
     subtitle: "Boost Your Website’s Reach with Smart SEO Strategies",
     description:
-      "We help your site rank higher, attract the right audience, and grow organically with proven SEO techniques.",
+      "Vihaan Innovations helps businesses increase their search engine visibility with advanced SEO strategies.",
     button: "Improve Ranking",
     icons: [
       {
         icon: <FavoriteBorder sx={{ color: "#F42222" }} />,
-        label: "Designed For One",
+        label: "Keyword Research & Optimization",
       },
       {
         icon: <Html sx={{ color: "#F42222" }} />,
-        label: "Page HTML",
+        label: "On-Page SEO Improvements",
       },
       {
         icon: <Widgets sx={{ color: "#F42222" }} />,
-        label: "Freeform Widgets",
+        label: "Technical SEO Setup",
       },
       {
         icon: <Folder sx={{ color: "#F42222" }} />,
-        label: "Sass Section",
+        label: "Performance Monitoring",
       },
       {
         icon: <Security sx={{ color: "#F42222" }} />,
-        label: "Secure Access",
+        label: "Secure Website Structure",
       },
       {
         icon: <RocketLaunch sx={{ color: "#F42222" }} />,
@@ -83,32 +83,32 @@ const sections = [
     title: "Digital Marketing",
     subtitle: "Grow Your Brand with Data-Driven Digital Marketing",
     description:
-      "We create targeted campaigns that boost reach, increase engagement, and drive measurable results across all digital platforms.",
+      "At Vihaan Innovations, we create targeted digital marketing campaigns that increase brand awareness, engagement, and conversions.",
     button: "Start Campaign",
     icons: [
       {
         icon: <FavoriteBorder sx={{ color: "#F42222" }} />,
-        label: "Designed For One",
+        label: "Social Media Marketing",
       },
       {
         icon: <Html sx={{ color: "#F42222" }} />,
-        label: "Page HTML",
+        label: "Paid Advertising Campaigns",
       },
       {
         icon: <Widgets sx={{ color: "#F42222" }} />,
-        label: "Freeform Widgets",
+        label: "Content Marketing Strategies",
       },
       {
         icon: <Folder sx={{ color: "#F42222" }} />,
-        label: "Sass Section",
+        label: "Audience Targeting",
       },
       {
         icon: <Security sx={{ color: "#F42222" }} />,
-        label: "Secure Access",
+        label: "Analytics & Performance Tracking",
       },
       {
         icon: <RocketLaunch sx={{ color: "#F42222" }} />,
-        label: "Fast Deployment",
+        label: "Campaign Optimization",
       },
     ],
     image: img3,
@@ -156,7 +156,7 @@ export default function SwitchingCards() {
               "&:hover": { color: "#0B70E1" },
             }}
           >
-            Discover ready-to-use products that help you build and launch websites faster.
+            Discover ready-to-use digital solutions that help you build, optimize, and promote your website faster.
           </Typography>
         </Box>
         {/* Switch Buttons */}
@@ -260,7 +260,7 @@ export default function SwitchingCards() {
                 >
                   {item.icon}
                   <Typography
-                    sx={{ fontSize: "16px", fontWeight: 500, color: "#444a56" }}
+                    sx={{ fontSize: "12px", fontWeight: 500, color: "#444a56" }}
                   >
                     {item.label}
                   </Typography>

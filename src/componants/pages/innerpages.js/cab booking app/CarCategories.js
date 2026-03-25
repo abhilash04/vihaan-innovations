@@ -6,32 +6,32 @@ import { ArrowRight } from "lucide-react";
 const categories = [
   {
     title: "Hatchback",
-    description: "Budget friendly city rides",
+    description: "Manage budget-friendly city cab fleets ideal for high-volume urban ride bookings.",
     image: "https://images.unsplash.com/photo-1541899481282-d53b6cb8c3ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
   },
   {
     title: "Sedan",
-    description: "Comfortable everyday travel",
+    description: "Coordinate comfortable sedan vehicles for daily commutes and corporate ride bookings.",
     image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
   },
   {
     title: "SUV",
-    description: "Spacious family and road trips",
+    description: "Track and dispatch spacious SUVs for family travel, airport transfers, and outstation rides.",
     image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c340?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
   },
   {
     title: "Luxury",
-    description: "Premium drives for special occasions",
+    description: "Manage premium vehicles for VIP clients, corporate executives, and high-value ride services.",
     image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
   },
   {
     title: "Electric",
-    description: "Eco-friendly zero emission rides",
+    description: "Monitor and schedule eco-friendly EV fleets to reduce emissions across your ride operations.",
     image: "https://images.unsplash.com/photo-1617788138017-80ad40651399?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
   },
   {
     title: "Mini Bus",
-    description: "Group travel and corporate transfers",
+    description: "Coordinate group transport vehicles for corporate shuttles, school runs, and travel agencies.",
     image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
   },
 ];
@@ -77,18 +77,18 @@ const CarCategories = () => {
             mb: 1,
           }}
         >
-          Section 7
+          Vehicle Categories
         </Typography>
         <Typography
           variant="h3"
           sx={{ textAlign: "center", color: "#1a1a1a", fontWeight: 800, mb: 2 }}
         >
-          Car Categories
+          Manage Every Vehicle Type from One Platform
         </Typography>
         <Typography
-          sx={{ textAlign: "center", color: "#666", maxWidth: 600, mx: "auto", mb: 8 }}
+          sx={{ textAlign: "center", color: "#666", maxWidth: 650, mx: "auto", mb: 8 }}
         >
-          Choose from our diverse fleet of vehicles tailored for any travel requirement.
+          Our car booking management system supports all vehicle categories — from hatchbacks to luxury fleets. Manage bookings, dispatch, and availability for every vehicle type in one dashboard.
         </Typography>
       </motion.div>
 

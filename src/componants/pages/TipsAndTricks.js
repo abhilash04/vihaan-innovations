@@ -11,6 +11,10 @@ import {
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import PersonIcon from "@mui/icons-material/Person";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
+import img1 from "../../assets/Emerging IT Trends Shaping the Future.jpg.jpeg";
+import img2 from "../../assets/Smart Tools to Improve Remote Work.jpg.jpeg";
+import img3 from "../../assets/Tech That Makes Everyday Life Easier.jpeg";
+import img4 from "../../assets/How AI is Transforming Today’s World.png"
 
 // Sample posts
 const posts = [
@@ -19,44 +23,40 @@ const posts = [
     category: "IT Services",
     title: "Emerging IT Trends Shaping the Future",
     description:
-      "Stay updated with the newest shifts in technology and how they impact businesses.",
+      "Learn about the latest technology trends like AI, cloud computing, and cybersecurity that are transforming modern businesses.",
     date: "16 Nov 2020",
     author: "admin",
-    image:
-      "https://img.freepik.com/free-photo/businessman-working-modern-office_1098-18706.jpg",
+    image: img1
   },
   {
     id: 2,
     category: "Software Development",
     title: "Smart Tools to Improve Remote Work",
     description:
-      "Discover software solutions that make virtual work smoother and more efficient.",
+      "Discover software solutions that make remote work more efficient, collaborative, and productive.",
     date: "16 Nov 2020",
     author: "admin",
-    image:
-      "https://img.freepik.com/free-photo/two-coworkers-working-project-together-office_1098-18749.jpg",
+    image: img2,
   },
   {
     id: 3,
     category: "Web Development",
     title: "Tech That Makes Everyday Life Easier",
     description:
-      "A look at digital tools designed to simplify tasks at home and at work.",
+      "Explore digital tools and smart devices designed to simplify tasks at home and in the workplace.",
     date: "16 Nov 2020",
     author: "admin",
-    image:
-      "https://img.freepik.com/free-photo/man-working-laptop-office_1098-19291.jpg",
+    image: img3,
   },
   {
     id: 4,
     category: "AI/ML",
     title: "How AI is Transforming Today’s World",
     description:
-      "Learn how artificial intelligence is influencing industries and daily life.",
+      "Understand essential cybersecurity practices to protect your company data and maintain online security.",
     date: "18 Dec 2021",
     author: "admin",
-    image:
-      "https://img.freepik.com/free-photo/artificial-intelligence-concept_23-2148683512.jpg",
+    image: img4,
   },
 ];
 
@@ -80,6 +80,7 @@ export default function TipsAndTricks() {
         <Typography variant="h4" sx={{ fontWeight: "bold" }}>
           Explore Our Latest Insights & Updates
         </Typography>
+        <Typography variant="body1" sx={{ fontSize: "16px", fontWeight: 500, color: "#444a56" }}>Stay informed with the newest technology trends, digital tools, and IT solutions that are shaping businesses and everyday life.</Typography>
         <Box
           sx={{
             position: "relative",

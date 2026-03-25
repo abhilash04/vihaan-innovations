@@ -23,15 +23,14 @@ const HRMBanner = () => (
         <Grid item xs={12} md={7}>
           <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
             <Box sx={{ display: "inline-flex", px: 2, py: 0.6, bgcolor: "rgba(249,115,22,0.12)", border: "1px solid rgba(249,115,22,0.3)", borderRadius: "20px", mb: 3 }}>
-              <Typography sx={{ color: "#f97316", fontSize: "12px", fontWeight: 700, letterSpacing: "1px" }}>HRM SOLUTIONS</Typography>
+              <Typography sx={{ color: "#f97316", fontSize: "12px", fontWeight: 700, letterSpacing: "1px" }}>HRM SOFTWARE SOLUTIONS</Typography>
             </Box>
-            <Typography variant="h1" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "34px", md: "52px" }, lineHeight: 1.1, mb: 3, fontFamily: "Fira Sans" }}>
-              "BUILDING THE FUTURE<br />
-              OF WORKFORCE<br />
-              <Box component="span" sx={{ color: "#f97316", WebkitTextFillColor: "transparent", background: "linear-gradient(90deg, #f97316, #ec4899)", WebkitBackgroundClip: "text" }}>INTELLIGENCE."</Box>
+            <Typography variant="h1" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "34px", md: "52px" }, lineHeight: 1.1, mb: 3, }}>
+              “BUILDING THE FUTURE  <br />
+              <Box component="span" sx={{ color: "#f97316", WebkitTextFillColor: "transparent", background: "linear-gradient(90deg, #f97316, #ec4899)", WebkitBackgroundClip: "text" }}>with HRM Software.”</Box>
             </Typography>
             <Typography sx={{ color: "rgba(255,255,255,0.65)", fontSize: "15px", lineHeight: 1.7, mb: 5, maxWidth: "500px" }}>
-              Engineering innovative HRM ecosystems and scalable human capital systems that define your company culture and automate administrative pipelines efficiently.
+              Streamline operations and boost productivity with powerful HRM software that automates HR tasks, manages employees, and enhances workforce efficiency.
             </Typography>
             <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
               <Button variant="contained" sx={{ bgcolor: "#f97316", color: "#fff", fontWeight: 800, px: 4, py: 1.5, borderRadius: "25px", textTransform: "none", fontSize: "14px", boxShadow: "0 6px 20px rgba(249,115,22,0.4)", "&:hover": { bgcolor: "#ea580c" } }}>

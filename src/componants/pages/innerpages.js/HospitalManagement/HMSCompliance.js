@@ -13,9 +13,9 @@ const satelliteBadges = [
 ];
 
 const points = [
-  { title: "Zero Trust Architecture", desc: "Strict verification for every access attempt." },
-  { title: "Real-time Auditing", desc: "Track full history of record modifications safely." },
-  { title: "Encrypted Backups", desc: "Daily multi-location redundancy safeguarding assets." }
+  { title: "Zero Trust Architecture", desc: "Every access request is strictly verified to prevent unauthorized entry." },
+  { title: "Real-Time Auditing", desc: "Monitor and track every data change with full transparency." },
+  { title: "Encrypted Backups", desc: "Secure daily backups across multiple locations for maximum safety." }
 ];
 
 const HMSCompliance = () => {
@@ -71,10 +71,10 @@ const HMSCompliance = () => {
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <Typography sx={{ color: "#10B981", fontWeight: 800, fontSize: "12px", mb: 1, letterSpacing: "1px" }}>TRUST & COMPLIANCE</Typography>
               <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "28px", md: "38px" }, mb: 2, fontFamily: "Plus Jakarta Sans, sans-serif" }}>
-                Your Patient Data is in Safe Hands
+                Your Data is Secure with Our Hospital Management Software System
               </Typography>
               <Typography sx={{ color: "rgba(255,255,255,0.6)", fontSize: "15px", mb: 4 }}>
-                We maintain the highest global privacy standards protecting hospital records from breach buffers securely.
+                Protect sensitive patient records with a robust hospital management software system built on global security standards, ensuring privacy, compliance, and complete data integrity.
               </Typography>
 
               <List sx={{ p: 0, mb: 4 }}>
@@ -90,7 +90,7 @@ const HMSCompliance = () => {
 
               <Paper elevation={0} sx={{ p: 2, borderRadius: "12px", bgcolor: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.05)", borderLeft: "4px solid #10B981" }}>
                 <Typography sx={{ color: "#ffffff", fontSize: "13px", fontWeight: 600 }}>
-                  NABH documentation and ABDM integration built in from day one — not added later.
+                  Our hospital management software system comes with built-in NABH documentation and ABDM integration, ensuring your hospital is compliant from day one-not as an afterthought.
                 </Typography>
               </Paper>
             </motion.div>

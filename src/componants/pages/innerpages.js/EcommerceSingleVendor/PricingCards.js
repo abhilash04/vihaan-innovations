@@ -148,7 +148,7 @@ const PricingCards = () => {
               letterSpacing: "-1px"
             }}
           >
-            Flexible Website Solutions for Every Business
+            Website Solutions for Every Business
           </Typography>
           <Typography
             sx={{
@@ -160,7 +160,8 @@ const PricingCards = () => {
               lineHeight: 1.6
             }}
           >
-            At Vihaan Innovations, every website is designed based on your business goals, design preferences, and required features. We offer flexible solutions to ensure you get the perfect website for your needs.
+            At Vihaan Innovations, every project is tailored to your goals, design preferences, and features,
+            offering flexible single vendor ecommerce development solutions to create the perfect online store for your business.
           </Typography>
         </Box>
 

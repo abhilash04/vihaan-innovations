@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Container, Typography, Grid, Paper, Tabs, Tab, List, ListItem, ListItemButton, ListItemText, Avatar, AvatarGroup } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, Tabs, Tab, List, ListItem, ListItemButton, ListItemText, Avatar, AvatarGroup, Button } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
@@ -9,22 +9,61 @@ const tabData = [
 
 const moduleDetails = {
   0: {
-    sidebar: ["Inventory Management", "Channel Partner Portal", "Post-Sales Module"],
-    title: "Real Estate CRM", // Using the text from the mockup for fidelity, although it says Real Estate
-    description: "A purpose-built CRM that understands the real estate sales cycle — from first enquiry to final registration. Automate follow-ups, capture leads, and keep your entire team aligned.",
+    sidebar: ["Lead Management", "Automation Workflows", "Communication Tools", "Post-Admission Module"],
+    title: "Admissions CRM",
+    description: "A powerful education crm software module designed to manage the entire student admission lifecycle from enquiry to enrollment.",
     features: [
-      "Lead source tracking & campaign attribution",
-      "Custom pipeline stages & prospect tagging",
-      "WhatsApp + email + call integration",
-      "Automated follow-up sequences & reminders",
-      "Role-based access for agents, managers & admins"
+      "Lead capture & source tracking",
+      "Automated follow-ups & reminders",
+      "Custom admission pipelines",
+      "Counselor assignment & tracking",
+      "Multi-channel communication (Call, Email, WhatsApp)"
     ]
   },
-  // Dummy data for other tabs matching the style
-  1: { sidebar: ["Application Forms", "Document Vault", "Status Tracker"], title: "Student Portal", description: "Empower students to manage their own application journey.", features: ["Self-service application tracking", "Secure document upload", "Automated status alerts"] },
-  2: { sidebar: ["Invoicing", "Payment Gateway Integration", "Discount Rules"], title: "Fee Management", description: "Streamlined fee collection and reconciliations.", features: ["Automated invoice generation", "Partial payment support", "Scholarship application workflows"] },
-  3: { sidebar: ["Lead Distribution", "Call Analytics", "Target Tracking"], title: "Counsellor Performance", description: "Monitor and optimize your admissions team.", features: ["Round-robin lead assignment", "Call recording & transcription", "Daily activity dashboards"] },
-  4: { sidebar: ["Conversion Metrics", "Source ROI", "Cohort Analysis"], title: "Reports & Analytics", description: "Deep insights into your funnel performance.", features: ["Customizable report builder", "Scheduled email delivery", "Live visual dashboards"] }
+  1: {
+    sidebar: ["Lead Management", "Automation Workflows", "Communication Tools", "Post-Admission Module"],
+    title: "Student Portal",
+    description: "A self-service portal integrated with your education crm software for students to track applications, upload documents, and stay updated.",
+    features: [
+      "Application status tracking",
+      "Document uploads & verification",
+      "Notifications & alerts",
+      "Personalized student dashboard"
+    ]
+  },
+  2: {
+    sidebar: ["Lead Management", "Automation Workflows", "Communication Tools", "Post-Admission Module"],
+    title: "Fee Management",
+    description: "Simplify fee collection and tracking with integrated education crm software built for automation and transparency.",
+    features: [
+      "Online payment integration",
+      "Automated fee reminders",
+      "Invoice generation",
+      "Payment tracking & reports"
+    ]
+  },
+  3: {
+    sidebar: ["Lead Management", "Automation Workflows", "Communication Tools", "Post-Admission Module"],
+    title: "Counsellor Performance",
+    description: "Track and optimize team productivity with performance insights powered by education crm software.",
+    features: [
+      "Lead conversion tracking",
+      "Performance dashboards",
+      "Activity monitoring",
+      "Target vs achievement reports"
+    ]
+  },
+  4: {
+    sidebar: ["Lead Management", "Automation Workflows", "Communication Tools", "Post-Admission Module"],
+    title: "Reports & Analytics",
+    description: "Make data-driven decisions with real-time insights from your education crm software.",
+    features: [
+      "Admission funnel analytics",
+      "Campaign performance reports",
+      "Revenue & conversion insights",
+      "Custom report generation"
+    ]
+  }
 };
 
 const EducationPlatformModules = () => {
@@ -53,10 +92,10 @@ const EducationPlatformModules = () => {
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "32px", md: "42px" }, mb: 2 }}>
-            Platform Modules
+            Flexible Education CRM Solutions
           </Typography>
-          <Typography sx={{ color: "#666", fontSize: "18px" }}>
-            Pick the modules you need — or take the full platform
+          <Typography variant="h5" sx={{ color: "#00B4D8", fontWeight: 700, mb: 2 }}>
+            Pick the modules you need or scale with a complete education CRM software platform
           </Typography>
         </Box>
 
@@ -108,7 +147,6 @@ const EducationPlatformModules = () => {
                   <Typography sx={{ color: "#666", fontSize: "14px", mb: 4, lineHeight: 1.5 }}>
                     A purpose-built CRM that understands the real estate sales cycle — from first.
                   </Typography>
-
                   <List disablePadding>
                     {currentContent.sidebar.map((item, idx) => (
                       <ListItem key={idx} disablePadding sx={{ mb: 1.5 }}>

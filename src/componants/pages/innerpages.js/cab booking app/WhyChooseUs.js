@@ -6,10 +6,10 @@ import { CheckCircle2, Star, TrendingUp, Globe } from "lucide-react";
 const carImageUrl = "https://images.unsplash.com/photo-1549399542-7e3f8b79c340?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
 
 const benefits = [
-  "No Hidden Charges — Transparent pricing with all fees shown upfront before you confirm",
-  "Verified Fleet — Every vehicle is inspected, insured, and roadworthy before listing",
-  "Instant Cancellation — Cancel up to 2 hours before pickup with a full refund",
-  "Wide Coverage — Available across 50+ cities with 10,000+ vehicles on the platform",
+  "Customers Can Book Rides Instantly Online — No more phone calls. Customers check availability and book rides from any device in seconds.",
+  "Drivers Are Automatically Assigned — Smart auto-dispatch eliminates manual coordination and reduces response time significantly.",
+  "Fleet Availability Updated in Real Time — Always know which vehicles are available, in-use, or under maintenance at any moment.",
+  "Payments and Billing Are Fully Automated — Integrated payment gateways, automated invoices, and fare calculations in one system.",
 ];
 
 const WhyChooseUs = () => {
@@ -41,16 +41,16 @@ const WhyChooseUs = () => {
                 mb: 1,
               }}
             >
-              Section 6
+              Built for Transportation Businesses
             </Typography>
             <Typography
               variant="h3"
               sx={{ color: "#1a1a1a", fontWeight: 800, mb: 2, lineHeight: 1.2 }}
             >
-              Why Choose Us
+              The Future of Ride Booking Starts With Smart Car Booking Software
             </Typography>
             <Typography sx={{ color: "#555", mb: 5, fontSize: "16px" }}>
-              We provide the best car rental experience with verified drivers and premium support.
+              Traditional ride booking systems rely on manual processes that limit growth. Our car booking management platform transforms the entire workflow into an automated digital system.
             </Typography>
 
             <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>

@@ -293,10 +293,10 @@ const OrderCycle = () => {
                     <span style={{ color: "#ffffff" }}> Seamless Development </span>
                 </Typography>
                 <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "20px", fontWeight: 400, width: '800px' }}>
-                    Experience a smooth cycle of strategy, creation, and expansion designed to grow your marketplace continuously.
+                    Experience a smooth cycle of strategy, creation, and expansion designed to grow<br />
+                    your business with continuous single vendor ecommerce development.
                 </Typography>
             </Box>
-
             <Box sx={{ position: "relative", width: 1000, height: 450 }}>
 
                 {/* Central Focus Area - Neon Ring */}

@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import { CheckCircle, ArrowRight } from "lucide-react";
 
 const features = [
-  "Dedicated Fleet for Corporates",
-  "Employee Booking Portal",
-  "Monthly billing with credit line",
-  "GST-Compliant Invoices",
-  "Ride Analytics per Department",
-  "Priority Support for travel desks",
+  "Taxi Companies — Manage taxis, drivers, and ride bookings efficiently",
+  "Car Rental Businesses — Simplify vehicle rental bookings and fleet ops",
+  "Travel Agencies — Coordinate transportation services for travelers",
+  "Corporate Transport Services — Manage employee transportation fleets",
+  "Ride-Hailing Startups — Launch your own Uber-style ride booking platform",
+  "Airport Transfer Services — Manage scheduled airport pickup & drop rides",
 ];
 
 const BusinessRentals = () => {
@@ -52,16 +52,16 @@ const BusinessRentals = () => {
                 mb: 1,
               }}
             >
-              Section 10
+              Who Uses This Platform
             </Typography>
             <Typography
               variant="h3"
               sx={{ color: "#1a1a1a", fontWeight: 800, mb: 2, lineHeight: 1.2 }}
             >
-              Built for Business <br /> Travel Too
+              Who Should Use a Car Booking Management System
             </Typography>
             <Typography sx={{ color: "#555", fontSize: "16px", mb: 4, maxWidth: "450px" }}>
-              Corporate accounts, bulk bookings, employee ride management, and GST invoicing — all handled from one business dashboard.
+              This platform is designed for transportation businesses of all sizes — from taxi fleets and car rentals to ride-hailing startups and corporate transport services.
             </Typography>
 
             <Button
@@ -85,7 +85,7 @@ const BusinessRentals = () => {
                 transition: "all 0.3s ease",
               }}
             >
-              Talk to Sales <ArrowRight size={18} color="#fd544e" />
+              Get Your Car Booking Platform <ArrowRight size={18} color="#fd544e" />
             </Button>
           </motion.div>
         </Grid>

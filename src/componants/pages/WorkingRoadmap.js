@@ -202,7 +202,7 @@ export default function WorkingRoadmap() {
               lineHeight: 1.1,
             }}
           >
-            Our Smart Workflow for Building Better Digital Solutions
+            Our Smart Workflow for Building Powerful Digital Solutions
           </Typography>
 
           <Typography
@@ -214,7 +214,7 @@ export default function WorkingRoadmap() {
               maxWidth: 440,
             }}
           >
-            Every stage of our process ensures reliability, performance, and measurable results.
+            At Vihaan Innovations, we follow a structured and strategic workflow to create innovative digital solutions.
           </Typography>
 
           <Box sx={{ display: "flex", alignItems: "center", gap: 5 }}>
@@ -227,14 +227,28 @@ export default function WorkingRoadmap() {
                 px: 5,
                 py: 1.5,
                 fontWeight: 700,
-                fontSize: 16,
+                fontSize: 18, // Main text size
+                lineHeight: 1.2, // Adjusts spacing between lines
                 boxShadow: "0 4px 15px rgba(0,102,255,0.5)",
                 "&:hover": { backgroundColor: "#0046bb" },
+                display: "flex",
+                flexDirection: "column", // Aligns text vertically
+                alignItems: "center",
               }}
             >
               Get Started
+              <Box
+                component="span"
+                sx={{
+                  fontSize: 10,
+                  fontWeight: 400,
+                  opacity: 0.9,
+                  mt: 0.5
+                }}
+              >
+                With Vihaan Innovations
+              </Box>
             </Button>
-
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
               <Stack direction="row" spacing={-1}>
                 {avatars.map((src, i) => (

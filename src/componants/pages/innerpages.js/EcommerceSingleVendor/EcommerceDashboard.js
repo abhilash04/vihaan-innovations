@@ -65,7 +65,7 @@ const EcommerceDashboard = () => {
             fontSize: { xs: "15px", md: "17px" },
           }}
         >
-          Empower your business with a powerful omni-commerce CRM that manages orders, inventory, and customers in one smart platform. Work faster, reduce errors, and scale your e-commerce operations with advanced automation and a unified dashboard.
+          Empower your business with a powerfu omni-commerce CRM that manages orders, inventory, and customers in one smart platform. Work faster, reduce errors, and scale your e-commerce operations with advanced automation and a unified dashboard.
         </Typography>
       </Box>
 
@@ -142,7 +142,7 @@ const EcommerceDashboard = () => {
                   display: "block"
                 }}
               />
-              
+
               {/* Checkout Website Button */}
               <Box
                 component="button"
