@@ -155,8 +155,7 @@ const ScrollFormComponent = () => {
   return (
     <Box
       sx={{
-        background: "linear-gradient(135deg, #f0f4ff 0%, #fff 100%)",
-        position: "relative",
+        background: "linear-gradient(to bottom,#e2f3ff 0, #f0f4f8ff 100%)", position: "relative",
         overflow: "hidden",
         pt: { xs: 12, md: 16 },
         pb: { xs: 8, md: 6 },

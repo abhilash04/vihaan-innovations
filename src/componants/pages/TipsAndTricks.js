@@ -11,6 +11,7 @@ import {
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import PersonIcon from "@mui/icons-material/Person";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
+import { motion } from "framer-motion";
 import img1 from "../../assets/Emerging IT Trends Shaping the Future.jpg.jpeg";
 import img2 from "../../assets/Smart Tools to Improve Remote Work.jpg.jpeg";
 import img3 from "../../assets/Tech That Makes Everyday Life Easier.jpeg";
@@ -76,7 +77,7 @@ export default function TipsAndTricks() {
   return (
     <Box sx={{ px: 4, py: 6, backgroundColor: "#fdfdfe" }}>
       {/* Animated Heading */}
-      <Box sx={{ textAlign: "center", mb: 5 }}>
+      <Box component={motion.div} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} sx={{ textAlign: "center", mb: 5 }}>
         <Typography variant="h4" sx={{ fontWeight: "bold" }}>
           Explore Our Latest Insights & Updates
         </Typography>
@@ -298,14 +299,14 @@ export default function TipsAndTricks() {
             px: 4,
             py: 1.5,
             borderRadius: "30px",
-            background: "linear-gradient(45deg, #e3335f, #3b2c73)",
+            background: "linear-gradient(90deg, #00b4d8 0%, #0077b6 100%)",
             color: "#fff",
-            boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)",
+            boxShadow: "0px 4px 15px rgba(0, 180, 216, 0.2)",
             transition: "all 0.3s ease",
             "&:hover": {
-              background: "linear-gradient(45deg, #c62848, #2e1c5f)",
+              background: "linear-gradient(90deg, #0077b6 0%, #023e8a 100%)",
               transform: "translateY(-2px)",
-              boxShadow: "0px 6px 20px rgba(0, 0, 0, 0.3)",
+              boxShadow: "0px 6px 20px rgba(0, 180, 216, 0.3)",
             },
           }}
         >

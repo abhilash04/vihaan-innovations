@@ -8,9 +8,7 @@ import HomePage from "./componants/pages/HomePage";
 import { ThemeProvider } from "./componants/common/ThemeContext";
 import Login from "./Authentication/Login";
 import Register from "./Authentication/Register";
-import PrivacyPolicy from "./componants/pages/innerpages.js/PrivacyPolicy";
-import TermsandConditions from "./componants/pages/innerpages.js/TermsandConditions";
-import RefundPolicy from "./componants/pages/innerpages.js/RefundPolicy";
+import LegalCenter from "./componants/pages/innerpages.js/LegalCenter";
 import ShippingPolicy from "./componants/pages/innerpages.js/ShippingPolicy";
 import ContactUs from "./componants/pages/ContactUs";
 import AboutUsHomePage from "./componants/aboutus/AboutUsHomePage";
@@ -122,14 +120,12 @@ function App() {
             <Route path="/collections/all-products" element={<AllProducts />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route
-              path="/terms-and-conditions"
-              element={<TermsandConditions />}
-            />
-            <Route path="/refund-policy" element={<RefundPolicy />} />
+            <Route path="/privacy-policy" element={<LegalCenter />} />
+            <Route path="/terms-and-conditions" element={<LegalCenter />} />
+            <Route path="/refund-policy" element={<LegalCenter />} />
+            <Route path="/cancellation-policy" element={<LegalCenter />} />
             <Route path="/shipping-policy" element={<ShippingPolicy />} />
-            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/about-us" element={<AboutUsHomePage />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/cab-booking-app" element={<CabBookingApp />} />
             <Route path="/ecommerce-single-vendor" element={<EcommerceSingleVendorHomepage />} />

@@ -31,17 +31,6 @@ const HomePage = () => {
       <TipsAndTricks />
       <OurExpert />
 
-      {/* <CategoryMenu /> */}
-      {/* <Meditation /> */}
-      {/* <RecentlyPurchased /> */}
-      {/* <AnveshanCook /> */}
-      {/* <Trataka /> */}
-      {/* <HappyFarmers /> */}
-      {/* <ProductGrid /> */}
-      {/* <GetInTouch /> */}
-      {/* <Testimonials /> */}
-      {/* <BuyBulk /> */}
-
       <Footer />
     </Grid>
   );

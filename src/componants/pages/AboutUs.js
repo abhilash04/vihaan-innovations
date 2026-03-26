@@ -25,7 +25,7 @@ import ApartmentIcon from "@mui/icons-material/Apartment";
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import EmailIcon from "@mui/icons-material/Email";
-import HeaderSec from "../HeaderSec";
+import Header from "../common/HeaderSec";
 
 // Fade-in hook
 function useFadeIn() {
@@ -618,7 +618,7 @@ function CTA() {
 export default function AboutUs() {
   return (
     <Box sx={{ fontFamily: "'DM Sans', sans-serif", overflowX: "hidden" }}>
-      <HeaderSec />
+      <Header />
       <Hero />
       <WhoWeAre />
       <ThreePillars />

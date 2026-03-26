@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, Card, CardContent, Grid } from "@mui/material";
+import { motion } from "framer-motion";
 import icon1 from "../../assets/website-development.png";
 import icon2 from "../../assets/app-development.png";
 import icon3 from "../../assets/digital-marketing.png";
@@ -65,10 +66,11 @@ const ServicesSection = () => {
   return (
     <Box
       sx={{
-        background: "linear-gradient(to bottom,#e2f3ff 0, #f0f4f8ff 100%)",
+        background: "linear-gradient(to bottom,#f0f4f8ff 0, #e2f3ff 100%)",
+        borderTop: "1px solid rgba(0,0,0,0.05)",
       }}
     >
-      <Box sx={{ maxWidth: 1200, mx: "auto", py: 8, px: 2 }}>
+      <Box sx={{ maxWidth: 1200, mx: "auto", py: { xs: 8, md: 10 }, px: 2 }}>
         <Box
           sx={{
             display: "flex",
@@ -107,83 +109,95 @@ const ServicesSection = () => {
         <Grid container spacing={4} justifyContent="center">
           {services.map((service, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
-              <Card
-                sx={{
-                  borderRadius: "5px",
-                  boxShadow: "0 6px 18px rgba(0,0,0,0.06)",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  textAlign: "center",
-                  height: "100%",
-                  transition: "all 0.3s ease",
-                  "&:hover": {
-                    boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
-                  },
-                }}
+              <Box
+                component={motion.div}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                sx={{ height: "100%" }}
               >
-                <Box
-                  component="img"
-                  src={service.icon}
-                  alt="icon"
+                <Card
                   sx={{
-                    width: 100,
-                    height: 100,
-                    marginY: 2,
+                    borderRadius: "16px",
+                    border: "1px solid rgba(0,0,0,0.05)",
+                    boxShadow: "0 6px 18px rgba(0,0,0,0.02)",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    textAlign: "center",
+                    height: "100%",
+                    transition: "all 0.3s ease",
+                    "&:hover": {
+                      boxShadow: "0 15px 35px rgba(0,0,0,0.08)",
+                      transform: "translateY(-5px)",
+                      borderColor: "rgba(0,0,0,0.1)"
+                    },
                   }}
-                />
-
-                <CardContent sx={{ p: 0 }}>
-                  <Typography
-                    variant="h6"
+                >
+                  <Box
+                    component="img"
+                    src={service.icon}
+                    alt="icon"
                     sx={{
-                      fontSize: "18px",
-                      lineHeight: "26px",
-                      fontWeight: 600,
-                      width: 200,
-                      mb: 1,
-                      color: "#050748",
-                      textAlign: "center",
-                      mx: "auto",
+                      width: 100,
+                      height: 100,
+                      marginY: 2,
                     }}
-                  >
-                    {service.title}
-                  </Typography>
+                  />
 
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      fontSize: "16px",
-                      color: "#6a6a8e",
-                      width: 250,
-                      lineHeight: "18px",
-                      mb: 3,
-                      mx: "auto",
-                    }}
-                  >
-                    {service.description}
-                  </Typography>
+                  <CardContent sx={{ p: 0 }}>
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        fontSize: "18px",
+                        lineHeight: "26px",
+                        fontWeight: 600,
+                        width: 200,
+                        mb: 1,
+                        color: "#050748",
+                        textAlign: "center",
+                        mx: "auto",
+                      }}
+                    >
+                      {service.title}
+                    </Typography>
 
-                  <Typography
-                    component="a"
-                    href={service.link}
-                    sx={{
-                      textDecoration: "none",
-                      color: "#6a6a8e",
-                      fontSize: "17px",
-                      fontWeight: 600,
-                      display: "inline-flex",
-                      alignItems: "center",
-                      "&:hover": {
-                        color: "#ff1f8e",
-                      },
-                      //   mb: 1,
-                    }}
-                  >
-                    Learn More &gt;
-                  </Typography>
-                </CardContent>
-              </Card>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        fontSize: "16px",
+                        color: "#6a6a8e",
+                        width: 250,
+                        lineHeight: "18px",
+                        mb: 3,
+                        mx: "auto",
+                      }}
+                    >
+                      {service.description}
+                    </Typography>
+
+                    <Typography
+                      component="a"
+                      href={service.link}
+                      sx={{
+                        textDecoration: "none",
+                        color: "#6a6a8e",
+                        fontSize: "17px",
+                        fontWeight: 600,
+                        display: "inline-flex",
+                        alignItems: "center",
+                        "&:hover": {
+                          color: "#ff1f8e",
+                        },
+                        //   mb: 1,
+                      }}
+                    >
+                      Learn More &gt;
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Box>
             </Grid>
           ))}
         </Grid>
