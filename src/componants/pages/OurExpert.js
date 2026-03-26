@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
+import { motion } from "framer-motion";
 
 // Dummy images - replace with actual assets if needed
 import phone1 from "../../assets/Bitmap.png";
@@ -49,7 +50,7 @@ const OurExpert = () => {
                 top: "-50%",
                 left: 0,
                 background:
-                  "linear-gradient(to bottom, rgba(0,0,0,0) 0%, #d92d20 75%, #d92d20 100%)",
+                  "linear-gradient(to bottom, rgba(0,0,0,0) 0%, #00b4d8 75%, #00b4d8 100%)",
                 animation: "drop 7s cubic-bezier(.4,.26,0,.97) infinite",
                 animationDelay: `${i * 2}s`, // delay per line
               },
@@ -73,11 +74,17 @@ const OurExpert = () => {
       >
         {/* Left Section: Mobile App Images */}
         <Box
+          component={motion.div}
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
           sx={{
             flex: 1,
             display: "flex",
             justifyContent: "center",
             mb: { xs: 4, md: 0 },
+            position: "relative"
           }}
         >
           <Box
@@ -107,7 +114,7 @@ const OurExpert = () => {
         />
 
         {/* Right Section: Text Content */}
-        <Box sx={{ flex: 1, borderTop: "1px solid #d92d20", pt: 4 }}>
+        <Box component={motion.div} initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} sx={{ flex: 1, borderTop: "1px solid #00b4d8", pt: 4 }}>
           <Box sx={{ px: { xs: 2, md: 4 } }}>
             <Typography
               sx={{
@@ -152,17 +159,18 @@ const OurExpert = () => {
                 variant="contained"
                 sx={{
                   borderRadius: "6px",
-                  backgroundColor: "#d92d20",
+                  backgroundColor: "#00b4d8",
                   animation: "pulse 2s infinite",
                   textTransform: "none",
                   width: "400px",
                   py: 1.5,
                   fontSize: "16px",
                   fontWeight: 500,
+                  "&:hover": { backgroundColor: "#0077b6" },
                   "@keyframes pulse": {
-                    "0%": { transform: "scale(1)" },
-                    "50%": { transform: "scale(1.1)" },
-                    "100%": { transform: "scale(1)" },
+                    "0%": { transform: "scale(1)", boxShadow: "0 0 0 0 rgba(0, 180, 216, 0.4)" },
+                    "70%": { transform: "scale(1.05)", boxShadow: "0 0 0 10px rgba(0, 180, 216, 0)" },
+                    "100%": { transform: "scale(1)", boxShadow: "0 0 0 0 rgba(0, 180, 216, 0)" },
                   },
                 }}
               >
