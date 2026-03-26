@@ -93,7 +93,7 @@ const RealEstateSolution = () => {
           <Typography sx={{ color: "#0B2046", fontWeight: 600, mb: 1, fontSize: "16px", textTransform: "uppercase", letterSpacing: "1px" }}>
             Our Solution
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", mb: 3, fontSize: { xs: "32px", md: "46px" }, lineHeight: 1.2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", mb: 3, fontSize: { xs: "28px", md: "46px" }, lineHeight: 1.2 }}>
             Everything your real estate business requires, built into a single platform
           </Typography>
           <Typography sx={{ color: "#333", fontSize: "18px", lineHeight: 1.6 }}>

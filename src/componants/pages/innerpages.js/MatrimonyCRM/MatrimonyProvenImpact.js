@@ -22,7 +22,7 @@ const StatBox = ({ icon: Icon, value, label, delay }) => (
       }}>
         <Icon />
       </Box>
-      <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "40px", md: "52px" }, lineHeight: 1, mb: 1 }}>
+      <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "28px", md: "52px" }, lineHeight: 1, mb: 1 }}>
         {value}
       </Typography>
       <Typography sx={{ color: "rgba(255,255,255,0.7)", fontWeight: 600, fontSize: "14px", lineHeight: 1.4, maxWidth: "150px", mx: "auto" }}>

@@ -14,11 +14,11 @@ const marqueeRight = keyframes`
 `;
 
 const testimonials = [
-  { name: "Rahul Sharma", role: "CEO, TechCorp", text: "Vihaan delivered our custom CRM ahead of schedule. Absolute professionals with top-tier engineering standards.", initial: "R", color: "#2563eb" },
-  { name: "Amit Patel", role: "Director, Edelweiss", text: "The DevOps transition setup by Vihaan cut our cloud bills by 35% with zero downtime. Exceptional scalability.", initial: "A", color: "#06b6d4" },
-  { name: "Suresh Menon", role: "Founder, Organica", text: "Our e-commerce portal handles robust loads effortlessly. Intuitive user flows have boosted conversion setups.", initial: "S", color: "#4f46e5" },
-  { name: "Vikram Das", role: "CTO, FinLeap", text: "The security audit and continuous monitoring setups solved our critical vulnerabilities. Highly reliable supporting nodes.", initial: "V", color: "#10b981" },
-  { name: "Priya Rao", role: "Product Manager, Swiggy", text: "Stunning dashboard metrics setups. User flows feel extremely fluid keeping engagement rates high continuously.", initial: "P", color: "#f59e0b" },
+  { name: "Rahul Sharma", text: "Vihaan delivered our custom CRM ahead of schedule. Absolute professionals with top-tier engineering standards.", initial: "R", color: "#2563eb" },
+  { name: "Amit Patel", text: "The DevOps transition setup by Vihaan cut our cloud bills by 35% with zero downtime. Exceptional scalability.", initial: "A", color: "#06b6d4" },
+  { name: "Suresh Menon", text: "Our e-commerce portal handles robust loads effortlessly. Intuitive user flows have boosted conversion setups.", initial: "S", color: "#4f46e5" },
+  { name: "Vikram Das", text: "The security audit and continuous monitoring setups solved our critical vulnerabilities. Highly reliable supporting nodes.", initial: "V", color: "#10b981" },
+  { name: "Priya Rao", text: "Stunning dashboard metrics setups. User flows feel extremely fluid keeping engagement rates high continuously.", initial: "P", color: "#f59e0b" },
 ];
 
 const TickerContainer = styled(Box)(({ speed, direction }) => ({
@@ -68,7 +68,7 @@ const TestimonialsSection = ({ data }) => {
           <Typography sx={{ color: "#0087c9", fontWeight: 700, fontSize: "12px", letterSpacing: "1px", mb: 1.5 }}>
             {subtitle}
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "32px", md: "44px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "40px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2 }}>
             {title}
           </Typography>
         </Box>
@@ -92,9 +92,6 @@ const TestimonialsSection = ({ data }) => {
                 <Box>
                   <Typography sx={{ color: "#0a2233", fontWeight: 800, fontSize: "14px" }}>
                     {item.name}
-                  </Typography>
-                  <Typography sx={{ color: "#0087c9", fontSize: "12px", fontWeight: 600 }}>
-                    {item.role}
                   </Typography>
                 </Box>
               </Box>

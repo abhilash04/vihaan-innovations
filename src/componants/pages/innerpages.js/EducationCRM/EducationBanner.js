@@ -92,7 +92,7 @@ const EducationBanner = () => {
                 EDUCATION CRM SOLUTIONS
               </Typography>
 
-              <Typography variant="h1" sx={{ color: "#ffffff", fontWeight: 800, fontSize: { xs: "36px", md: "52px" }, lineHeight: 1.1, mb: 3 }}>
+              <Typography variant="h1" sx={{ color: "#ffffff", fontWeight: 800, fontSize: { xs: "26px", md: "52px" }, lineHeight: 1.1, mb: 3 }}>
                 Education CRM for faster admissions
               </Typography>
 

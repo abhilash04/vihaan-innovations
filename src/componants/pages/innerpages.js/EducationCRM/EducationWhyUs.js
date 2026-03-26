@@ -23,7 +23,7 @@ const EducationWhyUs = () => {
 
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "32px", md: "46px" }, mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "46px" }, mb: 2 }}>
             Why Choose Our CRM?
           </Typography>
           <Typography variant="h6" sx={{ color: "#0B2046", fontWeight: 700, mb: 1, fontSize: "20px" }}>

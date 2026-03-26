@@ -39,7 +39,7 @@ const ThirdPartyApps = () => {
                 <Typography variant="h2" sx={{
                   color: "#ffffff",
                   fontWeight: 800,
-                  fontSize: { xs: "32px", md: "46px" },
+                  fontSize: { xs: "28px", md: "46px" },
                   lineHeight: 1.2,
                   mb: 3
                 }}>

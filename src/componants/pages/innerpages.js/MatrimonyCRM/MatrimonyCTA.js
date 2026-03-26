@@ -31,7 +31,7 @@ const MatrimonyCTA = () => {
         >
           <Box sx={{ textAlign: "center" }}>
 
-            <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "32px", md: "46px" }, mb: 3, lineHeight: 1.2 }}>
+            <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "28px", md: "46px" }, mb: 3, lineHeight: 1.2 }}>
               Let's build a platform your<br />community will trust
             </Typography>
 

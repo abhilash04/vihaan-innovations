@@ -35,7 +35,7 @@ const InnerPageBanner = ({ title }) => {
         backgroundPosition: "center",
         color: "#fff",
         mt: 10,
-        px: { xs: 3, md: 10 },
+        px: { xs: 2, md: 10 },
       }}
     >
       {/* ===== Left Content ===== */}

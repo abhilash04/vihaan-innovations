@@ -142,7 +142,7 @@ const PricingCards = () => {
           <Typography
             sx={{
               fontWeight: 800,
-              fontSize: { xs: "32px", md: "48px" },
+              fontSize: { xs: "28px", md: "48px" },
               color: "#1a1a1a",
               mb: 2,
               letterSpacing: "-1px"

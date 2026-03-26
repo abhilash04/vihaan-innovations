@@ -16,13 +16,14 @@ import StatsBand from "./StatsBand";
 import BusinessRentals from "./BusinessRentals";
 import FAQSection from "./FAQSection";
 import FinalCTA from "./FinalCTA";
+import CARCTA from "./CARCTA";
 
 const CabBookingApp = () => {
   return (
     <Grid sx={{ background: "#ffffff" }}> {/* Global light theme alignment */}
       <HeaderSec />
       <CarAnimationBanner />
-      
+
       {/* Sections 3-12 */}
       <HowItWorks />
       <KeyFeatures />
@@ -34,6 +35,7 @@ const CabBookingApp = () => {
       <BusinessRentals />
       <FAQSection />
       <FinalCTA />
+      <CARCTA />
 
       <FooterAndPopup />
     </Grid>

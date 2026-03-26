@@ -16,7 +16,7 @@ const HMSModules = () => {
   return (
     <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, width: "100%", minHeight: "500px", position: "relative", overflow: "hidden" }}>
       {/* Left 30% charcoal panel */}
-      <Box sx={{ width: { xs: "100%", md: "32%" }, bgcolor: "#1A1A2E", py: 8, px: { xs: 3, md: 5 }, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+      <Box sx={{ width: { xs: "100%", md: "32%" }, bgcolor: "#1A1A2E", py: 8, px: { xs: 2, md: 5 }, display: "flex", flexDirection: "column", justifyContent: "center" }}>
         <Typography sx={{ color: "rgba(255,255,255,0.6)", fontWeight: 800, fontSize: "11px", mb: 2, letterSpacing: "1px" }}>MODULES</Typography>
         <Tabs orientation="vertical" value={activeTab} onChange={(e, v) => setActiveTab(v)} sx={{ borderRight: 0, "& .MuiTabs-indicator": { display: "none" }, "& .MuiTab-root": { color: "rgba(255,255,255,0.6)", fontWeight: 700, fontSize: "14px", alignItems: "flex-start", textAlign: "left", px: 2, py: 1.8, borderRadius: "8px", mb: 1, transition: "all 0.3s", textTransform: "none", borderLeft: "4px solid transparent", "&.Mui-selected": { bgcolor: "rgba(255,255,255,0.04)", borderColor: "#1E3A8A", color: "#ffffff" }, "&:hover": { color: "#fff" } } }}>
           {modules.map((mod) => (
@@ -26,7 +26,7 @@ const HMSModules = () => {
       </Box>
 
       {/* Right 70% white panel */}
-      <Box sx={{ flex: 1, bgcolor: "#ffffff", py: 8, px: { xs: 3, md: 6 }, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+      <Box sx={{ flex: 1, bgcolor: "#ffffff", py: 8, px: { xs: 2, md: 6 }, display: "flex", flexDirection: "column", justifyContent: "center" }}>
         <AnimatePresence mode="wait">
           <motion.div key={activeTab} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.25 }}>
             <Box sx={{ maxWidth: "600px" }}>

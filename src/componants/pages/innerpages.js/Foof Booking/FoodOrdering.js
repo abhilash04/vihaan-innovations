@@ -93,7 +93,7 @@ const FoodOrdering = () => {
 
         {/* Header Section */}
         <Box sx={{ textAlign: "center", mb: 4, maxWidth: "800px", mx: "auto" }}>
-          <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, mb: 3, color: "#1a1a1a" }}>
+          <Typography variant="h2" sx={{ fontSize: { xs: "28px", md: "42px" }, fontWeight: 800, mb: 3, color: "#1a1a1a" }}>
             Next-Generation Digital Food Platforms
           </Typography>
           <Typography sx={{ fontSize: "17px", color: "#666", lineHeight: 1.4 }}>

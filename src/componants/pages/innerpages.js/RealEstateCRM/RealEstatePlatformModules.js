@@ -87,7 +87,7 @@ const RealEstatePlatformModules = () => {
       <Container maxWidth="lg">
         {/* Header Section */}
         <Box sx={{ textAlign: "center", mb: 6 }}>
-          <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, mb: 2, color: "#1a1a1a" }}>
+          <Typography variant="h2" sx={{ fontSize: { xs: "28px", md: "42px" }, fontWeight: 800, mb: 2, color: "#1a1a1a" }}>
             Platform Modules
           </Typography>
           <Typography sx={{ fontSize: "18px", color: "#666", lineHeight: 1.4 }}>

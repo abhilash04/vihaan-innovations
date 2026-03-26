@@ -25,10 +25,11 @@ const RealEstateCRMHomepage = () => {
         <RealEstatePlatformModules />
         <RealEstateProcess />
         <RealEstateTechnology />
-        <RealEstateProvenImpact />
-        <RealEstateCTA />
         <RealEstateWhyUs />
+        <RealEstateProvenImpact />
 
+
+        <RealEstateCTA />
       </Box>
       <FooterAndPopup />
     </Box>

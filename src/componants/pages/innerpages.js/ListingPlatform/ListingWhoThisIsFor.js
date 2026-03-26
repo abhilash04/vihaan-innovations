@@ -63,11 +63,12 @@ const AudienceBox = ({ icon, title, desc, color, delay }) => (
     <Paper
       elevation={0}
       sx={{
-        p: 3,
+        p: 2,
         borderRadius: "20px", // slightly rounder
         bgcolor: color,
         color: "#ffffff",
-        height: "100%",
+        height: "80%",
+        width: "85%",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -144,10 +145,9 @@ const ListingWhoThisIsFor = () => {
         {/* 4x2 Color Block Grid with Spacing Fixes */}
         <Grid
           container
-          rowSpacing={10} // Fixes column overlap/touching vertically
+          rowSpacing={1}
           columnSpacing={3}
           justifyContent="center"
-          mb={8}
         >
           {audiences.map((audience, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
@@ -164,7 +164,7 @@ const ListingWhoThisIsFor = () => {
               color: "#ffffff",
               fontWeight: 700,
               fontSize: "15px",
-              px: { xs: 4, md: 5 },
+              px: { xs: 2, md: 5 },
               py: 1.8,
               borderRadius: "8px",
               textTransform: "none",

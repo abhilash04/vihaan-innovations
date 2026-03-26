@@ -24,7 +24,7 @@ const HotelImpact = () => (
           <Grid item xs={6} md={3} key={i}>
             <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}>
               <Paper elevation={0} sx={{ p: 4, borderRadius: "20px", bgcolor: "rgba(255,255,255,0.06)", border: `1.5px solid ${stat.color}40`, textAlign: "center", transition: "all 0.3s", "&:hover": { transform: "translateY(-8px)", bgcolor: "rgba(255,255,255,0.1)", boxShadow: `0 15px 35px ${stat.color}30` } }}>
-                <Typography sx={{ fontWeight: 900, color: stat.color, fontSize: { xs: "40px", md: "52px" }, lineHeight: 1 }}>{stat.value}</Typography>
+                <Typography sx={{ fontWeight: 900, color: stat.color, fontSize: { xs: "28px", md: "52px" }, lineHeight: 1 }}>{stat.value}</Typography>
                 <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "13px", fontWeight: 500, mt: 2, lineHeight: 1.5 }}>{stat.label}</Typography>
               </Paper>
             </motion.div>

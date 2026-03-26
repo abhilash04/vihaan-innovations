@@ -8,7 +8,7 @@ const reassuranceBadges = ["ABDM Ready", "NABH Aligned", "TPA Enabled", "Multi-b
 
 const HMSCTA = () => {
   return (
-    <Box sx={{ background: "#0A2D6E", py: { xs: 8, md: 10 }, position: "relative", overflow: "hidden" }}>
+    <Box sx={{ background: "#0A2D6E", py: { xs: 6, md: 10 }, position: "relative", overflow: "hidden" }}>
       {/* Diagonal Stripes Background Faint */}
       <Box sx={{ position: "absolute", inset: 0, opacity: 0.02, backgroundImage: "linear-gradient(45deg, #ffffff 25%, transparent 25%, transparent 50%, #ffffff 50%, #ffffff 75%, transparent 75%, transparent)", backgroundSize: "40px 40px", zIndex: 0 }} />
 

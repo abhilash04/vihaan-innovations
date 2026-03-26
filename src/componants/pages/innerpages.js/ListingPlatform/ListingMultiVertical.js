@@ -22,7 +22,7 @@ const DashboardMock = ({ theme, title, delay }) => (
 
       {/* Dashboard content layout */}
       <Box sx={{ display: "flex", height: "220px", bgcolor: theme === 'light' ? "#ffffff" : "#0f172a" }}>
-        
+
         {/* Left nav */}
         <Box sx={{ width: "25%", bgcolor: theme === 'light' ? "#f8fafc" : "#1e293b", p: 2, display: "flex", flexDirection: "column", gap: 1.5 }}>
           {[80, 60, 70, 55, 65].map((w, i) => (
@@ -71,7 +71,7 @@ const ListingMultiVertical = () => {
       <Container maxWidth="lg">
 
         <Grid container spacing={8} alignItems="center">
-          
+
           {/* Left Text Content */}
           <Grid item xs={12} md={5}>
             <motion.div
@@ -84,10 +84,10 @@ const ListingMultiVertical = () => {
                 Multi-vertical Capability
               </Typography>
               <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
-                One Core Engine, Endless Business Listing Website India Possibilities
+                Versatile Solutions for Every Business Listing Website India
               </Typography>
               <Typography sx={{ color: "#666", fontSize: "16px", mb: 4, lineHeight: 1.6 }}>
-                We build flexible listing and directory solutions that can be customized for any industry, ensuring your business listing website India scales as your business grows.
+                Our platform supports multiple verticals-from job portals to real estate listings-enabling you to create tailored business listing website India solutions for diverse industries and use cases.
               </Typography>
 
               <Typography sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: "16px", mb: 2 }}>INDUSTRIES WE SERVE</Typography>
@@ -133,7 +133,7 @@ const ListingMultiVertical = () => {
                     color: "#ffffff",
                     fontWeight: 700,
                     fontSize: "15px",
-                    px: { xs: 4, md: 5 },
+                    px: { xs: 2, md: 5 },
                     py: 1.5,
                     borderRadius: "8px",
                     textTransform: "none",
@@ -163,7 +163,7 @@ const ListingMultiVertical = () => {
               </Grid>
             </Grid>
           </Grid>
-          
+
         </Grid>
 
       </Container>

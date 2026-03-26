@@ -80,7 +80,7 @@ const FoodBanner = () => {
         }}
       >
         {/* Left Section: Text Content */}
-        <Box sx={{ flex: 1, pr: { md: 4 }, mb: { xs: 6, md: 0 } }}>
+        <Box sx={{ flex: 1, pr: { md: 4 }, mb: { xs: 4, md: 0 } }}>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <Typography sx={{ fontWeight: 600, fontSize: "16px", mb: "15px", letterSpacing: "2px", color: '#ff6f1e' }}>
               INNOVATIVE DIGITAL SOLUTIONS FOR RESTAURANTS & STARTUPS

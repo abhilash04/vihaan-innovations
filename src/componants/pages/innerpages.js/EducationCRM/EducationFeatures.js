@@ -81,7 +81,7 @@ const EducationFeatures = () => {
 
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8, color: "white" }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "32px", md: "46px" }, mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "46px" }, mb: 2 }}>
             What We Build
           </Typography>
           <Typography variant="h5" sx={{ fontWeight: 700, mb: 2, opacity: 0.9 }}>

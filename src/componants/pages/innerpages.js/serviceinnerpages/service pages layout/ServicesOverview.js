@@ -83,11 +83,11 @@ const IconBox = styled(Box)(({ gradient }) => ({
 }));
 
 const ServicesOverview = ({ data }) => {
-  const { 
+  const {
     subtitle = "WHAT WE OFFER",
     title = "Comprehensive Technology Services",
     description = "We empower businesses using advanced digital enablement from custom codes overlays to strategic marketing pillars.",
-    list = categories 
+    list = categories
   } = data || {};
 
   return (
@@ -101,7 +101,7 @@ const ServicesOverview = ({ data }) => {
               {subtitle}
             </Typography>
           </Box>
-          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "32px", md: "44px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "40px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2 }}>
             {title}
           </Typography>
           <Typography sx={{ color: "#475569", maxWidth: "560px", mx: "auto", fontSize: "16px", lineHeight: 1.7 }}>

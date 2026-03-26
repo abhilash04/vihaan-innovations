@@ -61,7 +61,7 @@ const EducationTechnology = () => {
           <Typography sx={{ color: "#00B4D8", fontWeight: 600, mb: 2, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px", pt: 6 }}>
             Technology Stack
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", mb: 3, fontSize: { xs: "32px", md: "46px" }, lineHeight: 1.2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", mb: 3, fontSize: { xs: "28px", md: "46px" }, lineHeight: 1.2 }}>
             Technology That Powers Scalable Education CRM
           </Typography>
           <Typography variant="h5" sx={{ color: "#00B4D8", fontWeight: 700, mb: 2, fontSize: "20px" }}>

@@ -49,7 +49,7 @@ const HMSWhyUs = () => {
           {/* Right: Quote card with shifting gradient list */}
           <Grid item xs={12} md={6}>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} style={{ height: "100%" }}>
-              <Paper elevation={0} sx={{ p: 4, borderRadius: "24px", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", position: "relative", overflow: "hidden", color: "#ffffff", background: "linear-gradient(-45deg, #0A2D6E, #0077B6, #00B4D8, #0A2D6E)", backgroundSize: "400% 400%", animation: "gradientShift 12s infinite ease-in-out", boxShadow: "0 15px 35px rgba(10,45,110,0.15)" }}>
+              <Paper elevation={0} sx={{ p: 4, borderRadius: "24px", height: "90%", display: "flex", flexDirection: "column", justifyContent: "center", position: "relative", overflow: "hidden", color: "#ffffff", background: "linear-gradient(-45deg, #0A2D6E, #0077B6, #00B4D8, #0A2D6E)", backgroundSize: "400% 400%", animation: "gradientShift 12s infinite ease-in-out", boxShadow: "0 15px 35px rgba(10,45,110,0.15)" }}>
                 {/* Large Quotation mark */}
                 <Typography sx={{ position: "absolute", top: 10, left: 30, fontSize: "120px", fontWeight: 900, color: "rgba(255,255,255,0.08)", fontFamily: "serif" }}>
                   “

@@ -36,7 +36,7 @@ const ListingWhyUs = () => {
         </Box>
 
         {/* 2x2 Grid Differentiators */}
-        <Grid container spacing={4} sx={{ mb: 14 }}>
+        <Grid container spacing={4} sx={{ mb: 8 }}>
           {differentiators.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -50,7 +50,7 @@ const ListingWhyUs = () => {
                 >
                   <Paper elevation={0} sx={{
                     p: 3,
-                    height: "100%",
+                    height: "75%",
                     borderRadius: "16px",
                     bgcolor: "#f8fafc",
                     border: "1px solid #e2e8f0",

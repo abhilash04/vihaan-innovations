@@ -25,8 +25,9 @@ const HRMHomepage = () => {
         <HRMWhyUs />
 
         <HRMFAQ />
-        <HRMCTA />
+
         <HRMTestimonials />
+        <HRMCTA />
       </Box>
       <FooterAndPopup />
     </Box>
