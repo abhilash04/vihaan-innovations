@@ -3,7 +3,7 @@ import { Box, Typography, Paper, Container } from "@mui/material";
 import { motion } from "framer-motion";
 
 // Dummy images - replace with actual assets if needed
-import computerImg from "../../../../assets/multivendermobileapp.png";
+import computerImg from "../../../../assets/multivendor-mobile.png";
 
 const MultiVendorComputer = () => {
   const containerVariants = {
