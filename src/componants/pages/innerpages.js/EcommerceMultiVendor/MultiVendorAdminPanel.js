@@ -3,7 +3,7 @@ import { Box, Typography, Paper, Container } from "@mui/material";
 import { motion } from "framer-motion";
 
 // Dummy images - replace with actual assets if needed
-import adminImg from "../../../../assets/multivenderdashboard.png";
+import adminImg from "../../../../assets/mutilvendor-dashboard.png";
 
 const MultiVendorAdmin = () => {
   const containerVariants = {
