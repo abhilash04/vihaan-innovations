@@ -13,7 +13,7 @@ import TermsandConditions from "./componants/pages/innerpages.js/TermsandConditi
 import RefundPolicy from "./componants/pages/innerpages.js/RefundPolicy";
 import ShippingPolicy from "./componants/pages/innerpages.js/ShippingPolicy";
 import ContactUs from "./componants/pages/ContactUs";
-import AboutUs from "./componants/pages/AboutUs";
+import AboutUsHomePage from "./componants/aboutus/AboutUsHomePage";
 import CabBookingApp from "./componants/pages/innerpages.js/cab booking app/CabBookingApp";
 import EcommerceSingleVendorHomepage from "./componants/pages/innerpages.js/EcommerceSingleVendor/EcommerceSingleVendorHomepage";
 import EcommerceMultiVendorHomepage from "./componants/pages/innerpages.js/EcommerceMultiVendor/EcommerceMultiVendorHomepage";
@@ -110,6 +110,7 @@ import {
   webDevelopmentServiceData
 } from "./componants/pages/innerpages.js/serviceinnerpages/ServiceDataTemplate";
 import ServicePage from "./componants/pages/innerpages.js/serviceinnerpages/service pages layout/ServicePage";
+import AboutUs from "./componants/pages/AboutUs";
 
 function App() {
   return (
