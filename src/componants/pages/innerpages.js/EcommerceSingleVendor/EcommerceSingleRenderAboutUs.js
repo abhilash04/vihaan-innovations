@@ -167,7 +167,7 @@ const EcommerceSingleRenderAboutUs = () => {
                                 variant="h3"
                                 sx={{
                                     fontWeight: 800,
-                                    fontSize: { xs: "32px", md: "46px" },
+                                    fontSize: { xs: "28px", md: "46px" },
                                     lineHeight: 1.2,
                                     color: "#1a1a1a",
                                     mb: 2,

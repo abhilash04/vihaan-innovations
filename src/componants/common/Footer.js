@@ -155,7 +155,6 @@ const FooterAndPopup = () => {
               {[
                 { name: "name", type: "text", placeholder: "Your Name" },
                 { name: "phone", type: "tel", placeholder: "Phone Number" },
-                { name: "email", type: "email", placeholder: "Your Email" },
               ].map((field) => (
                 <TextField
                   key={field.name}
@@ -181,7 +180,7 @@ const FooterAndPopup = () => {
                 />
               ))}
 
-              {/* Choose Services (IT) dropdown */}
+              {/* Choose Category dropdown */}
               <FormControl fullWidth sx={{ marginBottom: "15px" }}>
                 <Select
                   name="service"
@@ -204,12 +203,11 @@ const FooterAndPopup = () => {
                   }}
                 >
                   <MenuItem value="" disabled>
-                    Choose Services (IT)
+                    Choose Category
                   </MenuItem>
-                  <MenuItem value="Web Development">Web Development</MenuItem>
-                  <MenuItem value="App Development">App Development</MenuItem>
-                  <MenuItem value="UI/UX Design">UI/UX Design</MenuItem>
-                  <MenuItem value="Cloud Services">Cloud Services</MenuItem>
+                  <MenuItem value="Products">Ready Products</MenuItem>
+                  <MenuItem value="Services">Services</MenuItem>
+                  <MenuItem value="Training">Training</MenuItem>
                 </Select>
               </FormControl>
 
@@ -292,333 +290,278 @@ const FooterAndPopup = () => {
       <Box
         component="footer"
         sx={{
-          backgroundColor: "#002b50",
-          color: "white",
+          backgroundColor: "#fcfdff",
+          color: "#333",
+          position: "relative",
+          overflow: "hidden",
+          borderTopLeftRadius: "20px",
+          borderTopRightRadius: "20px",
+          boxShadow: "0 -10px 30px rgba(0,0,0,0.03)",
+          mt: 5,
+          zIndex: 1,
         }}
       >
+        {/* Top Gradient Line */}
         <Box
           sx={{
-            padding: "60px 0 40px 0",
+            height: "5px",
+            width: "100%",
+            background: "linear-gradient(90deg, #0cebeb 0%, #0087ca 30%, #9b51e0 70%, #ff2a85 100%)",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            zIndex: 10,
+          }}
+        />
+
+        {/* Background Waves */}
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            zIndex: -1,
+            opacity: 0.6,
+            pointerEvents: "none",
+            background: "radial-gradient(ellipse at 80% 100%, rgba(255,42,133,0.08) 0%, transparent 40%), radial-gradient(ellipse at 20% 100%, rgba(0,210,255,0.12) 0%, transparent 50%)"
           }}
         >
-          <Container maxWidth="lg">
-            <Grid container spacing={4}>
+          <svg viewBox="0 0 1440 320" style={{ position: "absolute", bottom: 0, width: "100%", height: "auto" }}>
+            <path fill="rgba(88, 130, 240, 0.05)" d="M0,192L48,202.7C96,213,192,235,288,234.7C384,235,480,213,576,213.3C672,213,768,235,864,240C960,245,1056,235,1152,213.3C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            <path fill="rgba(255, 42, 133, 0.03)" d="M0,256L48,245.3C96,235,192,213,288,218.7C384,224,480,256,576,256C672,256,768,224,864,218.7C960,213,1056,235,1152,245.3C1248,256,1344,256,1392,256L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>
+        </Box>
+
+        <Box sx={{ padding: "60px 0 20px 0", position: "relative", zIndex: 1 }}>
+          <Container maxWidth="xl" sx={{ px: { xs: 2, md: 5 } }}>
+            <Grid container spacing={4} sx={{ justifyContent: "space-between" }}>
               {/* Brand Column */}
-              <Grid item xs={12} md={3}>
+              <Grid item xs={12} md={3.5}>
                 <img
                   src={logo}
-                  alt="CGS Logo"
+                  alt="Vihaan Innovations Logo"
                   style={{
-                    height: "auto",
-                    width: "80%",
+                    height: "80px",
+                    width: "auto",
                     marginBottom: "20px",
-                    borderRadius: "8px",
                   }}
                 />
                 <Typography
                   variant="body2"
                   sx={{
-                    textAlign: "justify",
-                    lineHeight: "1.4",
-                    marginBottom: "20px",
+                    color: "#555",
+                    lineHeight: "1.6",
+                    marginBottom: "25px",
+                    fontWeight: 500,
+                    pr: 2,
                   }}
                 >
-                  Vihaan Innovations is a trusted IT consulting and solutions
-                  partner, offering a complete range of services from custom
-                  software and product development to digital marketing and
-                  technology support. We help businesses grow by delivering
-                  reliable IT services, innovative digital solutions, and
-                  user-friendly products tailored to their needs.
-                </Typography>
-              </Grid>
+                  Trusted IT consulting and solutions partner delivering innovative, scalable, and future-ready technology.
+                  We empower businesses to grow, transform, and stay ahead in the digital world.                </Typography>
 
-              {/* Our Products Column */}
-              <Grid item xs={12} sm={6} md={2}>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontSize: "18px",
-                    fontWeight: "bold",
-                    marginBottom: "20px",
-                    color: "white",
-                  }}
-                >
-                  Our Products
-                </Typography>
-                <Box
-                  component="ul"
-                  sx={{
-                    listStyle: "none",
-                    padding: 0,
-                    margin: 0,
-                  }}
-                >
-                  {[
-                    "Hospital Management",
-                    "Real Estate",
-                    "E-Commerce",
-                    "CRM Software",
-                    "OTT Platform",
-                    "Listing Site",
-                    "Job Portal",
-                    "HRM Software",
-                  ].map((product) => (
-                    <li
-                      key={product}
-                      style={{
-                        marginBottom: "8px",
-                      }}
-                    >
-                      <Link
-                        href={`${product.toLowerCase().replace(/\s+/g, "-")}`}
-                        sx={{
-                          color: "#ccc",
-                          textDecoration: "none",
-                          transition: "color 0.3s ease",
-                          "&:hover": {
-                            color: "#2196F3",
-                          },
-                        }}
-                      >
-                        {product}
-                      </Link>
-                    </li>
-                  ))}
+                {/* Email Subscription Box */}
+                <Box sx={{ display: "flex", mb: { xs: 4, md: 3 }, boxShadow: "0 4px 15px rgba(0,0,0,0.06)", borderRadius: "25px", overflow: "hidden", width: "100%", maxWidth: { xs: "100%", sm: "350px" }, backgroundColor: "#fff", border: "1px solid #eaeaea" }}>
+                  <Box component="input" placeholder="Enter your email address" sx={{ width: "100%", flex: 1, border: "none", outline: "none", padding: "12px 15px", fontSize: "14px", backgroundColor: "#fff", color: "#333", "&::placeholder": { color: "#999" } }} />
+                  <Button sx={{ background: "linear-gradient(90deg, #3a7bd5 0%, #a450e1 100%)", color: "#fff", padding: { xs: "10px 15px", md: "10px 20px" }, textTransform: "none", fontWeight: 600, borderRadius: "0 25px 25px 0", minWidth: { xs: "80px", md: "100px" }, "&:hover": { background: "linear-gradient(90deg, #2b5ca5 0%, #8736c2 100%)" } }}>
+                    Subscribe
+                  </Button>
                 </Box>
-              </Grid>
 
-              {/* Services Column */}
-              <Grid item xs={12} sm={6} md={2}>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontSize: "18px",
-                    fontWeight: "bold",
-                    marginBottom: "20px",
-                    color: "white",
-                  }}
-                >
-                  Services
-                </Typography>
-                <Box
-                  component="ul"
-                  sx={{
-                    listStyle: "none",
-                    padding: 0,
-                    margin: 0,
-                  }}
-                >
+                {/* Social Icons */}
+                <Box sx={{ display: "flex", gap: "12px", flexWrap: "wrap", mb: { xs: 4, md: 0 } }}>
                   {[
-                    "Hospital Software",
-                    "ERP Development",
-                    "CRM Development",
-                    "Sales Force Software",
-                    "Inventory Management",
-                    "Project Software",
-                    "Retail Software",
-                    "Supplychain Software",
-                  ].map((service) => (
-                    <li
-                      key={service}
-                      style={{
-                        marginBottom: "8px",
-                      }}
-                    >
-                      <Link
-                        href={`${service.toLowerCase().replace(/\s+/g, "-")}`}
-                        sx={{
-                          color: "#ccc",
-                          textDecoration: "none",
-                          transition: "color 0.3s ease",
-                          "&:hover": {
-                            color: "#2196F3",
-                          },
-                        }}
-                      >
-                        {service}
-                      </Link>
-                    </li>
-                  ))}
-                </Box>
-              </Grid>
-
-              {/* Training Column */}
-              <Grid item xs={12} sm={6} md={2}>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontSize: "18px",
-                    fontWeight: "bold",
-                    marginBottom: "20px",
-                    color: "white",
-                  }}
-                >
-                  Training
-                </Typography>
-                <Box
-                  component="ul"
-                  sx={{
-                    listStyle: "none",
-                    padding: 0,
-                    margin: 0,
-                  }}
-                >
-                  {[
-                    "Web Designing",
-                    "Web Development",
-                    "Python",
-                    "Java",
-                    "React",
-                    "Manual Testing",
-                    "Automation Testing",
-                    "Android Training",
-                  ].map((training) => (
-                    <li
-                      key={training}
-                      style={{
-                        marginBottom: "8px",
-                      }}
-                    >
-                      <Link
-                        href={`${training
-                          .toLowerCase()
-                          .replace(/\s+/g, "-")}-training`}
-                        sx={{
-                          color: "#ccc",
-                          textDecoration: "none",
-                          transition: "color 0.3s ease",
-                          "&:hover": {
-                            color: "#2196F3",
-                          },
-                        }}
-                      >
-                        {training}
-                      </Link>
-                    </li>
-                  ))}
-                </Box>
-              </Grid>
-
-              {/* Contact Column */}
-              <Grid item xs={12} sm={6} md={3}>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontSize: "18px",
-                    fontWeight: "bold",
-                    marginBottom: "20px",
-                    color: "white",
-                  }}
-                >
-                  Contact Us
-                </Typography>
-                <Box>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "flex-start",
-                      marginBottom: "15px",
-                      gap: "10px",
-                    }}
-                  >
-                    <Email
+                    { icon: <LinkedIn fontSize="small" />, color: "#0077b5", url: "https://www.linkedin.com/company//" },
+                    { icon: <Twitter fontSize="small" />, color: "#1da1f2", url: "https://twitter.com/" },
+                    { icon: <Facebook fontSize="small" />, color: "#4267B2", url: "https://www.facebook.com/profile.php?id=" },
+                    { icon: <Instagram fontSize="small" />, color: "#E1306C", url: "https://www.instagram.com//" },
+                    { icon: <YouTube fontSize="small" />, color: "#FF0000", url: "https://www.youtube.com/@" },
+                  ].map((social, idx) => (
+                    <Box
+                      key={idx}
+                      component="a"
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       sx={{
-                        fontSize: "20px",
-                        marginTop: "2px",
+                        width: "35px",
+                        height: "35px",
+                        borderRadius: "8px",
+                        backgroundColor: "#eef2f6",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: social.color,
+                        transition: "all 0.3s ease",
+                        "&:hover": {
+                          backgroundColor: social.color,
+                          color: "#fff",
+                          transform: "translateY(-2px)"
+                        }
                       }}
-                    />
-                    <Box>
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: "#ccc",
-                          lineHeight: "1.5",
-                        }}
-                      >
-                        Email:{" "}
-                        <Link
-                          href="mailto:contact@vihaaninnovations.com"
-                          sx={{
-                            color: "#ccc",
-                            textDecoration: "none",
-                            transition: "color 0.3s ease",
-                            "&:hover": {
-                              color: "#2196F3",
-                            },
-                          }}
-                        >
-                          contact@vihaaninnovations.com
-                        </Link>
-                      </Typography>
+                    >
+                      {social.icon}
                     </Box>
+                  ))}
+                </Box>
+              </Grid>
+
+              {/* Right Side Container */}
+              <Grid item xs={12} md={8.5}>
+                <Grid container spacing={4}>
+                  {/* Our Products Column */}
+                  <Grid item xs={12} sm={6} md={3}>
+                    <Typography
+                      variant="h6"
+                      sx={{ fontSize: "16px", fontWeight: 700, color: "#1a1a1a", borderBottom: "1px solid #eaeaea", paddingBottom: "10px", marginBottom: "20px" }}
+                    >
+                      Our Products
+                    </Typography>
+                    <Box component="ul" sx={{ listStyle: "none", padding: 0, margin: 0 }}>
+                      {[
+                        "Real Estate Portal",
+                        "Education CRM",
+                        "Matrimony CRM",
+                        "Listing Platform",
+                        "LMS Platform",
+                        "Hospital Management System",
+                      ].map((product) => (
+                        <li key={product} style={{ marginBottom: "12px" }}>
+                          <Link
+                            href={`${product.toLowerCase().replace(/\s+/g, "-")}`}
+                            sx={{ color: "#555", textDecoration: "none", fontSize: "14px", fontWeight: 500, transition: "color 0.3s ease", display: "flex", alignItems: "center", "&:hover": { color: "#00b4d8" } }}
+                          >
+                            <span style={{ color: "#00b4d8", marginRight: "8px", fontSize: "16px", fontWeight: "bold" }}>›</span>
+                            {product}
+                          </Link>
+                        </li>
+                      ))}
+                    </Box>
+                  </Grid>
+
+                  {/* Services Column */}
+                  <Grid item xs={12} sm={6} md={3}>
+                    <Typography
+                      variant="h6"
+                      sx={{ fontSize: "16px", fontWeight: 700, color: "#1a1a1a", borderBottom: "1px solid #eaeaea", paddingBottom: "10px", marginBottom: "20px" }}
+                    >
+                      Services
+                    </Typography>
+                    <Box component="ul" sx={{ listStyle: "none", padding: 0, margin: 0 }}>
+                      {[
+                        "UI UX Design",
+                        "Web Development",
+                        "Digital Marketing",
+                        "Mobile App Development",
+                        "Ecommerce Development",
+                        "CRM Development",
+                      ].map((service) => (
+                        <li key={service} style={{ marginBottom: "12px" }}>
+                          <Link
+                            href={`${service.toLowerCase().replace(/\s+/g, "-")}`}
+                            sx={{ color: "#555", textDecoration: "none", fontSize: "14px", fontWeight: 500, transition: "color 0.3s ease", display: "flex", alignItems: "center", "&:hover": { color: "#00b4d8" } }}
+                          >
+                            <span style={{ color: "#00b4d8", marginRight: "8px", fontSize: "16px", fontWeight: "bold" }}>›</span>
+                            {service}
+                          </Link>
+                        </li>
+                      ))}
+                    </Box>
+                  </Grid>
+
+                  {/* Training Column */}
+                  <Grid item xs={12} sm={6} md={3}>
+                    <Typography
+                      variant="h6"
+                      sx={{ fontSize: "16px", fontWeight: 700, color: "#1a1a1a", borderBottom: "1px solid #eaeaea", paddingBottom: "10px", marginBottom: "20px" }}
+                    >
+                      Training
+                    </Typography>
+                    <Box component="ul" sx={{ listStyle: "none", padding: 0, margin: 0 }}>
+                      {[
+                        "Web Designing",
+                        "Web Development",
+                        "React",
+                        "Python",
+                        "Manual Testing",
+                        "Android",
+                      ].map((training) => (
+                        <li key={training} style={{ marginBottom: "12px" }}>
+                          <Link
+                            href={`${training.toLowerCase().replace(/\s+/g, "-")}-training`}
+                            sx={{ color: "#555", textDecoration: "none", fontSize: "14px", fontWeight: 500, transition: "color 0.3s ease", display: "flex", alignItems: "center", "&:hover": { color: "#00b4d8" } }}
+                          >
+                            <span style={{ color: "#00b4d8", marginRight: "8px", fontSize: "16px", fontWeight: "bold" }}>›</span>
+                            {training}
+                          </Link>
+                        </li>
+                      ))}
+                    </Box>
+                  </Grid>
+
+                  {/* Quick Links Column */}
+                  <Grid item xs={12} sm={6} md={3}>
+                    <Typography
+                      variant="h6"
+                      sx={{ fontSize: "16px", fontWeight: 700, color: "#1a1a1a", borderBottom: "1px solid #eaeaea", paddingBottom: "10px", marginBottom: "20px" }}
+                    >
+                      Quick Links
+                    </Typography>
+                    <Box component="ul" sx={{ listStyle: "none", padding: 0, margin: 0 }}>
+                      {[
+                        { name: "About Us", path: "/about-us" },
+                        { name: "Careers", path: "/career" },
+                        { name: "Blog", path: "/blog" },
+                        { name: "Terms & Conditions", path: "/terms-and-conditions" },
+                        { name: "Privacy Policy", path: "/privacy-policy" },
+                        { name: "Refund Policy", path: "/refund-policy" },
+                        { name: "Cancellation Policy", path: "/cancellation-policy" },
+                      ].map((link) => (
+                        <li key={link.name} style={{ marginBottom: "12px" }}>
+                          <Link
+                            href={link.path}
+                            sx={{ color: "#555", textDecoration: "none", fontSize: "14px", fontWeight: 500, transition: "color 0.3s ease", display: "flex", alignItems: "center", "&:hover": { color: "#00b4d8" } }}
+                          >
+                            <span style={{ color: "#00b4d8", marginRight: "8px", fontSize: "16px", fontWeight: "bold" }}>›</span>
+                            {link.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </Box>
+                  </Grid>
+                </Grid>
+
+                {/* Contact Details Row */}
+                <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, justifyContent: "space-between", alignItems: { xs: "flex-start", md: "center" }, mt: { xs: 2, md: 4 }, pt: { xs: 3, md: 4 }, borderTop: "1px solid #eaeaea", gap: { xs: 3, md: 3 } }}>
+                  {/* Email */}
+                  <Box sx={{ display: "flex", alignItems: "center", gap: "12px", width: "100%" }}>
+                    <Box sx={{ width: "40px", height: "40px", minWidth: "40px", borderRadius: "50%", backgroundColor: "#eef2f6", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <Email sx={{ fontSize: "20px", color: "#444" }} />
+                    </Box>
+                    <Link href="mailto:contact@vihaaninnovations.com" sx={{ color: "#555", textDecoration: "none", fontSize: { xs: "14px", sm: "15px" }, fontWeight: 600, wordBreak: "break-word", "&:hover": { color: "#00b4d8" } }}>
+                      contact@vihaaninnovations.com
+                    </Link>
                   </Box>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "flex-start",
-                      marginBottom: "15px",
-                      gap: "10px",
-                    }}
-                  >
-                    <Phone
-                      sx={{
-                        fontSize: "20px",
-                        marginTop: "2px",
-                        color: "",
-                      }}
-                    />
-                    <Box>
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: "#ccc",
-                          lineHeight: "1.5",
-                        }}
-                      >
-                        Phone:{" "}
-                        <Link
-                          href="tel:+918073979129"
-                          sx={{
-                            color: "#ccc",
-                            textDecoration: "none",
-                            transition: "color 0.3s ease",
-                            "&:hover": {
-                              color: "#2196F3",
-                            },
-                          }}
-                        >
-                          +91 80739 79129
-                        </Link>
-                      </Typography>
+
+                  {/* Phone */}
+                  <Box sx={{ display: "flex", alignItems: "center", gap: "12px", width: "100%" }}>
+                    <Box sx={{ width: "40px", height: "40px", minWidth: "40px", borderRadius: "50%", backgroundColor: "#eef2f6", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <Phone sx={{ fontSize: "20px", color: "#444" }} />
                     </Box>
+                    <Link href="tel:+918073979129" sx={{ color: "#555", textDecoration: "none", fontSize: { xs: "14px", sm: "15px" }, fontWeight: 600, "&:hover": { color: "#00b4d8" } }}>
+                      +91 80739 79129
+                    </Link>
                   </Box>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "flex-start",
-                      marginBottom: "15px",
-                      gap: "10px",
-                    }}
-                  >
-                    <LocationOn
-                      sx={{
-                        fontSize: "20px",
-                        marginTop: "2px",
-                      }}
-                    />
-                    <Box>
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: "#ccc",
-                          lineHeight: "1.5",
-                        }}
-                      >
-                        Address: 22, 1st Main Rd, near APPOLO MEDICAL,
-                        Vijayashree Layout, Kodichikknahalli, Rotary Nagar, BDA
-                        Layout BTM 4th Stage, Bengaluru, Karnataka 560068.
-                      </Typography>
+
+                  {/* Location */}
+                  <Box sx={{ display: "flex", alignItems: "flex-start", gap: "12px", width: "100%" }}>
+                    <Box sx={{ width: "40px", height: "40px", minWidth: "40px", borderRadius: "50%", backgroundColor: "#eef2f6", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <LocationOn sx={{ fontSize: "20px", color: "#444" }} />
                     </Box>
+                    <Typography variant="body2" sx={{ color: "#555", fontSize: { xs: "14px", sm: "15px" }, fontWeight: 600, mt: 1 }}>
+                      Bangalore, India
+                    </Typography>
                   </Box>
                 </Box>
               </Grid>
@@ -626,200 +569,19 @@ const FooterAndPopup = () => {
           </Container>
         </Box>
 
-        <Box
-          sx={{
-            border: "none",
-            height: "1px",
-            backgroundColor: "rgba(255,255,255,0.1)",
-            margin: "20px 0",
-          }}
-        ></Box>
-
-        <Box
-          sx={{
-            padding: "20px 0",
-          }}
-        >
-          <Container maxWidth="lg">
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                gap: "15px",
-                marginBottom: "15px",
-              }}
-            >
-              {[
-                {
-                  name: "Facebook",
-                  icon: (
-                    <Facebook
-                      sx={{
-                        width: "30px",
-                        height: "30px",
-                        transition: "transform 0.3s ease",
-                        "&:hover": {
-                          transform: "scale(1.2)",
-                        },
-                      }}
-                    />
-                  ),
-                  url: "https://www.facebook.com/profile.php?id=100084743063935",
-                },
-                {
-                  name: "Twitter",
-                  icon: (
-                    <Twitter
-                      sx={{
-                        width: "30px",
-                        height: "30px",
-                        transition: "transform 0.3s ease",
-                        "&:hover": {
-                          transform: "scale(1.2)",
-                        },
-                      }}
-                    />
-                  ),
-                  url: "https://twitter.com/codesightglobal",
-                },
-                {
-                  name: "Instagram",
-                  icon: (
-                    <Instagram
-                      sx={{
-                        width: "30px",
-                        height: "30px",
-                        transition: "transform 0.3s ease",
-                        "&:hover": {
-                          transform: "scale(1.2)",
-                        },
-                      }}
-                    />
-                  ),
-                  url: "https://www.instagram.com/codesightglobal/",
-                },
-                {
-                  name: "LinkedIn",
-                  icon: (
-                    <LinkedIn
-                      sx={{
-                        width: "30px",
-                        height: "30px",
-                        transition: "transform 0.3s ease",
-                        "&:hover": {
-                          transform: "scale(1.2)",
-                        },
-                      }}
-                    />
-                  ),
-                  url: "https://www.linkedin.com/company/codesightglobalsolutions/",
-                },
-                {
-                  name: "YouTube",
-                  icon: (
-                    <YouTube
-                      sx={{
-                        width: "30px",
-                        height: "30px",
-                        transition: "transform 0.3s ease",
-                        "&:hover": {
-                          transform: "scale(1.2)",
-                        },
-                      }}
-                    />
-                  ),
-                  url: "https://www.youtube.com/@codesightglobal",
-                },
-                {
-                  name: "Pinterest",
-                  icon: (
-                    <Pinterest
-                      sx={{
-                        width: "30px",
-                        height: "30px",
-                        transition: "transform 0.3s ease",
-                        "&:hover": {
-                          transform: "scale(1.2)",
-                        },
-                      }}
-                    />
-                  ),
-                  url: "https://www.pinterest.com/codesightglobal/",
-                },
-              ].map((social) => (
-                <Link
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  color="inherit"
-                >
-                  {social.icon}
-                </Link>
-              ))}
+        {/* Bottom Bar */}
+        <Box sx={{ borderTop: "1px solid rgba(0,0,0,0.06)", padding: "20px 0", position: "relative", zIndex: 1 }}>
+          <Container maxWidth="xl" sx={{ px: { xs: 2, md: 5 } }}>
+            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <Typography variant="body2" sx={{ color: "#666", fontSize: "14px", fontWeight: 600, textAlign: 'center' }}>
+                © 2025 SN Info Systems. All rights reserved.
+              </Typography>
             </Box>
           </Container>
         </Box>
       </Box>
 
       {/* Fixed Action Buttons */}
-      {/* <Link
-        href="https://wa.me/+917975468634"
-        sx={{
-          position: "fixed",
-          bottom: "100px",
-          right: "40px",
-          zIndex: 100,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Box
-          sx={{
-            width: "46px",
-            height: "46px",
-            borderRadius: "50%",
-            backgroundColor: "#01062e",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <WhatsApp sx={{ fontSize: 20, color: "#fff" }} />
-        </Box>
-      </Link>
-
-      <Link
-        href="tel:+917975468634"
-        sx={{
-          position: "fixed",
-          bottom: "160px",
-          right: "40px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          zIndex: 100,
-          textDecoration: "none",
-        }}
-      >
-        <Box
-          sx={{
-            width: "46px",
-            height: "46px",
-            borderRadius: "50%",
-            backgroundColor: "#01062e",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Call sx={{ fontSize: 20, color: "#fff" }} />
-        </Box>
-      </Link> */}
-
       <>
         {visible && (
           <Box
@@ -829,57 +591,23 @@ const FooterAndPopup = () => {
               position: "fixed",
               bottom: "40px",
               right: "40px",
-              width: "46px",
-              height: "46px",
+              width: "56px",
+              height: "56px",
               borderRadius: "50%",
               zIndex: 99999,
               cursor: "pointer",
-              boxShadow: "inset 0 0 0 2px #d4d4d4",
-              backgroundColor: "#fff",
+              backgroundColor: "#16c2d5",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              boxShadow: "0 6px 20px rgba(0, 180, 216, 0.4)",
+              transition: "transform 0.3s ease",
+              "&:hover": {
+                transform: "translateY(-5px)",
+              }
             }}
           >
-            {/* Progress Circle using SVG */}
-            <svg
-              className="pxl-scroll-progress-circle"
-              width="46px"
-              height="46px"
-              viewBox="0 0 100 100"
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                zIndex: 1,
-                transform: "rotate(-90deg)", // Start progress from top
-              }}
-            >
-              {/* Background Circle */}
-              <circle
-                cx="50"
-                cy="50"
-                r="48"
-                fill="none"
-                stroke="#0087ca"
-                strokeWidth="4"
-              />
-
-              {/* Foreground Progress Circle */}
-              <circle
-                cx="50"
-                cy="50"
-                r="48"
-                fill="none"
-                stroke="#01062e"
-                strokeWidth="4"
-                strokeDasharray="307.919"
-                strokeDashoffset={offset}
-              />
-            </svg>
-
-            {/* Up Arrow Icon */}
-            <ArrowUpwardIcon sx={{ fontSize: 20, color: "black", zIndex: 2 }} />
+            <ArrowUpwardIcon sx={{ fontSize: 28, color: "#fff" }} />
           </Box>
         )}
       </>

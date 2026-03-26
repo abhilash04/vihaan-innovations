@@ -57,7 +57,7 @@ export default function OrganicaCommunity() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed', // Creates the parallax effect
-        py: { xs: 10, md: 16 },
+        py: { xs: 6, md: 16 },
         textAlign: 'center',
         color: colors.white
       }}>

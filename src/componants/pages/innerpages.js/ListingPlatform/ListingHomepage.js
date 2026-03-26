@@ -39,8 +39,9 @@ const ListingHomepage = () => {
         <ListingIntegrations />
 
         <ListingFAQ />
-        <ListingCTA />
+
         <ListingWhyUs />
+        <ListingCTA />
       </Box>
       <FooterAndPopup />
     </Box>

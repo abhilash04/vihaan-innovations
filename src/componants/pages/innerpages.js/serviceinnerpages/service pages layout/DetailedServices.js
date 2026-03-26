@@ -130,7 +130,7 @@ const DetailedServices = ({ data }) => {
   const activeCat = services[activeTab] || { cards: [] };
 
   return (
-    <Box sx={{ bgcolor: "#ffffff", py: { xs: 8, md: 10 }, position: "relative", overflow: "hidden" }}>
+    <Box sx={{ bgcolor: "#ffffff", py: { xs: 6, md: 10 }, position: "relative", overflow: "hidden" }}>
       <Container maxWidth="lg">
 
         {/* 1. Header Section (Centered) */}
@@ -153,7 +153,7 @@ const DetailedServices = ({ data }) => {
               fontWeight: 800,
               color: "#050748",
               fontFamily: "Urbanist, sans-serif",
-              fontSize: { xs: "24px", md: "32px" },
+              fontSize: { xs: "28px", md: "40px" },
               lineHeight: 1.2,
               mb: 1.5,
             }}

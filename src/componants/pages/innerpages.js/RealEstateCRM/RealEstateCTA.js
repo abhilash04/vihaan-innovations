@@ -7,26 +7,26 @@ const RealEstateCTA = () => {
     <Box sx={{
       position: "relative",
       bgcolor: "#0B1120", // Deep night blue from the mockup bottom section
-      py: 16,
+      py: 8,
       overflow: "hidden",
       textAlign: "center"
     }}>
 
       {/* Starry Night Effect Background Elements */}
-      <Box sx={{ 
-        position: 'absolute', top: '20%', left: '10%', width: '4px', height: '4px', bgcolor: '#fff', borderRadius: '50%', boxShadow: '0 0 10px 2px rgba(255,255,255,0.8)' 
+      <Box sx={{
+        position: 'absolute', top: '20%', left: '10%', width: '4px', height: '4px', bgcolor: '#fff', borderRadius: '50%', boxShadow: '0 0 10px 2px rgba(255,255,255,0.8)'
       }} />
-      <Box sx={{ 
-        position: 'absolute', top: '60%', right: '15%', width: '6px', height: '6px', bgcolor: '#fff', borderRadius: '50%', boxShadow: '0 0 15px 3px #00B4D8' 
+      <Box sx={{
+        position: 'absolute', top: '60%', right: '15%', width: '6px', height: '6px', bgcolor: '#fff', borderRadius: '50%', boxShadow: '0 0 15px 3px #00B4D8'
       }} />
-      <Box sx={{ 
-        position: 'absolute', bottom: '30%', left: '20%', width: '3px', height: '3px', bgcolor: '#fff', borderRadius: '50%', boxShadow: '0 0 8px 1px rgba(255,255,255,0.6)' 
+      <Box sx={{
+        position: 'absolute', bottom: '30%', left: '20%', width: '3px', height: '3px', bgcolor: '#fff', borderRadius: '50%', boxShadow: '0 0 8px 1px rgba(255,255,255,0.6)'
       }} />
-      <Box sx={{ 
-        position: 'absolute', top: '15%', right: '30%', width: '5px', height: '5px', bgcolor: '#fff', borderRadius: '50%', boxShadow: '0 0 12px 2px #ffeaa7' 
+      <Box sx={{
+        position: 'absolute', top: '15%', right: '30%', width: '5px', height: '5px', bgcolor: '#fff', borderRadius: '50%', boxShadow: '0 0 12px 2px #ffeaa7'
       }} />
-      <Box sx={{ 
-        position: 'absolute', bottom: '15%', right: '40%', width: '8px', height: '8px', transform: "rotate(45deg)", bgcolor: '#fff', boxShadow: '0 0 20px 4px #4facfe' 
+      <Box sx={{
+        position: 'absolute', bottom: '15%', right: '40%', width: '8px', height: '8px', transform: "rotate(45deg)", bgcolor: '#fff', boxShadow: '0 0 20px 4px #4facfe'
       }} />
 
       {/* Giant Bottom Glow */}
@@ -42,23 +42,23 @@ const RealEstateCTA = () => {
       }} />
 
       <Container maxWidth="md" sx={{ position: "relative", zIndex: 2 }}>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "36px", md: "48px" }, mb: 3 }}>
-            Ready to build your <br/> real estate platform?
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "26px", md: "48px" }, mb: 3 }}>
+            Ready to build your <br /> real estate platform?
           </Typography>
-          
+
           <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "18px", mb: 6, maxWidth: "600px", mx: "auto", lineHeight: 1.6 }}>
             Schedule a free 45-minute consultation call. We’ll help you find the right Real Estate CRM Development solution for your business — no generic presentations, just a focused discussion about your real business needs and challenges.
           </Typography>
 
           <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" }, alignItems: "center", justifyContent: "center", gap: 3 }}>
-            
+
             <Button
               variant="contained"
               sx={{
@@ -81,8 +81,8 @@ const RealEstateCTA = () => {
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               Book a Free Call
-            </Button>            
-            
+            </Button>
+
             <Button
               variant="outlined"
               sx={{

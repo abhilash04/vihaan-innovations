@@ -40,7 +40,7 @@ const LMSBanner = () => {
           {/* Left Text */}
           <Grid item xs={12} md={6}>
             <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-              <Typography variant="h1" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "34px", md: "50px" }, lineHeight: 1.15, mb: 3 }}>
+              <Typography variant="h1" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "50px" }, lineHeight: 1.15, mb: 3 }}>
                 Build a Learning Platform Your Students Love to Use
               </Typography>
               <Typography sx={{ color: "#475569", fontSize: "16px", lineHeight: 1.7, mb: 5, maxWidth: "500px" }}>

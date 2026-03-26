@@ -10,7 +10,7 @@ const HotelCTA = () => (
 
     <Container maxWidth="md" sx={{ position: "relative", zIndex: 2, textAlign: "center" }}>
       <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-        <Typography variant="h2" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "30px", md: "46px" }, mb: 3, lineHeight: 1.2 }}>
+        <Typography variant="h2" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "26px", md: "46px" }, mb: 3, lineHeight: 1.2 }}>
           Ready to Grow Your Direct Bookings?
         </Typography>
         <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "18px", mb: 6 }}>

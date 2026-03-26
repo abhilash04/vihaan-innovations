@@ -31,7 +31,7 @@ const HMSHero = () => {
               </motion.div>
 
               {/* Headline */}
-              <Typography variant="h1" sx={{ fontWeight: 900, color: "#1A1A1A", fontSize: { xs: "36px", md: "52px" }, lineHeight: 1.15, mb: 2, fontFamily: "Plus Jakarta Sans, sans-serif" }}>
+              <Typography variant="h1" sx={{ fontWeight: 900, color: "#1A1A1A", fontSize: { xs: "26px", md: "52px" }, lineHeight: 1.15, mb: 2, fontFamily: "Plus Jakarta Sans, sans-serif" }}>
                 <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.25 }}>Run a Smarter Hospital with</motion.span><br />
                 <Box component="span" sx={{ color: "#0A2D6E", position: "relative", display: "inline-block", fontSize: { xs: "24px", md: "38px" }, lineHeight: 1.15, }}>
                   <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.55 }}>Advanced HMS Software</motion.span>

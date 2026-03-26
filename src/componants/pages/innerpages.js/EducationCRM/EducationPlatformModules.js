@@ -91,7 +91,7 @@ const EducationPlatformModules = () => {
 
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "32px", md: "42px" }, mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "42px" }, mb: 2 }}>
             Flexible Education CRM Solutions
           </Typography>
           <Typography variant="h5" sx={{ color: "#00B4D8", fontWeight: 700, mb: 2 }}>

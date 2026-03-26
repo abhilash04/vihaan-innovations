@@ -137,7 +137,7 @@ const FoodReviews = () => {
             <Typography sx={{ color: "#ff6f1e", fontWeight: 600, letterSpacing: 1.5, mb: 2, textTransform: 'uppercase' }}>
               Testimonials
             </Typography>
-            <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "38px" }, fontWeight: 800, mb: 3, color: "#1a1a1a" }}>
+            <Typography variant="h2" sx={{ fontSize: { xs: "28px", md: "38px" }, fontWeight: 800, mb: 3, color: "#1a1a1a" }}>
               What Our Clients Say About Vihaan Innovations
             </Typography>
             <Typography sx={{ fontSize: "17px", color: "#666", lineHeight: 1.4 }}>

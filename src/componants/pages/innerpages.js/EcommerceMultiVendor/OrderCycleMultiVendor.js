@@ -281,7 +281,7 @@ const OrderCycleMultiVendor = () => {
                     From shopping carts to content customers
                 </Typography>
                 <Typography variant="h2" sx={{
-                    fontSize: { xs: "32px", md: "42px" },
+                    fontSize: { xs: "28px", md: "42px" },
                     fontWeight: 900,
                     color: "#1d1d1f",
                     lineHeight: 1.2,

@@ -13,7 +13,7 @@ const LMSCTA = () => (
 
     <Container maxWidth="md" sx={{ position: "relative", zIndex: 2, textAlign: "center" }}>
       <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-        <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "30px", md: "48px" }, mb: 3, lineHeight: 1.2 }}>
+        <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "26px", md: "48px" }, mb: 3, lineHeight: 1.2 }}>
           Let’s build a powerful learning platform with expert LMS Website Development tailored to your needs.
         </Typography>
         <Typography sx={{ color: "rgba(255,255,255,0.75)", fontSize: "20px", fontWeight: 600, mb: 8 }}>

@@ -25,7 +25,7 @@ const HRMBanner = () => (
             <Box sx={{ display: "inline-flex", px: 2, py: 0.6, bgcolor: "rgba(249,115,22,0.12)", border: "1px solid rgba(249,115,22,0.3)", borderRadius: "20px", mb: 3 }}>
               <Typography sx={{ color: "#f97316", fontSize: "12px", fontWeight: 700, letterSpacing: "1px" }}>HRM SOFTWARE SOLUTIONS</Typography>
             </Box>
-            <Typography variant="h1" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "34px", md: "52px" }, lineHeight: 1.1, mb: 3, }}>
+            <Typography variant="h1" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "28px", md: "52px" }, lineHeight: 1.1, mb: 3, }}>
               “BUILDING THE FUTURE  <br />
               <Box component="span" sx={{ color: "#f97316", WebkitTextFillColor: "transparent", background: "linear-gradient(90deg, #f97316, #ec4899)", WebkitBackgroundClip: "text" }}>with HRM Software.”</Box>
             </Typography>

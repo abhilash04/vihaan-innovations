@@ -58,7 +58,7 @@ const EducationProblem = () => {
           <Typography sx={{ color: "#00B4D8", fontWeight: 700, mb: 1, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px" }}>
             Challenges Faced Without Education CRM Software
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "32px", md: "42px" }, mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "28px", md: "42px" }, mb: 2 }}>
             Admissions challenges slow your growth
           </Typography>
         </Box>
@@ -82,7 +82,7 @@ const EducationProblem = () => {
 
           {/* Central Figure Mockup */}
           <Box sx={{
-            display: "flex", justifyContent: "center", mb: { xs: 6, md: 0 },
+            display: "flex", justifyContent: "center", mb: { xs: 4, md: 0 },
             position: { md: "absolute" }, top: { md: "30%" }, left: { md: "50%" },
             transform: { md: "translateX(-50%)" }, zIndex: 1
           }}>

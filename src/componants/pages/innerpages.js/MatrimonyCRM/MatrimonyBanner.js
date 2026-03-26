@@ -95,7 +95,7 @@ const MatrimonyBanner = () => {
               <Typography sx={{ color: "#00B4D8", fontWeight: 700, letterSpacing: 1.5, mb: 1.5, fontSize: "12px", textTransform: "uppercase" }}>
                 TRUSTED MATCHMAKING TECHNOLOGY
               </Typography>
-              <Typography variant="h1" sx={{ color: "#ffffff", fontWeight: 800, fontSize: { xs: "32px", md: "48px" }, lineHeight: 1.1, mb: 3 }}>
+              <Typography variant="h1" sx={{ color: "#ffffff", fontWeight: 800, fontSize: { xs: "28px", md: "48px" }, lineHeight: 1.1, mb: 3 }}>
                 Trusted <Box component="span" sx={{ color: "#00B4D8" }}>Matrimony App</Box> Development Company for Modern Matchmaking Platforms
               </Typography>
 

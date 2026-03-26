@@ -83,7 +83,7 @@ const ListingProblem = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "32px", md: "46px" }, mb: 2 }}>
+              <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "28px", md: "46px" }, mb: 2 }}>
                 The Hidden Problems Behind Most Top Listing Sites
               </Typography>
 
@@ -126,7 +126,7 @@ const ListingProblem = () => {
                   color: "#ffffff",
                   fontWeight: 700,
                   fontSize: "15px",
-                  px: { xs: 4, md: 5 },
+                  px: { xs: 2, md: 5 },
                   py: 1.5,
                   borderRadius: "8px",
                   textTransform: "none",

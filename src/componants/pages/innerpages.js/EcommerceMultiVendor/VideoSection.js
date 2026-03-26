@@ -102,7 +102,7 @@ const VideoSection = () => {
           sx={{
             position: "relative",
             zIndex: 2,
-            py: { xs: 8, md: 0 },
+            py: { xs: 6, md: 0 },
             px: { xs: 2, md: 5, lg: 8 },
             mx: { xs: "auto", md: 0 }, // Shift left on desktop
           }}

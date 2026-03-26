@@ -45,7 +45,7 @@ const FAQSection = () => {
     <Box
       sx={{
         py: 8,
-        px: { xs: 4, md: 8 },
+        px: { xs: 2, md: 8 },
         background: "#f9f9f9", // Off-white contrast
         position: "relative",
       }}

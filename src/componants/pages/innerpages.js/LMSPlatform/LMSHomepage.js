@@ -39,9 +39,9 @@ const LMSHomepage = () => {
         <LMSMonetisation />
         <LMSIntegrations />
         <LMSWhyUs />
-        <LMSCTA />
-        <LMSFAQ />
         <LMSTestimonial />
+        <LMSFAQ />
+        <LMSCTA />
       </Box>
       <FooterAndPopup />
     </Box>

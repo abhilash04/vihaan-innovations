@@ -36,9 +36,9 @@ const MatrimonyHomepage = () => {
         <MatrimonyIntegrations />
         <MatrimonyWhyUs />
         <MatrimonyFAQ />
-        <MatrimonyCTA />
-        <MatrimonyTestimonal />
 
+        <MatrimonyTestimonal />
+        <MatrimonyCTA />
 
       </Box>
       <FooterAndPopup />

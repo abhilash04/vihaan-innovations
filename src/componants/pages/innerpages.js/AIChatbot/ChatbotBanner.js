@@ -15,7 +15,7 @@ const ChatbotBanner = () => (
   <Box sx={{
     background: "linear-gradient(135deg, #060d1a 0%, #0a1628 50%, #071225 100%)",
     position: "relative", overflow: "hidden",
-    py: { xs: 8, md: 10 },
+    py: { xs: 6, md: 10 },
   }}>
     {/* Glowing orbs */}
     <Box sx={{ ...glowStyle, top: -80, left: -80, width: 400, height: 400, bgcolor: "rgba(6,182,212,0.12)" }} />
@@ -34,7 +34,7 @@ const ChatbotBanner = () => (
               <SmartToyIcon sx={{ color: "#06b6d4", fontSize: 18 }} />
               <Typography sx={{ color: "#06b6d4", fontSize: "13px", fontWeight: 700 }}>AI-Powered Chatbots for Indian Businesses</Typography>
             </Box>
-            <Typography variant="h1" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "36px", md: "56px" }, lineHeight: 1.1, mb: 3 }}>
+            <Typography variant="h1" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "26px", md: "56px" }, lineHeight: 1.1, mb: 3 }}>
               Your Business.<br />
               Always Active.<br />
               <Box component="span" sx={{ color: "#06b6d4", WebkitTextFillColor: "transparent", background: "linear-gradient(90deg, #06b6d4, #8b5cf6)", WebkitBackgroundClip: "text" }}>

@@ -35,7 +35,7 @@ const HotelBanner = () => (
         {/* Left */}
         <Grid item xs={12} md={6.5}>
           <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-            <Typography variant="h1" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "36px", md: "54px" }, lineHeight: 1.1, mb: 3 }}>
+            <Typography variant="h1" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "54px" }, lineHeight: 1.1, mb: 3 }}>
               Create Your Own Booking Platform<br />
               <Box component="span" sx={{ color: "#0f766e", fontSize: "40px", display: "block", mt: 1 }}>No commission. Full control.</Box>
             </Typography>

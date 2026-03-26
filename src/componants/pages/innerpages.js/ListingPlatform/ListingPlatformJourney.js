@@ -65,13 +65,13 @@ const Bubble = ({ size, color, top, left, right, bottom, delay }) => (
 
 const VerticalFlow = ({ steps, title, direction = "left" }) => {
   return (
-    <Box 
-      sx={{ 
-        display: "flex", 
-        flexDirection: "column", 
-        alignItems: "center", 
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
         width: "100%",
-        position: "relative" 
+        position: "relative"
       }}
     >
       <Typography sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: "16px", mb: 4, textAlign: "center" }}>
@@ -105,26 +105,27 @@ const VerticalFlow = ({ steps, title, direction = "left" }) => {
                 initial={{ opacity: 0, x: direction === "left" ? -40 : 40, scale: 0.95 }}
                 whileInView={{ opacity: 1, x: 0, scale: 1 }}
                 viewport={{ once: true, margin: "-10px" }}
-                transition={{ 
-                  duration: 0.5, 
+                transition={{
+                  duration: 0.5,
                   delay: index * 0.1,
                   type: "spring",
                   stiffness: 120
                 }}
-                style={{ width: "auto" }}
+                style={{ width: "100%", maxWidth: "300px" }}
               >
                 <Paper
                   elevation={0}
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    gap: 1,
-                    p: 1,
-                    px: 1.8,
-                    minWidth: "140px",
+                    gap: 2,
+                    p: 2,
+                    width: "100%",
+                    height: "80px",
+                    boxSizing: "border-box",
                     borderRadius: "20px", // pill look
                     border: `1px solid ${borderColor}`,
-                    bgcolor: "#ffffff",
+                    bgcolor: "#ebfeffff",
                     color: color,
                     boxShadow: "0 2px 8px rgba(0,0,0,0.03)",
                     transition: "all 0.3s ease",
@@ -171,12 +172,12 @@ const VerticalFlow = ({ steps, title, direction = "left" }) => {
 
 const ListingPlatformJourney = () => {
   return (
-    <Box 
-      sx={{ 
-        bgcolor: "#fafafa", 
-        py: 8, 
-        position: "relative", 
-        overflow: "hidden" 
+    <Box
+      sx={{
+        bgcolor: "#fafafa",
+        py: 8,
+        position: "relative",
+        overflow: "hidden"
       }}
     >
       {/* Background Ambience */}
@@ -189,13 +190,13 @@ const ListingPlatformJourney = () => {
           <Typography sx={{ color: "#2563eb", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: 1, mb: 1 }}>
             Platform Journey
           </Typography>
-          <Typography 
-            variant="h2" 
-            sx={{ 
-              fontWeight: 800, 
-              color: "#1a1a1a", 
-              fontSize: { xs: "26px", md: "34px" }, 
-              mb: 2 
+          <Typography
+            variant="h2"
+            sx={{
+              fontWeight: 800,
+              color: "#1a1a1a",
+              fontSize: { xs: "26px", md: "34px" },
+              mb: 2
             }}
           >
             How a Business Listing Website India Works - From Listing to Conversion
@@ -224,16 +225,16 @@ const ListingPlatformJourney = () => {
             </Grid>
 
             {/* Vertical Divider (Desktop) */}
-            <Box 
-              sx={{ 
-                display: { xs: 'none', sm: 'block' }, 
-                position: 'absolute', 
-                left: '50%', 
-                top: '15%', 
-                bottom: '10%', 
-                width: '1px', 
-                background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,0.04) 10%, rgba(0,0,0,0.04) 90%, transparent)' 
-              }} 
+            <Box
+              sx={{
+                display: { xs: 'none', sm: 'block' },
+                position: 'absolute',
+                left: '50%',
+                top: '15%',
+                bottom: '10%',
+                width: '1px',
+                background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,0.04) 10%, rgba(0,0,0,0.04) 90%, transparent)'
+              }}
             />
 
             {/* Right Column */}
@@ -256,7 +257,7 @@ const ListingPlatformJourney = () => {
               color: "#ffffff",
               fontWeight: 700,
               fontSize: "15px",
-              px: { xs: 4, md: 5 },
+              px: { xs: 2, md: 5 },
               py: 1.5,
               borderRadius: "8px",
               textTransform: "none",

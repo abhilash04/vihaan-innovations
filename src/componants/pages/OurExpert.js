@@ -10,7 +10,7 @@ const OurExpert = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "#f1f5f8",
+        background: "linear-gradient(to bottom,#f0f4f8ff 0, #e2f3ff 100%)",
         position: "relative",
         overflow: "hidden",
       }}
@@ -132,7 +132,7 @@ const OurExpert = () => {
                 fontWeight: 700,
               }}
             >
-              GOT A PROJECT? TALK TO OUR IT 
+              GOT A PROJECT? TALK TO OUR IT
               <span style={{ color: "#009f9f" }}> EXPERTS </span>
             </Typography>
 
@@ -144,7 +144,7 @@ const OurExpert = () => {
                 lineHeight: 1.8,
               }}
             >
-              Share your details and get a free consultation from Vihaan Innovations. 
+              Share your details and get a free consultation from Vihaan Innovations.
             </Typography>
 
             <Box sx={{ m: "60px 0 60px", position: "relative" }}>
