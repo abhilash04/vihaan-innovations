@@ -38,7 +38,7 @@ const StatsBand = () => {
     <Box
       sx={{
         py: 8,
-        px: { xs: 4, md: 8 },
+        px: { xs: 2, md: 8 },
         background: "linear-gradient(135deg, #f78361 0%, #fd544e 100%)",
         position: "relative",
         overflow: "hidden",
@@ -96,7 +96,7 @@ const StatsBand = () => {
               sx={{
                 color: "#1a1a1a", // dark charcoal text for high contrast
                 fontWeight: 800,
-                fontSize: { xs: "36px", md: "48px" },
+                fontSize: { xs: "26px", md: "48px" },
                 mb: 0.5,
                 lineHeight: 1,
               }}

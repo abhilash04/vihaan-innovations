@@ -54,7 +54,7 @@ const ListingBanner = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <Typography variant="h1" sx={{ color: "#1a1a1a", fontWeight: 800, fontSize: { xs: "36px", md: "52px" }, lineHeight: 1.1, mb: 2 }}>
+              <Typography variant="h1" sx={{ color: "#1a1a1a", fontWeight: 800, fontSize: { xs: "26px", md: "52px" }, lineHeight: 1.1, mb: 2 }}>
                 India’s Fast Business & Product Listings
               </Typography>
 

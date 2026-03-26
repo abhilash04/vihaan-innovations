@@ -69,7 +69,7 @@ const RealEstateWhyUs = () => {
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
 
         <Box sx={{ textAlign: "center", mb: 8 }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "32px", md: "42px" }, mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "42px" }, mb: 2 }}>
             Why Vihaan Innovations
           </Typography>
           <Typography sx={{ color: "#555", fontSize: "20px", fontWeight: 600 }}>

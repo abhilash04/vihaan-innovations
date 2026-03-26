@@ -113,7 +113,7 @@ const EducationDeliveryProcess = () => {
           <Typography sx={{ color: "#00B4D8", fontWeight: 700, mb: 1, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px" }}>
             Our Sprint Process
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "32px", md: "42px" }, lineHeight: 1.2, mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "28px", md: "42px" }, lineHeight: 1.2, mb: 2 }}>
             Our Process From Idea to Launch
           </Typography>
           <Typography variant="h5" sx={{ color: "#00B4D8", fontWeight: 700, mb: 2, fontSize: "20px" }}>

@@ -81,7 +81,7 @@ const EducationWhoThisIsFor = () => {
           <Typography sx={{ color: "#00B4D8", fontWeight: 700, mb: 1, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px" }}>
             Our Ideal Users
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "32px", md: "42px" }, mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "28px", md: "42px" }, mb: 2 }}>
             Who Benefits from Our Custom CRM Solutions
           </Typography>
           <Typography sx={{ color: "#444", fontSize: "16px", maxWidth: "800px", mx: "auto", lineHeight: 1.6 }}>

@@ -79,7 +79,7 @@ const RealEstateProblem = () => {
           <Typography sx={{ color: "#00B4D8", fontWeight: 600, mb: 2, fontSize: "16px", textTransform: "uppercase", letterSpacing: "1px" }}>
             The Problem
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", mb: 3, fontSize: { xs: "32px", md: "46px" }, lineHeight: 1.2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", mb: 3, fontSize: { xs: "28px", md: "46px" }, lineHeight: 1.2 }}>
             Real estate teams lose deals due to outdated systems.
           </Typography>
           <Typography sx={{ color: "#666", fontSize: "18px", lineHeight: 1.6 }}>

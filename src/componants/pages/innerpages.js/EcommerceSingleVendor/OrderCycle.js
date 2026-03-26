@@ -281,7 +281,7 @@ const OrderCycle = () => {
                     The Future of Growth
                 </Typography>
                 <Typography variant="h2" sx={{
-                    fontSize: { xs: "36px", md: "36px" },
+                    fontSize: { xs: "26px", md: "36px" },
                     fontWeight: 900,
 
                     color: "#fff",

@@ -141,7 +141,7 @@ const ReviewsMultiVendor = () => {
           variant="h3"
           sx={{
             fontWeight: 800,
-            fontSize: { xs: "32px", md: "42px" },
+            fontSize: { xs: "28px", md: "42px" },
             color: "#1d1d1f",
             mb: 2,
             letterSpacing: "-0.02em",

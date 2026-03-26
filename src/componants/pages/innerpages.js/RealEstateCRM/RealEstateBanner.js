@@ -139,7 +139,7 @@ const RealEstateBanner = () => {
                 Real Estate Technology
               </Typography>
 
-              <Typography variant="h1" sx={{ color: "#ffffff", fontWeight: 800, fontSize: { xs: "40px", md: "56px" }, lineHeight: 1.1, mb: 3 }}>
+              <Typography variant="h1" sx={{ color: "#ffffff", fontWeight: 800, fontSize: { xs: "28px", md: "56px" }, lineHeight: 1.1, mb: 3 }}>
                 Digital solutions that help close property deals faster
               </Typography>
 

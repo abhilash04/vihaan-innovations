@@ -232,7 +232,7 @@ const ScrollFormComponent = () => {
                     variant="h1"
                     sx={{
                       fontWeight: 800,
-                      fontSize: { xs: "32px", md: "64px" },
+                      fontSize: { xs: "28px", md: "64px" },
                       lineHeight: 1.05,
                       fontFamily: "Fira Sans",
                       color: "#0d1b3e",
@@ -245,7 +245,7 @@ const ScrollFormComponent = () => {
                     variant="h1"
                     sx={{
                       fontWeight: 800,
-                      fontSize: { xs: "32px", md: "64px" },
+                      fontSize: { xs: "28px", md: "64px" },
                       lineHeight: 1.05,
                       fontFamily: "Fira Sans",
                       color: "#0d1b3e",
@@ -259,7 +259,7 @@ const ScrollFormComponent = () => {
                       variant="h1"
                       sx={{
                         fontWeight: 800,
-                        fontSize: { xs: "32px", md: "64px" },
+                        fontSize: { xs: "28px", md: "64px" },
                         lineHeight: 1.05,
                         fontFamily: "Fira Sans",
                         color: "#006cff",

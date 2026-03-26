@@ -75,7 +75,7 @@ export default function FoodDiscovery() {
             <Button
               onClick={() => setActiveTab("foodies")}
               sx={{
-                px: { xs: 3, md: 5 },
+                px: { xs: 2, md: 5 },
                 py: 1.5,
                 borderRadius: "30px",
                 textTransform: "none",
@@ -95,7 +95,7 @@ export default function FoodDiscovery() {
             <Button
               onClick={() => setActiveTab("restaurants")}
               sx={{
-                px: { xs: 3, md: 5 },
+                px: { xs: 2, md: 5 },
                 py: 1.5,
                 borderRadius: "30px",
                 textTransform: "none",
@@ -143,7 +143,7 @@ export default function FoodDiscovery() {
 
               {/* Right Side: Content + Features */}
               <Grid item xs={12} md={7}>
-                <Typography variant="h3" sx={{ fontWeight: 800, mb: 2.5, color: "#1a1a1a", fontSize: { xs: "32px", md: "38px" } }}>
+                <Typography variant="h3" sx={{ fontWeight: 800, mb: 2.5, color: "#1a1a1a", fontSize: { xs: "28px", md: "38px" } }}>
                   {content.title}
                 </Typography>
                 <Typography sx={{ fontSize: "18px", color: "#555", mb: 4, lineHeight: 1.4 }}>

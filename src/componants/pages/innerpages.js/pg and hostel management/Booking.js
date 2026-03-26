@@ -21,7 +21,7 @@ function Booking() {
           backgroundColor: "#4054e6",
           borderRadius: 3,
           py: { xs: 5, md: 4 },
-          px: { xs: 4, md: 4 },
+          px: { xs: 2, md: 4 },
           maxWidth:1000,
           mx:"auto"
         }}

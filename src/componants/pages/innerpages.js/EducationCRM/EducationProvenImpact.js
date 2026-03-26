@@ -15,7 +15,7 @@ const StatCard = ({ value, label, delay }) => (
     style={{ height: '100%' }}
   >
     <Box sx={{ p: 3, textAlign: "center", borderRight: { md: "1px solid rgba(0,0,0,0.1)" }, height: "100%" }}>
-      <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "36px", md: "52px" }, mb: 1 }}>
+      <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "26px", md: "52px" }, mb: 1 }}>
         {value}
       </Typography>
       <Typography sx={{ color: "#0B2046", fontWeight: 600, fontSize: "14px", lineHeight: 1.4 }}>
@@ -71,7 +71,7 @@ const EducationProvenImpact = () => {
 
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "32px", md: "42px" }, mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "28px", md: "42px" }, mb: 2 }}>
             Proven Impact with Our Education CRM
           </Typography>
           <Typography variant="h5" sx={{ color: "#00B4D8", fontWeight: 700, fontSize: "20px" }}>
@@ -109,7 +109,7 @@ const EducationProvenImpact = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
-                  <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "36px", md: "52px" }, mb: 1 }}>
+                  <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "26px", md: "52px" }, mb: 1 }}>
                     90
                   </Typography>
                   <Typography sx={{ color: "#0B2046", fontWeight: 600, fontSize: "14px", lineHeight: 1.4 }}>

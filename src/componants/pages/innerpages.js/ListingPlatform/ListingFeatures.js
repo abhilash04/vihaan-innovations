@@ -108,7 +108,7 @@ const ListingFeatures = () => {
               color: "#ffffff",
               fontWeight: 700,
               fontSize: "15px",
-              px: { xs: 4, md: 5 },
+              px: { xs: 2, md: 5 },
               py: 1.5,
               borderRadius: "8px",
               textTransform: "none",

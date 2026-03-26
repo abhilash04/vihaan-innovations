@@ -35,7 +35,7 @@ const EducationCTA = () => {
         >
           <Box sx={{ textAlign: "center" }}>
 
-            <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "36px", md: "52px" }, mb: 3, lineHeight: 1.2 }}>
+            <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "26px", md: "52px" }, mb: 3, lineHeight: 1.2 }}>
               Ready to Transform Your Admissions with Education CRM?
             </Typography>
 

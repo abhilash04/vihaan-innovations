@@ -35,7 +35,7 @@ const RealEstateProcess = () => {
               <Typography sx={{ color: "#00B4D8", fontWeight: 600, mb: 2, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px" }}>
                 Our Process
               </Typography>
-              <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", mb: 3, fontSize: { xs: "36px", md: "48px" }, lineHeight: 1.1 }}>
+              <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", mb: 3, fontSize: { xs: "26px", md: "48px" }, lineHeight: 1.1 }}>
                 Clear Process for Real Estate CRM Development
               </Typography>
               <Typography sx={{ color: "#666", fontSize: "18px", lineHeight: 1.6 }}>

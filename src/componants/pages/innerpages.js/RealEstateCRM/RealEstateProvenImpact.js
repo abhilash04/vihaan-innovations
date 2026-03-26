@@ -31,7 +31,7 @@ const StatCard = ({ value, label, delay }) => (
         }
       }}
     >
-      <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "40px", md: "56px" }, mb: 2, lineHeight: 1 }}>
+      <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "56px" }, mb: 2, lineHeight: 1 }}>
         {value}
       </Typography>
       <Typography sx={{ color: "#555", fontSize: "15px", fontWeight: 600, lineHeight: 1.4 }}>
@@ -70,7 +70,7 @@ const RealEstateProvenImpact = () => {
 
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "32px", md: "46px" } }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "28px", md: "46px" } }}>
             Proven Impact
           </Typography>
         </Box>
