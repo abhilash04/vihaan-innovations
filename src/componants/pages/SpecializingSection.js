@@ -1,8 +1,13 @@
 import React from "react";
 import { Box, Typography, Card, CardContent, Grid } from "@mui/material";
-import icon1 from "../../assets/branding.svg";
-import icon2 from "../../assets/development.svg";
-import icon3 from "../../assets/app.svg";
+import icon1 from "../../assets/website-development.png";
+import icon2 from "../../assets/app-development.png";
+import icon3 from "../../assets/digital-marketing.png";
+import icon4 from "../../assets/ecommerce-solutions.png";
+import icon5 from "../../assets/branding-service.png";
+import icon6 from "../../assets/uiux-design.png";
+import icon7 from "../../assets/content-creation.png";
+import icon8 from "../../assets/devops.png";
 
 // Services data array
 const services = [
@@ -25,31 +30,31 @@ const services = [
     link: "#",
   },
   {
-    icon: icon3,
+    icon: icon4,
     title: "E-commerce Solutions",
     description: "Set up secure and scalable online stores with ease.",
     link: "#",
   },
   {
-    icon: icon2,
+    icon: icon5,
     title: "Branding Service",
     description: "Build strong brand identities with meaningful visuals.",
     link: "#",
   },
   {
-    icon: icon1,
+    icon: icon6,
     title: "UI/UX Design",
     description: "Design user-friendly interfaces that improve experience.",
     link: "#",
   },
   {
-    icon: icon2,
+    icon: icon7,
     title: "Content Creation",
     description: "Produce engaging content that attracts and informs users.",
     link: "#",
   },
   {
-    icon: icon3,
+    icon: icon8,
     title: "DevOps Services",
     description: "Improve deployment speed and ensure smooth cloud operations.",
     link: "#",
@@ -122,9 +127,9 @@ const ServicesSection = () => {
                   src={service.icon}
                   alt="icon"
                   sx={{
-                    width: 85,
-                    height: 90,
-                    marginY: 2.5,
+                    width: 100,
+                    height: 100,
+                    marginY: 2,
                   }}
                 />
 
@@ -151,8 +156,8 @@ const ServicesSection = () => {
                       fontSize: "16px",
                       color: "#6a6a8e",
                       width: 250,
-                      lineHeight: "24px",
-                      mb: 1,
+                      lineHeight: "18px",
+                      mb: 3,
                       mx: "auto",
                     }}
                   >
