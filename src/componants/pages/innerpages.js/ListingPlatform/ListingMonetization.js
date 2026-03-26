@@ -47,7 +47,7 @@ const MoneyCard = ({ title, desc, icon, color, delay }) => (
         p: 4,
         borderRadius: "16px",
         bgcolor: "#ffffff",
-        height: "100%",
+        height: "60%",
         display: "flex",
         alignItems: "flex-start",
         gap: 3,
@@ -98,13 +98,13 @@ const ListingMonetization = () => {
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
             Revenue Streams for Every Business Listing Website India
           </Typography>
-          <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "700px", margin: "0 auto" }}>
+          <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
             Maximize earnings and manage transactions effortlessly on your business listing website India with featured listings, ad placements, and subscription plans integrated with modern payment gateways.
           </Typography>
         </Box>
 
         {/* 2x2 Grid */}
-        <Grid container spacing={4} rowSpacing={12} mb={8}>
+        <Grid container spacing={4} rowSpacing={3} mb={8}>
           {strategies.map((strategy, index) => (
             <Grid item xs={12} md={6} key={index}>
               <MoneyCard {...strategy} delay={index * 0.1} />

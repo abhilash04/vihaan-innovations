@@ -122,7 +122,7 @@ const ServiceHero = ({ data }) => {
           {/* Left Column - Content */}
           <Grid item xs={12} md={6.5}>
             <Box component={motion.div} initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, ease: "easeOut" }}>
-              <Typography variant="h1" sx={{ fontWeight: 800, fontSize: { xs: "36px", md: "52px" }, fontFamily: "Urbanist, sans-serif", color: "#0a1628", lineHeight: 1.15, mb: 1 }}>
+              <Typography variant="h1" sx={{ fontWeight: 800, fontSize: { xs: "32px", md: "46px" }, fontFamily: "Urbanist, sans-serif", color: "#0a1628", lineHeight: 1.15, mb: 3 }}>
                 {title}
               </Typography>
 

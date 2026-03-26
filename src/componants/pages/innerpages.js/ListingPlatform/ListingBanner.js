@@ -55,15 +55,15 @@ const ListingBanner = () => {
               transition={{ duration: 0.8 }}
             >
               <Typography variant="h1" sx={{ color: "#1a1a1a", fontWeight: 800, fontSize: { xs: "36px", md: "52px" }, lineHeight: 1.1, mb: 2 }}>
-                Launch High-Performance Business Listing Website India & Product Listing Websites
+                India’s Fast Business & Product Listings
               </Typography>
 
-              <Typography variant="h2" sx={{ color: "#2563eb", fontWeight: 700, fontSize: { xs: "20px", md: "24px" }, mb: 2 }}>
+              <Typography variant="h2" sx={{ color: "#16409aff", fontWeight: 700, fontSize: { xs: "18px", md: "20px" }, mb: 2 }}>
                 Build scalable business listing website India solutions, product listing websites, CRMs, dashboards, and custom portals tailored for every industry.
               </Typography>
 
               <Typography sx={{ color: "#444", fontSize: "16px", lineHeight: 1.6, mb: 4, maxWidth: "550px" }}>
-                We develop powerful and user-friendly product listing websites and directory platforms for startups and enterprises. From food delivery apps to real estate portals and service marketplaces, our solutions are designed to boost engagement, conversions, and growth.
+                We create powerful, user-friendly product listing websites that boost engagement, conversions, and growth for startups and enterprises.
               </Typography>
 
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
@@ -87,12 +87,6 @@ const ListingBanner = () => {
                 >
                   Get a Free Demo
                 </Button>
-              </Box>
-
-              <Box sx={{ mt: 5, display: "flex", flexDirection: "column", gap: 1 }}>
-                <StatRow icon={CheckCircleOutlineIcon} text="100+ Projects Delivered" delay={0.2} />
-                <StatRow icon={SpeedIcon} text="Scalable & Secure Solutions" delay={0.4} />
-                <StatRow icon={ListAltIcon} text="Custom Built for Every Industry" delay={0.6} />
               </Box>
             </motion.div>
           </Grid>
@@ -130,7 +124,13 @@ const ListingBanner = () => {
           </Grid>
 
         </Grid>
+        <Box sx={{ mt: 5, display: "flex", flexDirection: "row", gap: 1, justifyContent: 'space-between' }}>
+          <StatRow icon={CheckCircleOutlineIcon} text="100+ Projects Delivered" delay={0.2} />
+          <StatRow icon={SpeedIcon} text="Scalable & Secure Solutions" delay={0.4} />
+          <StatRow icon={ListAltIcon} text="Custom Built for Every Industry" delay={0.6} />
+        </Box>
       </Container>
+
     </Box>
   );
 };

@@ -91,7 +91,7 @@ const WhyChooseUs = ({ data }) => {
                 {subtitle}
               </Typography>
             </Box>
-            <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "32px", md: "44px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2, lineHeight: 1.2 }}>
+            <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "40px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2, lineHeight: 1.2 }}>
               {title}
             </Typography>
             <Typography sx={{ color: "#475569", fontSize: "16px", lineHeight: 1.8, mb: 4 }}>

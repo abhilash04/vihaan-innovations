@@ -49,7 +49,7 @@ const CTASection = ({ data }) => {
         >
           <Box sx={{ textAlign: "center" }}>
 
-            <Typography variant="h2" sx={{ fontWeight: 800, color: "#0a1628", fontSize: { xs: "36px", md: "52px" }, mb: 3, lineHeight: 1.2, fontFamily: "Urbanist, sans-serif" }}>
+            <Typography variant="h2" sx={{ fontWeight: 800, color: "#0a1628", fontSize: { xs: "28px", md: "40px" }, mb: 3, lineHeight: 1.2, fontFamily: "Urbanist, sans-serif" }}>
               {title}
             </Typography>
 
