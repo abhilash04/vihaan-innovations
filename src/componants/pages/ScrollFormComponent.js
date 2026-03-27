@@ -13,6 +13,10 @@ import { styled, keyframes } from "@mui/system";
 import { motion, AnimatePresence } from "framer-motion";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { styled, keyframes } from "@mui/system";
+import { motion, AnimatePresence } from "framer-motion";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import SecurityIcon from "@mui/icons-material/Security";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -142,6 +146,13 @@ const ScrollFormComponent = () => {
     return () => clearInterval(interval);
   }, [pauseScroll]);
 
+  const handlePrev = () => {
+    setScrollIndex((prev) => (prev - 1 + scrollItems.length) % scrollItems.length);
+  };
+
+  const handleNext = () => {
+    setScrollIndex((prev) => (prev + 1) % scrollItems.length);
+  };
   const handlePrev = () => {
     setScrollIndex((prev) => (prev - 1 + scrollItems.length) % scrollItems.length);
   };

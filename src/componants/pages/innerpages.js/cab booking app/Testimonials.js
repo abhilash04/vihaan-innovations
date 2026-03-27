@@ -1,7 +1,9 @@
 import React from "react";
 import { Box, Container, Typography, Avatar, Card } from "@mui/material";
+import { Box, Container, Typography, Avatar, Card } from "@mui/material";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import { styled, keyframes } from "@mui/system";
 import { styled, keyframes } from "@mui/system";
 
 const reviews = [
