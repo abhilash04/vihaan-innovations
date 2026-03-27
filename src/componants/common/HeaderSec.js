@@ -271,7 +271,6 @@ const Header = () => {
         {
           label: "UI / UX Design",
           href: "/ui-ux-design",
-          href: "/ui-ux-design",
           icon: Palette,
         },
         {
