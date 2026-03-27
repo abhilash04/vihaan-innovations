@@ -9,6 +9,7 @@ import {
   Badge,
 } from "@mui/material";
 import { styled, keyframes } from "@mui/system";
+import { motion } from "framer-motion";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import SearchIcon from "@mui/icons-material/Search";
 import DesignServicesIcon from "@mui/icons-material/DesignServices";
@@ -29,11 +30,11 @@ const avatars = [
 
 // Colors based on your image
 const colors = {
-  blue: "#1351d8",
-  darkBlue: "#31336b",
-  teal: "#1b89aa",
-  pink: "#fd1774",
-  darkGray: "#30326a",
+  blue: "#0a306aff", // Deep midnight
+  darkBlue: "#0a2342ff",
+  teal: "#106f9cff", // Amber accent
+  pink: "#068f62ff", // Emerald
+  darkGray: "#2d3f5dff",
 };
 
 // Rotate icon animation on hover
@@ -149,7 +150,7 @@ export default function WorkingRoadmap() {
         mx: "auto",
         px: 6,
         py: 8,
-        backgroundColor: "#171b44",
+        backgroundColor: "#0A1628",
         color: "#fff",
         fontFamily: "'Poppins', sans-serif",
       }}
@@ -295,26 +296,34 @@ export default function WorkingRoadmap() {
                 key={item.id}
                 sx={{ display: "flex", justifyContent: "center" }}
               >
-                <NumberBadge
-                  badgeContent={item.id}
-                  overlap="circular"
-                  anchorOrigin={{ vertical: "top", horizontal: "left" }}
+                <Box
+                  component={motion.div}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
                 >
-                  <Circle bgcolor={item.bgColor}>
-                    {item.icon}
-                    <Typography
-                      sx={{
-                        mt: 1,
-                        fontWeight: 600,
-                        fontSize: "1rem",
-                        textAlign: "center",
-                        lineHeight: 1.2,
-                      }}
-                    >
-                      {item.label}
-                    </Typography>
-                  </Circle>
-                </NumberBadge>
+                  <NumberBadge
+                    badgeContent={item.id}
+                    overlap="circular"
+                    anchorOrigin={{ vertical: "top", horizontal: "left" }}
+                  >
+                    <Circle bgcolor={item.bgColor}>
+                      {item.icon}
+                      <Typography
+                        sx={{
+                          mt: 1,
+                          fontWeight: 600,
+                          fontSize: "1rem",
+                          textAlign: "center",
+                          lineHeight: 1.2,
+                        }}
+                      >
+                        {item.label}
+                      </Typography>
+                    </Circle>
+                  </NumberBadge>
+                </Box>
               </Grid>
             ))}
           </Grid>

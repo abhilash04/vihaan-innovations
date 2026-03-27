@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Box, Grid, Typography, Button, Tabs, Tab, Stack } from "@mui/material";
+import { motion } from "framer-motion";
 import img1 from "../../assets/first page.png";
 import img2 from "../../assets/first page 1.png";
 import img3 from "../../assets/first page 2.png";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+
 const ITServiceSection = () => {
   const [tabValue, setTabValue] = useState(0);
 
@@ -23,7 +25,8 @@ const ITServiceSection = () => {
       <Grid container spacing={4}>
         {/* Left Grid - Images */}
         <Grid item xs={12} md={5.5}>
-          <Grid container spacing={2}>
+          <Box component={motion.div} initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            <Grid container spacing={2}>
             {[img1, img2, img3, "content"].map((item, index) => (
               <Grid item xs={6} key={index}>
                 {item === "content" ? (
@@ -86,12 +89,14 @@ const ITServiceSection = () => {
                 )}
               </Grid>
             ))}
-          </Grid>
+            </Grid>
+          </Box>
         </Grid>
 
         {/* Right Grid - Content */}
         <Grid item xs={12} md={6.5}>
-          {/* About Us Label + Icon */}
+          <Box component={motion.div} initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
+            {/* About Us Label + Icon */}
           <Box display="flex" alignItems="center" gap={2} mt={1} mb={2}>
             <Typography
               variant="subtitle1"
@@ -277,6 +282,7 @@ const ITServiceSection = () => {
               </Box>
             </Button>
           </Stack>
+          </Box>
         </Grid>
       </Grid>
     </Box>

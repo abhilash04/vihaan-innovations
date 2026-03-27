@@ -1,21 +1,30 @@
-import { Grid } from "@mui/material";
-import React from "react";
-
-import Header from "../../../common/Header";
+import React, { useEffect } from "react";
+import { Box } from "@mui/material";
 import HeaderSec from "../../../common/HeaderSec";
-import FooterAndPopup from "../../../common/Footer";
-import JobSection from "./JobSection";
-import InnerPageBanner from "../../sections/InnerPageBanner";
+import Footer from "../../../common/Footer";
+import CareerHero from "./CareerHero";
+import LifeAtVihan from "./LifeAtVihan";
+import CurrentVacancies from "./CurrentVacancies";
+import OurBeliefs from "./OurBeliefs";
+import CareerCTA from "./CareerCTA";
+
 const CareerHomepage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <Grid>
-      {/* <Header /> */}
+    <Box sx={{ overflowX: "hidden", background: "#ffffff" }}>
       <HeaderSec />
-      <InnerPageBanner />
-      <JobSection />
-      <FooterAndPopup />
-    </Grid>
+      <CareerHero />
+      <LifeAtVihan />
+      <CurrentVacancies />
+      <OurBeliefs />
+      <CareerCTA />
+      <Footer />
+    </Box>
   );
 };
 
 export default CareerHomepage;
+

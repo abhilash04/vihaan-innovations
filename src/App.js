@@ -8,12 +8,18 @@ import HomePage from "./componants/pages/HomePage";
 import { ThemeProvider } from "./componants/common/ThemeContext";
 import Login from "./Authentication/Login";
 import Register from "./Authentication/Register";
-import PrivacyPolicy from "./componants/pages/innerpages.js/PrivacyPolicy";
-import TermsandConditions from "./componants/pages/innerpages.js/TermsandConditions";
-import RefundPolicy from "./componants/pages/innerpages.js/RefundPolicy";
+import LegalCenter from "./componants/pages/innerpages.js/LegalCenter";
 import ShippingPolicy from "./componants/pages/innerpages.js/ShippingPolicy";
 import ContactUs from "./componants/pages/ContactUs";
 import AboutUsHomePage from "./componants/aboutus/AboutUsHomePage";
+import TrainingPage from "./componants/pages/innerpages.js/training/training pages layout/TrainingPage";
+import {
+  fullStackTrainingData,
+  seoTrainingData, semTrainingData, smmTrainingData, emailMarketingTrainingData, contentMarketingTrainingData,
+  webDevReactTrainingData, javaTrainingData, pythonTrainingData, mobileAppTrainingData, softwareTestingTrainingData,
+  graphicDesigningTrainingData, twoDAnimationTrainingData, threeDAnimationTrainingData,
+  motionGraphicsTrainingData, videoEditingTrainingData, explainerVideoTrainingData,
+} from "./componants/pages/innerpages.js/training/TrainingDataTemplate";
 import CabBookingApp from "./componants/pages/innerpages.js/cab booking app/CabBookingApp";
 import EcommerceSingleVendorHomepage from "./componants/pages/innerpages.js/EcommerceSingleVendor/EcommerceSingleVendorHomepage";
 import EcommerceMultiVendorHomepage from "./componants/pages/innerpages.js/EcommerceMultiVendor/EcommerceMultiVendorHomepage";
@@ -122,15 +128,33 @@ function App() {
             <Route path="/collections/all-products" element={<AllProducts />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route
-              path="/terms-and-conditions"
-              element={<TermsandConditions />}
-            />
-            <Route path="/refund-policy" element={<RefundPolicy />} />
+            <Route path="/privacy-policy" element={<LegalCenter />} />
+            <Route path="/terms-and-conditions" element={<LegalCenter />} />
+            <Route path="/refund-policy" element={<LegalCenter />} />
+            <Route path="/cancellation-policy" element={<LegalCenter />} />
             <Route path="/shipping-policy" element={<ShippingPolicy />} />
-            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/about-us" element={<AboutUsHomePage />} />
             <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/training" element={<TrainingPage trainingData={fullStackTrainingData} />} />
+            {/* Digital Marketing Training */}
+            <Route path="/seo-training" element={<TrainingPage trainingData={seoTrainingData} />} />
+            <Route path="/sem-google-ads-training" element={<TrainingPage trainingData={semTrainingData} />} />
+            <Route path="/social-media-marketing-training" element={<TrainingPage trainingData={smmTrainingData} />} />
+            <Route path="/email-marketing-training" element={<TrainingPage trainingData={emailMarketingTrainingData} />} />
+            <Route path="/content-marketing-training" element={<TrainingPage trainingData={contentMarketingTrainingData} />} />
+            {/* Software Training */}
+            <Route path="/web-design-react-training" element={<TrainingPage trainingData={webDevReactTrainingData} />} />
+            <Route path="/java-training" element={<TrainingPage trainingData={javaTrainingData} />} />
+            <Route path="/python-training" element={<TrainingPage trainingData={pythonTrainingData} />} />
+            <Route path="/mobile-app-training" element={<TrainingPage trainingData={mobileAppTrainingData} />} />
+            <Route path="/software-testing-training" element={<TrainingPage trainingData={softwareTestingTrainingData} />} />
+            {/* Animation Training */}
+            <Route path="/graphic-designing-training" element={<TrainingPage trainingData={graphicDesigningTrainingData} />} />
+            <Route path="/2d-animation-training" element={<TrainingPage trainingData={twoDAnimationTrainingData} />} />
+            <Route path="/3d-animation-training" element={<TrainingPage trainingData={threeDAnimationTrainingData} />} />
+            <Route path="/motion-graphics-training" element={<TrainingPage trainingData={motionGraphicsTrainingData} />} />
+            <Route path="/video-editing-vfx-training" element={<TrainingPage trainingData={videoEditingTrainingData} />} />
+            <Route path="/explainer-videos-training" element={<TrainingPage trainingData={explainerVideoTrainingData} />} />
             <Route path="/cab-booking-app" element={<CabBookingApp />} />
             <Route path="/ecommerce-single-vendor" element={<EcommerceSingleVendorHomepage />} />
             <Route path="/ecommerce-multi-vendor" element={<EcommerceMultiVendorHomepage />} />
@@ -217,7 +241,7 @@ function App() {
             <Route path="/software-development" element={<ServicePage serviceData={softwareDevelopmentServiceData} />} />
             <Route path="/custom-software-development" element={<ServicePage serviceData={customSoftwareDevelopmentServiceData} />} />
             <Route path="/saas-development" element={<ServicePage serviceData={saasDevelopmentServiceData} />} />
-            <Route path="/enterprise-software-development" element={<ServicePage serviceData={enterpriseSoftwareDevelopmentServiceData} />} />
+            <Route path="/ecommerce-software-development" element={<ServicePage serviceData={enterpriseSoftwareDevelopmentServiceData} />} />
             <Route path="/web-design" element={<ServicePage serviceData={webDesignServiceData} />} />
             <Route path="/logo-design" element={<ServicePage serviceData={logoDesignServiceData} />} />
             <Route path="/graphic-design" element={<ServicePage serviceData={graphicDesignServiceData} />} />

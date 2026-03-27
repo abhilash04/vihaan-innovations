@@ -367,38 +367,482 @@ export const webDevelopmentServiceData = {
 };
 
 
-export const webDevServiceData = {};
-export const digitalMarketingServiceData = {};
-export const mobileAppDevServiceData = {};
+// ── Helper: generate standard service data quickly ──
+const S = (title, sub, overview, services, techItems, industries, ctaTitle) => ({
+  hero: {
+    title,
+    subtitle: sub,
+    badgeText: "Grow Your Business Online! 🚀",
+    buttonText: "Get Free Consultation",
+    features: [
+      { icon: BusinessCenterIcon, text: "Client-Location Development" },
+      { icon: BusinessCenterIcon, text: "Reliable Support Team" },
+      { icon: BusinessCenterIcon, text: "On-Time Project Deliveries" },
+      { icon: BusinessCenterIcon, text: "Responsive for All Devices" },
+      { icon: BusinessCenterIcon, text: "Premium Quality" },
+      { icon: BusinessCenterIcon, text: "Expert Development Team" },
+    ],
+  },
+  overview: {
+    subtitle: "FEATURES & CAPABILITIES",
+    title: `Key ${overview} Capabilities`,
+    description: `Our ${overview} services help businesses scale faster with proven strategies and modern technology.`,
+    list: [
+      { title: "Custom Solutions", icon: BusinessCenterIcon, count: "5 Services", color: "#2563eb", gradient: "linear-gradient(135deg,#2563eb,#4f46e5)", description: "Tailored to your exact business needs." },
+      { title: "Scalable Architecture", icon: BusinessCenterIcon, count: "4 Services", color: "#06b6d4", gradient: "linear-gradient(135deg,#06b6d4,#0891b2)", description: "Built to grow as you grow." },
+      { title: "Expert Team", icon: BusinessCenterIcon, count: "3 Services", color: "#8b5cf6", gradient: "linear-gradient(135deg,#8b5cf6,#7c3aed)", description: "100+ experienced professionals." },
+      { title: "24/7 Support", icon: BusinessCenterIcon, count: "4 Services", color: "#10b981", gradient: "linear-gradient(135deg,#10b981,#059669)", description: "Round-the-clock maintenance and help." },
+    ],
+  },
+  detailed: {
+    subtitle: `We Think Big and Deliver Exceptional ${overview}`,
+    title: `${overview} Services for Business Growth`,
+    description: `Our ${overview} services are designed to help businesses build, scale, and succeed in the digital landscape.`,
+    services: [
+      {
+        title: "SERVICE OFFERINGS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: services.map((s, i) => ({ title: s[0], desc: s[1], icon: <BusinessCenterIcon /> })),
+      },
+    ],
+  },
+  whyChooseUs: {
+    subtitle: "WHY VIHAAN",
+    title: `Why Leading Businesses Choose Our ${overview} Services`,
+    description: `We deliver results-driven ${overview} solutions with a focus on quality, speed and long-term value.`,
+    stats: [
+      { value: "500+", label: "Projects Delivered" },
+      { value: "150+", label: "Happy Clients" },
+      { value: "10+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Expert Team", icon: BusinessCenterIcon, desc: "100+ experienced professionals dedicated to your success.", color: "#2563eb", number: "01" },
+      { title: "On-Time Delivery", icon: BusinessCenterIcon, desc: "Agile workflows ensure deadlines are always met.", color: "#06b6d4", number: "02" },
+      { title: "Modern Approach", icon: BusinessCenterIcon, desc: "We use the latest tools and best practices.", color: "#4f46e5", number: "03" },
+      { title: "24/7 Support", icon: BusinessCenterIcon, desc: "Always available for questions and improvements.", color: "#10b981", number: "04" },
+    ],
+  },
+  process: {
+    subtitle: "HOW WE WORK",
+    title: `Our ${overview} Workflow`,
+    description: `A structured, proven process ensures every ${overview} project is delivered with quality and precision.`,
+    processSteps: [
+      { number: "01", title: "Discovery & Planning", desc: "Understand goals, audience, and requirements.", checks: ["Requirement gathering", "Competitor analysis", "Project roadmap"], position: "above" },
+      { number: "02", title: "Strategy & Design", desc: "Create a detailed plan and visual blueprint.", checks: ["Architecture design", "UI/UX wireframes", "Tech stack selection"], position: "below" },
+      { number: "03", title: "Development", desc: "Build with best coding practices and performance in mind.", checks: ["Agile sprints", "Code reviews", "Quality assurance"], position: "above" },
+      { number: "04", title: "Testing & QA", desc: "Rigorous testing to ensure everything works.", checks: ["Functional testing", "Performance testing", "Bug fixing"], position: "below" },
+      { number: "05", title: "Launch", desc: "Deploy to production with zero downtime.", checks: ["Staging environment", "CI/CD pipeline", "Live deployment"], position: "above" },
+      { number: "06", title: "Support & Growth", desc: "Ongoing maintenance and continuous improvements.", checks: ["24/7 monitoring", "Updates & patches", "Feature upgrades"], position: "below" },
+    ],
+  },
+  industry: {
+    subtitle: "INDUSTRY EXPERTISE",
+    title: `Delivering ${overview} Excellence Across Key Industries`,
+    description: `We serve diverse industries with tailored ${overview} solutions that drive real business outcomes.`,
+    industries: {
+      0: { title: industries[0][0], desc: industries[0][1], desc1: industries[0][2], checks: industries[0][3], cards: industries[0][4] },
+      1: { title: industries[1][0], desc: industries[1][1], desc1: industries[1][2], checks: industries[1][3], cards: industries[1][4] },
+      2: { title: industries[2][0], desc: industries[2][1], desc1: industries[2][2], checks: industries[2][3], cards: industries[2][4] },
+    },
+    tabs: [
+      { label: industries[0][0], icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: industries[1][0], icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: industries[2][0], icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ],
+  },
+  awards: {
+    title: "Recognized for Excellence & Quality",
+    list: [
+      { title: "Top IT Company", body: "GoodFirms", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "High Performer", body: "G2 Crowd", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "ISO 9001 Cert", body: "Quality Mgmt", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+      { title: "Best Workculture", body: "HR Awards", year: "2024", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Top Developer", body: "Clutch.co", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ],
+  },
+  techStack: {
+    subtitle: "Technologies We Master",
+    title: `Modern Tech Stack for ${overview}`,
+    description: `We use industry-leading technologies to deliver world-class ${overview} solutions.`,
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: techItems[0] },
+      { row: 2, direction: "right", speed: "28s", items: techItems[1] },
+    ],
+  },
+  testimonials: {
+    subtitle: "What Our Clients Say",
+    title: `Client Reviews on Our ${overview} Services`,
+    rating: "4.9/5",
+    reviews: "500+",
+    list: [
+      { name: "Rahul Sharma", text: `Vihaan's ${overview} services helped us launch faster and scale confidently. Absolutely top-notch team!`, initial: "R", color: "#2563eb" },
+      { name: "Priya Rao", text: "The quality of delivery was outstanding. Their team understood our vision perfectly.", initial: "P", color: "#10b981" },
+      { name: "Karthik Das", text: "Professional, responsive, and technically excellent. Highly recommend Vihaan Innovations.", initial: "K", color: "#8b5cf6" },
+      { name: "Sneha Menon", text: "Great communication throughout the project. Delivered on time and within budget.", initial: "S", color: "#f59e0b" },
+    ],
+  },
+  cta: {
+    title: ctaTitle,
+    description: `Let's build something great together. Book a free discovery call with our ${overview} experts today.`,
+    buttonText: "Get Started Today",
+    brandText: "Vihaan Innovations",
+  },
+});
+
+// Reusable industry blocks
+const ecomInd = ["E-Commerce", "Scalable, conversion-focused online stores.", "We build high-performance eCommerce platforms with seamless UX.", ["Product Catalogue", "Cart & Checkout", "Order Management", "Payment Gateway"], [{ title: "Product Listings", desc: "Intuitive browsing with filters and smart search." }, { title: "Checkout UX", desc: "Streamlined checkout to reduce cart abandonment." }, { title: "Order Tracking", desc: "Real-time updates and notifications for customers." }, { title: "Payment Integration", desc: "Secure multi-gateway payment support." }]];
+const healthInd = ["Healthcare", "Secure, compliant digital health solutions.", "We deliver HIPAA-compliant platforms for hospitals, clinics and patients.", ["Patient Portals", "Appointment Booking", "EHR Integration", "Telemedicine"], [{ title: "Patient Portal", desc: "Secure access to health records and appointments." }, { title: "Telemedicine", desc: "Video consultations and online prescriptions." }, { title: "EHR System", desc: "Integrated electronic health record management." }, { title: "Analytics", desc: "Data-driven insights for better patient care." }]];
+const realEstateInd = ["Real Estate", "Modern property platforms that generate leads.", "We build property listing, CRM and booking platforms for real estate.", ["Property Listings", "Advanced Search", "Lead Management", "Booking System"], [{ title: "Property Listings", desc: "Rich media listings with advanced filter and map search." }, { title: "Lead CRM", desc: "Track and manage buyer and seller leads efficiently." }, { title: "Virtual Tours", desc: "3D walkthroughs and video tours for remote buyers." }, { title: "Booking System", desc: "Online property visit scheduling and confirmation." }]];
+const eduInd = ["Education", "E-learning and LMS platforms for modern learners.", "We build engaging online learning portals and student management systems.", ["Course Mgmt", "Live Classes", "Student Dashboard", "Assessments"], [{ title: "Course Management", desc: "Create and manage courses, modules and content." }, { title: "Live Classes", desc: "Integrated video classes with recordings." }, { title: "Assessments", desc: "Quizzes, assignments and auto-grading." }, { title: "Certificates", desc: "Automated certificate generation and delivery." }]];
+const finInd = ["Finance & Fintech", "Secure fintech and banking solutions.", "We deliver PCI-DSS compliant payment systems and financial dashboards.", ["Payment Gateway", "Digital Wallets", "Reporting", "KYC/AML"], [{ title: "Payment System", desc: "Multi-currency and multi-gateway payment processing." }, { title: "Digital Wallet", desc: "Mobile wallets with instant transfers." }, { title: "KYC/AML", desc: "Automated verification and compliance workflows." }, { title: "Analytics", desc: "Financial dashboards with real-time insights." }]];
+const retailInd = ["Retail", "Omnichannel retail solutions.", "We connect in-store and digital commerce for seamless customer journeys.", ["POS Integration", "Inventory Mgmt", "Loyalty Programs", "Analytics"], [{ title: "POS Integration", desc: "Unified online and in-store sales management." }, { title: "Inventory", desc: "Real-time stock tracking across all channels." }, { title: "Loyalty Program", desc: "Points, rewards and referral programs." }, { title: "Analytics", desc: "Customer and sales data dashboards." }]];
+const logisticsInd = ["Logistics", "Smart supply chain and logistics solutions.", "We help logistics companies optimize routes, tracking and delivery management.", ["Fleet Tracking", "Route Optimization", "Delivery Management", "Analytics"], [{ title: "Fleet Tracking", desc: "Real-time GPS tracking for all vehicles." }, { title: "Route Optimization", desc: "AI-powered routes to cut fuel costs." }, { title: "Delivery Mgmt", desc: "End-to-end shipment and delivery tracking." }, { title: "Analytics", desc: "KPI dashboards for operations teams." }]];
+
+// ── Main Service Exports ──
+export const webDevServiceData = S(
+  "Web Design & Development Services in Bangalore",
+  "Delivering Premium Websites at Affordable Price. Custom, Responsive, and Scalable Web Solutions.",
+  "Web Development",
+  [
+    ["Custom Website Development", "Fully bespoke websites built from scratch to match your exact brand identity and business goals."],
+    ["E-Commerce Development", "Scalable online stores with seamless checkout, payment integration, and inventory management."],
+    ["CMS Development", "WordPress, Shopify, and custom CMS solutions that your team can manage without technical knowledge."],
+    ["Landing Page Design", "High-conversion landing pages designed to capture leads and drive sales campaigns."],
+  ],
+  [
+    ["React.js", "Next.js", "Vue.js", "Angular", "HTML5", "CSS3", "JavaScript", "TypeScript"],
+    ["Node.js", "PHP", "Laravel", "MySQL", "MongoDB", "PostgreSQL", "AWS", "Docker"],
+  ],
+  [ecomInd, healthInd, realEstateInd],
+  "Ready to Build Your Dream Website?"
+);
+
+export const digitalMarketingServiceData = S(
+  "Digital Marketing Services in Bangalore",
+  "Data-Driven Digital Marketing That Grows Your Business. SEO, PPC, Social Media & Content Marketing.",
+  "Digital Marketing",
+  [
+    ["Search Engine Optimization (SEO)", "Rank higher on Google with proven on-page, off-page and technical SEO strategies."],
+    ["Pay-Per-Click Advertising", "Run profitable Google and social media ad campaigns with measurable ROI."],
+    ["Social Media Marketing", "Build brand awareness and engage audiences across Instagram, Facebook and LinkedIn."],
+    ["Content Marketing", "Create compelling content that attracts, engages and converts your target audience."],
+  ],
+  [
+    ["Google Analytics", "SEMrush", "Ahrefs", "HubSpot", "Mailchimp", "Canva", "Meta Ads"],
+    ["Google Ads", "Facebook Ads", "LinkedIn Ads", "WordPress", "Shopify", "Hootsuite", "Buffer"],
+  ],
+  [ecomInd, retailInd, realEstateInd],
+  "Ready to Grow Your Business Online?"
+);
+
+export const mobileAppDevServiceData = S(
+  "Mobile App Development Services in Bangalore",
+  "Build Powerful iOS & Android Apps That Users Love. Native and Cross-Platform Solutions.",
+  "Mobile App Development",
+  [
+    ["iOS App Development", "Native Swift apps built for performance and seamless Apple ecosystem integration."],
+    ["Android App Development", "Native Kotlin apps optimized for all Android devices and screen sizes."],
+    ["React Native Development", "Cross-platform apps from a single codebase with native-like performance."],
+    ["Flutter Development", "Beautiful, fast apps for iOS and Android using Google's Flutter framework."],
+  ],
+  [
+    ["React Native", "Flutter", "Swift", "Kotlin", "Expo", "Firebase", "Redux"],
+    ["Node.js", "MongoDB", "AWS", "Google Cloud", "Stripe", "Push Notifications", "CI/CD"],
+  ],
+  [ecomInd, healthInd, eduInd],
+  "Ready to Launch Your Mobile App?"
+);
+
+export const customSoftwareDevelopmentServiceData = S(
+  "Custom Software Development Services in Bangalore",
+  "Enterprise-Grade Custom Software Built to Your Exact Specifications.",
+  "Custom Software Development",
+  [
+    ["Enterprise Application Development", "Large-scale software solutions for complex business workflows and processes."],
+    ["SaaS Product Development", "Multi-tenant cloud-based software products built to scale globally."],
+    ["Legacy System Modernization", "Upgrade outdated systems to modern, cloud-ready architectures."],
+    ["API & Integration Development", "Connect your systems with third-party tools via robust REST and GraphQL APIs."],
+  ],
+  [
+    ["React", "Angular", "Node.js", "Python", "Java", "Spring Boot", ".NET", "PHP"],
+    ["AWS", "Azure", "GCP", "Docker", "Kubernetes", "PostgreSQL", "MongoDB", "Redis"],
+  ],
+  [finInd, healthInd, logisticsInd],
+  "Ready to Build Custom Software?"
+);
+
+export const cloudComputingServiceData = S(
+  "Cloud Computing Services in Bangalore",
+  "Scale Your Business with Reliable, Secure and Cost-Effective Cloud Solutions.",
+  "Cloud Computing",
+  [
+    ["Cloud Migration", "Seamlessly move your workloads to AWS, Azure, or Google Cloud with zero downtime."],
+    ["Cloud Architecture Design", "Design scalable, resilient cloud infrastructures tailored to your needs."],
+    ["Managed Cloud Services", "24/7 monitoring, optimization, and management of your cloud environment."],
+    ["Serverless Development", "Build and deploy functions-as-a-service for cost-efficient, auto-scaling backends."],
+  ],
+  [
+    ["AWS", "Azure", "Google Cloud", "Terraform", "Kubernetes", "Docker", "Helm"],
+    ["Lambda", "EC2", "S3", "RDS", "CloudFront", "Load Balancer", "VPC", "IAM"],
+  ],
+  [finInd, healthInd, retailInd],
+  "Ready to Move to the Cloud?"
+);
+
+export const devopsServicesServiceData = S(
+  "DevOps Services in Bangalore",
+  "Accelerate Delivery with CI/CD Pipelines, Infrastructure Automation & Cloud DevOps.",
+  "DevOps",
+  [
+    ["CI/CD Pipeline Setup", "Automate build, test and deployment pipelines for faster, safer releases."],
+    ["Infrastructure as Code", "Manage infrastructure with Terraform, Ansible and CloudFormation."],
+    ["Container Orchestration", "Deploy and manage microservices with Docker and Kubernetes."],
+    ["Monitoring & Observability", "Full-stack monitoring with Prometheus, Grafana, and ELK Stack."],
+  ],
+  [
+    ["Jenkins", "GitHub Actions", "GitLab CI", "Docker", "Kubernetes", "Terraform", "Ansible"],
+    ["AWS", "Azure", "Prometheus", "Grafana", "ELK Stack", "Nginx", "Vault", "Harbor"],
+  ],
+  [finInd, logisticsInd, retailInd],
+  "Ready to Accelerate Your Delivery?"
+);
+
+export const dataAnalyticsServiceData = S(
+  "Data Analytics & Big Data Services in Bangalore",
+  "Turn Raw Data into Actionable Business Insights with Advanced Analytics.",
+  "Data Analytics",
+  [
+    ["Business Intelligence", "Custom dashboards and reports that make data accessible to every stakeholder."],
+    ["Big Data Engineering", "Build data lakes and pipelines to process and analyze massive datasets."],
+    ["Predictive Analytics", "Machine learning models that forecast trends and business outcomes."],
+    ["Data Visualization", "Interactive charts, graphs and dashboards using Power BI, Tableau and D3.js."],
+  ],
+  [
+    ["Python", "R", "SQL", "Spark", "Hadoop", "Kafka", "Airflow", "dbt"],
+    ["Power BI", "Tableau", "Looker", "BigQuery", "Snowflake", "AWS Redshift", "Databricks"],
+  ],
+  [finInd, healthInd, retailInd],
+  "Ready to Unlock Your Data's Potential?"
+);
+
+export const aiMlDevServiceData = S(
+  "AI / ML & Automation Services in Bangalore",
+  "Leverage Artificial Intelligence to Automate, Predict and Innovate.",
+  "AI / ML Development",
+  [
+    ["Machine Learning Models", "Custom ML models for classification, regression, and recommendation."],
+    ["Natural Language Processing", "Chatbots, text analytics, sentiment analysis and document extraction."],
+    ["Computer Vision", "Image recognition, object detection, and video analytics solutions."],
+    ["AI Automation", "RPA and intelligent process automation to eliminate manual workflows."],
+  ],
+  [
+    ["Python", "TensorFlow", "PyTorch", "scikit-learn", "OpenCV", "Hugging Face", "LangChain"],
+    ["OpenAI", "AWS SageMaker", "Azure ML", "MLflow", "FastAPI", "Kafka", "Spark MLlib"],
+  ],
+  [healthInd, finInd, retailInd],
+  "Ready to Build AI-Powered Solutions?"
+);
+
+export const softwareMaintenanceServiceData = S(
+  "Software Maintenance & Support Services in Bangalore",
+  "Keep Your Software Secure, Up-to-Date and Running at Peak Performance.",
+  "Software Maintenance",
+  [
+    ["Bug Fixing & Patches", "Rapid identification and resolution of bugs, errors, and performance issues."],
+    ["Feature Enhancements", "Add new features and improve existing functionality to meet evolving needs."],
+    ["Security Updates", "Regular security patches and vulnerability assessments to protect your systems."],
+    ["Performance Optimization", "Code refactoring, database tuning, and infrastructure upgrades for speed."],
+  ],
+  [
+    ["React", "Angular", "Node.js", "Python", "Java", ".NET", "PHP", "Laravel"],
+    ["AWS", "Docker", "MySQL", "MongoDB", "Redis", "Nginx", "CI/CD", "Sentry"],
+  ],
+  [ecomInd, healthInd, finInd],
+  "Ready to Keep Your Software Running Perfectly?"
+);
+
+export const seoServicesServiceData = S(
+  "SEO Services in Bangalore — Rank #1 on Google",
+  "Drive Organic Traffic and Rank Higher with Proven SEO Strategies.",
+  "SEO",
+  [
+    ["On-Page SEO", "Optimize meta tags, headings, content, and internal linking for better rankings."],
+    ["Technical SEO", "Fix crawl errors, improve site speed, Core Web Vitals, and mobile optimization."],
+    ["Off-Page SEO & Link Building", "Build high-authority backlinks to improve domain authority and rankings."],
+    ["Local SEO", "Dominate local search results with Google My Business optimization and local citations."],
+  ],
+  [
+    ["Google Search Console", "Ahrefs", "SEMrush", "Moz", "Screaming Frog", "Yoast SEO"],
+    ["Google Analytics", "GTM", "PageSpeed Insights", "Ubersuggest", "BrightLocal", "Majestic"],
+  ],
+  [ecomInd, retailInd, realEstateInd],
+  "Ready to Rank #1 on Google?"
+);
+
+export const socialMediaMarketingServiceData = S(
+  "Social Media Marketing Services in Bangalore",
+  "Build Your Brand, Grow Your Audience and Drive Sales on Social Media.",
+  "Social Media Marketing",
+  [
+    ["Social Media Strategy", "Data-driven social media plans tailored to your brand goals and audience."],
+    ["Content Creation & Management", "Eye-catching posts, reels, stories and campaigns managed consistently."],
+    ["Paid Social Advertising", "Targeted Facebook, Instagram and LinkedIn ad campaigns with measurable ROI."],
+    ["Influencer Marketing", "Connect with the right influencers to amplify your brand reach and credibility."],
+  ],
+  [
+    ["Meta Business Suite", "Canva", "Hootsuite", "Buffer", "Later", "Sprout Social"],
+    ["Facebook Ads", "Instagram Ads", "LinkedIn Ads", "TikTok Ads", "Google Analytics", "Mailchimp"],
+  ],
+  [ecomInd, retailInd, eduInd],
+  "Ready to Dominate Social Media?"
+);
+
+export const ppcAdvertisingServiceData = S(
+  "PPC Advertising & Google Ads Services in Bangalore",
+  "Run Profitable Pay-Per-Click Campaigns That Deliver Measurable ROI.",
+  "PPC Advertising",
+  [
+    ["Google Search Ads", "Capture high-intent buyers actively searching for your products and services."],
+    ["Display & Remarketing Ads", "Stay top of mind with visually compelling ads across the Google Display Network."],
+    ["Shopping Campaigns", "Showcase your products directly in Google search results with Shopping Ads."],
+    ["YouTube Advertising", "Reach audiences on YouTube with skippable and non-skippable video ads."],
+  ],
+  [
+    ["Google Ads", "Google Analytics", "Google Tag Manager", "SEMrush", "SpyFu"],
+    ["Facebook Ads", "LinkedIn Ads", "Microsoft Ads", "Canva", "Unbounce", "Hotjar"],
+  ],
+  [ecomInd, retailInd, realEstateInd],
+  "Ready to Run Profitable Ad Campaigns?"
+);
+
+export const videoMarketingServiceData = S(
+  "Video Marketing Services in Bangalore",
+  "Tell Your Brand Story Through Compelling Videos That Convert.",
+  "Video Marketing",
+  [
+    ["Brand Video Production", "Professional brand videos that communicate your value proposition powerfully."],
+    ["Explainer Videos", "Animated and live-action explainers that simplify complex products and services."],
+    ["YouTube Marketing", "Channel optimization, video SEO and YouTube ad campaigns for maximum reach."],
+    ["Social Media Video Content", "Short-form videos, reels and stories optimized for each social platform."],
+  ],
+  [
+    ["Adobe Premiere Pro", "After Effects", "DaVinci Resolve", "Final Cut Pro", "Canva"],
+    ["YouTube Studio", "Loom", "Wistia", "Vimeo", "OBS Studio", "Powtoon", "Animaker"],
+  ],
+  [ecomInd, eduInd, retailInd],
+  "Ready to Tell Your Story Through Video?"
+);
+
+export const emailMarketingServiceData = S(
+  "Email Marketing Services in Bangalore",
+  "Build Relationships and Drive Revenue with High-Converting Email Campaigns.",
+  "Email Marketing",
+  [
+    ["Email Campaign Strategy", "Data-driven email plans aligned with your sales funnel and business goals."],
+    ["Template Design", "Professional, mobile-responsive email templates that match your brand identity."],
+    ["Marketing Automation", "Drip campaigns, welcome sequences and behavioral trigger emails."],
+    ["List Management & Segmentation", "Clean, segment and grow your email list for higher open and click rates."],
+  ],
+  [
+    ["Mailchimp", "Klaviyo", "HubSpot", "ActiveCampaign", "Sendinblue", "Constant Contact"],
+    ["Google Analytics", "Litmus", "Canva", "Zapier", "Salesforce", "WordPress"],
+  ],
+  [ecomInd, eduInd, finInd],
+  "Ready to Scale with Email Marketing?"
+);
+
+export const contentMarketingServiceData = S(
+  "Content Marketing Services in Bangalore",
+  "Attract, Engage and Convert Your Audience with Strategic Content.",
+  "Content Marketing",
+  [
+    ["Content Strategy", "Research-backed content plans aligned with your SEO goals and buyer journey."],
+    ["Blog & Article Writing", "SEO-optimized long-form content that ranks and drives organic traffic."],
+    ["Social Media Content", "Platform-specific content calendars for consistent brand presence."],
+    ["Infographics & Visual Content", "Engaging visual content that simplifies complex ideas and boosts shares."],
+  ],
+  [
+    ["WordPress", "HubSpot", "SEMrush", "Ahrefs", "BuzzSumo", "Grammarly", "Canva"],
+    ["Google Analytics", "Notion", "Trello", "Mailchimp", "Buffer", "Hootsuite"],
+  ],
+  [ecomInd, eduInd, retailInd],
+  "Ready to Grow with Content Marketing?"
+);
+
+export const influencerMarketingServiceData = S(
+  "Influencer Marketing Services in Bangalore",
+  "Amplify Your Brand with the Power of Authentic Influencer Partnerships.",
+  "Influencer Marketing",
+  [
+    ["Influencer Discovery & Outreach", "Find and connect with the right influencers for your brand niche."],
+    ["Campaign Management", "End-to-end influencer campaign execution from brief to post-campaign report."],
+    ["Micro-Influencer Campaigns", "High-engagement campaigns with trusted niche influencers."],
+    ["Performance Tracking", "Real-time analytics on reach, engagement, and campaign ROI."],
+  ],
+  [
+    ["Instagram", "YouTube", "TikTok", "LinkedIn", "Twitter/X", "Facebook"],
+    ["Upfluence", "AspireIQ", "Heepsy", "Canva", "Google Analytics", "Hootsuite"],
+  ],
+  [ecomInd, retailInd, eduInd],
+  "Ready to Grow with Influencer Marketing?"
+);
+
+export const graphicDesignServiceData = S(
+  "Graphic Design Services in Bangalore",
+  "Creative, Brand-Aligned Visual Designs That Make Your Business Stand Out.",
+  "Graphic Design",
+  [
+    ["Brand Identity Design", "Logos, color palettes, typography and brand guidelines for a cohesive identity."],
+    ["Marketing Collateral", "Brochures, flyers, banners and presentations that convert."],
+    ["Social Media Graphics", "Platform-optimized posts, stories and ads designed to stop the scroll."],
+    ["Print Design", "Business cards, packaging, and print-ready designs with precision."],
+  ],
+  [
+    ["Adobe Photoshop", "Adobe Illustrator", "Canva", "Figma", "CorelDraw", "InDesign"],
+    ["Adobe XD", "After Effects", "Procreate", "Sketch", "Affinity Designer"],
+  ],
+  [ecomInd, retailInd, eduInd],
+  "Ready to Elevate Your Brand Design?"
+);
+
+export const logoDesignServiceData = S(
+  "Logo Design Services in Bangalore",
+  "Memorable, Timeless Logo Designs That Define Your Brand Identity.",
+  "Logo Design",
+  [
+    ["Brand Logo Design", "Custom, concept-driven logos that communicate your brand's personality and values."],
+    ["Logo Refresh & Redesign", "Modernize outdated logos while preserving brand equity and recognition."],
+    ["Logo Variations & Brand Kit", "Full logo family with light/dark, horizontal/stacked, and icon-only versions."],
+    ["Icon & Monogram Design", "Distinctive lettermark and icon designs for app icons and avatars."],
+  ],
+  [
+    ["Adobe Illustrator", "Figma", "Canva Pro", "CorelDraw", "Affinity Designer"],
+    ["Adobe Photoshop", "Procreate", "Adobe XD", "Sketch"],
+  ],
+  [ecomInd, retailInd, eduInd],
+  "Ready to Design Your Perfect Logo?"
+);
+
+// Remaining stub exports (not linked from header, kept for completeness)
 export const ecommerceDevServiceData = {};
 export const crmDevServiceData = {};
 export const erpDevServiceData = {};
 export const blockchainDevServiceData = {};
-export const aiMlDevServiceData = {};
-export const cloudComputingServiceData = {};
 export const cyberSecurityServiceData = {};
-export const dataAnalyticsServiceData = {};
 export const iotDevServiceData = {};
 export const gameDevServiceData = {};
 export const contentWritingServiceData = {};
-export const seoServicesServiceData = {};
-export const socialMediaMarketingServiceData = {};
-export const ppcAdvertisingServiceData = {};
-export const emailMarketingServiceData = {};
-export const contentMarketingServiceData = {};
 export const affiliateMarketingServiceData = {};
-export const influencerMarketingServiceData = {};
-export const videoMarketingServiceData = {};
 export const appMaintenanceServiceData = {};
 export const webMaintenanceServiceData = {};
-export const softwareMaintenanceServiceData = {};
 export const databaseManagementServiceData = {};
 export const apiDevelopmentServiceData = {};
 export const paymentGatewayIntegrationServiceData = {};
 export const thirdPartyIntegrationServiceData = {};
 export const migrationServicesServiceData = {};
 export const testingQualityAssuranceServiceData = {};
-export const devopsServicesServiceData = {};
 export const contentManagementSystemServiceData = {};
 export const openSourceDevelopmentServiceData = {};
 export const shopifyDevelopmentServiceData = {};
@@ -423,12 +867,9 @@ export const crossPlatformDevelopmentServiceData = {};
 export const progressiveWebAppsServiceData = {};
 export const webApplicationDevelopmentServiceData = {};
 export const softwareDevelopmentServiceData = {};
-export const customSoftwareDevelopmentServiceData = {};
 export const saasDevelopmentServiceData = {};
 export const enterpriseSoftwareDevelopmentServiceData = {};
 export const webDesignServiceData = {};
-export const logoDesignServiceData = {};
-export const graphicDesignServiceData = {};
 export const brandingIdentityServiceData = {};
 export const marketingCollateralServiceData = {};
 export const packagingDesignServiceData = {};
@@ -437,3 +878,6 @@ export const presentationDesignServiceData = {};
 export const emailTemplateDesignServiceData = {};
 export const landingPageDesignServiceData = {};
 export const uiUxDesignServiceData = {};
+
+
+
