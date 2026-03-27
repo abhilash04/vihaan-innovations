@@ -5,7 +5,24 @@ import { motion } from "framer-motion";
 import bgImage from "../../../../../assets/training-hero-bg.png"; // Using the premium generated background
 
 const TrainingHero = ({ data = {} }) => {
-  const { title, subtitle, badgeText, buttonText, secondaryButtonText, urgencyText, formTitle, formSubtitle, phoneSupport, features = [], courses = [] } = data;
+  const {
+    title,
+    subtitle,
+    badgeText,
+    buttonText,
+    urgencyText,
+    secondaryButtonText,
+    formTitle,
+    formSubtitle,
+    namePlaceholder,
+    phonePlaceholder,
+    coursePlaceholder,
+    submitButtonText,
+    supportText,
+    supportPhone,
+    features = [],
+    courses = []
+  } = data;
   const [formData, setFormData] = useState({ name: "", phone: "", course: "" });
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -46,7 +63,7 @@ const TrainingHero = ({ data = {} }) => {
               transition={{ duration: 1 }}
             >
               <Chip
-                label={badgeText}
+                label={badgeText || "🚀 Advanced SEO Academy"}
                 sx={{
                   mb: 2.5,
                   bgcolor: "rgba(0,180,216,0.15)",
@@ -71,7 +88,18 @@ const TrainingHero = ({ data = {} }) => {
                   textShadow: "0 4px 12px rgba(0,0,0,0.3)"
                 }}
               >
-                {title}
+                {title || (
+                  <>
+                    Become a Certified <br />
+                    <Box component="span" sx={{
+                      background: "linear-gradient(90deg, #00d4ff 0%, #0077b6 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent"
+                    }}>
+                      SEO Specialist
+                    </Box> & Growth Lead.
+                  </>
+                )}
               </Typography>
               <Typography
                 sx={{
@@ -84,7 +112,7 @@ const TrainingHero = ({ data = {} }) => {
                   textShadow: "0 2px 40px rgba(0,0,0,0.2)"
                 }}
               >
-                {subtitle}
+                {subtitle || "Join our expert-led SEO bootcamp. Master technical search marketing, high-authority link building, and data-driven organic growth with live project experience."}
               </Typography>
 
 
@@ -108,7 +136,7 @@ const TrainingHero = ({ data = {} }) => {
                   sx={{ width: 12, height: 12, borderRadius: "50%", bgcolor: "#00d4ff", boxShadow: "0 0 10px #00d4ff" }}
                 />
                 <Typography sx={{ color: "#ffffff", fontSize: "14px", fontWeight: 700 }}>
-                  {urgencyText}
+                  {urgencyText || "Limited Slots: Next Batch Starts this Monday!"}
                 </Typography>
               </Box>
 
@@ -134,7 +162,7 @@ const TrainingHero = ({ data = {} }) => {
                     transition: "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)"
                   }}
                 >
-                  {buttonText}
+                  {buttonText || "Book Your Seat"}
                 </Button>
                 <Button
                   variant="outlined"
@@ -156,7 +184,7 @@ const TrainingHero = ({ data = {} }) => {
                     transition: "all 0.4s ease"
                   }}
                 >
-                  {secondaryButtonText}
+                  {secondaryButtonText || "Get Brochure"}
                 </Button>
               </Box>
             </motion.div>
@@ -194,17 +222,17 @@ const TrainingHero = ({ data = {} }) => {
                 }}
               >
                 <Typography sx={{ color: "#ffffff", fontWeight: 900, fontSize: "24px", mb: 1, letterSpacing: "-0.5px" }}>
-                  {formTitle}
+                  {formTitle || "Start Your Journey"}
                 </Typography>
                 <Typography sx={{ color: "rgba(255, 255, 255, 0.7)", fontSize: "15px", mb: 4, fontWeight: 500 }}>
-                  {formSubtitle}
+                  {formSubtitle || "Fill the form below and speak with our training advisor."}
                 </Typography>
 
                 <Box component="form" sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
                   <TextField
                     fullWidth
                     name="name"
-                    placeholder="Your Full Name"
+                    placeholder={namePlaceholder || "Your Full Name"}
                     variant="outlined"
                     onChange={handleChange}
                     sx={{
@@ -224,7 +252,7 @@ const TrainingHero = ({ data = {} }) => {
                   <TextField
                     fullWidth
                     name="phone"
-                    placeholder="Phone Number"
+                    placeholder={phonePlaceholder || "Phone Number"}
                     onChange={handleChange}
                     sx={{
                       "& .MuiOutlinedInput-root": {
@@ -251,7 +279,7 @@ const TrainingHero = ({ data = {} }) => {
                     SelectProps={{
                       renderValue: (selected) => {
                         if (!selected) {
-                          return <span style={{ color: "#ffffff", opacity: 0.9 }}>Select Desired Course</span>;
+                          return <span style={{ color: "#ffffff", opacity: 0.9 }}>{coursePlaceholder || "Select Desired Course"}</span>;
                         }
                         return <span style={{ color: "#ffffff" }}>{selected}</span>;
                       },
@@ -289,7 +317,7 @@ const TrainingHero = ({ data = {} }) => {
 
                   >
                     <MenuItem value="" disabled>
-                      Select Desired Course
+                      {coursePlaceholder || "Select Desired Course"}
                     </MenuItem>
 
                     {courses.map((c) => (
@@ -320,12 +348,12 @@ const TrainingHero = ({ data = {} }) => {
                       transition: "all 0.3s ease"
                     }}
                   >
-                    Apply for Early Seat
+                    {submitButtonText || "Apply for Early Seat"}
                   </Button>
                 </Box>
                 <Box sx={{ mt: 4, pt: 3, borderTop: "1px solid rgba(255,255,255,0.1)", textAlign: "center" }}>
                   <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "13px", fontWeight: 600 }}>
-                    Support: <Box component="span" sx={{ color: "#ffffff" }}>{phoneSupport}</Box>
+                    {supportText || "Support: "} <Box component="span" sx={{ color: "#ffffff" }}>{supportPhone || "+91 98765 43210"}</Box>
                   </Typography>
                 </Box>
               </Paper>

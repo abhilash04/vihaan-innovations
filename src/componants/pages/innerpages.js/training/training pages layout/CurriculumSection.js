@@ -12,7 +12,7 @@ const curriculum = [
 ];
 
 const CurriculumSection = ({ data = {} }) => {
-  const { title, subtitle, roadmap = [] } = data;
+  const { title, subtitle, badge, roadmap = [] } = data;
   return (
     <Box sx={{ py: { xs: 6, md: 8 }, background: "#ffffff" }}>
       <Container maxWidth="lg">
@@ -20,16 +20,16 @@ const CurriculumSection = ({ data = {} }) => {
           <Typography
             sx={{ color: "#00b4d8", fontWeight: 700, fontSize: "14px", letterSpacing: "2px", textTransform: "uppercase", mb: 2 }}
           >
-            Course Roadmap
+            {badge || "Course Roadmap"}
           </Typography>
           <Typography
             variant="h2"
             sx={{ fontWeight: 800, fontSize: { xs: "32px", md: "48px" }, color: "#1e293b", mb: 2 }}
           >
-            {title}
+            {title || (<>Your Roadmap to <span style={{ color: "#00b4d8" }}>Success.</span></>)}
           </Typography>
           <Typography sx={{ color: "#64748b", maxWidth: "600px", mx: "auto", fontSize: "18px" }}>
-            {subtitle}
+            {subtitle || "A structured, progressive learning path designed to make you an industry expert."}
           </Typography>
         </Box>
 
@@ -48,7 +48,7 @@ const CurriculumSection = ({ data = {} }) => {
                   elevation={0}
                   sx={{
                     p: 4,
-                    height: "100%",
+                    height: "75%",
                     borderRadius: "24px",
                     background: "#f8fafc",
                     border: "1px solid #e2e8f0",

@@ -25,11 +25,11 @@ const TrainingCTA = ({ data = {} }) => {
           <Box sx={{ textAlign: "center" }}>
 
             <Typography sx={{ color: "#ffffff", fontSize: { xs: "32px", md: "48px" }, mb: 2, lineHeight: 1.2, fontWeight: 800 }}>
-              {title}
+              {title || (<>Ready to Become an <span style={{ color: "#00b4d8" }}>Expert</span>?</>)}
             </Typography>
 
             <Typography sx={{ color: "#cbd5e1", fontSize: "18px", mb: 8, opacity: 0.9, maxWidth: "600px", mx: "auto" }}>
-              {subtitle}
+              {subtitle || "Join 1200+ professionals who have transformed their careers with Vihaan Innovations Academy. Master core skills and land high-paying roles."}
             </Typography>
 
 
@@ -54,7 +54,7 @@ const TrainingCTA = ({ data = {} }) => {
                   transition: "all 0.3s"
                 }}
               >
-                {primaryButton}
+                {primaryButton || "Enroll Now →"}
               </Button>
               <Button
                 variant="outlined"
@@ -71,12 +71,12 @@ const TrainingCTA = ({ data = {} }) => {
                   transition: "all 0.3s ease",
                 }}
               >
-                {secondaryButton}
+                {secondaryButton || "Download Syllabus"}
               </Button>
             </Stack>
 
             <Typography sx={{ mt: 6, color: "rgba(255,255,255,0.5)", fontSize: "14px", fontWeight: 600 }}>
-               {footerText}
+               {footerText || "* New batch starting this Monday. Limited slots left."}
             </Typography>
 
           </Box>

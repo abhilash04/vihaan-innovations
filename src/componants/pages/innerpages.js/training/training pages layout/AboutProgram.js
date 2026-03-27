@@ -1,101 +1,84 @@
 import React from "react";
-import { Box, Typography, Container, Grid, Paper } from "@mui/material";
+import { Box, Typography, Container, Grid, Chip } from "@mui/material";
 import { motion } from "framer-motion";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+
+const highlights = [
+  "Advanced Search Engine Optimization (SEO) Masterclass",
+  "Live Projects with Real Website Rankings",
+  "Master Tools: Ahrefs, SEMrush, Moz & Google Console",
+  "Content Strategy & Copywriting for Search",
+  "Personalized Mentorship & 100% Placement Support",
+];
 
 const AboutProgram = ({ data = {} }) => {
-  const { title, description1, description2, highlights = [], stats = [] } = data;
-
+  const { title, description1, description2, badge, highlights = [], stats = [] } = data;
   return (
-    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: "#ffffff", overflow: "hidden" }}>
+    <Box sx={{ py: { xs: 6, md: 8 }, background: "#ffffff" }}>
       <Container maxWidth="lg">
         <Grid container spacing={8} alignItems="center">
-          {/* Left Side: Content */}
-          <Grid item xs={12} lg={7}>
+          <Grid item xs={12} md={6}>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <Typography
-                variant="h2"
-                sx={{
-                  fontWeight: 900,
-                  fontSize: { xs: "28px", md: "42px" },
-                  mb: 4,
-                  color: "#0f172a",
-                  lineHeight: 1.2,
-                }}
-              >
-                {title}
+              <Chip
+                label={badge || "Specialized Training"}
+                sx={{ mb: 2, bgcolor: "rgba(0,180,216,0.1)", color: "#00b4d8", fontWeight: 700, borderRadius: "5px" }}
+              />
+              <Typography variant="h3" sx={{ fontWeight: 800, color: "#1e293b", mb: 3, lineHeight: 1.2 }}>
+                {title || "Advanced SEO & Digital Marketing — Dominate Search Results"}
               </Typography>
-
-              <Typography
-                sx={{
-                  fontSize: "18px",
-                  lineHeight: 1.8,
-                  color: "#475569",
-                  mb: 4,
-                }}
-              >
-                {description1}
+              <Typography sx={{ color: "#64748b", fontSize: "17px", lineHeight: 1.8, mb: 3 }}>
+                {description1 || "Our SEO academy is built for marketers, business owners, and graduates who want to master the art and science of organic growth. Learn how to rank websites on page #1 of Google from day one."}
               </Typography>
-
-              <Typography
-                sx={{
-                  fontSize: "18px",
-                  lineHeight: 1.8,
-                  color: "#475569",
-                  mb: 6,
-                }}
-              >
+              <Typography sx={{ color: "#64748b", fontSize: "17px", lineHeight: 1.8, mb: 3 }}>
                 {description2}
               </Typography>
-
-              <Grid container spacing={3}>
-                {highlights.map((item, index) => (
-                  <Grid item xs={12} sm={6} key={index}>
-                    <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-                      <CheckCircleIcon sx={{ color: "#00b4d8" }} />
-                      <Typography sx={{ fontWeight: 600, color: "#1e293b" }}>{item}</Typography>
-                    </Box>
-                  </Grid>
+              <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+                {highlights.map((h, i) => (
+                  <Box key={i} sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                    <CheckCircleOutlineIcon sx={{ color: "#16a34a", fontSize: "22px" }} />
+                    <Typography sx={{ fontWeight: 600, color: "#1e293b", fontSize: "15px" }}>{h}</Typography>
+                  </Box>
                 ))}
-              </Grid>
+              </Box>
             </motion.div>
           </Grid>
 
-          {/* Right Side: Quick Specs Card */}
-          <Grid item xs={12} lg={5}>
+          <Grid item xs={12} md={6}>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
             >
-              <Paper
-                elevation={0}
-                sx={{
-                  p: 5,
-                  borderRadius: "32px",
-                  bgcolor: "#f8fafc",
-                  border: "1px solid #e2e8f0",
-                  position: "relative",
-                }}
-              >
-                <Typography variant="h5" sx={{ fontWeight: 800, mb: 4, color: "#0f172a" }}>
-                  Program Highlights
-                </Typography>
-                <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
-                  {stats.map((stat, index) => (
-                    <Box key={index} sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", pb: 2, borderBottom: "1px solid #e2e8f0" }}>
-                      <Typography sx={{ color: "#64748b", fontWeight: 500 }}>{stat.label}</Typography>
-                      <Typography sx={{ fontWeight: 700, color: "#0f172a" }}>{stat.value}</Typography>
+              <Grid container spacing={3}>
+                {stats.map((item, i) => (
+                  <Grid item xs={6} key={i}>
+                    <Box
+                      sx={{
+                        p: 4,
+                        background: "#e7f2ffff",
+                        borderRadius: "20px",
+                        border: "1px solid #e2e8f0",
+                        transition: "all 0.3s ease",
+                        "&:hover": {
+                          borderColor: "#00b4d8",
+                          background: "#ffffff",
+                          boxShadow: "0 10px 30px rgba(0,180,216,0.08)",
+                          transform: "translateY(-5px)",
+                        },
+                      }}
+                    >
+                      <Typography sx={{ fontSize: "12px", color: "#64748b", fontWeight: 700, mb: 1, textTransform: "uppercase" }}>{item.label}</Typography>
+                      <Typography sx={{ fontSize: "18px", fontWeight: 800, color: "#1e293b" }}>{item.value}</Typography>
                     </Box>
-                  ))}
-                </Box>
-              </Paper>
+                  </Grid>
+                ))}
+              </Grid>
             </motion.div>
           </Grid>
         </Grid>
