@@ -1,188 +1,248 @@
-import React, { useState } from "react";
-import {
-  Box,
-  Typography,
-  Container,
-  Grid,
-  Paper,
-  Tabs,
-  Tab,
-  Button,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Divider,
-} from "@mui/material";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
+import { Box, Typography, Container, Grid, Chip, Button, List, ListItem, ListItemIcon, ListItemText, Paper } from "@mui/material";
+import { motion } from "framer-motion";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
-import LaptopMacIcon from "@mui/icons-material/LaptopMac";
+import StarsIcon from "@mui/icons-material/Stars";
+import TrendingUpIcon from "@mui/icons-material/TrendingUp";
+import SearchIcon from "@mui/icons-material/Search";
+import LanguageIcon from "@mui/icons-material/Language";
+
+const courseContent = {
+  title: "Master SEO & Organic Growth",
+  subtitle: "Learn advanced SEO strategies to rank websites, increase traffic, and boost conversions.",
+  duration: "3 Months",
+  mode: "Live Training",
+  projects: "10+ Real Websites",
+  curriculum: [
+    {
+      title: "Technical SEO Mastery",
+      skills: ["Site Architecture & Crawlability", "Sitemap & Robots.txt Optimization", "Core Web Vitals & Speed", "Schema Markup (JSON-LD)", "Canonical Tags & 404 Fixes"],
+      color: "#00b4d8"
+    },
+    {
+      title: "Content & On-Page SEO",
+      skills: ["Advanced Keyword Research", "Semantic Content Optimization", "E-E-A-T Principles", "Internal Linking Strategy", "Competitor Gap Analysis"],
+      color: "#16a34a"
+    },
+    {
+      title: "Off-Page & Authority",
+      skills: ["High-Quality Backlink Building", "Guest Posting & PR Outreach", "Social Signals & Local SEO", "GMB (Google Maps) Rank", "Link Audit & Recovery"],
+      color: "#8b5cf6"
+    }
+  ]
+};
 
 const CoursesSection = ({ data = {} }) => {
-  const { courses = [] } = data;
-  const [activeTab, setActiveTab] = useState(0);
-
-  if (!courses.length) return null;
-
-  const currentCourse = courses[activeTab] || courses[0];
+  const { title, subtitle, duration, projects, courses = [] } = data;
 
   return (
-    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: "#f8fafc" }}>
+    <Box sx={{ py: { xs: 6, md: 8 }, background: "#deedfcff" }}>
       <Container maxWidth="lg">
-        <Box sx={{ mb: 6, textAlign: "center" }}>
-          <Typography
-            sx={{ color: "#00b4d8", fontWeight: 700, fontSize: "14px", letterSpacing: "2px", textTransform: "uppercase", mb: 2 }}
+        {/* Header Section */}
+        <Box sx={{ textAlign: "center", mb: { xs: 4, md: 6 } }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
           >
-            Course Curriculum
-          </Typography>
-          <Typography
-            variant="h2"
-            sx={{ fontWeight: 800, fontSize: { xs: "32px", md: "48px" }, color: "#1e293b", mb: 2 }}
-          >
-            Explore <Box component="span" sx={{ color: "#00b4d8" }}>What You'll Learn</Box>
-          </Typography>
-        </Box>
-
-        <Paper elevation={0} sx={{ borderRadius: "24px", overflow: "hidden", border: "1px solid #e2e8f0" }}>
-          <Box sx={{ borderBottom: 1, borderColor: "divider", bgcolor: "#ffffff" }}>
-            <Tabs
-              value={activeTab}
-              onChange={(e, v) => setActiveTab(v)}
-              variant="scrollable"
-              scrollButtons="auto"
+            <Chip
+              icon={<SearchIcon style={{ color: "inherit", fontSize: "16px" }} />}
+              label="SKILLS YOU WILL MASTER"
               sx={{
-                "& .MuiTab-root": {
-                  py: 3,
-                  px: 4,
-                  fontSize: "16px",
-                  fontWeight: 700,
-                  color: "#64748b",
-                  textTransform: "none",
-                  "&.Mui-selected": { color: "#00b4d8" }
-                },
-                "& .MuiTabs-indicator": { height: "3px", bgcolor: "#00b4d8" }
+                mb: 2,
+                bgcolor: "rgba(0,180,216,0.1)",
+                color: "#00b4d8",
+                fontWeight: 800,
+                borderRadius: "6px",
+                textTransform: "uppercase",
+                letterSpacing: "1px",
+                px: 1
+              }}
+            />
+            <Typography
+              variant="h2"
+              sx={{
+                fontWeight: 900,
+                fontSize: { xs: "32px", md: "52px" },
+                color: "#1e293b",
+                mb: 3,
+                lineHeight: 1.1
               }}
             >
-              {courses.map((course, idx) => (
-                <Tab key={idx} label={course.label} />
-              ))}
-            </Tabs>
-          </Box>
+              {title || (<>Master the <span style={{ color: "#00b4d8" }}>Future</span> of Tech.</>)}
+            </Typography>
+            <Typography
+              sx={{
+                color: "#64748b",
+                fontSize: { xs: "16px", md: "19px" },
+                maxWidth: "750px",
+                mx: "auto",
+                lineHeight: 1.7
+              }}
+            >
+              {subtitle || "Our hands-on training focuses on current industry trends and real-world project experience."}
+            </Typography>
+          </motion.div>
+        </Box>
 
-          <Box sx={{ p: { xs: 4, md: 6 }, bgcolor: "#ffffff" }}>
-            <AnimatePresence mode="wait">
+        {/* Feature Grid / Curriculum Breakdown */}
+        <Grid container spacing={4}>
+          {courses.map((item, index) => (
+            <Grid item xs={12} md={4} key={index}>
               <motion.div
-                key={activeTab}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.3 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
               >
-                <Grid container spacing={6}>
-                  <Grid item xs={12} md={7}>
-                    <Typography variant="h4" sx={{ fontWeight: 800, color: "#1e293b", mb: 3 }}>
-                      {currentCourse.label}
-                    </Typography>
-                    
-                    <Box sx={{ display: "flex", gap: 3, mb: 5 }}>
-                      <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                        <AccessTimeIcon sx={{ color: "#00b4d8", fontSize: "20px" }} />
-                        <Typography sx={{ color: "#64748b", fontWeight: 600 }}>{currentCourse.duration}</Typography>
-                      </Box>
-                      <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                        <SignalCellularAltIcon sx={{ color: "#00b4d8", fontSize: "20px" }} />
-                        <Typography sx={{ color: "#64748b", fontWeight: 600 }}>{currentCourse.level}</Typography>
-                      </Box>
-                      <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                        <LaptopMacIcon sx={{ color: "#00b4d8", fontSize: "20px" }} />
-                        <Typography sx={{ color: "#64748b", fontWeight: 600 }}>{currentCourse.mode}</Typography>
-                      </Box>
-                    </Box>
-
-                    <Grid container spacing={4}>
-                      <Grid item xs={12} sm={6}>
-                        <Typography variant="subtitle1" sx={{ fontWeight: 800, mb: 2, color: "#0f172a" }}>Core Topics</Typography>
-                        <List dense>
-                          {(currentCourse.frontEnd || []).map((topic, i) => (
-                            <ListItem key={i} sx={{ px: 0 }}>
-                              <ListItemIcon sx={{ minWidth: "36px" }}>
-                                <CheckCircleOutlineIcon sx={{ color: "#00b4d8", fontSize: "18px" }} />
-                              </ListItemIcon>
-                              <ListItemText primary={topic} sx={{ "& .MuiTypography-root": { color: "#475569", fontWeight: 500 } }} />
-                            </ListItem>
-                          ))}
-                        </List>
-                      </Grid>
-                      <Grid item xs={12} sm={6}>
-                        <Typography variant="subtitle1" sx={{ fontWeight: 800, mb: 2, color: "#0f172a" }}>Advanced Modules</Typography>
-                        <List dense>
-                          {(currentCourse.backEnd || []).map((topic, i) => (
-                            <ListItem key={i} sx={{ px: 0 }}>
-                              <ListItemIcon sx={{ minWidth: "36px" }}>
-                                <CheckCircleOutlineIcon sx={{ color: "#00b4d8", fontSize: "18px" }} />
-                              </ListItemIcon>
-                              <ListItemText primary={topic} sx={{ "& .MuiTypography-root": { color: "#475569", fontWeight: 500 } }} />
-                            </ListItem>
-                          ))}
-                        </List>
-                      </Grid>
-                    </Grid>
-                  </Grid>
-
-                  <Grid item xs={12} md={5}>
-                    <Paper 
-                      elevation={0} 
-                      sx={{ 
-                        p: 4, 
-                        bgcolor: "#f8fafc", 
-                        borderRadius: "20px",
-                        border: "1px solid #e2e8f0"
+                <Paper
+                  elevation={0}
+                  sx={{
+                    p: 4,
+                    height: "100%",
+                    borderRadius: "24px",
+                    bgcolor: "#ffffff",
+                    border: "1px solid #e2e8f0",
+                    transition: "all 0.4s ease",
+                    display: "flex",
+                    flexDirection: "column",
+                    "&:hover": {
+                      transform: "translateY(-10px)",
+                      boxShadow: "0 20px 40px rgba(30, 41, 59, 0.08)",
+                      borderColor: "#00b4d8"
+                    }
+                  }}
+                >
+                  <Box sx={{ mb: 3, display: "flex", alignItems: "center", gap: 1.5 }}>
+                    <Box
+                      sx={{
+                        width: 12,
+                        height: 12,
+                        borderRadius: "50%",
+                        bgcolor: "#00b4d8",
+                        boxShadow: `0 0 10px #00b4d8`
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        fontWeight: 900,
+                        color: "#1e293b",
+                        fontSize: "18px",
+                        letterSpacing: "-0.5px"
                       }}
                     >
-                      <Typography variant="h6" sx={{ fontWeight: 800, mb: 3, color: "#0f172a" }}>Tools & Technologies</Typography>
-                      <Grid container spacing={1}>
-                        {(currentCourse.tools || []).map((tool, i) => (
-                          <Grid item key={i}>
-                            <Box sx={{ 
-                              px: 2, 
-                              py: 1, 
-                              bgcolor: "#ffffff", 
-                              border: "1px solid #e2e8f0",
-                              borderRadius: "8px",
-                              fontSize: "14px",
-                              fontWeight: 600,
-                              color: "#475569"
-                            }}>
-                              {tool}
-                            </Box>
-                          </Grid>
-                        ))}
-                      </Grid>
-                      <Divider sx={{ my: 4 }} />
-                      <Button
-                        fullWidth
-                        variant="contained"
-                        sx={{
-                          py: 2,
-                          borderRadius: "12px",
-                          bgcolor: "#00b4d8",
-                          fontWeight: 800,
-                          textTransform: "none",
-                          fontSize: "16px",
-                          "&:hover": { bgcolor: "#0077b6" }
-                        }}
-                      >
-                        Download Syllabus
-                      </Button>
-                    </Paper>
-                  </Grid>
-                </Grid>
+                      {item.label || item.title}
+                    </Typography>
+                  </Box>
+
+                  <List sx={{ mb: 4, flexGrow: 1 }}>
+                    {(item.frontEnd || item.skills || []).map((skill, i) => (
+                      <ListItem key={i} sx={{ px: 0, py: 0.8 }}>
+                        <ListItemIcon sx={{ minWidth: 32 }}>
+                          <CheckCircleOutlineIcon sx={{ color: "#16a34a", fontSize: "20px" }} />
+                        </ListItemIcon>
+                        <ListItemText
+                          primary={skill}
+                          primaryTypographyProps={{
+                            sx: { color: "#475569", fontWeight: 600, fontSize: "14.5px" }
+                          }}
+                        />
+                      </ListItem>
+                    ))}
+                  </List>
+
+                  <Box
+                    sx={{
+                      pt: 3,
+                      borderTop: "1px solid #f1f5f9",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between"
+                    }}
+                  >
+                    <Typography sx={{ color: "#00b4d8", fontWeight: 800, fontSize: "12px", textTransform: "uppercase" }}>
+                      Course Module
+                    </Typography>
+                    <TrendingUpIcon sx={{ color: "rgba(30, 41, 59, 0.1)" }} />
+                  </Box>
+                </Paper>
               </motion.div>
-            </AnimatePresence>
+            </Grid>
+          ))}
+        </Grid>
+
+        {/* Global Stats / Call to Action CTA Mini */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <Box
+            sx={{
+              mt: 6,
+              p: 4,
+              borderRadius: "24px",
+              background: "rgba(64, 87, 123, 0.02)",
+              border: "1px dashed rgba(30, 41, 59, 0.1)",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: 4
+            }}
+          >
+            <Box sx={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                <Box sx={{ p: 1.5, borderRadius: "50%", bgcolor: "rgba(0,180,216,0.1)", color: "#00b4d8" }}>
+                  <LanguageIcon />
+                </Box>
+                <Box>
+                  <Typography sx={{ color: "#64748b", fontSize: "12px", fontWeight: 800, textTransform: "uppercase" }}>Duration</Typography>
+                  <Typography sx={{ color: "#1e293b", fontWeight: 900, fontSize: "17px" }}>{duration || "Flexible"}</Typography>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                <Box sx={{ p: 1.5, borderRadius: "50%", bgcolor: "rgba(234, 179, 8, 0.1)", color: "#eab308" }}>
+                  <TrendingUpIcon />
+                </Box>
+                <Box>
+                  <Typography sx={{ color: "#64748b", fontSize: "12px", fontWeight: 800, textTransform: "uppercase" }}>Case Studies</Typography>
+                  <Typography sx={{ color: "#1e293b", fontWeight: 900, fontSize: "17px" }}>{projects || "Multiple"}</Typography>
+                </Box>
+              </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                <Box sx={{ p: 1.5, borderRadius: "50%", bgcolor: "rgba(22, 163, 74, 0.1)", color: "#16a34a" }}>
+                  <CheckCircleOutlineIcon />
+                </Box>
+                <Box>
+                  <Typography sx={{ color: "#64748b", fontSize: "12px", fontWeight: 800, textTransform: "uppercase" }}>Outcome</Typography>
+                  <Typography sx={{ color: "#1e293b", fontWeight: 900, fontSize: "17px" }}>Job Ready</Typography>
+                </Box>
+              </Box>
+            </Box>
+
+            <Button
+              variant="contained"
+              sx={{
+                background: "#00b4d8",
+                color: "#fff",
+                fontWeight: 800,
+                borderRadius: "14px",
+                px: 5,
+                py: 2,
+                fontSize: "16px",
+                textTransform: "none",
+                boxShadow: "0 10px 20px rgba(0,180,184,0.2)",
+                "&:hover": { background: "#0077b6", transform: "translateY(-2px)" },
+                transition: "all 0.3s ease"
+              }}
+            >
+              Start Your Journey
+            </Button>
           </Box>
-        </Paper>
+        </motion.div>
       </Container>
     </Box>
   );

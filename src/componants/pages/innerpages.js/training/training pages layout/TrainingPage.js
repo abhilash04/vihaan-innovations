@@ -19,7 +19,7 @@ const TrainingPage = ({ trainingData = {} }) => {
       <TrainingHero data={trainingData.hero} />
       <AboutProgram data={trainingData.about} />
       <CoursesSection data={trainingData.courses} />
-      <WhoCanApply data={{ ...trainingData.whoCanApply, audience: trainingData.audience }} />
+      <WhoCanApply data={trainingData.whoCanApply} />
       <CurriculumSection data={trainingData.curriculum} />
       <FeaturesSection data={trainingData.features} />
       <TrainingTools data={trainingData.tools} />

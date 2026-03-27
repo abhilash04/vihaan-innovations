@@ -22,11 +22,16 @@ export const fullStackTrainingData = {
     subtitle: "Master real-world skills with live projects, expert mentors & guaranteed placement support.",
     badgeText: "🚀 New Batch Starting Monday — Limited Seats Available!",
     buttonText: "Book Your Seat",
-    secondaryButtonText: "Get Brochure",
     urgencyText: "Limited Slots: Next Batch Starts this Monday!",
+    secondaryButtonText: "Get Brochure",
     formTitle: "Start Your Journey",
     formSubtitle: "Fill the form below and speak with our training advisor.",
-    phoneSupport: "+91 98765 43210",
+    namePlaceholder: "Your Full Name",
+    phonePlaceholder: "Phone Number",
+    coursePlaceholder: "Select Desired Course",
+    submitButtonText: "Apply for Early Seat",
+    supportText: "Support: ",
+    supportPhone: "+91 98765 43210",
     features: [
       { icon: SchoolIcon, text: "Expert Industry Instructors" },
       { icon: GroupsIcon, text: "Small Batch for Personalized Attention" },
@@ -39,6 +44,7 @@ export const fullStackTrainingData = {
   },
 
   about: {
+    badge: "Specialized Full Stack Training",
     title: "Website Design & Development Program — Built for Results",
     description1: "Vihaan Innovations' Full Stack program is designed for ambitious learners — fresh graduates, career-switchers, and working professionals — who want to build real, deployable web applications and land a high-paying tech job within months.",
     description2: "Unlike generic online courses, our program combines structured classroom instruction with live client projects, weekly evaluations, and a dedicated placement cell. You don't just learn — you build, deploy, and present your work to real recruiters.",
@@ -60,45 +66,32 @@ export const fullStackTrainingData = {
   },
 
   courses: {
+    badge: "Available Modules",
+    title: "Master the Most In-Demand Skills",
+    subtitle: "Choose the path that fits your career goals.",
     courses: [
       {
-        id: 0, label: "Full Stack Development",
-        duration: "6 Months", mode: "Online / Offline", level: "Beginner to Advanced",
-        frontEnd: ["HTML5 & CSS3", "JavaScript (ES6+)", "React.js", "Bootstrap 5", "Responsive Design", "Git & GitHub"],
-        backEnd: ["Node.js", "Express.js", "REST APIs", "JWT Authentication", "MongoDB", "MySQL", "PostgreSQL", "File Uploads", "WebSockets", "Error Handling & Logging"],
-        database: ["MySQL", "MongoDB", "PostgreSQL"],
-        tools: ["VS Code", "Postman", "Git / GitHub", "XAMPP", "NPM / Yarn", "Docker Basics"],
+        id: 0, label: "Front-End Mastery",
+        duration: "2 Months", mode: "Online / Offline", level: "Beginner to Advanced",
+        skills: ["HTML5 & CSS3 Essentials", "JavaScript (ES6+) Core", "React.js Framework", "Bootstrap 5 & Tailwind", "Responsive Web Design", "Git & Version Control"],
       },
       {
-        id: 1, label: "UI/UX Design",
-        duration: "3 Months", mode: "Online / Offline", level: "Beginner to Intermediate",
-        frontEnd: ["Figma", "Adobe XD", "Wireframing", "Prototyping", "Design Systems", "User Research"],
-        backEnd: ["Design Handoff", "Component Libraries", "Accessibility Standards", "Motion Design"],
-        database: ["Figma Community", "Material Design", "Apple HIG"],
-        tools: ["Figma", "Adobe XD", "Zeplin", "InVision", "Notion"],
+        id: 1, label: "Back-End & APIs",
+        duration: "2 Months", mode: "Online / Offline", level: "Intermediate",
+        skills: ["Node.js & Express.js", "RESTful API Design", "JWT Authentication", "MongoDB & NoSQL", "SQL & Database Design", "Middleware & Security"],
       },
       {
-        id: 2, label: "Digital Marketing",
-        duration: "3 Months", mode: "Online / Offline", level: "Beginner to Advanced",
-        frontEnd: ["SEO On-page", "SEO Off-page", "Google Analytics", "Content Strategy", "Keyword Research", "Social Media"],
-        backEnd: ["PPC Campaigns", "Email Marketing", "Affiliate Marketing", "Funnel Building", "CRO"],
-        database: ["Google Ads", "Facebook Ads", "Instagram Ads", "LinkedIn Ads"],
-        tools: ["Google Analytics", "SEMrush", "Ahrefs", "Canva", "Mailchimp"],
-      },
-      {
-        id: 3, label: "Mobile App Dev",
-        duration: "4 Months", mode: "Online / Offline", level: "Intermediate to Advanced",
-        frontEnd: ["React Native", "Flutter Basics", "Component Design", "Navigation", "State Management", "UI Libraries"],
-        backEnd: ["Firebase", "REST API Integration", "Push Notifications", "App Auth", "Local Storage"],
-        database: ["Firebase Firestore", "SQLite", "AsyncStorage"],
-        tools: ["Expo", "Android Studio", "Xcode", "VS Code", "Postman"],
+        id: 2, label: "Full Stack Deployment",
+        duration: "2 Months", mode: "Online / Offline", level: "Advanced",
+        skills: ["MERN Stack Integration", "Cloud Deployment (AWS/Vercel)", "System Architecture", "Software Testing Basics", "Performance Optimization", "Live Capstone Project"],
       },
     ],
   },
 
   curriculum: {
+    badge: "Course Roadmap",
     title: "Your Roadmap to Success.",
-    subtitle: "A structured, 6-month progressive learning path designed to make you an industry expert.",
+    subtitle: "A structured, progressive learning path designed to make you an industry expert.",
     roadmap: [
       { month: "Month 1", title: "Foundations", topics: ["HTML5 & CSS3 Mastery", "JavaScript Core Concepts", "Git Version Control", "Responsive Design Principles"] },
       { month: "Month 2", title: "Front-End Development", topics: ["React.js Fundamentals", "State & Props Management", "Component Architecture", "Bootstrap Integration"] },
@@ -110,21 +103,23 @@ export const fullStackTrainingData = {
   },
 
   features: {
+    badge: "Why Choose Us",
     title: "What Makes Us Different.",
     subtitle: "Everything we do is designed to accelerate your career, not just check a course box.",
     features: [
-      { icon: React.createElement(SchoolIcon, { fontSize: "large" }), title: "Expert Instructors", desc: "Learn from industry professionals with 10+ years of real-world experience in top companies." },
-      { icon: React.createElement(LaptopMacIcon, { fontSize: "large" }), title: "Hands-On Projects", desc: "Build 5+ real-world projects that go directly into your professional portfolio." },
-      { icon: React.createElement(WorkIcon, { fontSize: "large" }), title: "100% Placement Support", desc: "Dedicated placement cell with 200+ hiring partners across India." },
-      { icon: React.createElement(GroupsIcon, { fontSize: "large" }), title: "Small Batch Training", desc: "Small batches of 20 students for personalized attention and better interaction." },
-      { icon: React.createElement(MenuBookIcon, { fontSize: "large" }), title: "Structured Curriculum", desc: "Week-by-week curriculum designed with input from industry leaders and companies." },
-      { icon: React.createElement(DataObjectIcon, { fontSize: "large" }), title: "Lifetime LMS Access", desc: "Access all recorded sessions, notes and future updates forever at no extra cost." },
+      { icon: <SchoolIcon fontSize="large" />, title: "Expert Instructors", desc: "Learn from industry professionals with 10+ years of real-world experience in top companies." },
+      { icon: <LaptopMacIcon fontSize="large" />, title: "Hands-On Projects", desc: "Build 5+ real-world projects that go directly into your professional portfolio." },
+      { icon: <WorkIcon fontSize="large" />, title: "100% Placement Support", desc: "Dedicated placement cell with 200+ hiring partners across India." },
+      { icon: <GroupsIcon fontSize="large" />, title: "Small Batch Training", desc: "Small batches of 20 students for personalized attention and better interaction." },
+      { icon: <MenuBookIcon fontSize="large" />, title: "Structured Curriculum", desc: "Week-by-week curriculum designed with input from industry leaders and companies." },
+      { icon: <DataObjectIcon fontSize="large" />, title: "Lifetime LMS Access", desc: "Access all recorded sessions, notes and future updates forever at no extra cost." },
     ],
   },
 
   testimonials: {
+    badge: "Alumni Success",
     title: "Join 1200+ Successful Alumni.",
-    subtitle: "Hear what our alumni say about their experience at Vihaan Innovations Academy.",
+    subtitle: "Hear what our alumni say about their experience at Vihaan Innovations.",
     testimonials: [
       { name: "Priya S.", role: "Full Stack Developer @ TCS", rating: 5, text: "Vihaan's training gave me confidence to switch careers. The hands-on projects and placement support were exceptional!" },
       { name: "Rahul M.", role: "UI Engineer @ Infosys", rating: 5, text: "Best investment I made. The instructors are very approachable, the curriculum is practical and up-to-date." },
@@ -135,12 +130,14 @@ export const fullStackTrainingData = {
 
   cta: {
     title: "Ready to Become a Full Stack Developer?",
-    subtitle: "Join 1200+ professionals who have transformed their careers with Vihaan Innovations Academy. Master core skills and land high-paying roles.",
+    subtitle: "Learn from the best. Build real projects. Get hired. Join 1200+ students who transformed their careers with Vihaan Innovations.",
     primaryButton: "Enroll Now →",
-    secondaryButton: "Download Brochure",
+    secondaryButton: "Download Syllabus",
     footerText: "* New batch starting this Monday. Limited slots left.",
   },
+
   whoCanApply: {
+    badge: "Eligibility",
     title: "Who Can Apply for the Course?",
     subtitle: "Our program is open to anyone with the drive to learn. No prior coding experience required — just ambition.",
     stats: [
@@ -149,15 +146,16 @@ export const fullStackTrainingData = {
       { num: 500, label: "Projects built", suffix: "+" },
       { num: 100, label: "Placement assistance", suffix: "%" },
     ],
+    audience: [
+      { icon: <SchoolIcon sx={{ fontSize: 28 }} />, label: "Students & Freshers", text: "Final year students and fresh graduates looking to build a career in IT", accent: "#1a472a", bg: "#e8f0eb" },
+      { icon: <EngineeringIcon sx={{ fontSize: 28 }} />, label: "IT Professionals", text: "Experienced IT professionals seeking a meaningful career change", accent: "#b45309", bg: "#fef3c7" },
+      { icon: <DesktopMacIcon sx={{ fontSize: 28 }} />, label: "Aspiring Developers", text: "Self-learners and aspiring web developers ready to go professional", accent: "#1d4ed8", bg: "#dbeafe" },
+      { icon: <CodeIcon sx={{ fontSize: 28 }} />, label: "Freelancers & Consultants", text: "Passionate programmers, freelancers and independent consultants", accent: "#6d28d9", bg: "#ede9fe" },
+      { icon: <BusinessCenterIcon sx={{ fontSize: 28 }} />, label: "Business Owners", text: "Business owners and bloggers who want to build and manage their own web presence", accent: "#be185d", bg: "#fce7f3" },
+      { icon: <LanguageIcon sx={{ fontSize: 28 }} />, label: "Programming Professionals", text: "Professionals already in tech who want to expand their full-stack capabilities", accent: "#0e7490", bg: "#cffafe" },
+    ],
   },
-  audience: [
-    { icon: <SchoolIcon sx={{ fontSize: 28 }} />, label: "Students & Freshers", text: "Final year students and fresh graduates looking to build a career in IT", accent: "#1a472a", bg: "#e8f0eb" },
-    { icon: <EngineeringIcon sx={{ fontSize: 28 }} />, label: "IT Professionals", text: "Experienced IT professionals seeking a meaningful career change", accent: "#b45309", bg: "#fef3c7" },
-    { icon: <DesktopMacIcon sx={{ fontSize: 28 }} />, label: "Aspiring Developers", text: "Self-learners and aspiring web developers ready to go professional", accent: "#1d4ed8", bg: "#dbeafe" },
-    { icon: <CodeIcon sx={{ fontSize: 28 }} />, label: "Freelancers & Consultants", text: "Passionate programmers, freelancers and independent consultants", accent: "#6d28d9", bg: "#ede9fe" },
-    { icon: <BusinessCenterIcon sx={{ fontSize: 28 }} />, label: "Business Owners", text: "Business owners and bloggers who want to build and manage their own web presence", accent: "#be185d", bg: "#fce7f3" },
-    { icon: <LanguageIcon sx={{ fontSize: 28 }} />, label: "Programming Professionals", text: "Professionals already in tech who want to expand their full-stack capabilities", accent: "#0e7490", bg: "#cffafe" },
-  ],
+
   tools: [
     { name: "VS Code", color: "#007ACC" },
     { name: "Git / GitHub", color: "#F05032" },
@@ -169,29 +167,22 @@ export const fullStackTrainingData = {
 };
 
 // Helper: build a standard training data object quickly
-const makeTrainingData = ({
-  heroTitle, heroSubtitle, heroBadge, heroBtn, heroSecBtn, heroUrgency, heroFormTitle, heroFormSub,
-  aboutTitle, about1, about2,
-  duration, courseLabel,
-  frontEnd, backEnd, database, tools,
-  months,
-  curriculumTitle, curriculumSub,
-  featuresTitle, featuresSub,
-  testimonialsTitle, testimonialsSub,
-  ctaTitle, ctaSub, ctaPrimary, ctaSecondary, ctaFooter,
-  applyTitle, applySub, applyStats,
-  audience, trainingTools
-}) => ({
+const makeTrainingData = ({ heroTitle, heroSubtitle, heroBadge, aboutTitle, about1, about2, duration, courseLabel, frontEnd, backEnd, database, tools, months, ctaTitle, audience, trainingTools }) => ({
   hero: {
     title: heroTitle,
     subtitle: heroSubtitle,
     badgeText: heroBadge || "🚀 New Batch Starting Monday — Limited Seats Available!",
-    buttonText: heroBtn || "Book Your Seat",
-    secondaryButtonText: heroSecBtn || "Get Brochure",
-    urgencyText: heroUrgency || "Limited Slots: Next Batch Starts this Monday!",
-    formTitle: heroFormTitle || "Start Your Journey",
-    formSubtitle: heroFormSub || "Fill the form below and speak with our training advisor.",
-    phoneSupport: "+91 98765 43210",
+    buttonText: "Book Your Seat",
+    urgencyText: "Limited Slots: Next Batch Starts this Monday!",
+    secondaryButtonText: "Get Brochure",
+    formTitle: "Start Your Journey",
+    formSubtitle: "Fill the form below and speak with our training advisor.",
+    namePlaceholder: "Your Full Name",
+    phonePlaceholder: "Phone Number",
+    coursePlaceholder: "Select Desired Course",
+    submitButtonText: "Apply for Early Seat",
+    supportText: "Support: ",
+    supportPhone: "+91 98765 43210",
     features: [
       { icon: SchoolIcon, text: "Expert Industry Instructors" },
       { icon: GroupsIcon, text: "Small Batch for Personalized Attention" },
@@ -203,6 +194,7 @@ const makeTrainingData = ({
     courses: [courseLabel],
   },
   about: {
+    badge: `Specialized ${courseLabel} Training`,
     title: aboutTitle,
     description1: about1,
     description2: about2 || "Our program combines structured classroom instruction with live projects, weekly evaluations, and a dedicated placement cell.",
@@ -223,60 +215,70 @@ const makeTrainingData = ({
     ],
   },
   courses: {
-    courses: [{ id: 0, label: courseLabel, duration, mode: "Online / Offline", level: "Beginner to Advanced", frontEnd, backEnd, database, tools }],
+    badge: "Available Modules",
+    title: "Master the Most In-Demand Skills",
+    subtitle: "Choose the path that fits your career goals.",
+    courses: [
+      { id: 0, label: `${courseLabel} Fundamentals`, duration: duration, mode: "Online / Offline", level: "Beginner", skills: frontEnd },
+      { id: 1, label: `Advanced ${courseLabel}`, duration: duration, mode: "Online / Offline", level: "Intermediate", skills: backEnd },
+      { id: 2, label: `${courseLabel} Mastery & Projects`, duration: duration, mode: "Online / Offline", level: "Advanced", skills: database },
+    ],
   },
   curriculum: {
-    title: curriculumTitle || "Your Roadmap to Success.",
-    subtitle: curriculumSub || "A structured, progressive learning path designed to make you an industry expert.",
+    badge: "Course Roadmap",
+    title: "Your Roadmap to Success.",
+    subtitle: "A structured, progressive learning path designed to make you an industry expert.",
     roadmap: months,
   },
   features: {
-    title: featuresTitle || "What Makes Us Different.",
-    subtitle: featuresSub || "Everything we do is designed to accelerate your career, not just check a course box.",
+    badge: "Why Choose Us",
+    title: "What Makes Us Different.",
+    subtitle: "Everything we do is designed to accelerate your career, not just check a course box.",
     features: [
-      { icon: React.createElement(SchoolIcon, { fontSize: "large" }), title: "Expert Instructors", desc: "Learn from industry professionals with 10+ years of hands-on experience." },
-      { icon: React.createElement(LaptopMacIcon, { fontSize: "large" }), title: "Hands-On Projects", desc: "Build 5+ real-world projects that go directly into your professional portfolio." },
-      { icon: React.createElement(WorkIcon, { fontSize: "large" }), title: "100% Placement Support", desc: "Dedicated placement cell with 200+ hiring partners across India." },
-      { icon: React.createElement(GroupsIcon, { fontSize: "large" }), title: "Small Batch Training", desc: "Small batches of 20 students for personalized attention." },
-      { icon: React.createElement(MenuBookIcon, { fontSize: "large" }), title: "Structured Curriculum", desc: "Week-by-week curriculum designed with input from industry leaders." },
-      { icon: React.createElement(DataObjectIcon, { fontSize: "large" }), title: "Lifetime LMS Access", desc: "Access all recorded sessions, notes and future updates forever." },
+      { icon: <SchoolIcon fontSize="large" />, title: "Expert Instructors", desc: "Learn from industry professionals with 10+ years of hands-on experience." },
+      { icon: <LaptopMacIcon fontSize="large" />, title: "Hands-On Projects", desc: "Build 5+ real-world projects that go directly into your professional portfolio." },
+      { icon: <WorkIcon fontSize="large" />, title: "100% Placement Support", desc: "Dedicated placement cell with 200+ hiring partners across India." },
+      { icon: <GroupsIcon fontSize="large" />, title: "Small Batch Training", desc: "Small batches of 20 students for personalized attention." },
+      { icon: <MenuBookIcon fontSize="large" />, title: "Structured Curriculum", desc: "Week-by-week curriculum designed with input from industry leaders." },
+      { icon: <DataObjectIcon fontSize="large" />, title: "Lifetime LMS Access", desc: "Access all recorded sessions, notes and future updates forever." },
     ],
   },
   testimonials: {
-    title: testimonialsTitle || "Join 1200+ Successful Alumni.",
-    subtitle: testimonialsSub || "Hear what our alumni say about their experience at Vihaan Innovations Academy.",
+    badge: "Alumni Success",
+    title: "Join 1200+ Successful Alumni.",
+    subtitle: "Hear what our alumni say about their experience at Vihaan Innovations.",
     testimonials: [
       { name: "Priya S.", role: `${courseLabel} Graduate @ TCS`, rating: 5, text: "Vihaan's training gave me confidence to switch careers. The hands-on projects and placement support were exceptional!" },
       { name: "Rahul M.", role: `${courseLabel} Graduate @ Infosys`, rating: 5, text: "Best investment I made. The instructors are very approachable, the curriculum is practical and up-to-date." },
       { name: "Sneha A.", role: `${courseLabel} @ Startup`, rating: 5, text: "I joined as a complete beginner and landed a job within 2 months of completing the course. Highly recommend!" },
-      { name: "Kiran T.", role: `${courseLabel} @ Wipro`, rating: 4, text: "The modules were incredibly well-structured. I finally have confidence to take on real client projects." },
     ],
   },
   cta: {
     title: ctaTitle || `Ready to Master ${courseLabel}?`,
-    subtitle: ctaSub || "Join 1200+ professionals who have transformed their careers with Vihaan Innovations Academy. Master core skills and land high-paying roles.",
-    primaryButton: ctaPrimary || "Enroll Now →",
-    secondaryButton: ctaSecondary || "Download Brochure",
-    footerText: ctaFooter || "* New batch starting this Monday. Limited slots left.",
+    subtitle: "Learn from the best. Build real projects. Get hired. Join 1200+ students who transformed their careers with Vihaan Innovations.",
+    primaryButton: "Enroll Now →",
+    secondaryButton: "Download Syllabus",
+    footerText: "* New batch starting this Monday. Limited slots left.",
   },
   whoCanApply: {
-    title: applyTitle || "Who Can Apply for the Course?",
-    subtitle: applySub || "Our program is open to anyone with the drive to learn. No prior coding experience required — just ambition.",
-    stats: applyStats || [
+    badge: "Eligibility",
+    title: "Who Can Apply for the Course?",
+    subtitle: "Our program is open to anyone with the drive to learn. No prior coding experience required.",
+    stats: [
       { num: 1200, label: "Alumni placed", suffix: "+" },
       { num: 200, label: "Hiring partners", suffix: "+" },
       { num: 500, label: "Projects built", suffix: "+" },
       { num: 100, label: "Placement assistance", suffix: "%" },
     ],
+    audience: audience || [
+      { icon: <SchoolIcon sx={{ fontSize: 28 }} />, label: "Students & Freshers", text: "Final year students and fresh graduates looking to build a career in SEO", accent: "#1a472a", bg: "#e8f0eb" },
+      { icon: <EngineeringIcon sx={{ fontSize: 28 }} />, label: "Marketing Pros", text: "Traditional marketers looking to pivot to digital search marketing", accent: "#b45309", bg: "#fef3c7" },
+      { icon: <DesktopMacIcon sx={{ fontSize: 28 }} />, label: "Aspiring SEOs", text: "Self-learners ready to master technical search analytics professionaly", accent: "#1d4ed8", bg: "#dbeafe" },
+      { icon: <CodeIcon sx={{ fontSize: 28 }} />, label: "Freelancers", text: "Independent consultants who want to offer SEO as a core service", accent: "#6d28d9", bg: "#ede9fe" },
+      { icon: <BusinessCenterIcon sx={{ fontSize: 28 }} />, label: "Business Owners", text: "Entrepreneurs who want to rank their own websites on Google", accent: "#be185d", bg: "#fce7f3" },
+      { icon: <LanguageIcon sx={{ fontSize: 28 }} />, label: "Content Creators", text: "Bloggers and creators who want more organic traffic to their content", accent: "#0e7490", bg: "#cffafe" },
+    ],
   },
-  audience: audience || [
-    { icon: <SchoolIcon sx={{ fontSize: 28 }} />, label: "Students & Freshers", text: "Final year students and fresh graduates looking to build a career in IT", accent: "#1a472a", bg: "#e8f0eb" },
-    { icon: <EngineeringIcon sx={{ fontSize: 28 }} />, label: "Marketing Pros", text: "Traditional marketers looking to pivot to digital search marketing", accent: "#b45309", bg: "#fef3c7" },
-    { icon: <DesktopMacIcon sx={{ fontSize: 28 }} />, label: "Aspiring Experts", text: "Self-learners ready to master technical skills professionally", accent: "#1d4ed8", bg: "#dbeafe" },
-    { icon: <CodeIcon sx={{ fontSize: 28 }} />, label: "Freelancers", text: "Independent consultants who want to offer these skills as a core service", accent: "#6d28d9", bg: "#ede9fe" },
-    { icon: <BusinessCenterIcon sx={{ fontSize: 28 }} />, label: "Business Owners", text: "Entrepreneurs who want to master these skills for their own business", accent: "#be185d", bg: "#fce7f3" },
-    { icon: <LanguageIcon sx={{ fontSize: 28 }} />, label: "Professionals", text: "People already in tech who want to expand their capabilities", accent: "#0e7490", bg: "#cffafe" },
-  ],
   tools: trainingTools || [
     { name: "Google Search Console", color: "#4285F4" },
     { name: "Google Analytics 4", color: "#F4B400" },
@@ -298,13 +300,16 @@ export const seoTrainingData = makeTrainingData({
   duration: "2 Months", courseLabel: "SEO",
   frontEnd: ["Keyword Research", "On-Page SEO", "Meta Tags & Schema", "Content Optimization", "URL Structure", "Internal Linking"],
   backEnd: ["Technical SEO", "Backlink Building", "Domain Authority", "Google Search Console", "Site Speed", "Core Web Vitals"],
-  database: ["Google Analytics", "SEMrush", "Ahrefs", "Moz"],
+  database: ["Google Analytics", "SEMrush", "Ahrefs", "Moz", "Moz", "Moz",],
   tools: ["Google Search Console", "Ahrefs", "SEMrush", "Yoast SEO", "Screaming Frog"],
   months: [
     { month: "Week 1-2", title: "SEO Foundations", topics: ["How Search Engines Work", "Keyword Research Basics", "On-Page SEO", "Content Strategy"] },
     { month: "Week 3-4", title: "Technical SEO", topics: ["Site Architecture", "Core Web Vitals", "Schema Markup", "Mobile SEO"] },
     { month: "Week 5-6", title: "Off-Page & Link Building", topics: ["Backlink Strategy", "Guest Posting", "DA/PA Analysis", "Local SEO"] },
     { month: "Week 7-8", title: "Analytics & Reporting", topics: ["Google Analytics Setup", "Search Console Reports", "Rank Tracking", "SEO Audit"] },
+    { month: "Week 7-8", title: "Analytics & Reporting", topics: ["Google Analytics Setup", "Search Console Reports", "Rank Tracking", "SEO Audit"] },
+    { month: "Week 7-8", title: "Analytics & Reporting", topics: ["Google Analytics Setup", "Search Console Reports", "Rank Tracking", "SEO Audit"] },
+
   ],
   ctaTitle: "Ready to Rank #1 on Google?",
 });
