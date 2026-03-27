@@ -304,8 +304,8 @@ const Header = () => {
           icon: Database,
         },
         {
-          label: "Enterprise Software Development",
-          href: "/enterprise-software-development",
+          label: "Ecommerce Software Development",
+          href: "/ecommerce-software-development",
           icon: Boxes,
         },
         {
@@ -399,21 +399,21 @@ const Header = () => {
 
     training: {
       "Digital Marketing Training": [
-        { label: "SEO", href: "/seo-services", icon: Search },
+        { label: "SEO", href: "/seo-training", icon: Search },
         {
           label: "SEM (Google Ads)",
-          href: "/sem-google-ads",
+          href: "/sem-google-ads-training",
           icon: MonitorSmartphone,
         },
         {
           label: "Social Media Marketing",
-          href: "/social-media-marketing",
+          href: "/social-media-marketing-training",
           icon: Share2,
         },
-        { label: "Email Marketing", href: "/email-marketing", icon: Mail },
+        { label: "Email Marketing", href: "/email-marketing-training", icon: Mail },
         {
           label: "Content Marketing",
-          href: "/content-marketing",
+          href: "/content-marketing-training",
           icon: FileText,
         },
       ],
@@ -439,20 +439,20 @@ const Header = () => {
       "Animation Training": [
         {
           label: "Graphic Designing",
-          href: "/graphic-designing",
+          href: "/graphic-designing-training",
           icon: Palette,
         },
         {
           label: "Explainer Videos",
-          href: "/explainer-videos",
+          href: "/explainer-videos-training",
           icon: Clapperboard,
         },
-        { label: "2D Animation", href: "/2d-animation", icon: Type },
-        { label: "3D Animation", href: "/3d-animation", icon: Video },
-        { label: "Motion Graphics", href: "/motion-graphics", icon: Film },
+        { label: "2D Animation", href: "/2d-animation-training", icon: Type },
+        { label: "3D Animation", href: "/3d-animation-training", icon: Video },
+        { label: "Motion Graphics", href: "/motion-graphics-training", icon: Film },
         {
           label: "Video Editing & VFX",
-          href: "/video-editing-vfx",
+          href: "/video-editing-vfx-training",
           icon: Clapperboard,
         },
       ],
