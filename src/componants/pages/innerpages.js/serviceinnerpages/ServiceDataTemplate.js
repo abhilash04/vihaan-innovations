@@ -881,3 +881,2883 @@ export const uiUxDesignServiceData = {};
 
 
 
+
+export const webDesignDevServiceData = {
+  hero: {
+    title: "Web Design and Development Services to Build Modern and Responsive Websites",
+    subtitle: "We create user-friendly and responsive websites using web design and development services that help your business grow online.",
+    badgeText: "Build a strong online presence with a modern website. 🚀",
+    buttonText: "Start Your Website",
+    features: [
+      { icon: BusinessCenterIcon, text: "Custom website design" },
+      { icon: BusinessCenterIcon, text: "Web development services" },
+      { icon: BusinessCenterIcon, text: "Responsive web designing" },
+      { icon: BusinessCenterIcon, text: "UI/UX friendly layouts" },
+      { icon: BusinessCenterIcon, text: "Website performance optimization" },
+      { icon: BusinessCenterIcon, text: "Ongoing support" },
+    ]
+  },
+
+  overview: {
+    subtitle: "WEB DEVELOPMENT AGENCY",
+    title: "Complete Web Development Services for Business Growth",
+    description: "As a web development agency, we provide web design and development solutions that improve user experience and performance.",
+    list: [
+      { title: "Website Design", icon: BusinessCenterIcon, count: "Modern & User-Friendly", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We create modern and user-friendly designs." },
+      { title: "Frontend Development", icon: BusinessCenterIcon, count: "Interactive Layouts", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We build responsive and interactive layouts." },
+      { title: "Backend Development", icon: BusinessCenterIcon, count: "Scalable Systems", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We develop strong and scalable systems." },
+      { title: "Website Optimization", icon: BusinessCenterIcon, count: "Speed & Performance", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We improve speed and performance." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "IDEA TO LAUNCH",
+    title: "End-to-End Web Design and Development Solutions from Idea to Launch",
+    description: "Our web development services cover everything from planning to deployment for better results.",
+    services: [
+      {
+        title: "END-TO-END SOLUTIONS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Requirement Analysis", desc: "We understand your business needs.", icon: <BusinessCenterIcon /> },
+          { title: "Design Planning", desc: "We create UI/UX designs.", icon: <BusinessCenterIcon /> },
+          { title: "Development", desc: "We build your website.", icon: <BusinessCenterIcon /> },
+          { title: "Testing & Launch", desc: "We ensure quality and launch smoothly.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY CHOOSE OUR SERVICES",
+    title: "Why Choose Our Web Design and Development Services",
+    description: "We focus on creating websites that are simple, fast, and effective for business growth.",
+    stats: [
+      { value: "200+", label: "Websites Developed" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Modern Design", icon: BusinessCenterIcon, desc: "We create clean and attractive designs that reflect your brand identity.", color: "#2563eb", number: "01" },
+      { title: "Responsive Layout", icon: BusinessCenterIcon, desc: "We ensure mobile-friendly websites that work perfectly on all screen sizes.", color: "#06b6d4", number: "02" },
+      { title: "Performance Focused", icon: BusinessCenterIcon, desc: "We optimize speed and usability to keep your visitors engaged.", color: "#4f46e5", number: "03" },
+      { title: "Scalable Solutions", icon: BusinessCenterIcon, desc: "We build future-ready websites that can grow along with your business.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "OUR STRUCTURED PROCESS",
+    title: "Our Web Design and Development Process for Better Results",
+    description: "As a web development agency, we follow a structured process to deliver high-quality web development services.",
+    processSteps: [
+      { number: "01", title: "Requirement Gathering", desc: "We understand your website needs.", checks: ["Identify goals", "Define features", "Understand audience"], position: "above" },
+      { number: "02", title: "UI/UX Design", desc: "We design user-friendly layouts.", checks: ["Create wireframes", "Design interfaces", "Improve user experience"], position: "below" },
+      { number: "03", title: "Development", desc: "We build your website.", checks: ["Frontend coding", "Backend development", "Integrations"], position: "above" },
+      { number: "04", title: "Testing", desc: "We ensure quality and performance.", checks: ["Check responsiveness", "Fix bugs", "Improve speed"], position: "below" },
+      { number: "05", title: "Deployment", desc: "We launch your website.", checks: ["Hosting setup", "Domain configuration", "Go live"], position: "above" },
+      { number: "06", title: "Support & Maintenance", desc: "We provide ongoing support.", checks: ["Regular updates", "Performance monitoring", "Issue fixing"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "INDUSTRY EXPERTISE",
+    title: "Expert Web Design Across Industries",
+    description: "We provide specialized web development services tailored to the unique needs of different business sectors.",
+    industries: {
+      0: {
+        title: "Listing Site",
+        desc: "We build scalable listing websites with seamless navigation, advanced search, and user-friendly interfaces for better discovery and lead generation.",
+        desc1: "Creating intuitive listing platforms with smooth navigation, fast performance, and optimized user journeys.",
+        checks: ["Business & Service Listings", "Advanced Search & Filters", "User Dashboard", "Lead & Inquiry Management"],
+        cards: [
+          { title: "Listings Display", desc: "Clean and structured listing layouts for easy browsing." },
+          { title: "Advanced Filters", desc: "Smart filters and sorting for quick and relevant search results." },
+          { title: "User Dashboard", desc: "Personalized dashboards to manage listings and activity." },
+          { title: "Lead Management", desc: "Integrated inquiry system to capture and convert leads." }
+        ]
+      },
+      1: {
+        title: "Education",
+        desc: "Our web design and development services for education platforms focus on delivering engaging, structured, and user-friendly learning experiences.",
+        desc1: "Designing modern education platforms with intuitive interfaces and seamless learning journeys.",
+        checks: ["Course Listings", "Student & Admin Dashboard", "Enrollment & Payment Flow", "Learning Management System"],
+        cards: [
+          { title: "Course Browsing", desc: "Well-organized course listings with categories and filters." },
+          { title: "Student Dashboard", desc: "Interactive dashboards for tracking courses and progress." },
+          { title: "Enrollment Flow", desc: "Simple and smooth admission and enrollment process." },
+          { title: "Learning Experience", desc: "User-friendly interfaces for lessons, quizzes, and content." }
+        ]
+      },
+      2: {
+        title: "Matrimony",
+        desc: "We develop secure and scalable matrimony websites with personalized matchmaking features and smooth user experiences.",
+        desc1: "Building engaging matrimony platforms with privacy-focused design and easy navigation.",
+        checks: ["Profile Creation & Matching", "Advanced Search Preferences", "Chat & Communication", "Subscription & Payment Integration"],
+        cards: [
+          { title: "Profile Management", desc: "Detailed profiles with preferences and personal information." },
+          { title: "Matchmaking System", desc: "Smart search and recommendations for better matches." },
+          { title: "Communication Flow", desc: "Secure chat and interaction features for users." },
+          { title: "Subscription System", desc: "Flexible plans with smooth and secure payment integration." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Listing Site", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Education", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Matrimony", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Recognized for Excellence & Quality",
+    list: [
+      { title: "Top Web Agency", body: "GoodFirms", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "High Performer", body: "G2 Crowd", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "ISO 9001 Cert", body: "Quality Mgmt", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+      { title: "Best Tech Stack", body: "Clutch", year: "2024", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Top Developer", body: "Clutch.co", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for Web Design and Development Services",
+    title: "Modern Tools and Technologies",
+    description: "We use modern tools and technologies to deliver high-quality web development services.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["HTML5", "CSS3", "JavaScript", "React JS", "Node.js", "Figma"] },
+      { row: 2, direction: "right", speed: "28s", items: ["GitHub", "VS Code", "Java", "Python", "Spring Boot"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "WHAT CLIENTS SAY",
+    title: "What Clients Say About Our Web Development Agency",
+    rating: "4.9/5",
+    reviews: "1.2k+",
+    list: [
+      { name: "Rahul Sharma", text: "Vihaan delivered a high-performance website ahead of schedule. Their web design and development expertise ensured a seamless user experience across all devices.", initial: "R", color: "#2563eb" },
+      { name: "Amit Patel", text: "Our website speed and performance improved drastically after working with Vihaan. Their development team optimized everything perfectly with zero downtime.", initial: "A", color: "#10b981" },
+      { name: "Suresh Menon", text: "The e-commerce website built by Vihaan handles heavy traffic effortlessly. The design is clean, fast, and conversion-focused.", initial: "S", color: "#8b5cf6" },
+      { name: "Vikram Das", text: "Their web development team delivered a secure and scalable platform. The user interface is intuitive and aligns perfectly with our business goals.", initial: "V", color: "#f59e0b" },
+      { name: "Priya Rao", text: "Stunning website design! The layouts are modern, responsive, and keep users engaged throughout their journey.", initial: "P", color: "#ec4899" },
+      { name: "Nikhil Verma", text: "Vihaan transformed our food ordering website with smooth navigation and fast loading speed. Customer engagement has significantly improved.", initial: "N", color: "#06b6d4" },
+      { name: "Anjali Mehta", text: "The real estate website’s search and booking experience is seamless. Their web design services helped us generate more qualified leads.", initial: "A", color: "#2b3d5b" },
+      { name: "Rohan Kapoor", text: "The website feels premium and performs flawlessly. Their web development team focused on both design and performance.", initial: "R", color: "#10b981" },
+      { name: "Sneha Iyer", text: "Our LMS website is now interactive and user-friendly. The development quality and UI clarity are exceptional.", initial: "S", color: "#8b5cf6" },
+      { name: "Karthik Rao", text: "Their web design and development services helped us build a reliable healthcare platform with excellent usability.", initial: "K", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Build Your Website with a<br />Web Development Agency?
+      </>
+    ),
+    description: "Let’s create a modern website using our web design and development services.",
+    buttonText: "Build Your Website Now",
+    brandText: "Vihaan Web Solutions"
+  }
+};
+
+export const mobileAppDevFullServiceData = {
+  hero: {
+    title: "Mobile Apps Development Services to Build Scalable and User-Friendly Applications",
+    subtitle: "We create high-performance mobile applications using app development services that help your business reach more users.",
+    badgeText: "Reach your customers with powerful mobile apps. 🚀",
+    buttonText: "Start Your App Development",
+    features: [
+      { icon: BusinessCenterIcon, text: "Mobile apps development" },
+      { icon: BusinessCenterIcon, text: "App development services" },
+      { icon: BusinessCenterIcon, text: "Android and iOS apps" },
+      { icon: BusinessCenterIcon, text: "User-friendly app design" },
+      { icon: BusinessCenterIcon, text: "App performance optimization" },
+      { icon: BusinessCenterIcon, text: "Ongoing support" },
+    ]
+  },
+
+  overview: {
+    subtitle: "APP DEVELOPMENT SOFTWARE COMPANIES",
+    title: "Complete App Development Services for Business Growth",
+    description: "As one of the app development software companies, we build mobile apps that are scalable, secure, and easy to use.",
+    list: [
+      { title: "Android App Development", icon: BusinessCenterIcon, count: "Android Platforms", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We build apps for Android platforms." },
+      { title: "iOS App Development", icon: BusinessCenterIcon, count: "iOS Development", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We develop apps as an ios development company." },
+      { title: "Cross-Platform Apps", icon: BusinessCenterIcon, count: "Multiple Platforms", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We create apps that work on multiple platforms." },
+      { title: "App Maintenance", icon: BusinessCenterIcon, count: "Regular Support", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We support and update apps regularly." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "IDEA TO LAUNCH",
+    title: "End-to-End Mobile Apps Development Solutions from Idea to Launch",
+    description: "Our app development services cover planning, development, testing, and deployment for better results.",
+    services: [
+      {
+        title: "END-TO-END SOLUTIONS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Requirement Analysis", desc: "We understand your app needs.", icon: <BusinessCenterIcon /> },
+          { title: "UI/UX Design", desc: "We design user-friendly app interfaces.", icon: <BusinessCenterIcon /> },
+          { title: "Development", desc: "We build your mobile app.", icon: <BusinessCenterIcon /> },
+          { title: "Testing & Launch", desc: "We ensure quality and launch smoothly.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY CHOOSE OUR SERVICES",
+    title: "Why Choose Our Mobile Apps Development Services",
+    description: "We focus on building mobile apps that are simple, scalable, and high-performing.",
+    stats: [
+      { value: "150+", label: "Apps Developed" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "User-Friendly Design", icon: BusinessCenterIcon, desc: "We create easy-to-use apps that enhance customer engagement.", color: "#2563eb", number: "01" },
+      { title: "High Performance", icon: BusinessCenterIcon, desc: "We ensure smooth app performance with optimized code.", color: "#06b6d4", number: "02" },
+      { title: "Secure Applications", icon: BusinessCenterIcon, desc: "We build safe and reliable apps with advanced security measures.", color: "#4f46e5", number: "03" },
+      { title: "Scalable Solutions", icon: BusinessCenterIcon, desc: "We develop future-ready apps that can handle your business growth.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "STRUCTURED APPROACH",
+    title: "Our Mobile Apps Development Process for Better Performance",
+    description: "As an app development services provider, we follow a structured approach to build high-quality mobile apps.",
+    processSteps: [
+      { number: "01", title: "Requirement Gathering", desc: "We understand your app idea.", checks: ["Define goals", "Identify features", "Understand users"], position: "above" },
+      { number: "02", title: "UI/UX Design", desc: "We design app interfaces.", checks: ["Create wireframes", "Design screens", "Improve usability"], position: "below" },
+      { number: "03", title: "Development", desc: "We build your application.", checks: ["Android development", "iOS development", "Backend integration"], position: "above" },
+      { number: "04", title: "Testing", desc: "We ensure app quality.", checks: ["Bug fixing", "Performance testing", "Security checks"], position: "below" },
+      { number: "05", title: "Deployment", desc: "We launch your app.", checks: ["App store submission", "Configuration", "Go live"], position: "above" },
+      { number: "06", title: "Maintenance & Support", desc: "We support your app.", checks: ["Regular updates", "Performance monitoring", "Issue resolution"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "INDUSTRY-FOCUSED",
+    title: "Industry-Focused Mobile App Development",
+    description: "We provide specialized mobile app development services tailored to the unique needs of different business sectors.",
+    industries: {
+      0: {
+        title: "HRM Software",
+        desc: "We develop powerful HRM mobile apps that streamline workforce management, improve employee engagement, and automate HR processes.",
+        desc1: "Building efficient HRM apps with intuitive dashboards, automation features, and seamless user experience.",
+        checks: ["Employee Management", "Attendance & Leave Tracking", "Payroll Integration", "Performance Management"],
+        cards: [
+          { title: "Employee Dashboard", desc: "Centralized dashboard for managing employee data and activities." },
+          { title: "Attendance Tracking", desc: "Real-time attendance and leave management system." },
+          { title: "Payroll System", desc: "Automated payroll processing with accurate calculations." },
+          { title: "Performance Management", desc: "Tools to track and evaluate employee performance efficiently." }
+        ]
+      },
+      1: {
+        title: "Hospital Management",
+        desc: "Our mobile app development services for healthcare focus on delivering secure, reliable, and user-friendly hospital management solutions.",
+        desc1: "Designing healthcare apps with seamless workflows, secure data handling, and efficient patient management systems.",
+        checks: ["Patient Management", "Appointment Scheduling", "Doctor Dashboard", "Billing & Reports"],
+        cards: [
+          { title: "Patient Records", desc: "Easy access to patient history, reports, and medical data." },
+          { title: "Appointment Booking", desc: "Simple scheduling system for patients and doctors." },
+          { title: "Doctor Dashboard", desc: "Efficient interface for managing appointments and patient data." },
+          { title: "Billing System", desc: "Accurate billing and reporting with secure transactions." }
+        ]
+      },
+      2: {
+        title: "Cab Booking",
+        desc: "We build fast and scalable cab booking apps with real-time tracking, smooth booking flows, and reliable performance.",
+        desc1: "Creating intuitive cab booking apps with quick ride requests, live tracking, and seamless user experience.",
+        checks: ["Ride Booking Interface", "Real-Time GPS Tracking", "Driver & User Apps", "Payment Integration"],
+        cards: [
+          { title: "Ride Booking", desc: "Simple and fast ride booking with minimal steps." },
+          { title: "Live Tracking", desc: "Real-time GPS tracking with accurate location updates." },
+          { title: "Driver Dashboard", desc: "Dedicated interface for drivers to manage rides and earnings." },
+          { title: "Payment System", desc: "Secure and smooth payment options for hassle-free transactions." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "HRM Software", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Hospital Management", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Cab Booking", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Recognized for Excellence & Quality",
+    list: [
+      { title: "Top App Agency", body: "GoodFirms", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "High Performer", body: "G2 Crowd", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "ISO 9001 Cert", body: "Quality Mgmt", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+      { title: "Best Mobile UX", body: "App Design Awards", year: "2024", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Top Developer", body: "Clutch.co", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for Mobile App Development Services",
+    title: "Modern Technologies",
+    description: "We use modern technologies to deliver high-quality mobile apps development solutions.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Flutter", "React Native", "Kotlin", "Swift"] },
+      { row: 2, direction: "right", speed: "28s", items: ["Firebase", "Android Studio", "Xcode", "Node.js", "MySQL", "Docker"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "CLIENT TRUST",
+    title: "What Clients Say About Our App Development Services",
+    rating: "4.9/5",
+    reviews: "950+",
+    list: [
+      { name: "Arjun Mehta", text: "Vihaan delivered our custom mobile app ahead of schedule. Their mobile app development expertise ensured smooth performance and a seamless user experience.", initial: "A", color: "#2563eb" },
+      { name: "Rohit Agarwal", text: "The mobile app built by Vihaan optimized our operations and reduced costs significantly. Flawless execution with zero downtime.", initial: "R", color: "#10b981" },
+      { name: "Kunal Shah", text: "Our e-commerce mobile app handles high traffic effortlessly. The intuitive user flows boosted our conversions.", initial: "K", color: "#8b5cf6" },
+      { name: "Aditya Nair", text: "Their secure and scalable mobile app development solved critical issues. The app performance and reliability are outstanding.", initial: "A", color: "#f59e0b" },
+      { name: "Neha Kapoor", text: "Stunning app design! The user experience is smooth, fast, and keeps engagement levels high.", initial: "N", color: "#ec4899" },
+      { name: "Varun Malhotra", text: "Vihaan transformed our food delivery app with seamless navigation and quick ordering flows. Customers love the experience.", initial: "V", color: "#06b6d4" },
+      { name: "Pooja Iyer", text: "The real estate mobile app is intuitive and fast. Search and booking flows are seamless, increasing our leads.", initial: "P", color: "#2563eb" },
+      { name: "Manish Verma", text: "The app feels premium and performs flawlessly. User retention has improved significantly after launch.", initial: "M", color: "#10b981" },
+      { name: "Ritika Sharma", text: "Our LMS mobile app is interactive and user-friendly. It has greatly enhanced the learning experience.", initial: "R", color: "#8b5cf6" },
+      { name: "Sandeep Reddy", text: "Their mobile app development services delivered a reliable healthcare app with excellent usability and performance.", initial: "S", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Build Your App with Expert<br />App Development Services?
+      </>
+    ),
+    description: "Let’s create a powerful mobile application that helps your business grow.",
+    buttonText: "Launch Your App Today",
+    brandText: "Vihaan Mobile Solutions"
+  }
+};
+
+export const customAppDevFullServiceData = {
+  hero: {
+    title: "Custom Application Development Services to Build Scalable Business Solutions",
+    subtitle: "We create tailored software using custom application development services that match your business needs and improve efficiency.",
+    badgeText: "Build software that fits your business perfectly. 💻",
+    buttonText: "Start Your Custom Project",
+    features: [
+      { icon: BusinessCenterIcon, text: "Custom application development" },
+      { icon: BusinessCenterIcon, text: "Business-focused solutions" },
+      { icon: BusinessCenterIcon, text: "Scalable applications" },
+      { icon: BusinessCenterIcon, text: "Secure and reliable systems" },
+      { icon: BusinessCenterIcon, text: "Integration with existing tools" },
+      { icon: BusinessCenterIcon, text: "Ongoing support" },
+    ]
+  },
+
+  overview: {
+    subtitle: "CUSTOM APPLICATION DEVELOPMENT AGENCY",
+    title: "Complete Custom Application Development Services for Business Growth",
+    description: "As a custom application development agency, we deliver solutions that improve performance and simplify operations.",
+    list: [
+      { title: "Business Applications", icon: BusinessCenterIcon, count: "Tailored Apps", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We develop apps based on your business needs." },
+      { title: "System Integration", icon: BusinessCenterIcon, count: "Tool Connectivity", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We connect your tools and systems." },
+      { title: "Custom Dashboards", icon: BusinessCenterIcon, count: "Better Control", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We create dashboards for better control." },
+      { title: "Application Support", icon: BusinessCenterIcon, count: "Maintenance", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We maintain and improve applications." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "IDEA TO EXECUTION",
+    title: "End-to-End Custom Application Development Solutions from Idea to Execution",
+    description: "Our custom application development services cover planning, development, and optimization for better results.",
+    services: [
+      {
+        title: "END-TO-END SOLUTIONS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Requirement Analysis", desc: "We understand your business needs.", icon: <BusinessCenterIcon /> },
+          { title: "Solution Design", desc: "We design system architecture.", icon: <BusinessCenterIcon /> },
+          { title: "Development", desc: "We build custom applications.", icon: <BusinessCenterIcon /> },
+          { title: "Testing & Deployment", desc: "We ensure quality and launch smoothly.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY CHOOSE OUR AGENCY",
+    title: "Why Choose Our Custom Application Development Agency",
+    description: "We focus on delivering custom application development solutions that are simple, scalable, and efficient.",
+    stats: [
+      { value: "120+", label: "Applications Delivered" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Tailored Solutions", icon: BusinessCenterIcon, desc: "We build software based on your needs.", color: "#2563eb", number: "01" },
+      { title: "Scalable Systems", icon: BusinessCenterIcon, desc: "We create future-ready applications.", color: "#06b6d4", number: "02" },
+      { title: "Secure Development", icon: BusinessCenterIcon, desc: "We ensure data security.", color: "#4f46e5", number: "03" },
+      { title: "Business Focused", icon: BusinessCenterIcon, desc: "We align solutions with your goals.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "STRUCTURED PROCESS",
+    title: "Our Custom Application Development Process for Efficient Solutions",
+    description: "As a custom application development agency, we follow a structured process to deliver reliable custom application development services.",
+    processSteps: [
+      { number: "01", title: "Requirement Gathering", desc: "We understand your requirements.", checks: ["Identify goals", "Define features", "Understand workflows"], position: "above" },
+      { number: "02", title: "Solution Design", desc: "We design system architecture.", checks: ["Plan structure", "Define modules", "Create workflows"], position: "below" },
+      { number: "03", title: "Development", desc: "We build your application.", checks: ["Backend development", "Frontend development", "Integrations"], position: "above" },
+      { number: "04", title: "Testing", desc: "We ensure application quality.", checks: ["Bug testing", "Performance testing", "Security checks"], position: "below" },
+      { number: "05", title: "Deployment", desc: "We launch your solution.", checks: ["Server setup", "Configuration", "Go live"], position: "above" },
+      { number: "06", title: "Maintenance & Support", desc: "We provide ongoing support.", checks: ["Updates", "Monitoring", "Improvements"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "INDUSTRY-FOCUSED",
+    title: "Industry-Focused Custom Development",
+    description: "We provide specialized custom development services tailored to the unique needs of different business sectors.",
+    industries: {
+      0: {
+        title: "LMS (Learning Management System)",
+        desc: "We develop scalable LMS applications with interactive learning experiences, structured content delivery, and seamless user management.",
+        desc1: "Building powerful LMS platforms with intuitive interfaces, automation, and engaging learning experiences.",
+        checks: ["Course Management System", "Student & Admin Dashboards", "Progress Tracking", "Assessment & Certification"],
+        cards: [
+          { title: "Course Management", desc: "Easily create, manage, and organize courses with structured content." },
+          { title: "Student Dashboard", desc: "Interactive dashboards to track progress and performance." },
+          { title: "Assessment System", desc: "Integrated quizzes, tests, and certification modules." },
+          { title: "Learning Experience", desc: "User-friendly UI for video lessons and interactive content." }
+        ]
+      },
+      1: {
+        title: "Hotel Booking",
+        desc: "We create custom hotel booking applications with real-time availability, seamless booking flows, and secure payment integration.",
+        desc1: "Designing fast and reliable booking platforms with smooth user journeys and high conversion rates.",
+        checks: ["Room Listings & Availability", "Booking & Reservation System", "User Dashboard", "Payment Integration"],
+        cards: [
+          { title: "Room Listings", desc: "Detailed room displays with images, pricing, and amenities." },
+          { title: "Booking Flow", desc: "Simple and quick reservation process with minimal steps." },
+          { title: "User Dashboard", desc: "Manage bookings, history, and preferences easily." },
+          { title: "Payment System", desc: "Secure and smooth payment experience for hassle-free transactions." }
+        ]
+      },
+      2: {
+        title: "AI Chatbot",
+        desc: "We build intelligent AI chatbot applications that automate customer interactions, improve response time, and enhance user engagement.",
+        desc1: "Creating smart chatbot applications that deliver real-time responses and personalized user experiences.",
+        checks: ["Conversational AI Interface", "Multi-Platform Integration", "Automated Responses", "Analytics & Insights"],
+        cards: [
+          { title: "Chat Interface", desc: "Interactive and user-friendly conversational UI." },
+          { title: "Automation Engine", desc: "Automated responses for handling queries efficiently." },
+          { title: "Multi-Platform Support", desc: "Integration with websites, apps, and messaging platforms." },
+          { title: "Analytics Dashboard", desc: "Track conversations, performance, and user behavior insights." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "LMS", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Hotel Booking", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "AI Chatbot", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Recognized for Excellence & Quality",
+    list: [
+      { title: "Top Custom Dev", body: "GoodFirms", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "High Performer", body: "G2 Crowd", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "ISO 9001 Cert", body: "Quality Mgmt", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+      { title: "Product Excellence", body: "Dev Awards", year: "2024", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Top Agency", body: "Clutch.co", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for Custom Application Development Services",
+    title: "Modern Technologies",
+    description: "We use modern technologies to deliver scalable custom application development solutions.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Java / Spring Boot", "Node.js", "React JS", "Angular"] },
+      { row: 2, direction: "right", speed: "28s", items: ["MySQL / PostgreSQL", "MongoDB", "Docker", "AWS", "Kubernetes"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "CLIENT TRUST",
+    title: "What Clients Say About Our Custom Application Development Agency",
+    rating: "4.9/5",
+    reviews: "820+",
+    list: [
+      { name: "Arjun Mehta", text: "Vihaan delivered our custom application ahead of schedule. The solution was perfectly aligned with our business requirements and performs flawlessly.", initial: "A", color: "#2563eb" },
+      { name: "Rohit Agarwal", text: "Their custom development approach helped us streamline operations and reduce costs. The application is fast, secure, and highly reliable.", initial: "R", color: "#10b981" },
+      { name: "Kunal Shah", text: "Our custom e-commerce solution handles heavy traffic with ease. The performance and user experience have significantly improved our conversions.", initial: "K", color: "#8b5cf6" },
+      { name: "Aditya Nair", text: "The custom-built platform solved critical scalability challenges. Their development team ensured top-notch security and performance.", initial: "A", color: "#f59e0b" },
+      { name: "Neha Kapoor", text: "The dashboards and workflows are extremely intuitive. The custom application has improved efficiency and user engagement.", initial: "N", color: "#ec4899" },
+      { name: "Varun Malhotra", text: "Vihaan developed a tailored application that perfectly fits our business model. The automation features saved us a lot of time and effort.", initial: "V", color: "#06b6d4" },
+      { name: "Pooja Iyer", text: "Our real estate application is seamless and efficient. The custom features helped us generate more leads and improve operations.", initial: "P", color: "#2563eb" },
+      { name: "Manish Verma", text: "The application feels premium and performs without any issues. Their custom development expertise is truly impressive.", initial: "M", color: "#10b981" },
+      { name: "Ritika Sharma", text: "Our LMS platform is now highly interactive and scalable. The custom application development improved the overall learning experience.", initial: "R", color: "#8b5cf6" },
+      { name: "Sandeep Reddy", text: "The healthcare application built by Vihaan is secure, reliable, and easy to use. Managing patient data is now seamless.", initial: "S", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Build Custom Software<br />for Your Business?
+      </>
+    ),
+    description: "Let’s create tailored solutions with our custom application development services.",
+    buttonText: "Start Your Custom Solution",
+    brandText: "Vihaan Custom Solutions"
+  }
+};
+
+export const cloudDevFullServiceData = {
+  hero: {
+    title: "Cloud Based Development Services to Build Scalable and Flexible Applications",
+    subtitle: "We create secure and scalable solutions using cloud based development services that help your business grow faster and work efficiently.",
+    badgeText: "Move your business to the cloud with confidence. ☁️",
+    buttonText: "Start Cloud Development",
+    features: [
+      { icon: BusinessCenterIcon, text: "Cloud based development" },
+      { icon: BusinessCenterIcon, text: "Cloud based software development" },
+      { icon: BusinessCenterIcon, text: "Scalable cloud solutions" },
+      { icon: BusinessCenterIcon, text: "Secure cloud infrastructure" },
+      { icon: BusinessCenterIcon, text: "Cloud migration services" },
+      { icon: BusinessCenterIcon, text: "Performance optimization" },
+    ]
+  },
+
+  overview: {
+    subtitle: "COMPLETE CLOUD SOLUTIONS",
+    title: "Complete Cloud Based Development Services for Business Growth",
+    description: "We provide cloud based development solutions that improve flexibility, scalability, and performance for your applications.",
+    list: [
+      { title: "Cloud App Development", icon: BusinessCenterIcon, count: "Cloud Native", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We build applications on cloud platforms." },
+      { title: "Cloud Migration", icon: BusinessCenterIcon, count: "System Move", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We move your existing systems to the cloud." },
+      { title: "Cloud Integration", icon: BusinessCenterIcon, count: "Connect Tools", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We connect your applications and services." },
+      { title: "Cloud Maintenance", icon: BusinessCenterIcon, count: "24/7 Support", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We manage and support cloud systems." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "END-TO-END CLOUD",
+    title: "End-to-End Cloud Based Software Development Solutions",
+    description: "Our cloud based development services cover planning, deployment, and optimization for better results.",
+    services: [
+      {
+        title: "CLOUD SOLUTIONS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Requirement Analysis", desc: "We understand your cloud needs.", icon: <BusinessCenterIcon /> },
+          { title: "Architecture Design", desc: "We design cloud infrastructure.", icon: <BusinessCenterIcon /> },
+          { title: "Development & Migration", desc: "We build and migrate applications.", icon: <BusinessCenterIcon /> },
+          { title: "Monitoring & Optimization", desc: "We improve performance continuously.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY CLOUD WITH US",
+    title: "Why Choose Our Cloud Based Development Services",
+    description: "We focus on delivering cloud based software development solutions that are secure, scalable, and efficient.",
+    stats: [
+      { value: "100+", label: "Cloud Projects" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Scalable Solutions", icon: BusinessCenterIcon, desc: "We build flexible cloud systems.", color: "#2563eb", number: "01" },
+      { title: "Secure Infrastructure", icon: BusinessCenterIcon, desc: "We ensure data safety.", color: "#06b6d4", number: "02" },
+      { title: "High Performance", icon: BusinessCenterIcon, desc: "We optimize speed and efficiency.", color: "#4f46e5", number: "03" },
+      { title: "Cost Effective", icon: BusinessCenterIcon, desc: "We reduce operational costs.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "CLOUD WORKFLOW",
+    title: "Our Cloud Based Development Services Process for Better Performance",
+    description: "We follow a structured process to deliver reliable cloud based development and cloud based software development solutions.",
+    processSteps: [
+      { number: "01", title: "Requirement Analysis", desc: "We understand your cloud needs.", checks: ["Identify goals", "Analyze current systems", "Define requirements"], position: "above" },
+      { number: "02", title: "Architecture Design", desc: "We design cloud infrastructure.", checks: ["Choose cloud platform", "Define architecture", "Plan scalability"], position: "below" },
+      { number: "03", title: "Development & Migration", desc: "We build and move applications.", checks: ["Develop cloud apps", "Migrate data", "Integrate systems"], position: "above" },
+      { number: "04", title: "Testing", desc: "We ensure system quality.", checks: ["Performance testing", "Security testing", "Bug fixing"], position: "below" },
+      { number: "05", title: "Deployment", desc: "We launch cloud solutions.", checks: ["Configure servers", "Deploy applications", "Go live"], position: "above" },
+      { number: "06", title: "Monitoring & Optimization", desc: "We improve cloud performance.", checks: ["Monitor usage", "Optimize resources", "Improve efficiency"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "CLOUD ACROSS INDUSTRIES",
+    title: "Cloud Solutions Across Industries",
+    description: "As a leading cloud-based development company, we deliver scalable, secure, and high-performance cloud solutions across multiple sectors.",
+    industries: {
+      0: {
+        title: "E-Commerce",
+        desc: "We build cloud-powered eCommerce platforms with high scalability, seamless performance, and optimized user journeys for better conversions.",
+        desc1: "Creating fast, scalable, and reliable eCommerce platforms with smooth navigation and high availability.",
+        checks: ["Product Catalog Management", "Cart & Checkout System", "User Accounts & Dashboards", "Payment Gateway Integration"],
+        cards: [
+          { title: "Product Listing", desc: "Optimized product displays with filters and smart categorization." },
+          { title: "Cart & Checkout", desc: "Frictionless checkout process with cloud-backed performance." },
+          { title: "User Dashboard", desc: "Centralized dashboards for orders, tracking, and account management." },
+          { title: "Payment Experience", desc: "Secure and fast cloud-based payment processing." }
+        ]
+      },
+      1: {
+        title: "Food Booking",
+        desc: "Our cloud-based development services for food booking platforms ensure real-time performance, smooth ordering flows, and reliable scalability.",
+        desc1: "Designing scalable food platforms with fast ordering, real-time updates, and seamless user experience.",
+        checks: ["Online Food Ordering System", "Restaurant Listings", "Real-Time Order Tracking", "Payment Integration"],
+        cards: [
+          { title: "Menu Browsing", desc: "Easy-to-navigate menus with categories and quick selections." },
+          { title: "Order Flow", desc: "Simplified ordering system for faster checkout." },
+          { title: "Live Order Tracking", desc: "Real-time tracking powered by cloud infrastructure." },
+          { title: "Payment Integration", desc: "Secure and reliable cloud-based payment systems." }
+        ]
+      },
+      2: {
+        title: "Resort Booking",
+        desc: "We develop cloud-based resort booking systems with real-time availability, seamless booking flows, and high performance.",
+        desc1: "Building reliable booking platforms with smooth user journeys and scalable infrastructure.",
+        checks: ["Room & Resort Listings", "Availability Management", "Booking & Reservation System", "Secure Payment Integration"],
+        cards: [
+          { title: "Resort Listings", desc: "Detailed listings with images, pricing, and amenities." },
+          { title: "Availability System", desc: "Real-time room availability and instant updates." },
+          { title: "Booking Flow", desc: "Quick and user-friendly reservation process." },
+          { title: "Payment System", desc: "Secure and seamless payment experience for users." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "E-Commerce", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Food Booking", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Resort Booking", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Cloud Excellence & Innovation",
+    list: [
+      { title: "Top Cloud Agency", body: "GoodFirms", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Cloud Innovator", body: "G2 Crowd", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "ISO 27001 Cert", body: "Security Mgmt", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+      { title: "Migration Award", body: "Cloud Awards", year: "2024", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "AWS Partner", body: "Certification", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for Cloud Based Development Services",
+    title: "Cloud Infrastructure",
+    description: "We use leading cloud platforms and tools to deliver reliable cloud based software development solutions.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["AWS", "Microsoft Azure", "Google Cloud Platform", "Heroku"] },
+      { row: 2, direction: "right", speed: "28s", items: ["Docker", "Kubernetes", "Terraform", "Ansible", "Cloudflare", "Jenkins"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "CLIENT TRUST",
+    title: "What Clients Say About Our Cloud Based Development Services",
+    rating: "4.9/5",
+    reviews: "750+",
+    list: [
+      { name: "Vikash Singh", text: "Vihaan delivered our cloud-based application ahead of schedule. The solution was perfectly aligned with our business requirements and performs flawlessly.", initial: "V", color: "#2563eb" },
+      { name: "Deepak Jain", text: "Their cloud development approach helped us streamline operations and reduce infrastructure costs. The application is fast, secure, and highly reliable.", initial: "D", color: "#10b981" },
+      { name: "Harsh Gupta", text: "Our cloud-based e-commerce solution handles high traffic with ease. The scalability and performance have significantly improved our conversions.", initial: "H", color: "#8b5cf6" },
+      { name: "Rakesh Iyer", text: "The cloud platform solved critical scalability challenges. Their team ensured top-notch security, uptime, and performance.", initial: "R", color: "#f59e0b" },
+      { name: "Pallavi Desai", text: "The dashboards and workflows are extremely intuitive. The cloud-based application has improved efficiency and user engagement.", initial: "P", color: "#ec4899" },
+      { name: "Ankit Sharma", text: "Vihaan developed a scalable cloud solution that perfectly fits our business model. Automation and flexibility saved us time and effort.", initial: "A", color: "#06b6d4" },
+      { name: "Meera Nair", text: "Our real estate cloud application is seamless and efficient. The features helped us generate more leads and improve operations.", initial: "M", color: "#2563eb" },
+      { name: "Siddharth Malhotra", text: "The application feels premium and performs without any issues. Their cloud development expertise is truly impressive.", initial: "S", color: "#10b981" },
+      { name: "Kavya Reddy", text: "Our LMS cloud platform is highly interactive and scalable. The development improved the overall learning experience.", initial: "K", color: "#8b5cf6" },
+      { name: "Naveen Kumar", text: "The healthcare cloud application is secure, reliable, and easy to use. Managing patient data is now seamless.", initial: "N", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Move Your Business<br />to the Cloud?
+      </>
+    ),
+    description: "Let’s build scalable solutions with our cloud based development services.",
+    buttonText: "Start Your Cloud Journey",
+    brandText: "Vihaan Cloud Solutions"
+  }
+};
+
+export const devopsFullServiceData = {
+  hero: {
+    title: "DevOps Services Company for Faster Development and Reliable Deployment",
+    subtitle: "We help you improve development speed and system reliability using DevOps services and automation solutions.",
+    badgeText: "Improve your development process and deliver faster. ⚙️",
+    buttonText: "Start DevOps Implementation",
+    features: [
+      { icon: BusinessCenterIcon, text: "DevOps services company support" },
+      { icon: BusinessCenterIcon, text: "DevOps automation services" },
+      { icon: BusinessCenterIcon, text: "Continuous integration and delivery" },
+      { icon: BusinessCenterIcon, text: "Infrastructure automation" },
+      { icon: BusinessCenterIcon, text: "Monitoring and performance" },
+      { icon: BusinessCenterIcon, text: "Faster deployment cycles" },
+    ]
+  },
+
+  overview: {
+    subtitle: "DEVOPS DEVELOPMENT COMPANY",
+    title: "Complete DevOps Services for Business Efficiency",
+    description: "As a DevOps development company, we provide solutions that improve collaboration, automation, and delivery speed.",
+    list: [
+      { title: "CI/CD Setup", icon: BusinessCenterIcon, count: "Pipeline Automation", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We implement continuous integration and delivery pipelines." },
+      { title: "Infrastructure Automation", icon: BusinessCenterIcon, count: "Efficiency Boost", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We automate infrastructure for better efficiency." },
+      { title: "Monitoring & Logging", icon: BusinessCenterIcon, count: "System Health", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We track system performance and issues." },
+      { title: "Cloud DevOps", icon: BusinessCenterIcon, count: "Cloud Management", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We manage DevOps on cloud platforms." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "FASTER DELIVERY",
+    title: "End-to-End DevOps Services Company Solutions for Faster Delivery",
+    description: "Our DevOps automation services cover planning, implementation, and optimization for better performance.",
+    services: [
+      {
+        title: "DEVOPS SOLUTIONS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Assessment", desc: "We analyze your current system.", icon: <BusinessCenterIcon /> },
+          { title: "Planning", desc: "We design DevOps strategies.", icon: <BusinessCenterIcon /> },
+          { title: "Implementation", desc: "We set up tools and pipelines.", icon: <BusinessCenterIcon /> },
+          { title: "Optimization", desc: "We improve system performance.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY DEVOPS WITH US",
+    title: "Why Choose Our DevOps Services Company for Better Performance",
+    description: "We focus on delivering DevOps automation services that improve speed, reliability, and efficiency.",
+    stats: [
+      { value: "100+", label: "DevOps Projects" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Automation Focused", icon: BusinessCenterIcon, desc: "We reduce manual work with automation.", color: "#2563eb", number: "01" },
+      { title: "Faster Delivery", icon: BusinessCenterIcon, desc: "We speed up deployment cycles.", color: "#06b6d4", number: "02" },
+      { title: "Reliable Systems", icon: BusinessCenterIcon, desc: "We improve system stability.", color: "#4f46e5", number: "03" },
+      { title: "Continuous Improvement", icon: BusinessCenterIcon, desc: "We optimize performance regularly.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "CONTINUOUS DELIVERY",
+    title: "Our DevOps Services Company Process for Continuous Delivery",
+    description: "As a DevOps development company, we follow a structured process to deliver efficient DevOps automation services.",
+    processSteps: [
+      { number: "01", title: "System Assessment", desc: "We analyze your current setup.", checks: ["Identify gaps", "Review workflows", "Understand needs"], position: "above" },
+      { number: "02", title: "Strategy Planning", desc: "We plan DevOps implementation.", checks: ["Define pipelines", "Choose tools", "Set goals"], position: "below" },
+      { number: "03", title: "Automation Setup", desc: "We implement automation solutions.", checks: ["CI/CD pipelines", "Infrastructure automation", "Deployment setup"], position: "above" },
+      { number: "04", title: "Integration", desc: "We integrate tools and systems.", checks: ["Connect tools", "Improve workflows", "Ensure compatibility"], position: "below" },
+      { number: "05", title: "Monitoring", desc: "We track system performance.", checks: ["Monitor logs", "Identify issues", "Improve uptime"], position: "above" },
+      { number: "06", title: "Optimization", desc: "We improve DevOps services continuously.", checks: ["Enhance performance", "Reduce errors", "Improve delivery"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "DEVOPS ACROSS INDUSTRIES",
+    title: "DevOps Solutions Across Industries",
+    description: "As a leading DevOps services company, we deliver industry-specific infrastructure solutions that enhance scalability and automate workflows.",
+    industries: {
+      0: {
+        title: "Real Estate",
+        desc: "We implement DevOps solutions for real estate platforms to ensure high availability, fast performance, and seamless property management systems.",
+        desc1: "Optimizing real estate systems with automated deployments, improved uptime, and reliable performance.",
+        checks: ["Property Platform Deployment", "Scalable Infrastructure", "Continuous Monitoring", "Secure Data Management"],
+        cards: [
+          { title: "Platform Stability", desc: "Highly available infrastructure for uninterrupted user experience." },
+          { title: "Scalable Systems", desc: "Handle growing property listings and user traffic easily." },
+          { title: "Monitoring & Alerts", desc: "Real-time monitoring with instant issue detection." },
+          { title: "Data Security", desc: "Secure handling of property and user data." }
+        ]
+      },
+      1: {
+        title: "Listing Site",
+        desc: "Our DevOps services for listing platforms ensure smooth deployments, high scalability, and optimized performance for better user engagement.",
+        desc1: "Building scalable listing platforms with automated workflows and seamless performance.",
+        checks: ["CI/CD Pipelines", "Auto Scaling Infrastructure", "Performance Optimization", "Cloud Deployment"],
+        cards: [
+          { title: "Auto Scaling", desc: "Dynamically scale resources based on traffic demand." },
+          { title: "Fast Deployment", desc: "Continuous integration and delivery for quick updates." },
+          { title: "Performance Optimization", desc: "Ensure fast loading and smooth browsing experience." },
+          { title: "System Reliability", desc: "Minimize downtime with robust DevOps practices." }
+        ]
+      },
+      2: {
+        title: "Education CRM",
+        desc: "We deliver DevOps solutions for education CRM platforms to improve system efficiency, automate processes, and ensure seamless user experience.",
+        desc1: "Enhancing education platforms with scalable infrastructure, automation, and reliable system performance.",
+        checks: ["CRM Deployment Automation", "Data Management Systems", "Continuous Integration", "Performance Monitoring"],
+        cards: [
+          { title: "CRM Automation", desc: "Automate workflows for student and admin processes." },
+          { title: "System Monitoring", desc: "Track system performance and resolve issues proactively." },
+          { title: "Scalable Infrastructure", desc: "Support growing student data and platform usage." },
+          { title: "Secure Data Handling", desc: "Ensure protection of sensitive student information." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Real Estate", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Listing Site", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Education CRM", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "DevOps Excellence & Quality",
+    list: [
+      { title: "Top DevOps Agency", body: "GoodFirms", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Automation Leader", body: "G2 Crowd", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "ISO 27001 Certified", body: "Security Mgmt", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+      { title: "Deployment Award", body: "Tech Awards", year: "2024", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Top Specialist", body: "Clutch.co", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for DevOps Automation Services",
+    title: "Automation Tools",
+    description: "We use modern tools to deliver reliable DevOps services and automation solutions.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Jenkins", "GitHub Actions", "GitLab CI", "CircleCI"] },
+      { row: 2, direction: "right", speed: "28s", items: ["Docker", "Kubernetes", "Ansible", "Terraform", "Prometheus", "Grafana"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "CLIENT TRUST",
+    title: "What Clients Say About Our DevOps Services Company",
+    rating: "4.9/5",
+    reviews: "680+",
+    list: [
+      { name: "Arvind Kumar", text: "Vihaan delivered our DevOps implementation ahead of schedule. The solution perfectly aligned with our infrastructure needs and performs flawlessly.", initial: "A", color: "#2563eb" },
+      { name: "Nitin Bansal", text: "Their DevOps approach helped us streamline deployments and reduce infrastructure costs. The system is fast, secure, and highly reliable.", initial: "N", color: "#10b981" },
+      { name: "Gaurav Sharma", text: "Our cloud infrastructure now handles high traffic effortlessly. The scalability and performance improvements are remarkable.", initial: "G", color: "#8b5cf6" },
+      { name: "Sanjay Nair", text: "The DevOps strategy solved critical scalability and deployment challenges. Their team ensured top-notch security and uptime.", initial: "S", color: "#f59e0b" },
+      { name: "Ritika Deshmukh", text: "The CI/CD pipelines and workflows are extremely efficient. Our release cycles are now faster and more reliable.", initial: "R", color: "#ec4899" },
+      { name: "Karan Mehta", text: "Vihaan built a scalable DevOps pipeline tailored to our business. Automation has saved us significant time and effort.", initial: "K", color: "#06b6d4" },
+      { name: "Divya Iyer", text: "Our infrastructure is now seamless and efficient. DevOps practices helped us improve performance and system reliability.", initial: "D", color: "#2563eb" },
+      { name: "Aakash Verma", text: "The system performs flawlessly with zero downtime. Their DevOps expertise is truly impressive.", initial: "A", color: "#10b981" },
+      { name: "Shreya Kapoor", text: "Our platform is now highly scalable and stable. Continuous integration and deployment improved our delivery speed.", initial: "S", color: "#8b5cf6" },
+      { name: "Praveen Reddy", text: "The healthcare system is now secure, reliable, and easy to manage. DevOps implementation made operations seamless.", initial: "P", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Improve Your Workflow<br />with DevOps Services?
+      </>
+    ),
+    description: "Let’s implement DevOps automation services to speed up your development and deployment.",
+    buttonText: "Optimize Your DevOps Now",
+    brandText: "Vihaan DevOps Solutions"
+  }
+};
+
+export const dataScienceFullServiceData = {
+  hero: {
+    title: "Data Science and Big Data Analytics Services for Better Business Decisions",
+    subtitle: "We help you understand your data using data science and big data analytics services that provide useful insights for your business growth.",
+    badgeText: "Turn your data into actionable insights. 📊",
+    buttonText: "Start Data Analytics",
+    features: [
+      { icon: BusinessCenterIcon, text: "Data science and big data analytics" },
+      { icon: BusinessCenterIcon, text: "Big data analytics services" },
+      { icon: BusinessCenterIcon, text: "Data visualization solutions" },
+      { icon: BusinessCenterIcon, text: "Predictive analytics models" },
+      { icon: BusinessCenterIcon, text: "Business intelligence tools" },
+      { icon: BusinessCenterIcon, text: "Data-driven growth strategies" },
+    ]
+  },
+
+  overview: {
+    subtitle: "DATA ANALYTICS AGENCY",
+    title: "Complete Data Science and Big Data Services for Growth",
+    description: "As a data science agency, we help you analyze large sets of data to improve business performance and decision-making.",
+    list: [
+      { title: "Data Analysis", icon: BusinessCenterIcon, count: "Smart Insights", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We analyze your data to find patterns and trends." },
+      { title: "Big Data Solutions", icon: BusinessCenterIcon, count: "Large Scale", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We manage and process large amounts of data." },
+      { title: "Predictive Modeling", icon: BusinessCenterIcon, count: "Future Trends", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We build models to predict future outcomes." },
+      { title: "Data Visualization", icon: BusinessCenterIcon, count: "Clear Charts", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We create easy-to-understand charts and reports." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "SMART DATA",
+    title: "End-to-End Data Science and Big Data Analytics Solutions",
+    description: "Our big data analytics services cover data gathering, analysis, and reporting for better results.",
+    services: [
+      {
+        title: "ANALYTICS SOLUTIONS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Data Collection", desc: "We gather data from various sources.", icon: <BusinessCenterIcon /> },
+          { title: "Data Processing", desc: "We clean and prepare your data.", icon: <BusinessCenterIcon /> },
+          { title: "Smart Analysis", desc: "We find useful insights in data.", icon: <BusinessCenterIcon /> },
+          { title: "Reporting", desc: "We provide easy-to-read reports.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY DATA WITH US",
+    title: "Why Choose Our Data Science and Big Data Analytics Services",
+    description: "We focus on delivering big data analytics services that are simple, scalable, and provide real value to your business.",
+    stats: [
+      { value: "500TB+", label: "Data Processed" },
+      { value: "95%", label: "Accuracy Rate" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Expert Analysis", icon: BusinessCenterIcon, desc: "We find hidden patterns in your data.", color: "#2563eb", number: "01" },
+      { title: "Fast Processing", icon: BusinessCenterIcon, desc: "We process big data quickly.", color: "#06b6d4", number: "02" },
+      { title: "Clear Insights", icon: BusinessCenterIcon, desc: "We provide easy-to-understand results.", color: "#4f46e5", number: "03" },
+      { title: "Smart Decisions", icon: BusinessCenterIcon, desc: "We help you make better business moves.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "DATA WORKFLOW",
+    title: "Our Data Science and Big Data Analytics Process for Better Results",
+    description: "As a data science agency, we follow a structured process to deliver reliable data science and big data analytics services.",
+    processSteps: [
+      { number: "01", title: "Data Gathering", desc: "We collect data from multiple sources.", checks: ["Database connection", "Data extraction", "API integration"], position: "above" },
+      { number: "02", title: "Data Cleaning", desc: "We prepare data for analysis.", checks: ["Remove errors", "Format data", "Ensure quality"], position: "below" },
+      { number: "03", title: "Advanced Analysis", desc: "We find patterns and trends.", checks: ["Statistical analysis", "Data mining", "Trend spotting"], position: "above" },
+      { number: "04", title: "Predictive Modeling", desc: "We build models for future trends.", checks: ["AI algorithms", "Pattern prediction", "Model testing"], position: "below" },
+      { number: "05", title: "Visualization", desc: "We create clear reports and charts.", checks: ["Dashboard setup", "Graphic reports", "Data stories"], position: "above" },
+      { number: "06", title: "Insight Delivery", desc: "We provide actionable business insights.", checks: ["Final report", "Business advice", "Continuous monitoring"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "DATA ACROSS INDUSTRIES",
+    title: "Data Solutions Across Industries",
+    description: "As a premier data science agency, we deliver tailored big data analytics services that drive innovation and efficiency in diverse sectors.",
+    industries: {
+      0: {
+        title: "Matrimony",
+        desc: "We leverage data science and big data analytics for matrimony platforms to improve matchmaking accuracy and user engagement through smart algorithms.",
+        desc1: "Enhancing matchmaking platforms with predictive analytics, personality matching, and behavioral insights.",
+        checks: ["Matchmaking Algorithms", "User Behavior Analysis", "Preference Prediction", "Engagement Optimization"],
+        cards: [
+          { title: "Smart Matchmaking", desc: "AI-driven algorithms for highly accurate property matches." },
+          { title: "User Insights", desc: "Understand user preferences and improve service delivery." },
+          { title: "Churn Prediction", desc: "Identify users likely to leave and improve retention." },
+          { title: "Personalized Content", desc: "Tailor experiences based on user search and interaction history." }
+        ]
+      },
+      1: {
+        title: "HRM Software",
+        desc: "Our data analytics services for HRM software provide deep insights into employee performance, retention, and workforce planning.",
+        desc1: "Optimizing human resource management with data-driven performance tracking and predictive hiring models.",
+        checks: ["Performance Analytics", "Employee Retention Models", "Workforce Planning", "Hiring Insights"],
+        cards: [
+          { title: "Performance Metrics", desc: "Track and analyze employee performance with clear data points." },
+          { title: "Retention Analysis", desc: "Predict employee turnover and implement retention strategies." },
+          { title: "Smart Hiring", desc: "Use data to identify the best candidates and improve hiring quality." },
+          { title: "Resource Allocation", desc: "Optimize workforce distribution based on project needs." }
+        ]
+      },
+      2: {
+        title: "Hospital Management",
+        desc: "We deliver data science solutions for hospital management to improve patient outcomes, optimize resource allocation, and enhance operational efficiency.",
+        desc1: "Transforming healthcare with predictive patient analytics and streamlined hospital operations.",
+        checks: ["Patient Outcome Prediction", "Resource Optimization", "Healthcare Data Analysis", "Operational Insights"],
+        cards: [
+          { title: "Patient Insights", desc: "Analyze patient data to improve treatment and care quality." },
+          { title: "Resource Management", desc: "Optimize hospital resources including beds, staff, and equipment." },
+          { title: "Efficiency Tracking", desc: "Improve hospital operations with data-driven workflow analysis." },
+          { title: "Secure Analytics", desc: "Ensure patient data privacy while extracting valuable insights." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Matrimony", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "HRM Software", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Hospital Management", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Data Excellence & Innovation",
+    list: [
+      { title: "Top AI Agency", body: "GoodFirms", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Analytics Leader", body: "G2 Crowd", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "ISO 27001 Certified", body: "Data Security", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+      { title: "Insight Award", body: "Data Summit", year: "2024", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Top Partner", body: "Clutch.co", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for Big Data Analytics Services",
+    title: "Analytics Technologies",
+    description: "We use modern tools to deliver reliable data science and big data analytics services.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Python", "R Language", "Tableau", "Power BI", "Apache Spark"] },
+      { row: 2, direction: "right", speed: "28s", items: ["Hadoop", "TensorFlow", "Pandas", "Scikit-Learn", "HBase", "Cassandra"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "CLIENT TRUST",
+    title: "What Clients Say About Our Data Science Agency",
+    rating: "4.9/5",
+    reviews: "560+",
+    list: [
+      { name: "Sanjay Gupta", text: "Vihaan provided insights that transformed our business strategy. Their big data analytics services are truly world-class.", initial: "S", color: "#2563eb" },
+      { name: "Anjali Verma", text: "The predictive models helped us anticipate market trends accurately. Their data science expertise is impressive.", initial: "A", color: "#10b981" },
+      { name: "Rahul Sharma", text: "Their data visualization dashboards are incredibly clear and useful for our daily operations. Decision making is now much faster.", initial: "R", color: "#8b5cf6" },
+      { name: "Preeti Nair", text: "The analysis of our customer data revealed hidden patterns we never noticed. Our marketing ROI has since improved significantly.", initial: "P", color: "#f59e0b" },
+      { name: "Amitabh Shah", text: "Vihaan's team handled our big data challenges with ease. The scalability and speed of their solutions are remarkable.", initial: "A", color: "#ec4899" },
+      { name: "Megha Rao", text: "The data-driven insights allowed us to optimize our supply chain efficiently. We've seen a noticeable reduction in costs.", initial: "M", color: "#06b6d4" },
+      { name: "Rajiv Malhotra", text: "Professional, knowledgeable, and reliable. Their big data analytics services have been a game-changer for our platform.", initial: "R", color: "#2563eb" },
+      { name: "Nisha Kapoor", text: "The predictive hiring model significantly improved our recruitment quality. Their data science solutions are very effective.", initial: "N", color: "#10b981" },
+      { name: "Kunal Jain", text: "Our hospital management system is now much more efficient thanks to their resource optimization analysis.", initial: "K", color: "#8b5cf6" },
+      { name: "Swati Reddy", text: "The matrimony matching algorithm is now more accurate, leading to better user satisfaction. Great work by the data science team.", initial: "S", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Unlock Your Business<br />Data with Analytics?
+      </>
+    ),
+    description: "Let’s turn your data into smart insights with our big data analytics services.",
+    buttonText: "Get Your Data Analysis now",
+    brandText: "Vihaan Data Insights"
+  }
+};
+
+export const ecommerceFullServiceData = {
+  hero: {
+    title: "Ecommerce Website Development Services to Build High-Conversion Online Stores",
+    subtitle: "We create secure and scalable online stores using ecommerce website development services that help your business sell more and grow online.",
+    badgeText: "Build an online store that drives sales and growth. 🛒",
+    buttonText: "Start Your Online Store",
+    features: [
+      { icon: BusinessCenterIcon, text: "Ecommerce website development" },
+      { icon: BusinessCenterIcon, text: "Online store development services" },
+      { icon: BusinessCenterIcon, text: "Custom ecommerce solutions" },
+      { icon: BusinessCenterIcon, text: "Secure payment integration" },
+      { icon: BusinessCenterIcon, text: "User-friendly shopping experience" },
+      { icon: BusinessCenterIcon, text: "Ongoing support and maintenance" },
+    ]
+  },
+
+  overview: {
+    subtitle: "ECOMMERCE DEVELOPMENT AGENCY",
+    title: "Complete Ecommerce Development Services for Business Growth",
+    description: "As an ecommerce website development agency, we provide solutions that improve user experience and increase online sales.",
+    list: [
+      { title: "Custom Store Design", icon: BusinessCenterIcon, count: "Unique Looks", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We create modern and attractive online stores." },
+      { title: "Shopping Cart Dev", icon: BusinessCenterIcon, count: "Smooth Buying", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We build easy-to-use shopping cart systems." },
+      { title: "Payment Integration", icon: BusinessCenterIcon, count: "Secure Paying", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We connect secure payment methods to your store." },
+      { title: "Store Maintenance", icon: BusinessCenterIcon, count: "Always Open", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We support and update your store regularly." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "SELL ONLINE",
+    title: "End-to-End Ecommerce Website Development Solutions",
+    description: "Our ecommerce development services cover planning, design, and development for better results.",
+    services: [
+      {
+        title: "ECOMMERCE SOLUTIONS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Requirement Analysis", desc: "We understand your selling needs.", icon: <BusinessCenterIcon /> },
+          { title: "Store Design", desc: "We create attractive store layouts.", icon: <BusinessCenterIcon /> },
+          { title: "Development", desc: "We build your online store.", icon: <BusinessCenterIcon /> },
+          { title: "Launch & Support", desc: "We launch your store and provide help.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY ECOMMERCE WITH US",
+    title: "Why Choose Our Ecommerce Website Development Agency",
+    description: "We focus on delivering ecommerce website development solutions that are simple, scalable, and secure.",
+    stats: [
+      { value: "200+", label: "Stores Launched" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "User-Friendly Design", icon: BusinessCenterIcon, desc: "We make shopping easy for your users.", color: "#2563eb", number: "01" },
+      { title: "Scalable Platforms", icon: BusinessCenterIcon, desc: "We build stores that grow with you.", color: "#06b6d4", number: "02" },
+      { title: "Secure Checkout", icon: BusinessCenterIcon, desc: "We ensure safe and reliable payments.", color: "#4f46e5", number: "03" },
+      { title: "Business Growth", icon: BusinessCenterIcon, desc: "We help you reach more customers.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "SALES WORKFLOW",
+    title: "Our Ecommerce Website Development Process for Efficient Sales",
+    description: "As an ecommerce website development agency, we follow a structured process to deliver reliable ecommerce development services.",
+    processSteps: [
+      { number: "01", title: "Requirement Gathering", desc: "We understand your product and goals.", checks: ["Identify target audience", "Define store features", "Understand business model"], position: "above" },
+      { number: "02", title: "UX/UI Design", desc: "We design a high-converting store.", checks: ["Plan user journey", "Create wireframes", "Design visuals"], position: "below" },
+      { number: "03", title: "Store Development", desc: "We build your ecommerce platform.", checks: ["Backend development", "Frontend implementation", "Integrations"], position: "above" },
+      { number: "04", title: "Integration & Testing", desc: "We ensure everything works smoothly.", checks: ["Payment gateway setup", "Security checks", "Bug testing"], position: "below" },
+      { number: "05", title: "Launch", desc: "We go live with your online store.", checks: ["Final configuration", "Server setup", "Official launch"], position: "above" },
+      { number: "06", title: "Optimization & Support", desc: "We help you grow your store.", checks: ["Monitor performance", "Ongoing maintenance", "Improvements based on data"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "ECOMMERCE ACROSS INDUSTRIES",
+    title: "Ecommerce Solutions Across Industries",
+    description: "As a premier ecommerce website development agency, we deliver tailored online store solutions that drive sales and improve user experiences in diverse sectors.",
+    industries: {
+      0: {
+        title: "Food Ordering",
+        desc: "We build ecommerce platforms for food ordering with real-time performance, smooth ordering flows, and high scalability for better user experiences.",
+        desc1: "Designing fast-loading food platforms with seamless navigation and reliable performance.",
+        checks: ["Online Menu Management", "Order Tracking System", "User Dashboards", "Secure Payment Gateway"],
+        cards: [
+          { title: "Menu Discovery", desc: "Easy-to-use menu browsing with filters and categories." },
+          { title: "Ordering Flow", desc: "Simplified ordering process for faster user checkout." },
+          { title: "Order Tracking", desc: "Real-time updates to keep customers informed." },
+          { title: "Payment Integration", desc: "Highly secure and reliable food ordering payments." }
+        ]
+      },
+      1: {
+        title: "Real Estate",
+        desc: "Our ecommerce website development services for real estate platforms ensure high availability, fast performance, and seamless property management.",
+        desc1: "Building scalable real estate platforms with automated workflows and reliable performance.",
+        checks: ["Property Listing System", "User Engagement Tools", "Search & Filter Analytics", "Payment Integration Options"],
+        cards: [
+          { title: "Property Showcase", desc: "Attractive listings that convert visitors into leads." },
+          { title: "Smart Filters", desc: "Advanced searches to help users find what they need." },
+          { title: "Lead Management", desc: "Integrated tools to handle and track user inquiries." },
+          { title: "Secure Transactions", desc: "Safe handling of bookings and payments." }
+        ]
+      },
+      2: {
+        title: "Education",
+        desc: "We deliver ecommerce solutions for education platforms to improve system efficiency, automate course sales, and ensure seamless student experiences.",
+        desc1: "Enhancing education platforms with reliable infrastructure, automation, and powerful performance.",
+        checks: ["Course Enrollment System", "Data Management Tools", "Student Dashboards", "Secure Payment Integration"],
+        cards: [
+          { title: "Course Sales", desc: "Streamlined enrollment process for improved conversions." },
+          { title: "User Monitoring", desc: "Track student engagement and platform performance." },
+          { title: "Scalable Learning", desc: "Support growing student numbers and course data." },
+          { title: "Stable Integration", desc: "Seamless connection with LMS and payment gateways." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Food Ordering", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Real Estate", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Education", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Ecommerce Excellence & Conversion",
+    list: [
+      { title: "Top Ecom Agency", body: "GoodFirms", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Conversion Leader", body: "G2 Crowd", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "ISO 9001 Certified", body: "Quality Mgmt", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+      { title: "UX/UI Design", body: "Design Awards", year: "2024", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Top Shopify Partner", body: "Ecommerce", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for Ecommerce Website Development Services",
+    title: "Modern Online Stores",
+    description: "We use modern platforms and tools to deliver reliable ecommerce website development and online store development services.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Shopify", "Magento", "WooCommerce", "BigCommerce"] },
+      { row: 2, direction: "right", speed: "28s", items: ["React JS", "Node.js", "MySQL", "Stripe", "PayPal", "Cloudflare"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "CLIENT TRUST",
+    title: "What Clients Say About Our Ecommerce Website Development Agency",
+    rating: "4.9/5",
+    reviews: "910+",
+    list: [
+      { name: "Rahul Soni", text: "Vihaan delivered our ecommerce store ahead of schedule. The solution was perfectly aligned with our business requirements and performs flawlessly.", initial: "R", color: "#2563eb" },
+      { name: "Suresh Patel", text: "Their ecommerce development approach helped us increase our online sales significantly. The website is fast, secure, and highly reliable.", initial: "S", color: "#10b981" },
+      { name: "Anita Rao", text: "Our online store handles heavy festive traffic without any issues. The user experience and conversion rate have improved greatly.", initial: "A", color: "#8b5cf6" },
+      { name: "Vikas Malhotra", text: "The custom features built by Vihaan solved critical payment and shipping challenges. Their development team ensured top-notch security.", initial: "V", color: "#f59e0b" },
+      { name: "Priya Sharma", text: "The store dashboard and management system are extremely intuitive. Managing products and orders is now very easy.", initial: "P", color: "#ec4899" },
+      { name: "Aditya Hegde", text: "Vihaan developed a tailored ecommerce solution that perfectly fits our brand. Automation features saved us a lot of time.", initial: "A", color: "#06b6d4" },
+      { name: "Nikita Jain", text: "Our real estate lead platform is seamless and efficient. Ecommerce features helped us generate more reliable inquiries.", initial: "N", color: "#2563eb" },
+      { name: "Sameer Verma", text: "The online store feels premium and performs flawlessly. Their ecommerce expertise is truly impressive.", initial: "S", color: "#10b981" },
+      { name: "Kavita Reddy", text: "Our educational course platform is now highly interactive and profitable. The development improved the overall student enrollment experience.", initial: "K", color: "#8b5cf6" },
+      { name: "Ravi Teja", text: "The food ordering system built by Vihaan is fast, reliable, and user-friendly. Managing deliveries and payments is now seamless.", initial: "R", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Build a High-Conversion<br />Online Store?
+      </>
+    ),
+    description: "Let’s create tailored ecommerce solutions with our ecommerce website development services.",
+    buttonText: "Start My Ecommerce Project",
+    brandText: "Vihaan Ecommerce Solutions"
+  }
+};
+
+export const aiMlFullServiceData = {
+  hero: {
+    title: "AI & ML Development Services to Build Intelligent and Automated Business Solutions",
+    subtitle: "We create smart software using AI & ML development services that help your business automate tasks and make better decisions.",
+    badgeText: "Transform your business with intelligent AI solutions. 🤖",
+    buttonText: "Start AI Development",
+    features: [
+      { icon: BusinessCenterIcon, text: "AI & ML development services" },
+      { icon: BusinessCenterIcon, text: "Artificial Intelligence solutions" },
+      { icon: BusinessCenterIcon, text: "Machine Learning models" },
+      { icon: BusinessCenterIcon, text: "Automated business processes" },
+      { icon: BusinessCenterIcon, text: "Smart data analysis" },
+      { icon: BusinessCenterIcon, text: "Custom AI applications" },
+    ]
+  },
+
+  overview: {
+    subtitle: "AI DEVELOPMENT AGENCY",
+    title: "Complete AI & ML Development Services for Business Growth",
+    description: "As an AI development agency, we provide solutions that improve efficiency, automation, and smart decision-making.",
+    list: [
+      { title: "AI Application Dev", icon: BusinessCenterIcon, count: "Smart Apps", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We build applications powered by AI." },
+      { title: "ML Model Training", icon: BusinessCenterIcon, count: "Smart Models", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We train models to learn from your data." },
+      { title: "Natural Language", icon: BusinessCenterIcon, count: "Text Analysis", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We create systems that understand language." },
+      { title: "AI Support", icon: BusinessCenterIcon, count: "Smart Help", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We provide ongoing support for AI systems." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "SMART AUTOMATION",
+    title: "End-to-End AI & ML Development Solutions from Idea to Execution",
+    description: "Our AI & ML development services cover planning, development, and optimization for better results.",
+    services: [
+      {
+        title: "AI SOLUTIONS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Requirement Analysis", desc: "We understand your AI needs.", icon: <BusinessCenterIcon /> },
+          { title: "Model Design", desc: "We design AI and ML models.", icon: <BusinessCenterIcon /> },
+          { title: "Development", desc: "We build smart AI solutions.", icon: <BusinessCenterIcon /> },
+          { title: "Launch & Support", desc: "We launch and improve AI systems.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY AI WITH US",
+    title: "Why Choose Our AI & ML Development Agency",
+    description: "We focus on delivering AI & ML development solutions that are smart, scalable, and efficient.",
+    stats: [
+      { value: "50+", label: "AI Models Built" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Advanced AI", icon: BusinessCenterIcon, desc: "We use the latest AI technologies.", color: "#2563eb", number: "01" },
+      { title: "Smart Automation", icon: BusinessCenterIcon, desc: "We automate complex business tasks.", color: "#06b6d4", number: "02" },
+      { title: "Data Driven", icon: BusinessCenterIcon, desc: "We make decisions based on smart data.", color: "#4f46e5", number: "03" },
+      { title: "Scalable Systems", icon: BusinessCenterIcon, desc: "We build AI solutions that grow.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "SMART WORKFLOW",
+    title: "Our AI & ML Development Process for Better Performance",
+    description: "As an AI development agency, we follow a structured process to deliver reliable AI & ML development services.",
+    processSteps: [
+      { number: "01", title: "Problem Identification", desc: "We find areas where AI can help.", checks: ["Analyze business flow", "Identify AI goals", "Define success metrics"], position: "above" },
+      { number: "02", title: "Data Preparation", desc: "We clean and prepare your data.", checks: ["Data gathering", "Data cleaning", "Feature engineering"], position: "below" },
+      { number: "03", title: "Model Development", desc: "We train smart ML models.", checks: ["Algorithm selection", "Model training", "Performance testing"], position: "above" },
+      { number: "04", title: "AI Integration", desc: "We connect AI to your platform.", checks: ["API integration", "Backend setup", "System testing"], position: "below" },
+      { number: "05", title: "Deployment", desc: "We launch your AI solution.", checks: ["Cloud setup", "Official release", "User training"], position: "above" },
+      { number: "06", title: "Improvement", desc: "We improve AI systems regularly.", checks: ["Monitor results", "Retrain models", "Enhance performance"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "AI ACROSS INDUSTRIES",
+    title: "AI Solutions Across Industries",
+    description: "As a premier AI development agency, we deliver tailored machine learning and artificial intelligence solutions that transform operations across diverse sectors.",
+    industries: {
+      0: {
+        title: "Cab Booking",
+        desc: "We build AI-powered cab booking applications with real-time route optimization, demand prediction, and automated pricing for better efficiency.",
+        desc1: "Designing smart transit platforms with predictive analytics and seamless user experiences.",
+        checks: ["Route Optimization AI", "Demand Forecasting", "Automated Pricing Models", "User Personalization"],
+        cards: [
+          { title: "Smart Routes", desc: "AI-driven route planning for faster and cheaper trips." },
+          { title: "Demand Prediction", desc: "Predict high-demand areas to optimize driver distribution." },
+          { title: "Dynamic Pricing", desc: "Automated pricing based on real-time traffic and demand." },
+          { title: "Personalized Offers", desc: "Tailor user experiences with smart recommendations." }
+        ]
+      },
+      1: {
+        title: "E-Commerce",
+        desc: "Our AI solutions for eCommerce platforms provide deep insights into user behavior, personalized product recommendations, and automated customer support.",
+        desc1: "Enhancing online stores with AI-driven personalization and automated shopping experiences.",
+        checks: ["Recommendation Engine", "Visual Search Tools", "Inventory Forecasting", "Churn Analysis"],
+        cards: [
+          { title: "Smart Recs", desc: "Personalized product suggestions that increase sales." },
+          { title: "Visual Search", desc: "Let users find products using images and smart AI." },
+          { title: "Inventory Prediction", desc: "Predict stock needs to avoid overstock or shortages." },
+          { title: "Customer Analysis", desc: "Understand shopper behavior to improve marketing ROI." }
+        ]
+      },
+      2: {
+        title: "LMS (Learning Management System)",
+        desc: "We deliver ML-powered LMS platforms that offer personalized learning paths, automated grading, and smart student performance tracking.",
+        desc1: "Transforming education with adaptive learning experiences and automated administrative tasks.",
+        checks: ["Adaptive Learning Paths", "Automated Grading", "Performance Prediction", "Smart Content Curation"],
+        cards: [
+          { title: "Adaptive Learning", desc: "Tailor educational content to each student's pace and style." },
+          { title: "Automated Grading", desc: "AI-powered assessment systems for faster feedback." },
+          { title: "Smart Dashboards", desc: "Track student progress with predictive performance insights." },
+          { title: "Content Analysis", desc: "Automatically organize and recommend relevant learning materials." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Cab Booking", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "E-Commerce", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "LMS", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "AI Excellence & Innovation",
+    list: [
+      { title: "Top ML Agency", body: "GoodFirms", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Innovation Leader", body: "G2 Crowd", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "ISO 27001 Certified", body: "Data Security", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+      { title: "Smart Tech Award", body: "AI Summit", year: "2024", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Top AI Specialist", body: "Clutch.co", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for AI & ML Development Services",
+    title: "Intelligent Technologies",
+    description: "We use modern AI and ML frameworks to deliver reliable and automated business solutions.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Python", "TensorFlow", "PyTorch", "Keras", "OpenCV"] },
+      { row: 2, direction: "right", speed: "28s", items: ["Scikit-Learn", "NLTK", "Hadoop", "Pandas", "AWS SageMaker", "Google Vertex AI"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "CLIENT TRUST",
+    title: "What Clients Say About Our AI & ML Development Agency",
+    rating: "4.9/5",
+    reviews: "480+",
+    list: [
+      { name: "Rahul Deshmukh", text: "Vihaan delivered our AI solution ahead of schedule. The machine learning models are incredibly accurate and have helped automate our complex workflows.", initial: "R", color: "#2563eb" },
+      { name: "Sanya Gupta", text: "Their AI development approach helped us improve decision-making speed significantly. The system is fast, secure, and highly reliable.", initial: "S", color: "#10b981" },
+      { name: "Aditya Hegde", text: "Our smart recommendation engine increased our e-commerce sales by 30%. Their AI expertise is truly world-class.", initial: "A", color: "#8b5cf6" },
+      { name: "Nitin Bansal", text: "The demand forecasting model solved critical inventory challenges. Their development team ensured top-notch performance and accuracy.", initial: "N", color: "#f59e0b" },
+      { name: "Ritika Rao", text: "The NLP systems and automated chatbots are extremely intuitive and have improved our customer engagement levels.", initial: "R", color: "#ec4899" },
+      { name: "Karan Iyer", text: "Vihaan developed a tailored ML application that perfectly fits our ride-sharing business. Automation has saved us a lot of effort.", initial: "K", color: "#06b6d4" },
+      { name: "Divya Reddy", text: "Our educational platform is now adaptive and smart. AI features helped us improve student retention and performance.", initial: "D", color: "#2563eb" },
+      { name: "Aakash Mehta", text: "The AI system feels premium and performs flawlessly. Their machine learning expertise is truly impressive.", initial: "A", color: "#10b981" },
+      { name: "Megha Sharma", text: "Our data analysis is now fully automated and much more accurate. Smart insights are now just a click away.", initial: "M", color: "#8b5cf6" },
+      { name: "Praveen Kumar", text: "The healthcare AI model is secure, reliable, and provides highly accurate diagnostic insights. A great partner for AI development.", initial: "P", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Automate Your Business<br />with AI Solutions?
+      </>
+    ),
+    description: "Let’s create intelligent systems with our AI & ML development services.",
+    buttonText: "Start My AI Journey",
+    brandText: "Vihaan AI Solutions"
+  }
+};
+
+export const seoFullServiceData = {
+  hero: {
+    title: "SEO Optimization Company for Better Rankings and Website Growth",
+    subtitle: "We help your website rank higher, attract the right audience, and grow your business with our search engine optimization services.",
+    badgeText: "To increase organic traffic through enhanced visibility. 📈",
+    buttonText: "Get Free SEO Consultation",
+    features: [
+      { icon: BusinessCenterIcon, text: "Complete SEO audit and fixes" },
+      { icon: BusinessCenterIcon, text: "Keyword research and planning" },
+      { icon: BusinessCenterIcon, text: "On-page and technical SEO" },
+      { icon: BusinessCenterIcon, text: "Content optimization" },
+      { icon: BusinessCenterIcon, text: "SEO consulting services" },
+      { icon: BusinessCenterIcon, text: "Performance tracking" },
+    ]
+  },
+
+  overview: {
+    subtitle: "SEO OPTIMIZATION COMPANY",
+    title: "Complete Search Engine Optimization Services for Business Growth",
+    description: "As a search engine optimization services company, we provide solutions that improve rankings and drive real traffic.",
+    list: [
+      { title: "On-Page SEO", icon: BusinessCenterIcon, count: "Content Optimization", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We optimize your website content for better rankings." },
+      { title: "Technical SEO", icon: BusinessCenterIcon, count: "Backend Fixes", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We fix backend issues to improve performance." },
+      { title: "Keyword Research", icon: BusinessCenterIcon, count: "Smart Targeting", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We find the right keywords for your business." },
+      { title: "SEO Consulting", icon: BusinessCenterIcon, count: "Long-Term Growth", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We guide your strategy for long-term growth." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "STRATEGY TO RESULTS",
+    title: "End-to-End SEO Optimization Company Solutions",
+    description: "As a search engine optimization services agency, we handle everything from planning to execution for better performance.",
+    services: [
+      {
+        title: "SEO SOLUTIONS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Website Analysis", desc: "We analyze your website to find improvements.", icon: <BusinessCenterIcon /> },
+          { title: "Strategy Planning", desc: "We create a clear SEO roadmap.", icon: <BusinessCenterIcon /> },
+          { title: "Implementation", desc: "We apply SEO techniques effectively.", icon: <BusinessCenterIcon /> },
+          { title: "Performance Monitoring", desc: "We track and improve results continuously.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY SEO WITH US",
+    title: "Why Choose Our SEO Optimization Company",
+    description: "We focus on delivering real results using simple and effective search engine optimization services.",
+    stats: [
+      { value: "300+", label: "Projects Completed" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Result-Focused Work", icon: BusinessCenterIcon, desc: "We focus on improving rankings and traffic.", color: "#2563eb", number: "01" },
+      { title: "Data-Driven Strategy", icon: BusinessCenterIcon, desc: "We use insights to improve performance.", color: "#06b6d4", number: "02" },
+      { title: "Ongoing Support", icon: BusinessCenterIcon, desc: "We support you throughout the process.", color: "#4f46e5", number: "03" },
+      { title: "Long-Term Growth", icon: BusinessCenterIcon, desc: "We build sustainable SEO results.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "SEO WORKFLOW",
+    title: "Our SEO Optimization Company Process for Better Rankings",
+    description: "As a search engine optimization services company, we follow a step-by-step process to improve visibility and performance.",
+    processSteps: [
+      { number: "01", title: "Website Analysis", desc: "We review your website to find issues and opportunities.", checks: ["Check performance", "Identify SEO errors", "Analyze rankings"], position: "above" },
+      { number: "02", title: "Keyword Research", desc: "To increase organic traffic through enhanced visibility.", checks: ["Target relevant keywords", "Study competitors", "Focus on user intent"], position: "below" },
+      { number: "03", title: "On-Page Optimization", desc: "We improve your website content and structure.", checks: ["Optimize meta tags", "Improve content", "Fix internal links"], position: "above" },
+      { number: "04", title: "Technical SEO", desc: "We fix backend issues.", checks: ["Improve speed", "Fix errors", "Optimize mobile"], position: "below" },
+      { number: "05", title: "Content Improvement", desc: "We enhance your content quality.", checks: ["Add SEO content", "Improve readability", "Update pages"], position: "above" },
+      { number: "06", title: "Tracking & Reporting", desc: "We monitor performance regularly.", checks: ["Track rankings", "Analyze traffic", "Provide reports"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "SEO EXPERTISE",
+    title: "SEO Solutions Across Different Business Models",
+    description: "As a premier SEO services provider, we deliver tailored search engine optimization solutions that drive rankings and improve organic reach in diverse sectors.",
+    industries: {
+      0: {
+        title: "Ecommerce Single Vendor",
+        desc: "We help single vendor ecommerce websites improve rankings and attract more buyers with targeted SEO strategies and product optimization.",
+        desc1: "Designing high-visibility stores with optimized product pages and reliable performance.",
+        checks: ["Product Page SEO", "Category Page Optimization", "Keyword Targeting", "Technical SEO Improvements", "Conversion Optimization", "Performance Tracking"],
+        cards: [
+          { title: "Product SEO", desc: "We optimize product pages to rank higher and attract more customers." },
+          { title: "Category Page SEO", desc: "We improve category pages to increase visibility and navigation." },
+          { title: "Technical SEO Fixes", desc: "We fix speed, indexing, and mobile performance for better rankings." },
+          { title: "Conversion Optimization", desc: "We improve user experience to increase sales and reduce drop-offs." }
+        ]
+      },
+      1: {
+        title: "Ecommerce Multi Vendor",
+        desc: "Our SEO strategies for multi-vendor platforms ensure high visibility for products and sellers, focusing on category growth and traffic increase.",
+        desc1: "Building scalable platform visibility with optimized seller pages and reliable performance.",
+        checks: ["Multi Vendor SEO Strategy", "Seller Page Optimization", "Category SEO Optimization", "Platform Structure Optimization", "Keyword Targeting", "Traffic Growth Strategy"],
+        cards: [
+          { title: "Category SEO", desc: "We optimize category pages to improve visibility and bring more traffic." },
+          { title: "Seller Page SEO", desc: "We improve seller pages to help vendors gain visibility and attract buyers." },
+          { title: "Platform SEO Structure", desc: "We organize website structure to improve indexing and performance." },
+          { title: "Traffic Growth", desc: "We apply strategies to increase organic traffic and improve conversions." }
+        ]
+      },
+      2: {
+        title: "Food Booking",
+        desc: "We help food booking platforms improve local search rankings, attracting more nearby customers and increasing order conversions.",
+        desc1: "Enhancing local reach with optimized Google Business profiles and mobile-ready experiences.",
+        checks: ["Local SEO Optimization", "Restaurant Page SEO", "Keyword Targeting", "Google Business Optimization", "Mobile SEO", "Conversion Optimization"],
+        cards: [
+          { title: "Local SEO", desc: "We improve local search rankings to attract nearby customers and increase orders." },
+          { title: "Restaurant Page SEO", desc: "We optimize restaurant listings to improve visibility and user engagement." },
+          { title: "Google Business", desc: "We enhance your profile to improve presence in local search and maps." },
+          { title: "Mobile SEO", desc: "We optimize mobile experience to ensure smooth browsing and conversions." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Ecommerce Single Vendor", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Ecommerce Multi Vendor", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Food Booking", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "SEO Excellence & Rankings",
+    list: [
+      { title: "Top SEO Agency", body: "GoodFirms", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Growth Leader", body: "G2 Crowd", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "ISO 9001 Certified", body: "Quality Mgmt", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+      { title: "Search Excellence", body: "Search Awards", year: "2024", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Top SEM Specialist", body: "Clutch.co", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use as an SEO Services Provider",
+    title: "Advanced SEO Tools",
+    description: "We use advanced tools to deliver effective search engine optimization services agency results.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Google Search Console", "Google Analytics", "SEMrush", "Ahrefs"] },
+      { row: 2, direction: "right", speed: "28s", items: ["Screaming Frog", "Ubersuggest", "Moz", "Surfer SEO", "Yoast SEO"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "SEO RESULTS",
+    title: "What Clients Say About Our SEO Optimization Company",
+    rating: "4.9/5",
+    reviews: "910+",
+    list: [
+      { name: "Rahul Mehta", text: "Vihaan delivered our SEO strategy ahead of schedule. Our website rankings improved significantly within a short time.", initial: "R", color: "#2563eb" },
+      { name: "Ankit Verma", text: "Their SEO approach helped us increase organic traffic and generate quality leads. The results are consistent and measurable.", initial: "A", color: "#10b981" },
+      { name: "Karan Sharma", text: "Our website now ranks on the first page for multiple keywords. The growth in traffic and conversions is outstanding.", initial: "K", color: "#8b5cf6" },
+      { name: "Priya Kapoor", text: "Their SEO strategies improved our visibility and brand presence. The team ensured long-term growth and stability.", initial: "P", color: "#f59e0b" },
+      { name: "Rohit Bansal", text: "The technical SEO improvements made our website faster and more user-friendly. Performance has improved drastically.", initial: "R", color: "#ec4899" },
+      { name: "Neha Reddy", text: "Vihaan built a strong SEO foundation for our business. We are now seeing consistent growth in search rankings.", initial: "N", color: "#06b6d4" },
+      { name: "Vikas Jain", text: "Our organic traffic has doubled within months. Their SEO expertise and execution are truly impressive.", initial: "V", color: "#2563eb" },
+      { name: "Sneha Gupta", text: "The content and on-page SEO strategies helped us attract the right audience. Conversions have increased significantly.", initial: "S", color: "#10b981" },
+      { name: "Aman Khanna", text: "The results speak for themselves. Our rankings, traffic, and leads have all improved with their SEO services.", initial: "A", color: "#8b5cf6" },
+      { name: "Pooja Nair", text: "Their SEO services are reliable and result-driven. Our business visibility has improved across all search engines.", initial: "P", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Want to Improve Your Rankings with a<br />Trusted SEO Optimization Company?
+      </>
+    ),
+    description: "Start your journey with our search engine optimization services and grow your website traffic.",
+    buttonText: "Get Your Free SEO Audit",
+    brandText: "Vihaan SEO Solutions"
+  }
+};
+
+export const smmFullServiceData = {
+  hero: {
+    title: "Social Media Marketing Agency to Grow Your Brand and Engagement",
+    subtitle: "We help you build your brand and connect with your audience through effective social media marketing services.",
+    badgeText: "Build your presence and grow your audience. 📱",
+    buttonText: "Start Social Media Growth",
+    features: [
+      { icon: BusinessCenterIcon, text: "Social media strategy and planning" },
+      { icon: BusinessCenterIcon, text: "Content creation and posting" },
+      { icon: BusinessCenterIcon, text: "Social media marketing services" },
+      { icon: BusinessCenterIcon, text: "Paid ads management" },
+      { icon: BusinessCenterIcon, text: "Audience engagement" },
+      { icon: BusinessCenterIcon, text: "Performance tracking" },
+    ]
+  },
+
+  overview: {
+    subtitle: "SOCIAL MEDIA EXPERTS",
+    title: "Social Media Strategy for the Modern Business",
+    description: "As a social media marketing services company, we create and manage campaigns that improve engagement and visibility.",
+    list: [
+      { title: "Content Creation", icon: BusinessCenterIcon, count: "Engaging Posts", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We create simple and engaging posts for your audience." },
+      { title: "Account Mgmt", icon: BusinessCenterIcon, count: "Regular Posts", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We manage your social media platforms regularly." },
+      { title: "Paid Advertising", icon: BusinessCenterIcon, count: "Targeted Ads", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We run ads to reach more people and generate leads." },
+      { title: "Strategy Planning", icon: BusinessCenterIcon, count: "Growth Path", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We build the right plan for your social growth." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "END-TO-END SOCIAL",
+    title: "End-to-End Social Media Marketing Agency Solutions",
+    description: "Social media marketing agency website solutions to plan, execute, and enhance performance.",
+    services: [
+      {
+        title: "SMM SOLUTIONS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Audience Research", desc: "We understand your target audience.", icon: <BusinessCenterIcon /> },
+          { title: "Content Planning", desc: "We create a content calendar.", icon: <BusinessCenterIcon /> },
+          { title: "Execution", desc: "We manage posts and campaigns.", icon: <BusinessCenterIcon /> },
+          { title: "Performance Tracking", desc: "We improve results continuously.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY SMM WITH US",
+    title: "Why Choose Our Social Media Marketing Solutions",
+    description: "We focus on building your brand and improving engagement with simple strategies.",
+    stats: [
+      { value: "300+", label: "Campaigns Managed" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Creative Content", icon: BusinessCenterIcon, desc: "We create content that connects with users.", color: "#2563eb", number: "01" },
+      { title: "Consistent Growth", icon: BusinessCenterIcon, desc: "We focus on steady improvement.", color: "#06b6d4", number: "02" },
+      { title: "Audience Engagement", icon: BusinessCenterIcon, desc: "We build strong connections.", color: "#4f46e5", number: "03" },
+      { title: "Result-Oriented Work", icon: BusinessCenterIcon, desc: "We aim for real business growth.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "SMM WORKFLOW",
+    title: "Our Social Media Marketing Agency Process for Brand Growth",
+    description: "As a social media marketing services company, we follow a structured process to improve engagement and reach.",
+    processSteps: [
+      { number: "01", title: "Business Understanding", desc: "We understand your brand and goals.", checks: ["Identify audience", "Define brand voice", "Set goals"], position: "above" },
+      { number: "02", title: "Strategy Planning", desc: "We create a clear marketing plan.", checks: ["Choose platforms", "Plan content", "Schedule posts"], position: "below" },
+      { number: "03", title: "Content Creation", desc: "We design engaging content.", checks: ["Create visuals", "Write captions", "Maintain consistency"], position: "above" },
+      { number: "04", title: "Campaign Execution", desc: "We run social media marketing services.", checks: ["Publish content", "Run ads", "Manage accounts"], position: "below" },
+      { number: "05", title: "Engagement", desc: "We connect with your audience.", checks: ["Reply to comments", "Manage messages", "Build trust"], position: "above" },
+      { number: "06", title: "Performance Tracking", desc: "We improve results continuously.", checks: ["Track engagement", "Analyze data", "Optimize campaigns"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "SOCIAL MEDIA EXPERTISE",
+    title: "Social Media Marketing Solutions for Different Platforms",
+    description: "As a leading social media marketing agency, we deliver tailored SMM strategies that drive engagement and improve brand awareness across diverse sectors.",
+    industries: {
+      0: {
+        title: "Resort Booking",
+        desc: "We help resort and hotel businesses grow their visibility through social media marketing, focusing on increasing bookings and brand awareness.",
+        desc1: "Designing visual storytelling experiences with targeted booking ads and reliable engagement.",
+        checks: ["Social Media Campaigns", "Visual Content Creation", "Booking Promotion Ads", "Audience Targeting", "Engagement Management", "Performance Tracking"],
+        cards: [
+          { title: "Resort Campaigns", desc: "We create targeted campaigns to promote your resort and attract bookings." },
+          { title: "Content Creation", desc: "We design visuals that showcase your property and services effectively." },
+          { title: "Paid Ads", desc: "We run ads to reach potential customers and increase direct bookings." },
+          { title: "Engagement", desc: "We manage comments and messages to build trust with your audience." }
+        ]
+      },
+      1: {
+        title: "Listing Site",
+        desc: "Our marketing strategies for listing platforms focus on traffic growth and user engagement, increasing platform visibility through social media.",
+        desc1: "Building platform awareness with targeted promotions and reliable marketing performance.",
+        checks: ["Platform Promotions", "Traffic Generation", "Content Marketing", "Audience Targeting", "Platform Awareness", "Engagement Strategy"],
+        cards: [
+          { title: "Platform Promotion", desc: "We promote your listing platform to reach more users and increase traffic." },
+          { title: "Content Marketing", desc: "We create engaging content to highlight listings and attract users." },
+          { title: "Audience Targeting", desc: "We target the right users to improve engagement and conversions." },
+          { title: "Traffic Strategy", desc: "We focus on increasing visits and user activity on your platform." }
+        ]
+      },
+      2: {
+        title: "Real Estate Portal",
+        desc: "We help real estate businesses attract buyers and sellers through social media marketing, focusing on lead generation and brand visibility.",
+        desc1: "Enhancing property reach with optimized ad campaigns and reliable lead generation.",
+        checks: ["Real Estate Promotions", "Lead Generation", "Property Ads", "Audience Targeting", "Brand Awareness", "Engagement Management"],
+        cards: [
+          { title: "Property Ads", desc: "We run ads to promote properties and attract potential buyers." },
+          { title: "Lead Generation", desc: "We create campaigns to generate quality leads for your business." },
+          { title: "Content Creation", desc: "We design posts to showcase properties and services effectively." },
+          { title: "Audience Engagement", desc: "We interact with users to build trust and improve conversions." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Resort Booking", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Listing Site", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Real Estate Portal", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "SMM Excellence & Engagement",
+    list: [
+      { title: "Top SMM Agency", body: "GoodFirms", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Engagement Leader", body: "G2 Crowd", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "ISO 9001 Certified", body: "Quality Mgmt", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+      { title: "Social Excellence", body: "Media Awards", year: "2024", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Top Social Specialist", body: "Clutch.co", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Utilize for Social Media Marketing Services",
+    title: "Modern SMM Tools",
+    description: "We use modern tools to manage campaigns and improve social media marketing solutions.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Meta Business Suite", "Hootsuite", "Buffer", "Sprout Social"] },
+      { row: 2, direction: "right", speed: "28s", items: ["Canva", "Later", "Loomly", "Brandwatch", "SocialPilot"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "SOCIAL RESULTS",
+    title: "What Clients Say About Our Social Media Marketing Agency",
+    rating: "4.9/5",
+    reviews: "910+",
+    list: [
+      { name: "Rohan Malhotra", text: "Vihaan delivered our SMM strategy ahead of schedule. Our brand engagement and reach improved significantly.", initial: "R", color: "#2563eb" },
+      { name: "Amit Sharma", text: "Their social media marketing approach helped us grow our audience and generate quality leads. The results are consistent and impactful.", initial: "A", color: "#10b981" },
+      { name: "Kunal Verma", text: "Our social media pages now see high engagement and steady follower growth. The campaign performance is outstanding.", initial: "K", color: "#8b5cf6" },
+      { name: "Neha Kapoor", text: "Their SMM strategies improved our brand visibility across platforms. The team ensured creative and result-driven campaigns.", initial: "N", color: "#f59e0b" },
+      { name: "Ritika Mehta", text: "The content strategy and ad campaigns are highly effective. Our engagement and conversions have improved drastically.", initial: "R", color: "#ec4899" },
+      { name: "Saurabh Jain", text: "Vihaan built a powerful social media presence for our brand. We are now reaching the right audience consistently.", initial: "S", color: "#06b6d4" },
+      { name: "Pooja Reddy", text: "Our campaigns are now more targeted and impactful. Social media performance has improved across all channels.", initial: "P", color: "#2563eb" },
+      { name: "Nikhil Gupta", text: "The system performs flawlessly with consistent engagement growth. Their SMM expertise is truly impressive.", initial: "N", color: "#10b981" },
+      { name: "Sneha Iyer", text: "Our brand is now more visible and engaging. Social media strategies improved our overall marketing performance.", initial: "S", color: "#8b5cf6" },
+      { name: "Arjun Bansal", text: "Their SMM services are reliable and creative. Our reach, engagement, and conversions have all improved significantly.", initial: "A", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Are You Ready to Grow With A<br />Social Media Marketing Agency?
+      </>
+    ),
+    description: "Promote your brand and take advantage of our social media marketing services to reach a broader range all over the internet.",
+    buttonText: "Boost Your Social Presence",
+    brandText: "Vihaan Social Media Solutions"
+  }
+};
+
+export const semFullServiceData = {
+  hero: {
+    title: "Search Engine Marketing Services for Fast Traffic and Quality Leads",
+    subtitle: "We help you get instant visibility and generate leads through targeted search engine marketing services and paid campaigns.",
+    badgeText: "Get quick results and increase your conversions. 💰",
+    buttonText: "Start Running Ads",
+    features: [
+      { icon: BusinessCenterIcon, text: "Google Ads campaign setup" },
+      { icon: BusinessCenterIcon, text: "Paid search marketing services" },
+      { icon: BusinessCenterIcon, text: "Keyword targeting" },
+      { icon: BusinessCenterIcon, text: "Ad copy creation" },
+      { icon: BusinessCenterIcon, text: "Budget optimization" },
+      { icon: BusinessCenterIcon, text: "Conversion tracking" },
+    ]
+  },
+
+  overview: {
+    subtitle: "SEM SERVICES COMPANY",
+    title: "Complete Search Engine Marketing Services for Business Growth",
+    description: "As a sem services company, we create and manage campaigns that drive traffic and improve conversions.",
+    list: [
+      { title: "Google Ads Setup", icon: BusinessCenterIcon, count: "Target Audience", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We would form a campaign to meet the target audience." },
+      { title: "Ad Management", icon: BusinessCenterIcon, count: "Regular Optimization", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We manage and optimize ads regularly." },
+      { title: "Keyword Targeting", icon: BusinessCenterIcon, count: "Better Results", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We choose keywords for better results." },
+      { title: "Performance Tracking", icon: BusinessCenterIcon, count: "Improved Outcome", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We track and improve campaign performance." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "END-TO-END SEM",
+    title: "End-to-End Search Engine Marketing Agency Solutions",
+    description: "Our search engine marketing agency handles planning, execution, and optimization to deliver better results.",
+    services: [
+      {
+        title: "SEM SOLUTIONS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Market Research", desc: "We analyze your audience and competitors.", icon: <BusinessCenterIcon /> },
+          { title: "Campaign Planning", desc: "We create a structured ad strategy.", icon: <BusinessCenterIcon /> },
+          { title: "Execution", desc: "We launch and manage campaigns.", icon: <BusinessCenterIcon /> },
+          { title: "Optimization", desc: "We improve performance continuously.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY SEM WITH US",
+    title: "Why Choose Our Search Engine Marketing Services",
+    description: "We focus on delivering better ROI using simple and effective search engine marketing solutions.",
+    stats: [
+      { value: "300+", label: "Campaigns Managed" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Targeted Ads", icon: BusinessCenterIcon, desc: "We reach the right audience.", color: "#2563eb", number: "01" },
+      { title: "Budget Control", icon: BusinessCenterIcon, desc: "We optimize spending.", color: "#06b6d4", number: "02" },
+      { title: "Quick Results", icon: BusinessCenterIcon, desc: "We generate faster traffic.", color: "#4f46e5", number: "03" },
+      { title: "Performance Focused", icon: BusinessCenterIcon, desc: "We improve campaigns continuously.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "SEM WORKFLOW",
+    title: "Our Search Engine Marketing Services Process",
+    description: "As a sem services company, we follow a clear process to manage and improve paid search marketing services.",
+    processSteps: [
+      { number: "01", title: "Goal Setting", desc: "We define campaign goals clearly.", checks: ["Identify audience", "Set budget", "Define objectives"], position: "above" },
+      { number: "02", title: "Keyword Research", desc: "We select high-performing keywords.", checks: ["Analyze competitors", "Focus on conversions", "Target intent"], position: "below" },
+      { number: "03", title: "Campaign Setup", desc: "We create structured campaigns.", checks: ["Set ad groups", "Configure targeting", "Launch campaigns"], position: "above" },
+      { number: "04", title: "Ad Creation", desc: "We design effective ads.", checks: ["Write ad copy", "Add extensions", "Improve click rate"], position: "below" },
+      { number: "05", title: "Monitoring", desc: "We track performance daily.", checks: ["Analyze clicks", "Track conversions", "Adjust bids"], position: "above" },
+      { number: "06", title: "Optimization", desc: "We improve campaign results.", checks: ["Increase ROI", "Reduce cost", "Improve conversions"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "SEM EXPERTISE",
+    title: "Search Engine Marketing Solutions for Business Platforms",
+    description: "As a premier SEM services company, we deliver tailored paid search marketing solutions that drive traffic and improve conversions in diverse sectors.",
+    industries: {
+      0: {
+        title: "Real Estate CRM",
+        desc: "We help real estate CRM platforms generate leads through targeted search engine marketing services, focusing on attracting buyers and sellers.",
+        desc1: "Designing high-conversion funnels with optimized Google Ads and reliable performance tracking.",
+        checks: ["Google Ads Campaigns", "Lead Generation Ads", "CRM Funnel Optimization", "Keyword Targeting", "Landing Page Optimization", "Conversion Tracking"],
+        cards: [
+          { title: "Lead Generation", desc: "We create paid campaigns to attract high-quality leads for real estate." },
+          { title: "Google Ads", desc: "We manage ads to improve visibility and bring targeted traffic to your CRM." },
+          { title: "Landing Page", desc: "We optimize landing pages to improve conversions and reduce bounce rates." },
+          { title: "Tracking", desc: "We track performance to improve campaign results and ROI." }
+        ]
+      },
+      1: {
+        title: "Education CRM",
+        desc: "Our SEM strategies for education platforms focus on increasing enrollments and improving visibility through targeted course promotion ads.",
+        desc1: "Building student acquisition funnels with optimized course ads and reliable performance.",
+        checks: ["Student Lead Generation", "Google Ads for Courses", "Keyword Targeting", "Campaign Optimization", "Landing Page Ads", "Performance Tracking"],
+        cards: [
+          { title: "Student Leads", desc: "We create ads to attract students for courses and programs." },
+          { title: "Course Promotion", desc: "We promote courses using targeted search engine marketing services." },
+          { title: "Page Optimization", desc: "We improve pages to increase student sign-ups and conversions." },
+          { title: "Campaign Tracking", desc: "We monitor campaigns and improve results continuously." }
+        ]
+      },
+      2: {
+        title: "Matrimony",
+        desc: "We help matrimony platforms increase user registrations through paid search campaigns, focusing on visibility, engagement, and user growth.",
+        desc1: "Enhancing user acquisition with optimized registration flows and reliable paid search marketing.",
+        checks: ["User Acquisition Campaigns", "Paid Search Services", "Keyword Targeting", "Registration Optimization", "Audience Targeting", "Performance Tracking"],
+        cards: [
+          { title: "User Acquisition", desc: "We run campaigns to increase registrations and user sign-ups." },
+          { title: "Paid Search Ads", desc: "We use paid search marketing services to improve platform visibility." },
+          { title: "Sign-up Optimization", desc: "We optimize sign-up flow to increase conversions." },
+          { title: "Performance Opt", desc: "We track and improve campaigns for better results." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Real Estate CRM", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Education CRM", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Matrimony", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "SEM Excellence & Leads",
+    list: [
+      { title: "Top SEM Agency", body: "GoodFirms", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Lead Gen Leader", body: "G2 Crowd", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "ISO 9001 Certified", body: "Quality Mgmt", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+      { title: "Ad Excellence", body: "Ad Awards", year: "2024", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Top PPC Specialist", body: "Clutch.co", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for Search Engine Marketing Services",
+    title: "Advanced SEM Tools",
+    description: "We use powerful tools to manage and improve search engine marketing solutions effectively.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Google Ads Manager", "Google Keyword Planner", "Google Analytics"] },
+      { row: 2, direction: "right", speed: "28s", items: ["SEMrush", "SpyFu", "Optmyzr", "WordStream", "AdEspresso"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "SEM RESULTS",
+    title: "What Clients Say About Our SEM Services Company",
+    rating: "4.9/5",
+    reviews: "910+",
+    list: [
+      { name: "Aditya Mehra", text: "Vihaan delivered our SEM campaigns ahead of schedule. Our ad performance and ROI improved significantly.", initial: "A", color: "#2563eb" },
+      { name: "Rohit Kapoor", text: "Their SEM strategy helped us generate high-quality leads and maximize conversions. The campaigns are highly effective.", initial: "R", color: "#10b981" },
+      { name: "Vikas Sharma", text: "Our paid campaigns now deliver consistent results. Traffic, leads, and conversions have increased remarkably.", initial: "V", color: "#8b5cf6" },
+      { name: "Neha Verma", text: "Their SEM approach improved our online visibility and ad reach. The team ensured optimized and result-driven campaigns.", initial: "N", color: "#f59e0b" },
+      { name: "Kunal Bansal", text: "The campaign management and optimization are excellent. Our cost per lead has reduced significantly.", initial: "K", color: "#ec4899" },
+      { name: "Pooja Mehta", text: "Vihaan built a powerful SEM strategy tailored to our goals. We are now seeing strong and measurable growth.", initial: "P", color: "#06b6d4" },
+      { name: "Aman Gupta", text: "Our ads perform flawlessly across platforms. Their SEM expertise is truly impressive.", initial: "A", color: "#2563eb" },
+      { name: "Sneha Kapoor", text: "The targeting and ad creatives are highly effective. Engagement and conversions have improved drastically.", initial: "S", color: "#10b981" },
+      { name: "Nitin Reddy", text: "Our campaigns are now scalable and profitable. SEM implementation improved overall performance.", initial: "N", color: "#8b5cf6" },
+      { name: "Kavya Iyer", text: "Their SEM services are reliable and data-driven. Our business visibility and ROI have improved significantly.", initial: "K", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Want More Leads with Search Engine<br />Marketing Services?
+      </>
+    ),
+    description: "Let’s run targeted campaigns and grow your business with our paid search marketing services.",
+    buttonText: "Launch Your Ad Campaign",
+    brandText: "Vihaan SEM Solutions"
+  }
+};
+
+export const videoMarketingFullServiceData = {
+  hero: {
+    title: "Video Marketing Agency to Create Engaging Content and Promote Your Brand",
+    subtitle: "We help you connect with your audience and grow your business using creative video marketing services.",
+    badgeText: "Attract attention and grow your brand with videos. 🎬",
+    buttonText: "Start Video Marketing",
+    features: [
+      { icon: BusinessCenterIcon, text: "Video marketing services" },
+      { icon: BusinessCenterIcon, text: "Product and promo videos" },
+      { icon: BusinessCenterIcon, text: "Social media video content" },
+      { icon: BusinessCenterIcon, text: "Script writing and editing" },
+      { icon: BusinessCenterIcon, text: "YouTube marketing" },
+      { icon: BusinessCenterIcon, text: "Brand storytelling" },
+    ]
+  },
+
+  overview: {
+    subtitle: "VIDEO CONTENT EXPERTS",
+    title: "Complete Video Marketing Services for Business Growth",
+    description: "As a video marketing company, we create videos that improve engagement and promote your brand effectively.",
+    list: [
+      { title: "Promotional Videos", icon: BusinessCenterIcon, count: "Business Growth", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We produce business videos." },
+      { title: "Product Videos", icon: BusinessCenterIcon, count: "Feature Highlight", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We highlight your products clearly." },
+      { title: "Social Media Videos", icon: BusinessCenterIcon, count: "High Engagement", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We create short and engaging videos." },
+      { title: "Video Editing", icon: BusinessCenterIcon, count: "Premium Quality", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We improve video quality and flow." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "IDEA TO DELIVERY",
+    title: "End-to-End Video Marketing Agency Solutions",
+    description: "Our video content marketing services cover planning, creation, and delivery to achieve better results.",
+    services: [
+      {
+        title: "VIDEO SOLUTIONS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Idea Planning", desc: "We plan video concepts based on your goals.", icon: <BusinessCenterIcon /> },
+          { title: "Script Creation", desc: "We create simple and clear scripts.", icon: <BusinessCenterIcon /> },
+          { title: "Production", desc: "We develop video content.", icon: <BusinessCenterIcon /> },
+          { title: "Delivery & Publishing", desc: "We deliver and share videos.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY VIDEO WITH US",
+    title: "Why Choose Our Video Marketing Services",
+    description: "We focus on creating simple and engaging videos that connect with your audience and support growth.",
+    stats: [
+      { value: "200+", label: "Videos Created" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Creative Ideas", icon: BusinessCenterIcon, desc: "We create attention-grabbing videos.", color: "#2563eb", number: "01" },
+      { title: "Simple Messaging", icon: BusinessCenterIcon, desc: "We keep content clear and easy.", color: "#06b6d4", number: "02" },
+      { title: "Engaging Content", icon: BusinessCenterIcon, desc: "We focus on user engagement.", color: "#4f46e5", number: "03" },
+      { title: "Result-Oriented", icon: BusinessCenterIcon, desc: "We support business goals with video.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "VIDEO WORKFLOW",
+    title: "Our Video Marketing Agency Process",
+    description: "As a video marketing company, we follow a structured process to deliver high-quality video marketing services.",
+    processSteps: [
+      { number: "01", title: "Idea Planning", desc: "We plan video concepts clearly.", checks: ["Understand audience", "Define goals", "Choose format"], position: "above" },
+      { number: "02", title: "Script Writing", desc: "We create simple scripts.", checks: ["Clear messaging", "Easy language", "Brand tone"], position: "below" },
+      { number: "03", title: "Production", desc: "We create video content.", checks: ["Record or design", "Use visuals", "Maintain quality"], position: "above" },
+      { number: "04", title: "Editing", desc: "We improve video quality.", checks: ["Add effects", "Improve sound", "Smooth transitions"], position: "below" },
+      { number: "05", title: "Publishing", desc: "We share videos on platforms.", checks: ["Upload content", "Optimize titles", "Add descriptions"], position: "above" },
+      { number: "06", title: "Tracking", desc: "We improve video marketing services.", checks: ["Track views", "Analyze engagement", "Optimize content"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "VIDEO EXPERTISE",
+    title: "Video Marketing Solutions for Business Platforms",
+    description: "As a premier video marketing agency, we deliver tailored video content solutions that transform how you connect with your audience across diverse sectors.",
+    industries: {
+      0: {
+        title: "HRM Software",
+        desc: "We create video marketing strategies to showcase HRM software features and benefits clearly, helping businesses understand your product.",
+        desc1: "Designing smart product demos with clear feature highlights and reliable engagement.",
+        checks: ["Product Demo Videos", "Feature Explanation", "Social Media Video", "Promotional Videos", "Brand Awareness", "Engagement Campaigns"],
+        cards: [
+          { title: "Product Demos", desc: "We create videos to explain your HRM software features clearly." },
+          { title: "Feature Highlights", desc: "We showcase key features to help users understand your product." },
+          { title: "Promotional Content", desc: "We create marketing videos to promote your software and attract users." },
+          { title: "Engagement Videos", desc: "We design short videos for platforms to increase reach and engagement." }
+        ]
+      },
+      1: {
+        title: "Hospital Management",
+        desc: "Our video content for hospital management systems helps promote services and healthcare solutions, building trust and patient engagement.",
+        desc1: "Building healthcare trust with visual service explanations and reliable awareness content.",
+        checks: ["Healthcare Promo", "Service Explanation", "Patient Awareness", "Social Media Videos", "Brand Trust Videos", "Engagement Campaigns"],
+        cards: [
+          { title: "Healthcare Promo", desc: "We create videos to promote hospital services and facilities effectively." },
+          { title: "Service Explanation", desc: "We explain healthcare services clearly through engaging video content." },
+          { title: "Patient Awareness", desc: "We create videos to educate patients and build trust with your brand." },
+          { title: "Social Campaigns", desc: "We design videos to increase reach and engagement on social platforms." }
+        ]
+      },
+      2: {
+        title: "Cab Booking App",
+        desc: "We create video marketing campaigns to promote cab booking apps, focusing on app usage, features, and user benefits to attract new users.",
+        desc1: "Enhancing app growth with optimized feature demos and reliable brand awareness.",
+        checks: ["App Promo Videos", "Feature Demonstration", "Social Media Ads", "User Experience Videos", "Brand Awareness", "Engagement Campaigns"],
+        cards: [
+          { title: "App Promotion", desc: "We create videos to promote your cab booking app and attract new users." },
+          { title: "Feature Demos", desc: "We explain app features clearly to improve user understanding." },
+          { title: "Short Ad Videos", desc: "We create short ad videos to increase installs and engagement." },
+          { title: "UX Showcases", desc: "We showcase app usage to build trust and improve conversions." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "HRM Software", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Hospital Management", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Cab Booking App", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Video Excellence & Creativity",
+    list: [
+      { title: "Top Video Agency", body: "GoodFirms", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Creative Leader", body: "G2 Crowd", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "ISO 9001 Certified", body: "Quality Mgmt", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+      { title: "Video Innovation", body: "Media Awards", year: "2024", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Top Content Specialist", body: "Clutch.co", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for Video Marketing Services",
+    title: "Professional Editing Tools",
+    description: "We use advanced tools to create and manage video content marketing services efficiently.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Adobe Premiere Pro", "Final Cut Pro", "After Effects"] },
+      { row: 2, direction: "right", speed: "28s", items: ["DaVinci Resolve", "Canva Video Editor", "CapCut", "Loom", "Vimeo"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "VIDEO RESULTS",
+    title: "What Clients Say About Our Video Marketing Agency",
+    rating: "4.9/5",
+    reviews: "910+",
+    list: [
+      { name: "Arun Kumar", text: "Vihaan delivered our video marketing campaigns ahead of schedule. Our engagement and brand visibility improved significantly.", initial: "A", color: "#2563eb" },
+      { name: "Suresh Nair", text: "Their video marketing strategy helped us connect with the right audience and boost conversions. The results are impressive.", initial: "S", color: "#10b981" },
+      { name: "Karthik Reddy", text: "Our video campaigns now generate high engagement and reach. The performance and creativity are outstanding.", initial: "K", color: "#8b5cf6" },
+      { name: "Praveen Iyer", text: "Their video content strategy improved our brand storytelling. The campaigns are creative, impactful, and result-driven.", initial: "P", color: "#f59e0b" },
+      { name: "Lakshmi Narayanan", text: "The video ads and content are highly engaging. Our audience retention and conversions have improved drastically.", initial: "L", color: "#ec4899" },
+      { name: "Vignesh Kumar", text: "Vihaan built a strong video marketing presence for our brand. We are now reaching a wider and more relevant audience.", initial: "V", color: "#06b6d4" },
+      { name: "Divya Nair", text: "Our video campaigns are now more targeted and effective. Engagement across platforms has increased significantly.", initial: "D", color: "#2563eb" },
+      { name: "Raghavendra Rao", text: "The campaigns perform flawlessly with consistent growth. Their video marketing expertise is truly impressive.", initial: "R", color: "#10b981" },
+      { name: "Meena Krishnan", text: "Our brand is now more engaging and visually appealing. Video marketing improved our overall performance.", initial: "M", color: "#8b5cf6" },
+      { name: "Sathish Babu", text: "Their video marketing services are creative and reliable. Our reach, engagement, and conversions have all improved.", initial: "S", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Promote Your Brand with a<br />Video Marketing Agency?
+      </>
+    ),
+    description: "Let’s create engaging videos using our video marketing services to grow your business.",
+    buttonText: "Create Your First Video Campaign",
+    brandText: "Vihaan Video Solutions"
+  }
+};
+
+export const emailMarketingFullServiceData = {
+  hero: {
+    title: "Email Marketing Services to Engage Customers and Improve Conversions",
+    subtitle: "We help you connect with your audience directly using email marketing services and build strong relationships that drive results.",
+    badgeText: "Stay connected with your customers and grow your business. 📧",
+    buttonText: "Start Email Marketing",
+    features: [
+      { icon: BusinessCenterIcon, text: "Email campaign setup" },
+      { icon: BusinessCenterIcon, text: "Business email marketing services" },
+      { icon: BusinessCenterIcon, text: "Email list management" },
+      { icon: BusinessCenterIcon, text: "Email design and content" },
+      { icon: BusinessCenterIcon, text: "Automation and scheduling" },
+      { icon: BusinessCenterIcon, text: "Performance tracking" },
+    ]
+  },
+
+  overview: {
+    subtitle: "EMAIL MARKETING EXPERTS",
+    title: "Complete Email Marketing Services for Business Growth",
+    description: "As an email marketing service provider, we create campaigns that improve engagement and deliver better results.",
+    list: [
+      { title: "Campaign Setup", icon: BusinessCenterIcon, count: "Direct Reach", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We create and launch email campaigns." },
+      { title: "Email Design", icon: BusinessCenterIcon, count: "Engaging Visuals", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We design simple and engaging emails." },
+      { title: "Automation", icon: BusinessCenterIcon, count: "Smart Workflows", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We create automated email workflows." },
+      { title: "Performance Tracking", icon: BusinessCenterIcon, count: "Better Results", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We monitor and improve campaigns." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "BETTER ENGAGEMENT",
+    title: "End-to-End Email Marketing Solutions",
+    description: "Our email marketing solutions cover planning, execution, and optimization to improve communication and conversions.",
+    services: [
+      {
+        title: "EMAIL SOLUTIONS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Audience Planning", desc: "We organize your email audience.", icon: <BusinessCenterIcon /> },
+          { title: "Content Creation", desc: "We create engaging email content.", icon: <BusinessCenterIcon /> },
+          { title: "Campaign Execution", desc: "We send and manage emails.", icon: <BusinessCenterIcon /> },
+          { title: "Optimization", desc: "We improve campaign performance.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY EMAIL WITH US",
+    title: "Why Choose Our Email Marketing Services",
+    description: "We focus on delivering simple and effective business email marketing services that improve engagement and conversions.",
+    stats: [
+      { value: "250+", label: "Campaigns Managed" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Targeted Emails", icon: BusinessCenterIcon, desc: "We send emails to the right audience.", color: "#2563eb", number: "01" },
+      { title: "Better Engagement", icon: BusinessCenterIcon, desc: "We improve open and click rates.", color: "#06b6d4", number: "02" },
+      { title: "Automation Support", icon: BusinessCenterIcon, desc: "We save time with automated emails.", color: "#4f46e5", number: "03" },
+      { title: "Result-Oriented", icon: BusinessCenterIcon, desc: "We focus on conversions.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "EMAIL WORKFLOW",
+    title: "Our Email Marketing Services Process",
+    description: "As an email marketing service provider, we follow a structured process to deliver effective email marketing solutions.",
+    processSteps: [
+      { number: "01", title: "Audience Segmentation", desc: "We divide your audience for better targeting.", checks: ["Group users", "Identify interests", "Create lists"], position: "above" },
+      { number: "02", title: "Campaign Planning", desc: "We plan business email marketing services.", checks: ["Define goals", "Select email types", "Schedule campaigns"], position: "below" },
+      { number: "03", title: "Content Creation", desc: "We create email content.", checks: ["Write subject lines", "Create copy", "Design layout"], position: "above" },
+      { number: "04", title: "Automation Setup", desc: "We automate email workflows.", checks: ["Welcome emails", "Follow-ups", "Trigger emails"], position: "below" },
+      { number: "05", title: "Campaign Execution", desc: "We manage campaigns.", checks: ["Send emails", "Monitor delivery", "Ensure performance"], position: "above" },
+      { number: "06", title: "Optimization", desc: "We improve email marketing solutions.", checks: ["Track opens", "Analyze clicks", "Improve results"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "EMAIL EXPERTISE",
+    title: "Email Marketing Solutions for Business Platforms",
+    description: "As a premier email marketing service provider, we deliver tailored business email marketing solutions that drive engagement and improve conversions across diverse sectors.",
+    industries: {
+      0: {
+        title: "LMS Platforms",
+        desc: "We help online learning platforms connect with students through targeted email marketing campaigns, focusing on course promotion and student retention.",
+        desc1: "Designing educational journeys with optimized course emails and reliable engagement.",
+        checks: ["Course Promotion", "Student Engagement", "Email Automation", "Newsletter Campaigns", "Lead Nurturing", "Performance Tracking"],
+        cards: [
+          { title: "Course Promotion", desc: "We create email campaigns to promote courses and increase enrollments." },
+          { title: "Student Engagement", desc: "We design emails to keep students active and engaged with your platform." },
+          { title: "Email Automation", desc: "We set up automated emails for onboarding, reminders, and follow-ups." },
+          { title: "Newsletters", desc: "We create newsletters to share updates and valuable content regularly." }
+        ]
+      },
+      1: {
+        title: "Hotel Booking",
+        desc: "Our email strategies for hotel booking platforms focus on increasing reservations through effective offers, reminders, and customer engagement.",
+        desc1: "Building hospitality reach with optimized booking emails and reliable seasonal campaigns.",
+        checks: ["Booking Promotion", "Offer & Discount", "Customer Retargeting", "Email Automation", "Seasonal Campaigns", "Performance Tracking"],
+        cards: [
+          { title: "Booking Promotion", desc: "We create campaigns to promote room bookings and special offers." },
+          { title: "Offer & Discount", desc: "We design emails to attract customers with deals and promotions." },
+          { title: "Customer Retargeting", desc: "We send follow-up emails to bring back potential customers." },
+          { title: "Automation", desc: "We automate emails for confirmations, reminders, and updates." }
+        ]
+      },
+      2: {
+        title: "AI Chatbot",
+        desc: "We help AI chatbot platforms engage users and promote services through email marketing, focusing on onboarding, engagement, and feature awareness.",
+        desc1: "Enhancing user growth with optimized onboarding emails and reliable automation workflows.",
+        checks: ["User Onboarding", "Feature Updates", "Engagement Emails", "Automation Workflows", "Lead Nurturing", "Performance Tracking"],
+        cards: [
+          { title: "User Onboarding", desc: "We create emails to guide users through chatbot setup and usage." },
+          { title: "Feature Updates", desc: "We inform users about new features and improvements." },
+          { title: "Engagement", desc: "We send emails to keep users active and engaged." },
+          { title: "Workflows", desc: "We set up automated emails for better user communication." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "LMS Platforms", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Hotel Booking", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "AI Chatbot", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Email Excellence & Delivery",
+    list: [
+      { title: "Top Email Agency", body: "GoodFirms", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Inbound Leader", body: "G2 Crowd", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "ISO 9001 Certified", body: "Quality Mgmt", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+      { title: "Inbox Excellence", body: "Email Awards", year: "2024", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Top Automation Spec", body: "Clutch.co", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for Email Marketing Services",
+    title: "Modern Email Tools",
+    description: "We use reliable tools to manage and deliver effective email marketing services.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Mailchimp", "Sendinblue", "HubSpot Email Marketing"] },
+      { row: 2, direction: "right", speed: "28s", items: ["Zoho Campaigns", "ActiveCampaign", "ConvertKit", "MailerLite", "Klaviyo"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "EMAIL RESULTS",
+    title: "What Clients Say About Our Email Marketing service provider",
+    rating: "4.9/5",
+    reviews: "910+",
+    list: [
+      { name: "Aravind Subramanian", text: "Vihaan delivered our email marketing campaigns ahead of schedule. Our open rates and engagement improved significantly.", initial: "A", color: "#2563eb" },
+      { name: "Srinivas Reddy", text: "Their email marketing strategy helped us reach the right audience and increase conversions. The results are impressive.", initial: "S", color: "#10b981" },
+      { name: "Karthik Narayanan", text: "Our email campaigns now generate consistent engagement and traffic. The performance and targeting are outstanding.", initial: "K", color: "#8b5cf6" },
+      { name: "Priya Nair", text: "Their email content strategy improved our communication and customer retention. The campaigns are effective and result-driven.", initial: "P", color: "#f59e0b" },
+      { name: "Vijay Kumar", text: "The automation workflows are highly efficient. Our email campaigns are now faster and more impactful.", initial: "V", color: "#ec4899" },
+      { name: "Anitha Krishnan", text: "Vihaan built a strong email marketing system for our business. We are now reaching customers more effectively.", initial: "A", color: "#06b6d4" },
+      { name: "Ramesh Iyer", text: "Our email campaigns are now more targeted and successful. Engagement and conversions have increased significantly.", initial: "R", color: "#2563eb" },
+      { name: "Divya Ramesh", text: "The campaigns perform flawlessly with consistent growth. Their email marketing expertise is truly impressive.", initial: "D", color: "#10b981" },
+      { name: "Suresh Babu", text: "Our communication is now more streamlined and effective. Email marketing improved our overall performance.", initial: "S", color: "#8b5cf6" },
+      { name: "Lakshmi Devi", text: "Their email marketing services are reliable and efficient. Our reach, engagement, and conversions have all improved.", initial: "L", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Want Better Results with Email<br />Marketing Services?
+      </>
+    ),
+    description: "Let’s create email marketing solutions that connect with your audience and increase conversions.",
+    buttonText: "Start Your Email Campaign",
+    brandText: "Vihaan Email Solutions"
+  }
+};
+
+export const contentMarketingFullServiceData = {
+  hero: {
+    title: "Content Marketing Services to Build Trust and Grow Your Audience",
+    subtitle: "With simple and effective content marketing services, we will make it easy to attract and engage your audience.",
+    badgeText: "Share valuable content and grow your audience. ✍️",
+    buttonText: "Start Content Marketing",
+    features: [
+      { icon: BusinessCenterIcon, text: "Content marketing strategy" },
+      { icon: BusinessCenterIcon, text: "Blog and article writing" },
+      { icon: BusinessCenterIcon, text: "Website content creation" },
+      { icon: BusinessCenterIcon, text: "Content marketing agency services" },
+      { icon: BusinessCenterIcon, text: "SEO content optimization" },
+      { icon: BusinessCenterIcon, text: "Performance tracking" },
+    ]
+  },
+
+  overview: {
+    subtitle: "CONTENT EXPERTS",
+    title: "Complete Content Marketing Services for Business Growth",
+    description: "As a content marketing company, we create and manage content that improves visibility and engagement.",
+    list: [
+      { title: "Blog Writing", icon: BusinessCenterIcon, count: "Informative Content", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We create informative and useful blog content." },
+      { title: "Website Content", icon: BusinessCenterIcon, count: "Clear Messaging", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We write clear content for your website." },
+      { title: "SEO Content", icon: BusinessCenterIcon, count: "Higher Rankings", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We optimize content for better rankings." },
+      { title: "Content Strategy", icon: BusinessCenterIcon, count: "Growth Planning", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We plan content based on your goals." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "PLANNING TO GROWTH",
+    title: "End-to-End Content Marketing Agency Services",
+    description: "Our content marketing service provider approach covers research, creation, and improvement for better results.",
+    services: [
+      {
+        title: "CONTENT SOLUTIONS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Research", desc: "We understand your audience and content needs.", icon: <BusinessCenterIcon /> },
+          { title: "Planning", desc: "We create a clear content strategy.", icon: <BusinessCenterIcon /> },
+          { title: "Content Creation", desc: "We develop useful content.", icon: <BusinessCenterIcon /> },
+          { title: "Optimization", desc: "We improve performance over time.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY CONTENT WITH US",
+    title: "Why Choose Our Content Marketing Services",
+    description: "We focus on creating simple and valuable content that builds trust and drives engagement.",
+    stats: [
+      { value: "300+", label: "Content Projects" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Quality Content", icon: BusinessCenterIcon, desc: "We create clear and useful content.", color: "#2563eb", number: "01" },
+      { title: "SEO Focused", icon: BusinessCenterIcon, desc: "We improve visibility with optimized content.", color: "#06b6d4", number: "02" },
+      { title: "Consistent Delivery", icon: BusinessCenterIcon, desc: "We provide regular content updates.", color: "#4f46e5", number: "03" },
+      { title: "Audience Engagement", icon: BusinessCenterIcon, desc: "We connect with your audience.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "CONTENT WORKFLOW",
+    title: "Our Content Marketing Services Process",
+    description: "As a content marketing company, we follow a structured process to deliver effective content marketing agency services.",
+    processSteps: [
+      { number: "01", title: "Research & Analysis", desc: "We understand your audience and content needs.", checks: ["Study audience behavior", "Analyze competitors", "Identify content gaps"], position: "above" },
+      { number: "02", title: "Content Planning", desc: "We plan your content marketing services.", checks: ["Define topics", "Create calendar", "Align with goals"], position: "below" },
+      { number: "03", title: "Content Creation", desc: "We create useful content.", checks: ["Write blogs", "Develop pages", "Maintain quality"], position: "above" },
+      { number: "04", title: "SEO Optimization", desc: "We optimize content for search engines.", checks: ["Use keywords", "Improve structure", "Enhance readability"], position: "below" },
+      { number: "05", title: "Publishing", desc: "We publish content consistently.", checks: ["Upload content", "Share on platforms", "Maintain schedule"], position: "above" },
+      { number: "06", title: "Performance Improvement", desc: "We improve content marketing results.", checks: ["Track engagement", "Update content", "Improve performance"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "CONTENT EXPERTISE",
+    title: "Content Marketing Solutions for Business Platforms",
+    description: "As a premier content marketing company, we deliver tailored content marketing agency services that build trust and grow your audience across diverse sectors.",
+    industries: {
+      0: {
+        title: "Ecommerce Single Vendor",
+        desc: "We create content marketing strategies to improve product visibility and attract more buyers for your ecommerce website.",
+        desc1: "Designing smart product stories with optimized content and reliable performance.",
+        checks: ["Product Content", "Blog Content Strategy", "SEO Content Writing", "Category Page Content", "Content Optimization", "Performance Tracking"],
+        cards: [
+          { title: "Product Content", desc: "We create clear and engaging product content to attract customers." },
+          { title: "Blog Strategy", desc: "We write blogs to increase traffic and improve search visibility." },
+          { title: "SEO Optimization", desc: "We optimize content to rank better and reach the right audience." },
+          { title: "Category Development", desc: "We create content for category pages to improve engagement." }
+        ]
+      },
+      1: {
+        title: "Resort Booking",
+        desc: "Our content to promote resorts helps attract more bookings through online channels, focusing on storytelling and engagement.",
+        desc1: "Building hospitality stories with visual content and reliable marketing strategies.",
+        checks: ["Travel Blog Content", "Resort Promotion", "Website Content", "Social Media Content", "SEO Content Strategy", "Engagement Content"],
+        cards: [
+          { title: "Travel Blogs", desc: "We write blogs to attract travelers and improve online visibility." },
+          { title: "Resort Promotion", desc: "We create content to highlight resort features and services." },
+          { title: "Website Writing", desc: "We develop content that improves user experience and engagement." },
+          { title: "Social Content", desc: "We create content for platforms to increase reach and bookings." }
+        ]
+      },
+      2: {
+        title: "Real Estate CRM",
+        desc: "We help real estate businesses generate leads and attract property buyers through content marketing strategies focused on trust and visibility.",
+        desc1: "Enhancing property trust with optimized blog content and reliable lead generation.",
+        checks: ["Real Estate Blogs", "Property Content", "Lead Generation Content", "SEO Content Strategy", "Email Content", "Engagement Content"],
+        cards: [
+          { title: "Property Writing", desc: "We create content to showcase properties and attract buyers." },
+          { title: "Real Estate Blogs", desc: "We write blogs to improve visibility and generate leads." },
+          { title: "Lead Content", desc: "We develop content that helps capture and convert leads." },
+          { title: "SEO Content", desc: "We optimize content to improve rankings and reach more users." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Ecommerce Single Vendor", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Resort Booking", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Real Estate CRM", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Content Excellence & Growth",
+    list: [
+      { title: "Top Content Agency", body: "GoodFirms", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Storytelling Leader", body: "G2 Crowd", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "ISO 9001 Certified", body: "Quality Mgmt", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+      { title: "Creative Excellence", body: "Content Awards", year: "2024", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Top Strategy Spec", body: "Clutch.co", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for Content Marketing Services",
+    title: "Advanced Content Tools",
+    description: "We use advanced tools to create, manage, and improve content marketing agency services.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Grammarly", "Surfer SEO", "SEMrush"] },
+      { row: 2, direction: "right", speed: "28s", items: ["Google Docs", "Notion", "Yoast SEO", "BuzzSumo", "Canva"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "CONTENT RESULTS",
+    title: "What Clients Say About Our Content Marketing Company",
+    rating: "4.9/5",
+    reviews: "910+",
+    list: [
+      { name: "Harishankar Iyer", text: "Vihaan delivered our content marketing strategy ahead of schedule. Our organic reach and engagement improved significantly.", initial: "H", color: "#2563eb" },
+      { name: "Prakash Reddy", text: "Their content marketing approach helped us attract the right audience and build strong brand authority. The results are impressive.", initial: "P", color: "#10b981" },
+      { name: "Kiran Kumar", text: "Our content now generates consistent traffic and engagement. The quality and strategy are outstanding.", initial: "K", color: "#8b5cf6" },
+      { name: "Anjali Nair", text: "Their content strategy improved our brand presence and audience connection. The campaigns are creative and result-driven.", initial: "A", color: "#f59e0b" },
+      { name: "Venkatesh Rao", text: "The blogs and content workflows are highly effective. Our engagement and conversions have improved drastically.", initial: "V", color: "#ec4899" },
+      { name: "Meera Krishnan", text: "Vihaan built a strong content foundation for our business. We are now seeing consistent growth in traffic and leads.", initial: "M", color: "#06b6d4" },
+      { name: "Raghavan Pillai", text: "Our content performance has improved across all platforms. Their content marketing expertise is truly impressive.", initial: "R", color: "#2563eb" },
+      { name: "Divya Subramanian", text: "The content strategy is well-planned and impactful. Our audience engagement has increased significantly.", initial: "D", color: "#10b981" },
+      { name: "Sandeep Nair", text: "Our brand communication is now more effective. Content marketing improved our overall performance.", initial: "S", color: "#8b5cf6" },
+      { name: "Lakshmi Narayan", text: "Their content marketing services are reliable and creative. Our reach, traffic, and conversions have all improved.", initial: "L", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Grow with Content<br />Marketing Services?
+      </>
+    ),
+    description: "Let’s create valuable content with our content marketing agency services to attract and engage your audience.",
+    buttonText: "Plan Your Content Strategy",
+    brandText: "Vihaan Content Solutions"
+  }
+};
+
+export const localSeoFullServiceData = {
+  hero: {
+    title: "Local SEO services to Increase visibilities and attract more customers",
+    subtitle: "We help your business appear in local search results using local SEO services and improve reach with google my business services.",
+    badgeText: "Boost your visibility and draw more customers. 📍",
+    buttonText: "Start Local SEO",
+    features: [
+      { icon: BusinessCenterIcon, text: "Google my business services" },
+      { icon: BusinessCenterIcon, text: "Google business profile optimization" },
+      { icon: BusinessCenterIcon, text: "Local SEO services agency support" },
+      { icon: BusinessCenterIcon, text: "Google maps SEO services" },
+      { icon: BusinessCenterIcon, text: "Local keyword targeting" },
+      { icon: BusinessCenterIcon, text: "Performance tracking" },
+    ]
+  },
+
+  overview: {
+    subtitle: "LOCAL SEO EXPERTS",
+    title: "Complete Local SEO Services for Business Growth",
+    description: "As a local seo agency, we improve your presence using google my business service and local search optimization.",
+    list: [
+      { title: "Profile Optimization", icon: BusinessCenterIcon, count: "Better Visibility", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We improve your google business profile." },
+      { title: "Local Listings", icon: BusinessCenterIcon, count: "Consistent Presence", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We manage your business listings." },
+      { title: "Keyword Optimization", icon: BusinessCenterIcon, count: "Targeted Search", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We target local search keywords." },
+      { title: "Review Management", icon: BusinessCenterIcon, count: "Improved Ratings", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We improve ratings and reviews." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "BETTER LOCAL VISIBILITY",
+    title: "End-to-End Local SEO Services",
+    description: "Our local seo services agency approach covers setup, optimization, and improvement for better results.",
+    services: [
+      {
+        title: "LOCAL SOLUTIONS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Profile Setup", desc: "We set up your business profile.", icon: <BusinessCenterIcon /> },
+          { title: "Optimization", desc: "We improve profile details.", icon: <BusinessCenterIcon /> },
+          { title: "Listing Management", desc: "We manage directories.", icon: <BusinessCenterIcon /> },
+          { title: "Performance Tracking", desc: "We monitor and improve results.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY LOCAL SEO",
+    title: "Why Choose Our Local SEO Services for Better Reach",
+    description: "We focus on improving your local presence and helping customers find your business easily.",
+    stats: [
+      { value: "200+", label: "Businesses Supported" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Better Visibility", icon: BusinessCenterIcon, desc: "We improve local rankings.", color: "#2563eb", number: "01" },
+      { title: "More Customers", icon: BusinessCenterIcon, desc: "We attract nearby customers.", color: "#06b6d4", number: "02" },
+      { title: "Consistent Updates", icon: BusinessCenterIcon, desc: "We keep your profile active.", color: "#4f46e5", number: "03" },
+      { title: "Growth Focused", icon: BusinessCenterIcon, desc: "We aim for long-term growth.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "LOCAL SEO WORKFLOW",
+    title: "Our Local SEO Services Process for Better Rankings",
+    description: "As a local seo services agency, we follow a structured process using google my business services and maps SEO.",
+    processSteps: [
+      { number: "01", title: "Profile Audit", desc: "We review your business profile.", checks: ["Check accuracy", "Identify issues", "Improve details"], position: "above" },
+      { number: "02", title: "GMB Optimization", desc: "We improve your google business profile optimization.", checks: ["Update information", "Add categories", "Optimize description"], position: "below" },
+      { number: "03", title: "Keyword Targeting", desc: "We target relevant local keywords.", checks: ["Find local keywords", "Optimize content", "Improve rankings"], position: "above" },
+      { number: "04", title: "Listing Management", desc: "We manage local listings.", checks: ["Add directories", "Maintain consistency", "Improve presence"], position: "below" },
+      { number: "05", title: "Review Management", desc: "We improve customer reviews.", checks: ["Encourage reviews", "Respond to feedback", "Build trust"], position: "above" },
+      { number: "06", title: "Tracking", desc: "We improve local seo services continuously.", checks: ["Track rankings", "Monitor traffic", "Improve performance"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "LOCAL SEO EXPERTISE",
+    title: "GMB Optimization Solutions for Business Platforms",
+    description: "As a premier local seo agency, we deliver tailored google business profile solutions that drive local rankings and improve customer reach across diverse sectors.",
+    industries: {
+      0: {
+        title: "Ecommerce Multi Vendor",
+        desc: "We help multi vendor ecommerce platforms improve local visibility using Google My Business optimization and local search strategies.",
+        desc1: "Designing local platform reach with optimized profiles and reliable product visibility.",
+        checks: ["Profile Setup", "Local SEO Optimization", "Product Visibility", "Keyword Optimization", "Reviews Management", "Performance Tracking"],
+        cards: [
+          { title: "Profile Setup", desc: "We create and optimize your business profile to improve local search reach." },
+          { title: "Local SEO Opt", desc: "We optimize your platform to rank higher in local search results." },
+          { title: "Reviews Mgmt", desc: "We manage and respond to reviews to build trust and improve rankings." },
+          { title: "Product Visibility", desc: "We improve product listings to attract more local customers." }
+        ]
+      },
+      1: {
+        title: "Listing Site",
+        desc: "Our Google My Business services for listing sites focus on improving local presence and attracting more users through targeted optimization.",
+        desc1: "Building local platform awareness with optimized profiles and reliable keyword targeting.",
+        checks: ["GMB Optimization", "Local Listing SEO", "Profile Management", "Keyword Targeting", "User Engagement", "Performance Tracking"],
+        cards: [
+          { title: "Profile Optimization", desc: "We optimize your GMB profile to improve visibility and attract local users." },
+          { title: "Local Listing", desc: "We improve listings to rank better in local searches and maps." },
+          { title: "Keyword Opt", desc: "We use targeted keywords to improve local search rankings." },
+          { title: "Engagement", desc: "We manage posts and interactions to improve user engagement." }
+        ]
+      },
+      2: {
+        title: "Education CRM",
+        desc: "We help education platforms improve local reach using Google My Business and local SEO strategies focused on inquiries and visibility.",
+        desc1: "Enhancing student reach with optimized profiles and reliable reputation management.",
+        checks: ["Profile Optimization", "Local SEO for Institutes", "Student Lead Gen", "Keyword Targeting", "Reviews & Ratings Mgmt", "Performance Tracking"],
+        cards: [
+          { title: "Profile Setup", desc: "We create and manage your business profile for better visibility and trust." },
+          { title: "Local SEO", desc: "We optimize your platform to attract students searching locally." },
+          { title: "Reputation Mgmt", desc: "We improve your online reputation with positive reviews and responses." },
+          { title: "Lead Gen", desc: "We optimize your profile to increase inquiries and conversions." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Ecommerce Multi Vendor", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Listing Site", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Education CRM", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Local SEO Excellence & Reach",
+    list: [
+      { title: "Top Local SEO Agency", body: "GoodFirms", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Map Ads Leader", body: "G2 Crowd", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "ISO 9001 Certified", body: "Quality Mgmt", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+      { title: "Local Visibility", body: "Search Awards", year: "2024", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Top GMB Specialist", body: "Clutch.co", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for Local SEO Services",
+    title: "Specialized Local SEO Tools",
+    description: "We use specialized tools to improve google my business service and track local SEO performance.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Google Business Profile Mgr", "Google Maps Insights", "BrightLocal"] },
+      { row: 2, direction: "right", speed: "28s", items: ["Whitespark", "Moz Local", "Yext", "LocalFalcon", "GeoRanker"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "LOCAL RESULTS",
+    title: "What Clients Say About Our Local SEO Agency",
+    rating: "4.9/5",
+    reviews: "910+",
+    list: [
+      { name: "Ravi Shankar", text: "Vihaan optimized our Google My Business profile ahead of schedule. Our local visibility and customer inquiries increased significantly.", initial: "R", color: "#2563eb" },
+      { name: "Manoj Reddy", text: "Their local SEO strategy helped us rank higher in nearby searches. We are now getting more walk-ins and calls.", initial: "M", color: "#10b981" },
+      { name: "Srinath Kumar", text: "Our business now appears in top local search results. The growth in leads and visibility is outstanding.", initial: "S", color: "#8b5cf6" },
+      { name: "Anitha Iyer", text: "Their GMB optimization improved our presence on Google Maps. The results are consistent and impactful.", initial: "A", color: "#f59e0b" },
+      { name: "Praveen Nair", text: "The improvements in our business profile increased engagement and customer trust. Performance has improved drastically.", initial: "P", color: "#ec4899" },
+      { name: "Lakshman Rao", text: "Vihaan built a strong local SEO strategy for our business. We are now reaching more local customers effectively.", initial: "L", color: "#06b6d4" },
+      { name: "Divakar Pillai", text: "Our local rankings improved significantly within weeks. Their expertise in GMB optimization is impressive.", initial: "D", color: "#2563eb" },
+      { name: "Kavitha Ramesh", text: "The profile optimization and updates are highly effective. Our customer interactions have increased.", initial: "K", color: "#10b981" },
+      { name: "Vijayalakshmi Krishnan", text: "Our business is now more visible on Google Maps. Local SEO improved our overall growth.", initial: "V", color: "#8b5cf6" },
+      { name: "Suresh Narayanan", text: "Their local SEO services are reliable and result-driven. Our visibility, calls, and leads have all improved.", initial: "S", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Want More Customers with Local<br />SEO Services?
+      </>
+    ),
+    description: "Let’s improve your google my business services and grow your local visibility.",
+    buttonText: "Boost Your Local Presence",
+    brandText: "Vihaan Local SEO Solutions"
+  }
+};
+
+export const influencerAffiliateFullServiceData = {
+  hero: {
+    title: "Influencer Marketing Agency and Affiliate Marketing Services to Grow Your Brand",
+    subtitle: "We help you expand your reach and increase sales using influencer marketing service and affiliate marketing services.",
+    badgeText: "Reach new audiences and grow your business faster. 🚀",
+    buttonText: "Start Marketing Campaign",
+    features: [
+      { icon: BusinessCenterIcon, text: "Influencer marketing agency support" },
+      { icon: BusinessCenterIcon, text: "Influencer marketing service" },
+      { icon: BusinessCenterIcon, text: "Affiliate marketing services" },
+      { icon: BusinessCenterIcon, text: "Affiliate marketing consulting" },
+      { icon: BusinessCenterIcon, text: "Campaign planning" },
+      { icon: BusinessCenterIcon, text: "Performance tracking" },
+    ]
+  },
+
+  overview: {
+    subtitle: "PARTNERSHIP EXPERTS",
+    title: "Complete Influencer Agency and Affiliate Marketing Services",
+    description: "We provide influencer marketing agency solutions and affiliate marketing services to promote your brand and increase visibility.",
+    list: [
+      { title: "Influencer Campaigns", icon: BusinessCenterIcon, count: "Branded Content", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "we pair branded content with the right influencers." },
+      { title: "Affiliate Programs", icon: BusinessCenterIcon, count: "Managed Services", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We create and manage affiliate marketing services." },
+      { title: "Campaign Mgmt", icon: BusinessCenterIcon, count: "Full Execution", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We handle full campaign execution." },
+      { title: "Performance Tracking", icon: BusinessCenterIcon, count: "Improved ROI", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We track and improve campaign results." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "BETTER REACH",
+    title: "End-to-End Influencer Marketing Agency Solutions",
+    description: "Our influencer marketing service and affiliate marketing consulting approach covers planning, execution, and optimization.",
+    services: [
+      {
+        title: "MARKETING SOLUTIONS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Research & Selection", desc: "We identify the influencer or partner who might be the right one.", icon: <BusinessCenterIcon /> },
+          { title: "Campaign Planning", desc: "We create a clear marketing strategy.", icon: <BusinessCenterIcon /> },
+          { title: "Collaboration Setup", desc: "We manage partnerships.", icon: <BusinessCenterIcon /> },
+          { title: "Execution & Tracking", desc: "We run and improve campaigns.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY PARTNERSHIPS",
+    title: "Why Choose Our Influencer Marketing Agency",
+    description: "We focus on building strong partnerships using influencer marketing service and affiliate marketing services.",
+    stats: [
+      { value: "150+", label: "Campaigns Managed" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Right Partnerships", icon: BusinessCenterIcon, desc: "We link you up with the perfect influencers.", color: "#2563eb", number: "01" },
+      { title: "Better Reach", icon: BusinessCenterIcon, desc: "We expand your audience.", color: "#06b6d4", number: "02" },
+      { title: "Performance Focused", icon: BusinessCenterIcon, desc: "We improve campaign results.", color: "#4f46e5", number: "03" },
+      { title: "Growth Driven", icon: BusinessCenterIcon, desc: "We aim for better ROI.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "PARTNERSHIP WORKFLOW",
+    title: "Our Influencer Marketing Agency Process",
+    description: "As an influencer marketing agency, we follow a structured process using influencer and affiliate marketing services.",
+    processSteps: [
+      { number: "01", title: "Research & Selection", desc: "We find suitable influencers and partners.", checks: ["Analyze audience", "Identify influencers", "Select best matches"], position: "above" },
+      { number: "02", title: "Campaign Planning", desc: "We plan influencer marketing service campaigns.", checks: ["Define goals", "Set budgets", "Plan strategy"], position: "below" },
+      { number: "03", title: "Collaboration Setup", desc: "We build partnerships.", checks: ["Connect with influencers", "Define deliverables", "Set timelines"], position: "above" },
+      { number: "04", title: "Campaign Execution", desc: "We run affiliate marketing services.", checks: ["Launch campaigns", "Manage content", "Monitor progress"], position: "below" },
+      { number: "05", title: "Performance Tracking", desc: "We track campaign results.", checks: ["Measure reach", "Analyze engagement", "Track conversions"], position: "above" },
+      { number: "06", title: "Optimization & Growth", desc: "We improve affiliate marketing performance.", checks: ["Optimize campaigns", "Scale results", "Improve ROI"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "PARTNERSHIP EXPERTISE",
+    title: "Influencer and Affiliate Solutions for Business Platforms",
+    description: "As a premier influencer marketing agency, we deliver tailored affiliate marketing services that expand reach and increase sales across diverse sectors.",
+    industries: {
+      0: {
+        title: "Food Booking",
+        desc: "We help food booking platforms grow through influencer marketing and affiliate promotions, focusing on orders and visibility.",
+        desc1: "Designing tasty collaborations with optimized influencer campaigns and reliable order growth.",
+        checks: ["Influencer Promotions", "Affiliate Campaigns", "Food Blogger Collaborations", "Discount Campaigns", "Audience Targeting", "Performance Tracking"],
+        cards: [
+          { title: "Influencer Promo", desc: "We collaborate with food influencers to promote your platform and attract users." },
+          { title: "Affiliate Promo", desc: "We create affiliate programs to drive traffic and increase orders." },
+          { title: "Blogger Marketing", desc: "We partner with bloggers to showcase your services and reach a wider audience." },
+          { title: "Tracking", desc: "We monitor campaigns and improve results for better ROI." }
+        ]
+      },
+      1: {
+        title: "Matrimony",
+        desc: "Our influencer and affiliate strategies for matrimony platforms focus on trust building, engagement, and user acquisition.",
+        desc1: "Building matrimonial trust with optimized collaborations and reliable user growth.",
+        checks: ["Influencer Collaborations", "Affiliate Programs", "User Acquisition", "Social Promotions", "Audience Targeting", "Performance Tracking"],
+        cards: [
+          { title: "Influencer Collabs", desc: "We partner with influencers to promote your platform and increase sign-ups." },
+          { title: "Affiliate Strategy", desc: "We create affiliate programs to bring more users and improve conversions." },
+          { title: "Acquisition Strategy", desc: "We design campaigns to attract and convert new users." },
+          { title: "Campaign Opt", desc: "We track and optimize campaigns for better results." }
+        ]
+      },
+      2: {
+        title: "Cab Booking App",
+        desc: "We help cab booking apps grow through influencer marketing and affiliate campaigns, focusing on app installs and user engagement.",
+        desc1: "Enhancing app reach with optimized influencer promotions and reliable referral programs.",
+        checks: ["Influencer Promotions", "Affiliate Campaigns", "App Install Campaigns", "Referral Programs", "Audience Targeting", "Performance Tracking"],
+        cards: [
+          { title: "Influencer Promo", desc: "We collaborate with influencers to promote your app and increase downloads." },
+          { title: "Affiliate Marketing", desc: "We create affiliate programs to drive installs and user growth." },
+          { title: "Referral Programs", desc: "We design referral programs to increase user engagement and retention." },
+          { title: "Growth Opt", desc: "We track and improve campaigns to increase installs and usage." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Food Booking", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Matrimony", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Cab Booking App", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Partnership Excellence & Reach",
+    list: [
+      { title: "Top Influencer Agency", body: "GoodFirms", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Affiliate Leader", body: "G2 Crowd", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "ISO 9001 Certified", body: "Quality Mgmt", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+      { title: "Partner Excellence", body: "Partner Awards", year: "2024", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Top Affiliate Spec", body: "Clutch.co", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for Influencer Marketing Agency Campaigns",
+    title: "Modern Partnership Tools",
+    description: "We use tools to manage influencer marketing service and affiliate marketing services efficiently.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Upfluence", "Aspire", "Heepsy"] },
+      { row: 2, direction: "right", speed: "28s", items: ["TapInfluence", "ShareASale", "CJ Affiliate", "Impact.com", "PartnerStack"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "PARTNER RESULTS",
+    title: "What Clients Say About Our Influencer Marketing Agency",
+    rating: "4.9/5",
+    reviews: "910+",
+    list: [
+      { name: "Arvind Krishnan", text: "Vihaan delivered our affiliate and influencer marketing campaigns ahead of schedule. Our brand reach and partnerships improved significantly.", initial: "A", color: "#2563eb" },
+      { name: "Suresh Reddy", text: "Their influencer marketing strategy helped us connect with the right audience. Engagement and conversions have increased noticeably.", initial: "S", color: "#10b981" },
+      { name: "Karthik Iyer", text: "Our affiliate campaigns now generate consistent revenue. The tracking and performance are outstanding.", initial: "K", color: "#8b5cf6" },
+      { name: "Divya Nair", text: "Their influencer collaborations improved our brand visibility. The campaigns are creative and result-driven.", initial: "D", color: "#f59e0b" },
+      { name: "Venkatesh Kumar", text: "The campaign management and partnerships are highly effective. Our engagement and ROI have improved drastically.", initial: "V", color: "#ec4899" },
+      { name: "Meera Subramanian", text: "Vihaan built a strong affiliate network for our business. We are now seeing consistent growth in sales and traffic.", initial: "M", color: "#06b6d4" },
+      { name: "Raghavendra Rao", text: "Our influencer campaigns perform flawlessly. Their expertise in affiliate marketing is truly impressive.", initial: "R", color: "#2563eb" },
+      { name: "Lakshmi Priya", text: "The campaigns are well-targeted and impactful. Our audience engagement has increased significantly.", initial: "L", color: "#10b981" },
+      { name: "Sandeep Narayanan", text: "Our brand collaborations are now more effective. Affiliate marketing improved our overall performance.", initial: "S", color: "#8b5cf6" },
+      { name: "Anand Pillai", text: "Their affiliate and influencer marketing services are reliable and creative. Our reach, engagement, and conversions have all improved.", initial: "A", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Grow with an Influencer<br />Marketing Agency?
+      </>
+    ),
+    description: "Let’s build campaigns using influencer marketing service and affiliate marketing services to expand your reach.",
+    buttonText: "Launch Your Campaign",
+    brandText: "Vihaan Partnership Solutions"
+  }
+};
