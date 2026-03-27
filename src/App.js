@@ -43,28 +43,12 @@ import HRMHomepage from "./componants/pages/innerpages.js/HRMSoftware/HRMHomepag
 import HMSHomepage from "./componants/pages/innerpages.js/HospitalManagement/HMSHomepage";
 import {
   uiUxServiceData,
-  webDevServiceData,
   digitalMarketingServiceData,
-  mobileAppDevServiceData,
-  ecommerceDevServiceData,
-  crmDevServiceData,
-  erpDevServiceData,
   blockchainDevServiceData,
-  aiMlDevServiceData,
-  cloudComputingServiceData,
   cyberSecurityServiceData,
-  dataAnalyticsServiceData,
   iotDevServiceData,
   gameDevServiceData,
   contentWritingServiceData,
-  seoServicesServiceData,
-  socialMediaMarketingServiceData,
-  ppcAdvertisingServiceData,
-  emailMarketingServiceData,
-  contentMarketingServiceData,
-  affiliateMarketingServiceData,
-  influencerMarketingServiceData,
-  videoMarketingServiceData,
   appMaintenanceServiceData,
   webMaintenanceServiceData,
   softwareMaintenanceServiceData,
@@ -74,7 +58,6 @@ import {
   thirdPartyIntegrationServiceData,
   migrationServicesServiceData,
   testingQualityAssuranceServiceData,
-  devopsServicesServiceData,
   contentManagementSystemServiceData,
   openSourceDevelopmentServiceData,
   shopifyDevelopmentServiceData,
@@ -99,8 +82,6 @@ import {
   progressiveWebAppsServiceData,
   webApplicationDevelopmentServiceData,
   softwareDevelopmentServiceData,
-  customSoftwareDevelopmentServiceData,
-  saasDevelopmentServiceData,
   enterpriseSoftwareDevelopmentServiceData,
   webDesignServiceData,
   logoDesignServiceData,
@@ -112,11 +93,27 @@ import {
   presentationDesignServiceData,
   emailTemplateDesignServiceData,
   landingPageDesignServiceData,
-  uiUxDesignServiceData,
-  webDevelopmentServiceData
+  webDesignDevServiceData,
+  mobileAppDevFullServiceData,
+  customAppDevFullServiceData,
+  cloudDevFullServiceData,
+  devopsFullServiceData,
+  dataScienceFullServiceData,
+  ecommerceFullServiceData,
+  aiMlFullServiceData,
+  seoFullServiceData,
+  smmFullServiceData,
+  semFullServiceData,
+  videoMarketingFullServiceData,
+  emailMarketingFullServiceData,
+  contentMarketingFullServiceData,
+  localSeoFullServiceData,
+  influencerAffiliateFullServiceData,
+  crmDevServiceData,
+  erpDevServiceData,
+  saasDevelopmentServiceData
 } from "./componants/pages/innerpages.js/serviceinnerpages/ServiceDataTemplate";
 import ServicePage from "./componants/pages/innerpages.js/serviceinnerpages/service pages layout/ServicePage";
-import AboutUs from "./componants/pages/AboutUs";
 
 function App() {
   return (
@@ -183,28 +180,28 @@ function App() {
             {/* Vihaan Services */}
 
             <Route path="/ui-ux-design" element={<ServicePage serviceData={uiUxServiceData} />} />
-            <Route path="/web-development" element={<ServicePage serviceData={webDevServiceData} />} />
+            <Route path="/web-development" element={<ServicePage serviceData={webDesignDevServiceData} />} />
             <Route path="/digital-marketing" element={<ServicePage serviceData={digitalMarketingServiceData} />} />
-            <Route path="/mobile-app-development" element={<ServicePage serviceData={mobileAppDevServiceData} />} />
-            <Route path="/ecommerce-development" element={<ServicePage serviceData={ecommerceDevServiceData} />} />
+            <Route path="/mobile-app-development" element={<ServicePage serviceData={mobileAppDevFullServiceData} />} />
+            <Route path="/ecommerce-development" element={<ServicePage serviceData={ecommerceFullServiceData} />} />
             <Route path="/crm-development" element={<ServicePage serviceData={crmDevServiceData} />} />
             <Route path="/erp-development" element={<ServicePage serviceData={erpDevServiceData} />} />
             <Route path="/blockchain-development" element={<ServicePage serviceData={blockchainDevServiceData} />} />
-            <Route path="/ai-ml-development" element={<ServicePage serviceData={aiMlDevServiceData} />} />
-            <Route path="/cloud-computing" element={<ServicePage serviceData={cloudComputingServiceData} />} />
+            <Route path="/ai-ml-development" element={<ServicePage serviceData={aiMlFullServiceData} />} />
+            <Route path="/cloud-computing" element={<ServicePage serviceData={cloudDevFullServiceData} />} />
             <Route path="/cyber-security" element={<ServicePage serviceData={cyberSecurityServiceData} />} />
-            <Route path="/data-analytics" element={<ServicePage serviceData={dataAnalyticsServiceData} />} />
+            <Route path="/data-analytics" element={<ServicePage serviceData={dataScienceFullServiceData} />} />
             <Route path="/iot-development" element={<ServicePage serviceData={iotDevServiceData} />} />
             <Route path="/game-development" element={<ServicePage serviceData={gameDevServiceData} />} />
             <Route path="/content-writing" element={<ServicePage serviceData={contentWritingServiceData} />} />
-            <Route path="/seo-services" element={<ServicePage serviceData={seoServicesServiceData} />} />
-            <Route path="/social-media-marketing" element={<ServicePage serviceData={socialMediaMarketingServiceData} />} />
-            <Route path="/ppc-advertising" element={<ServicePage serviceData={ppcAdvertisingServiceData} />} />
-            <Route path="/email-marketing" element={<ServicePage serviceData={emailMarketingServiceData} />} />
-            <Route path="/content-marketing" element={<ServicePage serviceData={contentMarketingServiceData} />} />
-            <Route path="/affiliate-marketing" element={<ServicePage serviceData={affiliateMarketingServiceData} />} />
-            <Route path="/influencer-marketing" element={<ServicePage serviceData={influencerMarketingServiceData} />} />
-            <Route path="/video-marketing" element={<ServicePage serviceData={videoMarketingServiceData} />} />
+            <Route path="/seo-services" element={<ServicePage serviceData={seoFullServiceData} />} />
+            <Route path="/social-media-marketing" element={<ServicePage serviceData={smmFullServiceData} />} />
+            <Route path="/sem-services" element={<ServicePage serviceData={semFullServiceData} />} />
+            <Route path="/email-marketing" element={<ServicePage serviceData={emailMarketingFullServiceData} />} />
+            <Route path="/content-marketing" element={<ServicePage serviceData={contentMarketingFullServiceData} />} />
+            <Route path="/local-seo" element={<ServicePage serviceData={localSeoFullServiceData} />} />
+            <Route path="/influencer-affiliate-marketing" element={<ServicePage serviceData={influencerAffiliateFullServiceData} />} />
+            <Route path="/video-marketing" element={<ServicePage serviceData={videoMarketingFullServiceData} />} />
             <Route path="/app-maintenance" element={<ServicePage serviceData={appMaintenanceServiceData} />} />
             <Route path="/web-maintenance" element={<ServicePage serviceData={webMaintenanceServiceData} />} />
             <Route path="/software-maintenance" element={<ServicePage serviceData={softwareMaintenanceServiceData} />} />
@@ -214,7 +211,7 @@ function App() {
             <Route path="/third-party-integration" element={<ServicePage serviceData={thirdPartyIntegrationServiceData} />} />
             <Route path="/migration-services" element={<ServicePage serviceData={migrationServicesServiceData} />} />
             <Route path="/testing-quality-assurance" element={<ServicePage serviceData={testingQualityAssuranceServiceData} />} />
-            <Route path="/devops-services" element={<ServicePage serviceData={devopsServicesServiceData} />} />
+            <Route path="/devops-services" element={<ServicePage serviceData={devopsFullServiceData} />} />
             <Route path="/content-management-system" element={<ServicePage serviceData={contentManagementSystemServiceData} />} />
             <Route path="/open-source-development" element={<ServicePage serviceData={openSourceDevelopmentServiceData} />} />
             <Route path="/shopify-development" element={<ServicePage serviceData={shopifyDevelopmentServiceData} />} />
@@ -239,7 +236,7 @@ function App() {
             <Route path="/progressive-web-apps" element={<ServicePage serviceData={progressiveWebAppsServiceData} />} />
             <Route path="/web-application-development" element={<ServicePage serviceData={webApplicationDevelopmentServiceData} />} />
             <Route path="/software-development" element={<ServicePage serviceData={softwareDevelopmentServiceData} />} />
-            <Route path="/custom-software-development" element={<ServicePage serviceData={customSoftwareDevelopmentServiceData} />} />
+            <Route path="/custom-software-development" element={<ServicePage serviceData={customAppDevFullServiceData} />} />
             <Route path="/saas-development" element={<ServicePage serviceData={saasDevelopmentServiceData} />} />
             <Route path="/ecommerce-software-development" element={<ServicePage serviceData={enterpriseSoftwareDevelopmentServiceData} />} />
             <Route path="/web-design" element={<ServicePage serviceData={webDesignServiceData} />} />
@@ -252,12 +249,6 @@ function App() {
             <Route path="/presentation-design" element={<ServicePage serviceData={presentationDesignServiceData} />} />
             <Route path="/email-template-design" element={<ServicePage serviceData={emailTemplateDesignServiceData} />} />
             <Route path="/landing-page-design" element={<ServicePage serviceData={landingPageDesignServiceData} />} />
-            <Route path="/ui-ux-design" element={<ServicePage serviceData={uiUxDesignServiceData} />} />
-            <Route path="/web-development" element={<ServicePage serviceData={webDevelopmentServiceData} />} />
-            <Route path="/digital-marketing" element={<ServicePage serviceData={digitalMarketingServiceData} />} />
-            <Route path="/mobile-app-development" element={<ServicePage serviceData={mobileAppDevServiceData} />} />
-
-
           </Routes>
         </Router>
       </Grid>
