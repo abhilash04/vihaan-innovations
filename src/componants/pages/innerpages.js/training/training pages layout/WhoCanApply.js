@@ -4,9 +4,16 @@ import {
   Typography,
   Container,
   Grid,
+  useTheme,
+  useMediaQuery,
 } from "@mui/material";
 import { motion, useInView, animate } from "framer-motion";
-
+import SchoolIcon from "@mui/icons-material/School";
+import DesktopMacIcon from "@mui/icons-material/DesktopMac";
+import CodeIcon from "@mui/icons-material/Code";
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import LanguageIcon from "@mui/icons-material/Language";
+import EngineeringIcon from "@mui/icons-material/Engineering";
 const Counter = ({ from, to, duration = 2 }) => {
   const [count, setCount] = useState(from);
   const ref = useRef(null);
@@ -32,7 +39,7 @@ const Card = ({ item, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.55, delay: index * 0.09, ease: "easeOut" }}
-      style={{ height: "100%" }}
+      style={{ height: "70%" }}
     >
       <Box
         sx={{
@@ -60,6 +67,7 @@ const Card = ({ item, index }) => {
           },
         }}
       >
+        {/* Top accent line */}
         <Box
           sx={{
             position: "absolute",
@@ -73,6 +81,7 @@ const Card = ({ item, index }) => {
           }}
         />
 
+        {/* Icon */}
         <Box
           className="icon-wrap"
           sx={{
@@ -91,6 +100,7 @@ const Card = ({ item, index }) => {
           {item.icon}
         </Box>
 
+        {/* Label */}
         <Typography
           sx={{
             fontFamily: "'Syne', sans-serif",
@@ -103,6 +113,7 @@ const Card = ({ item, index }) => {
           {item.label}
         </Typography>
 
+        {/* Description */}
         <Typography
           sx={{
             fontFamily: "'Instrument Sans', sans-serif",
@@ -120,7 +131,9 @@ const Card = ({ item, index }) => {
 };
 
 const WhoCanApply = ({ data = {} }) => {
-  const { title, subtitle, audience = [], stats = [] } = data;
+  const { title, subtitle, badge, audience = [], stats = [] } = data;
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <Box
@@ -131,6 +144,7 @@ const WhoCanApply = ({ data = {} }) => {
         overflow: "hidden",
       }}
     >
+      {/* Subtle decorative circles */}
       <Box
         sx={{
           position: "absolute",
@@ -159,6 +173,8 @@ const WhoCanApply = ({ data = {} }) => {
       />
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
+
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -178,7 +194,7 @@ const WhoCanApply = ({ data = {} }) => {
                 textAlign: "center",
               }}
             >
-              Eligibility
+              {badge || "Eligibility"}
             </Typography>
             <Typography
               variant="h2"
@@ -193,23 +209,34 @@ const WhoCanApply = ({ data = {} }) => {
                 mb: 2,
               }}
             >
-              {title}
+              {title || (<>Who Can Apply <Box component="span" sx={{ color: "#2d6a4f" }}>for the Course?</Box></>)}
             </Typography>
             <Typography
               sx={{
                 fontFamily: "'Instrument Sans', sans-serif",
                 fontSize: "15px",
                 color: "#6b6760",
-                maxWidth: "600px",
+                maxWidth: "500px",
                 lineHeight: 1.7,
                 textAlign: "center",
               }}
             >
-              {subtitle}
+              {subtitle || "Our program is open to anyone with the drive to learn. No prior coding experience required — just ambition."}
             </Typography>
+            {/* Underline accent */}
+            <Box
+              sx={{
+                mt: 2.5,
+                width: "48px",
+                height: "3px",
+                borderRadius: "2px",
+                background: "#1a472a",
+              }}
+            />
           </Box>
         </motion.div>
 
+        {/* Cards */}
         <Grid container spacing={2.5}>
           {audience.map((item, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
@@ -218,6 +245,7 @@ const WhoCanApply = ({ data = {} }) => {
           ))}
         </Grid>
 
+        {/* Bottom trust strip */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -238,7 +266,12 @@ const WhoCanApply = ({ data = {} }) => {
               gap: 3,
             }}
           >
-            {stats.map((stat, i) => (
+            {(stats.length > 0 ? stats : [
+              { num: 1200, label: "Alumni placed", suffix: "+" },
+              { num: 200, label: "Hiring partners", suffix: "+" },
+              { num: 500, label: "Projects built", suffix: "+" },
+              { num: 100, label: "Placement assistance", suffix: "%" },
+            ]).map((stat, i) => (
               <Box key={i} sx={{ textAlign: "center", flex: "1 1 120px" }}>
                 <Typography
                   sx={{
@@ -266,6 +299,7 @@ const WhoCanApply = ({ data = {} }) => {
             ))}
           </Box>
         </motion.div>
+
       </Container>
     </Box>
   );

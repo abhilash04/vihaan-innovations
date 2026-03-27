@@ -1,9 +1,24 @@
 import React from "react";
 import { Box, Typography, Container, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
+import SchoolIcon from "@mui/icons-material/School";
+import LaptopMacIcon from "@mui/icons-material/LaptopMac";
+import WorkIcon from "@mui/icons-material/Work";
+import GroupsIcon from "@mui/icons-material/Groups";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
+import DataObjectIcon from "@mui/icons-material/DataObject";
+
+const features = [
+  { icon: <SchoolIcon sx={{ fontSize: 40 }} />, title: "Expert Instructors", desc: "Learn from industry professionals with 10+ years of real-world experience." },
+  { icon: <LaptopMacIcon sx={{ fontSize: 40 }} />, title: "Hands-On Projects", desc: "Build 5+ real-world projects that go directly into your portfolio." },
+  { icon: <WorkIcon sx={{ fontSize: 40 }} />, title: "100% Placement Support", desc: "Dedicated placement cell with 200+ hiring partners across India." },
+  { icon: <GroupsIcon sx={{ fontSize: 40 }} />, title: "Batch Community", desc: "Small batches for personalized attention and better interaction." },
+  { icon: <MenuBookIcon sx={{ fontSize: 40 }} />, title: "Structured Curriculum", desc: "Week-by-week curriculum designed with input from top tech companies." },
+  { icon: <DataObjectIcon sx={{ fontSize: 40 }} />, title: "Lifetime LMS Access", desc: "Access all recorded sessions, notes and updates forever at no extra cost." },
+];
 
 const FeaturesSection = ({ data = {} }) => {
-  const { title, subtitle, features = [] } = data;
+  const { title, subtitle, badge, features = [] } = data;
   return (
     <Box sx={{ py: { xs: 6, md: 8 }, background: "#deedfcff" }}>
       <Container maxWidth="lg">
@@ -11,16 +26,16 @@ const FeaturesSection = ({ data = {} }) => {
           <Typography
             sx={{ color: "#00b4d8", fontWeight: 700, fontSize: "14px", letterSpacing: "2px", textTransform: "uppercase", mb: 2 }}
           >
-            Why Choose Us
+            {badge || "Why Choose Us"}
           </Typography>
           <Typography
             variant="h2"
             sx={{ fontWeight: 800, fontSize: { xs: "32px", md: "48px" }, color: "#1e293b", mb: 2 }}
           >
-            {title}
+            {title || (<>What Makes Us <span style={{ color: "#00b4d8" }}>Different.</span></>)}
           </Typography>
           <Typography sx={{ color: "#64748b", maxWidth: "600px", mx: "auto", fontSize: "18px" }}>
-            {subtitle}
+            {subtitle || "Everything we do is designed to accelerate your career, not just check a course box."}
           </Typography>
         </Box>
 
@@ -39,7 +54,7 @@ const FeaturesSection = ({ data = {} }) => {
                   elevation={0}
                   sx={{
                     p: 5,
-                    height: "100%",
+                    height: "70%",
                     borderRadius: "24px",
                     background: "#fff",
                     border: "1px solid #e2e8f0",
