@@ -1828,7 +1828,7 @@ const Header = () => {
                   alt="Website Logo"
                   sx={{
                     width: "100%",
-                    maxWidth: { xs: "90px", md: scrolled ? "120px" : "140px" },
+                    maxWidth: { xs: "90px", md: scrolled ? "140px" : "170px" },
                     height: "auto",
                     transition: "all 0.3s ease",
                   }}
