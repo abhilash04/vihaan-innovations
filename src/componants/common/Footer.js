@@ -576,7 +576,7 @@ const FooterAndPopup = () => {
           <Container maxWidth="xl" sx={{ px: { xs: 2, md: 5 } }}>
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
               <Typography variant="body2" sx={{ color: "#666", fontSize: "14px", fontWeight: 600, textAlign: 'center' }}>
-                © 2025 SN Info Systems. All rights reserved.
+                © 2025 Vihaan Innovations. All rights reserved.
               </Typography>
             </Box>
           </Container>
