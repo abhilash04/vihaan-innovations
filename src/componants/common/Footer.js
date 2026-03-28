@@ -458,6 +458,7 @@ const FooterAndPopup = () => {
                         "Mobile App Development",
                         "Ecommerce Development",
                         "CRM Development",
+                        "Maintenance & Support",
                       ].map((service) => (
                         <li key={service} style={{ marginBottom: "12px" }}>
                           <Link
@@ -514,7 +515,6 @@ const FooterAndPopup = () => {
                       {[
                         { name: "About Us", path: "/about-us" },
                         { name: "Careers", path: "/career" },
-                        { name: "Blog", path: "/blog" },
                         { name: "Terms & Conditions", path: "/terms-and-conditions" },
                         { name: "Privacy Policy", path: "/privacy-policy" },
                         { name: "Refund Policy", path: "/refund-policy" },
