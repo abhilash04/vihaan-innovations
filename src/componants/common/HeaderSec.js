@@ -23,8 +23,8 @@ import {
   ExpandLess as ExpandLessIcon,
 } from "@mui/icons-material";
 import SearchIcon from "@mui/icons-material/Search";
-import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
-// import logo from "../../assets/vihaan-logo.png";
+// import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
+import logo from "../../assets/vihaan-logo.png";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import img1 from "../../assets/img2.png"
 import {
@@ -315,7 +315,7 @@ const Header = () => {
         },
         {
           label: "Maintenance & Support",
-          href: "/software-maintenance",
+          href: "/maintenance-&-support",
           icon: LifeBuoy,
         },
       ],
@@ -332,7 +332,7 @@ const Header = () => {
         },
         {
           label: "Search Engine Marketing (SEM / Paid Ads)",
-          href: "/ppc-advertising",
+          href: "/sem-services",
           icon: MonitorPlay,
         },
         {
@@ -352,12 +352,12 @@ const Header = () => {
         },
         {
           label: "Google My Business (Local SEO)",
-          href: "/digital-marketing",
+          href: "/google-my-business",
           icon: MapPin,
         },
         {
           label: "Affiliate & Influencer Marketing",
-          href: "/influencer-marketing",
+          href: "/influencer-affiliate-marketing",
           icon: Users,
         },
       ],
@@ -367,26 +367,26 @@ const Header = () => {
           href: "/graphic-design",
           icon: Image,
         },
-        { label: "2D Animation", href: "/graphic-design", icon: Film },
-        { label: "3D Animation", href: "/graphic-design", icon: Layers },
+        { label: "2D Animation", href: "/2d-animation", icon: Film },
+        { label: "3D Animation", href: "/3d-animation", icon: Layers },
         {
           label: "Explainer Videos",
-          href: "/video-marketing",
+          href: "/explainer-videos",
           icon: Video,
         },
         {
           label: "Motion Graphics Animation",
-          href: "/video-marketing",
+          href: "/motion-graphics",
           icon: PenTool,
         },
         {
           label: "Whiteboard Animation",
-          href: "/video-marketing",
+          href: "/whiteboard-animation",
           icon: Edit3,
         },
         {
           label: "Video Editing & VFX",
-          href: "/video-marketing",
+          href: "/video-editing-vfx",
           icon: Scissors,
         },
         {
@@ -1828,7 +1828,7 @@ const Header = () => {
                   alt="Website Logo"
                   sx={{
                     width: "100%",
-                    maxWidth: { xs: "90px", md: scrolled ? "140px" : "170px" },
+                    maxWidth: { xs: "90px", md: scrolled ? "160px" : "200px" },
                     height: "auto",
                     transition: "all 0.3s ease",
                   }}

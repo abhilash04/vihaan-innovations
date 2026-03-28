@@ -789,53 +789,1223 @@ export const influencerMarketingServiceData = S(
   "Ready to Grow with Influencer Marketing?"
 );
 
-export const graphicDesignServiceData = S(
-  "Graphic Design Services in Bangalore",
-  "Creative, Brand-Aligned Visual Designs That Make Your Business Stand Out.",
-  "Graphic Design",
-  [
-    ["Brand Identity Design", "Logos, color palettes, typography and brand guidelines for a cohesive identity."],
-    ["Marketing Collateral", "Brochures, flyers, banners and presentations that convert."],
-    ["Social Media Graphics", "Platform-optimized posts, stories and ads designed to stop the scroll."],
-    ["Print Design", "Business cards, packaging, and print-ready designs with precision."],
-  ],
-  [
-    ["Adobe Photoshop", "Adobe Illustrator", "Canva", "Figma", "CorelDraw", "InDesign"],
-    ["Adobe XD", "After Effects", "Procreate", "Sketch", "Affinity Designer"],
-  ],
-  [ecomInd, retailInd, eduInd],
-  "Ready to Elevate Your Brand Design?"
-);
+export const graphicDesignServiceData = {
+  hero: {
+    title: "Professional Graphic Design Company",
+    subtitle: "A graphic design company delivering creative and visually compelling designs that enhance your brand identity.",
+    badgeText: "🚀 Creative Visuals That Tell Your Brand Story!",
+    buttonText: "Get Started Now",
+    features: [
+      { icon: BusinessCenterIcon, text: "Location-Based Development" },
+      { icon: BusinessCenterIcon, text: "Trusted Support Team" },
+      { icon: BusinessCenterIcon, text: "On-Time Delivery" },
+      { icon: BusinessCenterIcon, text: "Compatible Across All Devices" },
+      { icon: BusinessCenterIcon, text: "High-Quality Work" },
+      { icon: BusinessCenterIcon, text: "Experienced Development Team" },
+    ]
+  },
 
-export const logoDesignServiceData = S(
-  "Logo Design Services in Bangalore",
-  "Memorable, Timeless Logo Designs That Define Your Brand Identity.",
-  "Logo Design",
-  [
-    ["Brand Logo Design", "Custom, concept-driven logos that communicate your brand's personality and values."],
-    ["Logo Refresh & Redesign", "Modernize outdated logos while preserving brand equity and recognition."],
-    ["Logo Variations & Brand Kit", "Full logo family with light/dark, horizontal/stacked, and icon-only versions."],
-    ["Icon & Monogram Design", "Distinctive lettermark and icon designs for app icons and avatars."],
-  ],
-  [
-    ["Adobe Illustrator", "Figma", "Canva Pro", "CorelDraw", "Affinity Designer"],
-    ["Adobe Photoshop", "Procreate", "Adobe XD", "Sketch"],
-  ],
-  [ecomInd, retailInd, eduInd],
-  "Ready to Design Your Perfect Logo?"
-);
+  overview: {
+    subtitle: "What We Provide",
+    title: "Graphic Design Solutions",
+    description: "We provide innovative graphic design services, including logo creation, branding, social media visuals, and marketing materials to make your business stand out.",
+    list: [
+      { title: "Logo & Brand Design", icon: BusinessCenterIcon, count: "Brand First", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "Create unique logos and a strong brand identity." },
+      { title: "Social Media Creatives", icon: BusinessCenterIcon, count: "Engaging Content", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "Design engaging posts and ads to attract your audience." },
+      { title: "Marketing Materials", icon: BusinessCenterIcon, count: "Professional Print", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "Create professional flyers, brochures, and posters." },
+      { title: "Website & UI Graphics", icon: BusinessCenterIcon, count: "Modern Visuals", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "Design modern website visuals, banners, and UI elements." },
+    ]
+  },
 
-// Remaining stub exports (not linked from header, kept for completeness)
-export const ecommerceDevServiceData = {};
-export const crmDevServiceData = {};
-export const erpDevServiceData = {};
-export const blockchainDevServiceData = {};
-export const cyberSecurityServiceData = {};
-export const iotDevServiceData = {};
-export const gameDevServiceData = {};
-export const contentWritingServiceData = {};
-export const affiliateMarketingServiceData = {};
-export const appMaintenanceServiceData = {};
+  detailed: {
+    subtitle: "OUR SERVICES",
+    title: "Branding Designs for Memorable Identity",
+    description: "We create impactful Branding Designs that help build a strong and memorable brand identity.",
+    services: [
+      {
+        title: "DESIGN OFFERINGS",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Brand Identity Design", desc: "Creating unique logos, color schemes, and brand guidelines.", icon: <BusinessCenterIcon /> },
+          { title: "Print & Digital Design", desc: "Crafting flyers, business cards, social media posts, and banners.", icon: <BusinessCenterIcon /> },
+          { title: "Illustration & Custom Graphics", desc: "Providing custom illustrations and unique graphic elements.", icon: <BusinessCenterIcon /> },
+          { title: "UI/UX Visuals", desc: "Designing visual layouts and icons for websites and apps.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY CHOOSE VIHAAN",
+    title: "The Best Graphic Design Company for Your Business",
+    description: "As a professional graphic design company, we focus on delivering high-quality and creative designs that help your business grow.",
+    stats: [
+      { value: "500+", label: "Designs Created" },
+      { value: "98%", label: "Client Satisfaction" },
+      { value: "10+", label: "Expert Designers" },
+    ],
+    reasons: [
+      { title: "Creative & Unique Designs", icon: BusinessCenterIcon, desc: "We provide original designs tailored to your brand.", color: "#2563eb", number: "01" },
+      { title: "Experienced Designers", icon: BusinessCenterIcon, desc: "Our team has years of expertise in visual storytelling.", color: "#06b6d4", number: "02" },
+      { title: "Quick Turnaround Time", icon: BusinessCenterIcon, desc: "We deliver high-quality work within deadlines.", color: "#4f46e5", number: "03" },
+      { title: "Affordable Pricing", icon: BusinessCenterIcon, desc: "Get premium design services at competitive rates.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "Our Design Process",
+    title: "How We Create Stunning Designs",
+    description: "We follow a step-by-step graphic design process to ensure the best results for your brand.",
+    processSteps: [
+      { number: "01", title: "Project Understanding", desc: "We discuss your design requirements and goals.", checks: ["Client Brief", "Concept Discussion", "Goal Setting"], position: "above" },
+      { number: "02", title: "Research & Brainstorming", desc: "We research market trends and brainstorm creative ideas.", checks: ["Market Research", "Moodboard Creation", "Idea Generation"], position: "below" },
+      { number: "03", title: "Sketching & Conceptualization", desc: "We create initial sketches and concepts for your design.", checks: ["Rough Sketches", "Drafting Concepts", "Refining Ideas"], position: "above" },
+      { number: "04", title: "Actual Design & Refinement", desc: "We develop the final design using modern tools.", checks: ["Digital Designing", "Color & Typography", "Detailed Refinement"], position: "below" },
+      { number: "05", title: "Client Feedback & Revisions", desc: "We share the design for your review and make necessary changes.", checks: ["Review Session", "Iterative Changes", "Final Tweaks"], position: "above" },
+      { number: "06", title: "Final Delivery", desc: "We deliver the high-quality final files in required formats.", checks: ["File Preparation", "Quality Check", "Transfer Assets"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "Industry Expertise",
+    title: "Custom Designs for Every Business Sector",
+    description: "We provide specialized graphic design services tailored to the unique needs of different industries.",
+    industries: {
+      0: {
+        title: "Real Estate CRM",
+        desc: "Designing professional brochures, flyers, and digital ads to showcase real estate properties and services effectively.",
+        desc1: "Creating visually appealing marketing materials that attract potential buyers and investors.",
+        checks: ["Property Flyers", "Digital Ads", "Zonal Maps", "Brochure Design"],
+        cards: [
+          { title: "Marketing Kits", desc: "Complete sets of property marketing materials." },
+          { title: "Virtual Displays", desc: "Visual assets for online property showcases." },
+          { title: "Social Ads", desc: "Eye-catching ads for real estate social media campaigns." },
+          { title: "Site Maps", desc: "Clean and detailed site maps for property layouts." }
+        ]
+      },
+      1: {
+        title: "Ecommerce Single Vendor",
+        desc: "Creating high-converting product graphics, banners, and promotional materials for online stores.",
+        desc1: "Designing visual elements that enhance the shopping experience and boost sales.",
+        checks: ["Product Banners", "Social Media Posts", "Discount Flyers", "Icon Sets"],
+        cards: [
+          { title: "Home Banners", desc: "Attention-grabbing hero banners for online stores." },
+          { title: "Product Graphics", desc: "Visuals that highlight product features beautifully." },
+          { title: "Promo Ads", desc: "Creative ads for seasonal sales and offers." },
+          { title: "Social Graphics", desc: "Consistent branding across social commerce channels." }
+        ]
+      },
+      2: {
+        title: "Resort Booking & Management",
+        desc: "Designing elegant brochures, visual menus, and social media content for the hospitality and travel industry.",
+        desc1: "Creating visuals that convey luxury, comfort, and memorable experiences.",
+        checks: ["Resort Brochures", "Digital Menu Cards", "Travel Creatives", "Logo Refresh"],
+        cards: [
+          { title: "Experience Guides", desc: "Brochures that showcase resort amenities and activities." },
+          { title: "Visual Menus", desc: "Elegant digital and print menus for resort dining." },
+          { title: "Holiday Ads", desc: "Social media ads for holiday packages and stays." },
+          { title: "Brand Assets", desc: "Stationery and branding materials for resort use." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Real Estate", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Ecommerce", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Hospitality", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Recognized for Creative Excellence",
+    list: [
+      { title: "Design Excellence", body: "Awwwards", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Top Creative Agency", body: "Clutch", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "Brand Innovation", body: "Behance", year: "2025", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Quality Certified", body: "ISO 9001", year: "2025", icon: GppGoodIcon, color: "#10b981" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Creative Expertise",
+    title: "Modern Design Tools We Use",
+    description: "We use professional graphic design tools to create high-quality visuals for our clients.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Photoshop", "Illustrator", "Figma", "Indesign"] },
+      { row: 2, direction: "right", speed: "28s", items: ["After Effects", "CorelDraw", "Sketch", "Canva Pro"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "Client Feedback",
+    title: "What Our Clients Say",
+    rating: "4.9/5",
+    reviews: "500+",
+    list: [
+      { name: "Suresh Rao", text: "The graphic design team at Vihaan is incredibly creative. They revamped our brand identity with a modern and professional touch.", initial: "S", color: "#2563eb" },
+      { name: "Meera Nair", text: "Exceptional marketing materials! The brochures and social media posts they designed helped us increase our customer engagement significantly.", initial: "M", color: "#10b981" },
+      { name: "Karthik Hegde", text: "Fast delivery and amazing creativity. They understood our requirements perfectly and delivered a logo that we absolutely love.", initial: "K", color: "#8b5cf6" },
+      { name: "Priya Sharma", text: "Their UI/UX visuals for our mobile app are stunning. The design consistency and attention to detail are remarkable.", initial: "P", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Take the Next Step with Our<br />Professional Graphic Design Services
+      </>
+    ),
+    description: "Let’s create visuals that elevate your brand and engage your audience.",
+    buttonText: "Request a Free Quote",
+    brandText: "Vihaan Creative Studio"
+  }
+};
+
+export const twoDAnimationServiceData = {
+  hero: {
+    title: "Professional 2D Animation Company",
+    subtitle: "A 2D animation company creating engaging storytelling and high-quality character animations for your brand.",
+    badgeText: "🎬 Bring Your Ideas to Life with 2D Magic!",
+    buttonText: "Start Your Animation",
+    features: [
+      { icon: BusinessCenterIcon, text: "Storyboarding & Scripting" },
+      { icon: BusinessCenterIcon, text: "Character Design" },
+      { icon: BusinessCenterIcon, text: "Smooth Motion Graphics" },
+      { icon: BusinessCenterIcon, text: "Voiceover & Audio Sync" },
+      { icon: BusinessCenterIcon, text: "High-Resolution Output" },
+      { icon: BusinessCenterIcon, text: "Creative Storytelling" },
+    ]
+  },
+
+  overview: {
+    subtitle: "Expert 2D Solutions",
+    title: "Engaging 2D Animations",
+    description: "We provide professional 2D animation services, including explainer videos, character animation, and marketing content.",
+    list: [
+      { title: "Explainer Videos", icon: BusinessCenterIcon, count: "Educational", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "Simplify complex ideas with 2D explainer videos." },
+      { title: "Character Design", icon: BusinessCenterIcon, count: "Unique Styles", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "Develop unique characters that resonate with your brand." },
+      { title: "Whiteboard Animation", icon: BusinessCenterIcon, count: "Visual Teaching", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "Creative whiteboard videos for training and education." },
+      { title: "Ad Campaigns", icon: BusinessCenterIcon, count: "Promotional", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "Boost sales with engaging 2D animation ads." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "OUR EXPERTISE",
+    title: "Comprehensive 2D Animation Services",
+    description: "Our 2D animation services combine creativity and technology to deliver impactful visual content.",
+    services: [
+      {
+        title: "ANIMATION TYPES",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Explainer Video Production", desc: "Creating detailed 2D videos to explain products or services.", icon: <BusinessCenterIcon /> },
+          { title: "Character Animation", desc: "Animating characters for storytelling and brand engagement.", icon: <BusinessCenterIcon /> },
+          { title: "Corporate Presentations", desc: "Adding animation to corporate decks for better impact.", icon: <BusinessCenterIcon /> },
+          { title: "Educational Content", desc: "Designing animated tutorials and lessons for learning.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY VIHAAN",
+    title: "Leading 2D Animation Agency",
+    description: "We are a top 2D animation company focused on delivering creative storytelling that converts.",
+    stats: [
+      { value: "300+", label: "Videos Delivered" },
+      { value: "95%", label: "Retention Rate" },
+      { value: "8+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Custom Art Styles", icon: BusinessCenterIcon, desc: "We create visuals that match your specific brand voice.", color: "#2563eb", number: "01" },
+      { title: "Professional Scripts", icon: BusinessCenterIcon, desc: "Engaging scripts that keep your audience hooked.", color: "#06b6d4", number: "02" },
+      { title: "Fluid Motion", icon: BusinessCenterIcon, desc: "Smooth and frame-perfect animation quality.", color: "#4f46e5", number: "03" },
+      { title: "End-to-End Production", icon: BusinessCenterIcon, desc: "From concept to final render, we handle everything.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "Animation Workflow",
+    title: "From Script to Screen",
+    description: "Our structured 2D animation process ensures clarity and high production value.",
+    processSteps: [
+      { number: "01", title: "Script Writing", desc: "Creating a compelling script for your message.", checks: ["Narrative Flow", "Tone Setting", "Clear CTA"], position: "above" },
+      { number: "02", title: "Storyboarding", desc: "Planning visuals frame by frame for better clarity.", checks: ["Visual Layout", "Scene Sequence", "Timing"], position: "below" },
+      { number: "03", title: "Asset Design", desc: "Designing characters, backgrounds, and elements.", checks: ["Character Creation", "Environment Art", "Styling"], position: "above" },
+      { number: "04", title: "Animation Phase", desc: "Bringing the designs to life with motion.", checks: ["Keyframing", "Motion Paths", "Rigging"], position: "below" },
+      { number: "05", title: "Audio & Effects", desc: "Adding voiceover, sound effects, and background music.", checks: ["VO Recording", "Sound Design", "Audio Mix"], position: "above" },
+      { number: "06", title: "Final Export", desc: "Rendering the final video in your preferred format.", checks: ["Mastering", "Format Conversion", "Delivery"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "Target Sectors",
+    title: "2D Animation for Impactful Growth",
+    description: "We tailor our 2D animations to meet the specific requirements of various business sectors.",
+    industries: {
+      0: {
+        title: "EdTech & Learning",
+        desc: "Creating animated lessons and tutorials that make learning fun and easy to understand.",
+        desc1: "Simplifying complex subjects through visual storytelling and engaging characters.",
+        checks: ["Visual Tutorials", "K-12 Content", "Corporate Training", "Language Learning"],
+        cards: [
+          { title: "LMS Videos", desc: "Standardized educational videos for online platforms." },
+          { title: "Conceptual Clips", desc: "Short animations explaining scientific or technical ideas." },
+          { title: "Interactive Lessons", desc: "Visual assets for gamified learning experiences." },
+          { title: "Safety Modules", desc: "Animated safety guidelines for various workplaces." }
+        ]
+      },
+      1: {
+        title: "Health & Pharma",
+        desc: "Designing animations that explain medical procedures, drug mechanisms, and healthcare tips.",
+        desc1: "Building trust and clarity through simplified medical visualizations.",
+        checks: ["Patient Education", "Drug Explainers", "Surgical Visuals", "Health Awareness"],
+        cards: [
+          { title: "Procedure Overviews", desc: "Simplified views of complex medical treatments." },
+          { title: "Safety Protocol", desc: "Animated guides for hospital staff and patients." },
+          { title: "Product Features", desc: "Visualizing how medical devices work." },
+          { title: "Symptom Guides", desc: "Easy-to-follow health awareness videos." }
+        ]
+      },
+      2: {
+        title: "Corporate & SaaS",
+        desc: "Delivering professional explainer videos that highlight SaaS product features and benefits.",
+        desc1: "Increasing user adoption through clear and engaging software walkthroughs.",
+        checks: ["Product Demos", "Feature Updates", "Onboarding Videos", "Sales Pitches"],
+        cards: [
+          { title: "Feature Reveals", desc: "Dynamic animations showcasing new app functions." },
+          { title: "User Onboarding", desc: "Step-by-step guides for new platform users." },
+          { title: "Brand Stories", desc: "Animated narratives reflecting corporate values." },
+          { title: "Investor Pitch", desc: "Engaging visuals for business presentations." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Education", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Healthcare", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Corporate", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Award-Winning Animation House",
+    list: [
+      { title: "Best Explainer", body: "Vimeo", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Animation Excellence", body: "Clutch", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "Storytelling Award", body: "Design Week", year: "2025", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Creative Choice", body: "Behance", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Software Stack",
+    title: "Tools for Fluid 2D Motion",
+    description: "We use advanced software to deliver high-fidelity 2D animations.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Adobe Animate", "After Effects", "Toon Boom Harmony"] },
+      { row: 2, direction: "right", speed: "28s", items: ["Moho Pro", "Storyboard Pro", "Affinity Designer", "Audition"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "Client Voice",
+    title: "Satisfied Animation Clients",
+    rating: "4.9/5",
+    reviews: "450+",
+    list: [
+      { name: "Anil Kapoor", text: "The explainer video Vihaan created for our app is fantastic. It simplified our message and increased signups by 40%!", initial: "A", color: "#2563eb" },
+      { name: "Sarah John", text: "Beautiful character designs and smooth animation. They handled our children's story series with great care and creativity.", initial: "S", color: "#10b981" },
+      { name: "Rajesh V", text: "Professional team with great timing. The storyboard was detailed and the final render surpassed our expectations.", initial: "R", color: "#8b5cf6" },
+      { name: "Emma Watson", text: "Our corporate onboarding animation is a huge hit! It's engaging, clear, and perfectly matches our brand aesthetics.", initial: "E", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Create Your 2D Story with a<br />Professional Animation Company?
+      </>
+    ),
+    description: "Let’s build animations that resonate with your audience and grow your business.",
+    buttonText: "Get a Custom Quote",
+    brandText: "Vihaan 2D Studio"
+  }
+};
+
+export const threeDAnimationServiceData = {
+  hero: {
+    title: "Leading 3D Animation Company",
+    subtitle: "A 3D animation company providing high-end 3D modeling, lighting, and realistic animations for various industries.",
+    badgeText: "🧤 Experience Realism with 3D Excellence!",
+    buttonText: "Book a Demo",
+    features: [
+      { icon: BusinessCenterIcon, text: "High-Poly Modeling" },
+      { icon: BusinessCenterIcon, text: "Realistic Texturing" },
+      { icon: BusinessCenterIcon, text: "Cinematic Lighting" },
+      { icon: BusinessCenterIcon, text: "Advanced Character Rigging" },
+      { icon: BusinessCenterIcon, text: "Architectural Walkthroughs" },
+      { icon: BusinessCenterIcon, text: "Product Visualizations" },
+    ]
+  },
+
+  overview: {
+    subtitle: "3D Visual Solutions",
+    title: "Advanced 3D Animation",
+    description: "We provide professional 3D animation services, including architectural rendering, product modeling, and cinematic videos.",
+    list: [
+      { title: "Product Modeling", icon: BusinessCenterIcon, count: "Hyper-Realistic", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "Visualizing products with 360-degree 3D detail." },
+      { title: "ArchViz Walkthroughs", icon: BusinessCenterIcon, count: "Virtual Tours", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "Immersive architectural walkthroughs for real estate." },
+      { title: "Industrial Renders", icon: BusinessCenterIcon, count: "Precision Work", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "Visualizing machines and technical processes in 3D." },
+      { title: "Character CGI", icon: BusinessCenterIcon, count: "Life-Like", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "Creating realistic 3D characters for media and gaming." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "PRECISION & ART",
+    title: "Specialized 3D Design Services",
+    description: "Our 3D animation services deliver high-quality visuals that offer a depth and realism impossible in 2D.",
+    services: [
+      {
+        title: "3D CAPABILITIES",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Architectural Rendering", desc: "Creating realistic 3D interiors and exteriors.", icon: <BusinessCenterIcon /> },
+          { title: "Product Visualization", desc: "Showcasing products with photorealistic 3D renders.", icon: <BusinessCenterIcon /> },
+          { title: "Character 3D Animation", desc: "Modeling and animating realistic characters.", icon: <BusinessCenterIcon /> },
+          { title: "Industrial Modeling", desc: "Visualizing complex machinery and engineering models.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY VIHAAN",
+    title: "VFX & 3D Animation Specialists",
+    description: "As a premier 3D animation company, we bring unmatched technical depth and artistic vision to every project.",
+    stats: [
+      { value: "200+", label: "3D Projects" },
+      { value: "50+", label: "Brand Partners" },
+      { value: "12+", label: "CGI Artists" },
+    ],
+    reasons: [
+      { title: "Photorealistic Quality", icon: BusinessCenterIcon, desc: "Renders that look exactly like the real thing.", color: "#2563eb", number: "01" },
+      { title: "Cutting-Edge Rendering", icon: BusinessCenterIcon, desc: "Using high-end render farms for speed and quality.", color: "#06b6d4", number: "02" },
+      { title: "Technical Accuracy", icon: BusinessCenterIcon, desc: "Precise dimensions and material properties.", color: "#4f46e5", number: "03" },
+      { title: "Cinematic Aesthetics", icon: BusinessCenterIcon, desc: "Lighting and camera work that feels like a movie.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "3D Pipeline",
+    title: "Our Detailed 3D Workflow",
+    description: "We follow a complex but efficient 3D production pipeline for superior results.",
+    processSteps: [
+      { number: "01", title: "3D Modeling", desc: "Building the geometric structure of objects.", checks: ["Topology Check", "Scaling", "Refining Meshes"], position: "above" },
+      { number: "02", title: "Texturing & UV", desc: "Applying realistic materials and surface details.", checks: ["UV Mapping", "PBR Textures", "Shaders"], position: "below" },
+      { number: "03", title: "Rigging & Setup", desc: "Adding bones and controls for animation.", checks: ["Skeleton Setup", "Skinning", "Controller Logic"], position: "above" },
+      { number: "04", title: "Animation & Keyframing", desc: "Creating motion and physical behaviors.", checks: ["Physics Sim", "Motion Capture", "Refinement"], position: "below" },
+      { number: "05", title: "Lighting & Rendering", desc: "Adding lights and generating final frames.", checks: ["Global Illumination", "Ray Tracing", "Multi-pass Render"], position: "above" },
+      { number: "06", title: "Post-Processing", desc: "Color grading and final compositing.", checks: ["Color Correction", "FX Layers", "Final Cut"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "Core Industries",
+    title: "3D Solutions for Market Leaders",
+    description: "Our 3D animation services are highly utilized across industries requiring high-fidelity visualization.",
+    industries: {
+      0: {
+        title: "Real Estate & Arch",
+        desc: "Transforming floor plans into photorealistic virtual tours and stunning marketing renders.",
+        desc1: "Helping buyers visualize their future homes with immersive 3D walkthroughs.",
+        checks: ["Virtual Tours", "Interior Design", "Exterior Renders", "Floor Plan 3D"],
+        cards: [
+          { title: "Unit Showcases", desc: "Detailed 3D views of individual apartment units." },
+          { title: "Landspace Renders", desc: "Aerial views of resort and complex layouts." },
+          { title: "Day/Night Renders", desc: "Visualizing properties under different lighting conditions." },
+          { title: "Flythrough Clips", desc: "Cinematic drone-like videos of large developments." }
+        ]
+      },
+      1: {
+        title: "Consumer Goods",
+        desc: "Creating hyper-realistic product animations for advertisements and ecommerce platforms.",
+        desc1: "Showcasing every angle and detail of your product in stunning high-definition.",
+        checks: ["360 Views", "Exploded Views", "Usage Demos", "Unboxing Sim"],
+        cards: [
+          { title: "Material Detail", desc: "Highlighting premium textures and build quality." },
+          { title: "Mechanism Sim", desc: "Showing internal parts and how they work." },
+          { title: "Commercial Ads", desc: "Stylized 3D renders for social media and TV." },
+          { title: "Interactive Models", desc: "Embeddable 3D models for website product pages." }
+        ]
+      },
+      2: {
+        title: "Automotive & Eng",
+        desc: "Visualizing vehicles and industrial components with extreme precision and realism.",
+        desc1: "Providing engineering-grade visualizations for technical presentations and marketing.",
+        checks: ["Car Walkarounds", "Engine Sim", "Assembly Vids", "Aerodynamics Sim"],
+        cards: [
+          { title: "Exterior Renders", desc: "Realistic lighting on car paints and curvatures." },
+          { title: "Interior Details", desc: "Showcasing cockpit tech and upholstery textures." },
+          { title: "Process Flows", desc: "Visualizing how machines operate internally." },
+          { title: "Safety Testing", desc: "Simulated impact and safety feature animations." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Real Estate", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Product Design", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Automotive", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Global 3D Recognition",
+    list: [
+      { title: "Best CGI", body: "3D World", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Product Visual", body: "Clutch", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "Innovation Award", body: "AutoDesk", year: "2025", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Top VFX House", body: "GoodFirms", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "3D Ecosystem",
+    title: "High-End 3D Technologies",
+    description: "We use the industry's best software to deliver photorealistic 3D content.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Blender", "3ds Max", "Maya", "Cinema 4D"] },
+      { row: 2, direction: "right", speed: "28s", items: ["ZBrush", "Substance Painter", "V-Ray", "Unreal Engine"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "Success Stories",
+    title: "What Our 3D Clients Say",
+    rating: "5.0/5",
+    reviews: "320+",
+    list: [
+      { name: "John Doe", text: "The 3D walkthrough they created for our luxury villas is breathtaking. It helped us close 30% of our units before construction!", initial: "J", color: "#2563eb" },
+      { name: "David L", text: "Photorealistic product renders. Truly amazing work on the textures and lighting. Our customers love the 3D viewers.", initial: "D", color: "#10b981" },
+      { name: "Sanjay M", text: "Technically perfect industrial animation. They understood the mechanics of our machinery and visualized it flawlessly.", initial: "S", color: "#8b5cf6" },
+      { name: "Anna K", text: "High-end cinematic quality. Vihaan's 3D team is world-class. They brought our brand mascot to life with incredible detail.", initial: "A", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Experience 3D Realism with a<br />Professional 3D Animation Company?
+      </>
+    ),
+    description: "Let’s create immersive 3D experiences that elevate your brand to the next dimension.",
+    buttonText: "Request a Proposal",
+    brandText: "Vihaan 3D Studios"
+  }
+};
+
+export const motionGraphicsServiceData = {
+  hero: {
+    title: "Expert Motion Graphics Agency",
+    subtitle: "A motion graphics agency delivering high-energy visual effects and dynamic animations for social media and marketing.",
+    badgeText: "⚡ Dynamic Motion for Maximum Engagement!",
+    buttonText: "Elevate Your Content",
+    features: [
+      { icon: BusinessCenterIcon, text: "Typography Animation" },
+      { icon: BusinessCenterIcon, text: "Logo Animation" },
+      { icon: BusinessCenterIcon, text: "Infographic Motion" },
+      { icon: BusinessCenterIcon, text: "UI/UX Motion Design" },
+      { icon: BusinessCenterIcon, text: "Kinetic Typography" },
+      { icon: BusinessCenterIcon, text: "Seamless Transitions" },
+    ]
+  },
+
+  overview: {
+    subtitle: "Motion Design",
+    title: "Modern Motion Graphics",
+    description: "We provide high-impact motion graphics services for social media ads, corporate videos, and UI interactions.",
+    list: [
+      { title: "Animated Logos", icon: BusinessCenterIcon, count: "Brand Impact", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "Make your brand memorable with animated logomarks." },
+      { title: "Kinetic Type", icon: BusinessCenterIcon, count: "Bold Message", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "Typography that moves to capture attention instantly." },
+      { title: "Infographic Motion", icon: BusinessCenterIcon, count: "Data Viz", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "Transforming boring data into engaging visual stories." },
+      { title: "UI Animations", icon: BusinessCenterIcon, count: "UX Flow", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "Adding life to app and website user interactions." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "STYLE & MOTION",
+    title: "Creative Motion Graphics Services",
+    description: "Our motion graphics agency blends graphic design with animation to communicate ideas dynamically.",
+    services: [
+      {
+        title: "MOTION TYPES",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Animated Logo Design", desc: "Creating unique and memorable logo reveals.", icon: <BusinessCenterIcon /> },
+          { title: "Promotional Ad Clips", desc: "High-energy motion graphics for digital marketing.", icon: <BusinessCenterIcon /> },
+          { title: "Animated Infographics", desc: "Turning data and statistics into visual narratives.", icon: <BusinessCenterIcon /> },
+          { title: "Social Media Stings", desc: "Short, punchy animations for social platforms.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY VIHAAN",
+    title: "The Perfect Motion Design Partner",
+    description: "As a specialized motion graphics agency, we focus on aesthetic consistency and high-speed delivery.",
+    stats: [
+      { value: "1000+", label: "Assets Delivered" },
+      { value: "4.9/5", label: "Client Rating" },
+      { value: "24h", label: "Turnaround" },
+    ],
+    reasons: [
+      { title: "Trend-Setting Visuals", icon: BusinessCenterIcon, desc: "Modern styles that keep your brand ahead of the curve.", color: "#2563eb", number: "01" },
+      { title: "Micro-Animation Focus", icon: BusinessCenterIcon, desc: "Details that improve UX and brand perception.", color: "#06b6d4", number: "02" },
+      { title: "Optimized for Mobile", icon: BusinessCenterIcon, desc: "Designs that look great on any social feed.", color: "#4f46e5", number: "03" },
+      { title: "Dynamic Brand Identity", icon: BusinessCenterIcon, desc: "Motion that reflects your corporate personality.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "Creative Workflow",
+    title: "How We Move Your Brand",
+    description: "Our motion graphics process is designed for speed, creativity, and precision.",
+    processSteps: [
+      { number: "01", title: "Visual Styleboard", desc: "Defining the colors, shapes, and motion style.", checks: ["Style Exploration", "Art Direction", "Palettes"], position: "above" },
+      { number: "02", title: "Design Phase", desc: "Creating the static graphics before adding motion.", checks: ["Vector Design", "Layout", "Typography"], position: "below" },
+      { number: "03", title: "Motion Sketching", desc: "Blocking out the basic movements and flows.", checks: ["Timing", "Transitions", "Pacing"], position: "above" },
+      { number: "04", title: "Full Animation", desc: "Polishing the motion with ease and curves.", checks: ["Refined Motion", "Secondary FX", "Lottie Export"], position: "below" },
+      { number: "05", title: "Final Review", desc: "Ensuring the loop and motion are perfect.", checks: ["Quality QC", "Brand Check", "Ease Flow"], position: "above" },
+      { number: "06", title: "Asset Delivery", desc: "Exporting in MP4, GIF, or JSON/Lottie formats.", checks: ["Format Check", "Compression", "Delivery"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "Industry Use Cases",
+    title: "Motion for Every Digital Touchpoint",
+    description: "Our motion graphics agency supports diverse marketing needs across industries.",
+    industries: {
+      0: {
+        title: "Social Media Marketing",
+        desc: "Creating attention-grabbing short-form animations for Instagram, TikTok, and YouTube.",
+        desc1: "Increasing stop-rate and engagement through dynamic visual storytelling.",
+        checks: ["Reel Intros", "Sales Overlays", "Sticker Packs", "Logo Stings"],
+        cards: [
+          { title: "Reel Hooks", desc: "High-energy intros to keep viewers watching." },
+          { title: "Call-to-Action", desc: "Animated buttons and swipes to drive clicks." },
+          { title: "Event Promos", desc: "Short clips for webinars and live events." },
+          { title: "Brand Stickers", desc: "Custom GIF stickers for stories and chats." }
+        ]
+      },
+      1: {
+        title: "SaaS & Product UI",
+        desc: "Enhancing user experience with micro-interactions and animated product explainers.",
+        desc1: "Making software feel more intuitive and modern through thoughtful motion.",
+        checks: ["Icon Motion", "Loading States", "Success Feedbacks", "Workflow Previews"],
+        cards: [
+          { title: "Lottie Assets", desc: "Lightweight animations for apps and websites." },
+          { title: "App Walkthroughs", desc: "Highlighting key features with smooth motion." },
+          { title: "Onboarding Flow", desc: "Animated guides for a better user journey." },
+          { title: "Dashboard Visuals", desc: "Dynamic charts and data point reveals." }
+        ]
+      },
+      2: {
+        title: "Corporate Identity",
+        desc: "Animating corporate logos and presentations for a modern and professional feel.",
+        desc1: "Bringing life to corporate communications and brand guidelines.",
+        checks: ["Logo Reveals", "Email Signatures", "Intro/Outros", "Webinar Graphics"],
+        cards: [
+          { title: "Premium Ident", desc: "High-end logo reveals for video content." },
+          { title: "Pitch Decks", desc: "Animated slides for professional presentations." },
+          { title: "Lower Thirds", desc: "Branded title graphics for interviews and videos." },
+          { title: "Virtual Backgrounds", desc: "Subtle animated backgrounds for meetings." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Social", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "SaaS", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Corporate", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Motion Graphics Awards",
+    list: [
+      { title: "Social Motion", body: "Shorty Awards", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Top Motion House", body: "Clutch", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "Best Brand Ident", body: "Behance", year: "2025", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Innovation Award", body: "Adobe Max", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Motion Tools",
+    title: "Industry Standard Software",
+    description: "We use professional tools to create smooth and high-quality motion design.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["After Effects", "LottieFiles", "Premiere Pro"] },
+      { row: 2, direction: "right", speed: "28s", items: ["Illustrator", "Photoshop", "Cinema 4D (Lite)", "Figma"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "Client Love",
+    title: "Motion Results from Clients",
+    rating: "4.9/5",
+    reviews: "600+",
+    list: [
+      { name: "Pankaj S", text: "Vihaan's motion design team transformed our social media ads. The click-through rate increased by 25% since we started using their animations!", initial: "P", color: "#2563eb" },
+      { name: "Linda G", text: "Fast, creative, and professional. Their logo animation adds so much value to our video content. Highly recommended!", initial: "L", color: "#10b981" },
+      { name: "Samir K", text: "Amazing infographic video. They made complex data look beautiful and easy to understand. Perfect for our investor presentation.", initial: "S", color: "#8b5cf6" },
+      { name: "Elena R", text: "Modern and sleek motion graphics. They understood our minimalist brand aesthetic and delivered exactly what we needed.", initial: "E", color: "#f59e0b" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Move Your Audience with a<br />Leading Motion Graphics Agency?
+      </>
+    ),
+    description: "Let’s create dynamic motion graphics that capture attention and drive results for your brand.",
+    buttonText: "Get Started Now",
+    brandText: "Vihaan Motion Studios"
+  }
+};
+
+export const videoEditingServiceData = {
+  hero: {
+    title: "Video Editing Services and VFX Solutions for High-Quality Visual Content",
+    subtitle: "We provide video editing services and VFX services to create professional videos that engage your audience and improve your brand presence.",
+    badgeText: "Turn your raw footage into powerful videos. 🎬",
+    buttonText: "Start Video Editing",
+    features: [
+      { icon: BusinessCenterIcon, text: "Video editing services" },
+      { icon: BusinessCenterIcon, text: "Video editing & VFX" },
+      { icon: BusinessCenterIcon, text: "Professional video production" },
+      { icon: BusinessCenterIcon, text: "Creative visual effects" },
+      { icon: BusinessCenterIcon, text: "Social media video editing" },
+      { icon: BusinessCenterIcon, text: "High-quality output" },
+    ]
+  },
+
+  overview: {
+    subtitle: "COMPLETE SOLUTIONS",
+    title: "Complete Video Editing Services for Business Growth",
+    description: "As a video editing services provider, we create high-quality videos with smooth editing and creative VFX effects.",
+    list: [
+      { title: "Video Editing", icon: BusinessCenterIcon, count: "Pro Quality", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We edit videos for professional quality output." },
+      { title: "VFX Services", icon: BusinessCenterIcon, count: "Visual Impact", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We add visual effects to improve video impact." },
+      { title: "Social Media Videos", icon: BusinessCenterIcon, count: "Platform Ready", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We create videos for platforms and ads." },
+      { title: "Corporate Editing", icon: BusinessCenterIcon, count: "Business Use", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We edit videos for business use." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "END-TO-END",
+    title: "End-to-End Video Editing and VFX Services from Start to Finish",
+    description: "Our video editing as a service covers editing, effects, and final delivery for better results.",
+    services: [
+      {
+        title: "EDITORIAL WORKFLOW",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Footage Review", desc: "We analyse your raw video content.", icon: <BusinessCenterIcon /> },
+          { title: "Editing Planning", desc: "We plan the video structure.", icon: <BusinessCenterIcon /> },
+          { title: "Editing & Effects", desc: "We edit and add VFX.", icon: <BusinessCenterIcon /> },
+          { title: "Final Output Delivery", desc: "We deliver high-quality video.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY CHOOSE US",
+    title: "Why Choose Our Video Editing & VFX Services",
+    description: "We focus on delivering video editing services that are creative, professional, and engaging.",
+    stats: [
+      { value: "150+", label: "Video Projects Delivered" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Professional Editing", icon: BusinessCenterIcon, desc: "We create clean and smooth videos.", color: "#2563eb", number: "01" },
+      { title: "Creative Effects", icon: BusinessCenterIcon, desc: "We add engaging visual effects.", color: "#06b6d4", number: "02" },
+      { title: "High Quality Output", icon: BusinessCenterIcon, desc: "We ensure top video quality.", color: "#4f46e5", number: "03" },
+      { title: "Fast Delivery", icon: BusinessCenterIcon, desc: "We complete projects on time.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "OUR PROCESS",
+    title: "Our Video Editing Services Process for Quality Output",
+    description: "We follow a structured process to deliver professional video editing and VFX services.",
+    processSteps: [
+      { number: "01", title: "Requirement Analysis", desc: "We understand your video needs.", checks: ["Define goals", "Identify audience", "Plan content"], position: "above" },
+      { number: "02", title: "Footage Review", desc: "We check raw content.", checks: ["Analyze clips", "Select scenes", "Plan flow"], position: "below" },
+      { number: "03", title: "Editing Process", desc: "We edit video content.", checks: ["Cut and trim", "Add transitions", "Adjust timing"], position: "above" },
+      { number: "04", title: "VFX Integration", desc: "We add visual effects.", checks: ["Add animations", "Apply effects", "Enhance visuals"], position: "below" },
+      { number: "05", title: "Review & Feedback", desc: "We improve the video.", checks: ["Client feedback", "Corrections", "Final edits"], position: "above" },
+      { number: "06", title: "Final Delivery", desc: "We deliver the final video.", checks: ["Export formats", "Optimize quality", "Ready to publish"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "Video Editing & VFX Expertise",
+    title: "Video Editing and VFX Solutions for Different Business Platforms",
+    description: "We provide video editing services and VFX solutions for different business platforms to create high-quality videos that improve engagement and brand visibility.",
+    industries: {
+      0: {
+        title: "REAL ESTATE PORTAL",
+        desc: "We create professional video content for real estate platforms to showcase properties clearly.",
+        desc1: "Our video editing and VFX services help attract buyers and improve engagement.",
+        checks: ["Property Showcase Videos", "Video Editing Services", "VFX Enhancements", "Promotional Videos"],
+        cards: [
+          { title: "Property Showcase", desc: "We create videos to highlight property features and attract buyers." },
+          { title: "Editing Services", desc: "We edit videos to ensure smooth flow and professional quality." },
+          { title: "VFX Enhancements", desc: "We add visual effects to improve video impact and presentation." },
+          { title: "Promotional Videos", desc: "We design videos to promote properties and increase engagement." }
+        ]
+      },
+      1: {
+        title: "CAB BOOKING APP",
+        desc: "We create video content for cab booking apps to explain features and improve user understanding.",
+        desc1: "Our video editing services help increase app installs and engagement.",
+        checks: ["App Promo Videos", "Feature Demo Videos", "Video Editing Services", "VFX Effects"],
+        cards: [
+          { title: "App Promo Videos", desc: "We create videos to promote your app and attract new users." },
+          { title: "Feature Demo Videos", desc: "We explain app features clearly through engaging videos." },
+          { title: "Editing Services", desc: "We edit videos for smooth and professional output." },
+          { title: "VFX Effects", desc: "We add visual effects to enhance video quality and engagement." }
+        ]
+      },
+      2: {
+        title: "HOTEL BOOKING",
+        desc: "We create video content for hotel booking platforms to showcase services and offers clearly.",
+        desc1: "Our video editing and VFX services help increase bookings and improve customer engagement.",
+        checks: ["Hotel Promo Videos", "Booking Showcase Videos", "Video Editing Services", "VFX Enhancements"],
+        cards: [
+          { title: "Hotel Promo Videos", desc: "We create videos to promote hotel services and attract customers." },
+          { title: "Booking Showcase", desc: "We highlight booking experience and features through videos." },
+          { title: "Editing Services", desc: "We edit videos to ensure high-quality and smooth output." },
+          { title: "VFX Enhancements", desc: "We add effects to improve video appeal and engagement." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Real Estate", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Cab Booking", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Hotel Booking", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Post-Production Recognition",
+    list: [
+      { title: "Best Editing", body: "AICP", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "VFX Excellence", body: "VES Cert", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "Sound Design", body: "MPSE", year: "2025", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Creative Post", body: "Clutch", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for Video Editing and VFX Services",
+    title: "Professional Post-Tools",
+    description: "We use advanced tools to deliver professional video editing services and VFX services.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Adobe Premiere Pro", "Adobe After Effects", "DaVinci Resolve"] },
+      { row: 2, direction: "right", speed: "28s", items: ["Final Cut Pro", "Blender", "Adobe Photoshop"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "What They Say",
+    title: "What Clients Say About Our Video Editing Services",
+    rating: "4.9/5",
+    reviews: "350+",
+    list: [
+      { name: "Ramesh", text: "Sharp editing and professional finish.", initial: "R", color: "#2563eb", role: "Video Editor" },
+      { name: "Suresh", text: "Smooth cuts and impressive visual effects.", initial: "S", color: "#10b981", role: "VFX Artist" },
+      { name: "Kiran", text: "Creative transitions and engaging output.", initial: "K", color: "#8b5cf6", role: "Content Creator" },
+      { name: "Amit", text: "Excellent VFX and clean video quality.", initial: "A", color: "#f59e0b", role: "Motion Designer" },
+      { name: "Vikram", text: "Great colour grading and editing style.", initial: "V", color: "#ec4899", role: "Video Specialist" },
+      { name: "Anita", text: "Professional editing with quick delivery.", initial: "A", color: "#06b6d4", role: "Post Production Artist" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Create Professional Videos with<br />Video Editing & VFX Services?
+      </>
+    ),
+    description: "Let’s transform your footage into engaging videos with our video editing services.",
+    buttonText: "Start Your Video Project",
+    brandText: "Vihaan Post Studios"
+  }
+};
+
+export const explainerVideoServiceData = {
+  hero: {
+    title: "Explainer Video Production Company for Clear and Engaging Business Videos",
+    subtitle: "We create explainer videos that help you explain your product or service clearly and attract your audience.",
+    badgeText: "Explain your ideas in a simple and engaging way. 🎥",
+    buttonText: "Create Explainer Video",
+    features: [
+      { icon: BusinessCenterIcon, text: "Explainer videos" },
+      { icon: BusinessCenterIcon, text: "Explainer video company" },
+      { icon: BusinessCenterIcon, text: "Explainer video production company" },
+      { icon: BusinessCenterIcon, text: "Explainer video builder" },
+      { icon: BusinessCenterIcon, text: "Business explainer videos" },
+      { icon: BusinessCenterIcon, text: "Creative storytelling videos" },
+    ]
+  },
+
+  overview: {
+    subtitle: "EXPLAINER EXPERTISE",
+    title: "Complete Explainer Video Services for Business Growth",
+    description: "As an explainer video production company, we create videos that help businesses communicate clearly and increase engagement.",
+    list: [
+      { title: "Product Explainers", icon: BusinessCenterIcon, count: "Clear Features", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We explain your product features simply." },
+      { title: "Service Explainers", icon: BusinessCenterIcon, count: "Showcase Value", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We showcase your services clearly." },
+      { title: "Animated Explainers", icon: BusinessCenterIcon, count: "Engaging Visuals", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We create engaging animated videos." },
+      { title: "Custom Video", icon: BusinessCenterIcon, count: "Tailored Needs", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We build videos based on your needs." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "END-TO-END",
+    title: "End-to-End Explainer Video Production from Idea to Delivery",
+    description: "Our explainer video builder process covers scripting, animation, and final delivery for better results.",
+    services: [
+      {
+        title: "PRODUCTION FLOW",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Concept Planning", desc: "We understand your idea.", icon: <BusinessCenterIcon /> },
+          { title: "Script Writing", desc: "We create simple content.", icon: <BusinessCenterIcon /> },
+          { title: "Design & Animation", desc: "We build engaging visuals.", icon: <BusinessCenterIcon /> },
+          { title: "Final Delivery", desc: "We deliver ready-to-use videos.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY OUR COMPANY",
+    title: "Why Choose Our Explainer Video Company",
+    description: "We focus on creating explainer videos that are simple, clear, and engaging.",
+    stats: [
+      { value: "120+", label: "Videos Delivered" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Clear Communication", icon: BusinessCenterIcon, desc: "We simplify complex ideas.", color: "#2563eb", number: "01" },
+      { title: "Creative Design", icon: BusinessCenterIcon, desc: "We create engaging visuals.", color: "#06b6d4", number: "02" },
+      { title: "High Quality Output", icon: BusinessCenterIcon, desc: "We deliver professional videos.", color: "#4f46e5", number: "03" },
+      { title: "Custom Solutions", icon: BusinessCenterIcon, desc: "We tailor videos to your needs.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "OUR PROCESS",
+    title: "Our Explainer Video Production Process for Better Results",
+    description: "As an explainer video production company, we follow a structured process to deliver high-quality explainer videos.",
+    processSteps: [
+      { number: "01", title: "Requirement Analysis", desc: "We understand your needs.", checks: ["Define goals", "Identify audience", "Plan concept"], position: "above" },
+      { number: "02", title: "Script Writing", desc: "We create simple scripts.", checks: ["Clear messaging", "Easy language", "Structured flow"], position: "below" },
+      { number: "03", title: "Storyboarding", desc: "We plan visuals.", checks: ["Scene design", "Layout planning", "Flow structure"], position: "above" },
+      { number: "04", title: "Animation Creation", desc: "We build videos.", checks: ["Design visuals", "Add animation", "Apply effects"], position: "below" },
+      { number: "05", title: "Review & Feedback", desc: "We improve content.", checks: ["Client feedback", "Edits", "Final changes"], position: "above" },
+      { number: "06", title: "Final Delivery", desc: "We deliver output.", checks: ["Export video", "Optimize quality", "Ready to use"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "Explainer Video Expertise",
+    title: "Explainer Video Solutions for Different Business Platforms",
+    description: "We create explainer videos for different business platforms to explain services clearly, improve understanding, and increase engagement.",
+    industries: {
+      0: {
+        title: "HOSPITAL MANAGEMENT",
+        desc: "We create explainer videos for hospital management systems to explain services and processes clearly.",
+        desc1: "Our videos help improve patient understanding and build trust in healthcare services.",
+        checks: ["Healthcare Explainers", "Service Explanation", "Patient Awareness", "Process Explanation"],
+        cards: [
+          { title: "Healthcare Explainers", desc: "We create videos to explain hospital services simply." },
+          { title: "Service Explanation", desc: "We showcase medical services for better understanding." },
+          { title: "Patient Awareness", desc: "We create videos to educate patients and build trust." },
+          { title: "Marketing Videos", desc: "We design videos to promote healthcare services effectively." }
+        ]
+      },
+      1: {
+        title: "EDUCATION CRM",
+        desc: "We create explainer videos for education CRM platforms to explain courses and features clearly.",
+        desc1: "Our videos help attract students and improve engagement with learning platforms.",
+        checks: ["Course Explainers", "Feature Explanation", "Student Awareness", "Platform Demo"],
+        cards: [
+          { title: "Course Explainers", desc: "We create videos to explain courses and attract students." },
+          { title: "Feature Explanation", desc: "We highlight key platform features for better understanding." },
+          { title: "Platform Demo", desc: "We showcase system usage and functionality clearly." },
+          { title: "Marketing Videos", desc: "We design videos to promote courses and increase enrollments." }
+        ]
+      },
+      2: {
+        title: "HOTEL BOOKING",
+        desc: "We create explainer videos for hotel booking platforms to explain services and booking processes clearly.",
+        desc1: "Our videos help increase bookings and improve customer understanding.",
+        checks: ["Booking Explainers", "Service Explanation", "Offer Promotion", "Customer Awareness"],
+        cards: [
+          { title: "Booking Explainers", desc: "We create videos to explain the booking process simply." },
+          { title: "Service Explanation", desc: "We showcase hotel services clearly to attract customers." },
+          { title: "Offer Promotion", desc: "We highlight deals and offers to increase bookings." },
+          { title: "Customer Engagement", desc: "We create videos to improve trust and interaction." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Healthcare", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Education", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Hotel Booking", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Explainer Video Recognition",
+    list: [
+      { title: "Best Explainer", body: "Telly", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Visual Story", body: "W3 Awards", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "Creative Animation", body: "Vega", year: "2025", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Effective Comm", body: "Clutch", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for Explainer Video Production",
+    title: "Explainer Suite",
+    description: "We use modern tools to deliver high-quality explainer videos.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Adobe After Effects", "Adobe Illustrator", "Vyond"] },
+      { row: 2, direction: "right", speed: "28s", items: ["Animaker", "Blender", "Canva"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "Client Love",
+    title: "What Clients Say About Our Explainer Video Company",
+    rating: "4.9/5",
+    reviews: "420+",
+    list: [
+      { name: "Ramesh", text: "Made our concept easy to understand.", initial: "R", color: "#2563eb", role: "Product Manager" },
+      { name: "Suresh", text: "Clear visuals and engaging storytelling.", initial: "S", color: "#10b981", role: "Marketing Manager" },
+      { name: "Kiran", text: "Helped us present our idea effectively.", initial: "K", color: "#8b5cf6", role: "Startup Founder" },
+      { name: "Amit", text: "Very simple and easy to follow videos.", initial: "A", color: "#f59e0b", role: "Business Owner" },
+      { name: "Vikram", text: "Improved our product communication.", initial: "V", color: "#ec4899", role: "Brand Manager" },
+      { name: "Anita", text: "Creative storytelling with great clarity.", initial: "A", color: "#06b6d4", role: "Content Strategist" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Create Engaging Explainer Videos<br />for Your Business?
+      </>
+    ),
+    description: "Let’s build powerful explainer videos with our explainer video production company.",
+    buttonText: "Create Your Explainer Video",
+    brandText: "Vihaan Explainer Studios"
+  }
+};
+
+export const whiteboardAnimationServiceData = {
+  hero: {
+    title: "Whiteboard Animation Services to Explain Ideas in a Simple and Creative Way",
+    subtitle: "We provide whiteboard animation services to create engaging videos that explain your ideas clearly and attract your audience.",
+    badgeText: "Explain your ideas with simple whiteboard videos. ✍️",
+    buttonText: "Create Whiteboard Video",
+    features: [
+      { icon: BusinessCenterIcon, text: "Whiteboard animation services" },
+      { icon: BusinessCenterIcon, text: "Best whiteboard animation services" },
+      { icon: BusinessCenterIcon, text: "Whiteboard animation AI" },
+      { icon: BusinessCenterIcon, text: "Explainer whiteboard videos" },
+      { icon: BusinessCenterIcon, text: "Business storytelling videos" },
+      { icon: BusinessCenterIcon, text: "Creative animation content" },
+    ]
+  },
+
+  overview: {
+    subtitle: "WHITEBOARD QUALITY",
+    title: "Complete Whiteboard Animation Services for Business Growth",
+    description: "We create whiteboard animation videos that help businesses communicate ideas clearly and improve audience engagement.",
+    list: [
+      { title: "Explainer Whiteboard", icon: BusinessCenterIcon, count: "Product/Service", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We make product and service explainer videos." },
+      { title: "Educational Videos", icon: BusinessCenterIcon, count: "Learning/Training", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We design videos for learning and training." },
+      { title: "Marketing Videos", icon: BusinessCenterIcon, count: "Promotional", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We create promotional whiteboard videos." },
+      { title: "Custom Animation", icon: BusinessCenterIcon, count: "Tailored Content", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We build videos based on your needs." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "CONCEPT TO DELIVERY",
+    title: "End-to-End Whiteboard Animation Services from Concept to Delivery",
+    description: "Our whiteboard animation services cover script, design, and animation for better results.",
+    services: [
+      {
+        title: "WHITEBOARD FLOW",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Concept Planning", desc: "We understand your idea.", icon: <BusinessCenterIcon /> },
+          { title: "Script Writing", desc: "We create simple content.", icon: <BusinessCenterIcon /> },
+          { title: "Storyboard Design", desc: "We plan visuals.", icon: <BusinessCenterIcon /> },
+          { title: "Animation & Delivery", desc: "We create and deliver videos.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY BEST SERVICES",
+    title: "Why Choose Our Best Whiteboard Animation Services",
+    description: "We focus on creating whiteboard animation videos that are simple, clear, and engaging.",
+    stats: [
+      { value: "100+", label: "Videos Delivered" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Simple Explanation", icon: BusinessCenterIcon, desc: "We explain ideas clearly.", color: "#2563eb", number: "01" },
+      { title: "Creative Visuals", icon: BusinessCenterIcon, desc: "We create engaging animations.", color: "#06b6d4", number: "02" },
+      { title: "High Quality Output", icon: BusinessCenterIcon, desc: "We deliver professional videos.", color: "#4f46e5", number: "03" },
+      { title: "Custom Solutions", icon: BusinessCenterIcon, desc: "We tailor videos for your business.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "OUR WORKFLOW",
+    title: "Our Whiteboard Animation Services Process for Clear Communication",
+    description: "We follow a structured process to deliver best whiteboard animation services that explain ideas effectively.",
+    processSteps: [
+      { number: "01", title: "Requirement Analysis", desc: "We understand your needs.", checks: ["Define goals", "Identify audience", "Plan concept"], position: "above" },
+      { number: "02", title: "Script Writing", desc: "We create simple scripts.", checks: ["Clear messaging", "Easy language", "Structured flow"], position: "below" },
+      { number: "03", title: "Storyboarding", desc: "We design visuals.", checks: ["Scene planning", "Layout design", "Flow structure"], position: "above" },
+      { number: "04", title: "Animation Creation", desc: "We build animations.", checks: ["Draw visuals", "Add motion", "Apply effects"], position: "below" },
+      { number: "05", title: "Review & Feedback", desc: "We refine videos.", checks: ["Client feedback", "Edits", "Improvements"], position: "above" },
+      { number: "06", title: "Final Delivery", desc: "We deliver output.", checks: ["Export video", "Optimize quality", "Ready to use"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "Whiteboard Expertise",
+    title: "Whiteboard Animation Solutions for Different Business Platforms",
+    description: "We create whiteboard animation videos for different business models to explain services clearly, improve engagement, and attract customers.",
+    industries: {
+      0: {
+        title: "REAL ESTATE PORTAL",
+        desc: "We create whiteboard animation videos for real estate platforms to explain property services clearly.",
+        desc1: "Our videos help attract buyers, improve engagement, and build trust.",
+        checks: ["Property Explainers", "Service Explanation", "Buyer Awareness", "Storytelling Content"],
+        cards: [
+          { title: "Property Explainers", desc: "We create videos to explain property listings and services clearly." },
+          { title: "Service Explanation", desc: "We showcase real estate services in a simple way." },
+          { title: "Marketing Videos", desc: "We design videos to promote properties and attract buyers." },
+          { title: "Engagement Videos", desc: "We create content to improve audience interest and trust." }
+        ]
+      },
+      1: {
+        title: "CAB BOOKING APP",
+        desc: "We create whiteboard animation videos for cab booking apps to explain features and usage clearly.",
+        desc1: "Our videos help increase app installs and improve user understanding.",
+        checks: ["App Explainer Videos", "Feature Explanation", "User Guide Videos", "Promotional Videos"],
+        cards: [
+          { title: "App Explainer", desc: "We explain app usage and features in a simple and clear way." },
+          { title: "Feature Explanation", desc: "We highlight key features to improve user understanding." },
+          { title: "Promotional Videos", desc: "We create videos to attract users and increase installs." },
+          { title: "User Engagement", desc: "We design videos to keep users interested and active." }
+        ]
+      },
+      2: {
+        title: "HOTEL BOOKING",
+        desc: "We create whiteboard animation videos for hotel booking platforms to explain services and offers clearly.",
+        desc1: "Our videos help increase bookings and improve customer engagement.",
+        checks: ["Booking Explainers", "Offer Promotion", "Service Explanation", "Customer Awareness"],
+        cards: [
+          { title: "Booking Explainer", desc: "We create videos to explain booking process and services clearly." },
+          { title: "Offer Promotion", desc: "We design videos to highlight deals and attract customers." },
+          { title: "Service Explanation", desc: "We showcase hotel services in a simple and engaging way." },
+          { title: "Customer Engagement", desc: "We create videos to improve trust and user interaction." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Real Estate", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Cab Booking", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Hotel Booking", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Storytelling Recognition",
+    list: [
+      { title: "Best Whiteboard", body: "Animation Mag", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "High Engagement", body: "W3 Awards", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "Clear Messaging", body: "Clutch", year: "2025", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Education Award", body: "EdTech", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for Whiteboard Animation Services",
+    title: "Whiteboard Tools",
+    description: "We use advanced tools to create high-quality whiteboard animation videos.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["VideoScribe", "Doodly", "Vyond"] },
+      { row: 2, direction: "right", speed: "28s", items: ["Adobe After Effects", "Animaker", "Canva"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "Client Stories",
+    title: "What Clients Say About Our Explainer Video Company",
+    rating: "4.9/5",
+    reviews: "380+",
+    list: [
+      { name: "Ramesh Kumar", text: "Very clear and easy to understand videos. Perfect for our audience.", initial: "R", color: "#2563eb", role: "Marketing Manager" },
+      { name: "Anjali Sharma", text: "Whiteboard animation makes it easier for our service step-by-step explanation.", initial: "A", color: "#10b981", role: "Product Owner" },
+      { name: "Vikram Reddy", text: "Simple visuals but very powerful message delivery.", initial: "V", color: "#8b5cf6", role: "Business Head" },
+      { name: "Sneha Patel", text: "The concept was easily understand by the customers once they watch the video.", initial: "S", color: "#f59e0b", role: "Customer Success Manager" },
+      { name: "Arjun Mehta", text: "Great storytelling and smooth animation. Really impressed with the output.", initial: "A", color: "#ec4899", role: "Startup Founder" },
+      { name: "Kiran Verma", text: "The video made our complex idea very easy to gain.", initial: "K", color: "#06b6d4", role: "Operations Manager" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Create Simple and Engaging<br />Whiteboard Animation Videos?
+      </>
+    ),
+    description: "Let’s create clear videos with our whiteboard animation services.",
+    buttonText: "Start Your Whiteboard Animation",
+    brandText: "Vihaan Sketch Studios"
+  }
+};
+
 export const webMaintenanceServiceData = {};
 export const databaseManagementServiceData = {};
 export const apiDevelopmentServiceData = {};
@@ -879,8 +2049,367 @@ export const emailTemplateDesignServiceData = {};
 export const landingPageDesignServiceData = {};
 export const uiUxDesignServiceData = {};
 
+export const logoDesignServiceData = {
+  hero: {
+    title: "Logo Design Services to Build a Strong and Professional Brand Identity",
+    subtitle: "We provide logo design services to create unique and memorable logos that represent your business clearly.",
+    badgeText: "Develop a logo that encapsulates your brand perfectly. ✨",
+    buttonText: "Design Your Logo",
+    features: [
+      { icon: BusinessCenterIcon, text: "Logo designing company" },
+      { icon: BusinessCenterIcon, text: "Logo design agency" },
+      { icon: BusinessCenterIcon, text: "Logo design services company" },
+      { icon: BusinessCenterIcon, text: "Online logo design services" },
+      { icon: BusinessCenterIcon, text: "Creative brand identity" },
+      { icon: BusinessCenterIcon, text: "Custom logo designs" },
+    ]
+  },
 
+  overview: {
+    subtitle: "LOGO EXPERTISE",
+    title: "Complete Logo Design Services for Business Branding",
+    description: "As a logo design agency, we create professional logos that improve brand identity and visibility.",
+    list: [
+      { title: "Custom Logo Design", icon: BusinessCenterIcon, count: "Tailored Needs", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We create logos based on your business needs." },
+      { title: "Brand Identity Design", icon: BusinessCenterIcon, count: "Visual Presence", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We build strong brand visuals." },
+      { title: "Modern Logo Design", icon: BusinessCenterIcon, count: "Clean Style", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We design clean and modern logos." },
+      { title: "Rebranding Services", icon: BusinessCenterIcon, count: "Better Impact", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We redesign logos for better impact." },
+    ]
+  },
 
+  detailed: {
+    subtitle: "CONCEPT TO DELIVERY",
+    title: "End-to-End Logo Design Services from Concept to Final Delivery",
+    description: "Our online logo design services cover idea creation, design, and final delivery for better results.",
+    services: [
+      {
+        title: "DESIGN FLOW",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Requirement Analysis", desc: "We understand your brand.", icon: <BusinessCenterIcon /> },
+          { title: "Concept Design", desc: "We create logo ideas.", icon: <BusinessCenterIcon /> },
+          { title: "Design Creation", desc: "We develop final logo.", icon: <BusinessCenterIcon /> },
+          { title: "Final Delivery", desc: "We deliver logo files.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY OUR AGENCY",
+    title: "Why Choose Us As Your Logo Design Services Company",
+    description: "Towards simple, creative, and effective logo design services.",
+    stats: [
+      { value: "200+", label: "Logos Designed" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "Creative Designs", icon: BusinessCenterIcon, desc: "We create unique logos.", color: "#2563eb", number: "01" },
+      { title: "Brand Focused", icon: BusinessCenterIcon, desc: "We align with your business identity.", color: "#06b6d4", number: "02" },
+      { title: "High Quality Output", icon: BusinessCenterIcon, desc: "We deliver professional designs.", color: "#4f46e5", number: "03" },
+      { title: "Custom Solutions", icon: BusinessCenterIcon, desc: "We tailor logos for your brand.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "OUR PROCESS",
+    title: "Our Logo Design Services Process for Strong Branding",
+    description: "As a logo design agency, we follow a structured process to deliver high-quality logo design services.",
+    processSteps: [
+      { number: "01", title: "Requirement Analysis", desc: "We understand your brand.", checks: ["Identify business goals", "Understand audience", "Define style"], position: "above" },
+      { number: "02", title: "Research & Inspiration", desc: "We explore design ideas.", checks: ["Study competitors", "Analyze trends", "Collect references"], position: "below" },
+      { number: "03", title: "Concept Creation", desc: "We create logo concepts.", checks: ["Sketch ideas", "Design variations", "Select styles"], position: "above" },
+      { number: "04", title: "Design Finalization", desc: "We finalize logo design.", checks: ["Refine concepts", "Add colors", "Improve design"], position: "below" },
+      { number: "05", title: "Review & Feedback", desc: "We improve based on feedback.", checks: ["Client review", "Edits", "Final approval"], position: "above" },
+      { number: "06", title: "Final Delivery", desc: "We deliver final files.", checks: ["Provide formats", "High resolution", "Ready to use"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "Logo Design Expertise",
+    title: "Logo Design Solutions for Different Business Platforms",
+    description: "We provide logo design services for different business platforms to create unique brand identities and improve brand recognition.",
+    industries: {
+      0: {
+        title: "FOOD BOOKING",
+        desc: "We design logos for food booking platforms that represent your brand and attract customers.",
+        desc1: "Our logo design services focus on creating strong and memorable brand identity.",
+        checks: ["Restaurant Brand Logo", "Food App Logo Design", "Creative Logo Concepts", "Brand Identity Design", "Modern Logo Design", "Custom Logo Solutions"],
+        cards: [
+          { title: "Restaurant Logo Design", desc: "We create logos that represent your food brand and attract customers." },
+          { title: "App Logo Design", desc: "We design logos suitable for mobile apps and platforms." },
+          { title: "Creative Logo Concepts", desc: "We develop unique concepts to match your business identity." },
+          { title: "Brand Identity Design", desc: "We create logos in an effort to reinforce the overall presence of your brand." }
+        ]
+      },
+      1: {
+        title: "REAL ESTATE PORTAL",
+        desc: "We design logos for real estate platforms to create a strong and professional brand image.",
+        desc1: "Our logos help build trust and improve brand visibility in the market.",
+        checks: ["Real Estate Logo Design", "Property Brand Identity", "Modern Logo Concepts", "Business Logo Design", "Custom Logo Solutions", "Brand Recognition Design"],
+        cards: [
+          { title: "Real Estate Logo Design", desc: "We create logos that represent property and real estate businesses clearly." },
+          { title: "Brand Identity Design", desc: "We build logos that improve brand trust and recognition." },
+          { title: "Creative Logo Concepts", desc: "We design unique logos based on your business style." },
+          { title: "Professional Logo Design", desc: "We deliver clean and modern logos for your platform." }
+        ]
+      },
+      2: {
+        title: "MATRIMONY",
+        desc: "We design logos for matrimony platforms to create a unique and emotional brand identity.",
+        desc1: "Our logos help attract users and build trust through strong visual branding.",
+        checks: ["Matrimony Brand Logo", "Emotional Brand Identity", "Creative Logo Concepts", "Modern Logo Design", "Custom Logo Solutions", "Brand Recognition"],
+        cards: [
+          { title: "Matrimony Logo Design", desc: "We create logos that reflect trust and relationships." },
+          { title: "Brand Identity Design", desc: "We build logos that connect with your audience emotionally." },
+          { title: "Creative Logo Concepts", desc: "We design unique logos based on your platform theme." },
+          { title: "Professional Logo Design", desc: "We deliver clean and attractive logos for your brand." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Food Booking", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Real Estate", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Matrimony", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Brand Recognition",
+    list: [
+      { title: "Best Identity", body: "Indigo", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Visual Design", body: "Graphis", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "Creative Logo", body: "MUSE", year: "2025", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Agency of Year", body: "Clutch", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for Logo Design Services",
+    title: "Logo Suite",
+    description: "We use modern tools to deliver high-quality logo design services.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Adobe Illustrator", "Adobe Photoshop", "Figma"] },
+      { row: 2, direction: "right", speed: "28s", items: ["CorelDRAW", "Canva", "Inkscape"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "Client Love",
+    title: "What Clients Say About Our Logo Design Agency",
+    rating: "4.9/5",
+    reviews: "350+",
+    list: [
+      { name: "Rohit Sharma", text: "Very simple and easy to understand design process.", initial: "R", color: "#2563eb", role: "Business Owner" },
+      { name: "Ananya Reddy", text: "Great logo that perfectly represents our services.", initial: "A", color: "#10b981", role: "Marketing Manager" },
+      { name: "Karthik Verma", text: "Creative and professional work. Loved the final design.", initial: "K", color: "#8b5cf6", role: "Startup Founder" },
+      { name: "Pooja Mehta", text: "They understood our brand and delivered exactly what we needed.", initial: "P", color: "#f59e0b", role: "Brand Manager" },
+      { name: "Arjun Singh", text: "These designs are clean, yet they bear a modern reference.", initial: "A", color: "#ec4899", role: "Product Manager" },
+      { name: "Neha Kapoor", text: "Very smooth process and quick delivery.", initial: "N", color: "#06b6d4", role: "Operations Manager" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Create a Unique Logo<br />for Your Business?
+      </>
+    ),
+    description: "Let’s design a strong brand identity with our logo design services.",
+    buttonText: "Create Your Logo Now",
+    brandText: "Vihaan Design Studios"
+  }
+};
+export const ecommerceDevServiceData = {
+  hero: {
+    title: "Ecommerce Website Development Services to Build Powerful Online Stores",
+    subtitle: "We create user-friendly ecommerce websites using ecommerce website development services that help you sell products and grow your business online.",
+    badgeText: "Start selling online with a strong ecommerce website. 🛒",
+    buttonText: "Build Your Ecommerce Store",
+    features: [
+      { icon: BusinessCenterIcon, text: "Ecommerce website development" },
+      { icon: BusinessCenterIcon, text: "Custom ecommerce website design" },
+      { icon: BusinessCenterIcon, text: "Secure payment integration" },
+      { icon: BusinessCenterIcon, text: "Product management system" },
+      { icon: BusinessCenterIcon, text: "Mobile-friendly ecommerce website" },
+      { icon: BusinessCenterIcon, text: "Performance optimization" },
+    ]
+  },
+
+  overview: {
+    subtitle: "ECOMMERCE QUALITY",
+    title: "Complete Ecommerce Services for Online Business Growth",
+    description: "We provide ecommerce services to build, manage, and grow your ecommerce website with better performance and user experience.",
+    list: [
+      { title: "Ecommerce Website Design", icon: BusinessCenterIcon, count: "Modern UI", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We design modern and user-friendly ecommerce websites." },
+      { title: "Store Development", icon: BusinessCenterIcon, count: "Scalable Platform", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We build secure and scalable ecommerce platforms." },
+      { title: "Payment Integration", icon: BusinessCenterIcon, count: "Secure Checkout", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We integrate safe payment systems." },
+      { title: "Store Management", icon: BusinessCenterIcon, count: "Order Handling", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We help manage products and orders." },
+    ]
+  },
+
+  detailed: {
+    subtitle: "ECOMMERCE SOLUTIONS",
+    title: "End-to-End Ecommerce Website Development Solutions from Idea to Launch",
+    description: "Our ecommerce website development services cover everything from planning to launch for better results.",
+    services: [
+      {
+        title: "DEVELOPMENT FLOW",
+        icon: <BusinessCenterIcon sx={{ fontSize: 24 }} />,
+        count: "01",
+        color: "#0087c9",
+        cards: [
+          { title: "Requirement Analysis", desc: "We understand your ecommerce needs.", icon: <BusinessCenterIcon /> },
+          { title: "Design & Planning", desc: "We create store layouts and structure.", icon: <BusinessCenterIcon /> },
+          { title: "Development", desc: "We build your ecommerce website.", icon: <BusinessCenterIcon /> },
+          { title: "Testing & Launch", desc: "We ensure quality and launch smoothly.", icon: <BusinessCenterIcon /> }
+        ]
+      }
+    ]
+  },
+
+  whyChooseUs: {
+    subtitle: "WHY OUR SERVICES",
+    title: "Why Choose Our Ecommerce Website Development Services",
+    description: "We focus on building ecommerce websites that are simple, secure, and designed to increase sales.",
+    stats: [
+      { value: "100+", label: "Ecommerce Websites Delivered" },
+      { value: "95%", label: "Client Satisfaction" },
+      { value: "5+", label: "Years Experience" },
+    ],
+    reasons: [
+      { title: "User-Friendly Design", icon: BusinessCenterIcon, desc: "We create easy-to-use online stores.", color: "#2563eb", number: "01" },
+      { title: "Secure Transactions", icon: BusinessCenterIcon, desc: "We ensure safe payment systems.", color: "#06b6d4", number: "02" },
+      { title: "Scalable Solutions", icon: BusinessCenterIcon, desc: "We build stores that grow with your business.", color: "#4f46e5", number: "03" },
+      { title: "Performance Focused", icon: BusinessCenterIcon, desc: "We optimize speed and usability.", color: "#10b981", number: "04" }
+    ]
+  },
+
+  process: {
+    subtitle: "OUR PROCESS",
+    title: "Our Ecommerce Website Development Process for Online Success",
+    description: "We follow a structured process to deliver ecommerce website development services that improve user experience and sales.",
+    processSteps: [
+      { number: "01", title: "Requirement Analysis", desc: "We understand your ecommerce business.", checks: ["Identify products", "Define goals", "Understand users"], position: "above" },
+      { number: "02", title: "Store Planning", desc: "We plan your ecommerce website structure.", checks: ["Create layouts", "Plan categories", "Define features"], position: "below" },
+      { number: "03", title: "Design & Development", desc: "We build your ecommerce website.", checks: ["UI/UX design", "Frontend development", "Backend setup"], position: "above" },
+      { number: "04", title: "Payment Integration", desc: "We integrate payment systems.", checks: ["Add payment gateways", "Ensure security", "Test transactions"], position: "below" },
+      { number: "05", title: "Testing & Launch", desc: "We ensure quality and launch.", checks: ["Test functionality", "Fix bugs", "Go live"], position: "above" },
+      { number: "06", title: "Maintenance & Growth", desc: "We support your ecommerce services.", checks: ["Update products", "Improve performance", "Add new features"], position: "below" }
+    ]
+  },
+
+  industry: {
+    subtitle: "Industries We Serve",
+    title: "E-Commerce for Key Industries",
+    description: "We provide ecommerce website development services for different business platforms to create unique brand identities and improve brand recognition.",
+    industries: {
+      0: {
+        title: "FOOD ORDERING",
+        desc: "We develop e-commerce-enabled food ordering platforms with seamless browsing, quick checkout, and real-time order management.",
+        desc1: "Creating fast and engaging food ordering systems with smooth user experience and high conversions.",
+        checks: ["Menu Listings", "Order & Checkout", "User Dashboard", "Payment Integration"],
+        cards: [
+          { title: "Menu Browsing", desc: "Easy-to-use menus with categories and images." },
+          { title: "Order Flow", desc: "Quick and simple ordering process." },
+          { title: "User Dashboard", desc: "Manage orders and preferences easily." },
+          { title: "Payment Experience", desc: "Secure and fast transactions." }
+        ]
+      },
+      1: {
+        title: "REAL ESTATE",
+        desc: "We create e-commerce-enabled real estate platforms for property listings, bookings, and secure transactions.",
+        desc1: "Building scalable property platforms with smooth navigation and lead generation.",
+        checks: ["Property Listings", "Advanced Search", "User Dashboard", "Booking & Payments"],
+        cards: [
+          { title: "Property Listings", desc: "Clear and detailed property displays." },
+          { title: "Advanced Search", desc: "Smart filters for easy discovery." },
+          { title: "User Dashboard", desc: "Manage properties and inquiries." },
+          { title: "Booking System", desc: "Simple and secure booking experience." }
+        ]
+      },
+      2: {
+        title: "EDUCATION",
+        desc: "We develop e-commerce-enabled education platforms for course sales, subscriptions, and digital learning experiences.",
+        desc1: "Creating scalable learning platforms with seamless purchase and engagement features.",
+        checks: ["Course Listings", "Student Dashboard", "Subscription Plans", "Payment Integration"],
+        cards: [
+          { title: "Course Catalog", desc: "Structured course listings with pricing." },
+          { title: "Student Dashboard", desc: "Track progress and enrolled courses." },
+          { title: "Subscription System", desc: "Flexible learning plans and access." },
+          { title: "Payment Integration", desc: "Secure and smooth transactions." }
+        ]
+      },
+    },
+    tabs: [
+      { label: "Food Ordering", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Real Estate", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+      { label: "Education", icon: <BusinessCenterIcon sx={{ fontSize: 18 }} /> },
+    ]
+  },
+
+  awards: {
+    title: "Ecommerce Recognition",
+    list: [
+      { title: "Best Plarform", body: "Shopify", year: "2024", icon: EmojiEventsIcon, color: "#2563eb" },
+      { title: "Excellence", body: "W3 Awards", year: "2024", icon: StarsIcon, color: "#06b6d4" },
+      { title: "Top Developer", body: "Clutch", year: "2025", icon: WorkspacePremiumIcon, color: "#8b5cf6" },
+      { title: "Innovation", body: "Vega", year: "2025", icon: VerifiedIcon, color: "#f59e0b" },
+    ]
+  },
+
+  techStack: {
+    subtitle: "Tools We Use for Ecommerce Website Development Services",
+    title: "Ecommerce Suite",
+    description: "We use modern platforms and tools to build and manage ecommerce websites effectively.",
+    rows: [
+      { row: 1, direction: "left", speed: "25s", items: ["Shopify", "WooCommerce", "Magento"] },
+      { row: 2, direction: "right", speed: "28s", items: ["Razorpay / Stripe", "React JS", "Node.js"] },
+    ]
+  },
+
+  testimonials: {
+    subtitle: "Client Love",
+    title: "What Clients Say About Our Ecommerce Services",
+    rating: "4.9/5",
+    reviews: "480+",
+    list: [
+      { name: "Arjun Khanna", text: "Vihaan delivered our e-commerce platform ahead of schedule. The solution aligned perfectly with our business needs and performs flawlessly.", initial: "A", color: "#2563eb", role: "CEO, ShopNova" },
+      { name: "Rohit Mehra", text: "Their e-commerce development approach helped us streamline operations and improve sales. The platform is fast, secure, and highly reliable.", initial: "R", color: "#10b981", role: "Director, CartSphere" },
+      { name: "Karan Malhotra", text: "Our e-commerce system now handles high traffic effortlessly. The scalability and performance improvements are outstanding.", initial: "K", color: "#8b5cf6", role: "Founder, BuySmart" },
+      { name: "Aditya Kapoor", text: "The platform solved critical performance challenges. Their team ensured high speed, security, and seamless user experience.", initial: "A", color: "#f59e0b", role: "CTO, CommerceAxis" },
+      { name: "Neha Sharma", text: "The dashboards and workflows are extremely intuitive. Managing products and orders has become much easier.", initial: "N", color: "#ec4899", role: "Product Manager, QuickCart" },
+      { name: "Vivek Jain", text: "Vihaan built a scalable e-commerce solution tailored to our needs. Automation and smart features saved us significant time.", initial: "V", color: "#06b6d4", role: "Founder, CartBridge" },
+      { name: "Pooja Nair", text: "Our online platform is seamless and efficient. The features helped us improve customer engagement and conversions.", initial: "P", color: "#8b5cf6", role: "CTO, RealtyCart" },
+      { name: "Aman Verma", text: "The system performs flawlessly even during peak traffic. Their e-commerce development expertise is truly impressive.", initial: "A", color: "#2563eb", role: "CEO, MegaStore" },
+      { name: "Sneha Kapoor", text: "Our platform is now highly scalable and user-friendly. The development improved overall customer experience.", initial: "S", color: "#10b981", role: "Product Head, EduCart" },
+      { name: "Sandeep Gupta", text: "The e-commerce system is secure, reliable, and easy to manage. Handling large product inventories is now seamless.", initial: "S", color: "#8b5cf6", role: "Director, HealthMart Solutions" },
+    ]
+  },
+
+  cta: {
+    title: (
+      <>
+        Ready to Launch Your Ecommerce Website<br />and Start Selling Online?
+      </>
+    ),
+    description: "Let’s build a powerful ecommerce website using our ecommerce website development services.",
+    buttonText: "Launch Your Online Store",
+    brandText: "Vihaan Ecommerce Labs"
+  }
+};
+export const crmDevServiceData = {};
+export const erpDevServiceData = {};
+export const blockchainDevServiceData = {};
+export const cyberSecurityServiceData = {};
+export const iotDevServiceData = {};
+export const gameDevServiceData = {};
+export const contentWritingServiceData = {};
+export const affiliateMarketingServiceData = {};
+export const appMaintenanceServiceData = {};
 
 export const webDesignDevServiceData = {
   hero: {
@@ -3761,3 +5290,4 @@ export const influencerAffiliateFullServiceData = {
     brandText: "Vihaan Partnership Solutions"
   }
 };
+

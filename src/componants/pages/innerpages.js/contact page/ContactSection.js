@@ -150,7 +150,7 @@ const ContactUs = () => {
                   variant="h3"
                   sx={{
                     fontWeight: 800,
-                    mb: 3,
+                    mb: 2.5,
                     color: "#0f172a",
                     fontSize: { xs: "28px", md: "36px" }
                   }}
@@ -160,8 +160,8 @@ const ContactUs = () => {
                 <Typography
                   sx={{
                     color: "#64748b",
-                    mb: 6,
-                    lineHeight: 1.8,
+                    mb: 3.5,
+                    lineHeight: 1.4,
                     fontSize: "1.05rem",
                   }}
                 >
@@ -177,8 +177,8 @@ const ContactUs = () => {
                         sx={{
                           display: "flex",
                           alignItems: "flex-start",
-                          mb: 4,
-                          p: 3,
+                          mb: 1.5,
+                          p: 2,
                           background: "#fff",
                           borderRadius: "16px",
                           boxShadow: "0 4px 15px rgba(0,0,0,0.03)",
@@ -210,34 +210,7 @@ const ContactUs = () => {
                   ))}
                 </Grid>
 
-                <Box sx={{ mt: 6 }}>
-                  <Typography variant="h6" sx={{ fontWeight: 700, color: "#1e293b", mb: 3 }}>
-                    Connect with Us
-                  </Typography>
-                  <Box sx={{ display: "flex", gap: 2 }}>
-                    {[
-                      { icon: <FacebookIcon />, color: "#1877F2" },
-                      { icon: <TwitterIcon />, color: "#1DA1F2" },
-                      { icon: <InstagramIcon />, color: "#E4405F" },
-                      { icon: <LinkedInIcon />, color: "#0A66C2" }
-                    ].map((social, idx) => (
-                      <IconButton
-                        key={idx}
-                        sx={{
-                          background: "#fff",
-                          boxShadow: "0 4px 10px rgba(0,0,0,0.05)",
-                          color: social.color,
-                          "&:hover": { background: social.color, color: "#fff", transform: "translateY(-5px)" },
-                          transition: "all 0.3s ease",
-                          width: 50,
-                          height: 50
-                        }}
-                      >
-                        {social.icon}
-                      </IconButton>
-                    ))}
-                  </Box>
-                </Box>
+
               </Box>
             </Grid>
 
@@ -344,6 +317,34 @@ const ContactUs = () => {
               </Paper>
             </Grid>
           </Grid>
+          <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+            <Typography variant="h6" sx={{ fontWeight: 700, color: "#1e293b", mb: 2.5 }}>
+              Connect with Us
+            </Typography>
+            <Box sx={{ display: "flex", gap: 2 }}>
+              {[
+                { icon: <FacebookIcon />, color: "#1877F2" },
+                { icon: <TwitterIcon />, color: "#1DA1F2" },
+                { icon: <InstagramIcon />, color: "#E4405F" },
+                { icon: <LinkedInIcon />, color: "#0A66C2" }
+              ].map((social, idx) => (
+                <IconButton
+                  key={idx}
+                  sx={{
+                    background: "#fff",
+                    boxShadow: "0 4px 10px rgba(0,0,0,0.05)",
+                    color: social.color,
+                    "&:hover": { background: social.color, color: "#fff", transform: "translateY(-5px)" },
+                    transition: "all 0.3s ease",
+                    width: 50,
+                    height: 50
+                  }}
+                >
+                  {social.icon}
+                </IconButton>
+              ))}
+            </Box>
+          </Box>
         </Container>
       </Box>
 
