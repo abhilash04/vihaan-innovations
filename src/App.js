@@ -122,12 +122,14 @@ import {
   whiteboardAnimationServiceData
 } from "./componants/pages/innerpages.js/serviceinnerpages/ServiceDataTemplate";
 import ServicePage from "./componants/pages/innerpages.js/serviceinnerpages/service pages layout/ServicePage";
+import DynamicSeo from "./DynamicSeo";
 
 function App() {
   return (
     <ThemeProvider>
       <Grid>
         <Router>
+          <DynamicSeo />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/collections/all-products" element={<AllProducts />} />
