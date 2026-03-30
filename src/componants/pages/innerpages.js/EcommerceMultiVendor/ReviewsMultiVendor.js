@@ -3,8 +3,16 @@ import { Box, Container, Typography, Avatar, Card } from "@mui/material";
 import { styled, keyframes } from "@mui/system";
 
 // ✅ Importing images
-import ganeshImg from "../../../../assets/ganesh1.png";
-import abhi1Img from "../../../../assets/abhi.png";
+
+import boy1Img from "../../../../assets/reviews-multi-vendor-img/boy-1.png";
+import boy2Img from "../../../../assets/reviews-multi-vendor-img/boy-2.png";
+import boy3Img from "../../../../assets/reviews-multi-vendor-img/boy-3.png";
+import boy4Img from "../../../../assets/reviews-multi-vendor-img/boy-4.png";
+import boy5Img from "../../../../assets/reviews-multi-vendor-img/boy-5.png";
+import girl1Img from "../../../../assets/reviews-multi-vendor-img/girl-1.png";
+import girl2Img from "../../../../assets/reviews-multi-vendor-img/girl-2.png";
+import girl3Img from "../../../../assets/reviews-multi-vendor-img/girl-3.png";
+
 
 // Animations for infinite scroll
 const scrollRight = keyframes`
@@ -48,33 +56,33 @@ const ReviewCard = styled(Card)(({ theme }) => ({
 }));
 
 const reviews = [
-  { id: 1, name: "Ramesh Kumar", role: "Marketplace Owner", review: "Vihaan Innovations developed our multi-vendor marketplace perfectly. The platform is fast, scalable, and easy for vendors to manage.", rating: 5 },
-  { id: 2, name: "Anita Sharma", role: "Real Estate Consultant", review: "Our real estate CRM website works smoothly and helps us manage property leads efficiently.", rating: 5 },
-  { id: 3, name: "Rahul Verma", role: "Online Store Owner", review: "The team delivered a modern eCommerce website with great design and fast loading speed.", rating: 5 },
-  { id: 4, name: "Sanjay Patel", role: "Retail Business Owner", review: "We loved the UI/UX design. Customers find our website easy to navigate and shop.", rating: 5 },
-  { id: 5, name: "Priya Mehta", role: "Startup Founder", review: "Excellent development service and great communication throughout the project.", rating: 5 },
-  { id: 6, name: "Karan Singh", role: "Digital Entrepreneur", review: "Our website traffic and conversions improved after launching the new platform.", rating: 5 },
-  { id: 7, name: "Neha Kapoor", role: "Business Consultant", review: "Vihaan Innovations built a powerful business website that truly reflects our brand.", rating: 5 },
-  { id: 8, name: "Amit Agarwal", role: "Store Owner", review: "The eCommerce system works flawlessly. Inventory and order management are very simple now.", rating: 5 },
-  { id: 9, name: "Deepak Nair", role: "IT Consultant", review: "Highly professional team with creative ideas and strong technical skills.", rating: 5 },
-  { id: 10, name: "Manoj Gupta", role: "Marketplace Founder", review: "Our online marketplace launched smoothly thanks to the experienced developers.", rating: 5 },
-  { id: 11, name: "Pooja Desai", role: "Business Owner", review: "They delivered our website on time with excellent performance and security.", rating: 5 },
-  { id: 12, name: "Arjun Reddy", role: "Entrepreneur", review: "The website design looks premium and works perfectly on all devices.", rating: 5 },
-  { id: 13, name: "Sneha Iyer", role: "Startup Owner", review: "Customer support from Vihaan Innovations is outstanding and very responsive.", rating: 5 },
-  { id: 14, name: "Rohit Sharma", role: "Marketing Manager", review: "Our business gained more leads after launching the SEO-friendly website.", rating: 5 },
-  { id: 15, name: "Vikram Joshi", role: "Company Director", review: "The team understood our requirements perfectly and built a scalable platform.", rating: 5 },
+  { id: 1, name: "Ramesh Kumar", profileImg: boy1Img, role: "Marketplace Owner", review: "Vihaan Innovations developed our multi-vendor marketplace perfectly. The platform is fast, scalable, and easy for vendors to manage.", rating: 5 },
+  { id: 2, name: "Anita Sharma", profileImg: girl1Img, role: "Real Estate Consultant", review: "Our real estate CRM website works smoothly and helps us manage property leads efficiently.", rating: 5 },
+  { id: 3, name: "Rahul Verma", profileImg: boy2Img, role: "Online Store Owner", review: "The team delivered a modern eCommerce website with great design and fast loading speed.", rating: 5 },
+  { id: 4, name: "Sanjay Patel", profileImg: boy3Img, role: "Retail Business Owner", review: "We loved the UI/UX design. Customers find our website easy to navigate and shop.", rating: 5 },
+  { id: 5, name: "Priya Mehta", profileImg: girl2Img, role: "Startup Founder", review: "Excellent development service and great communication throughout the project.", rating: 5 },
+  { id: 6, name: "Karan Singh", profileImg: boy4Img, role: "Digital Entrepreneur", review: "Our website traffic and conversions improved after launching the new platform.", rating: 5 },
+  { id: 7, name: "Neha Kapoor", profileImg: girl3Img, role: "Business Consultant", review: "Vihaan Innovations built a powerful business website that truly reflects our brand.", rating: 5 },
+  { id: 8, name: "Amit Agarwal", profileImg: boy5Img, role: "Store Owner", review: "The eCommerce system works flawlessly. Inventory and order management are very simple now.", rating: 5 },
+  { id: 9, name: "Deepak Nair", profileImg: boy1Img, role: "IT Consultant", review: "Highly professional team with creative ideas and strong technical skills.", rating: 5 },
+  { id: 10, name: "Manoj Gupta", profileImg: boy2Img, role: "Marketplace Founder", review: "Our online marketplace launched smoothly thanks to the experienced developers.", rating: 5 },
+  { id: 11, name: "Pooja Desai", profileImg: girl1Img, role: "Business Owner", review: "They delivered our website on time with excellent performance and security.", rating: 5 },
+  { id: 12, name: "Arjun Reddy", profileImg: boy3Img, role: "Entrepreneur", review: "The website design looks premium and works perfectly on all devices.", rating: 5 },
+  { id: 13, name: "Sneha Iyer", profileImg: girl2Img, role: "Startup Owner", review: "Customer support from Vihaan Innovations is outstanding and very responsive.", rating: 5 },
+  { id: 14, name: "Rohit Sharma", profileImg: boy4Img, role: "Marketing Manager", review: "Our business gained more leads after launching the SEO-friendly website.", rating: 5 },
+  { id: 15, name: "Vikram Joshi", profileImg: boy5Img, role: "Company Director", review: "The team understood our requirements perfectly and built a scalable platform.", rating: 5 },
 ];
 
-const ReviewCardContent = ({ review, image }) => (
+const ReviewCardContent = ({ review }) => (
   <ReviewCard elevation={0}>
     {/* Grid-like 4-portion layout */}
     <Box sx={{ display: "flex", flex: 1, gap: 2, mb: 1 }}>
       {/* Portion 1: Photo */}
       <Avatar
-        src={image}
+        src={review.profileImg}
         imgProps={{
           style: {
-            objectFit: "contain",
+            objectFit: "cover",
             width: "100%",
             height: "100%",
             backgroundColor: "#f8faff",
@@ -166,7 +174,7 @@ const ReviewsMultiVendor = () => {
       <Box sx={{ mb: 4 }}>
         <MarqueeRow direction="right">
           {[...row1, ...row1].map((review, idx) => (
-            <ReviewCardContent key={`r1-${idx}`} review={review} image={ganeshImg} />
+            <ReviewCardContent key={`r1-${idx}`} review={review} />
           ))}
         </MarqueeRow>
       </Box>
@@ -175,7 +183,7 @@ const ReviewsMultiVendor = () => {
       <Box>
         <MarqueeRow direction="left">
           {[...row2, ...row2].map((review, idx) => (
-            <ReviewCardContent key={`r2-${idx}`} review={review} image={abhi1Img} />
+            <ReviewCardContent key={`r2-${idx}`} review={review} />
           ))}
         </MarqueeRow>
       </Box>
