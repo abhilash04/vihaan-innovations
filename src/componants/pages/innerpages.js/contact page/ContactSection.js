@@ -31,13 +31,13 @@ const ContactUs = () => {
     {
       icon: <PhoneIcon />,
       title: "Call Us",
-      value: "+91 79754 68634",
+      value: "+91 99648 48414",
       subValue: "Mon-Sat (09:00 AM-07:00 PM)",
     },
     {
       icon: <EmailIcon />,
       title: "Email Us",
-      value: "info@vihaninnovations.com", // Updated to branded email
+      value: "contact@vihaninnovations.com",
       subValue: "Support available 24/7",
     },
     {
