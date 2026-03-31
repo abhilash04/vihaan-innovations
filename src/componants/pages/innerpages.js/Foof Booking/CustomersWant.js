@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import TakeoutDiningIcon from "@mui/icons-material/TakeoutDining";
 import DeliveryDiningIcon from "@mui/icons-material/DeliveryDining";
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
-import centerImage from "../../../../assets/serve-your-customers-want-scaled-1.jpg";
+import centerImage from "../../../../assets/serve-your-customers.jpg";
 
 const ServiceCard = ({ icon: Icon, title, description, delay }) => (
   <motion.div

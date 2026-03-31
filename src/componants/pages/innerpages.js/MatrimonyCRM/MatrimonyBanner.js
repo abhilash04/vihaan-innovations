@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import PeopleIcon from '@mui/icons-material/People';
 import SpeedIcon from '@mui/icons-material/Speed';
-import img from '../../../../assets/Building trusted matrimony platforms infographic.png'
+import img from '../../../../assets/trusted-matrimony-app.png'
 const StatCard = ({ icon: Icon, value, label, delay }) => (
   <motion.div
     initial={{ opacity: 0, x: 50 }}

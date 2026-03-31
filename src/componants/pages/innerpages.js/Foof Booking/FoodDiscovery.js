@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
 import FastfoodIcon from "@mui/icons-material/Fastfood";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import imgFoodie from "../../../../assets/Local-Food-Discovery-862x1024.webp";
-import imgRestaurant from "../../../../assets/Rest-Order-Management-862x1024.webp";
+import imgFoodie from "../../../../assets/local-food.webp";
+import imgRestaurant from "../../../../assets/order-management.webp";
 
 const tabData = {
   foodies: {
