@@ -422,20 +422,21 @@ const FooterAndPopup = () => {
                     </Typography>
                     <Box component="ul" sx={{ listStyle: "none", padding: 0, margin: 0 }}>
                       {[
-                        "Real Estate Portal",
-                        "Education CRM",
-                        "Matrimony CRM",
-                        "Listing Platform",
-                        "LMS Platform",
-                        "Hospital Management System",
+                        { name: "Real Estate Portal", path: "/real-estate-portal" },
+                        { name: "Education CRM", path: "/education-crm" },
+                        { name: "Matrimony CRM", path: "/matrimony-crm" },
+                        { name: "Listing Platform", path: "/listing-platform" },
+                        { name: "LMS Platform", path: "/lms-platform" },
+                        { name: "Cab Booking App", path: "/cab-booking-app" },
+                        { name: "Hospital Management System", path: "/hospital-management-system" },
                       ].map((product) => (
-                        <li key={product} style={{ marginBottom: "12px" }}>
+                        <li key={product.name} style={{ marginBottom: "12px" }}>
                           <Link
-                            href={`${product.toLowerCase().replace(/\s+/g, "-")}`}
+                            href={product.path}
                             sx={{ color: "#555", textDecoration: "none", fontSize: "14px", fontWeight: 500, transition: "color 0.3s ease", display: "flex", alignItems: "center", "&:hover": { color: "#00b4d8" } }}
                           >
                             <span style={{ color: "#00b4d8", marginRight: "8px", fontSize: "16px", fontWeight: "bold" }}>›</span>
-                            {product}
+                            {product.name}
                           </Link>
                         </li>
                       ))}
@@ -452,21 +453,21 @@ const FooterAndPopup = () => {
                     </Typography>
                     <Box component="ul" sx={{ listStyle: "none", padding: 0, margin: 0 }}>
                       {[
-                        "UI UX Design",
-                        "Web Development",
-                        "Digital Marketing",
-                        "Mobile App Development",
-                        "Ecommerce Development",
-                        "CRM Development",
-                        "Maintenance & Support",
+                        { name: "SEO", path: "/seo-services" },
+                        { name: "UI Ux Design", path: "/ui-ux-design" },
+                        { name: "Web Development", path: "/web-development" },
+                        { name: "Socail Media Marketing", path: "/social-media-marketing" },
+                        { name: "Mobile App Development", path: "/mobile-app-development" },
+                        { name: "Ecommerce Development", path: "/ecommerce-development" },
+                        { name: "Maintenance & Support", path: "/maintenance-&-support" },
                       ].map((service) => (
-                        <li key={service} style={{ marginBottom: "12px" }}>
+                        <li key={service.name} style={{ marginBottom: "12px" }}>
                           <Link
-                            href={`${service.toLowerCase().replace(/\s+/g, "-")}`}
+                            href={service.path}
                             sx={{ color: "#555", textDecoration: "none", fontSize: "14px", fontWeight: 500, transition: "color 0.3s ease", display: "flex", alignItems: "center", "&:hover": { color: "#00b4d8" } }}
                           >
                             <span style={{ color: "#00b4d8", marginRight: "8px", fontSize: "16px", fontWeight: "bold" }}>›</span>
-                            {service}
+                            {service.name}
                           </Link>
                         </li>
                       ))}
@@ -483,20 +484,21 @@ const FooterAndPopup = () => {
                     </Typography>
                     <Box component="ul" sx={{ listStyle: "none", padding: 0, margin: 0 }}>
                       {[
-                        "Web Designing",
-                        "Web Development",
-                        "React",
-                        "Python",
-                        "Manual Testing",
-                        "Android",
+                        { name: "SEO", path: "/seo-training" },
+                        { name: "Java", path: "/java-training" },
+                        { name: "Python", path: "/python-training" },
+                        { name: "2D Animation", path: "/2d-animation-training" },
+                        { name: "3D Animation", path: "/3d-animation-training" },
+                        { name: "Web Development", path: "/web-design-react-training" },
+                        { name: "Social Media Marketing", path: "/social-media-marketing-training" },
                       ].map((training) => (
-                        <li key={training} style={{ marginBottom: "12px" }}>
+                        <li key={training.name} style={{ marginBottom: "12px" }}>
                           <Link
-                            href={`${training.toLowerCase().replace(/\s+/g, "-")}-training`}
+                            href={training.path}
                             sx={{ color: "#555", textDecoration: "none", fontSize: "14px", fontWeight: 500, transition: "color 0.3s ease", display: "flex", alignItems: "center", "&:hover": { color: "#00b4d8" } }}
                           >
                             <span style={{ color: "#00b4d8", marginRight: "8px", fontSize: "16px", fontWeight: "bold" }}>›</span>
-                            {training}
+                            {training.name}
                           </Link>
                         </li>
                       ))}
@@ -515,6 +517,7 @@ const FooterAndPopup = () => {
                       {[
                         { name: "About Us", path: "/about-us" },
                         { name: "Careers", path: "/career" },
+                        { name: "Blog", path: "/blog" },
                         { name: "Terms & Conditions", path: "/terms-and-conditions" },
                         { name: "Privacy Policy", path: "/privacy-policy" },
                         { name: "Refund Policy", path: "/refund-policy" },
@@ -537,27 +540,27 @@ const FooterAndPopup = () => {
                 {/* Contact Details Row */}
                 <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, justifyContent: "space-between", alignItems: { xs: "flex-start", md: "center" }, mt: { xs: 2, md: 4 }, pt: { xs: 3, md: 4 }, borderTop: "1px solid #eaeaea", gap: { xs: 3, md: 3 } }}>
                   {/* Email */}
-                  <Box sx={{ display: "flex", alignItems: "center", gap: "12px", width: "100%" }}>
+                  <Box sx={{ display: "flex", alignItems: "center", justifyContent: 'center', gap: "12px", width: "100%" }}>
                     <Box sx={{ width: "40px", height: "40px", minWidth: "40px", borderRadius: "50%", backgroundColor: "#eef2f6", display: "flex", alignItems: "center", justifyContent: "center" }}>
                       <Email sx={{ fontSize: "20px", color: "#444" }} />
                     </Box>
-                    <Link href="mailto:contact@vihaaninnovations.com" sx={{ color: "#555", textDecoration: "none", fontSize: { xs: "14px", sm: "15px" }, fontWeight: 600, wordBreak: "break-word", "&:hover": { color: "#00b4d8" } }}>
+                    <Link href="mailto:contact@vihaaninnovations.com" sx={{ color: "#555", textDecoration: "none", fontSize: { xs: "14px", sm: "15px" }, fontWeight: 600, wordBreak: "break-word", "&:hover": { color: "#00b4d8" }, whiteSpace: 'nowrap' }}>
                       contact@vihaaninnovations.com
                     </Link>
                   </Box>
 
                   {/* Phone */}
-                  <Box sx={{ display: "flex", alignItems: "center", gap: "12px", width: "100%" }}>
+                  <Box sx={{ display: "flex", alignItems: "center", justifyContent: 'center', gap: "12px", width: "100%" }}>
                     <Box sx={{ width: "40px", height: "40px", minWidth: "40px", borderRadius: "50%", backgroundColor: "#eef2f6", display: "flex", alignItems: "center", justifyContent: "center" }}>
                       <Phone sx={{ fontSize: "20px", color: "#444" }} />
                     </Box>
-                    <Link href="tel:+918073979129" sx={{ color: "#555", textDecoration: "none", fontSize: { xs: "14px", sm: "15px" }, fontWeight: 600, "&:hover": { color: "#00b4d8" } }}>
-                      +91 80739 79129
+                    <Link href="tel:+919964848414" sx={{ color: "#555", textDecoration: "none", fontSize: { xs: "14px", sm: "15px" }, fontWeight: 600, "&:hover": { color: "#00b4d8" } }}>
+                      +91 99648 48414
                     </Link>
                   </Box>
 
                   {/* Location */}
-                  <Box sx={{ display: "flex", alignItems: "flex-start", gap: "12px", width: "100%" }}>
+                  <Box sx={{ display: "flex", alignItems: "flex-start", justifyContent: 'center', gap: "12px", width: "100%" }}>
                     <Box sx={{ width: "40px", height: "40px", minWidth: "40px", borderRadius: "50%", backgroundColor: "#eef2f6", display: "flex", alignItems: "center", justifyContent: "center" }}>
                       <LocationOn sx={{ fontSize: "20px", color: "#444" }} />
                     </Box>
