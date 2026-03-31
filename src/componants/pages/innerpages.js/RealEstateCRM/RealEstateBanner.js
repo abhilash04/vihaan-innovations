@@ -6,7 +6,7 @@ import InsertChartOutlinedIcon from '@mui/icons-material/InsertChartOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import img from '../../../../assets/Real estate tech for modern business.png'
+import img from '../../../../assets/real-estate-tech.png'
 const StatCard = ({ icon: Icon, value, label, delay }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}

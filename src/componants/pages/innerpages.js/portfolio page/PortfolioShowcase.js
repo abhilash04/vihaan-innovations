@@ -11,6 +11,13 @@ import {
 } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import hms from "../../../../assets/company-portfolio/hms-dashboard.png"
+import ecommerce from "../../../../assets/company-portfolio/ecommerce.png"
+import crm from "../../../../assets/company-portfolio/crm-solutions.png"
+import lms from "../../../../assets/company-portfolio/lms-portal.png"
+import proptech from "../../../../assets/company-portfolio/proptech-portal.png"
+import edutech from "../../../../assets/company-portfolio/edutech-hub.png"
+
 
 const projects = [
   {
@@ -18,7 +25,7 @@ const projects = [
     category: "Products",
     title: "Hospital Management System",
     desc: "A comprehensive solution for patients, doctors, and real-time billing automation.",
-    img: "https://img.freepik.com/free-vector/hospital-management-system-concept_23-2148622974.jpg",
+    img: hms,
     tags: ["React", "Node.js", "MongoDB"],
   },
   {
@@ -26,7 +33,7 @@ const projects = [
     category: "Products",
     title: "E-Commerce Platform",
     desc: "Enterprise-grade online shopping experience with seamless payment integration.",
-    img: "https://img.freepik.com/free-vector/online-shopping-concept_23-2148626524.jpg",
+    img: ecommerce,
     tags: ["Next.js", "Stripe", "PostgreSQL"],
   },
   {
@@ -34,7 +41,7 @@ const projects = [
     category: "Services",
     title: "ERP / CRM Solution",
     desc: "Transforming business operations with automated HR, sales, and lead tracking.",
-    img: "https://img.freepik.com/free-vector/crm-concept-illustration_114360-1305.jpg",
+    img: crm,
     tags: ["Angular", "Django", "MySQL"],
   },
   {
@@ -42,7 +49,7 @@ const projects = [
     category: "Training",
     title: "LMS Console",
     desc: "A dynamic learning management system built for high-scale educational institutions.",
-    img: "https://img.freepik.com/free-vector/distance-learning-concept-illustration_114360-3165.jpg",
+    img: lms,
     tags: ["Vite", "Firebase", "AWS"],
   },
   {
@@ -50,7 +57,7 @@ const projects = [
     category: "Services",
     title: "PropTech Portal",
     desc: "Modernizing real estate with 3D tours, virtual bookings, and transparent listings.",
-    img: "https://img.freepik.com/free-vector/real-estate-searching-concept_23-2148651478.jpg",
+    img: proptech,
     tags: ["React Native", "PHP", "SQLite"],
   },
   {
@@ -58,7 +65,7 @@ const projects = [
     category: "Training",
     title: "EduTech Hub",
     desc: "Interactive coding environments and video streaming for the next-gen learners.",
-    img: "https://img.freepik.com/free-vector/education-concept-illustration_114360-2521.jpg",
+    img: edutech,
     tags: ["TypeScript", "WebRTC", "Redis"],
   },
 ];
