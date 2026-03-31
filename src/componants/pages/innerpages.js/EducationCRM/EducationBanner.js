@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Container, Typography, Button, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
-import img from '../../../../assets/Education CRM technology benefits infographic.png'
+import img from '../../../../assets/edu-crm-tech-img.png'
 const StatCard = ({ icon: Icon, value, label, delay }) => (
   <motion.div
     initial={{ opacity: 0, scale: 0.9 }}

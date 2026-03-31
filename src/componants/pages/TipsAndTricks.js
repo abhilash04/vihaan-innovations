@@ -12,10 +12,10 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import PersonIcon from "@mui/icons-material/Person";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 import { motion } from "framer-motion";
-import img1 from "../../assets/Emerging IT Trends Shaping the Future.jpg.jpeg";
-import img2 from "../../assets/Smart Tools to Improve Remote Work.jpg.jpeg";
-import img3 from "../../assets/Tech That Makes Everyday Life Easier.jpeg";
-import img4 from "../../assets/How AI is Transforming Today’s World.png"
+import img1 from "../../assets/it-trends.jpeg";
+import img2 from "../../assets/smart-tools.jpeg";
+import img3 from "../../assets/tech-life.jpeg";
+import img4 from "../../assets/ai-transform.png"
 
 // Sample posts
 const posts = [

@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import img from '../../../../assets/Matchmaking process flowchart in blue.png';
+import img from '../../../../assets/matchmaking-process.png';
 
 const MatrimonyVisualFlow = () => {
   return (
