@@ -1885,7 +1885,6 @@ const Header = () => {
                     </Button>
                     {activeDropdown === "products" && <ProductsDropdown />}
                   </Box>
-
                   {/* Services Dropdown */}
                   <Box
                     sx={{ position: "relative" }}

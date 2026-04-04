@@ -270,9 +270,10 @@ function App() {
             <Route path="/email-template-design" element={<ServicePage serviceData={emailTemplateDesignServiceData} />} />
             <Route path="/landing-page-design" element={<ServicePage serviceData={landingPageDesignServiceData} />} />
             <Route path="/maintenance-&-support" element={<MaintenanceSupportPage />} />
-            
+
             {/* Dynamic Services Overview Details */}
             <Route path="/service-details/:title" element={<ServiceDetails />} />
+
           </Routes>
         </Router>
       </Grid>
