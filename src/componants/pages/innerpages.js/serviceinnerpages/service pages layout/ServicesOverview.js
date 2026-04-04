@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Grid, Container, Paper } from "@mui/material";
 import { styled, keyframes } from "@mui/system";
+import { useNavigate } from "react-router-dom";
 import CodeIcon from "@mui/icons-material/Code";
 import AssessmentIcon from "@mui/icons-material/Assessment";
 import VideoCameraBackIcon from "@mui/icons-material/VideoCameraBack";
@@ -83,12 +84,18 @@ const IconBox = styled(Box)(({ gradient }) => ({
 }));
 
 const ServicesOverview = ({ data }) => {
+  const navigate = useNavigate();
   const {
     subtitle = "WHAT WE OFFER",
     title = "Comprehensive Technology Services",
     description = "We empower businesses using advanced digital enablement from custom codes overlays to strategic marketing pillars.",
     list = categories
   } = data || {};
+
+  const handleExplore = (serviceTitle) => {
+    const slug = serviceTitle.toLowerCase().replace(/\s+/g, "-");
+    navigate(`/service-details/${slug}`);
+  };
 
   return (
     <Box sx={{ bgcolor: "#f1f5f9", py: { xs: 6, md: 8 }, position: "relative" }}>
@@ -115,7 +122,7 @@ const ServicesOverview = ({ data }) => {
             const SvgIcon = cat.icon;
             return (
               <Grid item xs={12} sm={6} md={3} key={i} mb={6}>
-                <CategoryCard bordercolor={cat.color}>
+                <CategoryCard bordercolor={cat.color} onClick={() => handleExplore(cat.title)}>
                   <IconBox gradient={cat.gradient}>
                     <SvgIcon sx={{ fontSize: 28 }} />
                   </IconBox>
@@ -132,7 +139,13 @@ const ServicesOverview = ({ data }) => {
                         {cat.count}
                       </Typography>
                     </Box>
-                    <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, color: "#0087c9", cursor: "pointer", "&:hover": { color: "#005885" } }}>
+                    <Box
+                      sx={{ display: "flex", alignItems: "center", gap: 0.5, color: "#0087c9", cursor: "pointer", "&:hover": { color: "#005885" } }}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleExplore(cat.title);
+                      }}
+                    >
                       <Typography sx={{ fontSize: "13px", fontWeight: 700 }}>Explore</Typography>
                       <CallMadeIcon sx={{ fontSize: 14 }} />
                     </Box>
