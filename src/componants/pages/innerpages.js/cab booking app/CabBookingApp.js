@@ -36,7 +36,6 @@ const CabBookingApp = () => {
       <FAQSection />
       <FinalCTA />
       <CARCTA />
-
       <FooterAndPopup />
     </Grid>
   );
