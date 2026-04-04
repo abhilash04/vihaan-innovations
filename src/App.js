@@ -122,6 +122,7 @@ import {
   whiteboardAnimationServiceData
 } from "./componants/pages/innerpages.js/serviceinnerpages/ServiceDataTemplate";
 import ServicePage from "./componants/pages/innerpages.js/serviceinnerpages/service pages layout/ServicePage";
+import ServiceDetails from "./componants/pages/innerpages.js/serviceinnerpages/service pages layout/ServiceDetails";
 import DynamicSeo from "./DynamicSeo";
 
 function App() {
@@ -266,6 +267,9 @@ function App() {
             <Route path="/email-template-design" element={<ServicePage serviceData={emailTemplateDesignServiceData} />} />
             <Route path="/landing-page-design" element={<ServicePage serviceData={landingPageDesignServiceData} />} />
             <Route path="/maintenance-&-support" element={<MaintenanceSupportPage />} />
+            
+            {/* Dynamic Services Overview Details */}
+            <Route path="/service-details/:title" element={<ServiceDetails />} />
           </Routes>
         </Router>
       </Grid>
