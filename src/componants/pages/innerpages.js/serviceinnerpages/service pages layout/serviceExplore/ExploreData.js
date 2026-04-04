@@ -120,105 +120,111 @@ export const exploreServiceData = {
       cta: "Contact Us ↗"
     }
   },
-  "Technical SEO Services": {
+  "OFF-Page SEO": {
     hero: {
-      title: "Technical SEO Services",
-      subtitle: "Technical SEO Services to Improve Website Performance and Rankings",
-      description: "Our Technical SEO Services ensure your website is fast, crawlable, and optimized for search engines. We implement advanced Technical SEO Optimization and perform a complete Website Technical SEO Audit to improve indexing, performance, and overall search visibility.",
-      badgeText: "High Site Health Score",
+      title: "OFF-Page SEO Services",
+      subtitle: "OFF-Page SEO Services to Boost Authority and Rankings",
+      description: "Our expert OFF-Page SEO Services help your website gain credibility, authority, and higher rankings on search engines. We implement advanced off-page seo optimization strategies and proven off page SEO techniques like link building, brand mentions, and outreach to improve your online presence and drive organic growth.",
+      badgeText: "High Authority Backlinking",
       stats: [
         { value: "1200+", label: "Websites Optimized" },
-        { value: "97%", label: "Satisfaction Rate" },
-        { value: "5x", label: "Performance Gain" },
-        { value: "Top 3", label: "Ranking Achieved" }
+        { value: "98%", label: "Client Satisfaction Rate" },
+        { value: "4x", label: "Increase in Domain Authority" },
+        { value: "Top 5", label: "Ranking Achieved" }
       ]
     },
     services: {
-      title: "Comprehensive Technical SEO Services for Better Website Health",
-      description: "We provide complete Technical SEO Services to ensure your website meets all search engine requirements and performs efficiently.",
+      title: "Comprehensive OFF-Page SEO Services for Strong Online Authority",
+      description: "We deliver result-driven OFF-Page SEO Services to improve your website’s trust, authority, and search engine rankings.",
       list: [
         {
-          title: "Website Technical SEO Audit",
+          title: "High-Quality Link Building",
           icon: AssessmentIcon,
-          desc: "We conduct a detailed Website Technical SEO Audit to identify crawl errors, indexing issues, broken links, and performance gaps.",
-          features: ["Crawl Errors", "Indexing Issues", "Link Quality"]
+          desc: "We build authoritative backlinks using ethical off page SEO techniques to increase your domain authority and credibility.",
+          features: ["Auth Backlinks", "Ethical SEO", "Trust Building"]
         },
         {
-          title: "Technical SEO Optimization",
+          title: "OFF-Page SEO Optimization",
           icon: SettingsSuggestIcon,
-          desc: "We optimize website speed, mobile responsiveness, site architecture, and structured data using proven Technical SEO Optimization strategies.",
-          features: ["Site Speed", "Mobile Friendly", "Site Structure"]
+          desc: "Our strategies focus on guest posting, outreach, and brand mentions to strengthen your website’s off-page signals.",
+          features: ["Guest Posting", "Brand Mentions", "Outreach"]
         },
         {
-          title: "Core Technical Improvements",
+          title: "Brand Mentions & Social Signals",
           icon: CodeIcon,
-          desc: "We fix issues like XML sitemaps, robots.txt, canonical tags, and improve internal linking to strengthen your website’s technical foundation.",
-          features: ["Sitemaps", "Robots.txt", "Canonical Tags"]
+          desc: "We enhance your brand visibility through social media engagement, citations, and external mentions to boost SEO performance.",
+          features: ["Brand Visibility", "Social Engagement", "Performance Boost"]
         }
       ]
     },
     process: {
       subtitle: "◆ How It Works",
-      title: "Our Technical SEO Optimization Process",
+      title: "Our OFF-Page SEO Services Process",
       steps: [
-        { title: "Technical Analysis", desc: "We analyze your website structure, speed, and crawlability." },
-        { title: "Website Technical SEO Audit", desc: "We identify critical issues using a complete Website Technical SEO Audit." },
-        { title: "Optimization Implementation", desc: "We apply Technical SEO Optimization including fixes for errors, speed, and indexing." },
-        { title: "Monitoring & Improvement", desc: "We track performance and continuously refine your technical SEO strategy." }
+        { title: "01 – Competitor Analysis", desc: "We analyze competitors’ backlink profiles and strategies." },
+        { title: "02 – Strategy Planning", desc: "We create a customized off-page seo optimization plan tailored to your business." },
+        { title: "03 – Implementation", desc: "We execute link building and outreach using effective off page SEO techniques." },
+        { title: "04 – Monitoring & Reporting", desc: "We track backlinks, domain authority, and ranking improvements." }
       ]
     },
     comparison: {
       subtitle: "◆ Why Choose Us",
-      title: "Best Technical SEO Services for Long-Term Growth",
+      title: "Best OFF-Page SEO Services for Authority Building",
       reasons: [
-        { title: "Technical SEO Experts", desc: "Our team specializes in advanced Technical SEO Services for all types of websites." },
-        { title: "Data-Driven Approach", desc: "We use analytics tools to implement effective Technical SEO Optimization strategies." },
-        { title: "Customized Solutions", desc: "Every Website Technical SEO Audit is tailored to your business needs." },
-        { title: "Advanced Technical Knowledge", desc: "We follow the latest search engine guidelines to ensure long-term success." }
+        { title: "SEO Experts", desc: "Our team specializes in advanced OFF-Page SEO Services for all industries." },
+        { title: "White-Hat Techniques", desc: "We use safe and proven off page SEO techniques to ensure long-term success." },
+        { title: "Customized Strategy", desc: "Every campaign is tailored with the right off-page seo optimization methods." },
+        { title: "Transparent Reporting", desc: "We provide clear insights into backlinks and performance growth." }
       ],
       stats: [
-        { value: "5x", label: "Performance Gain" },
-        { value: "97%", label: "Satisfaction Rate" },
-        { value: "100%", label: "Indexing Success" },
-        { value: "Top 3", label: "Ranking Achieved" }
+        { value: "4x", label: "DA Increase" },
+        { value: "98%", label: "Satisfaction Rate" },
+        { value: "100%", label: "Safe Links" },
+        { value: "Top 5", label: "Ranking Achieved" }
       ]
     },
     results: {
-      subtitle: "◆ Technical SEO Services",
-      title: "Measurable Technical SEO Results",
+      subtitle: "◆ OFF-Page SEO Services",
+      title: "Measurable SEO Growth & Authority",
       items: [
         {
-          title: "Improved Website Performance",
-          desc: "Faster load times and better user experience with optimized Technical SEO Services.",
+          title: "Improved Domain Authority",
+          desc: "Build strong backlinks with effective OFF-Page SEO Services.",
           metrics: [
-            { value: "90+", label: "Page Speed Score" },
-            { value: "Better", label: "UX" }
+            { value: "90+", label: "DA" },
+            { value: "Strong", label: "Authority" },
+            { value: "High Quality", label: "Links" },
+            { value: "Trusted", label: "Sources" }
           ],
           color: "#2563eb"
         },
         {
-          title: "Better Indexing & Crawlability",
-          desc: "Search engines can easily crawl your site after Technical SEO Optimization.",
+          title: "Better Online Visibility",
+          desc: "Boost brand presence through off-page seo optimization.",
           metrics: [
-            { value: "100%", label: "Indexed Pages" },
-            { value: "Faster", label: "Crawling" }
+            { value: "More", label: "Mentions" },
+            { value: "Brand", label: "Reach" },
+            { value: "Higher", label: "Engagement" },
+            { value: "Social", label: "Signals" }
           ],
           color: "#0ea5e9"
         },
         {
           title: "Higher Search Rankings",
-          desc: "Strong technical foundation leads to improved rankings and visibility.",
+          desc: "Strong off-page signals improve rankings and traffic.",
           metrics: [
-            { value: "Top", label: "Keyword Rankings" },
-            { value: "Increased", label: "Visibility" }
+            { value: "Top", label: "Rankings" },
+            { value: "Keyword", label: "Positions" },
+            { value: "Increased", label: "Traffic" },
+            { value: "Organic", label: "Growth" }
           ],
           color: "#3b82f6"
         }
       ]
     },
     bottomCTA: {
-      title: "Ready to Improve Your Website with Technical SEO Services?",
-      description: "Start with expert Technical SEO Services, advanced Technical SEO Optimization, and a complete Website Technical SEO Audit to boost your rankings and performance.",
+      title: "Ready to Grow with OFF-Page SEO Services?",
+      description: "Boost your rankings with expert OFF-Page SEO Services, advanced off-page seo optimization, and proven off page SEO techniques to build authority and drive organic traffic.",
       cta: "Contact Us ↗"
     }
   },
@@ -423,6 +429,108 @@ export const exploreServiceData = {
     bottomCTA: {
       title: "Ready to Grow with SEO Consultant Services?",
       description: "Start with expert SEO Consultant Services, trusted SEO Expert Services, and a reliable SEO Consulting Company to boost your rankings, traffic, and business growth.",
+      cta: "Contact Us ↗"
+    }
+  },
+  "SEO Consulting Services": {
+    hero: {
+      title: "SEO Consulting Services",
+      subtitle: "SEO Consulting Services to Build a Winning Growth Strategy",
+      description: "Our professional SEO Consulting Services help businesses improve rankings, traffic, and conversions with data-driven strategies. As a trusted SEO Consulting Company, we provide expert guidance and SEO Expert Services to create scalable and long-term SEO success.",
+      badgeText: "Expert Strategic Guidance",
+      stats: [
+        { value: "500+", label: "Strategies Delivered" },
+        { value: "95%", label: "Satisfaction Rate" },
+        { value: "6x", label: "Average Growth" },
+        { value: "Top 5", label: "Google Positions" }
+      ]
+    },
+    services: {
+      title: "Complete SEO Consulting Services for Business Growth",
+      description: "We provide end-to-end SEO Consulting Services to help businesses build strong SEO strategies and achieve sustainable growth.",
+      list: [
+        {
+          title: "SEO Audit & Analysis",
+          icon: AssessmentIcon,
+          desc: "We perform a detailed audit to identify issues, opportunities, and gaps using advanced SEO Expert Services.",
+          features: ["Deep Audit", "Gap Analysis", "Expert Insights"]
+        },
+        {
+          title: "Custom SEO Strategy",
+          icon: SettingsSuggestIcon,
+          desc: "As a leading SEO Consulting Company, we create tailored SEO strategies based on your business goals and target audience.",
+          features: ["Tailored Roadmaps", "Audience Focused", "Scalable Growth"]
+        },
+        {
+          title: "Competitor & Market Analysis",
+          icon: TravelExploreIcon,
+          desc: "We analyze your competitors to identify winning strategies and help you stay ahead in search rankings.",
+          features: ["Market Intel", "Competitor Gaps", "Wining Tactics"]
+        }
+      ]
+    },
+    process: {
+      subtitle: "◆ How It Works",
+      title: "Our SEO Consulting Process",
+      steps: [
+        { title: "Discovery & Goal Setting", desc: "We understand your business objectives, target audience, and challenges." },
+        { title: "SEO Audit & Insights", desc: "We conduct a complete audit using professional SEO Expert Services to identify key opportunities." },
+        { title: "Strategy Development", desc: "We build a data-driven plan as a trusted SEO Consulting Company." },
+        { title: "Monitoring & Optimization", desc: "We track performance and continuously refine strategies for better results." }
+      ]
+    },
+    comparison: {
+      subtitle: "◆ Why Choose Us",
+      title: "Best SEO Consulting Services for Long-Term Results",
+      reasons: [
+        { title: "Experienced SEO Experts", desc: "Our team delivers high-quality SEO Expert Services across industries." },
+        { title: "Data-Driven Approach", desc: "We use analytics and tools to implement effective SEO Consulting Services." },
+        { title: "Customized SEO Strategies", desc: "We create strategies tailored to your business needs and goals." },
+        { title: "Trusted SEO Consulting Company", desc: "We provide reliable and result-oriented consulting services for long-term growth." }
+      ],
+      stats: [
+        { value: "6x", label: "Growth Achieved" },
+        { value: "95%", label: "Satisfaction Rate" },
+        { value: "500+", label: "Success Plans" },
+        { value: "Top 5", label: "Keyword Rankings" }
+      ]
+    },
+    results: {
+      subtitle: "◆ SEO Consulting Services",
+      title: "Measurable SEO Results That Drive Business Growth",
+      items: [
+        {
+          title: "Higher Search Rankings",
+          desc: "Improved keyword positions with expert SEO Consulting Services.",
+          metrics: [
+            { value: "Top 3", label: "Rankings" },
+            { value: "6x", label: "Visibility" }
+          ],
+          color: "#2563eb"
+        },
+        {
+          title: "Increased Organic Traffic",
+          desc: "Drive more visitors through strategic SEO Expert Services.",
+          metrics: [
+            { value: "4x", label: "Traffic Growth" },
+            { value: "90 Days", label: "Results Timeline" }
+          ],
+          color: "#0ea5e9"
+        },
+        {
+          title: "Sustainable Business Growth",
+          desc: "Long-term growth with guidance from a trusted SEO Consulting Company.",
+          metrics: [
+            { value: "Higher", label: "ROI" },
+            { value: "Consistent", label: "Growth" }
+          ],
+          color: "#3b82f6"
+        }
+      ]
+    },
+    bottomCTA: {
+      title: "Ready to Grow with SEO Consulting Services?",
+      description: "Start with expert SEO Consulting Services, trusted SEO Expert Services, and a reliable SEO Consulting Company to boost your rankings, traffic, and business growth.",
       cta: "Contact Us ↗"
     }
   },
@@ -856,8 +964,8 @@ export const exploreServiceData = {
       title: "Comprehensive SEO & Marketing Solutions",
       description: "Data-driven strategies to dominate search results and capture high-intent leads.",
       list: [
-        { title: "On-Page SEO Services", icon: AssessmentIcon, desc: "Optimize content and structure for maximum search visibility.", features: ["Content Optimization", "Meta Tags", "Internal Linking"] },
-        { title: "Technical SEO Services", icon: SettingsSuggestIcon, desc: "Build a solid technical foundation for better crawling and indexing.", features: ["Speed Audit", "Index Management", "Schema Markup"] },
+        { title: "ON-Page SEO Services", icon: AssessmentIcon, desc: "Optimize content and structure for maximum search visibility.", features: ["Content Optimization", "Meta Tags", "Internal Linking"] },
+        { title: "OFF-Page SEO", icon: SettingsSuggestIcon, desc: "Build authority and credibility through strategic backlinking.", features: ["Link Building", "Brand Mentions", "Outreach"] },
         { title: "Keyword Research Services", icon: QueryStatsIcon, desc: "Identify high-impact keywords that drive qualified traffic.", features: ["Intent Analysis", "Difficulty Audit", "Gap Discovery"] },
         { title: "SEO Consultant Services", icon: SupportAgentIcon, desc: "Expert strategic guidance to scale your organic growth.", features: ["Strategy Audits", "Growth Roadmaps", "Market Analysis"] }
       ]
@@ -953,12 +1061,12 @@ export const exploreServiceData = {
 
 export const getExploreDataByTitle = (title) => {
   if (!title) return null;
-  
+
   // 1. Try exact match
   if (exploreServiceData[title]) return exploreServiceData[title];
 
   const query = title.toLowerCase().replace(/[\s-]/g, "");
-  
+
   // 2. Try normalized substring match
   const subKey = Object.keys(exploreServiceData).find(k => {
     const normalizedKey = k.toLowerCase().replace(/[\s-]/g, "");
@@ -970,7 +1078,15 @@ export const getExploreDataByTitle = (title) => {
   const queryWords = title.toLowerCase().split(/[\s-]+/).filter(w => w.length > 2);
   const fallbackKey = Object.keys(exploreServiceData).find(k => {
     const keyLow = k.toLowerCase();
-    return queryWords.every(word => keyLow.includes(word));
+    return queryWords.every(word => {
+      if (keyLow.includes(word)) return true;
+      // Handle variations like "consultant" vs "consulting" or "service" vs "services"
+      const stem = word.replace(/(ing|ant|s|es)$/, "");
+      if (stem.length > 2) {
+        return keyLow.includes(stem);
+      }
+      return false;
+    });
   });
 
   if (fallbackKey) return exploreServiceData[fallbackKey];

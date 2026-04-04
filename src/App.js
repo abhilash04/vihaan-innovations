@@ -124,12 +124,14 @@ import {
 import ServicePage from "./componants/pages/innerpages.js/serviceinnerpages/service pages layout/ServicePage";
 import ServiceDetails from "./componants/pages/innerpages.js/serviceinnerpages/service pages layout/ServiceDetails";
 import DynamicSeo from "./DynamicSeo";
+import ScrollToTop from "./componants/common/ScrollToTop";
 
 function App() {
   return (
     <ThemeProvider>
       <Grid>
         <Router>
+          <ScrollToTop />
           <DynamicSeo />
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -206,6 +208,7 @@ function App() {
             <Route path="/game-development" element={<ServicePage serviceData={gameDevServiceData} />} />
             <Route path="/content-writing" element={<ServicePage serviceData={contentWritingServiceData} />} />
             <Route path="/seo-services" element={<ServicePage serviceData={seoFullServiceData} />} />
+            <Route path="/off-page-seo" element={<ServiceDetails title="OFF-Page SEO" />} />
             <Route path="/social-media-marketing" element={<ServicePage serviceData={smmFullServiceData} />} />
             <Route path="/sem-services" element={<ServicePage serviceData={semFullServiceData} />} />
             <Route path="/email-marketing" element={<ServicePage serviceData={emailMarketingFullServiceData} />} />

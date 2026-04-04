@@ -61,7 +61,7 @@ const sections = [
       },
       {
         icon: <Widgets sx={{ color: "#00b4d8" }} />,
-        label: "Technical SEO Setup",
+        label: "OFF-Page SEO Optimization",
       },
       {
         icon: <Folder sx={{ color: "#00b4d8" }} />,

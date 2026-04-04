@@ -17,9 +17,9 @@ import ExplorePricing from "./serviceExplore/ExplorePricing";
 // Data
 import { getExploreDataByTitle } from "./serviceExplore/ExploreData";
 
-const ServiceDetails = () => {
+const ServiceDetails = ({ title: propTitle }) => {
   const { title: urlTitle } = useParams();
-  const title = decodeURIComponent(urlTitle);
+  const title = propTitle || decodeURIComponent(urlTitle);
   const data = getExploreDataByTitle(title);
 
   return (
