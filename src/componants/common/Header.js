@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, Container, IconButton, Typography } from "@mui/material";
-import SwipeableViews from "react-swipeable-views";
+import { AnimatePresence, motion } from "framer-motion";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useNavigate } from "react-router-dom";
+
 const announcements = [
   <span>
     <strong>Tradition Taste</strong> - Is the trade name and{" "}
@@ -17,6 +18,7 @@ const announcements = [
 const Header = () => {
   const [index, setIndex] = useState(0);
   const navigate = useNavigate();
+
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % announcements.length);
@@ -34,27 +36,41 @@ const Header = () => {
           justifyContent: "space-between",
         }}
       >
-        <Box sx={{ flexGrow: 1, textAlign: "center" }}>
-          <SwipeableViews index={index} disabled>
-            {announcements.map((text, i) => (
-              <Box
-                key={i}
-                role="region"
-                aria-label={`Announcement ${i + 1} of ${announcements.length}`}
+        <Box 
+          sx={{ 
+            flexGrow: 1, 
+            textAlign: "center", 
+            position: "relative",
+            height: "1.5rem", // Set height to avoid layout shift
+            overflow: "hidden"
+          }}
+        >
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.5 }}
+              style={{
+                position: "absolute",
+                width: "100%",
+                left: 0,
+                top: 0
+              }}
+            >
+              <Typography
+                variant="h6"
+                sx={{
+                  fontWeight: 500,
+                  fontSize: "1rem",
+                  fontFamily: "var(--font-heading-family)",
+                }}
               >
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontWeight: 500,
-                    fontSize: "1rem",
-                    fontFamily: "var(--font-heading-family)",
-                  }}
-                >
-                  {text}
-                </Typography>
-              </Box>
-            ))}
-          </SwipeableViews>
+                {announcements[index]}
+              </Typography>
+            </motion.div>
+          </AnimatePresence>
         </Box>
         {/* Profile Icon and Login/Register Button */}
         <Box sx={{ display: "flex", alignItems: "right", width: 230, }}>
