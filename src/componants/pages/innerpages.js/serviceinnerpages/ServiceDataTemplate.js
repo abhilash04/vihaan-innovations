@@ -524,7 +524,7 @@ export const digitalMarketingServiceData = S(
   "Data-Driven Digital Marketing That Grows Your Business. SEO, PPC, Social Media & Content Marketing.",
   "Digital Marketing",
   [
-    ["Search Engine Optimization (SEO)", "Rank higher on Google with proven on-page, off-page and technical SEO strategies."],
+    ["Search Engine Optimization (SEO)", "Rank higher on Google with proven on-page and off-page SEO strategies."],
     ["Pay-Per-Click Advertising", "Run profitable Google and social media ad campaigns with measurable ROI."],
     ["Social Media Marketing", "Build brand awareness and engage audiences across Instagram, Facebook and LinkedIn."],
     ["Content Marketing", "Create compelling content that attracts, engages and converts your target audience."],
@@ -669,7 +669,7 @@ export const seoServicesServiceData = S(
   "SEO",
   [
     ["On-Page SEO", "Optimize meta tags, headings, content, and internal linking for better rankings."],
-    ["Technical SEO", "Fix crawl errors, improve site speed, Core Web Vitals, and mobile optimization."],
+    ["OFF-Page SEO", "Build authority, credibility, and trust with high-quality backlinks and brand mentions."],
     ["Off-Page SEO & Link Building", "Build high-authority backlinks to improve domain authority and rankings."],
     ["Local SEO", "Dominate local search results with Google My Business optimization and local citations."],
   ],
@@ -3860,7 +3860,7 @@ export const seoFullServiceData = {
     features: [
       { icon: BusinessCenterIcon, text: "Complete SEO audit and fixes" },
       { icon: BusinessCenterIcon, text: "Keyword research and planning" },
-      { icon: BusinessCenterIcon, text: "On-page and technical SEO" },
+      { icon: BusinessCenterIcon, text: "On-page and OFF-page SEO" },
       { icon: BusinessCenterIcon, text: "Content optimization" },
       { icon: BusinessCenterIcon, text: "SEO consulting services" },
       { icon: BusinessCenterIcon, text: "Performance tracking" },
@@ -3873,7 +3873,7 @@ export const seoFullServiceData = {
     description: "As a search engine optimization services company, we provide solutions that improve rankings and drive real traffic.",
     list: [
       { title: "On-Page SEO", icon: BusinessCenterIcon, count: "Content Optimization", color: "#2563eb", gradient: "linear-gradient(135deg, #2563eb, #4f46e5)", description: "We optimize your website content for better rankings." },
-      { title: "Technical SEO", icon: BusinessCenterIcon, count: "Backend Fixes", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We fix backend issues to improve performance." },
+      { title: "OFF-Page SEO", icon: BusinessCenterIcon, count: "Authority Boost", color: "#06b6d4", gradient: "linear-gradient(135deg, #06b6d4, #0891b2)", description: "We build authority through strategic backlinking." },
       { title: "Keyword Research", icon: BusinessCenterIcon, count: "Smart Targeting", color: "#8b5cf6", gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", description: "We find the right keywords for your business." },
       { title: "SEO Consulting", icon: BusinessCenterIcon, count: "Long-Term Growth", color: "#ec4899", gradient: "linear-gradient(135deg, #ec4899, #be185d)", description: "We guide your strategy for long-term growth." },
     ]
@@ -3924,7 +3924,7 @@ export const seoFullServiceData = {
       { number: "01", title: "Website Analysis", desc: "We review your website to find issues and opportunities.", checks: ["Check performance", "Identify SEO errors", "Analyze rankings"], position: "above" },
       { number: "02", title: "Keyword Research", desc: "To increase organic traffic through enhanced visibility.", checks: ["Target relevant keywords", "Study competitors", "Focus on user intent"], position: "below" },
       { number: "03", title: "On-Page Optimization", desc: "We improve your website content and structure.", checks: ["Optimize meta tags", "Improve content", "Fix internal links"], position: "above" },
-      { number: "04", title: "Technical SEO", desc: "We fix backend issues.", checks: ["Improve speed", "Fix errors", "Optimize mobile"], position: "below" },
+      { number: "04", title: "OFF-Page SEO", desc: "We build authority and trust.", checks: ["Build backlinks", "Guest posting", "Brand mentions"], position: "below" },
       { number: "05", title: "Content Improvement", desc: "We enhance your content quality.", checks: ["Add SEO content", "Improve readability", "Update pages"], position: "above" },
       { number: "06", title: "Tracking & Reporting", desc: "We monitor performance regularly.", checks: ["Track rankings", "Analyze traffic", "Provide reports"], position: "below" }
     ]
@@ -3939,11 +3939,11 @@ export const seoFullServiceData = {
         title: "Ecommerce Single Vendor",
         desc: "We help single vendor ecommerce websites improve rankings and attract more buyers with targeted SEO strategies and product optimization.",
         desc1: "Designing high-visibility stores with optimized product pages and reliable performance.",
-        checks: ["Product Page SEO", "Category Page Optimization", "Keyword Targeting", "Technical SEO Improvements", "Conversion Optimization", "Performance Tracking"],
+        checks: ["Product Page SEO", "Category Page Optimization", "Keyword Targeting", "OFF-Page SEO Improvements", "Conversion Optimization", "Performance Tracking"],
         cards: [
           { title: "Product SEO", desc: "We optimize product pages to rank higher and attract more customers." },
           { title: "Category Page SEO", desc: "We improve category pages to increase visibility and navigation." },
-          { title: "Technical SEO Fixes", desc: "We fix speed, indexing, and mobile performance for better rankings." },
+          { title: "OFF-Page SEO Fixes", desc: "We build high-quality backlinks and brand presence for better rankings." },
           { title: "Conversion Optimization", desc: "We improve user experience to increase sales and reduce drop-offs." }
         ]
       },

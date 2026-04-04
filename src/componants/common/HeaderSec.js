@@ -326,6 +326,11 @@ const Header = () => {
           icon: Search,
         },
         {
+          label: "OFF-Page SEO",
+          href: "/off-page-seo",
+          icon: Search,
+        },
+        {
           label: "Social Media Marketing (SMM)",
           href: "/social-media-marketing",
           icon: Share2,
