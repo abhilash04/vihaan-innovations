@@ -78,16 +78,16 @@ const EmailMarketing = () => {
                 <Typography
                   variant="h2"
                   sx={{
-                    fontSize: { xs: "36px", md: "52px" },
+                    fontSize: { xs: "32px", md: "42px" },
                     fontWeight: 800,
                     fontFamily: "'Syne', sans-serif",
                     color: "#0f172a",
                     lineHeight: 1.1,
                   }}
                 >
-                  Lifecycle Loyalty. <br />
+                  Automate Loyalty. <br />
                   <Box component="span" sx={{ color: "#f59e0b" }}>
-                    Automated Growth.
+                    Scale Revenue.
                   </Box>
                 </Typography>
               </Box>
@@ -95,20 +95,20 @@ const EmailMarketing = () => {
               <Typography
                 sx={{
                   color: "#475569",
-                  fontSize: "18px",
+                  fontSize: { xs: "16px", md: "20px" },
                   lineHeight: 1.7,
                   fontWeight: 500,
                 }}
               >
-                Email isn't dead; it's just becoming more personal. We design automated sequences that nurture leads and maximize customer lifetime value.
+                Your inbox is still the highest-converting channel in digital marketing. We design automated email sequences that nurture cold leads into repeat buyers and grow customer lifetime value.
               </Typography>
 
               <Stack spacing={2}>
                 {[
-                  "Visual Flow Automation Builders",
-                  "Advanced User Segmentation",
+                  "Visual Drag-and-Drop Flow Builders",
+                  "Behavior-Based User Segmentation",
                   "A/B Subject Line & Copy Testing",
-                  "Ecommerce Integrated Flows",
+                  "Ecommerce-Integrated Drip Flows",
                 ].map((item, i) => (
                   <Stack key={i} direction="row" spacing={2} alignItems="center">
                     <Box sx={{ p: 1, bgcolor: "rgba(245, 158, 11, 0.1)", borderRadius: "10px" }}>

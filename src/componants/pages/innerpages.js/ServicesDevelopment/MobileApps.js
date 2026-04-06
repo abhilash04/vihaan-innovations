@@ -271,7 +271,7 @@ const MobileApps = () => {
                 <Typography
                   variant="h2"
                   sx={{
-                    fontSize: { xs: "36px", md: "52px" },
+                    fontSize: { xs: "32px", md: "42px" },
                     fontWeight: 800,
                     fontFamily: "'Syne', sans-serif",
                     color: "#0f172a",
@@ -288,7 +288,8 @@ const MobileApps = () => {
               <Typography
                 sx={{
                   color: "#475569",
-                  fontSize: "18px",
+                  fontSize: { xs: "16px", md: "20px" },
+                  lineHeight: 1.7,
                   lineHeight: 1.7,
                   fontWeight: 500,
                 }}

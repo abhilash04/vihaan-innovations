@@ -151,7 +151,7 @@ const AIIntelligence = () => {
           <Typography
             variant="h2"
             sx={{
-              fontSize: { xs: "36px", md: "52px" },
+              fontSize: { xs: "32px", md: "42px" },
               fontWeight: 800,
               fontFamily: "'Syne', sans-serif",
               color: "#0f172a",
@@ -162,7 +162,7 @@ const AIIntelligence = () => {
             Intelligent Systems That <br />
             Think, Learn, and Act
           </Typography>
-          <Typography sx={{ color: "#475569", maxWidth: "700px", fontSize: "18px", lineHeight: 1.7, fontWeight: 500 }}>
+          <Typography sx={{ color: "#475569", maxWidth: "700px", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500 }}>
             We bridge the gap between data and intelligence, building custom AI solutions that empower businesses to automate discovery and decision making.
           </Typography>
         </Stack>

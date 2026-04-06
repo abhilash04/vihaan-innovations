@@ -71,16 +71,16 @@ const VideoMarketing = () => {
                 <Typography
                   variant="h2"
                   sx={{
-                    fontSize: { xs: "36px", md: "52px" },
+                    fontSize: { xs: "32px", md: "42px" },
                     fontWeight: 800,
                     fontFamily: "'Syne', sans-serif",
                     color: "#0f172a",
                     lineHeight: 1.1,
                   }}
                 >
-                  Motion that Matters. <br />
+                  Visuals That Sell. <br />
                   <Box component="span" sx={{ color: "#e11d48" }}>
-                    Stories that Stick.
+                    Stories That Stay.
                   </Box>
                 </Typography>
               </Box>
@@ -88,20 +88,20 @@ const VideoMarketing = () => {
               <Typography
                 sx={{
                   color: "#475569",
-                  fontSize: "18px",
+                  fontSize: { xs: "16px", md: "20px" },
                   lineHeight: 1.7,
                   fontWeight: 500,
                 }}
               >
-                Vision is our most powerful sense. We create cinematic, high-conversion video content that captures attention in seconds and sustains it for minutes.
+                Video is the fastest way to build trust online. We produce cinematic, high-impact video content designed to capture attention in seconds and drive real conversions.
               </Typography>
 
               <Grid container spacing={2}>
                  {[
-                   { icon: Camera, text: "High-end Production" },
-                   { icon: Youtube, text: "YouTube Growth" },
-                   { icon: Video, text: "Social Video Ads" },
-                   { icon: Award, text: "Award Winning Storytelling" }
+                    { icon: Camera, text: "Professional Production" },
+                    { icon: Youtube, text: "YouTube Channel Growth" },
+                    { icon: Video, text: "Short-Form Social Ads" },
+                    { icon: Award, text: "Brand Storytelling" }
                  ].map((item, i) => (
                     <Grid item xs={6} key={i}>
                        <Stack direction="row" spacing={1.5} alignItems="center">

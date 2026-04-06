@@ -23,8 +23,8 @@ const TechStack = () => {
             fontFamily: "'Syne', sans-serif"
           }}
         >
-          Powered by the Best in <br />
-          <Box component="span" sx={{ color: "#2563eb" }}>Modern Marketing Tech.</Box>
+          Tools We Trust for <br />
+          <Box component="span" sx={{ color: "#2563eb" }}>Marketing Excellence.</Box>
         </Typography>
 
         <Stack spacing={4}>

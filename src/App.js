@@ -197,7 +197,7 @@ function App() {
 
             <Route path="/ui-ux-design" element={<ServicePage serviceData={uiUxServiceData} />} />
             <Route path="/web-development" element={<ServicePage serviceData={webDesignDevServiceData} />} />
-            <Route path="/digital-marketing" element={<DigitalMarketing />} />
+            <Route path="/digital-marketing-services" element={<DigitalMarketing />} />
             <Route path="/mobile-app-development" element={<ServicePage serviceData={mobileAppDevFullServiceData} />} />
 
             <Route path="/ecommerce-development" element={<ServicePage serviceData={ecommerceDevServiceData} />} />
@@ -277,7 +277,7 @@ function App() {
 
             {/* Dynamic Services Overview Details */}
             <Route path="/service-details/:title" element={<ServiceDetails />} />
-            <Route path="/services-development" element={<ServicesDevelopment />} />
+            <Route path="/web-development-services" element={<ServicesDevelopment />} />
           </Routes>
         </Router>
       </Grid>

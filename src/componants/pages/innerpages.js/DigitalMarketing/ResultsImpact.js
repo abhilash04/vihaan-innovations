@@ -5,10 +5,10 @@ import { TrendingUp, Users, Target, Rocket } from "lucide-react";
 
 const ResultsImpact = () => {
   const stats = [
-    { icon: TrendingUp, label: "Avg. ROAS", val: "450%", desc: "Return on Ad Spend across campaigns." },
-    { icon: Users, label: "Managed Spend", val: "$15M+", desc: "Media budget successfully optimized." },
-    { icon: Target, label: "Lead Growth", val: "3.2x", desc: "Average increase in qualified leads." },
-    { icon: Rocket, label: "Market Reach", val: "100M+", desc: "Cumulative audience impressions." }
+    { icon: TrendingUp, label: "Avg. ROAS", val: "450%", desc: "Return on every rupee of ad spend." },
+    { icon: Users, label: "Budget Managed", val: "$15M+", desc: "Media spend optimized across channels." },
+    { icon: Target, label: "Lead Growth", val: "3.2x", desc: "Average jump in qualified inbound leads." },
+    { icon: Rocket, label: "Market Reach", val: "100M+", desc: "Total audience impressions delivered." }
   ];
 
   return (
@@ -46,18 +46,18 @@ const ResultsImpact = () => {
               <Typography
                 variant="h2"
                 sx={{
-                  fontSize: { xs: "36px", md: "52px" },
+                  fontSize: { xs: "32px", md: "42px" },
                   fontWeight: 900,
                   color: "#0f172a",
                   lineHeight: 1.1,
                   fontFamily: "'Syne', sans-serif"
                 }}
               >
-                We Engineer <br />
-                <Box component="span" sx={{ color: "#2563eb" }}>Growth Orbits.</Box>
+                We Deliver <br />
+                <Box component="span" sx={{ color: "#2563eb" }}>Measurable Growth.</Box>
               </Typography>
-              <Typography sx={{ color: "#475569", fontSize: "18px", fontWeight: 500 }}>
-                Our success is measured by your revenue growth. We don't settle for vanity metrics; we focus on the bottom line.
+              <Typography sx={{ color: "#475569", fontSize: { xs: "16px", md: "20px" }, fontWeight: 500 }}>
+                Our performance is tied to your bottom line. We focus on revenue, not vanity metrics — and these numbers prove it.
               </Typography>
             </Stack>
           </Grid>

@@ -34,7 +34,7 @@ const WhyChooseVihaan = () => {
               <Typography sx={{ color: "#06b6d4", fontWeight: 800, letterSpacing: "0.2em", fontSize: "14px", textTransform: "uppercase" }}>
                 WHY CHOOSE VIHAAN
               </Typography>
-              <Typography variant="h2" sx={{ fontSize: { xs: "36px", md: "52px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", mb: 4, lineHeight: 1.1 }}>
+              <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", mb: 4, lineHeight: 1.1 }}>
                 The Partner for Your <br />
                 <Box component="span" sx={{ color: "#06b6d4" }}>Next Big Idea</Box>
               </Typography>
