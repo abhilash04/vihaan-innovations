@@ -42,6 +42,7 @@ import ChatbotHomepage from "./componants/pages/innerpages.js/AIChatbot/ChatbotH
 import HRMHomepage from "./componants/pages/innerpages.js/HRMSoftware/HRMHomepage";
 import HMSHomepage from "./componants/pages/innerpages.js/HospitalManagement/HMSHomepage";
 import MaintenanceSupportPage from "./componants/pages/innerpages.js/maintenance/MaintenanceSupportPage";
+import ServicesDevelopment from "./componants/pages/innerpages.js/ServicesDevelopment/ServicesDevelopment";
 import {
   uiUxServiceData,
   digitalMarketingServiceData,
@@ -126,6 +127,8 @@ import ServiceDetails from "./componants/pages/innerpages.js/serviceinnerpages/s
 import DynamicSeo from "./DynamicSeo";
 import ScrollToTop from "./componants/common/ScrollToTop";
 
+import DigitalMarketing from "./componants/pages/innerpages.js/DigitalMarketing/DigitalMarketing";
+
 function App() {
   return (
     <ThemeProvider>
@@ -194,8 +197,9 @@ function App() {
 
             <Route path="/ui-ux-design" element={<ServicePage serviceData={uiUxServiceData} />} />
             <Route path="/web-development" element={<ServicePage serviceData={webDesignDevServiceData} />} />
-            <Route path="/digital-marketing" element={<ServicePage serviceData={digitalMarketingServiceData} />} />
+            <Route path="/digital-marketing" element={<DigitalMarketing />} />
             <Route path="/mobile-app-development" element={<ServicePage serviceData={mobileAppDevFullServiceData} />} />
+
             <Route path="/ecommerce-development" element={<ServicePage serviceData={ecommerceDevServiceData} />} />
             <Route path="/crm-development" element={<ServicePage serviceData={crmDevServiceData} />} />
             <Route path="/erp-development" element={<ServicePage serviceData={erpDevServiceData} />} />
@@ -273,7 +277,7 @@ function App() {
 
             {/* Dynamic Services Overview Details */}
             <Route path="/service-details/:title" element={<ServiceDetails />} />
-
+            <Route path="/services-development" element={<ServicesDevelopment />} />
           </Routes>
         </Router>
       </Grid>
