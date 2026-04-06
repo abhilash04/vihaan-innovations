@@ -97,11 +97,11 @@ const EcommerceDevelopment = () => {
               View All <ArrowRight size={14} />
             </Typography>
           </Box>
-          <Typography variant="h2" sx={{ fontSize: { xs: "36px", md: "52px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
+          <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
             Ecommerce Platforms That <br />
             <Box component="span" sx={{ color: "#06b6d4" }}>Convert Browsers Into Buyers</Box>
           </Typography>
-          <Typography sx={{ color: "#475569", maxWidth: "700px", fontSize: "18px", lineHeight: 1.7, fontWeight: 500 }}>
+          <Typography sx={{ color: "#475569", maxWidth: "700px", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500 }}>
             We build scalable, high-performance ecommerce solutions that provide exceptional shopping experiences and drive conversions.
           </Typography>
         </Stack>

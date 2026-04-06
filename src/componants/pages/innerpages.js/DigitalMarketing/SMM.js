@@ -76,16 +76,16 @@ const SMM = () => {
                 <Typography
                   variant="h2"
                   sx={{
-                    fontSize: { xs: "36px", md: "52px" },
+                    fontSize: { xs: "32px", md: "42px" },
                     fontWeight: 800,
                     fontFamily: "'Syne', sans-serif",
                     color: "#0f172a",
                     lineHeight: 1.1,
                   }}
                 >
-                  Engage Hearts. <br />
+                  Build Community. <br />
                   <Box component="span" sx={{ color: "#06b6d4" }}>
-                    Inspire Action.
+                    Drive Action.
                   </Box>
                 </Typography>
               </Box>
@@ -93,12 +93,12 @@ const SMM = () => {
               <Typography
                 sx={{
                   color: "#475569",
-                  fontSize: "18px",
+                  fontSize: { xs: "16px", md: "20px" },
                   lineHeight: 1.7,
                   fontWeight: 500,
                 }}
               >
-                Social media is about people, not algorithms. We build vibrant communities around your brand through high-impact visual storytelling and genuine engagement.
+                Social platforms are where your audience already spends their time. We craft scroll-stopping content and build engaged communities that turn followers into paying customers.
               </Typography>
 
               <Stack direction="row" spacing={4}>

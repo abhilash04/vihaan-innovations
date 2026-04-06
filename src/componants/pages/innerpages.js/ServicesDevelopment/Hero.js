@@ -143,7 +143,7 @@ const Hero = () => {
                     }}
                   >
                     <Box component="span" sx={{ fontSize: "18px" }}>🚀</Box>
-                    10+ Enterprise Development Services
+                    Premium Website Development Services
                   </Box>
                 </motion.div>
               </Box>
@@ -159,7 +159,7 @@ const Hero = () => {
                       transition={{ delay: 0.2 + i * 0.15 }}
                       variant="h1"
                       sx={{
-                        fontSize: { xs: "42px", md: "72px" },
+                        fontSize: { xs: "42px", md: "64px" },
                         fontWeight: 800,
                         fontFamily: "'Syne', sans-serif",
                         color: i === 2 ? "transparent" : "#011e38",
@@ -181,13 +181,13 @@ const Hero = () => {
                 transition={{ delay: 0.7, duration: 0.6 }}
                 sx={{
                   color: "#475569",
-                  fontSize: "19px",
+                  fontSize: { xs: "16px", md: "20px" },
                   lineHeight: 1.6,
                   maxWidth: "540px",
                   fontWeight: 500,
                 }}
               >
-                From UI/UX design to AI automation — our development services cover every layer of your digital product. We don't just write code. We architect solutions that grow.
+                From UI/UX design to AI automation — our expert digital services cover every layer of your product. We don't just write code. We architect solutions that grow.
               </Typography>
 
               <Stack

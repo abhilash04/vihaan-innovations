@@ -94,10 +94,10 @@ const TechStack = () => {
           <Typography sx={{ color: "#06b6d4", fontWeight: 800, letterSpacing: "0.2em", fontSize: "14px", textTransform: "uppercase" }}>
             TECH STACK
           </Typography>
-          <Typography variant="h2" sx={{ fontSize: { xs: "36px", md: "52px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
+          <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
             50+ Technologies. One Expert Team.
           </Typography>
-          <Typography sx={{ color: "#475569", maxWidth: "700px", fontSize: "18px", lineHeight: 1.7, fontWeight: 500 }}>
+          <Typography sx={{ color: "#475569", maxWidth: "700px", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500 }}>
             We leverage a diverse and modern technology stack to build robust, scalable, and future-proof digital products.
           </Typography>
         </Stack>

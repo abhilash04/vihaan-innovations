@@ -5,12 +5,12 @@ import { Check, ArrowRight, Target, MousePointer2, Calculator, Zap } from "lucid
 
 const SEM = () => {
   const features = [
-    "Google Ads (Search & Display)",
-    "Meta Ads & Retargeting",
-    "Precision Keyword Bidding",
-    "Landing Page Optimization",
+    "Google Search & Display Ads",
+    "Meta Ads & Retargeting Funnels",
+    "Smart Keyword Bidding",
+    "Landing Page Conversion Design",
     "Multi-variant A/B Testing",
-    "Negative Keyword Scrubbing",
+    "Negative Keyword Management",
   ];
 
   const tools = ["Google Ads Editor", "Keyword Planner", "HubSpot", "Unbounce"];
@@ -167,16 +167,16 @@ const SEM = () => {
                 <Typography
                   variant="h2"
                   sx={{
-                    fontSize: { xs: "36px", md: "52px" },
+                    fontSize: { xs: "32px", md: "42px" },
                     fontWeight: 800,
                     fontFamily: "'Syne', sans-serif",
                     color: "#0f172a",
                     lineHeight: 1.1,
                   }}
                 >
-                  Target Accuracy. <br />
+                  Spend Smart. <br />
                   <Box component="span" sx={{ color: "#f59e0b" }}>
-                    Instant Conversions.
+                    Convert Faster.
                   </Box>
                 </Typography>
               </Box>
@@ -184,12 +184,12 @@ const SEM = () => {
               <Typography
                 sx={{
                   color: "#475569",
-                  fontSize: "18px",
+                  fontSize: { xs: "16px", md: "20px" },
                   lineHeight: 1.7,
                   fontWeight: 500,
                 }}
               >
-                Why wait for months? Our PPC strategies put you in front of ready-to-buy customers today. We optimize for profit, not just clicks.
+                Paid search puts you in front of ready-to-buy customers the same day. We manage every rupee of your ad spend to bring back measurable profit, not just clicks.
               </Typography>
 
               <Grid container spacing={2.5}>

@@ -5,9 +5,9 @@ import { ArrowRight, FileText, Layout, Image, Send, PieChart } from "lucide-reac
 
 const ContentMarketing = () => {
   const categories = [
-    { title: "Long-form Blogs", desc: "SEO-optimized articles that build authority." },
-    { title: "Visual Assets", desc: "Infographics and designs that demand attention." },
-    { title: "Lead Magnets", desc: "E-books and whitepapers for lead generation." }
+    { title: "Long-form Blogs", desc: "In-depth articles that build trust and rank on Google." },
+    { title: "Visual Assets", desc: "Infographics and graphics that grab attention fast." },
+    { title: "Lead Magnets", desc: "E-books and whitepapers that capture quality leads." }
   ];
 
   return (
@@ -122,16 +122,16 @@ const ContentMarketing = () => {
                 <Typography
                   variant="h2"
                   sx={{
-                    fontSize: { xs: "36px", md: "52px" },
+                    fontSize: { xs: "32px", md: "42px" },
                     fontWeight: 800,
                     fontFamily: "'Syne', sans-serif",
                     color: "#0f172a",
                     lineHeight: 1.1,
                   }}
                 >
-                  Stories That Sell. <br />
+                  Content That Converts. <br />
                   <Box component="span" sx={{ color: "#7c3aed" }}>
-                    Value That Stays.
+                    Value That Lasts.
                   </Box>
                 </Typography>
               </Box>
@@ -139,12 +139,12 @@ const ContentMarketing = () => {
               <Typography
                 sx={{
                   color: "#475569",
-                  fontSize: "18px",
+                  fontSize: { xs: "16px", md: "20px" },
                   lineHeight: 1.7,
                   fontWeight: 500,
                 }}
               >
-                In a world of noise, high-quality content is your unfair advantage. we craft educational, inspiring content that positions you as the ultimate authority.
+                Great content does more than fill a page — it earns trust, answers real questions, and positions your brand as the go-to authority in your industry.
               </Typography>
 
               <Stack spacing={3}>

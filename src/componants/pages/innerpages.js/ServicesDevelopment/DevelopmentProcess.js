@@ -20,11 +20,11 @@ const DevelopmentProcess = () => {
           <Typography sx={{ color: "#06b6d4", fontWeight: 800, letterSpacing: "0.2em", fontSize: "14px", textTransform: "uppercase" }}>
             OUR PROCESS
           </Typography>
-          <Typography variant="h2" sx={{ fontSize: { xs: "36px", md: "52px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
+          <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
             How We Build Products <br />
             That Last
           </Typography>
-          <Typography sx={{ color: "#475569", maxWidth: "700px", fontSize: "18px", lineHeight: 1.7, fontWeight: 500, pb: 4 }}>
+          <Typography sx={{ color: "#475569", maxWidth: "700px", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500, pb: 4 }}>
             We follow a structured, agile development process that ensures transparency, quality, and timely delivery of your digital products.
           </Typography>
         </Stack>

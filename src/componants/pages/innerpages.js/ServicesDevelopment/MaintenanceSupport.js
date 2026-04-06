@@ -86,11 +86,11 @@ const MaintenanceSupport = () => {
                     View All <LucideArrowRight size={14} />
                   </Typography>
                 </Box>
-              <Typography variant="h2" sx={{ fontSize: { xs: "36px", md: "52px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
+              <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
                 We're With You Long <br />
                 <Box component="span" sx={{ color: "#16a34a" }}>After Launch Day</Box>
               </Typography>
-              <Typography sx={{ color: "#475569", fontSize: "18px", lineHeight: 1.7, fontWeight: 500 }}>
+              <Typography sx={{ color: "#475569", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500 }}>
                 Software isn't a one-time delivery — it's a living product. Our support team monitors, maintains, and evolves your platform so it never slows you down.
               </Typography>
               

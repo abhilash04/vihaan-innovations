@@ -102,10 +102,10 @@ const CustomApps = () => {
                     View All <ArrowRight size={14} />
                   </Typography>
                 </Box>
-                <Typography variant="h2" sx={{ fontSize: { xs: "36px", md: "48px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
+                <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
                   Software Built Exactly for Your Business
                 </Typography>
-                <Typography sx={{ color: "#475569", fontSize: "18px", lineHeight: 1.7, fontWeight: 500 }}>
+                <Typography sx={{ color: "#475569", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500 }}>
                   Off-the-shelf software often fails to meet unique business needs. We build custom applications from the ground up, designed to solve your specific challenges.
                 </Typography>
                 
