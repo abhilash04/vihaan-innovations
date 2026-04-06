@@ -11,6 +11,7 @@ const UIUXDesign = () => {
     "Usability Testing & Iteration",
     "Accessibility & WCAG Compliance",
     "Handoff-ready Figma Deliverables",
+    "UI/UX for Website Development Services",
   ];
 
   const tools = ["Figma", "Adobe XD", "Maze", "Hotjar", "Zeplin"];
@@ -90,7 +91,7 @@ const UIUXDesign = () => {
                       display: "block",
                     }}
                   >
-                    UI/UX DESIGN
+                    UI/UX & WEBSITE DEVELOPMENT SERVICES
                   </Typography>
                   <Typography
                     component="a"
@@ -136,7 +137,7 @@ const UIUXDesign = () => {
                   fontWeight: 500,
                 }}
               >
-                We craft intuitive, beautiful digital experiences grounded in user research, accessibility, and conversion psychology. Every pixel has a purpose.
+                We craft intuitive, beautiful digital experiences as the foundation of our website development services. Grounded in user research, accessibility, and conversion psychology, our website development services ensure that every pixel has a purpose and every interaction is seamless.
               </Typography>
 
               <Grid container spacing={2.5}>

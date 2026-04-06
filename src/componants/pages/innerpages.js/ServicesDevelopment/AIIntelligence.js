@@ -8,12 +8,12 @@ const AIIntelligence = () => {
   const Settings = Cpu;
 
   const features = [
-    { title: "Custom AI Model Development", icon: Brain, desc: "Bespoke AI solutions for complex challenges." },
+    { title: "Custom AI for Website Development Services", icon: Brain, desc: "Bespoke AI solutions for complex challenges." },
     { title: "Natural Language Processing", icon: MessageSquare, desc: "Advanced text and speech understanding." },
     { title: "Computer Vision Systems", icon: Eye, desc: "Image and video analysis for real-time insights." },
     { title: "Robotic Process Automation", icon: Settings, desc: "Automate repetitive business tasks." },
     { title: "Predictive Analytics Engines", icon: Zap, desc: "Forecast trends with machine learning." },
-    { title: "AI Chatbot & Virtual Assistants", icon: Bot, desc: "24/7 intelligent customer support." },
+    { title: "AI Chatbot & Virtual Assistants", icon: Bot, desc: "24/7 intelligent customer support integrated into our website development services." },
   ];
 
   const nodes = [
@@ -163,7 +163,7 @@ const AIIntelligence = () => {
             Think, Learn, and Act
           </Typography>
           <Typography sx={{ color: "#475569", maxWidth: "700px", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500 }}>
-            We bridge the gap between data and intelligence, building custom AI solutions that empower businesses to automate discovery and decision making.
+            We integrate advanced AI into our website development services to create self-learning, high-impact platforms. Our website development services leverage machine learning and neural networks to transform raw data into predictive intelligence, giving your business a competitive edge.
           </Typography>
         </Stack>
 

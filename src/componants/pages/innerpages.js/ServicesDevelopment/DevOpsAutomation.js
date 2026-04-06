@@ -22,6 +22,7 @@ const DevOpsAutomation = () => {
     { title: "Automated Testing", icon: Shield },
     { title: "Monitoring & Alerting", icon: Search },
     { title: "Security DevSecOps", icon: BarChart },
+    { title: "DevOps for Website Development Services", icon: Workflow },
   ];
 
   const infinityPath = "M 350,200 C 500,200 650,50 650,200 C 650,350 500,200 350,200 C 200,200 50,50 50,200 C 50,350 200,200 350,200 Z";
@@ -82,6 +83,9 @@ const DevOpsAutomation = () => {
           <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
             Ship Faster. Break Nothing. <br />
             <Box component="span" sx={{ color: "#06b6d4" }}>Automate Everything.</Box>
+          </Typography>
+          <Typography sx={{ color: "#475569", maxWidth: "700px", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500 }}>
+            Our DevOps strategies are built to support high-scale website development services. We automate the entire lifecycle, ensuring your website development services are delivered with unmatched speed and reliability.
           </Typography>
         </Stack>
 

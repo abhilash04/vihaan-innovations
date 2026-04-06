@@ -7,7 +7,7 @@ const WebDevelopment = () => {
   const features = [
     { title: "Custom Website Design", icon: Layout, desc: "Bespoke designs tailored to your brand identity." },
     { title: "React / Next.js Development", icon: Code2, desc: "High-performance modern web applications." },
-    { title: "SEO-Optimised Architecture", icon: Search, desc: "Built with search engine visibility in mind." },
+    { title: "SEO-Optimised Architecture", icon: Search, desc: "Strategic website development services for maximum search visibility." },
     { title: "CMS Integration", icon: Database, desc: "Seamless content management solutions." },
     { title: "Performance Optimisation", icon: Gauge, desc: "Lightning-fast load times and smooth UX." },
     { title: "Responsive & Mobile-First", icon: Smartphone, desc: "Perfect experience on every device size." },
