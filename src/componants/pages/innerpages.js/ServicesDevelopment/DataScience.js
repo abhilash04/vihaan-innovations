@@ -11,6 +11,7 @@ const DataScience = () => {
     "Predictive Analytics & Forecasting",
     "Natural Language Processing (NLP)",
     "Data Visualization & Reporting",
+    "Data-Driven Website Development Services",
   ];
 
   const technologies = ["Python", "TensorFlow", "Spark", "Pandas", "Tableau", "BigQuery", "Snowflake"];
@@ -95,7 +96,7 @@ const DataScience = () => {
                >
                   <Stack spacing={4}>
                      <Stack direction="row" justifyContent="space-between" alignItems="center">
-                        <Typography sx={{ color: "white", fontWeight: 700, fontSize: "18px" }}>Analytics Insights</Typography>
+                        <Typography sx={{ color: "#0f172a", fontWeight: 700, fontSize: "18px" }}>Analytics Insights</Typography>
                         <Box sx={{ display: "flex", gap:1 }}>
                            <Box sx={{ width: 8, height: 8, borderRadius: "50%", bgcolor: "#7c3aed" }} />
                            <Box sx={{ width: 8, height: 8, borderRadius: "50%", bgcolor: "#06b6d4" }} />
@@ -146,8 +147,9 @@ const DataScience = () => {
 
                       <Stack spacing={1.5}>
                          {[
-                           { label: "Data Quality", val: 85, color: "#7c3aed" },
-                           { label: "Model Fitness", val: 92, color: "#06b6d4" }
+                           { label: "Data Pipeline Efficiency", val: 85, color: "#7c3aed" },
+                           { label: "Website Development Services Growth", val: 92, color: "#06b6d4" },
+                           { label: "Model Fitness", val: 92, color: "#f59e0b" }
                          ].map((bar, i) => (
                            <Box key={i}>
                               <Stack direction="row" justifyContent="space-between" sx={{ mb: 1 }}>
@@ -171,12 +173,12 @@ const DataScience = () => {
                   {/* Floating Microicons around */}
                   <Box component={motion.div} animate={{ y: [-10, 10, -10] }} transition={{ duration: 4, repeat: Infinity }} sx={{ position: "absolute", top: -20, left: -40, p: 2, bgcolor: "rgba(124, 58, 237, 0.1)", backdropFilter: "blur(10px)", border: "1px solid rgba(124,58,237,0.2)", borderRadius: 3, display: "flex", alignItems: "center", gap: 1.5 }}>
                      <Brain size={18} color="#7c3aed" />
-                     <Typography sx={{ color: "white", fontSize: "12px", fontWeight: 700 }}>ML Models</Typography>
+                     <Typography sx={{ color: "#0f172a", fontSize: "12px", fontWeight: 700 }}>ML Models</Typography>
                   </Box>
                   
                   <Box component={motion.div} animate={{ y: [10, -10, 10] }} transition={{ duration: 4, repeat: Infinity }} sx={{ position: "absolute", bottom: 20, right: -30, p: 2, bgcolor: "rgba(6, 182, 212, 0.1)", backdropFilter: "blur(10px)", border: "1px solid rgba(6,182,212,0.2)", borderRadius: 3, display: "flex", alignItems: "center", gap: 1.5 }}>
                      <Cpu size={18} color="#06b6d4" />
-                     <Typography sx={{ color: "white", fontSize: "12px", fontWeight: 700 }}>Real-time ETL</Typography>
+                     <Typography sx={{ color: "#0f172a", fontSize: "12px", fontWeight: 700 }}>Real-time ETL</Typography>
                   </Box>
                </Box>
             </Box>
@@ -215,12 +217,12 @@ const DataScience = () => {
                     View All <LucideArrowRight size={14} />
                   </Typography>
                 </Box>
-              <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "white", lineHeight: 1.2 }}>
+              <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.2 }}>
                 Turn Raw Data Into <br />
                 <Box component="span" sx={{ color: "#7c3aed" }}>Strategic Decisions</Box>
               </Typography>
-              <Typography sx={{ color: "#94a3b8", fontSize: "17px", lineHeight: 1.8 }}>
-                We help organizations leverage their data using advanced analytics and machine learning to uncover patterns, predict outcomes, and automate decision-making.
+              <Typography sx={{ color: "#475569", maxWidth: "700px", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500 }}>
+                We bridge the gap between complex data and actionable intelligence within our website development services. Our website development services leverage advanced analytics to transform raw information into strategic assets that drive business growth.
               </Typography>
               
               <Grid container spacing={2}>

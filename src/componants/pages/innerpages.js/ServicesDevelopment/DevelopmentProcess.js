@@ -10,7 +10,7 @@ const DevelopmentProcess = () => {
     { title: "UI/UX Design & Prototype", desc: "Creating intuitive and beautiful user experiences.", position: "top", checks: ["High-fidelity Designs", "Interactive Prototypes", "Design System"] },
     { title: "Development & Integration", desc: "Writing clean, efficient, and well-documented code.", position: "bottom", checks: ["Agile Sprints", "Unit Testing", "API Integration"] },
     { title: "Testing & QA", desc: "Ensuring every feature works perfectly as intended.", position: "top", checks: ["End-to-end Testing", "Security Audit", "Performance Tuning"] },
-    { title: "Deployment & Support", desc: "Launching your product and ensuring ongoing success.", position: "bottom", checks: ["Cloud Deployment", "24/7 Monitoring", "Feature Updates"] },
+    { title: "Deployment & Support", desc: "Launching your product and ensuring the ongoing success of our website development services.", position: "bottom", checks: ["Cloud Deployment", "24/7 Monitoring", "Feature Updates"] },
   ];
 
   return (
@@ -18,14 +18,14 @@ const DevelopmentProcess = () => {
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
         <Stack spacing={2} alignItems="center" textAlign="center" sx={{ mb: 12 }}>
           <Typography sx={{ color: "#06b6d4", fontWeight: 800, letterSpacing: "0.2em", fontSize: "14px", textTransform: "uppercase" }}>
-            OUR PROCESS
+            OUR WEBSITE DEVELOPMENT SERVICES PROCESS
           </Typography>
           <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
             How We Build Products <br />
             That Last
           </Typography>
           <Typography sx={{ color: "#475569", maxWidth: "700px", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500, pb: 4 }}>
-            We follow a structured, agile development process that ensures transparency, quality, and timely delivery of your digital products.
+            We follow a structured, agile development process for all our website development services. This ensures transparency, quality, and timely delivery. Our website development services are optimized through a proven lifecycle that guarantees success.
           </Typography>
         </Stack>
 

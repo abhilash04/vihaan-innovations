@@ -11,6 +11,7 @@ const CustomApps = () => {
     "Modern Security Standards",
     "Microservices Architecture",
     "Legacy System Modernization",
+    "Custom Website Development Services",
   ];
 
   const tiers = [
@@ -83,7 +84,7 @@ const CustomApps = () => {
                       display: "block",
                     }}
                   >
-                    CUSTOM SOFTWARE
+                    CUSTOM WEBSITE DEVELOPMENT SERVICES
                   </Typography>
                   <Typography
                     component="a"
@@ -106,7 +107,7 @@ const CustomApps = () => {
                   Software Built Exactly for Your Business
                 </Typography>
                 <Typography sx={{ color: "#475569", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500 }}>
-                  Off-the-shelf software often fails to meet unique business needs. We build custom applications from the ground up, designed to solve your specific challenges.
+                  Off-the-shelf software often fails to meet unique business needs. As part of our comprehensive website development services, we build custom applications from the ground up, designed to solve your specific challenges. Our website development services ensure that your custom software is both functional and visually stunning.
                 </Typography>
                 
                 <Grid container spacing={2.5}>

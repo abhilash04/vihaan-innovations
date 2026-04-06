@@ -49,9 +49,9 @@ const instagramPosts = [
 export default function OrganicaCommunity() {
   return (
     <Box>
-      
+
       {/* --- SECTION 6: SOCIAL PROOF (TESTIMONIAL PARALLAX) --- */}
-      <Box sx={{ 
+      <Box sx={{
         // Image Strategy: A wide, high-res, slightly blurred background image.
         backgroundImage: 'linear-gradient(rgba(26, 51, 32, 0.7), rgba(26, 51, 32, 0.7)), url(https://images.unsplash.com/photo-1506090582796-047803253349?auto=format&fit=crop&q=80&w=1920)',
         backgroundSize: 'cover',
@@ -62,7 +62,7 @@ export default function OrganicaCommunity() {
         color: colors.white
       }}>
         <Container maxWidth="md">
-          
+
           {/* Five Star Rating */}
           <Box sx={{ mb: 3 }}>
             {[...Array(5)].map((_, index) => (
@@ -71,7 +71,7 @@ export default function OrganicaCommunity() {
           </Box>
 
           {/* Testimonial Quote */}
-          <Typography variant="h4" component="blockquote" sx={{ 
+          <Typography variant="h4" component="blockquote" sx={{
             fontFamily: 'Playfair Display, serif',
             fontWeight: 500,
             lineHeight: 1.4,
@@ -83,7 +83,7 @@ export default function OrganicaCommunity() {
           </Typography>
 
           {/* Author */}
-          <Typography variant="subtitle1" sx={{ 
+          <Typography variant="subtitle1" sx={{
             fontFamily: 'Montserrat, sans-serif',
             fontWeight: 600,
             letterSpacing: '1px',
@@ -98,7 +98,7 @@ export default function OrganicaCommunity() {
       {/* --- SECTION 7: INSTAGRAM FEED --- */}
       <Box sx={{ backgroundColor: colors.cream, pt: 12, pb: 4 }}>
         <Container maxWidth="xl">
-          
+
           {/* SECTION HEADER */}
           <Box sx={{ textAlign: 'center', mb: 6 }}>
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 1 }}>
@@ -107,9 +107,9 @@ export default function OrganicaCommunity() {
                 @OrganicaOils
               </Typography>
             </Box>
-            <Typography variant="h3" sx={{ 
-              fontFamily: 'Playfair Display, serif', 
-              color: colors.primary, 
+            <Typography variant="h3" sx={{
+              fontFamily: 'Playfair Display, serif',
+              color: colors.primary,
               fontWeight: 700
             }}>
               Join the #OrganicaLife
@@ -120,9 +120,9 @@ export default function OrganicaCommunity() {
           <Grid container spacing={2}>
             {instagramPosts.map((post) => (
               <Grid item xs={6} md={4} lg={2} key={post.id}>
-                <Card 
+                <Card
                   elevation={0}
-                  sx={{ 
+                  sx={{
                     position: 'relative',
                     borderRadius: '12px',
                     overflow: 'hidden',
@@ -143,9 +143,9 @@ export default function OrganicaCommunity() {
                     image={post.image}
                     alt="Instagram Post"
                   />
-                  
+
                   {/* Hover Overlay */}
-                  <Box 
+                  <Box
                     className="insta-overlay"
                     sx={{
                       position: 'absolute',
@@ -169,7 +169,7 @@ export default function OrganicaCommunity() {
               </Grid>
             ))}
           </Grid>
-          
+
         </Container>
       </Box>
     </Box>
