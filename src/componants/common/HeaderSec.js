@@ -23,8 +23,8 @@ import {
   ExpandLess as ExpandLessIcon,
 } from "@mui/icons-material";
 import SearchIcon from "@mui/icons-material/Search";
-import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
-// import logo from "../../assets/vihaan-logo.png";
+// import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
+import logo from "../../assets/vihaan-logo.png";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import img1 from "../../assets/img2.png"
 import {
@@ -368,6 +368,11 @@ const Header = () => {
       ],
       "Animation & Video Services": [
         {
+          label: "Logo Designing",
+          href: "/logo-design",
+          icon: Type,
+        },
+        {
           label: "Graphic Designing",
           href: "/graphic-design",
           icon: Image,
@@ -394,11 +399,7 @@ const Header = () => {
           href: "/video-editing-vfx",
           icon: Scissors,
         },
-        {
-          label: "Logo Designing",
-          href: "/logo-design",
-          icon: Type,
-        },
+
       ],
     },
 
@@ -1129,19 +1130,47 @@ const Header = () => {
     >
       {/* ===== Left Column (1st column only) ===== */}
       <Box sx={{ flex: 1, px: 2 }}>
-        <Typography
+        <Box
           sx={{
-            fontWeight: 700,
-            color: "#050748",
-            fontSize: "18px",
-            letterSpacing: "0.2px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            borderBottom: "1px solid #dadada",
             margin: "0 0 16px",
             padding: "0 0 14px",
-            borderBottom: "1px solid #dadada",
           }}
         >
-          {Object.keys(menuItems.services)[0]}
-        </Typography>
+          <Typography
+            sx={{
+              fontWeight: 700,
+              color: "#050748",
+              fontSize: "18px",
+              letterSpacing: "0.2px",
+            }}
+          >
+            {Object.keys(menuItems.services)[0]}
+          </Typography>
+          <Typography
+            component="a"
+            href="/services-development"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: 0.5,
+              color: "#f63855",
+              fontWeight: 600,
+              fontSize: "13px",
+              textDecoration: "none",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                opacity: 0.8,
+                gap: 1,
+              },
+            }}
+          >
+            View All <ArrowRight size={14} />
+          </Typography>
+        </Box>
 
         {menuItems.services[Object.keys(menuItems.services)[0]].map(
           (item, index) => {
@@ -1188,19 +1217,49 @@ const Header = () => {
             .map(([category, items], colIndex, arr) => (
               <React.Fragment key={category}>
                 <Box sx={{ flex: 1, px: 2 }}>
-                  <Typography
+                  <Box
                     sx={{
-                      fontWeight: 700,
-                      color: "#050748",
-                      fontSize: "18px",
-                      letterSpacing: "0.2px",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      borderBottom: "1px solid #dadada",
                       margin: "0 0 16px",
                       padding: "0 0 14px",
-                      borderBottom: "1px solid #dadada",
                     }}
                   >
-                    {category}
-                  </Typography>
+                    <Typography
+                      sx={{
+                        fontWeight: 700,
+                        color: "#050748",
+                        fontSize: "18px",
+                        letterSpacing: "0.2px",
+                      }}
+                    >
+                      {category}
+                    </Typography>
+                    {category === "Digital Marketing" && (
+                      <Typography
+                        component="a"
+                        href="/digital-marketing"
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: 0.5,
+                          color: "#f63855",
+                          fontWeight: 600,
+                          fontSize: "13px",
+                          textDecoration: "none",
+                          transition: "all 0.3s ease",
+                          "&:hover": {
+                            opacity: 0.8,
+                            gap: 1,
+                          },
+                        }}
+                      >
+                        View All <ArrowRight size={14} />
+                      </Typography>
+                    )}
+                  </Box>
 
                   {items.map((item, index) => {
                     const Icon = item.icon;
@@ -1295,25 +1354,6 @@ const Header = () => {
               </Box>
             </Box>
 
-            {/* Right: View All */}
-            <Typography
-              component="a"
-              href="#"
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: 1,
-                color: "#f63855",
-                mt: 1,
-                fontWeight: 500,
-                fontSize: "14px",
-                textDecoration: "none",
-                whiteSpace: "nowrap",
-              }}
-            >
-              View All <ArrowRight size={14} />
-            </Typography>
           </Box>
         </Box>
       </Box>
@@ -1997,6 +2037,8 @@ const Header = () => {
                     <SearchIcon />
                   </IconButton> */}
                 </Box>
+
+
 
                 {/* Contact Button */}
                 <Box
