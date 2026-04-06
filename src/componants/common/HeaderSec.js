@@ -23,8 +23,8 @@ import {
   ExpandLess as ExpandLessIcon,
 } from "@mui/icons-material";
 import SearchIcon from "@mui/icons-material/Search";
-// import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
-import logo from "../../assets/vihaan-logo.png";
+import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
+// import logo from "../../assets/vihaan-logo.png";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import img1 from "../../assets/img2.png"
 import {
@@ -267,7 +267,7 @@ const Header = () => {
       },
     ],
     services: {
-      "Services Development": [
+      "Development Services": [
         {
           label: "UI / UX Design",
           href: "/ui-ux-design",
@@ -1152,7 +1152,7 @@ const Header = () => {
           </Typography>
           <Typography
             component="a"
-            href="/services-development"
+            href="/web-development-services"
             sx={{
               display: "flex",
               alignItems: "center",
@@ -1240,7 +1240,7 @@ const Header = () => {
                     {category === "Digital Marketing" && (
                       <Typography
                         component="a"
-                        href="/digital-marketing"
+                        href="/digital-marketing-services"
                         sx={{
                           display: "flex",
                           alignItems: "center",

@@ -82,10 +82,10 @@ const CloudDevelopment = () => {
                     View All <ArrowRight size={14} />
                   </Typography>
                 </Box>
-                <Typography variant="h2" sx={{ fontSize: { xs: "36px", md: "52px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
+                <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
                   Scalable Cloud Solutions Built for Tomorrow
                 </Typography>
-                <Typography sx={{ color: "#475569", fontSize: "18px", lineHeight: 1.7, fontWeight: 500 }}>
+                <Typography sx={{ color: "#475569", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500 }}>
                   We design and implement robust cloud architectures that ensure high availability, scalability, and security for your digital assets.
                 </Typography>
               

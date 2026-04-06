@@ -215,7 +215,7 @@ const DataScience = () => {
                     View All <LucideArrowRight size={14} />
                   </Typography>
                 </Box>
-              <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "44px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "white", lineHeight: 1.2 }}>
+              <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "white", lineHeight: 1.2 }}>
                 Turn Raw Data Into <br />
                 <Box component="span" sx={{ color: "#7c3aed" }}>Strategic Decisions</Box>
               </Typography>

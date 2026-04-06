@@ -5,11 +5,11 @@ import { Search, Map, Zap, Activity, Repeat } from "lucide-react";
 
 const MarketingProcess = () => {
   const steps = [
-    { icon: Search, title: "Audit & Analysis", desc: "We deep-dive into your existing presence and competitor landscape." },
-    { icon: Map, title: "Strategy Roadmap", desc: "A custom blueprints designed for your specific business goals." },
-    { icon: Zap, title: "Execution Blast", desc: "High-intensity deployment of campaigns across selected channels." },
-    { icon: Activity, title: "Measure & Audit", desc: "Granular tracking of every interaction and conversion point." },
-    { icon: Repeat, title: "Optimize & Scale", desc: "Continuous refinement to maximize ROI and expand market share." }
+    { icon: Search, title: "Audit & Analysis", desc: "We study your current presence and map the competitive landscape." },
+    { icon: Map, title: "Strategy Roadmap", desc: "A custom plan built around your specific business goals." },
+    { icon: Zap, title: "Campaign Launch", desc: "Rapid deployment of campaigns across your chosen channels." },
+    { icon: Activity, title: "Track & Measure", desc: "Granular tracking of every interaction and conversion point." },
+    { icon: Repeat, title: "Optimize & Scale", desc: "Continuous refinement to maximize returns and grow market share." }
   ];
 
   return (
@@ -20,13 +20,13 @@ const MarketingProcess = () => {
            <Typography 
              variant="h2" 
              sx={{ 
-               fontSize: { xs: "36px", md: "56px" }, 
+               fontSize: { xs: "32px", md: "42px" }, 
                fontWeight: 900, 
                color: "#0f172a", 
                fontFamily: "'Syne', sans-serif" 
              }}
            >
-             From Audit to <Box component="span" sx={{ color: "#f59e0b" }}>Abundance.</Box>
+              From Strategy to <Box component="span" sx={{ color: "#f59e0b" }}>Scale.</Box>
            </Typography>
         </Stack>
 

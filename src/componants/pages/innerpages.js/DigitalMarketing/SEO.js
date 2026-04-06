@@ -5,11 +5,11 @@ import { Check, ArrowRight, Search, Globe, Link as LinkIcon, BarChart } from "lu
 
 const SEO = () => {
   const features = [
-    "Technical SEO Audit & Fixes",
-    "On-Page Content Optimization",
-    "Authority Link Building",
-    "Local SEO & GMB Management",
-    "Keyword Research & Strategy",
+    "Full Technical SEO Audits",
+    "On-Page Content Strategy",
+    "High-Authority Link Building",
+    "Local SEO & Google Business Profile",
+    "Keyword Research & Mapping",
     "Competitor Gap Analysis",
   ];
 
@@ -96,16 +96,16 @@ const SEO = () => {
                 <Typography
                   variant="h2"
                   sx={{
-                    fontSize: { xs: "36px", md: "52px" },
+                    fontSize: { xs: "32px", md: "42px" },
                     fontWeight: 800,
                     fontFamily: "'Syne', sans-serif",
                     color: "#0f172a",
                     lineHeight: 1.1,
                   }}
                 >
-                  Rank Higher. <br />
+                  Rank First. <br />
                   <Box component="span" sx={{ color: "#2563eb" }}>
-                    Scale Permanently.
+                    Stay There.
                   </Box>
                 </Typography>
               </Box>
@@ -113,12 +113,12 @@ const SEO = () => {
               <Typography
                 sx={{
                   color: "#475569",
-                  fontSize: "18px",
+                  fontSize: { xs: "16px", md: "20px" },
                   lineHeight: 1.7,
                   fontWeight: 500,
                 }}
               >
-                Organic search is the most sustainable growth channel. We combine technical precision with high-authority backlinking to put your brand at the top.
+                Organic traffic is the most reliable channel for long-term growth. We bring together technical precision and strategic content to earn you top rankings that actually bring in revenue.
               </Typography>
 
               <Grid container spacing={2.5}>
@@ -126,7 +126,7 @@ const SEO = () => {
                   <Grid item xs={12} sm={6} key={i}>
                     <Stack direction="row" spacing={2} alignItems="center">
                       <Box sx={{ p: 0.5, bgcolor: "rgba(37, 99, 235, 0.1)", borderRadius: "6px" }}>
-                         <Check size={16} color="#2563eb" strokeWidth={3} />
+                        <Check size={16} color="#2563eb" strokeWidth={3} />
                       </Box>
                       <Typography sx={{ color: "#1e293b", fontSize: "15px", fontWeight: 600 }}>
                         {feature}
@@ -185,85 +185,85 @@ const SEO = () => {
                 minHeight: "500px",
               }}
             >
-               {/* SEO Visualization: Search Results Mockup */}
-               <Box
-                 component={motion.div}
-                 initial={{ opacity: 0, y: 50 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 transition={{ duration: 0.8 }}
-                 viewport={{ once: true }}
-                 sx={{
-                   width: "100%",
-                   maxWidth: "500px",
-                   bgcolor: "white",
-                   borderRadius: "24px",
-                   boxShadow: "0 50px 100px -20px rgba(15, 23, 42, 0.12)",
-                   border: "1px solid #f1f5f9",
-                   overflow: "hidden"
-                 }}
-               >
-                 <Box sx={{ px: 3, py: 2, bgcolor: "#f8fafc", borderBottom: "1px solid #f1f5f9", display: "flex", alignItems: "center", gap: 2 }}>
-                    <Search size={18} color="#64748b" />
-                    <Typography sx={{ color: "#0f172a", fontWeight: 700, fontSize: "14px" }}>"best enterprise software development company"</Typography>
-                 </Box>
-                 
-                 <Stack spacing={4} sx={{ p: 4 }}>
-                    {[1, 2, 3].map((i) => (
-                      <Box 
-                        key={i} 
-                        component={motion.div}
-                        animate={i === 1 ? { scale: [1, 1.02, 1], borderColor: ["#f1f5f9", "#2563eb", "#f1f5f9"] } : {}}
-                        transition={{ duration: 3, repeat: Infinity }}
-                        sx={{ 
-                          p: 2.5, 
-                          borderRadius: "16px", 
-                          border: i === 1 ? "2px solid #2563eb" : "1px solid #f1f5f9",
-                          position: "relative",
-                          bgcolor: i === 1 ? "rgba(37, 99, 235, 0.02)" : "transparent"
-                        }}
-                      >
-                         {i === 1 && (
-                           <Box sx={{ position: "absolute", top: -12, right: 20, bgcolor: "#2563eb", color: "white", px: 1.5, py: 0.5, borderRadius: "100px", fontSize: "10px", fontWeight: 900 }}>RANK #1</Box>
-                         )}
-                         <Typography sx={{ color: i === 1 ? "#2563eb" : "#4338ca", fontWeight: 700, fontSize: "16px", mb: 0.5 }}>
-                           {i === 1 ? "Vihaan Innovations | Leading Software & Marketing Partner" : `Competitor Brand ${i} - Services & Solutions`}
-                         </Typography>
-                         <Typography sx={{ color: "#16a34a", fontSize: "12px", mb: 1 }}>https://www.vihaaninnovations.com › services</Typography>
-                         <Typography sx={{ color: "#64748b", fontSize: "13px", lineHeight: 1.5 }}>
-                           Expert end-to-end software development and digital marketing services to scale your business. Ranked as top agency in 2024.
-                         </Typography>
-                      </Box>
-                    ))}
-                 </Stack>
-               </Box>
-               
-               {/* Floating Stats */}
-               <Box
-                 component={motion.div}
-                 animate={{ y: [-10, 10, -10] }}
-                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                 sx={{
-                   position: "absolute",
-                   top: "10%",
-                   left: "-10%",
-                   bgcolor: "white",
-                   p: 2,
-                   borderRadius: "20px",
-                   boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-                   border: "1px solid #f1f5f9",
-                   zIndex: 2
-                 }}
-               >
-                  <Stack direction="row" spacing={2} alignItems="center">
-                    <Box sx={{ p: 1, bgcolor: "rgba(37, 99, 235, 0.1)", borderRadius: "10px" }}>
-                       <BarChart size={20} color="#2563eb" />
+              {/* SEO Visualization: Search Results Mockup */}
+              <Box
+                component={motion.div}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                sx={{
+                  width: "100%",
+                  maxWidth: "500px",
+                  bgcolor: "white",
+                  borderRadius: "24px",
+                  boxShadow: "0 50px 100px -20px rgba(15, 23, 42, 0.12)",
+                  border: "1px solid #f1f5f9",
+                  overflow: "hidden"
+                }}
+              >
+                <Box sx={{ px: 3, py: 2, bgcolor: "#f8fafc", borderBottom: "1px solid #f1f5f9", display: "flex", alignItems: "center", gap: 2 }}>
+                  <Search size={18} color="#64748b" />
+                  <Typography sx={{ color: "#0f172a", fontWeight: 700, fontSize: "14px" }}>"best enterprise software development company"</Typography>
+                </Box>
+
+                <Stack spacing={4} sx={{ p: 4 }}>
+                  {[1, 2, 3].map((i) => (
+                    <Box
+                      key={i}
+                      component={motion.div}
+                      animate={i === 1 ? { scale: [1, 1.02, 1], borderColor: ["#f1f5f9", "#2563eb", "#f1f5f9"] } : {}}
+                      transition={{ duration: 3, repeat: Infinity }}
+                      sx={{
+                        p: 2.5,
+                        borderRadius: "16px",
+                        border: i === 1 ? "2px solid #2563eb" : "1px solid #f1f5f9",
+                        position: "relative",
+                        bgcolor: i === 1 ? "rgba(37, 99, 235, 0.02)" : "transparent"
+                      }}
+                    >
+                      {i === 1 && (
+                        <Box sx={{ position: "absolute", top: -12, right: 20, bgcolor: "#2563eb", color: "white", px: 1.5, py: 0.5, borderRadius: "100px", fontSize: "10px", fontWeight: 900 }}>RANK #1</Box>
+                      )}
+                      <Typography sx={{ color: i === 1 ? "#2563eb" : "#4338ca", fontWeight: 700, fontSize: "16px", mb: 0.5 }}>
+                        {i === 1 ? "Vihaan Innovations | Leading Software & Marketing Partner" : `Competitor Brand ${i} - Services & Solutions`}
+                      </Typography>
+                      <Typography sx={{ color: "#16a34a", fontSize: "12px", mb: 1 }}>https://www.vihaaninnovations.com › services</Typography>
+                      <Typography sx={{ color: "#64748b", fontSize: "13px", lineHeight: 1.5 }}>
+                        Expert end-to-end software development and digital marketing services to scale your business. Ranked as top agency in 2024.
+                      </Typography>
                     </Box>
-                    <Box>
-                       <Typography sx={{ fontSize: "10px", fontWeight: 800, color: "#64748b" }}>DOMAIN AUTHORITY</Typography>
-                       <Typography sx={{ fontSize: "18px", fontWeight: 800, color: "#0f172a" }}>82/100</Typography>
-                    </Box>
-                  </Stack>
-               </Box>
+                  ))}
+                </Stack>
+              </Box>
+
+              {/* Floating Stats */}
+              <Box
+                component={motion.div}
+                animate={{ y: [-10, 10, -10] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                sx={{
+                  position: "absolute",
+                  top: "10%",
+                  left: "-10%",
+                  bgcolor: "white",
+                  p: 2,
+                  borderRadius: "20px",
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                  border: "1px solid #f1f5f9",
+                  zIndex: 2
+                }}
+              >
+                <Stack direction="row" spacing={2} alignItems="center">
+                  <Box sx={{ p: 1, bgcolor: "rgba(37, 99, 235, 0.1)", borderRadius: "10px" }}>
+                    <BarChart size={20} color="#2563eb" />
+                  </Box>
+                  <Box>
+                    <Typography sx={{ fontSize: "10px", fontWeight: 800, color: "#64748b" }}>DOMAIN AUTHORITY</Typography>
+                    <Typography sx={{ fontSize: "18px", fontWeight: 800, color: "#0f172a" }}>82/100</Typography>
+                  </Box>
+                </Stack>
+              </Box>
             </Box>
           </Grid>
         </Grid>

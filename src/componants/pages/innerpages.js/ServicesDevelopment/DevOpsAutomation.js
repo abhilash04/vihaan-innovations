@@ -79,7 +79,7 @@ const DevOpsAutomation = () => {
               View All <LucideArrowRight size={14} />
             </Typography>
           </Box>
-          <Typography variant="h2" sx={{ fontSize: { xs: "36px", md: "52px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
+          <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
             Ship Faster. Break Nothing. <br />
             <Box component="span" sx={{ color: "#06b6d4" }}>Automate Everything.</Box>
           </Typography>

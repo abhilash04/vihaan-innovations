@@ -131,16 +131,16 @@ const InfluencerMarketing = () => {
                 <Typography
                   variant="h2"
                   sx={{
-                    fontSize: { xs: "36px", md: "52px" },
+                    fontSize: { xs: "32px", md: "42px" },
                     fontWeight: 800,
                     fontFamily: "'Syne', sans-serif",
                     color: "#0f172a",
                     lineHeight: 1.1,
                   }}
                 >
-                  Trust is the <br />
+                  Real Voices. <br />
                   <Box component="span" sx={{ color: "#8b5cf6" }}>
-                    New Currency.
+                    Real Results.
                   </Box>
                 </Typography>
               </Box>
@@ -148,20 +148,20 @@ const InfluencerMarketing = () => {
               <Typography
                 sx={{
                   color: "#475569",
-                  fontSize: "18px",
+                  fontSize: { xs: "16px", md: "20px" },
                   lineHeight: 1.7,
                   fontWeight: 500,
                 }}
               >
-                Consumers buy from people they trust. We connect your brand with authentic voices that align with your values to drive massive awareness and conversions.
+                People buy from people they trust. We connect your brand with creators who genuinely align with your values, driving real awareness and measurable conversions.
               </Typography>
 
               <Grid container spacing={2.5}>
                  {[
-                   "Global Influencer Database",
-                   "Fraud & Bot Detection Audit",
-                   "End-to-end Campaign Management",
-                   "Affiliate Tracking & Attribution"
+                    "Verified Influencer Network",
+                    "Fraud & Bot Detection Screening",
+                    "Full Campaign Management",
+                    "Affiliate Tracking & Payouts"
                  ].map((text, i) => (
                     <Grid item xs={12} sm={6} key={i}>
                        <Stack direction="row" spacing={2} alignItems="center">

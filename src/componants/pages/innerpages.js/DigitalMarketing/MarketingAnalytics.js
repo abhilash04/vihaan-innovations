@@ -157,16 +157,16 @@ const MarketingAnalytics = () => {
                 <Typography
                   variant="h2"
                   sx={{
-                    fontSize: { xs: "36px", md: "52px" },
+                    fontSize: { xs: "32px", md: "42px" },
                     fontWeight: 800,
                     fontFamily: "'Syne', sans-serif",
                     color: "#0f172a",
                     lineHeight: 1.1,
                   }}
                 >
-                  Data Insights. <br />
+                  Track Everything. <br />
                   <Box component="span" sx={{ color: "#2563eb" }}>
-                    Growth Engineers.
+                    Grow Smarter.
                   </Box>
                 </Typography>
               </Box>
@@ -174,16 +174,16 @@ const MarketingAnalytics = () => {
               <Typography
                 sx={{
                   color: "#475569",
-                  fontSize: "18px",
+                  fontSize: { xs: "16px", md: "20px" },
                   lineHeight: 1.7,
                   fontWeight: 500,
                 }}
               >
-                We don't guess; we measure. Our analytics-first approach ensures every marketing dollar spent is trackable and contributes to your bottom line.
+                Every marketing decision we make is rooted in real data. From campaign attribution to user behavior mapping, we track what matters and cut what does not.
               </Typography>
 
               <Stack direction="row" flexWrap="wrap" gap={1.5}>
-                 {["GA4 Migration", "Looker Studio Dashboards", "Multi-touch Attribution", "Conversion Tracking", "Heatmap Analysis"].map((tag, i) => (
+                 {["GA4 Setup & Migration", "Looker Studio Dashboards", "Multi-Touch Attribution", "Conversion Tracking", "Heatmap & Session Analysis"].map((tag, i) => (
                    <Box key={i} sx={{ px: 2, py: 0.8, bgcolor: "rgba(37, 99, 235, 0.05)", border: "1px solid rgba(37, 99, 235, 0.1)", borderRadius: "8px", color: "#2563eb", fontSize: "14px", fontWeight: 700 }}>
                       {tag}
                    </Box>
