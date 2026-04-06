@@ -11,6 +11,7 @@ const CloudDevelopment = () => {
     "Auto-Scaling & Load Balancing",
     "Cloud Cost Optimisation",
     "Multi-Cloud Strategy",
+    "Cloud-Integrated Website Development Services",
   ];
 
   const providers = ["AWS", "GCP", "Azure", "Vercel", "Netlify", "Cloudflare"];
@@ -63,7 +64,7 @@ const CloudDevelopment = () => {
                       display: "block",
                     }}
                   >
-                    CLOUD DEVELOPMENT
+                    CLOUD & WEBSITE DEVELOPMENT SERVICES
                   </Typography>
                   <Typography
                     component="a"
@@ -86,7 +87,7 @@ const CloudDevelopment = () => {
                   Scalable Cloud Solutions Built for Tomorrow
                 </Typography>
                 <Typography sx={{ color: "#475569", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500 }}>
-                  We design and implement robust cloud architectures that ensure high availability, scalability, and security for your digital assets.
+                  We design and implement robust cloud architectures that complement our website development services, ensuring high availability, scalability, and security for your digital assets. Our website development services are powered by secure, enterprise-grade cloud infrastructure.
                 </Typography>
               
               <Stack spacing={2} sx={{ pt: 2 }}>

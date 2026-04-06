@@ -59,6 +59,14 @@ const ResultsImpact = () => {
       </Box>
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
+        <Stack spacing={2} alignItems="center" textAlign="center" sx={{ mb: 10 }}>
+          <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
+            Impact of Our Website Development Services
+          </Typography>
+          <Typography sx={{ color: "#475569", maxWidth: "700px", fontSize: "18px", fontWeight: 500 }}>
+            Our website development services have empowered hundreds of businesses globally. We measure success through the tangible results and growth our website development services deliver to our clients.
+          </Typography>
+        </Stack>
         <Grid container spacing={4} sx={{ textAlign: "center" }}>
           {stats.map((stat, i) => (
             <Grid item xs={12} sm={6} md={2.4} key={i}>

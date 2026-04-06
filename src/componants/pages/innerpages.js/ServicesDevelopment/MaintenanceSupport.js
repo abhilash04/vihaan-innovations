@@ -10,6 +10,7 @@ const MaintenanceSupport = () => {
     "Performance Optimisation",
     "Security Audits & Updates",
     "Feature Enhancements & Roadmap",
+    "Continuous Website Development Services",
     "SLA-backed Response Times",
   ];
 
@@ -67,7 +68,7 @@ const MaintenanceSupport = () => {
                       display: "block",
                     }}
                   >
-                    MAINTENANCE & SUPPORT
+                    MAINTENANCE & WEBSITE DEVELOPMENT SERVICES
                   </Typography>
                   <Typography
                     component="a"
@@ -91,7 +92,7 @@ const MaintenanceSupport = () => {
                 <Box component="span" sx={{ color: "#16a34a" }}>After Launch Day</Box>
               </Typography>
               <Typography sx={{ color: "#475569", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500 }}>
-                Software isn't a one-time delivery — it's a living product. Our support team monitors, maintains, and evolves your platform so it never slows you down.
+                Software isn't a one-time delivery — it's a living product. As part of our elite website development services, our support team monitors, maintains, and evolves your platform. Our website development services ensure your digital presence is always up-to-date and performing at its peak.
               </Typography>
               
               <Stack spacing={2} sx={{ pt: 2 }}>
@@ -158,7 +159,7 @@ const MaintenanceSupport = () => {
                            transition={{ duration: 2, repeat: Infinity }}
                            sx={{ width: 10, height: 10, borderRadius: "50%", bgcolor: "#16a34a" }}
                          />
-                         <Typography sx={{ color: "white", fontWeight: 700 }}>System Health: Optimal</Typography>
+                         <Typography sx={{ color: "#0f172a", fontWeight: 700 }}>System Health: Optimal</Typography>
                       </Stack>
                       <Terminal size={20} color="#94a3b8" />
                    </Stack>
@@ -166,7 +167,7 @@ const MaintenanceSupport = () => {
                    <Grid container spacing={2}>
                       {["API", "DB", "CDN", "AUTH"].map((service, i) => (
                          <Grid item xs={3} key={i}>
-                            <Box sx={{ p: 2, borderRadius: 2, bgcolor: "rgba(255,255,255,0.02)", textAlign: "center", border: "1px solid rgba(255,255,255,0.05)" }}>
+                             <Box sx={{ p: 2, borderRadius: 2, bgcolor: "#f1f5f9", textAlign: "center", border: "1px solid #e2e8f0" }}>
                                <Typography sx={{ color: "#94a3b8", fontSize: "10px", fontWeight: 800, mb: 1 }}>{service}</Typography>
                                <Box sx={{ width: 6, height: 6, borderRadius: "50%", bgcolor: "#16a34a", mx: "auto" }} />
                             </Box>
@@ -191,12 +192,12 @@ const MaintenanceSupport = () => {
                    <Stack direction="row" justifyContent="space-between">
                      <Stack spacing={0.5}>
                         <Typography sx={{ color: "#94a3b8", fontSize: "11px", fontWeight: 600 }}>Active Tickets</Typography>
-                        <Typography sx={{ color: "white", fontSize: "20px", fontWeight: 800 }}>0</Typography>
+                         <Typography sx={{ color: "#0f172a", fontSize: "20px", fontWeight: 800 }}>0</Typography>
                      </Stack>
                      <Stack spacing={0.5} alignItems="flex-end">
                         <Typography sx={{ color: "#94a3b8", fontSize: "11px", fontWeight: 600 }}>Last Deployment</Typography>
                         <Stack direction="row" spacing={1} alignItems="center">
-                           <Typography sx={{ color: "white", fontSize: "14px", fontWeight: 700 }}>2 hours ago</Typography>
+                            <Typography sx={{ color: "#0f172a", fontSize: "14px", fontWeight: 700 }}>2 hours ago</Typography>
                            <CheckCircle2 size={14} color="#16a34a" />
                         </Stack>
                      </Stack>

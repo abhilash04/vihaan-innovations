@@ -92,13 +92,13 @@ const TechStack = () => {
       <Container maxWidth="lg" sx={{ mb: 8, textAlign: "center" }}>
         <Stack spacing={2} alignItems="center">
           <Typography sx={{ color: "#06b6d4", fontWeight: 800, letterSpacing: "0.2em", fontSize: "14px", textTransform: "uppercase" }}>
-            TECH STACK
+            TECH STACK FOR WEBSITE DEVELOPMENT SERVICES
           </Typography>
           <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
-            50+ Technologies. One Expert Team.
+            Modern Tech Stack Powering Our Website Development Services
           </Typography>
           <Typography sx={{ color: "#475569", maxWidth: "700px", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500 }}>
-            We leverage a diverse and modern technology stack to build robust, scalable, and future-proof digital products.
+            We leverage a diverse and modern technology stack for our website development services. This allows us to build robust, scalable, and future-proof digital products. Our website development services are backed by the latest industry standards.
           </Typography>
         </Stack>
       </Container>

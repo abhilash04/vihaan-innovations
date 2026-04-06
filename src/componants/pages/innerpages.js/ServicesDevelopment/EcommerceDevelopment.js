@@ -27,7 +27,8 @@ const EcommerceDevelopment = () => {
     { title: "Payment Integration", icon: CreditCard, desc: "Secure and diverse payment options." },
     { title: "Inventory Management", icon: BoxIcon, desc: "Real-time stock tracking and alerts." },
     { title: "Recommendation Engine", icon: TrendingUp, desc: "AI-driven product suggestions." },
-    { title: "Mobile Commerce", icon: Smartphone, desc: "Optimised for mobile shopping." },
+    { title: "Mobile Commerce", icon: Smartphone, desc: "Optimised for mobile shopping within our website development services." },
+    { title: "Growth Analytics", icon: TrendingUp, desc: "Data insights to scale your website development services." },
   ];
 
   return (
@@ -102,7 +103,7 @@ const EcommerceDevelopment = () => {
             <Box component="span" sx={{ color: "#06b6d4" }}>Convert Browsers Into Buyers</Box>
           </Typography>
           <Typography sx={{ color: "#475569", maxWidth: "700px", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500 }}>
-            We build scalable, high-performance ecommerce solutions that provide exceptional shopping experiences and drive conversions.
+            As a core part of our website development services, we build scalable, high-performance ecommerce solutions. Our website development services are tailored to provide exceptional shopping experiences and drive conversions across all digital touchpoints.
           </Typography>
         </Stack>
 

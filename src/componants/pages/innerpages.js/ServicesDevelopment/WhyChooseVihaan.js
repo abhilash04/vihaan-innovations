@@ -5,10 +5,10 @@ import { Star, Quote, CheckCircle2 } from "lucide-react";
 
 const WhyChooseVihaan = () => {
   const differentiators = [
-    { title: "Full-Stack Expertise", desc: "We cover every layer from design to deployment using modern stacks.", color: "#2563eb" },
-    { title: "Agile & Transparent", desc: "Weekly sprints, live demos, and full visibility throughout development.", color: "#06b6d4" },
-    { title: "Scalable Architecture", desc: "Built to handle 10 users or 10 million with cloud-native designs.", color: "#7c3aed" },
-    { title: "Post-Launch Partnership", desc: "We stay with you through every growth phase with ongoing support.", color: "#10b981" },
+    { title: "Full-Stack Mastery", desc: "Our website development services cover every layer from frontend design to robust backend deployment.", color: "#2563eb" },
+    { title: "Agile & Transparent", desc: "Weekly sprints and full visibility throughout the delivery of our website development services.", color: "#06b6d4" },
+    { title: "Scalable Architecture", desc: "Built to handle 10 users or 10 million with our enterprise website development services.", color: "#7c3aed" },
+    { title: "Strategic Partnership", desc: "We stay with you through every growth phase, evolving our website development services as you scale.", color: "#10b981" },
   ];
 
   return (

@@ -5,12 +5,13 @@ import { Smartphone, Check, ShoppingCart, Apple, Play, ArrowRight as LucideArrow
 
 const MobileApps = () => {
   const features = [
-    "iOS & Android Native Development",
+    "iOS & Android Website Development Services",
     "React Native & Flutter Cross-Platform",
     "Offline-First Architecture",
     "Push Notifications & Deep Linking",
     "App Store Optimisation & Submission",
-    "Post-launch Analytics Integration",
+    "Mobile Apps for Website Development Services",
+    "Post-launch Analytics & Growth Support",
   ];
 
   const draw = {
@@ -294,7 +295,7 @@ const MobileApps = () => {
                   fontWeight: 500,
                 }}
               >
-                We build high-performance mobile applications that users love. Whether it's native iOS/Android or cross-platform solutions, we ensure speed, security, and a premium feel.
+                Complementing our premium website development services, we build high-performance mobile applications that users love. Whether it's native iOS/Android or cross-platform solutions, we ensure speed, security, and a premium feel. Our website development services ensure your brand remains consistent across all digital platforms.
               </Typography>
 
               <Stack spacing={2.5}>

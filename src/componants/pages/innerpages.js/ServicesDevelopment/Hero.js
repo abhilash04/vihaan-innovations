@@ -187,7 +187,7 @@ const Hero = () => {
                   fontWeight: 500,
                 }}
               >
-                From UI/UX design to AI automation — our expert digital services cover every layer of your product. We don't just write code. We architect solutions that grow.
+                From UI/UX design to AI automation — our website development services cover every layer of your product. We provide comprehensive website development services that go beyond just writing code; we architect solutions that grow with your business. Let our website development services elevate your brand today.
               </Typography>
 
               <Stack
@@ -358,7 +358,7 @@ const Hero = () => {
 
               {/* Orbiting Elements - Floating Feature Badges */}
               {[
-                { icon: Code2, label: "Full Stack", color: "#2563eb", top: "5%", left: "5%", delay: 0 },
+                { icon: Code2, label: "Website Development Services", color: "#2563eb", top: "5%", left: "5%", delay: 0 },
                 { icon: Rocket, label: "Fast Performance", color: "#06b6d4", top: "15%", right: "-2%", delay: 1 },
                 { icon: Zap, label: "AI Powered", color: "#7c3aed", bottom: "12%", left: "-5%", delay: 2 },
                 { icon: Cloud, label: "Cloud Native", color: "#10b981", bottom: "8%", right: "5%", delay: 3 },
