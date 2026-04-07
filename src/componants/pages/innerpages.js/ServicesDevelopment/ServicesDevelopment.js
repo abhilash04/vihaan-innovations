@@ -21,6 +21,9 @@ import HeaderSec from "../../../common/HeaderSec";
 import Footer from "../../../common/Footer";
 import SEOKeywords from "./SEOKeywords";
 
+import LocationLinks from "../LocationPageLayout/LocationLinks";
+import { serviceTypes } from "../LocationPageLayout/locationData";
+
 const ServicesDevelopment = () => {
   const [activeSection, setActiveSection] = useState(0);
   const containerRef = useRef(null);
@@ -142,9 +145,11 @@ const ServicesDevelopment = () => {
         </section>
       </Box>
 
+      <LocationLinks serviceType={serviceTypes.WEBSITE_DEVELOPMENT} />
       <Footer />
     </Box>
   );
 };
+
 
 export default ServicesDevelopment;

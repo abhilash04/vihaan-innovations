@@ -12,7 +12,7 @@ const ResultsImpact = () => {
   ];
 
   return (
-    <Box sx={{ py: { xs: 10, md: 20 }, bgcolor: "#f1f5f9", position: "relative", overflow: "hidden" }}>
+    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: "#f1f5f9", position: "relative", overflow: "hidden" }}>
       {/* Decorative Watermark */}
       <Typography
         variant="h1"

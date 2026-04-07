@@ -26,7 +26,7 @@ const WhyChooseVihaan = () => {
   ];
 
   return (
-    <Box sx={{ py: { xs: 10, md: 20 }, bgcolor: "#f8fafc" }}>
+    <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: "#f8fafc" }}>
       <Container maxWidth="lg">
         <Grid container spacing={10}>
           <Grid item xs={12} md={6}>
