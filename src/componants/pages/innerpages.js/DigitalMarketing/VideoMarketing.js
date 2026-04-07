@@ -8,29 +8,13 @@ const VideoMarketing = () => {
     <Box
       id="video-marketing"
       sx={{
-        py: { xs: 10, md: 20 },
+        py: { xs: 8, md: 12 },
         position: "relative",
         overflow: "hidden",
         bgcolor: "#ffffff",
       }}
     >
-      <Typography
-        variant="h1"
-        sx={{
-          position: "absolute",
-          top: "5%",
-          left: "2%",
-          fontSize: { xs: "120px", md: "250px" },
-          fontWeight: 900,
-          color: "rgba(15, 23, 42, 0.03)",
-          fontFamily: "'Syne', sans-serif",
-          lineHeight: 1,
-          zIndex: 0,
-          pointerEvents: "none",
-        }}
-      >
-        07
-      </Typography>
+
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
         <Grid container spacing={8} alignItems="center">
@@ -97,19 +81,19 @@ const VideoMarketing = () => {
               </Typography>
 
               <Grid container spacing={2}>
-                 {[
-                    { icon: Camera, text: "Professional Production" },
-                    { icon: Youtube, text: "YouTube Channel Growth" },
-                    { icon: Video, text: "Short-Form Social Ads" },
-                    { icon: Award, text: "Brand Storytelling" }
-                 ].map((item, i) => (
-                    <Grid item xs={6} key={i}>
-                       <Stack direction="row" spacing={1.5} alignItems="center">
-                          <item.icon size={18} color="#e11d48" />
-                          <Typography sx={{ fontWeight: 700, color: "#1e293b", fontSize: "14px" }}>{item.text}</Typography>
-                       </Stack>
-                    </Grid>
-                 ))}
+                {[
+                  { icon: Camera, text: "Professional Production" },
+                  { icon: Youtube, text: "YouTube Channel Growth" },
+                  { icon: Video, text: "Short-Form Social Ads" },
+                  { icon: Award, text: "Brand Storytelling" }
+                ].map((item, i) => (
+                  <Grid item xs={6} key={i}>
+                    <Stack direction="row" spacing={1.5} alignItems="center">
+                      <item.icon size={18} color="#e11d48" />
+                      <Typography sx={{ fontWeight: 700, color: "#1e293b", fontSize: "14px" }}>{item.text}</Typography>
+                    </Stack>
+                  </Grid>
+                ))}
               </Grid>
 
               <Box sx={{ pt: 2 }}>
@@ -140,69 +124,69 @@ const VideoMarketing = () => {
                 minHeight: "500px",
               }}
             >
-               {/* Video Player Visualization */}
-               <Box
-                 component={motion.div}
-                 initial={{ opacity: 0, scale: 0.9 }}
-                 whileInView={{ opacity: 1, scale: 1 }}
-                 transition={{ duration: 0.8 }}
-                 viewport={{ once: true }}
-                 sx={{
-                   width: "100%",
-                   maxWidth: "500px",
-                   aspectRatio: "16/9",
-                   bgcolor: "#0f172a",
-                   borderRadius: "32px",
-                   boxShadow: "0 50px 100px -20px rgba(225, 29, 72, 0.2)",
-                   position: "relative",
-                   overflow: "hidden",
-                   display: "flex",
-                   alignItems: "center",
-                   justifyContent: "center"
-                 }}
-               >
-                  <motion.div
-                    animate={{ scale: [1, 1.1, 1], opacity: [0.8, 1, 0.8] }}
-                    transition={{ duration: 3, repeat: Infinity }}
-                  >
-                     <Box sx={{ p: 3, bgcolor: "rgba(255, 255, 255, 0.1)", backdropFilter: "blur(10px)", borderRadius: "50%", border: "2px solid white" }}>
-                        <Play size={40} color="white" fill="white" />
-                     </Box>
-                  </motion.div>
-                  
-                  <Box sx={{ position: "absolute", bottom: 0, left: 0, right: 0, p: 3, background: "linear-gradient(to top, rgba(0,0,0,0.8), transparent)" }}>
-                     <Stack direction="row" spacing={2} alignItems="center">
-                        <Box sx={{ flex: 1, height: "4px", bgcolor: "rgba(255,255,255,0.2)", borderRadius: "2px", position: "relative" }}>
-                           <motion.div
-                             animate={{ width: ["0%", "100%"] }}
-                             transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                             style={{ height: "100%", background: "#e11d48", borderRadius: "2px" }}
-                           />
-                        </Box>
-                        <Typography sx={{ color: "white", fontSize: "12px", fontWeight: 700 }}>04:12</Typography>
-                     </Stack>
+              {/* Video Player Visualization */}
+              <Box
+                component={motion.div}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                sx={{
+                  width: "100%",
+                  maxWidth: "500px",
+                  aspectRatio: "16/9",
+                  bgcolor: "#0f172a",
+                  borderRadius: "32px",
+                  boxShadow: "0 50px 100px -20px rgba(225, 29, 72, 0.2)",
+                  position: "relative",
+                  overflow: "hidden",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center"
+                }}
+              >
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1], opacity: [0.8, 1, 0.8] }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                >
+                  <Box sx={{ p: 3, bgcolor: "rgba(255, 255, 255, 0.1)", backdropFilter: "blur(10px)", borderRadius: "50%", border: "2px solid white" }}>
+                    <Play size={40} color="white" fill="white" />
                   </Box>
-               </Box>
-               
-               {/* Floating View Count */}
-               <Box
-                 component={motion.div}
-                 animate={{ y: [-15, 15, -15] }}
-                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                 sx={{
-                   position: "absolute",
-                   top: "10%",
-                   right: "5%",
-                   bgcolor: "white",
-                   p: 2,
-                   borderRadius: "20px",
-                   boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-                   border: "1px solid #f1f5f9"
-                 }}
-               >
-                  <Typography sx={{ fontSize: "10px", fontWeight: 800, color: "#64748b" }}>LIVE VIEWS</Typography>
-                  <Typography sx={{ fontSize: "20px", fontWeight: 900, color: "#e11d48" }}>128.4K</Typography>
-               </Box>
+                </motion.div>
+
+                <Box sx={{ position: "absolute", bottom: 0, left: 0, right: 0, p: 3, background: "linear-gradient(to top, rgba(0,0,0,0.8), transparent)" }}>
+                  <Stack direction="row" spacing={2} alignItems="center">
+                    <Box sx={{ flex: 1, height: "4px", bgcolor: "rgba(255,255,255,0.2)", borderRadius: "2px", position: "relative" }}>
+                      <motion.div
+                        animate={{ width: ["0%", "100%"] }}
+                        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                        style={{ height: "100%", background: "#e11d48", borderRadius: "2px" }}
+                      />
+                    </Box>
+                    <Typography sx={{ color: "white", fontSize: "12px", fontWeight: 700 }}>04:12</Typography>
+                  </Stack>
+                </Box>
+              </Box>
+
+              {/* Floating View Count */}
+              <Box
+                component={motion.div}
+                animate={{ y: [-15, 15, -15] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                sx={{
+                  position: "absolute",
+                  top: "10%",
+                  right: "5%",
+                  bgcolor: "white",
+                  p: 2,
+                  borderRadius: "20px",
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                  border: "1px solid #f1f5f9"
+                }}
+              >
+                <Typography sx={{ fontSize: "10px", fontWeight: 800, color: "#64748b" }}>LIVE VIEWS</Typography>
+                <Typography sx={{ fontSize: "20px", fontWeight: 900, color: "#e11d48" }}>128.4K</Typography>
+              </Box>
             </Box>
           </Grid>
         </Grid>

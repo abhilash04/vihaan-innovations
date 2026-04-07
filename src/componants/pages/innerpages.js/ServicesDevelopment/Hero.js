@@ -39,7 +39,7 @@ const Hero = () => {
         alignItems: "center",
         overflow: "hidden",
         bgcolor: "#ffffff",
-        pt: { xs: 12, md: 6 },
+        pt: { xs: 8, md: 12 },
       }}
     >
       {/* Background Elements - Abstract Mesh & Glows */}
@@ -148,9 +148,9 @@ const Hero = () => {
                 </motion.div>
               </Box>
 
-              <Box sx={{ "& h1": { lineHeight: 1.05 } }}>
+              <Box sx={{ "& h1": { lineHeight: 1 } }}>
                 {["We Build Digital", "Products That", "Scale Globally"].map((text, i) => (
-                  <Box key={i} sx={{ overflow: "hidden", mb: 0.5 }}>
+                  <Box key={i} sx={{ overflow: "hidden" }}>
                     <Typography
                       component={motion.h1}
                       variants={lineReveal}
@@ -182,7 +182,7 @@ const Hero = () => {
                 sx={{
                   color: "#475569",
                   fontSize: { xs: "16px", md: "20px" },
-                  lineHeight: 1.6,
+                  lineHeight: 1.4,
                   maxWidth: "540px",
                   fontWeight: 500,
                 }}

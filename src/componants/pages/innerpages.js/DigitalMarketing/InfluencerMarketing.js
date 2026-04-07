@@ -14,29 +14,13 @@ const InfluencerMarketing = () => {
     <Box
       id="influencer"
       sx={{
-        py: { xs: 10, md: 20 },
+        py: { xs: 8, md: 12 },
         position: "relative",
         overflow: "hidden",
         bgcolor: "#f8fafc",
       }}
     >
-      <Typography
-        variant="h1"
-        sx={{
-          position: "absolute",
-          top: "5%",
-          right: "2%",
-          fontSize: { xs: "120px", md: "250px" },
-          fontWeight: 900,
-          color: "rgba(15, 23, 42, 0.03)",
-          fontFamily: "'Syne', sans-serif",
-          lineHeight: 1,
-          zIndex: 0,
-          pointerEvents: "none",
-        }}
-      >
-        08
-      </Typography>
+
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
         <Grid container spacing={8} alignItems="center">
@@ -50,47 +34,47 @@ const InfluencerMarketing = () => {
                 minHeight: "550px",
               }}
             >
-               {/* Influencer Profile Grid */}
-               <Stack spacing={3} sx={{ width: "100%", maxWidth: "450px" }}>
-                  {influencers.map((inf, i) => (
-                    <Box
-                      key={i}
-                      component={motion.div}
-                      initial={{ opacity: 0, x: -50 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: i * 0.15 }}
-                      viewport={{ once: true }}
-                      sx={{
-                        p: 3,
-                        bgcolor: "white",
-                        borderRadius: "24px",
-                        boxShadow: "0 20px 40px rgba(0,0,0,0.05)",
-                        border: "1px solid #f1f5f9",
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 3,
-                        "&:hover": { borderColor: inf.accent, transform: "scale(1.02)" },
-                        transition: "all 0.3s ease"
-                      }}
-                    >
-                       <Avatar sx={{ width: 64, height: 64, bgcolor: inf.color, color: inf.accent, fontSize: "20px", fontWeight: 800 }}>{inf.name[0]}</Avatar>
-                       <Box sx={{ flex: 1 }}>
-                          <Typography sx={{ fontWeight: 800, color: "#0f172a" }}>{inf.name}</Typography>
-                          <Typography sx={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>{inf.role}</Typography>
-                          <Stack direction="row" spacing={2} sx={{ mt: 1 }}>
-                             <Typography sx={{ fontSize: "13px", fontWeight: 800, color: inf.accent }}>{inf.followers} Followers</Typography>
-                             <Stack direction="row" spacing={0.5} alignItems="center">
-                                <Star size={12} color="#f59e0b" fill="#f59e0b" />
-                                <Typography sx={{ fontSize: "11px", fontWeight: 700, color: "#64748b" }}>4.9 Rating</Typography>
-                             </Stack>
-                          </Stack>
-                       </Box>
-                       <Box sx={{ p: 1, bgcolor: "#f8fafc", borderRadius: "10px" }}>
-                          <Share2 size={18} color="#64748b" />
-                       </Box>
+              {/* Influencer Profile Grid */}
+              <Stack spacing={3} sx={{ width: "100%", maxWidth: "450px" }}>
+                {influencers.map((inf, i) => (
+                  <Box
+                    key={i}
+                    component={motion.div}
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.15 }}
+                    viewport={{ once: true }}
+                    sx={{
+                      p: 3,
+                      bgcolor: "white",
+                      borderRadius: "24px",
+                      boxShadow: "0 20px 40px rgba(0,0,0,0.05)",
+                      border: "1px solid #f1f5f9",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 3,
+                      "&:hover": { borderColor: inf.accent, transform: "scale(1.02)" },
+                      transition: "all 0.3s ease"
+                    }}
+                  >
+                    <Avatar sx={{ width: 64, height: 64, bgcolor: inf.color, color: inf.accent, fontSize: "20px", fontWeight: 800 }}>{inf.name[0]}</Avatar>
+                    <Box sx={{ flex: 1 }}>
+                      <Typography sx={{ fontWeight: 800, color: "#0f172a" }}>{inf.name}</Typography>
+                      <Typography sx={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>{inf.role}</Typography>
+                      <Stack direction="row" spacing={2} sx={{ mt: 1 }}>
+                        <Typography sx={{ fontSize: "13px", fontWeight: 800, color: inf.accent }}>{inf.followers} Followers</Typography>
+                        <Stack direction="row" spacing={0.5} alignItems="center">
+                          <Star size={12} color="#f59e0b" fill="#f59e0b" />
+                          <Typography sx={{ fontSize: "11px", fontWeight: 700, color: "#64748b" }}>4.9 Rating</Typography>
+                        </Stack>
+                      </Stack>
                     </Box>
-                  ))}
-               </Stack>
+                    <Box sx={{ p: 1, bgcolor: "#f8fafc", borderRadius: "10px" }}>
+                      <Share2 size={18} color="#64748b" />
+                    </Box>
+                  </Box>
+                ))}
+              </Stack>
             </Box>
           </Grid>
 
@@ -157,19 +141,19 @@ const InfluencerMarketing = () => {
               </Typography>
 
               <Grid container spacing={2.5}>
-                 {[
-                    "Verified Influencer Network",
-                    "Fraud & Bot Detection Screening",
-                    "Full Campaign Management",
-                    "Affiliate Tracking & Payouts"
-                 ].map((text, i) => (
-                    <Grid item xs={12} sm={6} key={i}>
-                       <Stack direction="row" spacing={2} alignItems="center">
-                          <Users size={18} color="#8b5cf6" />
-                          <Typography sx={{ fontWeight: 700, color: "#1e293b", fontSize: "14px" }}>{text}</Typography>
-                       </Stack>
-                    </Grid>
-                 ))}
+                {[
+                  "Verified Influencer Network",
+                  "Fraud & Bot Detection Screening",
+                  "Full Campaign Management",
+                  "Affiliate Tracking & Payouts"
+                ].map((text, i) => (
+                  <Grid item xs={12} sm={6} key={i}>
+                    <Stack direction="row" spacing={2} alignItems="center">
+                      <Users size={18} color="#8b5cf6" />
+                      <Typography sx={{ fontWeight: 700, color: "#1e293b", fontSize: "14px" }}>{text}</Typography>
+                    </Stack>
+                  </Grid>
+                ))}
               </Grid>
 
               <Box sx={{ pt: 2 }}>

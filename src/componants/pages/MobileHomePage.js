@@ -11,6 +11,8 @@ import SwitchingCards from "./SwitchingCards";
 import TipsAndTricks from "./TipsAndTricks";
 import OurExpert from "./OurExpert";
 
+import LocationLinks from "./innerpages.js/LocationPageLayout/LocationLinks";
+
 const MobileHomePage = () => {
   return (
     <Box sx={{ width: "100%", overflowX: "hidden" }}>
@@ -23,10 +25,13 @@ const MobileHomePage = () => {
         <SwitchingCards />
         <TipsAndTricks />
         <OurExpert />
+
+        <LocationLinks />
       </Box>
       <Footer />
     </Box>
   );
 };
+
 
 export default MobileHomePage;

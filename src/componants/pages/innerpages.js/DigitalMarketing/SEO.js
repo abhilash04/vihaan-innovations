@@ -19,30 +19,13 @@ const SEO = () => {
     <Box
       id="seo"
       sx={{
-        py: { xs: 10, md: 20 },
+        py: { xs: 8, md: 12 },
         position: "relative",
         overflow: "hidden",
         bgcolor: "#ffffff",
       }}
     >
-      {/* Background Watermark */}
-      <Typography
-        variant="h1"
-        sx={{
-          position: "absolute",
-          top: "5%",
-          left: "2%",
-          fontSize: { xs: "120px", md: "250px" },
-          fontWeight: 900,
-          color: "rgba(15, 23, 42, 0.03)",
-          fontFamily: "'Syne', sans-serif",
-          lineHeight: 1,
-          zIndex: 0,
-          pointerEvents: "none",
-        }}
-      >
-        01
-      </Typography>
+
 
       <Box
         sx={{
