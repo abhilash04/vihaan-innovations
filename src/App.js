@@ -12,7 +12,6 @@ import LegalCenter from "./componants/pages/innerpages.js/LegalCenter";
 import ShippingPolicy from "./componants/pages/innerpages.js/ShippingPolicy";
 import ContactUs from "./componants/pages/ContactUs";
 import AboutUsHomePage from "./componants/aboutus/AboutUsHomePage";
-import ServicesDevelopmentBangolre from "./componants/pages/innerpages.js/SevicesDevelopmentBangalore/SevicesDevelopmentBangalore";
 import TrainingPage from "./componants/pages/innerpages.js/training/training pages layout/TrainingPage";
 import {
   fullStackTrainingData,
@@ -127,7 +126,7 @@ import ServicePage from "./componants/pages/innerpages.js/serviceinnerpages/serv
 import ServiceDetails from "./componants/pages/innerpages.js/serviceinnerpages/service pages layout/ServiceDetails";
 import DynamicSeo from "./DynamicSeo";
 import ScrollToTop from "./componants/common/ScrollToTop";
-import SevicesDevelopmentBangalore from "./componants/pages/innerpages.js/SevicesDevelopmentBangalore/SevicesDevelopmentBangalore";
+import LocationPageLayout from "./componants/pages/innerpages.js/LocationPageLayout/LocationPageLayout";
 
 import DigitalMarketing from "./componants/pages/innerpages.js/DigitalMarketing/DigitalMarketing";
 
@@ -139,6 +138,16 @@ function App() {
           <ScrollToTop />
           <DynamicSeo />
           <Routes>
+            <Route
+              path="/website-development-services-in/:location"
+              element={<LocationPageLayout />}
+            />
+            <Route
+              path="/digital-marketing-services-in/:location"
+              element={<LocationPageLayout />}
+            />
+
+
             <Route path="/" element={<HomePage />} />
             <Route path="/collections/all-products" element={<AllProducts />} />
             <Route path="/login" element={<Login />} />
@@ -279,12 +288,10 @@ function App() {
 
             {/* Dynamic Services Overview Details */}
             <Route path="/service-details/:title" element={<ServiceDetails />} />
-            <Route path="/web-development-services" element={<ServicesDevelopmentBangolre />} />
-            <Route
-              path="/website-development-services-in-:location"
-              element={<SevicesDevelopmentBangalore />}
-            />
+            <Route path="/web-development-services" element={<ServicesDevelopment />} />
           </Routes>
+
+
         </Router>
       </Grid>
     </ThemeProvider>

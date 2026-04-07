@@ -8,29 +8,13 @@ const MarketingAnalytics = () => {
     <Box
       id="analytics"
       sx={{
-        py: { xs: 10, md: 20 },
+        py: { xs: 8, md: 12 },
         position: "relative",
         overflow: "hidden",
         bgcolor: "#f8fafc",
       }}
     >
-      <Typography
-        variant="h1"
-        sx={{
-          position: "absolute",
-          top: "5%",
-          right: "2%",
-          fontSize: { xs: "120px", md: "250px" },
-          fontWeight: 900,
-          color: "rgba(15, 23, 42, 0.03)",
-          fontFamily: "'Syne', sans-serif",
-          lineHeight: 1,
-          zIndex: 0,
-          pointerEvents: "none",
-        }}
-      >
-        06
-      </Typography>
+
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
         <Grid container spacing={8} alignItems="center">
@@ -44,79 +28,79 @@ const MarketingAnalytics = () => {
                 minHeight: "550px",
               }}
             >
-               {/* Analytics Dashboard Visualization */}
-               <Box
-                 component={motion.div}
-                 initial={{ opacity: 0, y: 50 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 transition={{ duration: 0.8 }}
-                 viewport={{ once: true }}
-                 sx={{
-                   width: "100%",
-                   maxWidth: "500px",
-                   bgcolor: "#ffffff",
-                   borderRadius: "32px",
-                   boxShadow: "0 40px 80px -20px rgba(15, 23, 42, 0.1)",
-                   border: "1px solid #e2e8f0",
-                   overflow: "hidden"
-                 }}
-               >
-                  <Box sx={{ p: 4, borderBottom: "1px solid #f1f5f9" }}>
-                     <Stack direction="row" justifyContent="space-between" alignItems="center">
-                        <Stack direction="row" spacing={2} alignItems="center">
-                           <Box sx={{ p: 1, bgcolor: "#2563eb", borderRadius: "10px" }}>
-                              <BarChart3 size={20} color="white" />
-                           </Box>
-                           <Typography sx={{ fontWeight: 800, color: "#0f172a" }}>Acquisition Analytics</Typography>
-                        </Stack>
-                        <Typography sx={{ fontSize: "12px", color: "#64748b", fontWeight: 700 }}>Last 30 Days</Typography>
-                     </Stack>
-                  </Box>
+              {/* Analytics Dashboard Visualization */}
+              <Box
+                component={motion.div}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                sx={{
+                  width: "100%",
+                  maxWidth: "500px",
+                  bgcolor: "#ffffff",
+                  borderRadius: "32px",
+                  boxShadow: "0 40px 80px -20px rgba(15, 23, 42, 0.1)",
+                  border: "1px solid #e2e8f0",
+                  overflow: "hidden"
+                }}
+              >
+                <Box sx={{ p: 4, borderBottom: "1px solid #f1f5f9" }}>
+                  <Stack direction="row" justifyContent="space-between" alignItems="center">
+                    <Stack direction="row" spacing={2} alignItems="center">
+                      <Box sx={{ p: 1, bgcolor: "#2563eb", borderRadius: "10px" }}>
+                        <BarChart3 size={20} color="white" />
+                      </Box>
+                      <Typography sx={{ fontWeight: 800, color: "#0f172a" }}>Acquisition Analytics</Typography>
+                    </Stack>
+                    <Typography sx={{ fontSize: "12px", color: "#64748b", fontWeight: 700 }}>Last 30 Days</Typography>
+                  </Stack>
+                </Box>
 
-                  <Box sx={{ p: 4 }}>
-                     <Stack spacing={4}>
-                        <Grid container spacing={2}>
-                           {[
-                              { label: "New Users", val: "42,850", growth: "+15%" },
-                              { label: "Avg. Session", val: "4m 12s", growth: "+8%" }
-                           ].map((stat, i) => (
-                             <Grid item xs={6} key={i}>
-                                <Box sx={{ p: 2, bgcolor: "#f8fafc", borderRadius: "16px", border: "1px solid #f1f5f9" }}>
-                                   <Typography sx={{ fontSize: "11px", fontWeight: 800, color: "#64748b", mb: 0.5 }}>{stat.label}</Typography>
-                                   <Typography sx={{ fontSize: "20px", fontWeight: 900, color: "#0f172a" }}>{stat.val}</Typography>
-                                   <Typography sx={{ fontSize: "11px", color: i === 0 ? "#16a34a" : "#2563eb", fontWeight: 800 }}>{stat.growth}</Typography>
-                                </Box>
-                             </Grid>
-                           ))}
+                <Box sx={{ p: 4 }}>
+                  <Stack spacing={4}>
+                    <Grid container spacing={2}>
+                      {[
+                        { label: "New Users", val: "42,850", growth: "+15%" },
+                        { label: "Avg. Session", val: "4m 12s", growth: "+8%" }
+                      ].map((stat, i) => (
+                        <Grid item xs={6} key={i}>
+                          <Box sx={{ p: 2, bgcolor: "#f8fafc", borderRadius: "16px", border: "1px solid #f1f5f9" }}>
+                            <Typography sx={{ fontSize: "11px", fontWeight: 800, color: "#64748b", mb: 0.5 }}>{stat.label}</Typography>
+                            <Typography sx={{ fontSize: "20px", fontWeight: 900, color: "#0f172a" }}>{stat.val}</Typography>
+                            <Typography sx={{ fontSize: "11px", color: i === 0 ? "#16a34a" : "#2563eb", fontWeight: 800 }}>{stat.growth}</Typography>
+                          </Box>
                         </Grid>
+                      ))}
+                    </Grid>
 
-                        <Box sx={{ height: "150px", position: "relative", pt: 2 }}>
-                           {/* animated line chart placeholder */}
-                           <svg width="100%" height="100%" viewBox="0 0 400 150">
-                              <motion.path
-                                d="M0,130 Q50,110 100,120 T200,80 T300,90 T400,20"
-                                fill="none"
-                                stroke="#2563eb"
-                                strokeWidth="4"
-                                initial={{ pathLength: 0 }}
-                                whileInView={{ pathLength: 1 }}
-                                transition={{ duration: 2, ease: "easeInOut" }}
-                              />
-                              <motion.path
-                                d="M0,140 Q50,130 100,135 T200,110 T300,120 T400,60"
-                                fill="none"
-                                stroke="#f59e0b"
-                                strokeWidth="4"
-                                opacity="0.3"
-                                initial={{ pathLength: 0 }}
-                                whileInView={{ pathLength: 1 }}
-                                transition={{ duration: 2, delay: 0.2, ease: "easeInOut" }}
-                              />
-                           </svg>
-                        </Box>
-                     </Stack>
-                  </Box>
-               </Box>
+                    <Box sx={{ height: "150px", position: "relative", pt: 2 }}>
+                      {/* animated line chart placeholder */}
+                      <svg width="100%" height="100%" viewBox="0 0 400 150">
+                        <motion.path
+                          d="M0,130 Q50,110 100,120 T200,80 T300,90 T400,20"
+                          fill="none"
+                          stroke="#2563eb"
+                          strokeWidth="4"
+                          initial={{ pathLength: 0 }}
+                          whileInView={{ pathLength: 1 }}
+                          transition={{ duration: 2, ease: "easeInOut" }}
+                        />
+                        <motion.path
+                          d="M0,140 Q50,130 100,135 T200,110 T300,120 T400,60"
+                          fill="none"
+                          stroke="#f59e0b"
+                          strokeWidth="4"
+                          opacity="0.3"
+                          initial={{ pathLength: 0 }}
+                          whileInView={{ pathLength: 1 }}
+                          transition={{ duration: 2, delay: 0.2, ease: "easeInOut" }}
+                        />
+                      </svg>
+                    </Box>
+                  </Stack>
+                </Box>
+              </Box>
             </Box>
           </Grid>
 
@@ -183,11 +167,11 @@ const MarketingAnalytics = () => {
               </Typography>
 
               <Stack direction="row" flexWrap="wrap" gap={1.5}>
-                 {["GA4 Setup & Migration", "Looker Studio Dashboards", "Multi-Touch Attribution", "Conversion Tracking", "Heatmap & Session Analysis"].map((tag, i) => (
-                   <Box key={i} sx={{ px: 2, py: 0.8, bgcolor: "rgba(37, 99, 235, 0.05)", border: "1px solid rgba(37, 99, 235, 0.1)", borderRadius: "8px", color: "#2563eb", fontSize: "14px", fontWeight: 700 }}>
-                      {tag}
-                   </Box>
-                 ))}
+                {["GA4 Setup & Migration", "Looker Studio Dashboards", "Multi-Touch Attribution", "Conversion Tracking", "Heatmap & Session Analysis"].map((tag, i) => (
+                  <Box key={i} sx={{ px: 2, py: 0.8, bgcolor: "rgba(37, 99, 235, 0.05)", border: "1px solid rgba(37, 99, 235, 0.1)", borderRadius: "8px", color: "#2563eb", fontSize: "14px", fontWeight: 700 }}>
+                    {tag}
+                  </Box>
+                ))}
               </Stack>
 
               <Box sx={{ pt: 2 }}>

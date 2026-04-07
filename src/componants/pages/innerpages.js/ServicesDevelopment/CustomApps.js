@@ -21,24 +21,7 @@ const CustomApps = () => {
   ];
 
   return (
-    <Box id="custom-apps" sx={{ py: { xs: 10, md: 20 }, bgcolor: "#f8fafc", position: "relative", overflow: "hidden" }}>
-      <Typography
-        variant="h1"
-        sx={{
-          position: "absolute",
-          top: "10%",
-          left: "50%",
-          transform: "translateX(-50%)",
-          fontSize: { xs: "120px", md: "250px" },
-          fontWeight: 900,
-          color: "rgba(15, 23, 42, 0.03)",
-          fontFamily: "'Syne', sans-serif",
-          zIndex: 0,
-          pointerEvents: "none",
-        }}
-      >
-        04
-      </Typography>
+    <Box id="custom-apps" sx={{ py: { xs: 8, md: 12 }, bgcolor: "#f8fafc", position: "relative", overflow: "hidden" }}>
 
       <Box
         sx={{
@@ -109,7 +92,7 @@ const CustomApps = () => {
                 <Typography sx={{ color: "#475569", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500 }}>
                   Off-the-shelf software often fails to meet unique business needs. As part of our comprehensive website development services, we build custom applications from the ground up, designed to solve your specific challenges. Our website development services ensure that your custom software is both functional and visually stunning.
                 </Typography>
-                
+
                 <Grid container spacing={2.5}>
                   {features.map((feature, i) => (
                     <Grid item xs={12} sm={6} key={i}>
@@ -124,9 +107,9 @@ const CustomApps = () => {
                 </Grid>
 
                 <Box sx={{ pt: 2 }}>
-                   <Button variant="contained" sx={{ bgcolor: "#7c3aed", px: 4, py: 1.5, borderRadius: "100px", textTransform: "none", fontWeight: 700 }}>
-                     Request Technical Proposal
-                   </Button>
+                  <Button variant="contained" sx={{ bgcolor: "#7c3aed", px: 4, py: 1.5, borderRadius: "100px", textTransform: "none", fontWeight: 700 }}>
+                    Request Technical Proposal
+                  </Button>
                 </Box>
               </Stack>
             </Grid>
@@ -158,16 +141,16 @@ const CustomApps = () => {
                           zIndex: 2,
                           boxShadow: "0 10px 20px rgba(0,0,0,0.02)",
                           "&:hover": {
-                             borderColor: tier.color,
-                             transform: "translateY(-5px)",
-                             transition: "all 0.3s ease"
+                            borderColor: tier.color,
+                            transform: "translateY(-5px)",
+                            transition: "all 0.3s ease"
                           }
                         }}
                       >
-                         <Box sx={{ color: tier.color }}><tier.icon size={28} /></Box>
-                         <Typography sx={{ color: "#1e293b", fontWeight: 800, fontSize: "18px" }}>{tier.name}</Typography>
+                        <Box sx={{ color: tier.color }}><tier.icon size={28} /></Box>
+                        <Typography sx={{ color: "#1e293b", fontWeight: 800, fontSize: "18px" }}>{tier.name}</Typography>
                       </Box>
-                      
+
                       {/* Connection Line */}
                       {i < tiers.length - 1 && (
                         <Box
@@ -182,20 +165,20 @@ const CustomApps = () => {
                           }}
                         >
                           <motion.div
-                             animate={{ y: [0, 40] }}
-                             transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-                             style={{
-                               width: "100%",
-                               height: "12px",
-                               background: `linear-gradient(to bottom, transparent, ${tier.color})`,
-                             }}
+                            animate={{ y: [0, 40] }}
+                            transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+                            style={{
+                              width: "100%",
+                              height: "12px",
+                              background: `linear-gradient(to bottom, transparent, ${tier.color})`,
+                            }}
                           />
                         </Box>
                       )}
                     </Box>
                   ))}
                 </Stack>
-                
+
                 {/* Floating Microicons */}
                 <Box sx={{ position: "absolute", top: "10%", right: 0, opacity: 0.3, color: "#06b6d4" }}><Code size={32} /></Box>
                 <Box sx={{ position: "absolute", bottom: "10%", left: 0, opacity: 0.3, color: "#7c3aed" }}><Network size={32} /></Box>

@@ -18,6 +18,8 @@ import ResultsImpact from "./ResultsImpact";
 import MarketingProcess from "./MarketingProcess";
 import WhyChooseVihaan from "./WhyChooseVihaan";
 import SEOKeywords from "./SEOKeywords";
+import LocationLinks from "../LocationPageLayout/LocationLinks";
+import { serviceTypes } from "../LocationPageLayout/locationData";
 
 const DigitalMarketing = () => {
   const [activeSection, setActiveSection] = useState(0);
@@ -136,6 +138,7 @@ const DigitalMarketing = () => {
         </section>
       </Box>
 
+      <LocationLinks serviceType={serviceTypes.DIGITAL_MARKETING} />
       <Footer />
     </Box>
   );

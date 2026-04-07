@@ -30,29 +30,12 @@ const WebDevelopment = () => {
     <Box
       id="web-dev"
       sx={{
-        py: { xs: 10, md: 20 },
+        py: { xs: 8, md: 12 },
         bgcolor: "#f8fafc",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      <Typography
-        variant="h1"
-        sx={{
-          position: "absolute",
-          top: "10%",
-          left: "50%",
-          transform: "translateX(-50%)",
-          fontSize: { xs: "120px", md: "250px" },
-          fontWeight: 900,
-          color: "rgba(15, 23, 42, 0.03)",
-          fontFamily: "'Syne', sans-serif",
-          zIndex: 0,
-          pointerEvents: "none",
-        }}
-      >
-        02
-      </Typography>
 
       <Box
         sx={{

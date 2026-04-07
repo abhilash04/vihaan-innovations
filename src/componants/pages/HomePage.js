@@ -11,6 +11,8 @@ import SpecializingSection from "./SpecializingSection";
 import OurExpert from "./OurExpert";
 import MobileHomePage from "./MobileHomePage";
 
+import LocationLinks from "./innerpages.js/LocationPageLayout/LocationLinks";
+
 const HomePage = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -31,9 +33,11 @@ const HomePage = () => {
       <TipsAndTricks />
       <OurExpert />
 
+      <LocationLinks />
       <Footer />
     </Grid>
   );
 };
+
 
 export default HomePage;

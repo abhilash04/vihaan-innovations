@@ -35,30 +35,13 @@ const UIUXDesign = () => {
     <Box
       id="ui-ux"
       sx={{
-        py: { xs: 10, md: 20 },
+        py: { xs: 10, md: 12 },
         position: "relative",
         overflow: "hidden",
         bgcolor: "#ffffff",
       }}
     >
-      {/* Background Watermark */}
-      <Typography
-        variant="h1"
-        sx={{
-          position: "absolute",
-          top: "5%",
-          left: "2%",
-          fontSize: { xs: "120px", md: "250px" },
-          fontWeight: 900,
-          color: "rgba(15, 23, 42, 0.03)",
-          fontFamily: "'Syne', sans-serif",
-          lineHeight: 1,
-          zIndex: 0,
-          pointerEvents: "none",
-        }}
-      >
-        01
-      </Typography>
+
 
       {/* Unique Section Orb */}
       <Box
@@ -75,7 +58,7 @@ const UIUXDesign = () => {
       />
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
-        <Grid container spacing={8} alignItems="center">
+        <Grid container spacing={10} alignItems="center">
           {/* Left Column Content */}
           <Grid item xs={12} md={6}>
             <Stack spacing={4}>
@@ -219,7 +202,6 @@ const UIUXDesign = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                minHeight: "550px",
               }}
             >
               <Stack direction="row" spacing={-12} sx={{ position: "relative" }}>
@@ -232,7 +214,7 @@ const UIUXDesign = () => {
                   viewport={{ once: true }}
                   sx={{
                     width: "250px",
-                    height: "500px",
+                    height: "400px",
                     bgcolor: "white",
                     borderRadius: "36px",
                     border: "2px solid #f1f5f9",
@@ -263,8 +245,8 @@ const UIUXDesign = () => {
                   }}
                   viewport={{ once: true }}
                   sx={{
-                    width: "270px",
-                    height: "540px",
+                    width: "160px",
+                    height: "450px",
                     background: "white",
                     borderRadius: "44px",
                     border: "8px solid #0f172a",
@@ -318,21 +300,21 @@ const UIUXDesign = () => {
                     mt: 10,
                   }}
                 >
-                   <Box sx={{ height: "40px", bgcolor: "#f8fafc", borderBottom: "1px solid #f1f5f9", display: "flex", alignItems: "center", px: 2, gap: 1 }}>
-                      <Box sx={{ width: 8, height: 8, borderRadius: "50%", bgcolor: "#cbd5e1" }} />
-                      <Box sx={{ width: 8, height: 8, borderRadius: "50%", bgcolor: "#cbd5e1" }} />
-                      <Box sx={{ width: 8, height: 8, borderRadius: "50%", bgcolor: "#cbd5e1" }} />
-                   </Box>
-                   <Box sx={{ p: 3 }}>
-                      <Stack spacing={2}>
-                         <Box sx={{ height: 120, bgcolor: "#f1f5f9", borderRadius: 3 }} />
-                         <Box sx={{ height: 20, width: "60%", bgcolor: "#f1f5f9", borderRadius: 1 }} />
-                         <Stack direction="row" spacing={1.5}>
-                            <Box sx={{ height: 35, flex: 1, bgcolor: "#7c3aed15", borderRadius: 2 }} />
-                            <Box sx={{ height: 35, flex: 1, bgcolor: "#f1f5f9", borderRadius: 2 }} />
-                         </Stack>
+                  <Box sx={{ height: "40px", bgcolor: "#f8fafc", borderBottom: "1px solid #f1f5f9", display: "flex", alignItems: "center", px: 2, gap: 1 }}>
+                    <Box sx={{ width: 8, height: 8, borderRadius: "50%", bgcolor: "#cbd5e1" }} />
+                    <Box sx={{ width: 8, height: 8, borderRadius: "50%", bgcolor: "#cbd5e1" }} />
+                    <Box sx={{ width: 8, height: 8, borderRadius: "50%", bgcolor: "#cbd5e1" }} />
+                  </Box>
+                  <Box sx={{ p: 3 }}>
+                    <Stack spacing={2}>
+                      <Box sx={{ height: 120, bgcolor: "#f1f5f9", borderRadius: 3 }} />
+                      <Box sx={{ height: 20, width: "60%", bgcolor: "#f1f5f9", borderRadius: 1 }} />
+                      <Stack direction="row" spacing={1.5}>
+                        <Box sx={{ height: 35, flex: 1, bgcolor: "#7c3aed15", borderRadius: 2 }} />
+                        <Box sx={{ height: 35, flex: 1, bgcolor: "#f1f5f9", borderRadius: 2 }} />
                       </Stack>
-                   </Box>
+                    </Stack>
+                  </Box>
                 </Box>
               </Stack>
             </Box>
