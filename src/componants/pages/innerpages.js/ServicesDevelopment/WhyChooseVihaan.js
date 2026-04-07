@@ -38,7 +38,7 @@ const WhyChooseVihaan = () => {
                 The Partner for Your <br />
                 <Box component="span" sx={{ color: "#06b6d4" }}>Next Big Idea</Box>
               </Typography>
-              
+
               <Stack spacing={2.5}>
                 {differentiators.map((item, i) => (
                   <Box
@@ -61,22 +61,22 @@ const WhyChooseVihaan = () => {
                       boxShadow: "0 4px 12px rgba(0,0,0,0.02)",
                     }}
                   >
-                     <Typography
-                        sx={{
-                          position: "absolute",
-                          right: 20,
-                          top: 10,
-                          fontSize: "80px",
-                          fontWeight: 900,
-                          color: "rgba(15, 23, 42, 0.03)",
-                          fontFamily: "'Syne', sans-serif",
-                          pointerEvents: "none"
-                        }}
-                     >
-                        0{i + 1}
-                     </Typography>
-                     <Typography sx={{ color: "#0f172a", fontWeight: 800, mb: 1.5, fontSize: "20px" }}>{item.title}</Typography>
-                     <Typography sx={{ color: "#475569", fontSize: "15px", lineHeight: 1.7, fontWeight: 500 }}>{item.desc}</Typography>
+                    <Typography
+                      sx={{
+                        position: "absolute",
+                        right: 20,
+                        top: 10,
+                        fontSize: "80px",
+                        fontWeight: 900,
+                        color: "rgba(15, 23, 42, 0.03)",
+                        fontFamily: "'Syne', sans-serif",
+                        pointerEvents: "none"
+                      }}
+                    >
+                      0{i + 1}
+                    </Typography>
+                    <Typography sx={{ color: "#0f172a", fontWeight: 800, mb: 1.5, fontSize: "20px" }}>{item.title}</Typography>
+                    <Typography sx={{ color: "#475569", fontSize: "15px", lineHeight: 1.7, fontWeight: 500 }}>{item.desc}</Typography>
                   </Box>
                 ))}
               </Stack>
@@ -85,93 +85,93 @@ const WhyChooseVihaan = () => {
 
           {/* Right - Testimonial & Trust */}
           <Grid item xs={12} md={6}>
-             <Box
-               component={motion.div}
-               initial={{ scale: 0.9, opacity: 0 }}
-               whileInView={{ scale: 1, opacity: 1 }}
-               transition={{ duration: 0.8 }}
-               viewport={{ once: true }}
-               sx={{
-                 position: "relative",
-                 p: 1, // for the gradient border effect
-                 borderRadius: "32px",
-                 background: "rgba(255, 255, 255, 0.05)",
-                 overflow: "hidden",
-               }}
-             >
-                {/* Animated Gradient Border Overlay */}
-                <Box
-                  component={motion.div}
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                  sx={{
-                    position: "absolute",
-                    top: "-50%",
-                    left: "-50%",
-                    right: "-50%",
-                    bottom: "-50%",
-                    background: "conic-gradient(#2563eb, #06b6d4, #7c3aed, #2563eb)",
-                    zIndex: 0,
-                  }}
-                />
-                
-                <Box
-                  sx={{
-                    position: "relative",
-                    p: 6,
-                    borderRadius: "28px",
-                    background: "#ffffff", // matches section bg but darker for contrast
-                    zIndex: 1,
-                  }}
-                >
-                   <Stack spacing={3}>
-                      <Stack direction="row" spacing={0.5}>
-                        {[1, 2, 3, 4, 5].map((s) => (
-                           <motion.div
-                             key={s}
-                             initial={{ scale: 0 }}
-                             whileInView={{ scale: 1 }}
-                             transition={{ delay: 0.5 + s * 0.1 }}
-                             viewport={{ once: true }}
-                           >
-                             <Star size={18} fill="#f59e0b" color="#f59e0b" />
-                           </motion.div>
-                        ))}
-                      </Stack>
+            <Box
+              component={motion.div}
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              sx={{
+                position: "relative",
+                p: 1, // for the gradient border effect
+                borderRadius: "32px",
+                background: "rgba(255, 255, 255, 0.05)",
+                overflow: "hidden",
+              }}
+            >
+              {/* Animated Gradient Border Overlay */}
+              <Box
+                component={motion.div}
+                animate={{ rotate: 360 }}
+                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                sx={{
+                  position: "absolute",
+                  top: "-50%",
+                  left: "-50%",
+                  right: "-50%",
+                  bottom: "-50%",
+                  background: "conic-gradient(#2563eb, #06b6d4, #7c3aed, #2563eb)",
+                  zIndex: 0,
+                }}
+              />
 
-                      <Quote size={48} color="rgba(37, 99, 235, 0.2)" />
-                      
-                      <Typography
-                        sx={{
-                          fontSize: "24px",
-                          fontWeight: 700,
-                          lineHeight: 1.4,
-                          color: "#0f172a",
-                          fontFamily: "'Syne', sans-serif",
-                        }}
+              <Box
+                sx={{
+                  position: "relative",
+                  p: 6,
+                  borderRadius: "28px",
+                  background: "#ffffff", // matches section bg but darker for contrast
+                  zIndex: 1,
+                }}
+              >
+                <Stack spacing={3}>
+                  <Stack direction="row" spacing={0.5}>
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <motion.div
+                        key={s}
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        transition={{ delay: 0.5 + s * 0.1 }}
+                        viewport={{ once: true }}
                       >
-                        "Vihaan transformed our idea into a platform serving 200,000 users in under 6 months. The team's technical depth is unmatched."
-                      </Typography>
+                        <Star size={18} fill="#f59e0b" color="#f59e0b" />
+                      </motion.div>
+                    ))}
+                  </Stack>
 
-                      <Stack direction="row" spacing={2} alignItems="center">
-                         <Avatar sx={{ width: 56, height: 56, bgcolor: "#2563eb" }}>JD</Avatar>
-                         <Stack>
-                            <Typography sx={{ color: "#0f172a", fontWeight: 700 }}>John Doe</Typography>
-                            <Typography sx={{ color: "#475569", fontSize: "13px" }}>CTO at TechGlobal</Typography>
-                         </Stack>
-                      </Stack>
+                  <Quote size={48} color="rgba(37, 99, 235, 0.2)" />
 
-                      <Box sx={{ pt: 4, borderTop: "1px solid #f1f5f9" }}>
-                         <Typography sx={{ color: "#94a3b8", fontSize: "12px", fontWeight: 700, textTransform: "uppercase", mb: 2 }}>TRUSTED BY LEADING TEAMS</Typography>
-                         <Stack direction="row" spacing={3} sx={{ opacity: 0.4 }}>
-                            {[1, 2, 3, 4].map((i) => (
-                               <Box key={i} sx={{ width: 80, height: 20, bgcolor: "#0f172a", borderRadius: 1 }} />
-                            ))}
-                         </Stack>
-                      </Box>
-                   </Stack>
-                </Box>
-             </Box>
+                  <Typography
+                    sx={{
+                      fontSize: "24px",
+                      fontWeight: 700,
+                      lineHeight: 1.4,
+                      color: "#0f172a",
+                      fontFamily: "'Syne', sans-serif",
+                    }}
+                  >
+                    "Vihaan transformed our idea into a platform serving 200,000 users in under 6 months. The team's technical depth is unmatched."
+                  </Typography>
+
+                  <Stack direction="row" spacing={2} alignItems="center">
+                    <Avatar sx={{ width: 56, height: 56, bgcolor: "#2563eb" }}>JD</Avatar>
+                    <Stack>
+                      <Typography sx={{ color: "#0f172a", fontWeight: 700 }}>John Doe</Typography>
+                      <Typography sx={{ color: "#475569", fontSize: "13px" }}>CTO at TechGlobal</Typography>
+                    </Stack>
+                  </Stack>
+
+                  <Box sx={{ pt: 4, borderTop: "1px solid #f1f5f9" }}>
+                    <Typography sx={{ color: "#94a3b8", fontSize: "12px", fontWeight: 700, textTransform: "uppercase", mb: 2 }}>TRUSTED BY LEADING TEAMS</Typography>
+                    <Stack direction="row" spacing={3} sx={{ opacity: 0.4 }}>
+                      {[1, 2, 3, 4].map((i) => (
+                        <Box key={i} sx={{ width: 80, height: 20, bgcolor: "#0f172a", borderRadius: 1 }} />
+                      ))}
+                    </Stack>
+                  </Box>
+                </Stack>
+              </Box>
+            </Box>
           </Grid>
         </Grid>
       </Container>

@@ -1,7 +1,15 @@
 import React from "react";
 import { Box, Container, Typography, Stack, Link } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 
 const SEOKeywords = () => {
+  const createSlug = (text) =>
+    text
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[()]/g, "")
+      .replace(/-+/g, "-");
+
   const localities = [
     "Marathahalli", "Koramangala", "Indiranagar", "Electronic City", "Whitefield",
     "Jayanagar", "HSR Layout", "Rajajinagar", "JP Nagar", "Yelahanka",
@@ -14,7 +22,7 @@ const SEOKeywords = () => {
     "Ahmedabad", "Kolkata", "Lucknow", "Jaipur", "Indore", "Kochi",
     "Coimbatore", "Nagpur", "Ludhiana", "Agra", "Surat", "Madurai",
     "Vadodara", "Meerut", "Thiruvananthapuram", "Nashik", "Gurgaon",
-    "Noida", "Chandigarh", "Visakhapatnam", "Bhopal", "Patna", "Gazaibad"
+    "Noida", "Chandigarh", "Visakhapatnam", "Bhopal", "Patna", "Ghazaibad"
   ];
 
   const countries = [
@@ -50,7 +58,8 @@ const SEOKeywords = () => {
         {items.map((item, index) => (
           <React.Fragment key={index}>
             <Link
-              href={`#`}
+              component={RouterLink}
+              to={`/website-development-services-in-${createSlug(item)}`}
               sx={{
                 color: "inherit",
                 textDecoration: "none",
