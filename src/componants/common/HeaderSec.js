@@ -2011,7 +2011,7 @@ const Header = () => {
                   {/* Blog */}
                   <Button
                     sx={navButtonStyle(null)}
-                    onClick={() => navigate("/blog")}
+                    onClick={() => navigate("/articles")}
                   >
                     Blog
                   </Button>
