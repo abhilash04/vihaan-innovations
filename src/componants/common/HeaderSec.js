@@ -23,8 +23,8 @@ import {
   ExpandLess as ExpandLessIcon,
 } from "@mui/icons-material";
 import SearchIcon from "@mui/icons-material/Search";
-// import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
-import logo from "../../assets/vihaan-logo.png";
+import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
+// import logo from "../../assets/vihaan-logo.png";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import img1 from "../../assets/img2.png"
 import {
@@ -161,63 +161,63 @@ const Header = () => {
         icon: ShoppingCart,
         title: "Ecommerce Single Vendor",
         description: "Single shop",
-        href: "/ecommerce-single-vendor",
+        href: "/ready-products/ecommerce-single-vendor",
         color: "#34D399", // green
       },
       {
         icon: Store,
         title: "Ecommerce Multi Vendor",
         description: "Multi shop",
-        href: "/ecommerce-multi-vendor",
+        href: "/ready-products/ecommerce-multi-vendor",
         color: "#6366F1", // blue-violet
       },
       {
         icon: Utensils,
         title: "Food Booking",
         description: "Order food",
-        href: "/food-booking",
+        href: "/ready-products/food-booking",
         color: "#F59E0B", // amber
       },
       {
         icon: BedDouble,
         title: "Resort Booking & Management",
         description: "Manage rooms",
-        href: "/resort-booking-management",
+        href: "/ready-products/resort-booking-management",
         color: "#06B6D4", // cyan
       },
       {
         icon: LayoutGrid,
         title: "Listing Site",
         description: "List items",
-        href: "/listing-platform",
+        href: "/ready-products/listing-platform",
         color: "#10B981", // teal
       },
       {
         icon: Home,
         title: "Real Estate Portal",
         description: "Buy & sell",
-        href: "/real-estate-portal",
+        href: "/ready-products/real-estate-portal",
         color: "#EF4444", // red
       },
       {
         icon: Building2,
         title: "Real Estate CRM",
         description: "Track leads",
-        href: "/real-estate-crm",
+        href: "/ready-products/real-estate-crm",
         color: "#8B5CF6", // violet
       },
       {
         icon: GraduationCap,
         title: "Education CRM",
         description: "School tools",
-        href: "/education-crm",
+        href: "/ready-products/education-crm",
         color: "#3B82F6", // blue
       },
       {
         icon: HeartHandshake,
         title: "Matrimony",
         description: "Find match",
-        href: "/matrimony-crm",
+        href: "/ready-products/matrimony-crm",
         color: "#EC4899", // pink
       },
     ],
@@ -227,42 +227,42 @@ const Header = () => {
         icon: Users2,
         title: "HRM Software",
         description: "Manage staff",
-        href: "/hrm-software",
+        href: "/ready-products/hrm-software",
         color: "#F97316",
       },
       {
         icon: Stethoscope,
         title: "Hospital Management",
         description: "Healthcare tool",
-        href: "/hospital-management-system",
+        href: "/ready-products/hospital-management-system",
         color: "#4ADE80", // lime
       },
       {
         icon: Car,
         title: "Cab Booking App",
         description: "Book ride",
-        href: "/cab-booking-app",
+        href: "/ready-products/cab-booking-app",
         color: "#0EA5E9", // sky
       },
       {
         icon: BookOpen,
         title: "LMS",
         description: "Online learning",
-        href: "/lms-platform",
+        href: "/ready-products/lms-platform",
         color: "#A855F7", // purple
       },
       {
         icon: Hotel,
         title: "Hotel Booking",
         description: "Book rooms",
-        href: "/hotel-booking",
+        href: "/ready-products/hotel-booking",
         color: "#F43F5E", // rose
       },
       {
         icon: Bot,
         title: "AI Chatbot",
         description: "Smart support",
-        href: "/ai-chatbot",
+        href: "/ready-products/ai-chatbot",
         color: "#7C3AED", // deep purple
       },
     ],
@@ -270,133 +270,128 @@ const Header = () => {
       "Development Services": [
         {
           label: "UI / UX Design",
-          href: "/ui-ux-design",
+          href: "/services/ui-ux-design",
           icon: Palette,
         },
         {
           label: "Web Designing & Development",
-          href: "/web-development",
+          href: "/services/web-designing",
           icon: Layout,
         },
         {
           label: "Mobile Apps Development",
-          href: "/mobile-app-development",
+          href: "/services/mobile-app-development",
           icon: Smartphone,
         },
         {
           label: "Custom Application Development",
-          href: "/custom-software-development",
+          href: "/services/custom-software-development",
           icon: Code,
         },
         {
           label: "Cloud-Based Development",
-          href: "/cloud-computing",
+          href: "/services/cloud-computing",
           icon: Cloud,
         },
         {
           label: "DevOps & Automation Development",
-          href: "/devops-services",
+          href: "/services/devops-and-automation",
           icon: Workflow,
         },
         {
           label: "Data Science & Big Data Development",
-          href: "/data-analytics",
+          href: "/services/data-science-big-data",
           icon: Database,
         },
         {
           label: "Ecommerce Software Development",
-          href: "/ecommerce-software-development",
+          href: "/services/ecommerce-software-development",
           icon: Boxes,
         },
         {
           label: "AI / ML & Automation",
-          href: "/ai-ml-development",
+          href: "/services/ai-ml-automation",
           icon: Bot,
         },
         {
           label: "Maintenance & Support",
-          href: "/maintenance-&-support",
+          href: "/services/maintenance-and-support",
           icon: LifeBuoy,
         },
       ],
       "Digital Marketing": [
         {
           label: "SEO (Search Engine Optimization)",
-          href: "/seo-services",
-          icon: Search,
-        },
-        {
-          label: "OFF-Page SEO",
-          href: "/off-page-seo",
+          href: "/services/seo",
           icon: Search,
         },
         {
           label: "Social Media Marketing (SMM)",
-          href: "/social-media-marketing",
+          href: "/services/social-media-marketing",
           icon: Share2,
         },
         {
           label: "Search Engine Marketing (SEM / Paid Ads)",
-          href: "/sem-services",
+          href: "/services/sem",
           icon: MonitorPlay,
         },
         {
           label: "Video Marketing",
-          href: "/video-marketing",
+          href: "/services/video-marketing",
           icon: Film,
         },
         {
           label: "Email Marketing",
-          href: "/email-marketing",
+          href: "/services/email-marketing",
           icon: Mail,
         },
         {
           label: "Content Marketing",
-          href: "/content-marketing",
+          href: "/services/content-marketing",
           icon: FileText,
         },
         {
           label: "Google My Business (Local SEO)",
-          href: "/google-my-business",
+          href: "/services/google-my-business",
           icon: MapPin,
         },
         {
           label: "Affiliate & Influencer Marketing",
-          href: "/influencer-affiliate-marketing",
+          href: "/services/influencer-affiliate-marketing",
           icon: Users,
         },
       ],
       "Animation & Video Services": [
         {
           label: "Logo Designing",
-          href: "/logo-design",
+          href: "/services/logo-designing",
           icon: Type,
         },
         {
           label: "Graphic Designing",
-          href: "/graphic-design",
+          href: "/services/graphic-designing",
           icon: Image,
         },
-        { label: "2D Animation", href: "/2d-animation", icon: Film },
-        { label: "3D Animation", href: "/3d-animation", icon: Layers },
+        { label: "2D Animation", href: "/services/2d-animation", icon: Film },
+        { label: "3D Animation", href: "/services/3d-animation", icon: Layers },
         {
           label: "Explainer Videos",
-          href: "/explainer-videos",
+          href: "/services/explainer-videos",
           icon: Video,
         },
         {
           label: "Motion Graphics Animation",
-          href: "/motion-graphics",
+          href: "/services/motion-graphics-animation",
           icon: PenTool,
         },
         {
           label: "Whiteboard Animation",
-          href: "/whiteboard-animation",
+          href: "/services/whiteboard-animation",
           icon: Edit3,
         },
         {
           label: "Video Editing & VFX",
-          href: "/video-editing-vfx",
+          href: "/services/video-editing-and-vfx",
           icon: Scissors,
         },
 
@@ -405,60 +400,60 @@ const Header = () => {
 
     training: {
       "Digital Marketing Training": [
-        { label: "SEO", href: "/seo-training", icon: Search },
+        { label: "SEO", href: "/training/seo", icon: Search },
         {
           label: "SEM (Google Ads)",
-          href: "/sem-google-ads-training",
+          href: "/training/sem-google-ads",
           icon: MonitorSmartphone,
         },
         {
           label: "Social Media Marketing",
-          href: "/social-media-marketing-training",
+          href: "/training/social-media-marketing",
           icon: Share2,
         },
-        { label: "Email Marketing", href: "/email-marketing-training", icon: Mail },
+        { label: "Email Marketing", href: "/training/email-marketing", icon: Mail },
         {
           label: "Content Marketing",
-          href: "/content-marketing-training",
+          href: "/training/content-marketing",
           icon: FileText,
         },
       ],
       "Software Training": [
         {
           label: "Web Designing & Development (React)",
-          href: "/web-design-react-training",
+          href: "/training/web-designing-react",
           icon: Code,
         },
-        { label: "Java Training", href: "/java-training", icon: Laptop },
-        { label: "Python Training", href: "/python-training", icon: Brain },
+        { label: "Java Training", href: "/training/java", icon: Laptop },
+        { label: "Python Training", href: "/training/python", icon: Brain },
         {
           label: "Android & iOS Training",
-          href: "/mobile-app-training",
+          href: "/training/android-and-ios",
           icon: Smartphone,
         },
         {
           label: "Manual & Automation Testing",
-          href: "/software-testing-training",
+          href: "/training/manual-and-automation-testing",
           icon: BugPlay,
         },
       ],
       "Animation Training": [
         {
           label: "Graphic Designing",
-          href: "/graphic-designing-training",
+          href: "/training/graphic-designing",
           icon: Palette,
         },
         {
           label: "Explainer Videos",
-          href: "/explainer-videos-training",
+          href: "/training/explainer-videos",
           icon: Clapperboard,
         },
-        { label: "2D Animation", href: "/2d-animation-training", icon: Type },
-        { label: "3D Animation", href: "/3d-animation-training", icon: Video },
-        { label: "Motion Graphics", href: "/motion-graphics-training", icon: Film },
+        { label: "2D Animation", href: "/training/2d-animation", icon: Type },
+        { label: "3D Animation", href: "/training/3d-animation", icon: Video },
+        { label: "Motion Graphics", href: "/training/motion-graphics", icon: Film },
         {
           label: "Video Editing & VFX",
-          href: "/video-editing-vfx-training",
+          href: "/training/video-editing-and-vfx",
           icon: Clapperboard,
         },
       ],
@@ -1152,7 +1147,7 @@ const Header = () => {
           </Typography>
           <Typography
             component="a"
-            href="/web-development-services"
+            href="/services/web-development"
             sx={{
               display: "flex",
               alignItems: "center",
@@ -1240,7 +1235,7 @@ const Header = () => {
                     {category === "Digital Marketing" && (
                       <Typography
                         component="a"
-                        href="/digital-marketing-services"
+                        href="/services/digital-marketing"
                         sx={{
                           display: "flex",
                           alignItems: "center",

@@ -94,7 +94,7 @@ const ServicesOverview = ({ data }) => {
 
   const handleExplore = (serviceTitle) => {
     const slug = serviceTitle.toLowerCase().replace(/\s+/g, "-");
-    navigate(`/service-details/${slug}`);
+    navigate(`/services/${slug}`);
   };
 
   return (
