@@ -12,7 +12,7 @@ const Hero = () => {
         alignItems: "center",
         overflow: "hidden",
         bgcolor: "#ffffff",
-        pt: { xs: 12, md: 6 },
+        pt: { xs: 12, md: 10 },
         position: "relative"
       }}
     >
@@ -80,8 +80,7 @@ const Hero = () => {
                   letterSpacing: "-0.02em",
                 }}
               >
-                Expert <br />
-                <Box component={motion.span} sx={{ color: "#2563eb", display: "inline-block" }}>Digital Marketing Services.</Box>
+                <span style={{ color: "#2563eb" }}>Expert</span> Digital Marketing Services.
               </Typography>
 
               <Typography

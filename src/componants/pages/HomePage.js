@@ -33,7 +33,6 @@ const HomePage = () => {
       <TipsAndTricks />
       <OurExpert />
 
-      <LocationLinks />
       <Footer />
     </Grid>
   );

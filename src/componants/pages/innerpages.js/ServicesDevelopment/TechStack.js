@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Container, Typography, Stack } from "@mui/material";
 import { motion } from "framer-motion";
-import { 
-  Globe, Smartphone, Layout, Cpu, Database, 
-  Cloud, Workflow, Boxes, Bot, LifeBuoy, Monitor 
+import {
+  Globe, Smartphone, Layout, Cpu, Database,
+  Cloud, Workflow, Boxes, Bot, LifeBuoy, Monitor
 } from "lucide-react";
 
 const TechStack = () => {
@@ -88,7 +88,7 @@ const TechStack = () => {
   );
 
   return (
-    <Box id="tech-stack" sx={{ py: { xs: 15, md: 20 }, bgcolor: "#f1f5f9", overflow: "hidden" }}>
+    <Box id="tech-stack" sx={{ py: { xs: 8, md: 10 }, bgcolor: "#f1f5f9", overflow: "hidden" }}>
       <Container maxWidth="lg" sx={{ mb: 8, textAlign: "center" }}>
         <Stack spacing={2} alignItems="center">
           <Typography sx={{ color: "#06b6d4", fontWeight: 800, letterSpacing: "0.2em", fontSize: "14px", textTransform: "uppercase" }}>

@@ -129,6 +129,7 @@ import ScrollToTop from "./componants/common/ScrollToTop";
 import LocationPageLayout from "./componants/pages/innerpages.js/LocationPageLayout/LocationPageLayout";
 
 import DigitalMarketing from "./componants/pages/innerpages.js/DigitalMarketing/DigitalMarketing";
+import { allLocations, slugify } from "./componants/pages/innerpages.js/LocationPageLayout/locationData";
 
 function App() {
   return (
@@ -294,14 +295,18 @@ function App() {
             {/* Dynamic Services Overview Details */}
             <Route path="/services/:title" element={<ServiceDetails />} />
 
-            <Route
-              path="/website-development-services-in/:location"
-              element={<LocationPageLayout />}
-            />
-            <Route
-              path="/digital-marketing-services-in/:location"
-              element={<LocationPageLayout />}
-            />
+            {allLocations.map((loc) => (
+              <React.Fragment key={loc}>
+                <Route
+                  path={`/services/website-development-services-in-${slugify(loc)}`}
+                  element={<LocationPageLayout />}
+                />
+                <Route
+                  path={`/services/digital-marketing-services-in-${slugify(loc)}`}
+                  element={<LocationPageLayout />}
+                />
+              </React.Fragment>
+            ))}
           </Routes>
         </Router>
       </Grid>
