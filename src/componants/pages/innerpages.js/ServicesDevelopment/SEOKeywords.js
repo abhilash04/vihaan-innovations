@@ -1,14 +1,9 @@
 import React from "react";
-import { Box, Container, Typography, Stack, Link } from "@mui/material";
+import { Box, Container, Typography, Link } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
+import { slugify } from "../LocationPageLayout/locationData";
 
 const SEOKeywords = () => {
-  const createSlug = (text) =>
-    text
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[()]/g, "")
-      .replace(/-+/g, "-");
 
   const localities = [
     "Marathahalli", "Koramangala", "Indiranagar", "Electronic City", "Whitefield",
@@ -59,7 +54,7 @@ const SEOKeywords = () => {
           <React.Fragment key={index}>
             <Link
               component={RouterLink}
-              to={`/website-development-services-in-${createSlug(item)}`}
+              to={`/services/website-development-services-in-${slugify(item)}`}
               sx={{
                 color: "inherit",
                 textDecoration: "none",

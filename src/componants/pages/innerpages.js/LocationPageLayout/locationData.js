@@ -28,58 +28,58 @@ export const serviceTypes = {
 // --- SECTION DATA ---
 
 export const webDevServices = [
-    { icon: "🎨", title: "UI / UX Design", desc: "Human-centered design that converts. Wireframes, prototypes and pixel-perfect interfaces.", tags: ["Figma", "Prototyping", "User Research"] },
-    { icon: "💻", title: "Web Design & Development", desc: "Responsive, SEO-ready websites built with modern stacks for the local market.", tags: ["React", "Next.js", "Node.js"] },
-    { icon: "📱", title: "Mobile App Development", desc: "Cross-platform iOS & Android apps that delight users and drive engagement.", tags: ["Flutter", "React Native", "Swift"] },
-    { icon: "⚙️", title: "Custom Application Development", desc: "Bespoke software for your business workflows. Scalable, secure and maintainable.", tags: ["Python", "Java", "Microservices"] },
-    { icon: "☁️", title: "Cloud-Based Development", desc: "Build, deploy and scale on AWS, Azure or GCP with cloud-native architecture.", tags: ["AWS", "Azure", "GCP", "K8s"] },
-    { icon: "🛒", title: "Ecommerce Development", desc: "High-converting online stores with payment gateways and seamless checkout.", tags: ["Shopify", "Magento", "WooCommerce"] }
+  { icon: "🎨", title: "UI / UX Design", desc: "Human-centered design that converts. Wireframes, prototypes and pixel-perfect interfaces.", tags: ["Figma", "Prototyping", "User Research"] },
+  { icon: "💻", title: "Web Design & Development", desc: "Responsive, SEO-ready websites built with modern stacks for the local market.", tags: ["React", "Next.js", "Node.js"] },
+  { icon: "📱", title: "Mobile App Development", desc: "Cross-platform iOS & Android apps that delight users and drive engagement.", tags: ["Flutter", "React Native", "Swift"] },
+  { icon: "⚙️", title: "Custom Application Development", desc: "Bespoke software for your business workflows. Scalable, secure and maintainable.", tags: ["Python", "Java", "Microservices"] },
+  { icon: "☁️", title: "Cloud-Based Development", desc: "Build, deploy and scale on AWS, Azure or GCP with cloud-native architecture.", tags: ["AWS", "Azure", "GCP", "K8s"] },
+  { icon: "🛒", title: "Ecommerce Development", desc: "High-converting online stores with payment gateways and seamless checkout.", tags: ["Shopify", "Magento", "WooCommerce"] }
 ];
 
 export const digitalMarketingServices = [
-    { icon: "🔍", title: "Search Engine Optimization", desc: "Dominating search rankings in your locality through technical SEO and quality content.", tags: ["Keyword Research", "On-Page", "Backlinks"] },
-    { icon: "📈", title: "Pay-Per-Click (PPC)", desc: "High-ROI ad campaigns on Google and Social Media to jumpstart your local traffic.", tags: ["Google Ads", "Retargeting", "Conversion Tracking"] },
-    { icon: "📱", title: "Social Media Marketing", desc: "Building brand loyalty and community engagement across major social platforms.", tags: ["Instagram", "LinkedIn", "Facebook"] },
-    { icon: "📧", title: "Email & Automation", desc: "Nurturing leads and retaining customers through personalized automated sequences.", tags: ["Mailchimp", "Klaviyo", "CRM"] },
-    { icon: "✍️", title: "Content Marketing", desc: "Engaging storytelling that establishes your brand as an authority in your industry.", tags: ["Blogging", "Video Content", "Copywriting"] },
-    { icon: "📊", title: "Performance Analytics", desc: "Data-driven insights to optimize every aspect of your digital marketing funnel.", tags: ["GA4", "GTM", "Data Studio"] }
+  { icon: "🔍", title: "Search Engine Optimization", desc: "Dominating search rankings in your locality through technical SEO and quality content.", tags: ["Keyword Research", "On-Page", "Backlinks"] },
+  { icon: "📈", title: "Pay-Per-Click (PPC)", desc: "High-ROI ad campaigns on Google and Social Media to jumpstart your local traffic.", tags: ["Google Ads", "Retargeting", "Conversion Tracking"] },
+  { icon: "📱", title: "Social Media Marketing", desc: "Building brand loyalty and community engagement across major social platforms.", tags: ["Instagram", "LinkedIn", "Facebook"] },
+  { icon: "📧", title: "Email & Automation", desc: "Nurturing leads and retaining customers through personalized automated sequences.", tags: ["Mailchimp", "Klaviyo", "CRM"] },
+  { icon: "✍️", title: "Content Marketing", desc: "Engaging storytelling that establishes your brand as an authority in your industry.", tags: ["Blogging", "Video Content", "Copywriting"] },
+  { icon: "📊", title: "Performance Analytics", desc: "Data-driven insights to optimize every aspect of your digital marketing funnel.", tags: ["GA4", "GTM", "Data Studio"] }
 ];
 
 export const commonProcess = [
-    { number: "01", title: "Strategy & Discovery", desc: "We deep dive into your business goals and local market dynamics." },
-    { number: "02", title: "Planning & Design", desc: "Crafting the blueprint and visual identity of your digital solution." },
-    { number: "03", title: "Agile Development", desc: "Building your project with precision through iterative development cycles." },
-    { number: "04", title: "Testing & QA", desc: "Rigorous quality checks to ensure a bug-free, high-performance launch." },
-    { number: "05", title: "Deployment & Growth", desc: "Launching your project and implementing growth-focused strategies." }
+  { number: "01", title: "Strategy & Discovery", desc: "We deep dive into your business goals and local market dynamics." },
+  { number: "02", title: "Planning & Design", desc: "Crafting the blueprint and visual identity of your digital solution." },
+  { number: "03", title: "Agile Development", desc: "Building your project with precision through iterative development cycles." },
+  { number: "04", title: "Testing & QA", desc: "Rigorous quality checks to ensure a bug-free, high-performance launch." },
+  { number: "05", title: "Deployment & Growth", desc: "Launching your project and implementing growth-focused strategies." }
 ];
 
 export const webDevTech = [
-    { name: "React & Next.js", icon: "⚛️" },
-    { name: "Node.js & Express", icon: "🟢" },
-    { name: "Python & Django", icon: "🐍" },
-    { name: "AWS & Azure", icon: "☁️" },
-    { name: "PostgreSQL & MongoDB", icon: "🗄️" },
-    { name: "Docker & Kubernetes", icon: "🐳" }
+  { name: "React & Next.js", icon: "⚛️" },
+  { name: "Node.js & Express", icon: "🟢" },
+  { name: "Python & Django", icon: "🐍" },
+  { name: "AWS & Azure", icon: "☁️" },
+  { name: "PostgreSQL & MongoDB", icon: "🗄️" },
+  { name: "Docker & Kubernetes", icon: "🐳" }
 ];
 
 export const digitalMarketingTech = [
-    { name: "Google Analytics 4", icon: "📊" },
-    { name: "Search Console", icon: "🔍" },
-    { name: "SEMrush & Ahrefs", icon: "📈" },
-    { name: "Meta Business Suite", icon: "📱" },
-    { name: "HubSpot CRM", icon: "🤝" },
-    { name: "Canva & Adobe CC", icon: "🎨" }
+  { name: "Google Analytics 4", icon: "📊" },
+  { name: "Search Console", icon: "🔍" },
+  { name: "SEMrush & Ahrefs", icon: "📈" },
+  { name: "Meta Business Suite", icon: "📱" },
+  { name: "HubSpot CRM", icon: "🤝" },
+  { name: "Canva & Adobe CC", icon: "🎨" }
 ];
 
 export const industries = [
-    { name: "Fintech", icon: "💰" },
-    { name: "Healthcare", icon: "🏥" },
-    { name: "Edtech", icon: "🎓" },
-    { name: "Retail", icon: "🛒" },
-    { name: "Real Estate", icon: "🏢" },
-    { name: "Logistics", icon: "🚚" },
-    { name: "Travel", icon: "✈️" },
-    { name: "Media", icon: "🎬" }
+  { name: "Fintech", icon: "💰" },
+  { name: "Healthcare", icon: "🏥" },
+  { name: "Edtech", icon: "🎓" },
+  { name: "Retail", icon: "🛒" },
+  { name: "Real Estate", icon: "🏢" },
+  { name: "Logistics", icon: "🚚" },
+  { name: "Travel", icon: "✈️" },
+  { name: "Media", icon: "🎬" }
 ];
 
 // --- CONTENT GENERATOR ---
@@ -87,7 +87,7 @@ export const industries = [
 export const getContentForLocation = (location, serviceType) => {
   const isWebDev = serviceType === serviceTypes.WEBSITE_DEVELOPMENT;
   const cleanLocation = location.replace(/ \(.*\)/, "");
-  
+
   // High-variety linguistic templates to ensure human-like uniqueness (no-AI feel)
   const intros = [
     `In the fast-evolving digital landscape of ${cleanLocation}, having a high-performance website is no longer an option—it's a necessity.`,
@@ -138,3 +138,10 @@ export const allLocations = [
   ...majorIndianCities,
   ...globalCities
 ];
+
+export const slugify = (text) =>
+  text.toLowerCase()
+    .replace(/ \(.*\)/, "") // Remove (Asia) etc
+    .replace(/\s+/g, "-")
+    .replace(/[()]/g, "")
+    .replace(/-+/g, "-");

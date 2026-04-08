@@ -1,17 +1,12 @@
 import React from "react";
 import { Box, Container, Typography, Grid, Link } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
-import { bangaloreLocalities, majorIndianCities, globalCities, serviceTypes } from "./locationData";
+import { bangaloreLocalities, majorIndianCities, globalCities, serviceTypes, slugify } from "./locationData";
 
 const LocationLinks = ({ serviceType }) => {
     const isWebDev = serviceType === serviceTypes.WEBSITE_DEVELOPMENT;
     const isDigitalMarketing = serviceType === serviceTypes.DIGITAL_MARKETING;
     const showAll = !serviceType;
-
-    const slugify = (text) => 
-        text.toLowerCase()
-            .replace(/ \(.*\)/, "") // Remove (Asia) etc
-            .replace(/ /g, "-");
 
     const renderLinkGroup = (title, locations, pathPrefix, linkSuffix) => (
         <Box sx={{ mb: 6 }}>
@@ -23,7 +18,7 @@ const LocationLinks = ({ serviceType }) => {
                     <Grid item key={loc}>
                         <Link
                             component={RouterLink}
-                            to={`/${pathPrefix}-in/${slugify(loc)}`}
+                            to={`/services/${pathPrefix}-in-${slugify(loc)}`}
                             sx={{
                                 fontSize: "13px",
                                 color: "#378add",
@@ -56,7 +51,7 @@ const LocationLinks = ({ serviceType }) => {
                         {renderLinkGroup("Global IT Solutions & Consulting", globalCities, "website-development-services", "Website Development Services")}
                     </>
                 )}
-                
+
                 {(showAll || isDigitalMarketing) && (
                     <Box sx={{ mt: (showAll || isWebDev) ? 8 : 0 }}>
                         {/* Digital Marketing Sections */}

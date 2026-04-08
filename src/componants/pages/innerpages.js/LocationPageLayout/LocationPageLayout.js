@@ -28,9 +28,18 @@ const LocationPageLayout = () => {
         ? serviceTypes.DIGITAL_MARKETING
         : serviceTypes.WEBSITE_DEVELOPMENT;
 
+    // Parse location from pathname if locationParam is empty (for hyphenated routes)
+    let detectedLocation = locationParam;
+    if (!detectedLocation) {
+        const parts = path.split("-in-");
+        if (parts.length > 1) {
+            detectedLocation = parts[1];
+        }
+    }
+
     // Format location name (e.g., "marathahalli" -> "Marathahalli")
-    const locationName = locationParam
-        ? locationParam.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
+    const locationName = detectedLocation
+        ? detectedLocation.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
         : "Bangalore";
 
     // Get unique content for this location and service type from our single data source
