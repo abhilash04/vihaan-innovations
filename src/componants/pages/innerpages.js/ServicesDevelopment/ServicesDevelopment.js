@@ -139,10 +139,6 @@ const ServicesDevelopment = () => {
         <section data-section-id="14">
           <WhyChooseVihaan />
         </section>
-
-        <section data-section-id="15">
-          <SEOKeywords />
-        </section>
       </Box>
 
       <LocationLinks serviceType={serviceTypes.WEBSITE_DEVELOPMENT} />

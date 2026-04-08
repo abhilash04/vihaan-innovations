@@ -78,6 +78,7 @@ const DevelopmentProcess = () => {
                       right: "-50%",
                       p: 3,
                       background: "#ffffff",
+                      mt: 8,
                       borderRadius: "24px",
                       border: "1px solid #e2e8f0",
                       boxShadow: "0 10px 30px rgba(0,0,0,0.03)",

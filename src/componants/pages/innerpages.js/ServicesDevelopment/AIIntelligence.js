@@ -38,7 +38,7 @@ const AIIntelligence = () => {
     <Box
       id="ai-intelligence"
       sx={{
-        py: { xs: 15, md: 20 },
+        py: { xs: 8, md: 10 },
         bgcolor: "#ffffff",
         position: "relative",
         overflow: "hidden",
@@ -85,21 +85,7 @@ const AIIntelligence = () => {
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 10 }}>
         <Stack spacing={4} alignItems="center" textAlign="center" sx={{ mb: 12 }}>
-          <Typography
-            variant="h1"
-            sx={{
-              position: "absolute",
-              top: "-20%",
-              fontSize: { xs: "150px", md: "300px" },
-              fontWeight: 900,
-              color: "rgba(15, 23, 42, 0.03)",
-              fontFamily: "'Syne', sans-serif",
-              zIndex: -1,
-              pointerEvents: "none",
-            }}
-          >
-            09
-          </Typography>
+
 
           <Box sx={{ display: "flex", justifyContent: "center", alignItems: "flex-end", width: "100%", position: "relative", mb: 2 }}>
             <Box

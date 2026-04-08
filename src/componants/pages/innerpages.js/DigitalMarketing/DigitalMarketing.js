@@ -60,7 +60,7 @@ const DigitalMarketing = () => {
   return (
     <Box sx={{ bgcolor: "#f8fafc", minHeight: "100vh" }}>
       <HeaderSec />
-      
+
       {/* Progress Bar */}
       <motion.div
         style={{
@@ -133,9 +133,7 @@ const DigitalMarketing = () => {
           <WhyChooseVihaan />
         </section>
 
-        <section data-section-id="13">
-          <SEOKeywords />
-        </section>
+
       </Box>
 
       <LocationLinks serviceType={serviceTypes.DIGITAL_MARKETING} />

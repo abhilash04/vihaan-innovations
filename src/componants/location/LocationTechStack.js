@@ -30,15 +30,15 @@ const LocationTechStack = ({ serviceTitle, locationName }) => {
     <Box sx={{ py: 12, background: 'var(--grad-section)', overflow: 'hidden' }}>
       <Container maxWidth="lg">
         <Stack spacing={2} alignItems="center" mb={10}>
-          <Typography sx={{ 
-            color: 'var(--blue-primary)', fontWeight: 700, fontSize: '12px', 
-            letterSpacing: '0.14em', textTransform: 'uppercase' 
+          <Typography sx={{
+            color: 'var(--blue-primary)', fontWeight: 700, fontSize: '12px',
+            letterSpacing: '0.14em', textTransform: 'uppercase'
           }}>
             TECHNOLOGIES
           </Typography>
-          <Typography variant="h2" sx={{ 
-            fontFamily: 'Syne', fontWeight: 800, color: 'var(--navy)', 
-            fontSize: { xs: '32px', md: '38px' }, textAlign: 'center' 
+          <Typography variant="h2" sx={{
+            fontFamily: 'Syne', fontWeight: 800, color: 'var(--navy)',
+            fontSize: { xs: '32px', md: '38px' }, textAlign: 'center'
           }}>
             Tech Stack We Use for {locationName} Clients
           </Typography>
@@ -50,20 +50,20 @@ const LocationTechStack = ({ serviceTitle, locationName }) => {
         {techRows.map((row, rowIndex) => (
           <Box key={rowIndex} sx={{ position: 'relative', width: '100%', overflow: 'hidden' }}>
             <motion.div
-              animate={{ 
+              animate={{
                 x: rowIndex === 0 ? ["0%", "-50%"] : ["-50%", "0%"]
               }}
-              transition={{ 
-                duration: rowIndex === 0 ? 30 : 24, 
-                repeat: Infinity, 
-                ease: "linear" 
+              transition={{
+                duration: rowIndex === 0 ? 30 : 24,
+                repeat: Infinity,
+                ease: "linear"
               }}
               style={{ display: 'flex', gap: '20px', width: 'max-content' }}
             >
               {[...row, ...row].map((tech, i) => (
                 <Box
                   key={i}
-                  sx={{ 
+                  sx={{
                     px: 3, py: 1.5, borderRadius: '50px', background: '#fff',
                     border: '1px solid var(--border-blue)', display: 'flex', alignItems: 'center', gap: 1.5,
                     boxShadow: 'var(--card-shadow)', transition: 'all 0.3s',

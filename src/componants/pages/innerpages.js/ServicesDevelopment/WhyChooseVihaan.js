@@ -12,7 +12,7 @@ const WhyChooseVihaan = () => {
   ];
 
   return (
-    <Box id="why-choose-vihaan" sx={{ py: { xs: 15, md: 20 }, bgcolor: "#f8fafc", position: "relative", overflow: "hidden" }}>
+    <Box id="why-choose-vihaan" sx={{ py: { xs: 8, md: 10 }, bgcolor: "#f8fafc", position: "relative", overflow: "hidden" }}>
       <Box
         sx={{
           position: "absolute",
