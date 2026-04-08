@@ -148,7 +148,7 @@ function App() {
             <Route path="/about-us" element={<AboutUsHomePage />} />
             <Route path="/career" element={<CareerHomepage />} />
             <Route path="/company-portfolio" element={<PortfolioHomepage />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/articles" element={<Blog />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/privacy-policy" element={<LegalCenter />} />
             <Route path="/terms-and-conditions" element={<LegalCenter />} />
