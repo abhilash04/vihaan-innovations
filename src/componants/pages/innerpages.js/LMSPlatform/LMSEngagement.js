@@ -18,9 +18,9 @@ const features = [
 ];
 
 const LMSEngagement = () => (
-  <Box sx={{ bgcolor: "#fafbff", py: 8 }}>
+  <Box sx={{ bgcolor: "#fafbff", py: 6 }}>
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: "center", mb: 8 }}>
+      <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>Engagement & Retention Features</Typography>
       </Box>
       <Grid container spacing={3}>

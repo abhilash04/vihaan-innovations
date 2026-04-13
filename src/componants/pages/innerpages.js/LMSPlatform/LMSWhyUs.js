@@ -14,18 +14,18 @@ const reasons = [
 ];
 
 const LMSWhyUs = () => (
-  <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
+  <Box sx={{ bgcolor: "#ffffff", py: 6 }}>
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: "center", mb: 6 }}>
+      <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>Why Vihaan Innovations</Typography>
       </Box>
       <Grid container spacing={3}>
         {reasons.map((r, i) => {
           const Icon = r.icon;
           return (
-            <Grid item xs={12} sm={6} md={3} key={i} mb={6}>
+            <Grid item xs={12} sm={6} md={3} key={i}>
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} style={{ height: "100%" }}>
-                <Paper elevation={0} sx={{ p: 4, borderRadius: "20px", bgcolor: "#f8fafc", height: "100%", border: "1px solid #e2e8f0", transition: "all 0.3s", "&:hover": { transform: "translateY(-6px)", boxShadow: `0 15px 35px ${r.color}20`, borderColor: r.color } }}>
+                <Paper elevation={0} sx={{ p: 4, borderRadius: "20px", bgcolor: "#f8fafc", height: "75%", border: "1px solid #e2e8f0", transition: "all 0.3s", "&:hover": { transform: "translateY(-6px)", boxShadow: `0 15px 35px ${r.color}20`, borderColor: r.color } }}>
                   <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, mb: 2.5 }}>
                     <Typography sx={{ fontWeight: 800, color: "rgba(0,0,0,0.08)", fontSize: "30px", lineHeight: 1 }}>{r.num}</Typography>
                     <Icon sx={{ color: r.color, fontSize: 28 }} />

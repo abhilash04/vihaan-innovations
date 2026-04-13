@@ -39,16 +39,19 @@ const ResortProcess = () => {
   return (
     <Box
       sx={{
-        py: 8,
+        py: { xs: 6, md: 8 },
         bgcolor: "rgba(255, 255, 255, 0.01)", // Slightly lighter dark
         color: "#F5F5F0",
         position: "relative",
         borderTop: "1px solid rgba(245, 245, 240, 0.03)",
         borderBottom: "1px solid rgba(245, 245, 240, 0.03)",
+        width: "100%",
+        overflow: "hidden",
+        mx: "auto",
       }}
     >
       <Container maxWidth="lg">
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +63,7 @@ const ResortProcess = () => {
               sx={{
                 fontFamily: "'Playfair Display', serif",
                 fontWeight: 700,
-                fontSize: { xs: "2.5rem", md: "3rem" },
+                fontSize: { xs: "1.5rem", md: "2rem" },
                 mb: 2,
               }}
             >
@@ -71,9 +74,9 @@ const ResortProcess = () => {
               sx={{
                 fontFamily: "'Outfit', sans-serif",
                 color: "rgba(245, 245, 240, 0.6)",
-                maxWidth: "600px",
+                maxWidth: "800px",
                 margin: "0 auto",
-                fontSize: "0.95rem",
+                fontSize: "1.2rem",
               }}
             >
               We follow a simple step-by-step process to build a website that brings you more bookings.
@@ -85,10 +88,10 @@ const ResortProcess = () => {
         <Box
           sx={{
             display: { xs: "none", md: "flex" },
-            justifyContent: "space-between",
+            justifyContent: "center",
             position: "relative",
             width: "100%",
-            maxWidth: "1000px",
+            maxWidth: "1100px",
             mx: "auto",
             mb: 6,
           }}
@@ -96,13 +99,13 @@ const ResortProcess = () => {
           {/* Connecting Line Drawing on View */}
           <motion.div
             initial={{ width: 0 }}
-            whileInView={{ width: "88%" }}
+            whileInView={{ width: "80%" }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 2, ease: "easeInOut" }}
             style={{
               position: "absolute",
-              top: "24px",
-              left: "6%",
+              top: "30px",
+              left: "10%",
               height: "2px",
               background: "linear-gradient(90deg, #D4AF37, rgba(212,175,55,0.3))",
               zIndex: 0,
@@ -113,10 +116,11 @@ const ResortProcess = () => {
             <Box
               key={index}
               sx={{
-                width: "160px",
+                flex: 1,
                 textAlign: "center",
                 position: "relative",
                 zIndex: 1,
+                px: 1,
               }}
             >
               {/* Circular Node */}
@@ -128,19 +132,20 @@ const ResortProcess = () => {
               >
                 <Box
                   sx={{
-                    width: "48px",
-                    height: "48px",
+                    width: "60px",
+                    height: "60px",
                     borderRadius: "50%",
                     bgcolor: "#0A111E",
                     border: "2px solid #D4AF37",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    margin: "0 auto 15px auto",
+                    margin: "0 auto 20px auto",
                     boxShadow: "0 0 15px rgba(212,175,55,0.2)",
+                    position: "relative"
                   }}
                 >
-                  <Typography sx={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: "#D4AF37" }}>
+                  <Typography sx={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: "#D4AF37", fontSize: "1.4rem" }}>
                     {step.num}
                   </Typography>
                 </Box>
@@ -153,15 +158,17 @@ const ResortProcess = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.4 + 0.3 }}
               >
-                <Typography sx={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, mb: 1, fontSize: "1rem" }}>
+                <Typography sx={{ fontFamily: "'Playfair Display', serif", fontWeight: 600, mb: 2, fontSize: "1.5rem" }}>
                   {step.title}
                 </Typography>
-                <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.75rem", color: "rgba(245,245,240,0.5)", lineHeight: 1.4, mb: 1 }}>
+                <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "1.1rem", color: "rgba(245,245,240,0.7)", lineHeight: 1.5, mb: 2 }}>
                   {step.desc}
                 </Typography>
-                <Box component="ul" sx={{ p: 0, m: 0, listStyle: "none", textAlign: "left", pl: 1 }}>
+                <Box component="ul" sx={{ p: 0, m: 0, listStyle: "none", textAlign: "left", pl: 2 }}>
                   {step.bullets.map((bullet, i) => (
-                    <Box component="li" key={i} sx={{ fontSize: "0.65rem", color: "rgba(212,175,55,0.7)", mb: 0.4, fontFamily: "'Outfit', sans-serif" }}>
+                    <Box component="li" key={i} sx={{
+                      fontSize: "1rem", color: "#dd690aff", mb: 0.8, fontFamily: "'Outfit', sans-serif"
+                    }}>
                       • {bullet}
                     </Box>
                   ))}
@@ -172,7 +179,7 @@ const ResortProcess = () => {
         </Box>
 
         {/* Mobile Layout Stacks steps vertically */}
-        <Box sx={{ display: { xs: "flex", md: "none" }, flexDirection: "column", gap: 4 }}>
+        <Box sx={{ display: { xs: "flex", md: "none" }, flexDirection: "column", gap: 5, px: 3 }}>
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -180,38 +187,48 @@ const ResortProcess = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              style={{ display: "flex", gap: "16px" }}
+              style={{ display: "flex", gap: "24px" }}
             >
               <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                <Box sx={{ width: "40px", height: "40px", borderRadius: "50%", border: "2px solid #D4AF37", display: "flex", alignItems: "center", justifyContent: "center", bgcolor: "#0A111E" }}>
-                  <Typography sx={{ color: "#D4AF37", fontWeight: 700 }}>{step.num}</Typography>
+                <Box sx={{ width: "50px", height: "50px", borderRadius: "50%", border: "2px solid #dd690aff", display: "flex", alignItems: "center", justifyContent: "center", bgcolor: "#0A111E" }}>
+                  <Typography sx={{ color: "#dd690aff", fontWeight: 700, fontSize: "1.1rem" }}>{step.num}</Typography>
                 </Box>
-                {index !== steps.length - 1 && <Box sx={{ flexGrow: 1, width: "2px", bgcolor: "#D4AF37", opacity: 0.3, my: 1 }} />}
+                {index !== steps.length - 1 && <Box sx={{ flexGrow: 1, width: "2px", bgcolor: "#dd690aff", opacity: 0.3, my: 1 }} />}
               </Box>
-              <Box sx={{ pt: 1 }}>
-                <Typography sx={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, mb: 0.5 }}>{step.title}</Typography>
-                <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.85rem", color: "rgba(245,245,240,0.6)", mb: 1 }}>{step.desc}</Typography>
+              <Box sx={{ pt: 1, pb: 4 }}>
+                <Typography sx={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, mb: 1, fontSize: "1.6rem" }}>{step.title}</Typography>
+                <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "1.1rem", color: "rgba(245,245,240,0.6)", mb: 2 }}>{step.desc}</Typography>
+                <Box component="ul" sx={{ p: 0, m: 0, listStyle: "none", textAlign: "left", pl: 1 }}>
+                  {step.bullets.map((bullet, i) => (
+                    <Box component="li" key={i} sx={{
+                      fontSize: "0.95rem", color: "#D4AF37", mb: 0.5, fontFamily: "'Outfit', sans-serif"
+                    }}>
+                      • {bullet}
+                    </Box>
+                  ))}
+                </Box>
               </Box>
             </motion.div>
           ))}
         </Box>
+
         {/* CTA */}
-        <Box sx={{ textAlign: "center", mt: 10, mb: 4 }}>
-          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "1.1rem", color: "rgba(245,245,240,0.8)", mb: 3 }}>
+        <Box sx={{ textAlign: "center", mt: 4, px: 2 }}>
+          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "1.3rem", color: "rgba(245,245,240,0.8)", mb: 4 }}>
             Start building your resort website today and turn visitors into guests.
           </Typography>
           <Button
             variant="contained"
             sx={{
               fontFamily: "'Outfit', sans-serif",
-              background: "linear-gradient(90deg, #D4AF37, #B08D28)",
+              background: "linear-gradient(90deg, #dd690aff, #B08D28)",
               color: "#0A111E",
-              px: 5,
-              py: 1.8,
-              borderRadius: "30px",
+              px: 6,
+              py: 2,
+              borderRadius: "40px",
               fontWeight: 700,
               textTransform: "none",
-              fontSize: "1rem",
+              fontSize: "1.1rem",
               boxShadow: "0 10px 20px rgba(212,175,55,0.2)",
               "&:hover": {
                 transform: "scale(1.02)",

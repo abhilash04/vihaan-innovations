@@ -15,7 +15,7 @@ const diffs = [
 
 const MatrimonyWhyUs = () => {
   return (
-    <Box sx={{ bgcolor: "#0B2046", py: 8 }}>
+    <Box sx={{ bgcolor: "#0B2046", py: 6, pb: 12 }}>
       <Container maxWidth="lg">
 
         {/* Why Us Section Header */}

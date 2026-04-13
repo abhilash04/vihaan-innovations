@@ -3,7 +3,7 @@ import { Box, Container, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
 
 const LMSCTA = () => (
-  <Box sx={{ position: "relative", bgcolor: "#0f172a", py: 10, overflow: "hidden" }}>
+  <Box sx={{ position: "relative", bgcolor: "#0f172a", py: 6, overflow: "hidden" }}>
     {/* Gradient glow */}
     <Box sx={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: "70%", height: "70%", background: "radial-gradient(ellipse, rgba(37,99,235,0.35) 0%, transparent 70%)", filter: "blur(80px)", zIndex: 0 }} />
     {/* Sparkles */}
@@ -13,10 +13,10 @@ const LMSCTA = () => (
 
     <Container maxWidth="md" sx={{ position: "relative", zIndex: 2, textAlign: "center" }}>
       <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-        <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "26px", md: "48px" }, mb: 3, lineHeight: 1.2 }}>
+        <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "26px", md: "46px" }, mb: 5, lineHeight: 1.2 }}>
           Let’s build a powerful learning platform with expert LMS Website Development tailored to your needs.
         </Typography>
-        <Typography sx={{ color: "rgba(255,255,255,0.75)", fontSize: "20px", fontWeight: 600, mb: 8 }}>
+        <Typography sx={{ color: "rgba(255,255,255,0.75)", fontSize: "20px", fontWeight: 600, mb: 2 }}>
           Talk to our team. First consultation is free.
         </Typography>
         <Button variant="contained" sx={{ background: "linear-gradient(90deg, #2563eb 0%, #7c3aed 100%)", color: "#ffffff", fontWeight: 800, fontSize: "16px", px: 6, py: 2, borderRadius: "50px", textTransform: "none", boxShadow: "0 8px 30px rgba(37,99,235,0.5)", "&:hover": { background: "linear-gradient(90deg, #1d4ed8 0%, #6d28d9 100%)", transform: "translateY(-3px)", boxShadow: "0 14px 40px rgba(37,99,235,0.6)" }, transition: "all 0.3s", mb: 4 }}>

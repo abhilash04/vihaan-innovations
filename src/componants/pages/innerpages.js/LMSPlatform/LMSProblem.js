@@ -13,13 +13,13 @@ const problemCards = [
 ];
 
 const LMSProblem = () => (
-  <Box sx={{ bgcolor: "#1e3a5f", py: 8, position: "relative", overflow: "hidden" }}>
+  <Box sx={{ bgcolor: "#1e3a5f", py: 6, position: "relative", overflow: "hidden" }}>
     <Box sx={{ position: "absolute", top: "20%", left: "5%", width: 300, height: 300, borderRadius: "50%", background: "radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%)" }} />
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: "center", mb: 6 }}>
+      <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "28px", md: "38px" }, mb: 2 }}>The Problem</Typography>
       </Box>
-      <Grid container spacing={4} sx={{ mb: 8 }}>
+      <Grid container spacing={4} sx={{ mb: 4 }}>
         {problemCards.map((card, i) => (
           <Grid item xs={12} md={4} key={i}>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.15 }}>

@@ -57,17 +57,15 @@ const FeatureCard = ({ item, index }) => (
         p: 3.5,
         height: "100%",
         borderRadius: "20px",
-        bgcolor: "rgba(255, 255, 255, 0.03)",
-        border: "1px solid rgba(255, 255, 255, 0.08)",
-        backdropFilter: "blur(10px)",
+        bgcolor: "#ffffff",
+        border: "1px solid rgba(0, 180, 216, 0.1)",
         display: "flex",
         alignItems: "flex-start",
         gap: 2,
         transition: "all 0.3s ease",
         "&:hover": {
           transform: "translateY(-5px)",
-          bgcolor: "rgba(255, 255, 255, 0.05)",
-          borderColor: "rgba(0, 180, 216, 0.3)",
+          borderColor: "rgba(0, 180, 216, 0.4)",
           boxShadow: "0 15px 35px rgba(0, 180, 216, 0.1)"
         }
       }}
@@ -83,13 +81,13 @@ const FeatureCard = ({ item, index }) => (
         {item.icon}
       </Box>
       <Box>
-        <Typography sx={{ color: "#00B4D8", fontWeight: 700, fontSize: "14px", mb: 0.5 }}>
+        <Typography sx={{ color: "#0088A8", fontWeight: 700, fontSize: "14px", mb: 0.5 }}>
           STEP {item.num}
         </Typography>
-        <Typography variant="h6" sx={{ fontWeight: 800, color: "#ffffff", fontSize: "18px", mb: 1 }}>
+        <Typography variant="h6" sx={{ fontWeight: 800, color: "#0F172A", fontSize: "18px", mb: 1 }}>
           {item.title}
         </Typography>
-        <Typography sx={{ color: "rgba(255, 255, 255, 0.65)", fontSize: "14px", lineHeight: 1.5 }}>
+        <Typography sx={{ color: "#475569", fontSize: "14px", lineHeight: 1.5 }}>
           {item.desc}
         </Typography>
       </Box>
@@ -99,7 +97,7 @@ const FeatureCard = ({ item, index }) => (
 
 const EducationDeliveryProcess = () => {
   return (
-    <Box sx={{ py: 8, background: "linear-gradient(135deg, #0B2046 0%, #001D4A 100%)", position: "relative", overflow: "hidden" }}>
+    <Box sx={{ py: 3, background: "linear-gradient(135deg, #e0fbfc 0%, #e0fbfc 100%)", position: "relative", overflow: "hidden" }}>
 
       {/* Floating Bubbles */}
       <Bubble size={300} color="rgba(0, 180, 216, 0.25)" top="10%" left="-10%" delay={0} />
@@ -110,13 +108,13 @@ const EducationDeliveryProcess = () => {
 
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 6 }}>
-          <Typography sx={{ color: "#00B4D8", fontWeight: 700, mb: 1, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px" }}>
+          <Typography sx={{ color: "#0088A8", fontWeight: 700, mb: 1, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px" }}>
             Our Sprint Process
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "28px", md: "42px" }, lineHeight: 1.2, mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0F172A", fontSize: { xs: "28px", md: "42px" }, lineHeight: 1.2, mb: 2 }}>
             Our Process From Idea to Launch
           </Typography>
-          <Typography variant="h5" sx={{ color: "#00B4D8", fontWeight: 700, mb: 2, fontSize: "20px" }}>
+          <Typography variant="h5" sx={{ color: "#475569", fontWeight: 700, mb: 2, fontSize: "20px" }}>
             A structured sprint approach to build, test, and launch your custom digital solution faster
           </Typography>
         </Box>

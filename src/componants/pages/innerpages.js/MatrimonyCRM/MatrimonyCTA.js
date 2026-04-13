@@ -35,7 +35,7 @@ const MatrimonyCTA = () => {
               Let's build a platform your<br />community will trust
             </Typography>
 
-            <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", mb: 6, maxWidth: "500px", mx: "auto", lineHeight: 1.6 }}>
+            <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", mb: 3, maxWidth: "500px", mx: "auto", lineHeight: 1.6 }}>
               Book a free 45-min discovery call
             </Typography>
 

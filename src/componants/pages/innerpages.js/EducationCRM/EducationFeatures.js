@@ -60,7 +60,7 @@ const FeatureCard = ({ icon: Icon, title, delay }) => (
 
 const EducationFeatures = () => {
   return (
-    <Box sx={{ position: "relative", bgcolor: "#00B4D8", pt: 16, pb: 20 }}>
+    <Box sx={{ position: "relative", bgcolor: "#00B4D8", pt: 10, pb: 18 }}>
       {/* Top Wave linking from previous section */}
       <Box sx={{ position: "absolute", top: -1, left: 0, width: "100%", zIndex: 1, transform: "rotate(180deg)" }}>
         <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
@@ -81,7 +81,7 @@ const EducationFeatures = () => {
 
         {/* Header */}
         <Box sx={{ textAlign: "center", mb: 6, color: "white" }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "46px" }, mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "42px" }, mb: 2 }}>
             What We Build
           </Typography>
           <Typography variant="h5" sx={{ fontWeight: 700, mb: 2, opacity: 0.9 }}>

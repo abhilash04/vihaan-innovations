@@ -35,7 +35,7 @@ const IntegrationNode = ({ icon: Icon, label, side, delay, subLabel }) => {
 
 const MatrimonyIntegrations = () => {
   return (
-    <Box sx={{ bgcolor: "#F8FAFC", py: 8, position: "relative", overflow: "hidden" }}>
+    <Box sx={{ bgcolor: "#F8FAFC", py: 6, position: "relative", overflow: "hidden" }}>
       <Container maxWidth="md">
 
         {/* Header */}

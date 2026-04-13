@@ -18,7 +18,6 @@ const ResortHero = () => {
                         url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        mt: 5,
         pt: { xs: 12, md: 8 },
       }}
     >
@@ -81,12 +80,12 @@ const ResortHero = () => {
                   color: "rgba(245, 245, 240, 0.8)",
                   maxWidth: "550px",
                   lineHeight: 1.6,
-                  mb: 4,
+                  mb: 3,
                 }}
               >
                 Make your resort operations simple and stress-free with our resort booking software. It helps you manage bookings, guests, payments, and room availability all in one place.
-                <br /><br />
-                Our cloud-based system and mobile app allow you to handle everything easily—from reservations to guest check-ins—while improving your guest experience and increasing your revenue.
+                {/* <br /><br />
+                Our cloud-based system and mobile app allow you to handle everything easily—from reservations to guest check-ins—while improving your guest experience and increasing your revenue. */}
               </Typography>
             </motion.div>
 
@@ -95,7 +94,7 @@ const ResortHero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Box sx={{ display: "flex", gap: 2, mb: 6 }}>
+              <Box sx={{ display: "flex", gap: 2, mb: 3 }}>
                 <Button
                   variant="contained"
                   sx={{
@@ -156,7 +155,7 @@ const ResortHero = () => {
                 display: "flex",
                 gap: 4,
                 borderTop: "1px solid rgba(245, 245, 240, 0.1)",
-                pt: 4,
+                pt: 2,
                 width: "fit-content",
                 mb: 3,
               }}
