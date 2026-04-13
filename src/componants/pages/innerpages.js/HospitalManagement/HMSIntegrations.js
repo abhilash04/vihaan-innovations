@@ -22,7 +22,7 @@ const outerLogos = [
 
 const HMSIntegrations = () => {
   return (
-    <Box sx={{ background: "#ffffff", py: 8, position: "relative", overflow: "hidden" }}>
+    <Box sx={{ background: "#ffffff", py: 6, position: "relative", overflow: "hidden" }}>
       <style>
         {`
           @keyframes orbitRotate {

@@ -6,14 +6,14 @@ import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import img from '../../../../assets/hms-banner.png'
 const HMSHero = () => {
   return (
-    <Box sx={{ background: "radial-gradient(circle at top right, #F5F7FA 0%, #FFFFFF 100%)", pt: { xs: 10, md: 14 }, pb: { xs: 8, md: 12 }, position: "relative", overflow: "hidden" }}>
+    <Box sx={{ background: "radial-gradient(circle at top right, #F5F7FA 0%, #FFFFFF 100%)", pt: { xs: 6, md: 8 }, pb: { xs: 6, md: 8 }, position: "relative", overflow: "hidden" }}>
       {/* Background Watermark */}
-      <Box sx={{ position: "absolute", right: "5%", top: "40%", width: "40%", height: "40%", opacity: 0.04, pointerEvents: "none" }}>
+      {/* <Box sx={{ position: "absolute", right: "5%", top: "40%", width: "40%", height: "40%", opacity: 0.04, pointerEvents: "none" }}>
         <svg width="100%" height="100%" viewBox="0 0 100 100">
           <rect x="45" y="10" width="10" height="80" fill="#0A2D6E" />
           <rect x="10" y="45" width="80" height="10" fill="#0A2D6E" />
         </svg>
-      </Box>
+      </Box> */}
 
       <Container maxWidth="lg">
         <Grid container spacing={4} alignItems="center">

@@ -34,7 +34,7 @@ const VideoSection = () => {
         overflow: "hidden",
         position: "relative",
         height: { xs: "auto", md: "75vh" },
-        minHeight: "500px",
+        minHeight: "600px",
       }}
     >
       <Box
@@ -45,6 +45,7 @@ const VideoSection = () => {
           display: "flex",
           alignItems: "center",
           color: "#fff",
+          mt: 5,
         }}
       >
         {/* 🎥 Background Video with Zoom-in Animation */}
@@ -120,7 +121,7 @@ const VideoSection = () => {
                 textShadow: "0 2px 10px rgba(0,0,0,0.3)",
               }}
             >
-              Bangalore’s Leading <span style={{ color: "#00bfffff" }}>Multi-Vendor</span> eCommerce Website Development
+              Bangalore’s Leading <br /><span style={{ color: "#00bfffff" }}>Multi-Vendor</span> eCommerce <br />Website Development
             </Typography>
           </motion.div>
 

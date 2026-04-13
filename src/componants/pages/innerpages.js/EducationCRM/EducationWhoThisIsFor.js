@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 import CastForEducationOutlinedIcon from '@mui/icons-material/CastForEducationOutlined';
@@ -8,16 +8,18 @@ import LaptopMacOutlinedIcon from '@mui/icons-material/LaptopMacOutlined';
 import PrecisionManufacturingOutlinedIcon from '@mui/icons-material/PrecisionManufacturingOutlined';
 import PublicOutlinedIcon from '@mui/icons-material/PublicOutlined';
 
+// FIX 1: Pass the component reference, NOT the JSX element <Icon />
 const audiences = [
-  { icon: <SchoolOutlinedIcon />, title: "Schools &\nK-12 Chains" },
-  { icon: <CastForEducationOutlinedIcon />, title: "Coaching\nInstitutes" },
-  { icon: <AccountBalanceOutlinedIcon />, title: "Universities\n& Colleges" },
-  { icon: <LaptopMacOutlinedIcon />, title: "EdTech\nPlatforms" },
-  { icon: <PrecisionManufacturingOutlinedIcon />, title: "Skill\nDevelopment\nCentres" },
-  { icon: <PublicOutlinedIcon />, title: "Study Abroad\nConsultants" }
+  { icon: SchoolOutlinedIcon, title: "Schools &\nK-12 Chains" },
+  { icon: CastForEducationOutlinedIcon, title: "Coaching\nInstitutes" },
+  { icon: AccountBalanceOutlinedIcon, title: "Universities\n& Colleges" },
+  { icon: LaptopMacOutlinedIcon, title: "EdTech\nPlatforms" },
+  { icon: PrecisionManufacturingOutlinedIcon, title: "Skill\nDevelopment\nCentres" },
+  { icon: PublicOutlinedIcon, title: "Study Abroad\nConsultants" }
 ];
 
-const AudienceCard = ({ icon, title, delay }) => (
+// FIX 2: Rename 'icon' prop to 'Icon' (capitalized) to render it as a component
+const AudienceCard = ({ icon: Icon, title, delay }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -28,34 +30,40 @@ const AudienceCard = ({ icon, title, delay }) => (
     <Paper
       elevation={0}
       sx={{
-        p: 2.5,
-        borderRadius: "16px",
-        bgcolor: "#ffffff",
-        boxShadow: "0 10px 30px rgba(0, 180, 216, 0.1)",
-        border: "1px solid rgba(0, 180, 216, 0.15)",
-        height: "100%",
+        py: 2, // Equal top and bottom padding
+        px: 2,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        justifyContent: "center",
         textAlign: "center",
+        height: "100%",
+        borderRadius: "20px",
+        bgcolor: "rgba(255, 255, 255, 0.95)",
+        backdropFilter: "blur(10px)",
+        boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
+        border: "1px solid rgba(0,0,0,0.03)",
         transition: "all 0.3s ease",
         "&:hover": {
           transform: "translateY(-5px)",
-          boxShadow: "0 15px 40px rgba(0, 180, 216, 0.2)",
-          borderColor: "#00B4D8"
+          boxShadow: "0 15px 35px rgba(0,0,0,0.1)",
+          borderColor: "#00b4d8"
         }
       }}
     >
-      <Box
+      {/* Render the Icon component here */}
+      <Icon sx={{ fontSize: 48, mb: 3, color: "#00b4d8" }} />
+
+      <Typography
+        variant="body2"
         sx={{
-          color: "#00B4D8",
-          mb: 1.5,
-          "& > svg": { fontSize: 36 }
+          fontWeight: 700,
+          color: "#1a1a1a",
+          fontSize: "14px",
+          lineHeight: 1.2,
+          whiteSpace: "pre-line" // This ensures the \n in your titles works
         }}
       >
-        {icon}
-      </Box>
-      <Typography sx={{ fontWeight: 700, color: "#1a1a1a", fontSize: "14px", lineHeight: 1.3, whiteSpace: "pre-line" }}>
         {title}
       </Typography>
     </Paper>
@@ -66,7 +74,7 @@ const EducationWhoThisIsFor = () => {
   return (
     <Box sx={{ position: "relative", bgcolor: "#cbf3f0", pt: 4, pb: 22, overflow: "hidden" }}>
 
-      {/* Background Bottom Wave separating this from the next (Problem) section */}
+      {/* Background Bottom Wave */}
       <Box sx={{ position: "absolute", bottom: -5, left: 0, width: "100%", zIndex: 1 }}>
         <svg viewBox="0 0 1440 200" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "block", width: "100%" }}>
           <path d="M0,80 C200,160 400,-20 720,60 C1040,140 1200,80 1440,10 L1440,200 L0,200 Z" fill="#f8f9fe" />
@@ -77,7 +85,7 @@ const EducationWhoThisIsFor = () => {
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography sx={{ color: "#00B4D8", fontWeight: 700, mb: 1, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1px" }}>
             Our Ideal Users
           </Typography>
@@ -89,7 +97,7 @@ const EducationWhoThisIsFor = () => {
           </Typography>
         </Box>
 
-        {/* Audience Grid - 6 horizontal cards mimicking the specific design */}
+        {/* Audience Grid */}
         <Grid container spacing={2} justifyContent="center" sx={{ mb: 6 }}>
           {audiences.map((audience, index) => (
             <Grid item xs={6} sm={4} md={2} key={index}>
@@ -102,7 +110,7 @@ const EducationWhoThisIsFor = () => {
           ))}
         </Grid>
 
-        {/* Bottom Tagline & Button */}
+        {/* Bottom Tagline */}
         <Box sx={{ textAlign: "center", maxWidth: "800px", mx: "auto", pt: 4 }}>
           <Typography sx={{ color: "#0B2046", fontSize: "18px", fontWeight: 600, mb: 4, lineHeight: 1.6 }}>
             Built with powerful custom CRM software development, our solutions eliminate manual work, improve conversion rates, and help education businesses scale faster.

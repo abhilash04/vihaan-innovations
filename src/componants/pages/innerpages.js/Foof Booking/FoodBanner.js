@@ -86,7 +86,7 @@ const FoodBanner = () => {
               INNOVATIVE DIGITAL SOLUTIONS FOR RESTAURANTS & STARTUPS
             </Typography>
             <Typography variant="h1" sx={{ fontWeight: 800, fontSize: { xs: '32px', md: '48px' }, mb: "20px", lineHeight: 1.2, color: '#1a1a1a' }}>
-              Food Delivery App Development & Smart Digital Platforms for Modern Businesses
+              Food Delivery App Development & Smart Digital Platforms
             </Typography>
             <Typography sx={{ color: '#585858', fontWeight: 500, fontSize: "16px", mb: "30px", lineHeight: 1.8, maxWidth: '600px' }}>
               We specialize in food delivery app development and advanced digital platforms including restaurant portals, multi-vendor marketplaces, admin dashboards, and CRM systems. Our scalable solutions help restaurants, startups, and enterprises launch, manage, and grow their online business efficiently.

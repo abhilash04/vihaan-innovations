@@ -80,17 +80,17 @@ const EducationPlatformModules = () => {
   return (
     <Box sx={{ bgcolor: "#F8FAFC", py: 10, position: "relative" }}>
 
-      {/* Decorative arrow pointing down */}
+      {/* Decorative arrow pointing down
       <Box sx={{ position: "absolute", top: -20, left: "50%", transform: "translateX(-50%)", zIndex: 1 }}>
         <Box sx={{ width: 2, height: 60, bgcolor: "rgba(0, 180, 216, 0.3)", mx: "auto", position: "relative" }}>
           <Box sx={{ position: "absolute", bottom: 0, left: "50%", transform: "translateX(-50%) rotate(45deg)", width: 10, height: 10, borderBottom: "2px solid #00B4D8", borderRight: "2px solid #00B4D8" }} />
         </Box>
-      </Box>
+      </Box> */}
 
       <Container maxWidth="lg">
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 5 }}>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "42px" }, mb: 2 }}>
             Flexible Education CRM Solutions
           </Typography>

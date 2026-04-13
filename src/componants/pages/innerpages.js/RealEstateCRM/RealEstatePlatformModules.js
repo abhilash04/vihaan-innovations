@@ -163,7 +163,7 @@ const RealEstatePlatformModules = () => {
 
               {/* Main Content Area */}
               <Grid item xs={12} md={8}>
-                <Box sx={{ p: { xs: 4, md: 6 }, position: "relative", minHeight: "450px" }}>
+                <Box sx={{ p: { xs: 4, md: 6 }, position: "relative", minHeight: "350px" }}>
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={activeModule.id}

@@ -11,7 +11,7 @@ const HRMBanner = () => (
   <Box sx={{
     background: "linear-gradient(135deg, #0A1E3F 0%, #112A46 50%, #0A192F 100%)",
     position: "relative", overflow: "hidden",
-    pt: { xs: 12, md: 16 }, pb: { xs: 10, md: 18 }
+    pt: { xs: 12, md: 16 }, pb: { xs: 6, md: 10 }
   }}>
     {/* Ambient Glows */}
     <Box sx={{ ...glowStyle, top: -60, left: "-5%", width: 400, height: 400, bgcolor: "rgba(249,115,22,0.12)" }} />

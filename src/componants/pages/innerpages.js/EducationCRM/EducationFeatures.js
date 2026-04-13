@@ -68,19 +68,19 @@ const EducationFeatures = () => {
         </svg>
       </Box>
 
-      {/* Decorative large faint text in background */}
+      {/* Decorative large faint text in background
       <Typography sx={{
         position: "absolute", top: "10%", left: "5%",
         fontSize: "12vw", fontWeight: 900, color: "rgba(255,255,255,0.05)",
         whiteSpace: "nowrap", pointerEvents: "none", zIndex: 0
       }}>
         FEATURES
-      </Typography>
+      </Typography> */}
 
       <Container maxWidth="md" sx={{ position: "relative", zIndex: 2 }}>
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8, color: "white" }}>
+        <Box sx={{ textAlign: "center", mb: 6, color: "white" }}>
           <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "46px" }, mb: 2 }}>
             What We Build
           </Typography>
@@ -90,7 +90,7 @@ const EducationFeatures = () => {
         </Box>
 
         {/* 3x2 Grid */}
-        <Grid container spacing={3} justifyContent="center" rowSpacing={12}>
+        <Grid container spacing={5} justifyContent="center" rowSpacing={12}>
           <Grid item xs={12} sm={6} md={4}>
             <FeatureCard icon={DomainOutlinedIcon} title="Property Listing Portal" delay={0.1} />
           </Grid>
@@ -110,7 +110,6 @@ const EducationFeatures = () => {
             <FeatureCard icon={InsertChartOutlinedIcon} title="Analytics Dashboard" delay={0.6} />
           </Grid>
         </Grid>
-
 
       </Container>
     </Box>

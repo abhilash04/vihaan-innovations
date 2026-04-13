@@ -18,6 +18,7 @@ const ResortHero = () => {
                         url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        mt: 5,
         pt: { xs: 12, md: 8 },
       }}
     >
@@ -40,8 +41,8 @@ const ResortHero = () => {
                   mb: 2,
                 }}
               >
-                Complete <br />
-                Resort Booking{" "}
+                Complete Resort <br />
+                Booking{" "}
                 <Box
                   component="span"
                   sx={{
@@ -157,6 +158,7 @@ const ResortHero = () => {
                 borderTop: "1px solid rgba(245, 245, 240, 0.1)",
                 pt: 4,
                 width: "fit-content",
+                mb: 3,
               }}
             >
               {[

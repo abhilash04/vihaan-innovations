@@ -14,6 +14,7 @@ const PortalHero = () => {
         bgcolor: "#081226", // Dark Midnight Blue
         color: "#FFFFFF",
         overflow: "hidden",
+        mt: 5,
         pt: { xs: 8, md: 6 },
         backgroundImage: `linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), 
                         linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)`,
@@ -126,7 +127,7 @@ const PortalHero = () => {
                   mb: 4,
                 }}
               >
-                We build scalable real estate portal development solutions including property listing platforms, CRM integrations, agent dashboards, and mobile-ready portals. Launch your own real estate marketplace similar to Zillow or MagicBricks with advanced search, property management tools, and lead generation features.
+                We build scalable real estate portal development solutions including property listing platforms, CRM integrations, agent dashboards, and mobile-ready portals. Build your own premium real estate marketplace with expert search and lead tools.
               </Typography>
             </motion.div>
 

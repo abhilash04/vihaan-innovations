@@ -54,7 +54,7 @@ function Banner() {
               Real Estate Portal Development for Modern Property Businesses
             </Typography>
             <Typography variant="body1" sx={{ mb: isMobile ? 3 : 2 }}>
-              We build scalable real estate portal development solutions including property listing platforms, CRM integrations, agent dashboards, and mobile-ready portals. Launch your own real estate marketplace similar to Zillow or MagicBricks with advanced search, property management tools, and lead generation features.
+              We build scalable real estate portal development solutions including property listing platforms, CRM integrations, agent dashboards, and mobile-ready portals.Launch your own real estate marketplace similar to Zillow or MagicBricks with advanced search, property management tools, and lead generation features.
             </Typography>
             <Grid
               container

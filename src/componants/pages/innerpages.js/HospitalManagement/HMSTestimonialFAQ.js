@@ -23,8 +23,8 @@ const HMSTestimonialFAQ = () => {
         <Box sx={{ mb: 10 }}>
           <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
             <Paper elevation={0} sx={{ p: 4, borderRadius: "24px", bgcolor: "#ffffff", border: "1px solid rgba(0,0,0,0.04)", position: "relative", textAlign: "center", boxShadow: "0 4px 20px rgba(0,0,0,0.03)" }}>
-              <FormatQuoteIcon sx={{ position: "absolute", top: -20, left: 20, fontSize: 80, color: "rgba(13, 148, 136, 0.1)" }} />
-              <Typography sx={{ fontWeight: 700, color: "#0B2046", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.6, mb: 3, fontStyle: "italic", position: "relative", zIndex: 2 }}>
+              <FormatQuoteIcon sx={{ position: "absolute", top: 5, left: 20, fontSize: 80, color: "rgba(13, 148, 136, 0.1)" }} />
+              <Typography sx={{ fontWeight: 700, color: "#0B2046", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.6, mt: 5, mb: 3, fontStyle: "italic", position: "relative", zIndex: 2 }}>
                 "Digitizing our 300-bed facility was a massive undertaking, but Vihaan's clinical interface made adoption seamless for our doctors. OPD wait times dropped by 45% on month one."
               </Typography>
               <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>

@@ -108,9 +108,9 @@ const ResortFeatures = () => {
         </Box>
 
         {/* Features Grid */}
-        <Grid container spacing={3}>
+        <Grid container spacing={3} alignItems="stretch">
           {features.map((feature, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+            <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: "flex" }}>
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -123,7 +123,7 @@ const ResortFeatures = () => {
                     bgcolor: "rgba(255, 255, 255, 0.02)",
                     p: 4,
                     borderRadius: "16px",
-                    height: "100%",
+                    height: "80%",
                     borderTop: "3px solid #D4AF37",
                     border: "1px solid rgba(245, 245, 240, 0.03)",
                     transition: "all 0.3s ease",
