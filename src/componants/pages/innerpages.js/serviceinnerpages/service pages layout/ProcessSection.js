@@ -114,20 +114,20 @@ const ProcessSection = ({ data }) => {
   } = data || {};
 
   return (
-    <Box sx={{ background: "linear-gradient(135deg, #fce7f3 0%, #e0f2fe 40%, #ccfbf1 100%)", py: { xs: 6, md: 8 }, position: "relative", overflow: "hidden" }}>
+    <Box sx={{ background: "linear-gradient(135deg, #fce7f3 0%, #e0f2fe 40%, #ccfbf1 100%)", py: { xs: 6, md: 6 }, position: "relative", overflow: "hidden" }}>
       <Container maxWidth="lg">
         {/* Heading */}
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography sx={{ color: "#0087c9", fontWeight: 700, fontSize: "12px", letterSpacing: "1px", mb: 1.5 }}>
             {subtitle}
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "40px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "40px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", }}>
             {title}
           </Typography>
         </Box>
 
         {/* Desktop Timeline Section */}
-        <Box sx={{ position: "relative", display: { xs: "none", md: "block" }, height: "480px", mt: 4 }}>
+        <Box sx={{ position: "relative", display: { xs: "none", md: "block" }, height: "480px", mt: 3 }}>
 
           {/* SVG Background Curve */}
           <svg
