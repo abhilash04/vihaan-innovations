@@ -61,9 +61,9 @@ const AwardsSection = ({ data }) => {
   } = data || {};
 
   return (
-    <Box sx={{ bgcolor: "#ffffff", py: { xs: 6, md: 8 }, position: "relative" }}>
+    <Box sx={{ bgcolor: "#ffffff", py: { xs: 6, md: 6 }, position: "relative" }}>
       <Container maxWidth="lg">
-        <Typography variant="h3" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "40px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", textAlign: "center", mb: 6, letterSpacing: "0.5px" }}>
+        <Typography variant="h3" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "40px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", textAlign: "center", mb: 4, letterSpacing: "0.5px" }}>
           {title}
         </Typography>
 

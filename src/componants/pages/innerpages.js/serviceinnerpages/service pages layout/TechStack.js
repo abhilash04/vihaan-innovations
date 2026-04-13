@@ -68,7 +68,7 @@ const TechStack = ({ data }) => {
   } = data || {};
 
   return (
-    <Box sx={{ bgcolor: "#f8fafc", py: { xs: 6, md: 8 }, position: "relative", overflow: "hidden" }}>
+    <Box sx={{ bgcolor: "#f8fafc", py: { xs: 6, md: 6 }, position: "relative", overflow: "hidden" }}>
       <Container maxWidth="lg">
         {/* Heading */}
         <Box sx={{ textAlign: "center", mb: 6 }}>
@@ -101,7 +101,6 @@ const TechStack = ({ data }) => {
             </Box>
           ))}
         </Box>
-
       </Container>
     </Box>
   );
