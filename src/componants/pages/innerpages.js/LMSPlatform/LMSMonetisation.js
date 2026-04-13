@@ -16,19 +16,19 @@ const strategies = [
 const paymentLogos = ["Razorpay", "PayU", "Stripe", "Affiliate Commission Tracking"];
 
 const LMSMonetisation = () => (
-  <Box sx={{ bgcolor: "#f8fafc", py: 8 }}>
+  <Box sx={{ bgcolor: "#f8fafc", py: 6 }}>
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: "center", mb: 8 }}>
+      <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>Monetisation & Revenue Features</Typography>
         <Typography sx={{ color: "#64748b", fontSize: "16px" }}>Monetization and revenue tools for every business model.</Typography>
       </Box>
-      <Grid container spacing={3} sx={{ mb: 6 }}>
+      <Grid container spacing={3} sx={{ mb: 4 }} alignItems="stretch">
         {strategies.map((s, i) => {
           const Icon = s.icon;
           return (
-            <Grid item xs={12} sm={6} md={3} key={i}>
+            <Grid item xs={12} sm={6} md={3} key={i} sx={{ display: "flex" }}>
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} style={{ height: "100%" }}>
-                <Paper elevation={0} sx={{ p: 4, borderRadius: "18px", bgcolor: "#ffffff", height: "100%", textAlign: "center", border: "1px solid #e2e8f0", transition: "all 0.3s", "&:hover": { transform: "translateY(-5px)", boxShadow: `0 12px 30px ${s.color}25`, borderColor: s.color } }}>
+                <Paper elevation={0} sx={{ p: 4, borderRadius: "18px", bgcolor: "#ffffff", height: "70%", textAlign: "center", border: "1px solid #e2e8f0", transition: "all 0.3s", "&:hover": { transform: "translateY(-5px)", boxShadow: `0 12px 30px ${s.color}25`, borderColor: s.color } }}>
                   <Box sx={{ width: 54, height: 54, borderRadius: "14px", bgcolor: `${s.color}18`, display: "flex", justifyContent: "center", alignItems: "center", color: s.color, mx: "auto", mb: 2 }}>
                     <Icon sx={{ fontSize: 28 }} />
                   </Box>

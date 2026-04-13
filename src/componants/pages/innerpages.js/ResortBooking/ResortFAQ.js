@@ -26,14 +26,14 @@ const ResortFAQ = () => {
   return (
     <Box
       sx={{
-        py: 8,
+        py: 4,
         bgcolor: "#0A111E", // Dark Navy
         color: "#F5F5F0",
         position: "relative",
       }}
     >
       <Container maxWidth="md">
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -65,7 +65,7 @@ const ResortFAQ = () => {
         </Box>
 
         {/* Accordion List */}
-        <Box sx={{ mb: 10 }}>
+        <Box sx={{ mb: 6 }}>
           {faqs.map((faq, index) => (
             <Box
               key={index}

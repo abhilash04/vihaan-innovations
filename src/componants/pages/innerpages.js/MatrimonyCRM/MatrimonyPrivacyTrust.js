@@ -61,11 +61,11 @@ const bottomCards = [
 /* ---------- MAIN COMPONENT ---------- */
 const MatrimonyPrivacyTrust = () => {
   return (
-    <Box sx={{ bgcolor: "#0B2046", py: { xs: 6, md: 10 } }}>
+    <Box sx={{ bgcolor: "#0B2046", py: { xs: 6, md: 6 } }}>
       <Container maxWidth="md">
 
         {/* HEADER */}
-        <Box sx={{ textAlign: "center", mb: 6 }}>
+        <Box sx={{ textAlign: "center", mb: 4 }}>
           <Typography sx={{
             fontWeight: 800,
             color: "#ffffff",

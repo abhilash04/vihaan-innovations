@@ -23,9 +23,9 @@ const steps = [
 ];
 
 const HotelGuestJourney = () => (
-  <Box sx={{ bgcolor: "#fffdf0", py: 8 }}>
+  <Box sx={{ bgcolor: "#fffdf0", py: 6 }}>
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: "center", mb: 6 }}>
+      <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography sx={{ color: "#d4a017", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>The Guest Journey</Typography>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "34px" }, mb: 2 }}>
           Seamless Experience from Booking to Checkout
@@ -36,15 +36,22 @@ const HotelGuestJourney = () => (
       </Box>
 
       {/* Horizontal scrollable steps */}
-      <Box sx={{ overflowX: "auto", pb: 2 }}>
-        <Box sx={{ display: "flex", alignItems: "center", minWidth: "900px", gap: 0 }}>
+      <Box sx={{
+        overflowX: "auto",
+        pb: 3,
+        "&::-webkit-scrollbar": { height: "8px" },
+        "&::-webkit-scrollbar-track": { background: "#f1f5f9", borderRadius: "10px" },
+        "&::-webkit-scrollbar-thumb": { background: "#cbd5e1", borderRadius: "10px" },
+        "&::-webkit-scrollbar-thumb:hover": { background: "#94a3b8" },
+      }}>
+        <Box sx={{ display: "flex", alignItems: "center", minWidth: "max-content", gap: 3.25, px: 4, py: 3 }}>
           {steps.map((step, i) => {
             const Icon = step.icon;
             const isLast = i === steps.length - 1;
             return (
               <React.Fragment key={i}>
-                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center" }}>
-                  <Paper elevation={0} sx={{ p: 2.5, borderRadius: "16px", bgcolor: "#ffffff", border: `2px solid ${step.color}30`, textAlign: "center", width: "95%", boxShadow: "0 4px 12px rgba(0,0,0,0.04)", transition: "all 0.3s", "&:hover": { transform: "translateY(-6px)", boxShadow: `0 10px 25px ${step.color}25`, borderColor: step.color } }}>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }} style={{ flex: "0 0 auto", width: "160px", display: "flex", flexDirection: "column", alignItems: "center" }}>
+                  <Paper elevation={0} sx={{ p: 2.5, borderRadius: "16px", bgcolor: "#ffffff", border: `2px solid ${step.color}30`, textAlign: "center", width: "100%", height: "140px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", boxShadow: "0 4px 12px rgba(0,0,0,0.04)", transition: "all 0.3s", "&:hover": { transform: "translateY(-6px)", boxShadow: `0 10px 25px ${step.color}25`, borderColor: step.color } }}>
                     <Box sx={{ width: 48, height: 48, borderRadius: "14px", bgcolor: `${step.color}15`, display: "flex", justifyContent: "center", alignItems: "center", color: step.color, mx: "auto", mb: 1.5 }}>
                       <Icon sx={{ fontSize: 24 }} />
                     </Box>
@@ -52,7 +59,7 @@ const HotelGuestJourney = () => (
                   </Paper>
                 </motion.div>
                 {!isLast && (
-                  <ArrowForwardIcon sx={{ color: "#94a3b8", fontSize: 18, flexShrink: 0, mx: 0.5 }} />
+                  <ArrowForwardIcon sx={{ color: "#94a3b8", fontSize: 20, flexShrink: 0 }} />
                 )}
               </React.Fragment>
             );

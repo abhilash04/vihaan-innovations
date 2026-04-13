@@ -183,7 +183,7 @@ const ResortFeatures = () => {
                           alignItems: "center",
                           gap: 1,
                           fontSize: "0.85rem",
-                          color: "rgba(245, 245, 240, 0.5)",
+                          color: "rgba(255, 255, 255, 1)",
                           mb: 0.8,
                           fontFamily: "'Outfit', sans-serif",
                         }}

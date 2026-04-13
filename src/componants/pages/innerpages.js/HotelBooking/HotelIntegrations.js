@@ -18,9 +18,9 @@ const integrations = [
 ];
 
 const HotelIntegrations = () => (
-  <Box sx={{ bgcolor: "#f8fafc", py: 8 }}>
+  <Box sx={{ bgcolor: "#f8fafc", py: 6 }}>
     <Container maxWidth="md">
-      <Box sx={{ textAlign: "center", mb: 6 }}>
+      <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography sx={{ color: "#0f766e", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>Third-Party Integrations</Typography>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "34px" }, mb: 2 }}>
           Connect Your Ecosystem

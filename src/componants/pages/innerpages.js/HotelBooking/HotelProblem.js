@@ -15,19 +15,19 @@ const problems = [
 ];
 
 const HotelProblem = () => (
-  <Box sx={{ bgcolor: "#fffdf0", py: 8, position: "relative", overflow: "hidden" }}>
+  <Box sx={{ bgcolor: "#fffdf0", py: 6, position: "relative", overflow: "hidden" }}>
     <Box sx={{ position: "absolute", bottom: -80, right: -80, width: 350, height: 350, borderRadius: "50%", background: "radial-gradient(circle, rgba(212,160,23,0.12) 0%, transparent 70%)" }} />
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: "center", mb: 6 }}>
+      <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "28px", md: "38px" }, mb: 2 }}>
           The Problem
         </Typography>
         <Typography sx={{ fontWeight: 700, color: "#dc2626", fontSize: { xs: "18px", md: "22px" }, mb: 1 }}>
           Are you losing revenue to third-party booking platforms?
         </Typography>
-        <Typography sx={{ fontWeight: 600, color: "#475569", fontSize: "18px", mb: 2 }}>
+        {/* <Typography sx={{ fontWeight: 600, color: "#475569", fontSize: "18px", mb: 2 }}>
           Are outdated systems affecting your guest experience?
-        </Typography>
+        </Typography> */}
         <Typography sx={{ color: "#64748b", fontSize: "16px", maxWidth: "600px", mx: "auto" }}>
           Many businesses running hotel booking websites face these common challenges:
         </Typography>

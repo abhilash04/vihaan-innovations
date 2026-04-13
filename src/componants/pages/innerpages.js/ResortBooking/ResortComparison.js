@@ -34,11 +34,11 @@ const ResortComparison = () => {
               transition={{ duration: 0.8 }}
             >
               <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 2 }}>
-                <Box sx={{ width: "30px", height: "1px", bgcolor: "#D4AF37" }} />
+                <Box sx={{ width: "30px", height: "1px", bgcolor: "#dd690aff" }} />
                 <Typography
                   sx={{
                     fontFamily: "'Outfit', sans-serif",
-                    color: "#D4AF37",
+                    color: "#dd690aff",
                     fontSize: "0.85rem",
                     letterSpacing: "1.5px",
                     textTransform: "uppercase",
@@ -67,12 +67,11 @@ const ResortComparison = () => {
                   fontFamily: "'Outfit', sans-serif",
                   fontSize: "1rem",
                   color: "rgba(245, 245, 240, 0.8)",
-                  mb: 4,
+                  mb: 2,
                   lineHeight: 1.6,
                 }}
               >
-                Your resort needs more than just a good-looking website. It needs a smart system that helps you manage bookings and guests easily.<br /><br />
-                Our solution combines beautiful design with powerful features so you can run your resort from one place.
+                Your resort needs more than just a good-looking website. It needs a smart system that helps you manage bookings and guests easily.
               </Typography>
 
               {[
@@ -90,7 +89,7 @@ const ResortComparison = () => {
                   transition={{ duration: 0.5, delay: 0.2 + i * 0.15 }}
                 >
                   <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, mb: 1.5 }}>
-                    <Check size={20} color="#D4AF37" />
+                    <Check size={20} color="#dd690aff" />
                     <Typography
                       sx={{
                         fontFamily: "'Outfit', sans-serif",
@@ -108,9 +107,9 @@ const ResortComparison = () => {
                 variant="contained"
                 endIcon={<ArrowRight size={18} />}
                 sx={{
-                  mt: 4,
+                  mt: 3,
                   fontFamily: "'Outfit', sans-serif",
-                  bgcolor: "#D4AF37",
+                  bgcolor: "#dd690aff",
                   color: "#0A111E",
                   px: 4,
                   py: 1.5,
@@ -150,18 +149,18 @@ const ResortComparison = () => {
                     borderBottom: "1px solid rgba(245, 245, 240, 0.08)",
                   }}
                 >
-                  <Grid item xs={6}>
-                    <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, letterSpacing: "1px", textTransform: "uppercase", fontSize: "0.85rem", color: "rgba(245,245,240,0.6)" }}>
+                  <Grid item xs={5}>
+                    <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, letterSpacing: "1px", textTransform: "uppercase", fontSize: "1rem", color: "rgba(255, 255, 255, 0.6)" }}>
                       Capability
                     </Typography>
                   </Grid>
-                  <Grid item xs={3} textAlign="center">
-                    <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase", fontSize: "0.85rem", color: "#D4AF37" }}>
+                  <Grid item xs={3.5} textAlign="center">
+                    <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase", fontSize: "1rem", color: "#dd690aff" }}>
                       Smart Platform
                     </Typography>
                   </Grid>
-                  <Grid item xs={3} textAlign="center">
-                    <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, letterSpacing: "1px", textTransform: "uppercase", fontSize: "0.85rem", color: "rgba(245,245,240,0.4)" }}>
+                  <Grid item xs={3.5} textAlign="center">
+                    <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, letterSpacing: "1px", textTransform: "uppercase", fontSize: "1rem", color: "rgba(245,245,240,0.4)" }}>
                       Traditional
                     </Typography>
                   </Grid>
@@ -185,27 +184,27 @@ const ResortComparison = () => {
                         borderBottom: index !== rows.length - 1 ? "1px solid rgba(245, 245, 240, 0.04)" : "none",
                       }}
                     >
-                      <Grid item xs={6}>
-                        <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.95rem" }}>
+                      <Grid item xs={5}>
+                        <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "1rem" }}>
                           {row.item}
                         </Typography>
                       </Grid>
-                      <Grid item xs={3} textAlign="center">
+                      <Grid item xs={3.5} textAlign="center">
                         {row.smart === true ? (
                           <Check size={20} color="#4CAF50" />
                         ) : row.smart === false ? (
                           <X size={20} color="#F44336" />
                         ) : (
-                          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.85rem", color: "#D4AF37" }}>{row.smart}</Typography>
+                          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.95rem", color: "#dd690aff" }}>{row.smart}</Typography>
                         )}
                       </Grid>
-                      <Grid item xs={3} textAlign="center">
+                      <Grid item xs={3.5} textAlign="center">
                         {row.trad === true ? (
                           <Check size={20} color="#4CAF50" />
                         ) : row.trad === false ? (
                           <X size={20} color="#F44336" />
                         ) : (
-                          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.85rem", color: "rgba(245,245,240,0.6)" }}>{row.trad}</Typography>
+                          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.95rem", color: "rgba(245,245,240,0.6)" }}>{row.trad}</Typography>
                         )}
                       </Grid>
                     </Grid>

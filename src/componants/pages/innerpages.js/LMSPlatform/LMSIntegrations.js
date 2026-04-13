@@ -16,9 +16,9 @@ const integrations = [
 ];
 
 const LMSIntegrations = () => (
-  <Box sx={{ bgcolor: "#eff6ff", py: 8 }}>
+  <Box sx={{ bgcolor: "#eff6ff", py: 6 }}>
     <Container maxWidth="md">
-      <Box sx={{ textAlign: "center", mb: 8 }}>
+      <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>Integrations & Compatibility</Typography>
         <Typography sx={{ color: "#64748b", fontSize: "16px" }}>Compatible tools, platforms, and services to integrate to.</Typography>
       </Box>

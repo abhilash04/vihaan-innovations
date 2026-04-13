@@ -17,7 +17,7 @@ const steps = [
 
 const RealEstateProcess = () => {
   return (
-    <Box sx={{ py: 10, bgcolor: "#ffffff", position: "relative" }}>
+    <Box sx={{ py: 6, bgcolor: "#ffffff", position: "relative" }}>
 
       {/* Wave shape divider separating from previous section could go here if needed */}
 

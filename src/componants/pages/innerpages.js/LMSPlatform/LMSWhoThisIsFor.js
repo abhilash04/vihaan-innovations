@@ -33,9 +33,9 @@ const AudienceCard = ({ icon: Icon, title, color, bg, delay }) => (
 );
 
 const LMSWhoThisIsFor = () => (
-  <Box sx={{ bgcolor: "#ffffff", py: 12 }}>
+  <Box sx={{ bgcolor: "#ffffff", py: 6, mb: 3 }}>
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: "center", mb: 8 }}>
+      <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>Who This Is For</Typography>
         <Typography sx={{ color: "#64748b", fontSize: "16px" }}>Custom LMS App Development solutions designed for different industries and learning needs.</Typography>
       </Box>

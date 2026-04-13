@@ -78,7 +78,7 @@ const EducationPlatformModules = () => {
   const currentContent = moduleDetails[activeTab];
 
   return (
-    <Box sx={{ bgcolor: "#F8FAFC", py: 10, position: "relative" }}>
+    <Box sx={{ bgcolor: "#F8FAFC", py: 6, position: "relative" }}>
 
       {/* Decorative arrow pointing down
       <Box sx={{ position: "absolute", top: -20, left: "50%", transform: "translateX(-50%)", zIndex: 1 }}>

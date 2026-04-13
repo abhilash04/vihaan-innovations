@@ -22,7 +22,7 @@ const propertyTypes = [
 ];
 
 const PropertyCard = ({ icon: Icon, title, color, bg, delay }) => (
-  <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay }} style={{ height: "100%" }}>
+  <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay }} style={{ height: "80%" }}>
     <Paper elevation={0} sx={{ p: 3, pt: 3.5, borderRadius: "18px", bgcolor: "#ffffff", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", border: `1.5px solid ${bg}`, boxShadow: "0 4px 16px rgba(0,0,0,0.04)", transition: "all 0.3s", "&:hover": { transform: "translateY(-6px)", boxShadow: `0 14px 35px ${color}22`, borderColor: color } }}>
       <Box sx={{ width: 60, height: 60, borderRadius: "16px", bgcolor: bg, display: "flex", justifyContent: "center", alignItems: "center", color, mb: 2, "& > svg": { fontSize: 30 } }}>
         <Icon />
@@ -33,9 +33,9 @@ const PropertyCard = ({ icon: Icon, title, color, bg, delay }) => (
 );
 
 const HotelWhoThisIsFor = () => (
-  <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
+  <Box sx={{ bgcolor: "#ffffff", py: 6 }}>
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: "center", mb: 6 }}>
+      <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "36px" }, mb: 2, lineHeight: 1.2 }}>
           The Perfect Solution for Every Property Type
         </Typography>
