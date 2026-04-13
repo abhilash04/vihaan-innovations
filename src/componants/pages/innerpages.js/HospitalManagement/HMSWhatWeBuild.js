@@ -25,48 +25,145 @@ const features = [
   { icon: SpeedIcon, title: "Fast Checkout", desc: "Speed up billing with integrated payments.", color: "#10B981" }
 ];
 
+/* ---------- CARD UI ---------- */
+const CardUI = ({ feat, Icon }) => (
+  <Paper
+    elevation={0}
+    sx={{
+      p: 3,
+      borderRadius: "16px",
+      bgcolor: "#ffffff",
+      border: "1px solid rgba(0,0,0,0.04)",
+
+      flex: 1,
+      height: "100%",   // ✅ FIX
+
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-start",
+
+      position: "relative",
+      overflow: "hidden",
+      transition: "all 0.3s ease",
+      cursor: "pointer",
+
+      "&:hover": {
+        transform: "translateY(-6px)",
+        boxShadow: "0 12px 30px rgba(10,45,110,0.05)",
+        "&::after": { width: "100%" },
+        "& .icon-box": {
+          transform: "scale(1.15)",
+          bgcolor: `${feat.color}15`
+        }
+      },
+
+      "&::after": {
+        content: '""',
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        width: "0",
+        height: "4px",
+        bgcolor: feat.color,
+        transition: "width 0.3s ease"
+      }
+    }}
+  >
+    <Box
+      className="icon-box"
+      sx={{
+        width: 44,
+        height: 44,
+        borderRadius: "12px",
+        bgcolor: `${feat.color}08`,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        color: feat.color,
+        mb: 1.8,
+        transition: "all 0.3s"
+      }}
+    >
+      <Icon sx={{ fontSize: 30 }} />
+    </Box>
+
+    <Typography sx={{ fontWeight: 800, fontSize: "16px", mt: 1 }}>
+      {feat.title}
+    </Typography>
+
+    <Typography sx={{ fontSize: "12px", color: "#4A5568", mt: 1 }}>
+      {feat.desc}
+    </Typography>
+  </Paper>
+);
+
+/* ---------- MAIN COMPONENT ---------- */
 const HMSWhatWeBuild = () => {
+  const topRow = features.slice(0, 3);
+  const middleRow = features.slice(3, 7);
+  const bottomRow = features.slice(7, 10);
+
   return (
-    <Box sx={{ background: "#ffffff", py: 8, position: "relative", overflow: "hidden" }}>
+    <Box sx={{ background: "#ffffff", py: 8 }}>
       <Container maxWidth="lg">
+
+        {/* HEADER */}
         <Box sx={{ textAlign: "center", mb: 8 }}>
-          <Typography sx={{ color: "#0A2D6E", fontWeight: 800, fontSize: "12px", mb: 1, letterSpacing: "1px" }}>OUR PLATFORM</Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "28px", md: "36px" }, mb: 2, fontFamily: "Plus Jakarta Sans, sans-serif" }}>
+          <Typography sx={{ fontWeight: 800, fontSize: "12px", mb: 1 }}>
+            OUR PLATFORM
+          </Typography>
+
+          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
             Built by a Leading Hospital Software Company
           </Typography>
-          <Typography sx={{ color: "#4A5568", fontSize: "15px", maxWidth: "800px", mx: "auto", mb: 3, lineHeight: 1.6 }}>
-            We provide an all-in-one hospital system that simplifies operations, connects departments, and improves patient care.
+
+          <Typography sx={{ maxWidth: "800px", mx: "auto", mb: 3 }}>
+            We provide an all-in-one hospital system that simplifies operations.
           </Typography>
-          <Box sx={{ width: 60, height: "3px", bgcolor: "#0A2D6E", mx: "auto", borderRadius: "2px", mb: 4 }} />
-          <Typography sx={{ color: "#0A2D6E", fontWeight: 800, fontSize: "20px", mb: 2 }}>🚀 Core Modules</Typography>
         </Box>
 
-        <Grid container spacing={3} sx={{ px: 2 }}>
-          {features.map((feat, i) => {
+        {/* TOP ROW */}
+        <Grid container spacing={3} sx={{ px: 2, mb: { xs: 8, md: 10 } }}>
+          {topRow.map((feat, i) => {
             const Icon = feat.icon;
-            let initialProps = { opacity: 0, y: 30 };
-            let whileInViewProps = { opacity: 1, y: 0 };
-
-            if (i >= 3 && i <= 6) { // Row 2
-              initialProps = { opacity: 0, x: -30 };
-              whileInViewProps = { opacity: 1, x: 0 };
-            }
-
             return (
-              <Grid item xs={12} md={i < 3 || i >= 7 ? 4 : 3} key={i}>
-                <motion.div initial={initialProps} whileInView={whileInViewProps} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}>
-                  <Paper elevation={0} sx={{ p: 3, borderRadius: "16px", bgcolor: "#ffffff", border: "1px solid rgba(0,0,0,0.04)", height: "100%", position: "relative", overflow: "hidden", transition: "all 0.3s ease", cursor: "pointer", "&:hover": { transform: "translateY(-6px)", boxShadow: "0 12px 30px rgba(10,45,110,0.05)", "&::after": { width: "100%" }, "& .icon-box": { transform: "scale(1.15)", bgcolor: `${feat.color}15` } }, "&::after": { content: '""', position: "absolute", bottom: 0, left: 0, width: "0", height: "4px", bgcolor: feat.color, transition: "width 0.3s ease" } }}>
-                    <Box className="icon-box" sx={{ width: 44, height: 44, borderRadius: "12px", bgcolor: `${feat.color}08`, display: "flex", justifyContent: "center", alignItems: "center", color: feat.color, mb: 1.8, transition: "all 0.3s" }}>
-                      <Icon sx={{ fontSize: 20 }} />
-                    </Box>
-                    <Typography sx={{ color: "#0B2046", fontWeight: 800, fontSize: "15px", mb: 1 }}>{feat.title}</Typography>
-                    <Typography sx={{ color: "#4A5568", fontSize: "12px", lineHeight: 1.5 }}>{feat.desc}</Typography>
-                  </Paper>
+              <Grid item xs={12} md={4} key={i} sx={{ display: "flex" }}>
+                <motion.div style={{ width: "100%", display: "flex" }}>
+                  <CardUI feat={feat} Icon={Icon} />
                 </motion.div>
               </Grid>
             );
           })}
         </Grid>
+
+        {/* MIDDLE ROW */}
+        <Grid container spacing={3} sx={{ px: 2, mb: { xs: 8, md: 10 } }}>
+          {middleRow.map((feat, i) => {
+            const Icon = feat.icon;
+            return (
+              <Grid item xs={12} md={3} key={i} sx={{ display: "flex" }}>
+                <motion.div style={{ width: "100%", display: "flex" }}>
+                  <CardUI feat={feat} Icon={Icon} />
+                </motion.div>
+              </Grid>
+            );
+          })}
+        </Grid>
+
+        {/* BOTTOM ROW */}
+        <Grid container spacing={3} sx={{ px: 2, mb: { xs: 8, md: 10 } }}>
+          {bottomRow.map((feat, i) => {
+            const Icon = feat.icon;
+            return (
+              <Grid item xs={12} md={4} key={i} sx={{ display: "flex" }}>
+                <motion.div style={{ width: "100%", display: "flex" }}>
+                  <CardUI feat={feat} Icon={Icon} />
+                </motion.div>
+              </Grid>
+            );
+          })}
+        </Grid>
+
       </Container>
     </Box>
   );

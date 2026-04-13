@@ -32,23 +32,88 @@ const HRMAbout = () => (
         Benefits of Using HR Management Software
       </Typography>
 
-      <Grid container spacing={2} justifyContent="center" sx={{ px: 2 }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          gap: 2,
+          flexWrap: "wrap",
+          px: 2
+        }}
+      >
         {hrmValues.map((val, i) => {
           const Icon = val.icon;
           return (
-            <Grid item xs={6} sm={4} md={2.4} key={i}>
-              <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.08 }}>
-                <Paper elevation={0} sx={{ p: 3, borderRadius: "16px", bgcolor: "#ffffff", border: `1px solid rgba(0,0,0,0.04)`, textAlign: "center", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", transition: "all 0.3s", boxShadow: "0 4px 15px rgba(0,0,0,0.03)", "&:hover": { bgcolor: "#ffffff", borderColor: val.color, transform: "translateY(-4px)", boxShadow: "0 10px 25px rgba(0,0,0,0.06)" } }}>
-                  <Box sx={{ width: 44, height: 44, borderRadius: "12px", bgcolor: `${val.color}15`, display: "flex", justifyContent: "center", alignItems: "center", color: val.color, mb: 1.5 }}>
-                    <Icon sx={{ fontSize: 24 }} />
+            <Box
+              key={i}
+              sx={{
+                flex: "1 1 18%",
+                minWidth: "160px",
+                maxWidth: "200px",
+                display: "flex"
+              }}
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.08 }}
+                style={{ width: "100%" }}
+              >
+                <Paper
+                  elevation={0}
+                  sx={{
+                    p: 2.5,
+                    borderRadius: "16px",
+                    bgcolor: "#ffffff",
+                    border: "1px solid rgba(0,0,0,0.04)",
+                    textAlign: "center",
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    transition: "all 0.3s",
+                    boxShadow: "0 4px 15px rgba(0,0,0,0.03)",
+                    "&:hover": {
+                      borderColor: val.color,
+                      transform: "translateY(-4px)",
+                      boxShadow: "0 10px 25px rgba(0,0,0,0.06)"
+                    }
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: 40,
+                      height: 40,
+                      borderRadius: "10px",
+                      bgcolor: `${val.color}15`,
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      color: val.color,
+                      mb: 2
+                    }}
+                  >
+                    <Icon sx={{ fontSize: 22 }} />
                   </Box>
-                  <Typography sx={{ color: "#1A202C", fontWeight: 700, fontSize: "12px", lineHeight: 1.3 }}>{val.title}</Typography>
+
+                  <Typography
+                    sx={{
+                      color: "#1A202C",
+                      fontWeight: 700,
+                      fontSize: "12px",
+                      lineHeight: 1.3
+                    }}
+                  >
+                    {val.title}
+                  </Typography>
                 </Paper>
               </motion.div>
-            </Grid>
+            </Box>
           );
         })}
-      </Grid>
+      </Box>
     </Container>
   </Box>
 );

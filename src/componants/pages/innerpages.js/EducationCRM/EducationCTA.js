@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 // Reusing the starry background from Real Estate as it perfectly matches the mock's bottom section
 const EducationCTA = () => {
   return (
-    <Box sx={{ position: "relative", bgcolor: "#0B1528", pt: 15, pb: 10, overflow: "hidden" }}>
+    <Box sx={{ position: "relative", bgcolor: "#0B1528", pt: 15, pb: 8, overflow: "hidden" }}>
 
       {/* Top Wave linking from Proven Impact/Why Us */}
       <Box sx={{ position: "absolute", top: -1, left: 0, width: "100%", zIndex: 1, transform: "rotate(180deg)" }}>
@@ -67,9 +67,9 @@ const EducationCTA = () => {
                 Get Your Free Education CRM Demo
               </Button>
 
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1, color: "rgba(255,255,255,0.6)", cursor: "pointer", "&:hover": { color: "#ffffff" }, transition: "color 0.3s" }}>
+              {/* <Box sx={{ display: "flex", alignItems: "center", gap: 1, color: "rgba(255,255,255,0.6)", cursor: "pointer", "&:hover": { color: "#ffffff" }, transition: "color 0.3s" }}>
                 <Typography sx={{ fontWeight: 600, fontSize: "15px" }}>Vihaan Innovations</Typography>
-              </Box>
+              </Box> */}
             </Box>
 
           </Box>

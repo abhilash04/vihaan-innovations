@@ -34,7 +34,7 @@ const flipVariants = {
 
 const HMSDepartments = () => {
   return (
-    <Box sx={{ background: "#ffffff", py: 8, position: "relative", overflow: "hidden" }}>
+    <Box sx={{ background: "#ffffff", py: 6, position: "relative", overflow: "hidden" }}>
       <Container maxWidth="lg">
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography sx={{ color: "#0A2D6E", fontWeight: 800, fontSize: "12px", mb: 1, letterSpacing: "1px" }}>DEPARTMENT COVERAGE</Typography>
@@ -46,11 +46,11 @@ const HMSDepartments = () => {
           </Typography>
         </Box>
 
-        <Grid container spacing={3} sx={{ px: 2, perspective: "1200px" }}>
+        <Grid container spacing={3} sx={{ px: 2, perspective: "1200px" }} alignItems="stretch">
           {depts.map((dept, i) => {
             const Icon = dept.icon;
             return (
-              <Grid item xs={12} sm={6} md={3} key={i}>
+              <Grid item xs={12} sm={6} md={3} key={i} sx={{ display: "flex" }}>
                 <motion.div custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={flipVariants}>
                   <Paper elevation={0} sx={{ p: 0, borderRadius: "16px", bgcolor: "#ffffff", border: "1px solid rgba(0,0,0,0.04)", overflow: "hidden", height: "100%", display: "flex", flexDirection: "column", transition: "all 0.3s ease", boxShadow: "0 4px 15px rgba(0,0,0,0.02)", "&:hover": { transform: "translateY(-5px)", boxShadow: "0 12px 30px rgba(10,45,110,0.06)", "& .color-band": { height: "50px" }, "& .learn-more": { transform: "translateY(0)", opacity: 1 }, "& .icon-circle": { transform: "scale(1.1)" } } }}>
                     {/* Top colored band */}

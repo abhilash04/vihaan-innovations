@@ -77,9 +77,9 @@ const ResortBenefits = () => {
         </Box>
 
         {/* Top Row - 3 Cards */}
-        <Grid container spacing={4} sx={{ mb: 4 }}>
+        <Grid container spacing={4} sx={{ mb: 4 }} alignItems="stretch">
           {benefits.map((item, index) => (
-            <Grid item xs={12} md={4} key={index}>
+            <Grid item xs={12} md={4} key={index} sx={{ display: "flex" }}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -95,7 +95,7 @@ const ResortBenefits = () => {
                     border: "1px solid rgba(245, 245, 240, 0.04)",
                     position: "relative",
                     overflow: "hidden",
-                    height: "100%",
+                    height: "80%",
                     display: "flex",
                     flexDirection: "column",
                     "&::before": {

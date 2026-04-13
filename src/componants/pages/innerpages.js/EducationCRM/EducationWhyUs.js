@@ -16,13 +16,13 @@ const whyPoints = [
 
 const EducationWhyUs = () => {
   return (
-    <Box sx={{ position: "relative", bgcolor: "#f8f9fe", pt: 6, pb: 12 }}>
+    <Box sx={{ position: "relative", bgcolor: "#f8f9fe", pt: 6, pb: 6 }}>
       {/* Continuing faint background gradient if needed, but keeping it clean like the mock */}
 
       <Container maxWidth="lg">
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 4 }}>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "46px" }, mb: 2 }}>
             Why Choose Our CRM?
           </Typography>

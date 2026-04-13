@@ -88,9 +88,6 @@ const MatrimonyWhoThisIsFor = () => {
           <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "800px", margin: "0 auto", mb: 2 }}>
             As an experienced matrimony web design company, we build advanced matchmaking platforms designed to simplify partner search, manage profiles efficiently, and deliver a secure experience for families and communities.
           </Typography>
-          <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
-            Our matrimony platforms include intelligent matchmaking tools, powerful admin dashboards, and user-friendly interfaces that make the matchmaking process seamless.
-          </Typography>
         </Box>
 
         {/* Audience Grid - 3x2 Layout exact match to image */}

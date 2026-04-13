@@ -14,10 +14,10 @@ const StatCard = ({ value, label, delay }) => (
     <Paper
       elevation={0}
       sx={{
-        p: 3,
-        borderRadius: "20px",
+        p: 2.5, // Reduced from 3
+        borderRadius: "16px", // Slightly tighter radius
         bgcolor: "#ffffff",
-        boxShadow: "0 15px 35px rgba(0,0,0,0.05)",
+        boxShadow: "0 10px 25px rgba(0,0,0,0.04)", // Softer shadow for smaller card
         border: "1px solid rgba(0,0,0,0.03)",
         height: "100%",
         display: "flex",
@@ -26,15 +26,15 @@ const StatCard = ({ value, label, delay }) => (
         textAlign: "center",
         transition: "all 0.3s ease",
         "&:hover": {
-          transform: "translateY(-8px)",
-          boxShadow: "0 20px 40px rgba(0,0,0,0.08)"
+          transform: "translateY(-5px)",
+          boxShadow: "0 15px 30px rgba(0,0,0,0.08)"
         }
       }}
     >
-      <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "56px" }, mb: 2, lineHeight: 1 }}>
+      <Typography variant="h2" component="div" sx={{ fontWeight: 800, color: "#1a1a1a", mb: 1, lineHeight: 1 }}>
         {value}
       </Typography>
-      <Typography sx={{ color: "#555", fontSize: "15px", fontWeight: 600, lineHeight: 1.4 }}>
+      <Typography sx={{ color: "#555", fontSize: "14px", fontWeight: 600, lineHeight: 1.3 }}>
         {label}
       </Typography>
     </Paper>
@@ -43,7 +43,7 @@ const StatCard = ({ value, label, delay }) => (
 
 const RealEstateProvenImpact = () => {
   return (
-    <Box sx={{ position: "relative", pb: 14, pt: 6, overflow: "hidden" }}>
+    <Box sx={{ position: "relative", pb: 10, pt: 6, overflow: "hidden" }}>
 
       {/* Background shape */}
       <Box sx={{
@@ -56,52 +56,52 @@ const RealEstateProvenImpact = () => {
         zIndex: 0
       }} />
 
-      {/* Decorative Arrow from Previous section */}
-      <Box sx={{ position: 'relative', zIndex: 1, display: 'flex', justifyContent: 'center', mb: 4 }}>
+      {/* Decorative Arrow */}
+      <Box sx={{ position: 'relative', zIndex: 1, display: 'flex', justifyContent: 'center', mb: 3 }}>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
         >
-          <ArrowDownwardIcon sx={{ color: "#00B4D8", fontSize: 40 }} />
+          <ArrowDownwardIcon sx={{ color: "#00B4D8", fontSize: 32 }} />
         </motion.div>
       </Box>
 
-      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
+      <Container maxWidth="md" sx={{ position: "relative", zIndex: 2 }}> {/* Reduced Container width to md */}
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "28px", md: "46px" } }}>
+        <Box sx={{ textAlign: "center", mb: 5 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "22px", md: "36px" } }}>
             Proven Impact
           </Typography>
         </Box>
 
         {/* 4 Stat Cards Grid */}
-        <Grid container spacing={3} justifyContent="center">
-          <Grid item xs={12} sm={6} md={3}>
+        <Grid container spacing={2.5} justifyContent="center"> {/* Reduced spacing from 5 to 2.5 */}
+          <Grid item xs={6} sm={6} md={3}>
             <StatCard
-              value="3x"
-              label={<>More site visit leads.</>}
+              value={<Box sx={{ fontSize: "36px", fontWeight: 800, mt: 3 }}>3x</Box>} // Reduced from 42px
+              label="More site visit leads."
               delay={0.1}
             />
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={6} sm={6} md={3}>
             <StatCard
-              value="68%"
-              label={<>Less manual follow-up work.</>}
+              value={<Box sx={{ fontSize: "36px", fontWeight: 800, mt: 3 }}>68%</Box>}
+              label="Less manual follow-up work."
               delay={0.2}
             />
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={6} sm={6} md={3}>
             <StatCard
-              value="40%"
-              label={<>Faster booking to registration.</>}
+              value={<Box sx={{ fontSize: "36px", fontWeight: 800, mt: 3 }}>40%</Box>}
+              label="Faster booking to registration."
               delay={0.3}
             />
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={6} sm={6} md={3}>
             <StatCard
-              value="90"
-              label={<>Complete platform launch time.</>}
+              value={<Box sx={{ fontSize: "36px", fontWeight: 800, mt: 3 }}>90</Box>}
+              label="Complete platform launch time."
               delay={0.4}
             />
           </Grid>

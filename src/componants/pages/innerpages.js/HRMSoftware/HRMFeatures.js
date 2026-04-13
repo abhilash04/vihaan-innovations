@@ -30,13 +30,13 @@ const HRMFeatures = () => (
         </Typography>
       </Box>
 
-      <Grid container spacing={3} sx={{ px: 2 }}>
+      <Grid container spacing={3} sx={{ px: 2 }} alignContent="stretch">
         {features.map((feat, i) => {
           const Icon = feat.icon;
           return (
-            <Grid item xs={12} sm={6} md={4} key={i}>
+            <Grid item xs={12} sm={6} md={4} key={i} sx={{ display: "flex" }}>
               <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }}>
-                <Paper elevation={0} sx={{ p: 4, borderRadius: "20px", bgcolor: "#ffffff", border: "1px solid rgba(0,0,0,0.04)", height: "100%", transition: "all 0.3s", boxShadow: "0 4px 15px rgba(0,0,0,0.03)", "&:hover": { borderColor: feat.color, boxShadow: `0 10px 25px ${feat.color}15`, transform: "translateY(-4px)" } }}>
+                <Paper elevation={0} sx={{ p: 4, borderRadius: "20px", bgcolor: "#ffffff", border: "1px solid rgba(0,0,0,0.04)", height: "75%", transition: "all 0.3s", boxShadow: "0 4px 15px rgba(0,0,0,0.03)", "&:hover": { borderColor: feat.color, boxShadow: `0 10px 25px ${feat.color}15`, transform: "translateY(-4px)" } }}>
                   <Box sx={{ width: 52, height: 52, borderRadius: "14px", bgcolor: `${feat.color}10`, display: "flex", justifyContent: "center", alignItems: "center", color: feat.color, mb: 2.5 }}>
                     <Icon sx={{ fontSize: 26 }} />
                   </Box>
