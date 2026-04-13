@@ -143,7 +143,7 @@ const RealEstateBanner = () => {
                 Digital solutions that help close property deals faster
               </Typography>
 
-              <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "18px", lineHeight: 1.6, mb: 5, maxWidth: "500px" }}>
+              <Typography sx={{ color: "rgba(255, 255, 255, 0.7)", fontSize: "18px", lineHeight: 1.6, mb: 5, maxWidth: "500px" }}>
                 We develop custom Real Estate CRM platforms, property listing portals, lead management tools, and agent dashboards - specially designed for real estate businesses that want to manage clients efficiently and grow their sales.
               </Typography>
 

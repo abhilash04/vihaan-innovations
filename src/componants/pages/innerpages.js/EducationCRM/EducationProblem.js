@@ -50,7 +50,7 @@ const ProblemItem = ({ icon: Icon, title, align = "left", delay }) => (
 
 const EducationProblem = () => {
   return (
-    <Box sx={{ bgcolor: "#ffffff", pt: 8, pb: 16, position: "relative" }}>
+    <Box sx={{ bgcolor: "#ffffff", pt: 0, pb: 4, position: "relative" }}>
       <Container maxWidth="lg">
 
         {/* Header */}

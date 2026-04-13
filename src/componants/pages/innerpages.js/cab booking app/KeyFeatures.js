@@ -141,11 +141,11 @@ const KeyFeatures = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        <Grid container spacing={4} sx={{ maxWidth: 1200, mx: "auto", zIndex: 1, position: "relative" }}>
+        <Grid container spacing={4} sx={{ maxWidth: 1200, mx: "auto", zIndex: 1, position: "relative", alignContent: "stretch" }}>
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <Grid item xs={12} sm={6} md={4} key={index}>
+              <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: "flex", }}>
                 <motion.div variants={cardVariants}>
                   <Box
                     sx={{

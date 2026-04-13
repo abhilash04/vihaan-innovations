@@ -10,7 +10,7 @@ const MatrimonyTestimonal = () => {
             <Container maxWidth="lg">
 
                 {/* Header */}
-                <Box sx={{ textAlign: "center", mb: { xs: 4, md: 6 } }}>
+                <Box sx={{ textAlign: "center", mb: { xs: 2, md: 2 } }}>
                     <Typography sx={{
                         fontWeight: 800,
                         color: "#0B2046",
@@ -36,6 +36,7 @@ const MatrimonyTestimonal = () => {
                             fontSize: { xs: "18px", md: "22px" },
                             lineHeight: 1.6,
                             textAlign: "center",
+                            mt: 4,
                             mb: 4,
                             position: "relative",
                             zIndex: 1,

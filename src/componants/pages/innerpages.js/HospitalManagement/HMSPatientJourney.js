@@ -35,9 +35,9 @@ const JourneyNode = ({ step, color }) => (
 
 const HMSPatientJourney = () => {
   return (
-    <Box sx={{ background: "#F5F7FA", py: 8, position: "relative", overflow: "hidden" }}>
+    <Box sx={{ background: "#F5F7FA", py: 6, position: "relative", overflow: "hidden" }}>
       <Container maxWidth="lg">
-        <Box sx={{ textAlign: "center", mb: 6 }}>
+        <Box sx={{ textAlign: "center", mb: 4 }}>
           <Typography sx={{ color: "#0A2D6E", fontWeight: 800, fontSize: "12px", mb: 1, letterSpacing: "1px" }}>PATIENT JOURNEY</Typography>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#0B2046", fontSize: { xs: "28px", md: "36px" }, mb: 2, fontFamily: "Plus Jakarta Sans, sans-serif" }}>
             End-to-End Hospital Management System
@@ -48,7 +48,7 @@ const HMSPatientJourney = () => {
         </Box>
 
         {/* OPD Track */}
-        <Box sx={{ mb: 10 }}>
+        <Box sx={{ mb: 8 }}>
           <Typography sx={{ color: "#0A2D6E", fontWeight: 800, fontSize: "16px", mb: 4, textAlign: "center" }}>
             <Box component="span" sx={{ position: "relative", display: "inline-block" }}>
               OPD (Outpatient) Flow

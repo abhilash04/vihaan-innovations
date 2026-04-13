@@ -19,7 +19,7 @@ const MatrimonyWhyUs = () => {
       <Container maxWidth="lg">
 
         {/* Why Us Section Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 4 }}>
           <Box sx={{ display: "inline-block", mb: 1 }}>
             <Typography sx={{
               fontWeight: 800, color: "#ffffff", fontSize: "28px",
@@ -35,7 +35,7 @@ const MatrimonyWhyUs = () => {
         </Box>
 
         {/* 4 Cards Grid */}
-        <Grid container spacing={3}>
+        <Grid container spacing={3} alignContent="stretch">
           {diffs.map((diff, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
               <motion.div
@@ -43,7 +43,7 @@ const MatrimonyWhyUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                style={{ height: '100%' }}
+                style={{ height: '80%' }}
               >
                 <Paper
                   elevation={0}
@@ -64,17 +64,17 @@ const MatrimonyWhyUs = () => {
                   }}
                 >
                   {/* Floating Number Tag */}
-                  <Box sx={{
+                  {/* <Box sx={{
                     position: "absolute", top: 15, left: 15,
-                    color: "#0B2046", fontWeight: 800, fontSize: "24px", opacity: 0.5
+                    color: "#0B2046", fontWeight: 800, fontSize: "32px", opacity: 0.5
                   }}>
                     {diff.num}
-                  </Box>
+                  </Box> */}
 
-                  <Box sx={{ color: "#00B4D8", "& > svg": { fontSize: 50 }, mb: 3 }}>
+                  <Box sx={{ pt: 2, color: "#00B4D8", "& > svg": { fontSize: 50 }, mb: 3 }}>
                     {diff.icon}
                   </Box>
-                  <Typography sx={{ fontWeight: 700, color: "#1a1a1a", fontSize: "14px", lineHeight: 1.4, whiteSpace: "pre-line" }}>
+                  <Typography sx={{ fontWeight: 700, color: "#1a1a1a", fontSize: "18px", lineHeight: 1.4, whiteSpace: "pre-line" }}>
                     {diff.title}
                   </Typography>
                 </Paper>

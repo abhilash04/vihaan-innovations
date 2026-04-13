@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import PeopleIcon from '@mui/icons-material/People';
 import SpeedIcon from '@mui/icons-material/Speed';
-import img from '../../../../assets/trusted-matrimony-app.png'
+import img from '../../../../assets/trusted-matrimony-app.png';
+
 const StatCard = ({ icon: Icon, value, label, delay }) => (
   <motion.div
     initial={{ opacity: 0, x: 50 }}
@@ -14,7 +15,9 @@ const StatCard = ({ icon: Icon, value, label, delay }) => (
     <Paper
       elevation={0}
       sx={{
-        pr: 4, pl: 3, py: 2,
+        pr: 4,
+        pl: 3,
+        py: 2,
         borderRadius: "12px",
         bgcolor: "rgba(255, 255, 255, 0.05)",
         backdropFilter: "blur(10px)",
@@ -26,7 +29,7 @@ const StatCard = ({ icon: Icon, value, label, delay }) => (
         mb: 3,
         maxWidth: "350px",
         ml: "auto",
-        transition: "transform 0.3s ease",
+        transition: "all 0.3s ease",
         "&:hover": {
           transform: "translateX(-10px)",
           bgcolor: "rgba(255, 255, 255, 0.08)",
@@ -34,17 +37,17 @@ const StatCard = ({ icon: Icon, value, label, delay }) => (
       }}
     >
       <Box>
-        <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "12px", fontWeight: 600, mb: 0.5, letterSpacing: "0.5px" }}>
+        <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "12px", fontWeight: 600, mb: 0.5 }}>
           {label}
         </Typography>
         <Typography variant="h3" sx={{ fontWeight: 800, color: "#ffffff", fontSize: "28px", lineHeight: 1 }}>
           {value}
         </Typography>
       </Box>
+
       <Box sx={{ color: "#00B4D8", opacity: 0.5 }}>
-        {/* Abstract graph/wave representation for the right side of the card as seen in the design */}
-        <svg width="60" height="30" viewBox="0 0 60 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 25 L15 15 L30 20 L45 5 L60 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <svg width="60" height="30" viewBox="0 0 60 30" fill="none">
+          <path d="M0 25 L15 15 L30 20 L45 5 L60 10" stroke="currentColor" strokeWidth="2" />
           <path d="M0 30 L15 20 L30 25 L45 10 L60 15 L60 30 Z" fill="currentColor" opacity="0.2" />
         </svg>
       </Box>
@@ -58,34 +61,52 @@ const MatrimonyBanner = () => {
       sx={{
         position: "relative",
         minHeight: "90vh",
-        bgcolor: "#0B1528", // Deep rich blue
+        bgcolor: "#0B1528",
         overflow: "hidden",
         display: "flex",
         alignItems: "center",
-        pt: { xs: 15, md: 0 },
-        pb: { xs: 10, md: 0 }
+
+        // ✅ FIXED SPACING
+        py: { xs: 1, md: 0 }
       }}
     >
-      {/* Background Graphic Elements */}
-      <Box sx={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0 }}>
-        {/* Glow behind text */}
-        <Box sx={{ position: "absolute", top: "30%", left: "-10%", width: "50%", height: "50%", background: "radial-gradient(circle, rgba(0, 180, 216, 0.15) 0%, rgba(11, 21, 40, 0) 70%)", borderRadius: "50%", filter: "blur(60px)" }} />
-
-        {/* Tech line grid overlay faint */}
+      {/* Background Effects */}
+      <Box sx={{ position: "absolute", inset: 0, zIndex: 0 }}>
         <Box sx={{
-          position: "absolute", top: 0, left: 0, width: "100%", height: "100%",
-          backgroundImage: "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
-          backgroundSize: "40px 40px", opacity: 0.5
+          position: "absolute",
+          top: "30%",
+          left: "-10%",
+          width: "50%",
+          height: "50%",
+          background: "radial-gradient(circle, rgba(0,180,216,0.15), transparent)",
+          borderRadius: "50%",
+          filter: "blur(60px)"
+        }} />
+
+        <Box sx={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
+          opacity: 0.5
         }} />
       </Box>
 
-      {/* Very bottom wave leading into Who This Is For visually - very subtle straight cut based on mock */}
-      <Box sx={{ position: "absolute", bottom: 0, left: 0, width: "100%", zIndex: 1, height: "40px", background: "linear-gradient(180deg, transparent 0%, rgba(224, 247, 250, 0.2) 100%)" }} />
+      {/* Bottom Gradient */}
+      <Box sx={{
+        position: "absolute",
+        bottom: 0,
+        width: "100%",
+        height: "40px",
+        background: "linear-gradient(180deg, transparent, rgba(224,247,250,0.2))",
+        zIndex: 1
+      }} />
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
         <Grid container spacing={6} alignItems="center">
 
-          {/* Left Text Area */}
+          {/* LEFT CONTENT */}
           <Grid item xs={12} md={6}>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -148,26 +169,16 @@ const MatrimonyBanner = () => {
                   View Features
                 </Button>
               </Box>
-
-              {/* Stats below buttons */}
-              <Box sx={{ display: "flex", flexWrap: "wrap", gap: { xs: 2, md: 4 }, mt: 5, pt: 3, borderTop: "1px solid rgba(255,255,255,0.1)" }}>
-                {[
-                  { value: "50K+", label: "Profiles Managed" },
-                  { value: "85%+", label: "Match Success Rate" },
-                  { value: "4× Faster", label: "User Response Time" },
-                ].map((stat, i) => (
-                  <Box key={i}>
-                    <Typography sx={{ color: "#ffffff", fontWeight: 800, fontSize: "20px" }}>{stat.value}</Typography>
-                    <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "12px", fontWeight: 600, textTransform: "uppercase", mt: 0.5 }}>{stat.label}</Typography>
-                  </Box>
-                ))}
-              </Box>
             </motion.div>
           </Grid>
 
-          {/* Right Floating Stats Area */}
+          {/* RIGHT IMAGE */}
           <Grid item xs={12} md={6}>
-            <img src={img} alt="Building trusted matrimony platforms infographic" style={{ width: "110%", height: 'auto', borderRadius: '20px' }} />
+            <img
+              src={img}
+              alt="Matrimony App"
+              style={{ width: "100%", borderRadius: "20px" }}
+            />
           </Grid>
 
         </Grid>

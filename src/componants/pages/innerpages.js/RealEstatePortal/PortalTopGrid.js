@@ -57,9 +57,9 @@ const PortalTopGrid = () => {
         </Box>
 
         {/* Grid of Cards */}
-        <Grid container spacing={4}>
+        <Grid container spacing={4} alignItems="stretch">
           {solutions.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+            <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: "flex" }}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -73,7 +73,7 @@ const PortalTopGrid = () => {
                     bgcolor: "rgba(25, 30, 43, 0.5)",
                     border: "1px solid rgba(255, 255, 255, 0.03)",
                     borderTop: `4px solid ${item.color}`, // Colored top border
-                    height: "100%",
+                    height: "80%",
                     position: "relative",
                     overflow: "hidden",
                     cursor: "pointer",

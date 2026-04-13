@@ -58,8 +58,7 @@ const ResortComparison = () => {
                   mb: 3,
                 }}
               >
-                The Future of Hospitality Starts With <br />
-                Smart Resort Website Design
+                Smart Resort Experiences
               </Typography>
 
               <Typography
@@ -72,7 +71,7 @@ const ResortComparison = () => {
                   lineHeight: 1.6,
                 }}
               >
-                Your resort needs more than just a good-looking website. It needs a smart system that helps you manage bookings and guests easily.<br/><br/>
+                Your resort needs more than just a good-looking website. It needs a smart system that helps you manage bookings and guests easily.<br /><br />
                 Our solution combines beautiful design with powerful features so you can run your resort from one place.
               </Typography>
 

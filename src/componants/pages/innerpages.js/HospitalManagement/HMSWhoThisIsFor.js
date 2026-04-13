@@ -14,7 +14,7 @@ const facilities = [
   { icon: HealthAndSafetyIcon, label: "Single & Multi-branch Clinic", desc: "Control multiple clinics from one dashboard." },
   { icon: ScienceIcon, label: "Diagnostic Lab", desc: "Automate reports and patient records." },
   { icon: HomeWorkIcon, label: "Nursing Home", desc: "Simplify daily care and operations." },
-  { icon: LocalHospitalIcon, label: "Dental Clinic", desc: "Handle appointments and treatments بسهولة." },
+  { icon: LocalHospitalIcon, label: "Dental Clinic", desc: "Handle appointments and treatments." },
   { icon: SpaIcon, label: "Ayurveda Centre", desc: "Digitize and manage traditional care." },
   { icon: CorporateFareIcon, label: "Corporate Health Unit", desc: "Track employee health records easily." },
   { icon: MediationIcon, label: "Hospital Chain", desc: "Unify and scale multiple hospitals." }
@@ -38,12 +38,12 @@ const HMSWhoThisIsFor = () => {
           <Typography sx={{ color: "#0A2D6E", fontWeight: 700, fontSize: "16px", mb: 1 }}>Flexible Solutions for Hospitals, Clinics & Labs</Typography>
         </Box>
 
-        <Grid container spacing={3} sx={{ px: 2 }}>
+        <Grid container spacing={3} sx={{ px: 2 }} alignItems="stretch">
           {facilities.map((fac, i) => {
             const Icon = fac.icon;
             return (
-              <Grid item xs={12} sm={6} md={3} key={i}>
-                <motion.div initial={{ opacity: 0, scale: 0.95, y: 20 }} whileInView={{ opacity: 1, scale: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }}>
+              <Grid item xs={12} sm={6} md={3} key={i} sx={{ display: "flex" }}>
+                <motion.div style={{ width: "100%", display: "flex" }} initial={{ opacity: 0, scale: 0.95, y: 20 }} whileInView={{ opacity: 1, scale: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }}>
                   <Paper elevation={0} sx={{ p: 3, borderRadius: "16px", bgcolor: "#ffffff", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 1.5, position: "relative", overflow: "hidden", transition: "all 0.3s ease", cursor: "pointer", boxShadow: "0 4px 15px rgba(0,0,0,0.02)", "&:hover": { transform: "translateY(-8px)", boxShadow: "0 12px 30px rgba(10,45,110,0.06)", "& .icon-circle": { bgcolor: "rgba(10,45,110,0.12)", color: "#0A2D6E" }, "&::after": { width: "100%" } }, "&::after": { content: '""', position: "absolute", bottom: 0, left: 0, width: "0", height: "4px", bgcolor: "#0A2D6E", transition: "width 0.3s ease" } }}>
                     <Box className="icon-circle" sx={{ width: 44, height: 44, borderRadius: "50%", bgcolor: "rgba(10,45,110,0.05)", display: "flex", justifyContent: "center", alignItems: "center", color: "#0A2D6E", transition: "all 0.3s" }}>
                       <Icon sx={{ fontSize: 20 }} />

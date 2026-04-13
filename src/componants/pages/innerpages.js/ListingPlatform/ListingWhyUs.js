@@ -96,12 +96,12 @@ const ListingWhyUs = () => {
             maxWidth: "750px",
             mx: "auto",
             position: "relative",
-            overflow: "hidden"
+            overflow: "hidden",
           }}>
             <FormatQuoteIcon sx={{ position: "absolute", top: 20, left: 20, fontSize: 50, color: "rgba(59, 130, 246, 0.15)" }} />
             <FormatQuoteIcon sx={{ position: "absolute", bottom: 20, right: 20, fontSize: 50, color: "rgba(59, 130, 246, 0.15)", transform: "scaleX(-1)" }} />
 
-            <Typography sx={{ fontWeight: 600, color: "#1a1a1a", fontSize: { xs: "18px", md: "20px" }, lineHeight: 1.6, textAlign: "center", mb: 5, position: "relative" }}>
+            <Typography sx={{ fontWeight: 600, color: "#1a1a1a", fontSize: { xs: "18px", md: "20px" }, lineHeight: 1.6, textAlign: "center", mb: 5, mt: 2, position: "relative" }}>
               The best platform we've ever used. Vihaan helped us launch our real estate portal in just 3 months, with advanced search and monetization that we never thought was possible at this budget.
             </Typography>
 

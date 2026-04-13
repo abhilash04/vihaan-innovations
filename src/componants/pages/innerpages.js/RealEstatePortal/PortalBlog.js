@@ -69,9 +69,9 @@ const PortalBlog = () => {
         </Box>
 
         {/* Cards Grid */}
-        <Grid container spacing={4}>
+        <Grid container spacing={4} alignItems="stretch">
           {posts.map((post, index) => (
-            <Grid item xs={12} md={4} key={index}>
+            <Grid item xs={12} md={4} key={index} sx={{ display: "flex" }}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
