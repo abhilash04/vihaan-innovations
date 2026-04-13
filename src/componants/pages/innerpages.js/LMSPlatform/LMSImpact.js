@@ -10,17 +10,17 @@ const stats = [
 ];
 
 const LMSImpact = () => (
-  <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
+  <Box sx={{ bgcolor: "#ffffff", py: 6 }}>
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: "center", mb: 10 }}>
+      <Box sx={{ textAlign: "center", mb: 6 }}>
         <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>Results & Impact Numbers</Typography>
       </Box>
-      <Grid container spacing={4} justifyContent="center">
+      <Grid container spacing={4} justifyContent="center" alignItems="stretch">
         {stats.map((stat, i) => (
-          <Grid item xs={6} md={3} key={i}>
+          <Grid item xs={6} md={3} key={i} sx={{ display: "flex" }}>
             <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}>
-              <Paper elevation={0} sx={{ p: 4, borderRadius: "20px", textAlign: "center", bgcolor: `${stat.color}10`, border: `2px solid ${stat.color}30`, transition: "all 0.3s", "&:hover": { transform: "translateY(-8px)", boxShadow: `0 15px 35px ${stat.color}30` } }}>
-                <Typography sx={{ fontWeight: 900, color: stat.color, fontSize: { xs: "26px", md: "50px" }, lineHeight: 1 }}>{stat.value}</Typography>
+              <Paper elevation={0} sx={{ p: 4, borderRadius: "20px", height: "70%", textAlign: "center", bgcolor: `${stat.color}10`, border: `2px solid ${stat.color}30`, transition: "all 0.3s", "&:hover": { transform: "translateY(-8px)", boxShadow: `0 15px 35px ${stat.color}30` } }}>
+                <Typography sx={{ fontWeight: 900, color: stat.color, fontSize: { xs: "26px", md: "48px" }, lineHeight: 1 }}>{stat.value}</Typography>
                 <Typography sx={{ color: "#475569", fontSize: "14px", fontWeight: 600, mt: 2, lineHeight: 1.4 }}>{stat.label}</Typography>
               </Paper>
             </motion.div>

@@ -20,7 +20,7 @@ const FeatureIcon = ({ icon: Icon, label, delay }) => (
   >
     <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
       <Box sx={{
-        width: 80, height: 80, borderRadius: "50%",
+        width: 80, height: 20, borderRadius: "50%",
         background: "linear-gradient(135deg, rgba(0, 180, 216, 0.2) 0%, rgba(0, 180, 216, 0.05) 100%)",
         border: "1px solid rgba(0, 180, 216, 0.3)",
         display: "flex", justifyContent: "center", alignItems: "center",

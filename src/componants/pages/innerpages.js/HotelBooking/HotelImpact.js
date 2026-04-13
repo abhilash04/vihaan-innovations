@@ -19,11 +19,11 @@ const HotelImpact = () => (
           These metrics show the average growth and performance improvement our clients experience after upgrading to our booking solutions.
         </Typography>
       </Box>
-      <Grid container spacing={4} justifyContent="center">
+      <Grid container spacing={4} justifyContent="center" alignItems="stretch">
         {stats.map((stat, i) => (
-          <Grid item xs={6} md={3} key={i}>
+          <Grid item xs={6} md={3} key={i} sx={{ display: "flex" }}>
             <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}>
-              <Paper elevation={0} sx={{ p: 4, borderRadius: "20px", bgcolor: "rgba(255,255,255,0.06)", border: `1.5px solid ${stat.color}40`, textAlign: "center", transition: "all 0.3s", "&:hover": { transform: "translateY(-8px)", bgcolor: "rgba(255,255,255,0.1)", boxShadow: `0 15px 35px ${stat.color}30` } }}>
+              <Paper elevation={0} sx={{ p: 4, height: "70%", borderRadius: "20px", bgcolor: "rgba(255,255,255,0.06)", border: `1.5px solid ${stat.color}40`, textAlign: "center", transition: "all 0.3s", "&:hover": { transform: "translateY(-8px)", bgcolor: "rgba(255,255,255,0.1)", boxShadow: `0 15px 35px ${stat.color}30` } }}>
                 <Typography sx={{ fontWeight: 900, color: stat.color, fontSize: { xs: "28px", md: "52px" }, lineHeight: 1 }}>{stat.value}</Typography>
                 <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "13px", fontWeight: 500, mt: 2, lineHeight: 1.5 }}>{stat.label}</Typography>
               </Paper>

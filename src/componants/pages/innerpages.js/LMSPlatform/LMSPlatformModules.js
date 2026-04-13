@@ -30,9 +30,9 @@ const moduleContent = {
 const LMSPlatformModules = () => {
   const [active, setActive] = useState(0);
   return (
-    <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
+    <Box sx={{ bgcolor: "#ffffff", py: 6 }}>
       <Container maxWidth="lg">
-        <Box sx={{ textAlign: "center", mb: 6 }}>
+        <Box sx={{ textAlign: "center", mb: 4 }}>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>Platform Modules – Tabbed Deep Dive</Typography>
           <Typography variant="body1" sx={{ color: "#64748b", fontSize: { xs: "14px", md: "16px" } }}>Built by an expert LMS Application Development team, offering powerful modules for complete learning management.</Typography>
         </Box>

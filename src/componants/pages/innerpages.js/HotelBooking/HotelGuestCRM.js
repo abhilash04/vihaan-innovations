@@ -18,9 +18,9 @@ const crmFeatures = [
 ];
 
 const HotelGuestCRM = () => (
-  <Box sx={{ bgcolor: "#f0faf8", py: 8 }}>
+  <Box sx={{ bgcolor: "#f0faf8", py: 6 }}>
     <Container maxWidth="lg">
-      <Box sx={{ textAlign: "center", mb: 3 }}>
+      <Box sx={{ textAlign: "center", }}>
         <Typography sx={{ color: "#0f766e", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "1.5px", mb: 1 }}>Guest CRM & Loyalty</Typography>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "34px" }, mb: 2 }}>
           Build Lasting Relationships with Repeat Guests

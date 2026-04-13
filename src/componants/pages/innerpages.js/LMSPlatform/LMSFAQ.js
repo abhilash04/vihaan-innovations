@@ -17,7 +17,7 @@ const faqs = [
 const LMSFAQ = () => {
   const [expanded, setExpanded] = useState("panel0");
   return (
-    <Box sx={{ bgcolor: "#f8fafc", py: 8 }}>
+    <Box sx={{ bgcolor: "#f8fafc", py: 6 }}>
       <Container maxWidth="md">
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography variant="h2" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>FAQ – Common Questions</Typography>

@@ -4,17 +4,17 @@ import { motion } from "framer-motion";
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 const bigStats = [
-  { value: "80%", label: "Automated Queries: Most customer questions are handled without human involvement.", color: "#06b6d4", size: "72px" },
-  { value: "3x", label: "More Leads: Capture more leads even when your business is closed.", color: "#8b5cf6", size: "72px" },
-  { value: "60%", label: "Less Support Work: Reduce repetitive tasks and save your team’s time.", color: "#22c55e", size: "72px" },
+  { value: "80%", label: "Automated Queries: Most customer questions are handled without human involvement.", color: "#06b6d4", size: "68px" },
+  { value: "3x", label: "More Leads: Capture more leads even when your business is closed.", color: "#8b5cf6", size: "68px" },
+  { value: "60%", label: "Less Support Work: Reduce repetitive tasks and save your team’s time.", color: "#22c55e", size: "68px" },
   { value: "2–3 Weeks", label: "Setup: Your chatbot can be ready and live within a few weeks.", color: "#f59e0b", size: "48px" },
 ];
 
 const ChatbotImpact = () => (
-  <Box sx={{ background: "linear-gradient(135deg, #060d1a 0%, #0a1628 100%)", py: 8, position: "relative", overflow: "hidden" }}>
+  <Box sx={{ background: "linear-gradient(135deg, #060d1a 0%, #0a1628 100%)", py: 6, position: "relative", overflow: "hidden" }}>
     <Box sx={{ position: "absolute", top: "40%", left: "-5%", width: 350, height: 350, borderRadius: "50%", background: "radial-gradient(circle, rgba(6,182,212,0.08) 0%, transparent 70%)", filter: "blur(60px)" }} />
     <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
-      <Box sx={{ textAlign: "center", mb: 10 }}>
+      <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "26px", md: "36px" }, mb: 2 }}>Results & Impact Numbers</Typography>
       </Box>
       <Grid container spacing={4}>

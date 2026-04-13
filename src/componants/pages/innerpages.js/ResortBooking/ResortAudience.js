@@ -37,7 +37,7 @@ const ResortAudience = () => {
   return (
     <Box
       sx={{
-        py: 8,
+        py: 6,
         bgcolor: "#0A111E", // Dark Navy
         color: "#F5F5F0",
         position: "relative",
@@ -112,7 +112,6 @@ const ResortAudience = () => {
                         {item.desc}
                       </Typography>
                     </Box>
-                    {activeTab === index && <ArrowRight size={18} color="#D4AF37" />}
                   </Box>
                 </motion.div>
               ))}

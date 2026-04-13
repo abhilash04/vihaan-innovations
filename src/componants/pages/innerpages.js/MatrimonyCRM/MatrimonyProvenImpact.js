@@ -34,11 +34,11 @@ const StatBox = ({ icon: Icon, value, label, delay }) => (
 
 const MatrimonyProvenImpact = () => {
   return (
-    <Box sx={{ bgcolor: "#0B2046", py: 8, borderBottom: "1px solid rgba(255,255,255,0.05)" }}> {/* Same navy blue as Privacy & Trust */}
+    <Box sx={{ bgcolor: "#0B2046", py: 6, borderBottom: "1px solid rgba(255,255,255,0.05)" }}> {/* Same navy blue as Privacy & Trust */}
       <Container maxWidth="lg">
 
         {/* Header Section added */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: 6 }}>
           <Box sx={{ display: "inline-block", mb: 2 }}>
             <Typography sx={{
               fontWeight: 800, color: "#ffffff", fontSize: "28px",

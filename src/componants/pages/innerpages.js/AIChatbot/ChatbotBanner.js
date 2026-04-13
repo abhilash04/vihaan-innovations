@@ -15,7 +15,7 @@ const ChatbotBanner = () => (
   <Box sx={{
     background: "linear-gradient(135deg, #060d1a 0%, #0a1628 50%, #071225 100%)",
     position: "relative", overflow: "hidden",
-    py: { xs: 6, md: 10 },
+    py: { xs: 6, md: 6 },
   }}>
     {/* Glowing orbs */}
     <Box sx={{ ...glowStyle, top: -80, left: -80, width: 400, height: 400, bgcolor: "rgba(6,182,212,0.12)" }} />
@@ -32,19 +32,18 @@ const ChatbotBanner = () => (
           <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.9 }}>
             <Box sx={{ display: "inline-flex", alignItems: "center", gap: 1.5, bgcolor: "rgba(6,182,212,0.12)", border: "1px solid rgba(6,182,212,0.3)", borderRadius: "30px", px: 2.5, py: 1, mb: 4 }}>
               <SmartToyIcon sx={{ color: "#06b6d4", fontSize: 18 }} />
-              <Typography sx={{ color: "#06b6d4", fontSize: "13px", fontWeight: 700 }}>AI-Powered Chatbots for Indian Businesses</Typography>
+              <Typography sx={{ color: "#06b6d4", fontSize: "11px", fontWeight: 700 }}>AI-Powered Chatbots for Indian Businesses</Typography>
             </Box>
-            <Typography variant="h1" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "26px", md: "56px" }, lineHeight: 1.1, mb: 3 }}>
+            <Typography variant="h1" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "26px", md: "48px" }, lineHeight: 1.1, mb: 3 }}>
               Your Business.<br />
-              Always Active.<br />
               <Box component="span" sx={{ color: "#06b6d4", WebkitTextFillColor: "transparent", background: "linear-gradient(90deg, #06b6d4, #8b5cf6)", WebkitBackgroundClip: "text" }}>
                 Always Responding.
               </Box>
             </Typography>
-            <Typography sx={{ color: "rgba(255,255,255,0.6)", fontSize: "16px", lineHeight: 1.7, mb: 5, maxWidth: "480px" }}>
+            <Typography sx={{ color: "rgba(255,255,255,0.6)", fontSize: "16px", lineHeight: 1.7, mb: 3, maxWidth: "480px" }}>
               As a leading AI Chatbot Development Company, we build custom AI chatbots for websites, WhatsApp, and mobile apps. These chatbots are trained on your business data to handle leads, customer support, bookings, and FAQs automatically—without manual effort.
             </Typography>
-            <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mb: 6 }}>
+            <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mb: 4 }}>
               <Button variant="contained" sx={{ bgcolor: "#06b6d4", color: "#ffffff", fontWeight: 800, px: 4, py: 1.6, borderRadius: "10px", textTransform: "none", fontSize: "15px", boxShadow: "0 6px 25px rgba(6,182,212,0.4)", "&:hover": { bgcolor: "#0891b2", transform: "translateY(-2px)", boxShadow: "0 10px 35px rgba(6,182,212,0.5)" }, transition: "all 0.3s" }}>
                 See a Live Demo
               </Button>

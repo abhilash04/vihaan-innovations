@@ -18,10 +18,10 @@ const useCases = [
 ];
 
 const ChatbotUseCases = () => (
-  <Box sx={{ background: "linear-gradient(180deg, #060d1a 0%, #0a1628 100%)", py: 8, position: "relative", overflow: "hidden" }}>
+  <Box sx={{ background: "linear-gradient(180deg, #060d1a 0%, #0a1628 100%)", py: 6, position: "relative", overflow: "hidden" }}>
     <Box sx={{ position: "absolute", top: "30%", left: "-10%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%)", filter: "blur(40px)" }} />
     <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
-      <Box sx={{ textAlign: "center", mb: 8 }}>
+      <Box sx={{ textAlign: "center", mb: 4 }}>
         <Typography variant="h2" sx={{ fontWeight: 900, color: "#ffffff", fontSize: { xs: "26px", md: "36px" }, mb: 2 }}>
           Who Can Use This & Use Cases
         </Typography>

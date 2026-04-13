@@ -3,7 +3,7 @@ import { Box, Container, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
 
 const HotelCTA = () => (
-  <Box sx={{ position: "relative", bgcolor: "#0f2447", py: 10, overflow: "hidden" }}>
+  <Box sx={{ position: "relative", bgcolor: "#0f2447", py: 6, overflow: "hidden" }}>
     <Box sx={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: "70%", height: "70%", background: "radial-gradient(ellipse, rgba(212,160,23,0.25) 0%, transparent 70%)", filter: "blur(80px)", zIndex: 0 }} />
     <motion.div animate={{ opacity: [0.2, 1, 0.2] }} transition={{ repeat: Infinity, duration: 3 }} style={{ position: "absolute", top: "15%", left: "8%", color: "#d4a017", fontSize: 26 }}>✦</motion.div>
     <motion.div animate={{ opacity: [0.2, 1, 0.2] }} transition={{ repeat: Infinity, duration: 4, delay: 1 }} style={{ position: "absolute", bottom: "18%", right: "10%", color: "#0f766e", fontSize: 22 }}>✦</motion.div>

@@ -152,7 +152,7 @@ const KeyFeatures = () => {
                       p: 4,
                       background: "linear-gradient(135deg, #f78361 0%, #fd544e 100%)", // Gradient Card
                       borderRadius: "16px",
-                      height: "100%",
+                      height: "80%",
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "flex-start",

@@ -16,10 +16,10 @@ const reasons = [
 ];
 
 const ChatbotWhyUs = () => (
-  <Box sx={{ background: "linear-gradient(180deg, #060d1a 0%, #071225 100%)", py: 8, position: "relative", overflow: "hidden" }}>
+  <Box sx={{ background: "linear-gradient(180deg, #060d1a 0%, #071225 100%)", py: 6, position: "relative", overflow: "hidden" }}>
     <Box sx={{ position: "absolute", top: "20%", right: "-5%", width: 350, height: 350, borderRadius: "50%", background: "radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 70%)", filter: "blur(60px)" }} />
     <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2 }}>
-      <Grid container spacing={5} alignItems="flex-start">
+      <Grid container spacing={5} alignItems="stretch">
         {/* Why Us Column */}
         <Grid item xs={12} md={7}>
           <Box sx={{ mb: 6 }}>
@@ -49,9 +49,9 @@ const ChatbotWhyUs = () => (
         </Grid>
 
         {/* CTA Block */}
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={5} sx={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
-            <Paper elevation={0} sx={{ p: 5, borderRadius: "24px", background: "linear-gradient(135deg, rgba(6,182,212,0.15) 0%, rgba(139,92,246,0.15) 100%)", border: "1.5px solid rgba(6,182,212,0.3)", backdropFilter: "blur(20px)", boxShadow: "0 0 60px rgba(6,182,212,0.1)", textAlign: "center", position: "sticky", top: "100px" }}>
+            <Paper elevation={0} sx={{ p: 5, borderRadius: "24px", background: "linear-gradient(135deg, rgba(6,182,212,0.15) 0%, rgba(139,92,246,0.15) 100%)", border: "1.5px solid rgba(6,182,212,0.3)", backdropFilter: "blur(20px)", boxShadow: "0 0 60px rgba(6,182,212,0.1)", textAlign: "center" }}>
               <SmartToyIcon sx={{ fontSize: 56, color: "#06b6d4", mb: 2 }} />
               <Typography sx={{ fontWeight: 900, color: "#ffffff", fontSize: "22px", mb: 2, lineHeight: 1.3 }}>
                 Get Started with Your AI Bot<br />

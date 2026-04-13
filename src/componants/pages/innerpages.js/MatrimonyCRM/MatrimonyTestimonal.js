@@ -6,7 +6,7 @@ import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 
 const MatrimonyTestimonal = () => {
     return (
-        <Box sx={{ bgcolor: "#F8FAFC", py: { xs: 6, md: 8 }, position: "relative", overflow: "hidden" }}>
+        <Box sx={{ bgcolor: "#F8FAFC", py: { xs: 6, md: 6 }, position: "relative", overflow: "hidden" }}>
             <Container maxWidth="lg">
 
                 {/* Header */}

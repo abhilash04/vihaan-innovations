@@ -72,7 +72,7 @@ const AudienceCard = ({ icon: Icon, title, delay }) => (
 
 const EducationWhoThisIsFor = () => {
   return (
-    <Box sx={{ position: "relative", bgcolor: "#cbf3f0", pt: 4, pb: 22, overflow: "hidden" }}>
+    <Box sx={{ position: "relative", bgcolor: "#cbf3f0", pt: 2, pb: 18, overflow: "hidden" }}>
 
       {/* Background Bottom Wave */}
       <Box sx={{ position: "absolute", bottom: -5, left: 0, width: "100%", zIndex: 1 }}>

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 // Reusing the starry background from Real Estate as it perfectly matches the mock's bottom section
 const EducationCTA = () => {
   return (
-    <Box sx={{ position: "relative", bgcolor: "#0B1528", pt: 15, pb: 8, overflow: "hidden" }}>
+    <Box sx={{ position: "relative", bgcolor: "#0B1528", pt: 12, pb: 8, overflow: "hidden" }}>
 
       {/* Top Wave linking from Proven Impact/Why Us */}
       <Box sx={{ position: "absolute", top: -1, left: 0, width: "100%", zIndex: 1, transform: "rotate(180deg)" }}>
@@ -35,7 +35,7 @@ const EducationCTA = () => {
         >
           <Box sx={{ textAlign: "center" }}>
 
-            <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "26px", md: "52px" }, mb: 3, lineHeight: 1.2 }}>
+            <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "26px", md: "42px" }, mb: 3, lineHeight: 1.2 }}>
               Ready to Transform Your Admissions with Education CRM?
             </Typography>
 

@@ -24,7 +24,7 @@ const HotelBanner = () => (
   <Box sx={{
     background: "linear-gradient(135deg, #fffdf5 0%, #fef9ec 50%, #f0faf8 100%)",
     position: "relative", overflow: "hidden",
-    pt: { xs: 12, md: 14 }, pb: { xs: 10, md: 14 }
+    pt: { xs: 12, md: 6 }, pb: { xs: 10, md: 6 }
   }}>
     {/* Decorative blobs */}
     <Box sx={{ position: "absolute", top: -100, right: -80, width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(212,160,23,0.1) 0%, transparent 70%)" }} />
@@ -35,14 +35,14 @@ const HotelBanner = () => (
         {/* Left */}
         <Grid item xs={12} md={6.5}>
           <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-            <Typography variant="h1" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "54px" }, lineHeight: 1.1, mb: 3 }}>
+            <Typography variant="h1" sx={{ fontWeight: 900, color: "#0f172a", fontSize: { xs: "26px", md: "54px" }, lineHeight: 1.1, mb: 2 }}>
               Create Your Own Booking Platform<br />
               <Box component="span" sx={{ color: "#0f766e", fontSize: "40px", display: "block", mt: 1 }}>No commission. Full control.</Box>
             </Typography>
             <Typography sx={{ color: "#475569", fontSize: "16px", lineHeight: 1.7, mb: 5, maxWidth: "480px" }}>
               Build a custom booking solution with our hotel booking app development services. We provide booking platforms, property management systems, and guest experience portals for hotels, resorts, homestays, and hospitality businesses.
             </Typography>
-            <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mb: 6 }}>
+            <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mb: 4 }}>
               <Button variant="contained" sx={{ bgcolor: "#d4a017", color: "#fff", fontWeight: 800, px: 4, py: 1.5, borderRadius: "10px", textTransform: "none", fontSize: "15px", boxShadow: "0 6px 20px rgba(212,160,23,0.4)", "&:hover": { bgcolor: "#b8891a", transform: "translateY(-2px)" }, transition: "all 0.3s" }}>
                 View Demo
               </Button>

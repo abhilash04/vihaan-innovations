@@ -28,7 +28,7 @@ const LMSBanner = () => {
     <Box sx={{
       background: "linear-gradient(135deg, #e8f4fd 0%, #dbeafe 40%, #eff6ff 100%)",
       position: "relative", overflow: "hidden",
-      pt: { xs: 10, md: 12 }, pb: { xs: 10, md: 14 }
+      pt: { xs: 4, md: 4 }, pb: { xs: 4, md: 4 }
     }}>
       {/* Background blobs */}
       <Box sx={{ position: "absolute", top: -80, right: -80, width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%)" }} />
@@ -40,10 +40,10 @@ const LMSBanner = () => {
           {/* Left Text */}
           <Grid item xs={12} md={6}>
             <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-              <Typography variant="h1" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "50px" }, lineHeight: 1.15, mb: 3 }}>
+              <Typography variant="h1" sx={{ fontWeight: 800, color: "#0f172a", fontSize: { xs: "28px", md: "48px" }, lineHeight: 1.15, mb: 3 }}>
                 Build a Learning Platform Your Students Love to Use
               </Typography>
-              <Typography sx={{ color: "#475569", fontSize: "16px", lineHeight: 1.7, mb: 5, maxWidth: "500px" }}>
+              <Typography sx={{ color: "#475569", fontSize: "16px", lineHeight: 1.7, mb: 3, maxWidth: "500px" }}>
                 We offer custom LMS website development services, including e-learning platforms and training management systems, designed for edtech startups, coaching institutes, corporate training teams, and universities.
               </Typography>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
@@ -92,7 +92,7 @@ const LMSBanner = () => {
         </Grid>
 
         {/* Bottom Stats Row */}
-        <Box sx={{ mt: 10, pt: 6, borderTop: "1px solid rgba(37,99,235,0.15)" }}>
+        <Box sx={{ mt: 4, pt: 4, borderTop: "1px solid rgba(37,99,235,0.15)" }}>
           <Grid container spacing={4} justifyContent="center">
             <Grid item xs={12} sm={4}>
               <StatCard icon={PeopleIcon} value="5,000+" label="Students Enrolled" color="#2563eb" delay={0.5} />
