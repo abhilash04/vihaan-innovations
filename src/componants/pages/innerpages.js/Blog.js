@@ -142,7 +142,7 @@ const Blog = () => {
     setSearchCategoryValue(e.target.value);
 
   useEffect(() => {
-    navigate("/blog");
+    navigate("/articles");
   }, [location.pathname, navigate]);
 
   return (

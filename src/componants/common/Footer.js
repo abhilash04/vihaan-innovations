@@ -299,7 +299,6 @@ const FooterAndPopup = () => {
           borderTopLeftRadius: "20px",
           borderTopRightRadius: "20px",
           boxShadow: "0 -10px 30px rgba(0,0,0,0.03)",
-          mt: 5,
           zIndex: 1,
         }}
       >
@@ -517,7 +516,7 @@ const FooterAndPopup = () => {
                       {[
                         { name: "About Us", path: "/about-us" },
                         { name: "Careers", path: "/career" },
-                        { name: "Blog", path: "/blog" },
+                        { name: "Blog", path: "/articles" },
                         { name: "Terms & Conditions", path: "/terms-and-conditions" },
                         { name: "Privacy Policy", path: "/privacy-policy" },
                         { name: "Refund Policy", path: "/refund-policy" },
