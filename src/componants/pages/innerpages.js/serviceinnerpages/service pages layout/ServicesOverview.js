@@ -61,7 +61,7 @@ const CategoryCard = styled(Paper)(({ theme, bordercolor }) => ({
   overflow: "hidden",
   display: "flex",
   flexDirection: "column",
-  height: "100%",
+  height: "85%",
   boxShadow: "0 10px 30px rgba(0, 0, 0, 0.02)",
   "&:hover": {
     transform: "translateY(-10px)",
@@ -98,7 +98,7 @@ const ServicesOverview = ({ data }) => {
   };
 
   return (
-    <Box sx={{ bgcolor: "#f1f5f9", py: { xs: 6, md: 8 }, position: "relative" }}>
+    <Box sx={{ bgcolor: "#f1f5f9", py: { xs: 6, md: 6 }, position: "relative" }}>
       <Container maxWidth="lg">
         {/* Heading Block */}
         <Box sx={{ textAlign: "center", mb: 6 }}>

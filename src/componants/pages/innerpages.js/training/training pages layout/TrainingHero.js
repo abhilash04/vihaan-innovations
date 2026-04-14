@@ -39,7 +39,7 @@ const TrainingHero = ({ data = {} }) => {
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
         overflow: "hidden",
-        py: { xs: 10, md: 0 },
+        py: { xs: 10, md: 6 },
       }}
     >
       {/* Dynamic Overlay */}
@@ -240,7 +240,7 @@ const TrainingHero = ({ data = {} }) => {
                         color: "#ffffff",
                         borderRadius: "16px",
                         bgcolor: "rgba(255, 255, 255, 0.05)",
-                        fontSize: "15px",
+                        fontSize: "12px",
                         fontWeight: 500,
                         "& fieldset": { borderColor: "rgba(243, 243, 243, 1)" },
                         "&:hover fieldset": { borderColor: "rgba(243, 243, 243, 1)" },
@@ -259,7 +259,7 @@ const TrainingHero = ({ data = {} }) => {
                         color: "#ffffff",
                         borderRadius: "16px",
                         bgcolor: "rgba(255, 255, 255, 0.05)",
-                        fontSize: "15px",
+                        fontSize: "12px",
                         fontWeight: 500,
                         "& fieldset": { borderColor: "rgba(243, 243, 243, 1)" },
                         "&:hover fieldset": { borderColor: "rgba(243, 243, 243, 1)" },
@@ -316,7 +316,7 @@ const TrainingHero = ({ data = {} }) => {
                     }}
 
                   >
-                    <MenuItem value="" disabled>
+                    <MenuItem value="Select Desired Course">
                       {coursePlaceholder || "Select Desired Course"}
                     </MenuItem>
 
@@ -335,10 +335,10 @@ const TrainingHero = ({ data = {} }) => {
                       background: "linear-gradient(90deg, #00d4ff 0%, #0077b6 100%)",
                       color: "#ffffff",
                       fontWeight: 900,
-                      py: 2.2,
+                      py: 1.5,
                       borderRadius: "16px",
                       textTransform: "none",
-                      fontSize: "17px",
+                      fontSize: "16px",
                       boxShadow: "0 12px 24px rgba(0,212,255,0.25)",
                       "&:hover": {
                         transform: "translateY(-2px)",
@@ -351,7 +351,7 @@ const TrainingHero = ({ data = {} }) => {
                     {submitButtonText || "Apply for Early Seat"}
                   </Button>
                 </Box>
-                <Box sx={{ mt: 4, pt: 3, borderTop: "1px solid rgba(255,255,255,0.1)", textAlign: "center" }}>
+                <Box sx={{ mt: 2, pt: 2, borderTop: "1px solid rgba(255,255,255,0.1)", textAlign: "center" }}>
                   <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "13px", fontWeight: 600 }}>
                     {supportText || "Support: "} <Box component="span" sx={{ color: "#ffffff" }}>{supportPhone || "+91 98765 43210"}</Box>
                   </Typography>

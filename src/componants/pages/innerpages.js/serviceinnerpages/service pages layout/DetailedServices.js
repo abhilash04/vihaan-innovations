@@ -130,7 +130,7 @@ const DetailedServices = ({ data }) => {
   const activeCat = services[activeTab] || { cards: [] };
 
   return (
-    <Box sx={{ bgcolor: "#ffffff", py: { xs: 6, md: 10 }, position: "relative", overflow: "hidden" }}>
+    <Box sx={{ bgcolor: "#ffffff", py: { xs: 4, md: 6 }, position: "relative", overflow: "hidden" }}>
       <Container maxWidth="lg">
 
         {/* 1. Header Section (Centered) */}
@@ -208,15 +208,14 @@ const DetailedServices = ({ data }) => {
                           sx={{
                             display: "flex",
                             alignItems: "center",
-                            gap: 2,
+                            gap: 4,
                             p: 2,
-                            mb: idx !== cardsLen - 1 ? 0 : 0, // removed mb, using border stack
-                            borderRadius: isActive ? "10px" : "0px",
+                            mb: idx !== cardsLen - 1 ? 1.5 : 0,
+                            borderRadius: "10px",
                             bgcolor: isActive ? "#e8f1ffff" : "#fafdfdff",
-                            border: isActive ? "1px solid #3B82F6" : "1px solid transparent",
+                            border: isActive ? "1px solid #3B82F6" : "1px solid #e5e7eb",
                             cursor: "pointer",
                             transition: "all 0.2s ease",
-                            borderBottom: !isActive && idx !== cardsLen - 1 ? "1px solid #F3F4F6" : "none",
                             "&:hover": {
                               bgcolor: isActive ? "#F0F7FF" : "rgba(0,0,0,0.015)",
                             },
