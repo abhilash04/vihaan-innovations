@@ -158,9 +158,9 @@ const SEM = () => {
                     lineHeight: 1.1,
                   }}
                 >
-                  Spend Smart. <br />
+                  Maximize ROAS. <br />
                   <Box component="span" sx={{ color: "#f59e0b" }}>
-                    Convert Faster.
+                    Minimize Waste.
                   </Box>
                 </Typography>
               </Box>
@@ -173,7 +173,7 @@ const SEM = () => {
                   fontWeight: 500,
                 }}
               >
-                Paid search puts you in front of ready-to-buy customers the same day. We manage every rupee of your ad spend to bring back measurable profit, not just clicks.
+                Paid advertising is about precision, not just volume. We architect high-conversion SEM campaigns that target buyers at the exact moment of intent, ensuring every dollar of your ad spend is optimized for maximum return on investment.
               </Typography>
 
               <Grid container spacing={2.5}>

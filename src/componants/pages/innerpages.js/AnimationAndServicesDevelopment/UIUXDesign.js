@@ -116,11 +116,10 @@ const UIUXDesign = () => {
                   color: "#475569",
                   fontSize: { xs: "16px", md: "20px" },
                   lineHeight: 1.7,
-                  lineHeight: 1.7,
                   fontWeight: 500,
                 }}
               >
-                We craft intuitive, beautiful digital experiences as the foundation of our website development services. Grounded in user research, accessibility, and conversion psychology, our website development services ensure that every pixel has a purpose and every interaction is seamless.
+                We craft intuitive, beautiful digital experiences that serve as the high-performance foundation for our website development services. By blending deep user research with conversion psychology, our website development services ensure that every click is intentional and every user journey is optimized for maximum impact.
               </Typography>
 
               <Grid container spacing={2.5}>

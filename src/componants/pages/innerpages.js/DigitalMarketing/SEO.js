@@ -101,7 +101,7 @@ const SEO = () => {
                   fontWeight: 500,
                 }}
               >
-                Organic traffic is the most reliable channel for long-term growth. We bring together technical precision and strategic content to earn you top rankings that actually bring in revenue.
+                In a digital-first economy, ranking high isn't just about visibility—it's about capturing high-intent revenue. We combine technical precision with ethical, data-backed content strategies to earn you top-tier rankings that build authority and drive measurable business growth.
               </Typography>
 
               <Grid container spacing={2.5}>

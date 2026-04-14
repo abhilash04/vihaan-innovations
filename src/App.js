@@ -1,107 +1,32 @@
 // src/App.js
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Grid } from "@mui/material";
 
-import AllProducts from "./componants/pages/innerpages.js/AllProducts";
-import HomePage from "./componants/pages/HomePage";
+// Standard Static Imports
 import { ThemeProvider } from "./componants/common/ThemeContext";
-import Login from "./Authentication/Login";
-import Register from "./Authentication/Register";
-import LegalCenter from "./componants/pages/innerpages.js/LegalCenter";
-import ShippingPolicy from "./componants/pages/innerpages.js/ShippingPolicy";
-import ContactUs from "./componants/pages/ContactUs";
-import AboutUsHomePage from "./componants/aboutus/AboutUsHomePage";
-import TrainingPage from "./componants/pages/innerpages.js/training/training pages layout/TrainingPage";
+import LoadingFallback from "./componants/common/LoadingFallback";
+import ScrollToTop from "./componants/common/ScrollToTop";
+import DynamicSeo from "./DynamicSeo";
+
+// Data Imports
 import {
-  fullStackTrainingData,
   seoTrainingData, semTrainingData, smmTrainingData, emailMarketingTrainingData, contentMarketingTrainingData,
   webDevReactTrainingData, javaTrainingData, pythonTrainingData, mobileAppTrainingData, softwareTestingTrainingData,
   graphicDesigningTrainingData, twoDAnimationTrainingData, threeDAnimationTrainingData,
   motionGraphicsTrainingData, videoEditingTrainingData, explainerVideoTrainingData,
 } from "./componants/pages/innerpages.js/training/TrainingDataTemplate";
-import CabBookingApp from "./componants/pages/innerpages.js/cab booking app/CabBookingApp";
-import EcommerceSingleVendorHomepage from "./componants/pages/innerpages.js/EcommerceSingleVendor/EcommerceSingleVendorHomepage";
-import EcommerceMultiVendorHomepage from "./componants/pages/innerpages.js/EcommerceMultiVendor/EcommerceMultiVendorHomepage";
-import ContactHomepage from "./componants/pages/innerpages.js/contact page/ContactPage";
-import CareerHomepage from "./componants/pages/innerpages.js/career page/CareerHomepage";
-import PortfolioHomepage from "./componants/pages/innerpages.js/portfolio page/PortofolioHomepage";
-import Blog from "./componants/pages/innerpages.js/Blog";
-import FoodBookingHomepage from "./componants/pages/innerpages.js/Foof Booking/FoodBookingHomepage";
-import ResortLandingPage from "./componants/pages/innerpages.js/ResortBooking/ResortLandingPage";
-import PortalLandingPage from "./componants/pages/innerpages.js/RealEstatePortal/PortalLandingPage";
-import OrganicaHomePage from "./componants/pages/innerpages.js/organica/OrganicaHomePage";
 
-import RealEstateCRMHomepage from "./componants/pages/innerpages.js/RealEstateCRM/RealEstateCRMHomepage";
-import EducationCRMHomepage from "./componants/pages/innerpages.js/EducationCRM/EducationCRMHomepage";
-import MatrimonyHomepage from "./componants/pages/innerpages.js/MatrimonyCRM/MatrimonyHomepage";
-import ListingHomepage from "./componants/pages/innerpages.js/ListingPlatform/ListingHomepage";
-import LMSHomepage from "./componants/pages/innerpages.js/LMSPlatform/LMSHomepage";
-import HotelHomepage from "./componants/pages/innerpages.js/HotelBooking/HotelHomepage";
-import ChatbotHomepage from "./componants/pages/innerpages.js/AIChatbot/ChatbotHomepage";
-import HRMHomepage from "./componants/pages/innerpages.js/HRMSoftware/HRMHomepage";
-import HMSHomepage from "./componants/pages/innerpages.js/HospitalManagement/HMSHomepage";
-import MaintenanceSupportPage from "./componants/pages/innerpages.js/maintenance/MaintenanceSupportPage";
-import ServicesDevelopment from "./componants/pages/innerpages.js/ServicesDevelopment/ServicesDevelopment";
 import {
   uiUxServiceData,
-  digitalMarketingServiceData,
-  blockchainDevServiceData,
-  cyberSecurityServiceData,
-  iotDevServiceData,
-  gameDevServiceData,
-  contentWritingServiceData,
-  appMaintenanceServiceData,
-  webMaintenanceServiceData,
-  softwareMaintenanceServiceData,
-  databaseManagementServiceData,
-  apiDevelopmentServiceData,
-  paymentGatewayIntegrationServiceData,
-  thirdPartyIntegrationServiceData,
-  migrationServicesServiceData,
-  testingQualityAssuranceServiceData,
-  contentManagementSystemServiceData,
-  openSourceDevelopmentServiceData,
-  shopifyDevelopmentServiceData,
-  magentoDevelopmentServiceData,
-  woocommerceDevelopmentServiceData,
-  drupalDevelopmentServiceData,
-  joomlaDevelopmentServiceData,
-  wordpressDevelopmentServiceData,
-  laravelDevelopmentServiceData,
-  symfonyDevelopmentServiceData,
-  djangoDevelopmentServiceData,
-  flaskDevelopmentServiceData,
-  nodejsDevelopmentServiceData,
-  reactjsDevelopmentServiceData,
-  angularjsDevelopmentServiceData,
-  vuejsDevelopmentServiceData,
-  reactNativeDevelopmentServiceData,
-  flutterDevelopmentServiceData,
-  nativeAndroidDevelopmentServiceData,
-  nativeIosDevelopmentServiceData,
-  crossPlatformDevelopmentServiceData,
-  progressiveWebAppsServiceData,
-  webApplicationDevelopmentServiceData,
-  softwareDevelopmentServiceData,
-  enterpriseSoftwareDevelopmentServiceData,
-  webDesignServiceData,
   logoDesignServiceData,
   graphicDesignServiceData,
-  brandingIdentityServiceData,
-  marketingCollateralServiceData,
-  packagingDesignServiceData,
-  infographicDesignServiceData,
-  presentationDesignServiceData,
-  emailTemplateDesignServiceData,
-  landingPageDesignServiceData,
   webDesignDevServiceData,
   mobileAppDevFullServiceData,
   customAppDevFullServiceData,
   cloudDevFullServiceData,
   devopsFullServiceData,
   dataScienceFullServiceData,
-  ecommerceFullServiceData,
   ecommerceDevServiceData,
   aiMlFullServiceData,
   seoFullServiceData,
@@ -112,9 +37,6 @@ import {
   contentMarketingFullServiceData,
   localSeoFullServiceData,
   influencerAffiliateFullServiceData,
-  crmDevServiceData,
-  erpDevServiceData,
-  saasDevelopmentServiceData,
   twoDAnimationServiceData,
   threeDAnimationServiceData,
   motionGraphicsServiceData,
@@ -122,14 +44,45 @@ import {
   explainerVideoServiceData,
   whiteboardAnimationServiceData
 } from "./componants/pages/innerpages.js/serviceinnerpages/ServiceDataTemplate";
-import ServicePage from "./componants/pages/innerpages.js/serviceinnerpages/service pages layout/ServicePage";
-import ServiceDetails from "./componants/pages/innerpages.js/serviceinnerpages/service pages layout/ServiceDetails";
-import DynamicSeo from "./DynamicSeo";
-import ScrollToTop from "./componants/common/ScrollToTop";
-import LocationPageLayout from "./componants/pages/innerpages.js/LocationPageLayout/LocationPageLayout";
 
-import DigitalMarketing from "./componants/pages/innerpages.js/DigitalMarketing/DigitalMarketing";
 import { allLocations, slugify } from "./componants/pages/innerpages.js/LocationPageLayout/locationData";
+import AnimationVideoServices from "./componants/pages/innerpages.js/AnimationVideoServices/AnimationVideoServices";
+
+// Lazy Loaded Page Components
+const HomePage = lazy(() => import("./componants/pages/HomePage"));
+const AllProducts = lazy(() => import("./componants/pages/innerpages.js/AllProducts"));
+const Login = lazy(() => import("./Authentication/Login"));
+const Register = lazy(() => import("./Authentication/Register"));
+const LegalCenter = lazy(() => import("./componants/pages/innerpages.js/LegalCenter"));
+const ShippingPolicy = lazy(() => import("./componants/pages/innerpages.js/ShippingPolicy"));
+const ContactUs = lazy(() => import("./componants/pages/ContactUs"));
+const AboutUsHomePage = lazy(() => import("./componants/aboutus/AboutUsHomePage"));
+const TrainingPage = lazy(() => import("./componants/pages/innerpages.js/training/training pages layout/TrainingPage"));
+const CabBookingApp = lazy(() => import("./componants/pages/innerpages.js/cab booking app/CabBookingApp"));
+const EcommerceSingleVendorHomepage = lazy(() => import("./componants/pages/innerpages.js/EcommerceSingleVendor/EcommerceSingleVendorHomepage"));
+const EcommerceMultiVendorHomepage = lazy(() => import("./componants/pages/innerpages.js/EcommerceMultiVendor/EcommerceMultiVendorHomepage"));
+const CareerHomepage = lazy(() => import("./componants/pages/innerpages.js/career page/CareerHomepage"));
+const PortfolioHomepage = lazy(() => import("./componants/pages/innerpages.js/portfolio page/PortofolioHomepage"));
+const Blog = lazy(() => import("./componants/pages/innerpages.js/Blog"));
+const FoodBookingHomepage = lazy(() => import("./componants/pages/innerpages.js/Foof Booking/FoodBookingHomepage"));
+const ResortLandingPage = lazy(() => import("./componants/pages/innerpages.js/ResortBooking/ResortLandingPage"));
+const PortalLandingPage = lazy(() => import("./componants/pages/innerpages.js/RealEstatePortal/PortalLandingPage"));
+const RealEstateCRMHomepage = lazy(() => import("./componants/pages/innerpages.js/RealEstateCRM/RealEstateCRMHomepage"));
+const EducationCRMHomepage = lazy(() => import("./componants/pages/innerpages.js/EducationCRM/EducationCRMHomepage"));
+const MatrimonyHomepage = lazy(() => import("./componants/pages/innerpages.js/MatrimonyCRM/MatrimonyHomepage"));
+const ListingHomepage = lazy(() => import("./componants/pages/innerpages.js/ListingPlatform/ListingHomepage"));
+const LMSHomepage = lazy(() => import("./componants/pages/innerpages.js/LMSPlatform/LMSHomepage"));
+const HotelHomepage = lazy(() => import("./componants/pages/innerpages.js/HotelBooking/HotelHomepage"));
+const ChatbotHomepage = lazy(() => import("./componants/pages/innerpages.js/AIChatbot/ChatbotHomepage"));
+const HRMHomepage = lazy(() => import("./componants/pages/innerpages.js/HRMSoftware/HRMHomepage"));
+const HMSHomepage = lazy(() => import("./componants/pages/innerpages.js/HospitalManagement/HMSHomepage"));
+const MaintenanceSupportPage = lazy(() => import("./componants/pages/innerpages.js/maintenance/MaintenanceSupportPage"));
+const ServicesDevelopment = lazy(() => import("./componants/pages/innerpages.js/AnimationAndServicesDevelopment/ServicesDevelopment"));
+const ServicePage = lazy(() => import("./componants/pages/innerpages.js/serviceinnerpages/service pages layout/ServicePage"));
+const ServiceDetails = lazy(() => import("./componants/pages/innerpages.js/serviceinnerpages/service pages layout/ServiceDetails"));
+const LocationPageLayout = lazy(() => import("./componants/pages/innerpages.js/LocationPageLayout/LocationPageLayout"));
+const DigitalMarketing = lazy(() => import("./componants/pages/innerpages.js/DigitalMarketing/DigitalMarketing"));
+const SoftwareDevelopmentHub = lazy(() => import("./componants/pages/innerpages.js/SoftwareDevelopmentHub/SoftwareDevelopmentHub"));
 
 function App() {
   return (
@@ -138,176 +91,119 @@ function App() {
         <Router>
           <ScrollToTop />
           <DynamicSeo />
-          <Routes>
+          <Suspense fallback={<LoadingFallback />}>
+            <Routes>
+              {/* Main Pages */}
+              <Route path="/" element={<HomePage />} />
+              <Route path="/collections/all-products" element={<AllProducts />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/about-us" element={<AboutUsHomePage />} />
+              <Route path="/career" element={<CareerHomepage />} />
+              <Route path="/company-portfolio" element={<PortfolioHomepage />} />
+              <Route path="/articles" element={<Blog />} />
+              <Route path="/contact-us" element={<ContactUs />} />
+              <Route path="/privacy-policy" element={<LegalCenter />} />
+              <Route path="/terms-and-conditions" element={<LegalCenter />} />
+              <Route path="/refund-policy" element={<LegalCenter />} />
+              <Route path="/cancellation-policy" element={<LegalCenter />} />
+              <Route path="/shipping-policy" element={<ShippingPolicy />} />
 
-            {/* Main Pages */}
-            <Route path="/" element={<HomePage />} />
-            <Route path="/collections/all-products" element={<AllProducts />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/about-us" element={<AboutUsHomePage />} />
-            <Route path="/career" element={<CareerHomepage />} />
-            <Route path="/company-portfolio" element={<PortfolioHomepage />} />
-            <Route path="/articles" element={<Blog />} />
-            <Route path="/contact-us" element={<ContactUs />} />
-            <Route path="/privacy-policy" element={<LegalCenter />} />
-            <Route path="/terms-and-conditions" element={<LegalCenter />} />
-            <Route path="/refund-policy" element={<LegalCenter />} />
-            <Route path="/cancellation-policy" element={<LegalCenter />} />
-            <Route path="/shipping-policy" element={<ShippingPolicy />} />
+              {/* Ready Products */}
+              <Route path="/ready-products/ecommerce-single-vendor" element={<EcommerceSingleVendorHomepage />} />
+              <Route path="/ready-products/ecommerce-multi-vendor" element={<EcommerceMultiVendorHomepage />} />
+              <Route path="/ready-products/food-booking" element={<FoodBookingHomepage />} />
+              <Route path="/ready-products/resort-booking-management" element={<ResortLandingPage />} />
+              <Route path="/ready-products/listing-platform" element={<ListingHomepage />} />
+              <Route path="/ready-products/real-estate-portal" element={<PortalLandingPage />} />
+              <Route path="/ready-products/real-estate-crm" element={<RealEstateCRMHomepage />} />
+              <Route path="/ready-products/education-crm" element={<EducationCRMHomepage />} />
+              <Route path="/ready-products/matrimony-crm" element={<MatrimonyHomepage />} />
+              <Route path="/ready-products/hrm-software" element={<HRMHomepage />} />
+              <Route path="/ready-products/hospital-management-system" element={<HMSHomepage />} />
+              <Route path="/ready-products/lms-platform" element={<LMSHomepage />} />
+              <Route path="/ready-products/hotel-booking" element={<HotelHomepage />} />
+              <Route path="/ready-products/ai-chatbot" element={<ChatbotHomepage />} />
+              <Route path="/ready-products/cab-booking-app" element={<CabBookingApp />} />
 
-            {/* ready products */}
-            <Route path="/ready-products/ecommerce-single-vendor" element={<EcommerceSingleVendorHomepage />} />
-            <Route path="/ready-products/ecommerce-multi-vendor" element={<EcommerceMultiVendorHomepage />} />
-            <Route path="/ready-products/food-booking" element={<FoodBookingHomepage />} />
-            <Route path="/ready-products/resort-booking-management" element={<ResortLandingPage />} />
-            <Route path="/ready-products/listing-platform" element={<ListingHomepage />} />
-            <Route path="/ready-products/real-estate-portal" element={<PortalLandingPage />} />
-            <Route path="/ready-products/real-estate-crm" element={<RealEstateCRMHomepage />} />
-            <Route path="/ready-products/education-crm" element={<EducationCRMHomepage />} />
-            <Route path="/ready-products/matrimony-crm" element={<MatrimonyHomepage />} />
+              {/* Services */}
+              <Route path="/services/web-development" element={<ServicesDevelopment />} />
+              <Route path="/services/software-development" element={<SoftwareDevelopmentHub />} />
+              <Route path="/services/ui-ux-design" element={<ServicePage serviceData={uiUxServiceData} />} />
+              <Route path="/services/web-designing" element={<ServicePage serviceData={webDesignDevServiceData} />} />
+              <Route path="/services/mobile-app-development" element={<ServicePage serviceData={mobileAppDevFullServiceData} />} />
+              <Route path="/services/custom-software-development" element={<ServicePage serviceData={customAppDevFullServiceData} />} />
+              <Route path="/services/cloud-computing" element={<ServicePage serviceData={cloudDevFullServiceData} />} />
+              <Route path="/services/devops-and-automation" element={<ServicePage serviceData={devopsFullServiceData} />} />
+              <Route path="/services/data-science-big-data" element={<ServicePage serviceData={dataScienceFullServiceData} />} />
+              <Route path="/services/ecommerce-software-development" element={<ServicePage serviceData={ecommerceDevServiceData} />} />
+              <Route path="/services/ai-ml-automation" element={<ServicePage serviceData={aiMlFullServiceData} />} />
+              <Route path="/services/maintenance-and-support" element={<MaintenanceSupportPage />} />
 
-            {/* ready products coming soon */}
-            <Route path="/ready-products/hrm-software" element={<HRMHomepage />} />
-            <Route path="/ready-products/hospital-management-system" element={<HMSHomepage />} />
-            <Route path="/ready-products/lms-platform" element={<LMSHomepage />} />
-            <Route path="/ready-products/hotel-booking" element={<HotelHomepage />} />
-            <Route path="/ready-products/ai-chatbot" element={<ChatbotHomepage />} />
-            <Route path="/ready-products/cab-booking-app" element={<CabBookingApp />} />
+              {/* Digital Marketing Services */}
+              <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
+              <Route path="/services/seo" element={<ServicePage serviceData={seoFullServiceData} />} />
+              <Route path="/services/social-media-marketing" element={<ServicePage serviceData={smmFullServiceData} />} />
+              <Route path="/services/sem" element={<ServicePage serviceData={semFullServiceData} />} />
+              <Route path="/services/video-marketing" element={<ServicePage serviceData={videoMarketingFullServiceData} />} />
+              <Route path="/services/email-marketing" element={<ServicePage serviceData={emailMarketingFullServiceData} />} />
+              <Route path="/services/content-marketing" element={<ServicePage serviceData={contentMarketingFullServiceData} />} />
+              <Route path="/services/google-my-business" element={<ServicePage serviceData={localSeoFullServiceData} />} />
+              <Route path="/services/influencer-affiliate-marketing" element={<ServicePage serviceData={influencerAffiliateFullServiceData} />} />
 
-            {/*  Services */}
+              {/* Animation and Video Services  */}
+              <Route path="/services/logo-designing" element={<ServicePage serviceData={logoDesignServiceData} />} />
+              <Route path="/services/graphic-designing" element={<ServicePage serviceData={graphicDesignServiceData} />} />
+              <Route path="/services/2d-animation" element={<ServicePage serviceData={twoDAnimationServiceData} />} />
+              <Route path="/services/3d-animation" element={<ServicePage serviceData={threeDAnimationServiceData} />} />
+              <Route path="/services/explainer-videos" element={<ServicePage serviceData={explainerVideoServiceData} />} />
+              <Route path="/services/motion-graphics-animation" element={<ServicePage serviceData={motionGraphicsServiceData} />} />
+              <Route path="/services/video-editing-and-vfx" element={<ServicePage serviceData={videoEditingServiceData} />} />
+              <Route path="/services/whiteboard-animation" element={<ServicePage serviceData={whiteboardAnimationServiceData} />} />
+              <Route path="/services/animation-and-video-services" element={<AnimationVideoServices />} />
 
-            {/* Development Services */}
+              {/* Training */}
+              <Route path="/training/seo" element={<TrainingPage trainingData={seoTrainingData} />} />
+              <Route path="/training/sem-google-ads" element={<TrainingPage trainingData={semTrainingData} />} />
+              <Route path="/training/social-media-marketing" element={<TrainingPage trainingData={smmTrainingData} />} />
+              <Route path="/training/email-marketing" element={<TrainingPage trainingData={emailMarketingTrainingData} />} />
+              <Route path="/training/content-marketing" element={<TrainingPage trainingData={contentMarketingTrainingData} />} />
+              <Route path="/training/web-designing-react" element={<TrainingPage trainingData={webDevReactTrainingData} />} />
+              <Route path="/training/java" element={<TrainingPage trainingData={javaTrainingData} />} />
+              <Route path="/training/python" element={<TrainingPage trainingData={pythonTrainingData} />} />
+              <Route path="/training/android-and-ios" element={<TrainingPage trainingData={mobileAppTrainingData} />} />
+              <Route path="/training/manual-and-automation-testing" element={<TrainingPage trainingData={softwareTestingTrainingData} />} />
+              <Route path="/training/graphic-designing" element={<TrainingPage trainingData={graphicDesigningTrainingData} />} />
+              <Route path="/training/2d-animation" element={<TrainingPage trainingData={twoDAnimationTrainingData} />} />
+              <Route path="/training/3d-animation" element={<TrainingPage trainingData={threeDAnimationTrainingData} />} />
+              <Route path="/training/motion-graphics" element={<TrainingPage trainingData={motionGraphicsTrainingData} />} />
+              <Route path="/training/video-editing-and-vfx" element={<TrainingPage trainingData={videoEditingTrainingData} />} />
+              <Route path="/training/explainer-videos" element={<TrainingPage trainingData={explainerVideoTrainingData} />} />
 
-            <Route path="/services/web-development" element={<ServicesDevelopment />} />
+              {/* Dynamic Services Overview Details */}
+              <Route path="/services/:title" element={<ServiceDetails />} />
 
-            <Route path="/services/ui-ux-design" element={<ServicePage serviceData={uiUxServiceData} />} />
-            <Route path="/services/web-designing" element={<ServicePage serviceData={webDesignDevServiceData} />} />
-            <Route path="/services/mobile-app-development" element={<ServicePage serviceData={mobileAppDevFullServiceData} />} />
-            <Route path="/services/custom-software-development" element={<ServicePage serviceData={customAppDevFullServiceData} />} />
-            <Route path="/services/cloud-computing" element={<ServicePage serviceData={cloudDevFullServiceData} />} />
-            <Route path="/services/devops-and-automation" element={<ServicePage serviceData={devopsFullServiceData} />} />
-            <Route path="/services/data-science-big-data" element={<ServicePage serviceData={dataScienceFullServiceData} />} />
-            <Route path="/services/ecommerce-software-development" element={<ServicePage serviceData={ecommerceDevServiceData} />} />
-            <Route path="/services/ai-ml-automation" element={<ServicePage serviceData={aiMlFullServiceData} />} />
-            <Route path="/services/maintenance-and-support" element={<MaintenanceSupportPage />} />
-
-            {/* Digital Marketing Services */}
-
-            <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
-
-            <Route path="/services/seo" element={<ServicePage serviceData={seoFullServiceData} />} />
-            <Route path="/services/social-media-marketing" element={<ServicePage serviceData={smmFullServiceData} />} />
-            <Route path="/services/sem" element={<ServicePage serviceData={semFullServiceData} />} />
-            <Route path="/services/video-marketing" element={<ServicePage serviceData={videoMarketingFullServiceData} />} />
-            <Route path="/services/email-marketing" element={<ServicePage serviceData={emailMarketingFullServiceData} />} />
-            <Route path="/services/content-marketing" element={<ServicePage serviceData={contentMarketingFullServiceData} />} />
-            <Route path="/services/google-my-business" element={<ServicePage serviceData={localSeoFullServiceData} />} />
-            <Route path="/services/influencer-affiliate-marketing" element={<ServicePage serviceData={influencerAffiliateFullServiceData} />} />
-
-            {/* Animation and Video Services  */}
-
-            <Route path="/services/logo-designing" element={<ServicePage serviceData={logoDesignServiceData} />} />
-            <Route path="/services/graphic-designing" element={<ServicePage serviceData={graphicDesignServiceData} />} />
-            <Route path="/services/2d-animation" element={<ServicePage serviceData={twoDAnimationServiceData} />} />
-            <Route path="/services/3d-animation" element={<ServicePage serviceData={threeDAnimationServiceData} />} />
-            <Route path="/services/explainer-videos" element={<ServicePage serviceData={explainerVideoServiceData} />} />
-            <Route path="/services/motion-graphics-animation" element={<ServicePage serviceData={motionGraphicsServiceData} />} />
-            <Route path="/services/video-editing-and-vfx" element={<ServicePage serviceData={videoEditingServiceData} />} />
-            <Route path="/services/whiteboard-animation" element={<ServicePage serviceData={whiteboardAnimationServiceData} />} />
-
-            {/* Training */}
-
-            {/* Digital Marketing Training */}
-            <Route path="/training/seo" element={<TrainingPage trainingData={seoTrainingData} />} />
-            <Route path="/training/sem-google-ads" element={<TrainingPage trainingData={semTrainingData} />} />
-            <Route path="/training/social-media-marketing" element={<TrainingPage trainingData={smmTrainingData} />} />
-            <Route path="/training/email-marketing" element={<TrainingPage trainingData={emailMarketingTrainingData} />} />
-            <Route path="/training/content-marketing" element={<TrainingPage trainingData={contentMarketingTrainingData} />} />
-
-            {/* Software Training */}
-            <Route path="/training/web-designing-react" element={<TrainingPage trainingData={webDevReactTrainingData} />} />
-            <Route path="/training/java" element={<TrainingPage trainingData={javaTrainingData} />} />
-            <Route path="/training/python" element={<TrainingPage trainingData={pythonTrainingData} />} />
-            <Route path="/training/android-and-ios" element={<TrainingPage trainingData={mobileAppTrainingData} />} />
-            <Route path="/training/manual-and-automation-testing" element={<TrainingPage trainingData={softwareTestingTrainingData} />} />
-
-            {/* Animation Training */}
-            <Route path="/training/graphic-designing" element={<TrainingPage trainingData={graphicDesigningTrainingData} />} />
-            <Route path="/training/2d-animation" element={<TrainingPage trainingData={twoDAnimationTrainingData} />} />
-            <Route path="/training/3d-animation" element={<TrainingPage trainingData={threeDAnimationTrainingData} />} />
-            <Route path="/training/motion-graphics" element={<TrainingPage trainingData={motionGraphicsTrainingData} />} />
-            <Route path="/training/video-editing-and-vfx" element={<TrainingPage trainingData={videoEditingTrainingData} />} />
-            <Route path="/training/explainer-videos" element={<TrainingPage trainingData={explainerVideoTrainingData} />} />
-
-            {/* <Route path="/crm-development" element={<ServicePage serviceData={crmDevServiceData} />} />
-            <Route path="/erp-development" element={<ServicePage serviceData={erpDevServiceData} />} />
-            <Route path="/blockchain-development" element={<ServicePage serviceData={blockchainDevServiceData} />} />
-            <Route path="/cyber-security" element={<ServicePage serviceData={cyberSecurityServiceData} />} />
-            <Route path="/iot-development" element={<ServicePage serviceData={iotDevServiceData} />} />
-            <Route path="/game-development" element={<ServicePage serviceData={gameDevServiceData} />} />
-            <Route path="/content-writing" element={<ServicePage serviceData={contentWritingServiceData} />} />
-            <Route path="/training" element={<TrainingPage trainingData={fullStackTrainingData} />} />
-            <Route path="/app-maintenance" element={<ServicePage serviceData={appMaintenanceServiceData} />} />
-            <Route path="/web-maintenance" element={<ServicePage serviceData={webMaintenanceServiceData} />} />
-            <Route path="/software-maintenance" element={<ServicePage serviceData={softwareMaintenanceServiceData} />} />
-            <Route path="/database-management" element={<ServicePage serviceData={databaseManagementServiceData} />} />
-            <Route path="/api-development" element={<ServicePage serviceData={apiDevelopmentServiceData} />} />
-            <Route path="/payment-gateway-integration" element={<ServicePage serviceData={paymentGatewayIntegrationServiceData} />} />
-            <Route path="/third-party-integration" element={<ServicePage serviceData={thirdPartyIntegrationServiceData} />} />
-            <Route path="/migration-services" element={<ServicePage serviceData={migrationServicesServiceData} />} />
-            <Route path="/testing-quality-assurance" element={<ServicePage serviceData={testingQualityAssuranceServiceData} />} />
-            <Route path="/content-management-system" element={<ServicePage serviceData={contentManagementSystemServiceData} />} />
-            <Route path="/open-source-development" element={<ServicePage serviceData={openSourceDevelopmentServiceData} />} />
-            <Route path="/shopify-development" element={<ServicePage serviceData={shopifyDevelopmentServiceData} />} />
-            <Route path="/magento-development" element={<ServicePage serviceData={magentoDevelopmentServiceData} />} />
-            <Route path="/woocommerce-development" element={<ServicePage serviceData={woocommerceDevelopmentServiceData} />} />
-            <Route path="/drupal-development" element={<ServicePage serviceData={drupalDevelopmentServiceData} />} />
-            <Route path="/joomla-development" element={<ServicePage serviceData={joomlaDevelopmentServiceData} />} />
-            <Route path="/wordpress-development" element={<ServicePage serviceData={wordpressDevelopmentServiceData} />} />
-            <Route path="/laravel-development" element={<ServicePage serviceData={laravelDevelopmentServiceData} />} />
-            <Route path="/symfony-development" element={<ServicePage serviceData={symfonyDevelopmentServiceData} />} />
-            <Route path="/django-development" element={<ServicePage serviceData={djangoDevelopmentServiceData} />} />
-            <Route path="/flask-development" element={<ServicePage serviceData={flaskDevelopmentServiceData} />} />
-            <Route path="/nodejs-development" element={<ServicePage serviceData={nodejsDevelopmentServiceData} />} />
-            <Route path="/reactjs-development" element={<ServicePage serviceData={reactjsDevelopmentServiceData} />} />
-            <Route path="/angularjs-development" element={<ServicePage serviceData={angularjsDevelopmentServiceData} />} />
-            <Route path="/vuejs-development" element={<ServicePage serviceData={vuejsDevelopmentServiceData} />} />
-            <Route path="/react-native-development" element={<ServicePage serviceData={reactNativeDevelopmentServiceData} />} />
-            <Route path="/flutter-development" element={<ServicePage serviceData={flutterDevelopmentServiceData} />} />
-            <Route path="/native-android-development" element={<ServicePage serviceData={nativeAndroidDevelopmentServiceData} />} />
-            <Route path="/native-ios-development" element={<ServicePage serviceData={nativeIosDevelopmentServiceData} />} />
-            <Route path="/cross-platform-development" element={<ServicePage serviceData={crossPlatformDevelopmentServiceData} />} />
-            <Route path="/progressive-web-apps" element={<ServicePage serviceData={progressiveWebAppsServiceData} />} />
-            <Route path="/web-application-development" element={<ServicePage serviceData={webApplicationDevelopmentServiceData} />} />
-            <Route path="/software-development" element={<ServicePage serviceData={softwareDevelopmentServiceData} />} />
-            <Route path="/saas-development" element={<ServicePage serviceData={saasDevelopmentServiceData} />} />
-            <Route path="/ecommerce-software-development" element={<ServicePage serviceData={ecommerceDevServiceData} />} />
-            <Route path="/web-design" element={<ServicePage serviceData={webDesignServiceData} />} />
-            <Route path="/branding-identity" element={<ServicePage serviceData={brandingIdentityServiceData} />} />
-            <Route path="/marketing-collateral" element={<ServicePage serviceData={marketingCollateralServiceData} />} />
-            <Route path="/packaging-design" element={<ServicePage serviceData={packagingDesignServiceData} />} />
-            <Route path="/infographic-design" element={<ServicePage serviceData={infographicDesignServiceData} />} />
-            <Route path="/presentation-design" element={<ServicePage serviceData={presentationDesignServiceData} />} />
-            <Route path="/email-template-design" element={<ServicePage serviceData={emailTemplateDesignServiceData} />} />
-            <Route path="/landing-page-design" element={<ServicePage serviceData={landingPageDesignServiceData} />} /> */}
-
-            {/* Dynamic Services Overview Details */}
-            <Route path="/services/:title" element={<ServiceDetails />} />
-
-            {allLocations.map((loc) => (
-              <React.Fragment key={loc}>
-                <Route
-                  path={`/services/website-development-services-in-${slugify(loc)}`}
-                  element={<LocationPageLayout />}
-                />
-                <Route
-                  path={`/services/digital-marketing-services-in-${slugify(loc)}`}
-                  element={<LocationPageLayout />}
-                />
-              </React.Fragment>
-            ))}
-          </Routes>
+              {allLocations.map((loc) => (
+                <React.Fragment key={loc}>
+                  <Route
+                    key={`website-${loc}`}
+                    path={`/services/website-development-services-in-${slugify(loc)}`}
+                    element={<LocationPageLayout />}
+                  />
+                  <Route
+                    key={`marketing-${loc}`}
+                    path={`/services/digital-marketing-services-in-${slugify(loc)}`}
+                    element={<LocationPageLayout />}
+                  />
+                  <Route
+                    key={`animation-${loc}`}
+                    path={`/services/animation-and-video-services-in-${slugify(loc)}`}
+                    element={<LocationPageLayout />}
+                  />
+                </React.Fragment>
+              ))}
+            </Routes>
+          </Suspense>
         </Router>
       </Grid>
     </ThemeProvider>

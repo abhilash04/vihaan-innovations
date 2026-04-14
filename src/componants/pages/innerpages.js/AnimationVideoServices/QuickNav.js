@@ -1,0 +1,130 @@
+import React from "react";
+import { Box, Stack, Typography } from "@mui/material";
+import { motion } from "framer-motion";
+import { 
+  Palette, Image, Film, Layers, Video, 
+  PenTool, Edit3, Scissors, Clapperboard, MonitorPlay 
+} from "lucide-react";
+
+const services = [
+  { id: 1, name: "Brand Design", icon: Palette, href: "brand-design" },
+  { id: 2, name: "2D Animation", icon: Film, href: "2d-animation" },
+  { id: 3, name: "3D Animation", icon: Layers, href: "3d-animation" },
+  { id: 4, name: "Motion Graphics", icon: PenTool, href: "motion-graphics" },
+  { id: 5, name: "Explainer Videos", icon: Video, href: "explainer-videos" },
+  { id: 6, name: "Whiteboard", icon: Edit3, href: "whiteboard" },
+  { id: 7, name: "Video Editing", icon: Scissors, href: "video-editing" },
+  { id: 8, name: "Showreel", icon: MonitorPlay, href: "results" },
+];
+
+const QuickNav = ({ activeSection }) => {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 140; // Height of header + quicknav
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  return (
+    <Box
+      component={motion.div}
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      sx={{
+        width: "100%",
+        bgcolor: "rgba(255, 255, 255, 0.8)",
+        borderBottom: "1px solid rgba(15, 23, 42, 0.08)",
+        backdropFilter: "blur(20px)",
+        py: 1.5,
+        position: "sticky",
+        top: { xs: 64, md: 80 },
+        zIndex: 1000,
+        overflowX: "auto",
+        "&::-webkit-scrollbar": { display: "none" },
+        msOverflowStyle: "none",
+        scrollbarWidth: "none",
+      }}
+    >
+      <Stack
+        direction="row"
+        spacing={2}
+        sx={{
+          px: 4,
+          minWidth: "max-content",
+          justifyContent: "center",
+          mx: "auto",
+        }}
+      >
+        {services.map((service) => {
+          const isActive = activeSection === service.id;
+          const Icon = service.icon;
+
+          return (
+            <Box
+              key={service.id}
+              onClick={() => scrollToSection(service.href)}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: 1.5,
+                px: 3,
+                py: 1,
+                borderRadius: "100px",
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+                background: isActive
+                  ? "linear-gradient(90deg, #7c3aed, #ec4899)"
+                  : "rgba(15, 23, 42, 0.03)",
+                color: isActive ? "white" : "#64748b",
+                boxShadow: isActive ? "0 10px 20px -5px rgba(124, 58, 237, 0.3)" : "none",
+                border: isActive ? "none" : "1px solid rgba(15, 23, 42, 0.05)",
+                "&:hover": {
+                  background: isActive 
+                    ? "linear-gradient(90deg, #7c3aed, #ec4899)" 
+                    : "rgba(15, 23, 42, 0.08)",
+                  color: isActive ? "white" : "#0f172a",
+                },
+              }}
+            >
+              {isActive && (
+                <Box
+                  component={motion.div}
+                  layoutId="pulse-anim"
+                  animate={{ scale: [1, 1.3, 1] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                  sx={{
+                    width: 6,
+                    height: 6,
+                    borderRadius: "50%",
+                    bgcolor: "white",
+                  }}
+                />
+              )}
+              <Icon size={16} />
+              <Typography
+                sx={{
+                  fontSize: "14px",
+                  fontWeight: 600,
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {service.name}
+              </Typography>
+            </Box>
+          );
+        })}
+      </Stack>
+    </Box>
+  );
+};
+
+export default QuickNav;

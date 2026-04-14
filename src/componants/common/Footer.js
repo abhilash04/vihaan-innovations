@@ -28,13 +28,11 @@ import {
   Instagram,
   LinkedIn,
   YouTube,
-  Pinterest,
 } from "@mui/icons-material";
 import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
 // import logo from "../../assets/vihaan-logo.png";
 
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import { useNavigate } from "react-router-dom";
 import EventIcon from "@mui/icons-material/Event";
 const FooterAndPopup = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -47,8 +45,6 @@ const FooterAndPopup = () => {
   });
   const theme = useTheme();
   const [visible, setVisible] = useState(false);
-  const navigate = useNavigate();
-  const [offset, setOffset] = useState(307.919);
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   // Auto-show popup after 10 seconds
@@ -66,13 +62,7 @@ const FooterAndPopup = () => {
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;
-    const docHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
 
-    const scrollPercent = scrollTop / docHeight;
-    const progress = 307.919 * (1 - scrollPercent);
-
-    setOffset(progress);
     setVisible(scrollTop > 100);
   };
 

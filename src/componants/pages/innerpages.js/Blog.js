@@ -5,8 +5,6 @@ import {
   CardContent,
   CardMedia,
   Grid,
-  IconButton,
-  Pagination,
   TextField,
   Typography,
   useMediaQuery,
@@ -21,13 +19,10 @@ import Footer from "../../common/Footer";
 import HeaderSec from "../../common/HeaderSec";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import PersonIcon from "@mui/icons-material/Person";
-import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
-import JobSection from "./career page/JobSection";
-import InnerPageBanner from "../sections/InnerPageBanner";
 import BlogBanner from "../sections/BlogBanner";
 
 const Blog = () => {
-  const { category } = useParams();
+  useParams();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -35,12 +30,10 @@ const Blog = () => {
     "(min-width: 375px) and (max-width:599px)"
   );
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const articlesPerPage = 6;
   const [searchCategoryValue, setSearchCategoryValue] = useState("");
   const [searchBlogValue, setSearchBlogValue] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(0);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const currentIndex = 0;
   const visibleCount = 3;
 
   // Dummy articles
@@ -113,29 +106,9 @@ const Blog = () => {
     },
   ];
 
-  const maxIndex = articleDetails.length - visibleCount;
-
-  const handlePrev = () => setCurrentIndex((prev) => Math.max(prev - 1, 0));
-  const handleNext = () =>
-    setCurrentIndex((prev) => Math.min(prev + 1, maxIndex));
-
   const categories = [
     ...new Set(articleDetails.map((article) => article.category)),
   ];
-
-  const filteredArticles = articleDetails.filter((article) => {
-    const selectedCategoryValue = categories[selectedCategory];
-    return article.category === selectedCategoryValue;
-  });
-
-  const indexOfLastArticle = currentPage * articlesPerPage;
-  const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
-  const currentArticles = filteredArticles.slice(
-    indexOfFirstArticle,
-    indexOfLastArticle
-  );
-
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const handleBlogInputChange = (e) => setSearchBlogValue(e.target.value);
   const handleCategoryInputChange = (e) =>
@@ -423,19 +396,6 @@ const Blog = () => {
   );
 };
 
-const navBtnStyles = {
-  borderRadius: "50%",
-  background:
-    "linear-gradient(to right, #03228f 0%, #03228f 26%, #4e95ed 100%)",
-  cursor: "pointer",
-  width: 42,
-  height: 42,
-  boxShadow: 2,
-  color: "white",
-  "&:hover": {
-    background: "linear-gradient(to left, #03228f 0%, #4e95ed 100%)",
-  },
-};
 
 const categoryBtnStyles = {
   position: "absolute",
