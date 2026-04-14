@@ -140,7 +140,7 @@ const WhoCanApply = ({ data = {} }) => {
       sx={{
         position: "relative",
         bgcolor: "#f7f5f0",
-        py: { xs: 6, md: 8 },
+        py: { xs: 6, md: 6 },
         overflow: "hidden",
       }}
     >
@@ -181,7 +181,7 @@ const WhoCanApply = ({ data = {} }) => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <Box sx={{ mb: { xs: 5, md: 7 }, display: "flex", alignItems: "center", justifyContent: 'center', flexDirection: 'column' }}>
+          <Box sx={{ mb: { xs: 3, md: 4 }, display: "flex", alignItems: "center", justifyContent: 'center', flexDirection: 'column' }}>
             <Typography
               sx={{
                 fontFamily: "'Instrument Sans', sans-serif",
@@ -254,7 +254,7 @@ const WhoCanApply = ({ data = {} }) => {
         >
           <Box
             sx={{
-              mt: 7,
+              mt: 4,
               p: "24px 32px",
               borderRadius: "14px",
               background: "#ffffff",
