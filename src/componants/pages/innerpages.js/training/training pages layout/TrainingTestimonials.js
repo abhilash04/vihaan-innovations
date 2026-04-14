@@ -12,7 +12,7 @@ const testimonials = [
 const TrainingTestimonials = ({ data = {} }) => {
   const { title, subtitle, testimonials = [] } = data;
   return (
-    <Box sx={{ py: { xs: 6, md: 8 }, background: "#ffffff" }}>
+    <Box sx={{ py: { xs: 6, md: 6 }, background: "#ffffff" }}>
       <Container maxWidth="lg">
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography

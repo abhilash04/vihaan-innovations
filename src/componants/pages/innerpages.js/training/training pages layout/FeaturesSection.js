@@ -20,7 +20,7 @@ const features = [
 const FeaturesSection = ({ data = {} }) => {
   const { title, subtitle, badge, features = [] } = data;
   return (
-    <Box sx={{ py: { xs: 6, md: 8 }, background: "#deedfcff" }}>
+    <Box sx={{ py: { xs: 6, md: 6 }, background: "#deedfcff" }}>
       <Container maxWidth="lg">
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography

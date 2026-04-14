@@ -39,7 +39,7 @@ const TrainingHero = ({ data = {} }) => {
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
         overflow: "hidden",
-        py: { xs: 10, md: 6 },
+        py: { xs: 10, md: 4 },
       }}
     >
       {/* Dynamic Overlay */}
@@ -52,7 +52,7 @@ const TrainingHero = ({ data = {} }) => {
         }}
       />
 
-      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2, pt: { xs: 5, md: 8 } }}>
+      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2, pt: { xs: 5, md: 6 } }}>
         <Grid container spacing={6} alignItems="center">
 
           {/* Left Content */}
@@ -200,7 +200,7 @@ const TrainingHero = ({ data = {} }) => {
               <Paper
                 elevation={0}
                 sx={{
-                  p: { xs: 4, md: 5 },
+                  p: { xs: 4, md: 4 },
                   borderRadius: "32px",
                   background: "rgba(255, 255, 255, 0.12)",
                   backdropFilter: "blur(20px)",
@@ -224,7 +224,7 @@ const TrainingHero = ({ data = {} }) => {
                 <Typography sx={{ color: "#ffffff", fontWeight: 900, fontSize: "24px", mb: 1, letterSpacing: "-0.5px" }}>
                   {formTitle || "Start Your Journey"}
                 </Typography>
-                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)", fontSize: "15px", mb: 4, fontWeight: 500 }}>
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)", fontSize: "15px", mb: 3, fontWeight: 500 }}>
                   {formSubtitle || "Fill the form below and speak with our training advisor."}
                 </Typography>
 
@@ -240,7 +240,7 @@ const TrainingHero = ({ data = {} }) => {
                         color: "#ffffff",
                         borderRadius: "16px",
                         bgcolor: "rgba(255, 255, 255, 0.05)",
-                        fontSize: "12px",
+                        fontSize: "14px",
                         fontWeight: 500,
                         "& fieldset": { borderColor: "rgba(243, 243, 243, 1)" },
                         "&:hover fieldset": { borderColor: "rgba(243, 243, 243, 1)" },
@@ -259,7 +259,7 @@ const TrainingHero = ({ data = {} }) => {
                         color: "#ffffff",
                         borderRadius: "16px",
                         bgcolor: "rgba(255, 255, 255, 0.05)",
-                        fontSize: "12px",
+                        fontSize: "14px",
                         fontWeight: 500,
                         "& fieldset": { borderColor: "rgba(243, 243, 243, 1)" },
                         "&:hover fieldset": { borderColor: "rgba(243, 243, 243, 1)" },

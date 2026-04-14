@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const TrainingCTA = ({ data = {} }) => {
   const { title, subtitle, primaryButton, secondaryButton, footerText } = data;
   return (
-    <Box sx={{ position: "relative", bgcolor: "#0f172a", py: { xs: 10, md: 15 }, overflow: "hidden" }}>
+    <Box sx={{ position: "relative", bgcolor: "#0f172a", py: { xs: 6, md: 6 }, overflow: "hidden" }}>
 
       {/* Soft gradient glow */}
       <Box sx={{ position: "absolute", bottom: "-30%", left: "50%", transform: "translateX(-50%)", width: "80%", height: "80%", background: "radial-gradient(ellipse, rgba(59, 130, 246, 0.3) 0%, rgba(15, 23, 42, 0) 70%)", filter: "blur(60px)", zIndex: 0 }} />
@@ -28,7 +28,7 @@ const TrainingCTA = ({ data = {} }) => {
               {title || (<>Ready to Become an <span style={{ color: "#00b4d8" }}>Expert</span>?</>)}
             </Typography>
 
-            <Typography sx={{ color: "#cbd5e1", fontSize: "18px", mb: 8, opacity: 0.9, maxWidth: "600px", mx: "auto" }}>
+            <Typography sx={{ color: "#cbd5e1", fontSize: "18px", mb: 6, opacity: 0.9, maxWidth: "600px", mx: "auto" }}>
               {subtitle || "Join 1200+ professionals who have transformed their careers with Vihaan Innovations Academy. Master core skills and land high-paying roles."}
             </Typography>
 
@@ -75,8 +75,8 @@ const TrainingCTA = ({ data = {} }) => {
               </Button>
             </Stack>
 
-            <Typography sx={{ mt: 6, color: "rgba(255,255,255,0.5)", fontSize: "14px", fontWeight: 600 }}>
-               {footerText || "* New batch starting this Monday. Limited slots left."}
+            <Typography sx={{ mt: 4, color: "rgba(255,255,255,0.5)", fontSize: "14px", fontWeight: 600 }}>
+              {footerText || "* New batch starting this Monday. Limited slots left."}
             </Typography>
 
           </Box>
