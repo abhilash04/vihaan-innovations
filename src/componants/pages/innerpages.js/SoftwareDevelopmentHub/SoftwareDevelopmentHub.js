@@ -29,10 +29,10 @@ const SoftwareDevelopmentHub = () => {
   });
 
   return (
-    <Box sx={{ bgcolor: "#f8fafc", minHeight: "100vh" }}>
+    <Box sx={{ bgcolor: "#0f172a", minHeight: "100vh", color: "white" }}>
       <HeaderSec />
 
-      {/* Progress Bar */}
+      {/* Premium Progress Bar */}
       <motion.div
         style={{
           scaleX,
@@ -41,7 +41,7 @@ const SoftwareDevelopmentHub = () => {
           left: 0,
           right: 0,
           height: "4px",
-          background: "linear-gradient(90deg, #3b82f6, #8b5cf6)",
+          background: "linear-gradient(90deg, #3b82f6, #8b5cf6, #f43f5e)",
           transformOrigin: "0%",
           zIndex: 2000,
         }}
@@ -56,37 +56,19 @@ const SoftwareDevelopmentHub = () => {
           <CategorySynergy />
         </section>
 
-        <Box sx={{ bgcolor: "white", py: 10 }}>
-            <WebDevelopment />
-        </Box>
+        <WebDevelopment />
 
-        <Box sx={{ bgcolor: "#f1f5f9", py: 10 }}>
-            <MobileApps />
-        </Box>
+        <MobileApps />
 
-        <Box sx={{ bgcolor: "white", py: 10 }}>
-            <CustomApps />
-        </Box>
+        <CustomApps />
 
-        <Box sx={{ bgcolor: "#f1f5f9", py: 10 }}>
-            <CloudDevelopment />
-        </Box>
+        <CloudDevelopment />
 
-        <section sx={{ bgcolor: "white" }}>
-          <TechStack />
-        </section>
+        <DevelopmentProcess />
 
-        <section>
-          <DevelopmentProcess />
-        </section>
+        <WhyChooseVihaan />
 
-        <section>
-          <WhyChooseVihaan />
-        </section>
-
-        <section>
-          <ResultsImpact />
-        </section>
+        <ResultsImpact />
       </Box>
 
       <LocationLinks serviceType={serviceTypes.WEBSITE_DEVELOPMENT} />

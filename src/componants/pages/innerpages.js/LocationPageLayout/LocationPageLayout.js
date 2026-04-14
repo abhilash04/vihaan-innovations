@@ -21,6 +21,7 @@ const LocationPageLayout = () => {
     const path = routerLocation.pathname;
 
     // Dynamically determine service type based on the URL prefix
+    const isTraining = path.includes("/training/");
     const isDigitalMarketing = path.includes("digital-marketing");
     const isAnimation = path.includes("animation-and-video-services");
 
@@ -28,6 +29,9 @@ const LocationPageLayout = () => {
     if (isDigitalMarketing) serviceType = serviceTypes.DIGITAL_MARKETING;
     if (isAnimation) serviceType = serviceTypes.ANIMATION_VIDEO;
 
+    // ... detectedLocation logic stays same ...
+    const mode = isTraining ? "training" : "service";
+    
     // Parse location from pathname if locationParam is empty (for hyphenated routes)
     let detectedLocation = locationParam;
     if (!detectedLocation) {
@@ -43,7 +47,7 @@ const LocationPageLayout = () => {
         : "Bangalore";
 
     // Get unique content for this location and service type from our single data source
-    const dynamicContent = getContentForLocation(locationName, serviceType);
+    const dynamicContent = getContentForLocation(locationName, serviceType, mode);
 
     return (
         <Grid sx={{ background: "#ffffff" }}>
@@ -88,7 +92,7 @@ const LocationPageLayout = () => {
                 location={locationName}
                 serviceType={serviceType}
             />
-            <LocationLinks serviceType={serviceType} />
+            <LocationLinks serviceType={serviceType} isTraining={isTraining} />
             <FooterAndPopup />
         </Grid>
     );

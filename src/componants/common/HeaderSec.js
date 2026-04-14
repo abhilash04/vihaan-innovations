@@ -909,19 +909,35 @@ const Header = () => {
       <Box sx={{ display: "flex", width: "100%" }}>
         {/* ===== Left Column (1st) ===== */}
         <Box sx={{ flex: 1, px: 2 }}>
-          <Typography
-            sx={{
-              fontWeight: 700,
-              color: "#050748",
-              fontSize: "18px",
-              letterSpacing: "0.2px",
-              margin: "0 0 16px",
-              padding: "0 0 14px",
-              borderBottom: "1px solid #dadada",
-            }}
-          >
-            {Object.keys(menuItems.training)[0]}
-          </Typography>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: "1px solid #dadada", mb: 2, pb: 1 }}>
+            <Typography sx={{ fontWeight: 700, color: "#050748", fontSize: "18px" }}>
+              Digital Marketing Training
+            </Typography>
+            <Typography 
+              component="a" 
+              href="/training/digital-marketing-training" 
+              sx={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: 0.5, 
+                backgroundColor: "#0EA5E9", 
+                color: "#ffffff", 
+                px: 1.5, 
+                py: 0.5, 
+                borderRadius: "8px", 
+                fontWeight: 700, 
+                fontSize: "13px", 
+                textDecoration: 'none', 
+                transition: "all 0.3s ease",
+                "&:hover": { 
+                  backgroundColor: "#0284c7",
+                  transform: "translateY(-1px)"
+                } 
+              }}
+            >
+              View All <ArrowRight size={14} />
+            </Typography>
+          </Box>
 
           {menuItems.training[Object.keys(menuItems.training)[0]].map(
             (item, index) => {
@@ -961,19 +977,35 @@ const Header = () => {
               .map(([category, items], colIndex, arr) => (
                 <React.Fragment key={category}>
                   <Box sx={{ flex: 1, px: 2 }}>
-                    <Typography
-                      sx={{
-                        fontWeight: 700,
-                        color: "#050748",
-                        fontSize: "18px",
-                        letterSpacing: "0.2px",
-                        margin: "0 0 16px",
-                        padding: "0 0 14px",
-                        borderBottom: "1px solid #dadada",
-                      }}
-                    >
-                      {category}
-                    </Typography>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: "1px solid #dadada", mb: 2, pb: 1 }}>
+                      <Typography sx={{ fontWeight: 700, color: "#050748", fontSize: "18px" }}>
+                        {category}
+                      </Typography>
+                      <Typography
+                        component="a"
+                        href={category === "Software Training" ? "/training/software-training" : "/training/animation-training"}
+                        sx={{ 
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          gap: 0.5, 
+                          backgroundColor: "#0EA5E9", 
+                          color: "#ffffff", 
+                          px: 1.5, 
+                          py: 0.5, 
+                          borderRadius: "8px", 
+                          fontWeight: 700, 
+                          fontSize: "13px", 
+                          textDecoration: 'none', 
+                          transition: "all 0.3s ease",
+                          "&:hover": { 
+                            backgroundColor: "#0284c7",
+                            transform: "translateY(-1px)"
+                          } 
+                        }}
+                      >
+                        View All <ArrowRight size={14} />
+                      </Typography>
+                    </Box>
 
                     {items.map((item, index) => {
                       const Icon = item.icon;
@@ -1072,17 +1104,28 @@ const Header = () => {
           {/* Right: View All */}
           <Typography
             component="a"
-            href="#"
+            href="/training/software-training"
             sx={{
               display: "flex",
               alignItems: "center",
               gap: 1,
               mt: 1,
-              color: "#673ab7",
-              fontWeight: 500,
+              backgroundColor: "#0EA5E9",
+              color: "#ffffff",
+              fontWeight: 700,
               fontSize: "14px",
               textDecoration: "none",
               whiteSpace: "nowrap",
+              padding: "8px 16px",
+              borderRadius: "10px",
+              transition: "all 0.3s ease",
+              boxShadow: "0 4px 12px rgba(14, 165, 233, 0.2)",
+              "&:hover": {
+                backgroundColor: "#0284c7",
+                gap: 1.5,
+                transform: "translateY(-1px)",
+                boxShadow: "0 6px 16px rgba(14, 165, 233, 0.3)",
+              }
             }}
           >
             View All <ArrowRight size={14} />
@@ -1163,22 +1206,25 @@ const Header = () => {
           </Box>
           <Typography
             component="a"
-            href="/services/development-services"
+            href="/services/web-development"
             sx={{
               display: "flex",
               alignItems: "center",
               gap: 0.5,
-              color: "#f63855",
+              backgroundColor: "#0EA5E9",
+              color: "#ffffff",
               fontWeight: 700,
               fontSize: "13px",
               textDecoration: "none",
-              padding: "6px 12px",
-              borderRadius: "8px",
-              backgroundColor: "rgba(246, 56, 85, 0.05)",
+              padding: "8px 16px",
+              borderRadius: "10px",
               transition: "all 0.3s ease",
+              boxShadow: "0 4px 12px rgba(14, 165, 233, 0.2)",
               "&:hover": {
-                backgroundColor: "rgba(246, 56, 85, 0.1)",
+                backgroundColor: "#0284c7",
                 gap: 1,
+                transform: "translateY(-1px)",
+                boxShadow: "0 6px 16px rgba(14, 165, 233, 0.3)",
               },
             }}
           >
@@ -1259,14 +1305,18 @@ const Header = () => {
                           display: "flex",
                           alignItems: "center",
                           gap: 0.5,
-                          color: "#f63855",
-                          fontWeight: 600,
+                          backgroundColor: "#0EA5E9",
+                          color: "#ffffff",
+                          px: 1.5,
+                          py: 0.5,
+                          borderRadius: "8px",
+                          fontWeight: 700,
                           fontSize: "13px",
                           textDecoration: "none",
                           transition: "all 0.3s ease",
                           "&:hover": {
-                            opacity: 0.8,
-                            gap: 1,
+                            backgroundColor: "#0284c7",
+                            transform: "translateY(-1px)",
                           },
                         }}
                       >
@@ -1373,16 +1423,19 @@ const Header = () => {
                   display: "flex",
                   alignItems: "center",
                   gap: 0.5,
-                  color: "#f63855",
+                  backgroundColor: "#0EA5E9",
+                  color: "#ffffff",
                   fontWeight: 700,
                   fontSize: "13px",
                   textDecoration: "none",
-                  padding: "6px 12px",
-                  borderRadius: "8px",
-                  backgroundColor: "rgba(246, 56, 85, 0.05)",
+                  padding: "8px 16px",
+                  borderRadius: "10px",
                   transition: "all 0.3s ease",
+                  boxShadow: "0 4px 12px rgba(14, 165, 233, 0.2)",
                   "&:hover": {
-                    backgroundColor: "rgba(246, 56, 85, 0.1)",
+                    backgroundColor: "#0284c7",
+                    transform: "translateY(-1px)",
+                    boxShadow: "0 6px 16px rgba(14, 165, 233, 0.3)",
                     gap: 1,
                   },
                 }}
@@ -1654,6 +1707,25 @@ const Header = () => {
                       <ListItemText primary={item.label} primaryTypographyProps={{ fontSize: "14px" }} />
                     </ListItem>
                   ))}
+                  {/* View All Button for Category Hub */}
+                  <ListItem
+                    component="a"
+                    href={category === "Digital Marketing Training" ? "/training/digital-marketing-training" : category === "Software Training" ? "/training/software-training" : "/training/animation-training"}
+                    sx={{
+                      color: "#ffffff",
+                      fontSize: "14px",
+                      padding: "12px 24px",
+                      textDecoration: "none",
+                      width: "100%",
+                      backgroundColor: "#0EA5E9",
+                      fontWeight: 700,
+                      borderBottom: "1px solid rgba(255,255,255,0.05)",
+                      "&:hover": { backgroundColor: "#0284c7" }
+                    }}
+                  >
+                    <ListItemText primary={`View All ${category}`} primaryTypographyProps={{ fontSize: "14px", fontWeight: 700 }} />
+                    <ArrowRight size={16} />
+                  </ListItem>
                 </List>
               </Collapse>
             </ListItem>

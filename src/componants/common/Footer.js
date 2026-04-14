@@ -296,12 +296,14 @@ const FooterAndPopup = () => {
         <Box
           sx={{
             height: "5px",
-            width: "100%",
             background: "linear-gradient(90deg, #0cebeb 0%, #0087ca 30%, #9b51e0 70%, #ff2a85 100%)",
             position: "absolute",
             top: 0,
             left: 0,
+            right: 0,
             zIndex: 10,
+            borderTopLeftRadius: "20px",
+            borderTopRightRadius: "20px",
           }}
         />
 
@@ -529,7 +531,7 @@ const FooterAndPopup = () => {
                 {/* Contact Details Row */}
                 <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, justifyContent: "space-between", alignItems: { xs: "flex-start", md: "center" }, mt: { xs: 2, md: 4 }, pt: { xs: 3, md: 4 }, borderTop: "1px solid #eaeaea", gap: { xs: 3, md: 3 } }}>
                   {/* Email */}
-                  <Box sx={{ display: "flex", alignItems: "center", justifyContent: 'center', gap: "12px", width: "100%" }}>
+                  <Box sx={{ display: "flex", alignItems: "center", justifyContent: 'flex-start', gap: "12px", width: "100%" }}>
                     <Box sx={{ width: "40px", height: "40px", minWidth: "40px", borderRadius: "50%", backgroundColor: "#eef2f6", display: "flex", alignItems: "center", justifyContent: "center" }}>
                       <Email sx={{ fontSize: "20px", color: "#444" }} />
                     </Box>

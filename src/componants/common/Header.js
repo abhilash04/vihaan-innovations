@@ -36,10 +36,10 @@ const Header = () => {
           justifyContent: "space-between",
         }}
       >
-        <Box 
-          sx={{ 
-            flexGrow: 1, 
-            textAlign: "center", 
+        <Box
+          sx={{
+            flexGrow: 1,
+            textAlign: "center",
             position: "relative",
             height: "1.5rem", // Set height to avoid layout shift
             overflow: "hidden"
