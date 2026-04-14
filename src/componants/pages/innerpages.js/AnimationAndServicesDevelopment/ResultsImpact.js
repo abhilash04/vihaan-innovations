@@ -34,13 +34,12 @@ const ResultsImpact = () => {
       id="results-impact"
       sx={{
         py: 15,
-        background: "#ffffff",
-        borderTop: "1px solid #f1f5f9",
+        background: "#0f172a", // Dark background to match container
         position: "relative",
         overflow: "hidden",
       }}
     >
-      {/* Background Watermark */}
+      {/* Background Watermark - Dark Optimized */}
       <Box
         sx={{
           position: "absolute",
@@ -48,23 +47,39 @@ const ResultsImpact = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          opacity: 0.03,
+          opacity: 0.05,
           zIndex: 0,
           pointerEvents: "none",
         }}
       >
-         <svg width="400" height="400" viewBox="0 0 24 24" fill="#0f172a">
+         <svg width="400" height="400" viewBox="0 0 24 24" fill="white">
             <path d="M13 21h-2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1zm-5 0H6a1 1 0 0 1-1-1V10a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1zm10 0h-2a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1z" />
          </svg>
       </Box>
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
         <Stack spacing={2} alignItems="center" textAlign="center" sx={{ mb: 10 }}>
-          <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, fontFamily: "'Syne', sans-serif", color: "#0f172a", lineHeight: 1.1 }}>
-            Impact of Our Website Development Services
+          <Typography 
+            variant="h2" 
+            sx={{ 
+              fontSize: { xs: "32px", md: "46px" }, 
+              fontWeight: 900, 
+              fontFamily: "'Syne', sans-serif", 
+              color: "white", 
+              lineHeight: 1.1 
+            }}
+          >
+            Impact of Guided Website Development
           </Typography>
-          <Typography sx={{ color: "#475569", maxWidth: "700px", fontSize: "18px", fontWeight: 500 }}>
-            Our website development services have empowered hundreds of businesses globally. We measure success through the tangible results and growth our website development services deliver to our clients.
+          <Typography 
+            sx={{ 
+              color: "#94a3b8", 
+              maxWidth: "700px", 
+              fontSize: "18px", 
+              fontWeight: 500 
+            }}
+          >
+            Our website development services have empowered hundreds of businesses globally with tangible technical excellence.
           </Typography>
         </Stack>
         <Grid container spacing={4} sx={{ textAlign: "center" }}>
@@ -85,13 +100,13 @@ const ResultsImpact = () => {
                       top: "20%",
                       height: "60%",
                       width: "1px",
-                      bgcolor: "#e2e8f0",
+                      bgcolor: "rgba(255,255,255,0.1)",
                       display: { xs: "none", md: "block" }
                    }
                 }}
               >
                 <Stack spacing={2} alignItems="center">
-                  <Box sx={{ color: "#2563eb", mb: 1 }}>
+                  <Box sx={{ color: "#3b82f6", mb: 1 }}>
                      <stat.icon size={36} />
                   </Box>
                   <Typography
@@ -99,7 +114,7 @@ const ResultsImpact = () => {
                     sx={{
                       fontSize: { xs: "40px", md: "52px" },
                       fontWeight: 800,
-                      color: "#0f172a",
+                      color: "white",
                       fontFamily: "'Syne', sans-serif",
                       lineHeight: 1,
                     }}

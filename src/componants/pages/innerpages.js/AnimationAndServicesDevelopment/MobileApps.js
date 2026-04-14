@@ -33,7 +33,7 @@ const MobileApps = () => {
     <Box
       id="mobile-apps"
       sx={{
-        py: { xs: 8, md: 12 },
+        py: { xs: 8, md: 10 },
         bgcolor: "#ffffff",
         position: "relative",
         overflow: "hidden",

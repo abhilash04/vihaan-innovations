@@ -103,14 +103,21 @@ export const industries = [
 
 // --- CONTENT GENERATOR ---
 
-export const getContentForLocation = (location, serviceType) => {
+export const getContentForLocation = (location, serviceType, mode = "service") => {
   const isWebDev = serviceType === serviceTypes.WEBSITE_DEVELOPMENT;
   const isDigitalMarketing = serviceType === serviceTypes.DIGITAL_MARKETING;
   const isAnimation = serviceType === serviceTypes.ANIMATION_VIDEO;
+  const isTraining = mode === "training";
   const cleanLocation = location.replace(/ \(.*\)/, "");
 
-  // High-variety linguistic templates to ensure human-like uniqueness (no-AI feel)
-  const intros = [
+  // High-variety linguistic templates
+  const intros = isTraining ? [
+    `Elevate your career in ${cleanLocation} with our industry-led certification programs.`,
+    `Master the skills of the future right here in ${cleanLocation} with hands-on, live project training.`,
+    `Direct from industry veterans to ${cleanLocation}'s aspirants, we deliver training excellence that gets you hired.`,
+    `Staying ahead in the ${cleanLocation} job market requires a skill set that is both modern and practical.`,
+    `Our mission is to empower ${cleanLocation}'s students and professionals with state-of-the-art technical expertise.`
+  ] : [
     `In the fast-evolving digital landscape of ${cleanLocation}, having a high-performance website is no longer an option—it's a necessity.`,
     `Unlock the full potential of your ${cleanLocation}-based business with our custom-engineered digital solutions.`,
     `Direct from our tech labs to your ${cleanLocation} enterprise, we deliver digital excellence that converts.`,
@@ -118,7 +125,13 @@ export const getContentForLocation = (location, serviceType) => {
     `Our mission is to empower ${cleanLocation}'s entrepreneurs with state-of-the-art technological infrastructures.`
   ];
 
-  const valueProps = [
+  const valueProps = isTraining ? [
+    `We focus on industry-relevant skills that matter in the ${cleanLocation} job market—ensuring you're project-ready from day one.`,
+    `Our training programs in ${cleanLocation} are built on real-world case studies and live projects, giving you the edge in interviews.`,
+    `By combining technical theory with deep practical experience in the ${cleanLocation} ecosystem, we build career-ready professionals.`,
+    `In the competitive job market of ${cleanLocation}, generic learning isn't enough; we provide bespoke mentorship designed for your career goals.`,
+    `Our local placement network in ${cleanLocation} coupled with global standards makes us the ideal partner for your career growth.`
+  ] : [
     `We focus on key performance indicators (KPIs) that matter to your ${cleanLocation} business—whether it's increased footfall, higher quality leads, or direct online sales.`,
     `Our strategies for ${cleanLocation} are built on a foundation of deep data analysis and local market insights, ensuring every click counts.`,
     `By combining technical prowess with a deep understanding of the ${cleanLocation} business ecosystem, we deliver results that last.`,
@@ -129,25 +142,33 @@ export const getContentForLocation = (location, serviceType) => {
   const randomIndex = cleanLocation.length % 5;
   const secondaryIndex = (cleanLocation.length + 2) % 5;
 
-  let title = isWebDev ? `Premier Website Development in ${cleanLocation}` : `Leading Digital Marketing in ${cleanLocation}`;
-  if (isAnimation) title = `Top Animation & Video Production in ${cleanLocation}`;
+  let title = "";
+  if (isTraining) {
+    if (isWebDev) title = `Advanced Software Training in ${cleanLocation}`;
+    else if (isDigitalMarketing) title = `Professional Digital Marketing Training in ${cleanLocation}`;
+    else if (isAnimation) title = `Master Animation & VFX Training in ${cleanLocation}`;
+  } else {
+    if (isWebDev) title = `Premier Website Development in ${cleanLocation}`;
+    else if (isDigitalMarketing) title = `Leading Digital Marketing in ${cleanLocation}`;
+    else if (isAnimation) title = `Top Animation & Video Production in ${cleanLocation}`;
+  }
 
   return {
     hero: {
       title,
-      subtext: intros[randomIndex] + ` We specialize in crafting bespoke digital experiences that resonate with the local ${cleanLocation} audience while adhering to global standards.`,
-      badge: `${cleanLocation}'s Choice for Digital Growth`
+      subtext: intros[randomIndex] + ` We specialize in ${isTraining ? "crafting educational pathways" : "crafting bespoke digital experiences"} that resonate with the local ${cleanLocation} ${isTraining ? "community" : "audience"} while adhering to global standards.`,
+      badge: `${cleanLocation}'s Choice for ${isTraining ? "Career" : "Digital"} Growth`
     },
     about: {
-      title: `Why Businesses in ${cleanLocation} Choose Vihaan Innovations`,
-      content: `Operating in ${cleanLocation} requires a partner who understands the local nuances. ${valueProps[randomIndex]} We don't just build systems; we engineer growth engines.`
+      title: `Why ${isTraining ? "Students" : "Businesses"} in ${cleanLocation} Choose Vihaan Innovations`,
+      content: `${isTraining ? "" : "Operating in " + cleanLocation + " requires a partner who understands the local nuances. "}${valueProps[randomIndex]} We don't just ${isTraining ? "teach tools" : "build systems"}; we engineer ${isTraining ? "career success" : "growth engines"}.`
     },
     seoContent: {
-      heading: `Scaling Your Business in ${cleanLocation}: The Digital Advantage`,
+      heading: `${isTraining ? "Mastering Your Career" : "Scaling Your Business"} in ${cleanLocation}: The ${isTraining ? "Learning" : "Digital"} Advantage`,
       paragraphs: [
-        `With the increasing digital penetration in ${cleanLocation}, your target audience is searching for your services online. Our ${serviceType.toLowerCase()} are designed to put your brand right where your customers are.`,
+        `With the increasing ${isTraining ? "demand for skilled talent" : "digital penetration"} in ${cleanLocation}, ${isTraining ? "companies are looking for certified professionals" : "your target audience is searching for your services online"}. Our ${isTraining ? "professional training courses" : serviceType.toLowerCase()} are designed to put you ${isTraining ? "ahead of the competition" : "right where your customers are"}.`,
         valueProps[secondaryIndex],
-        `Our approach is transparent, ROI-focused, and tailored to the unique challenges of the ${cleanLocation} market. We ensure zero plagiarism and human-centric content for better search rankings.`
+        `Our approach is ${isTraining ? "mentorship-led" : "transparent"}, ROI-focused, and tailored to the unique challenges of the ${cleanLocation} market. We ensure ${isTraining ? "practical experience" : "zero plagiarism"} and human-centric ${isTraining ? "mentoring" : "content"} for better ${isTraining ? "career prospects" : "search rankings"}.`
       ]
     },
     services: isWebDev ? webDevServices : (isDigitalMarketing ? digitalMarketingServices : animationVideoServices),

@@ -296,12 +296,14 @@ const FooterAndPopup = () => {
         <Box
           sx={{
             height: "5px",
-            width: "100%",
             background: "linear-gradient(90deg, #0cebeb 0%, #0087ca 30%, #9b51e0 70%, #ff2a85 100%)",
             position: "absolute",
             top: 0,
             left: 0,
+            right: 0,
             zIndex: 10,
+            borderTopLeftRadius: "20px",
+            borderTopRightRadius: "20px",
           }}
         />
 
