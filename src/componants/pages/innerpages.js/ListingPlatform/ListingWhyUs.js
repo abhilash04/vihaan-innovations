@@ -5,8 +5,6 @@ import OpenWithIcon from '@mui/icons-material/OpenWith';
 import SearchIcon from '@mui/icons-material/Search';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
-import FiberSmartRecordIcon from '@mui/icons-material/FiberSmartRecord';
-import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import PersonIcon from '@mui/icons-material/Person';
 

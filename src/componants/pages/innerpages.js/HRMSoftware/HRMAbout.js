@@ -1,5 +1,4 @@
-import React from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import StorageIcon from '@mui/icons-material/Storage';

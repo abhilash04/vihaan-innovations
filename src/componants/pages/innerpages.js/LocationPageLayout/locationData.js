@@ -22,7 +22,8 @@ export const globalCities = [
 
 export const serviceTypes = {
   WEBSITE_DEVELOPMENT: "Website Development Services",
-  DIGITAL_MARKETING: "Digital Marketing Services"
+  DIGITAL_MARKETING: "Digital Marketing Services",
+  ANIMATION_VIDEO: "Animation & Video Services"
 };
 
 // --- SECTION DATA ---
@@ -43,6 +44,15 @@ export const digitalMarketingServices = [
   { icon: "📧", title: "Email & Automation", desc: "Nurturing leads and retaining customers through personalized automated sequences.", tags: ["Mailchimp", "Klaviyo", "CRM"] },
   { icon: "✍️", title: "Content Marketing", desc: "Engaging storytelling that establishes your brand as an authority in your industry.", tags: ["Blogging", "Video Content", "Copywriting"] },
   { icon: "📊", title: "Performance Analytics", desc: "Data-driven insights to optimize every aspect of your digital marketing funnel.", tags: ["GA4", "GTM", "Data Studio"] }
+];
+
+export const animationVideoServices = [
+  { icon: "🎬", title: "2D & 3D Animation", desc: "High-end character animation and visual storytelling for brands in the local market.", tags: ["Character Design", "Storyboarding", "CGI"] },
+  { icon: "💎", title: "Motion Graphics", desc: "Sophisticated visual effects and typography-driven content that captures attention.", tags: ["After Effects", "Cinema 4D", "Brand Identity"] },
+  { icon: "📺", title: "Explainer Videos", desc: "Simplifying complex concepts through engaging and conversion-focused video content.", tags: ["Scriptwriting", "Voiceover", "2D Motion"] },
+  { icon: "🎥", title: "Video Production & Editing", desc: "Professional cinematic production and post-production for corporate and social media.", tags: ["Premiere Pro", "Color Grading", "Sound Design"] },
+  { icon: "✨", title: "VFX & Compositing", desc: "Advanced visual effects and seamless integration for a premium cinematic feel.", tags: ["Nuke", "Houdini", "Green Screen"] },
+  { icon: "📱", title: "Social Media Video Content", desc: "Short-form vertical video strategies designed for maximum engagement on TikTok and Reels.", tags: ["Reels", "Shorts", "Viral Content"] }
 ];
 
 export const commonProcess = [
@@ -71,6 +81,15 @@ export const digitalMarketingTech = [
   { name: "Canva & Adobe CC", icon: "🎨" }
 ];
 
+export const animationVideoTech = [
+  { name: "Adobe After Effects", icon: "💎" },
+  { name: "Cinema 4D & Blender", icon: "🌀" },
+  { name: "Audodesk Maya", icon: "🦖" },
+  { name: "Adobe Premiere Pro", icon: "🎬" },
+  { name: "DaVinci Resolve", icon: "🎨" },
+  { name: "Unreal Engine 5", icon: "🎮" }
+];
+
 export const industries = [
   { name: "Fintech", icon: "💰" },
   { name: "Healthcare", icon: "🏥" },
@@ -86,6 +105,8 @@ export const industries = [
 
 export const getContentForLocation = (location, serviceType) => {
   const isWebDev = serviceType === serviceTypes.WEBSITE_DEVELOPMENT;
+  const isDigitalMarketing = serviceType === serviceTypes.DIGITAL_MARKETING;
+  const isAnimation = serviceType === serviceTypes.ANIMATION_VIDEO;
   const cleanLocation = location.replace(/ \(.*\)/, "");
 
   // High-variety linguistic templates to ensure human-like uniqueness (no-AI feel)
@@ -108,9 +129,12 @@ export const getContentForLocation = (location, serviceType) => {
   const randomIndex = cleanLocation.length % 5;
   const secondaryIndex = (cleanLocation.length + 2) % 5;
 
+  let title = isWebDev ? `Premier Website Development in ${cleanLocation}` : `Leading Digital Marketing in ${cleanLocation}`;
+  if (isAnimation) title = `Top Animation & Video Production in ${cleanLocation}`;
+
   return {
     hero: {
-      title: isWebDev ? `Premier Website Development in ${cleanLocation}` : `Leading Digital Marketing in ${cleanLocation}`,
+      title,
       subtext: intros[randomIndex] + ` We specialize in crafting bespoke digital experiences that resonate with the local ${cleanLocation} audience while adhering to global standards.`,
       badge: `${cleanLocation}'s Choice for Digital Growth`
     },
@@ -126,9 +150,9 @@ export const getContentForLocation = (location, serviceType) => {
         `Our approach is transparent, ROI-focused, and tailored to the unique challenges of the ${cleanLocation} market. We ensure zero plagiarism and human-centric content for better search rankings.`
       ]
     },
-    services: isWebDev ? webDevServices : digitalMarketingServices,
+    services: isWebDev ? webDevServices : (isDigitalMarketing ? digitalMarketingServices : animationVideoServices),
     process: commonProcess,
-    techStack: isWebDev ? webDevTech : digitalMarketingTech,
+    techStack: isWebDev ? webDevTech : (isDigitalMarketing ? digitalMarketingTech : animationVideoTech),
     industries: industries
   };
 };

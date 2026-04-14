@@ -1,5 +1,4 @@
-import React from "react";
-import { Box, Typography, Stack, useMediaQuery, useTheme, Button, Grid, Avatar } from "@mui/material";
+import { Box, Typography, Stack, Button, Avatar } from "@mui/material";
 import { motion } from "framer-motion";
 import StarIcon from "@mui/icons-material/Star";
 import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
@@ -21,8 +20,6 @@ const TrustBadge = ({ title, desc }) => (
 );
 
 const FoodBanner = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const floatingIcons = [
     { Icon: LocalPizzaIcon, color: '#ff6b6b', top: '10%', left: '5%' },

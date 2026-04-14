@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 import DomainOutlinedIcon from '@mui/icons-material/DomainOutlined';
 import MagnetOutlinedIcon from '@mui/icons-material/InsightsOutlined';

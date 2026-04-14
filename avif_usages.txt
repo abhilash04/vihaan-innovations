@@ -1,0 +1,39 @@
+src/componants/common/HeaderSec.js:27:import logo from "../../assets/vihaan-logo.avif";
+src/componants/common/HeaderSec.js:29:import img1 from "../../assets/img2.avif"
+src/componants/common/Footer.js:34:import logo from "../../assets/vihaan-logo.avif";
+src/componants/pages/TipsAndTricks.js:18:import img4 from "../../assets/ai-transform.avif"
+src/componants/pages/innerpages.js/MatrimonyCRM/MatrimonyVisualFlow.js:3:import img from '../../../../assets/matchmaking-process.avif';
+src/componants/pages/innerpages.js/MatrimonyCRM/MatrimonyBanner.js:7:import img from '../../../../assets/trusted-matrimony-app.avif';
+src/componants/pages/innerpages.js/RealEstatePortal/PortalHero.js:5:import img from '../../../../assets/Real-estate-listings.avif'
+src/componants/pages/innerpages.js/HospitalManagement/HMSHero.js:6:import img from '../../../../assets/hms-banner.avif'
+src/componants/pages/innerpages.js/EducationCRM/EducationBanner.js:4:import img from '../../../../assets/edu-crm-tech-img.avif'
+src/componants/pages/innerpages.js/Foof Booking/CustomersWant.js:7:import centerImage from "../../../../assets/serve-your-customers.avif";
+src/componants/pages/innerpages.js/ListingPlatform/ListingBanner.js:7:import img from "../../../../assets/listingimage.avif";
+src/componants/pages/innerpages.js/ListingPlatform/ListingProblem.js:8:import img from "../../../../assets/the-problem1.avif"
+src/componants/pages/innerpages.js/pg and hostel management/SoftwareSolution.js:13:import pgImage from "../../../../assets/afterbefore.avif";
+src/componants/pages/innerpages.js/portfolio page/PortfolioHero.js:5:import bgImage from "../../../../assets/img1.avif"; // Using a tech-focused asset
+src/componants/pages/innerpages.js/portfolio page/SolutionSection.js:12:import img1 from "../../../../assets/p1.avif";
+src/componants/pages/innerpages.js/portfolio page/SolutionSection.js:13:import img2 from "../../../../assets/p2.avif";
+src/componants/pages/innerpages.js/portfolio page/SolutionSection.js:14:import img3 from "../../../../assets/p3.avif";
+src/componants/pages/innerpages.js/portfolio page/SolutionSection.js:15:import img4 from "../../../../assets/p4.avif";
+src/componants/pages/innerpages.js/portfolio page/SolutionSection.js:16:import img5 from "../../../../assets/p5.avif";
+src/componants/pages/innerpages.js/portfolio page/SolutionSection.js:17:import img6 from "../../../../assets/p6.avif";
+src/componants/pages/innerpages.js/portfolio page/SolutionSection.js:18:import img7 from "../../../../assets/p2.avif";
+src/componants/pages/innerpages.js/portfolio page/SolutionSection.js:19:import img8 from "../../../../assets/p12.avif";
+src/componants/pages/innerpages.js/portfolio page/SolutionSection.js:20:import img9 from "../../../../assets/p13.avif";
+src/componants/pages/innerpages.js/portfolio page/SolutionSection.js:21:import img10 from "../../../../assets/p14.avif";
+src/componants/pages/innerpages.js/EcommerceMultiVendor/MultiVendorAdminPanel.js:6:import adminImg from "../../../../assets/mutilvendor-dashboard.avif";
+src/componants/pages/innerpages.js/EcommerceMultiVendor/MultiVendorMobileApps.js:6:import phone1 from "../../../../assets/multivendor-web.avif";
+src/componants/pages/innerpages.js/EcommerceMultiVendor/MultiVendorComputer.js:6:import computerImg from "../../../../assets/multivendor-mobile.avif";
+src/componants/pages/innerpages.js/EcommerceSingleVendor/EcommerceBanner.js:3:import img from "../../../../assets/Home-banner-img 1.avif";
+src/componants/pages/innerpages.js/EcommerceSingleVendor/EcommerceSingleRenderAboutUs.js:4:import img from '../../../../assets/Aboutus-1.avif';
+src/componants/pages/innerpages.js/RealEstateCRM/RealEstateBanner.js:9:import img from '../../../../assets/real-estate-tech.avif'
+src/componants/pages/innerpages.js/RealEstateCRM/RealEstateProcess.js:9:import img from '../../../../assets/Five-step real estate CRM process.avif'
+src/componants/pages/innerpages.js/serviceinnerpages/service pages layout/DetailedServices.js:28:import img from '../../../../../assets/serviceImg.avif'
+src/componants/pages/innerpages.js/contact page/ContactSection.js:23:import bgImage from "../../../../assets/img1.avif"; // Matches About Us style but different image
+src/componants/pages/ItServiceSection.js:4:import img1 from "../../assets/first page.avif";
+src/componants/pages/ItServiceSection.js:5:import img2 from "../../assets/first page 1.avif";
+src/componants/pages/ItServiceSection.js:6:import img3 from "../../assets/first page 2.avif";
+src/componants/pages/SwitchingCards.js:7:import img1 from "../../assets/SwitchingCardsimg1.avif";
+src/componants/pages/CartDrawer.js:22:import img from "../../assets/combo.avif";
+src/componants/pages/CartDrawer.js:23:import img2 from "../../assets/gir-cow-ghee-1L.avif";

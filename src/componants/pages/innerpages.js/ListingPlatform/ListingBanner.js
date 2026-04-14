@@ -112,7 +112,7 @@ const ListingBanner = () => {
                   ml: { md: "auto" }
                 }}
               >
-                <img src={img} alt="Listing Image"
+                <img src={img} alt="Listing Platform Features"
                   style={{
                     width: "100%",
                     height: "100%",
