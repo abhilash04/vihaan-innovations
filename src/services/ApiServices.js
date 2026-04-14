@@ -15,4 +15,8 @@ export const invokeApi = (url, params) => {
 
 export const apiList = {
     getMetaDataBySite: "/getMetaDataBySite",
+
+    //blog
+    getArticles: "/getArticles",
+    getArticleByOgUrl: "/getArticleByOgUrl",
 }
