@@ -21,12 +21,12 @@ const LocationPageLayout = () => {
     const path = routerLocation.pathname;
 
     // Dynamically determine service type based on the URL prefix
-    // This allows us to handle 'website-development', 'digital-marketing', 'web-app-development' etc without hardcoding
     const isDigitalMarketing = path.includes("digital-marketing");
+    const isAnimation = path.includes("animation-and-video-services");
 
-    const serviceType = isDigitalMarketing
-        ? serviceTypes.DIGITAL_MARKETING
-        : serviceTypes.WEBSITE_DEVELOPMENT;
+    let serviceType = serviceTypes.WEBSITE_DEVELOPMENT;
+    if (isDigitalMarketing) serviceType = serviceTypes.DIGITAL_MARKETING;
+    if (isAnimation) serviceType = serviceTypes.ANIMATION_VIDEO;
 
     // Parse location from pathname if locationParam is empty (for hyphenated routes)
     let detectedLocation = locationParam;

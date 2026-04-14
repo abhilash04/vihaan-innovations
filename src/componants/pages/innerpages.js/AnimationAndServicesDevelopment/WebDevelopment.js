@@ -94,11 +94,11 @@ const WebDevelopment = () => {
               lineHeight: 1.1,
             }}
           >
-            Premium Website Development Services <br />
-            That Deliver Real Results
+            Enterprise-Grade Web Development <br />
+            Engineered for Scalable Growth
           </Typography>
           <Typography sx={{ color: "#475569", maxWidth: "600px", fontSize: { xs: "16px", md: "20px" }, lineHeight: 1.7, fontWeight: 500 }}>
-            Our custom platforms blend robust engineering with intuitive design. We focus on building fast, scalable applications that engage your users and directly support your long-term business goals. Let our professional website development services elevate your digital presence today.
+            We engineer high-performance digital platforms that blend robust technical architecture with intuitive user journeys. Our focus is on building fast, secure, and scalable modern web applications that don't just exist—they drive growth and directly support your long-term business objectives.
           </Typography>
         </Stack>
 

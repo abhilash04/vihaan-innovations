@@ -66,9 +66,9 @@ const SMM = () => {
                     lineHeight: 1.1,
                   }}
                 >
-                  Build Community. <br />
+                  Socially Driven. <br />
                   <Box component="span" sx={{ color: "#06b6d4" }}>
-                    Drive Action.
+                    Conversion Focused.
                   </Box>
                 </Typography>
               </Box>
@@ -81,7 +81,7 @@ const SMM = () => {
                   fontWeight: 500,
                 }}
               >
-                Social platforms are where your audience already spends their time. We craft scroll-stopping content and build engaged communities that turn followers into paying customers.
+                Social media is more than just likes and shares—it's about building a loyal community that drives action. Our SMM strategies focus on crafting scroll-stopping content and managed engagement that converts followers into brand advocates.
               </Typography>
 
               <Stack direction="row" spacing={4}>

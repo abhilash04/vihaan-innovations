@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {
   Box,
-  AppBar,
-  Toolbar,
   Button,
-  Drawer,
   List,
   ListItem,
   ListItemText,
@@ -22,9 +19,8 @@ import {
   ExpandMore as ExpandMoreIcon,
   ExpandLess as ExpandLessIcon,
 } from "@mui/icons-material";
-import SearchIcon from "@mui/icons-material/Search";
-// import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
-import logo from "../../assets/vihaan-logo.png";
+// import logo from "../../assets/vihaan-logo.png";
+import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import img1 from "../../assets/img2.png"
 import {
@@ -1135,35 +1131,58 @@ const Header = () => {
             padding: "0 0 14px",
           }}
         >
-          <Typography
-            sx={{
-              fontWeight: 700,
-              color: "#050748",
-              fontSize: "18px",
-              letterSpacing: "0.2px",
-            }}
-          >
-            {Object.keys(menuItems.services)[0]}
-          </Typography>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+            <Box
+              sx={{
+                width: 42,
+                height: 42,
+                borderRadius: "12px",
+                backgroundColor: "#fff1f2",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#e11d48", // Rose-600
+              }}
+            >
+              <Code2 size={24} strokeWidth={2.5} />
+            </Box>
+            <Box>
+              <Typography
+                sx={{
+                  fontWeight: 700,
+                  fontSize: "18px",
+                  color: "#050748",
+                  lineHeight: 1.2,
+                  mb: 0.5,
+                }}
+              >
+                Development Services
+              </Typography>
+
+            </Box>
+          </Box>
           <Typography
             component="a"
-            href="/services/web-development"
+            href="/services/development-services"
             sx={{
               display: "flex",
               alignItems: "center",
               gap: 0.5,
               color: "#f63855",
-              fontWeight: 600,
+              fontWeight: 700,
               fontSize: "13px",
               textDecoration: "none",
+              padding: "6px 12px",
+              borderRadius: "8px",
+              backgroundColor: "rgba(246, 56, 85, 0.05)",
               transition: "all 0.3s ease",
               "&:hover": {
-                opacity: 0.8,
+                backgroundColor: "rgba(246, 56, 85, 0.1)",
                 gap: 1,
               },
             }}
           >
-            View All <ArrowRight size={14} />
+            View All <ArrowRight size={14} strokeWidth={2.5} />
           </Typography>
         </Box>
 
@@ -1232,10 +1251,10 @@ const Header = () => {
                     >
                       {category}
                     </Typography>
-                    {category === "Digital Marketing" && (
+                    {(category === "Digital Marketing" || category === "Animation & Video Services") && (
                       <Typography
                         component="a"
-                        href="/services/digital-marketing"
+                        href={category === "Digital Marketing" ? "/services/digital-marketing" : "/services/animation-and-video-services"}
                         sx={{
                           display: "flex",
                           alignItems: "center",
@@ -1347,6 +1366,29 @@ const Header = () => {
                   Innovative, future-proof software solutions
                 </Typography>
               </Box>
+              <Typography
+                component="a"
+                href="/services/software-development"
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 0.5,
+                  color: "#f63855",
+                  fontWeight: 700,
+                  fontSize: "13px",
+                  textDecoration: "none",
+                  padding: "6px 12px",
+                  borderRadius: "8px",
+                  backgroundColor: "rgba(246, 56, 85, 0.05)",
+                  transition: "all 0.3s ease",
+                  "&:hover": {
+                    backgroundColor: "rgba(246, 56, 85, 0.1)",
+                    gap: 1,
+                  },
+                }}
+              >
+                View All <ArrowRight size={14} strokeWidth={2.5} />
+              </Typography>
             </Box>
 
           </Box>

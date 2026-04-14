@@ -1,59 +1,7 @@
 import React from "react";
-import { Box, Container, Typography, Button, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Button, Grid } from "@mui/material";
 import { motion } from "framer-motion";
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import PeopleIcon from '@mui/icons-material/People';
-import SpeedIcon from '@mui/icons-material/Speed';
 import img from '../../../../assets/trusted-matrimony-app.png';
-
-const StatCard = ({ icon: Icon, value, label, delay }) => (
-  <motion.div
-    initial={{ opacity: 0, x: 50 }}
-    animate={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.6, delay, type: "spring", stiffness: 100 }}
-  >
-    <Paper
-      elevation={0}
-      sx={{
-        pr: 4,
-        pl: 3,
-        py: 2,
-        borderRadius: "12px",
-        bgcolor: "rgba(255, 255, 255, 0.05)",
-        backdropFilter: "blur(10px)",
-        border: "1px solid rgba(255,255,255,0.1)",
-        boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        mb: 3,
-        maxWidth: "350px",
-        ml: "auto",
-        transition: "all 0.3s ease",
-        "&:hover": {
-          transform: "translateX(-10px)",
-          bgcolor: "rgba(255, 255, 255, 0.08)",
-        }
-      }}
-    >
-      <Box>
-        <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "12px", fontWeight: 600, mb: 0.5 }}>
-          {label}
-        </Typography>
-        <Typography variant="h3" sx={{ fontWeight: 800, color: "#ffffff", fontSize: "28px", lineHeight: 1 }}>
-          {value}
-        </Typography>
-      </Box>
-
-      <Box sx={{ color: "#00B4D8", opacity: 0.5 }}>
-        <svg width="60" height="30" viewBox="0 0 60 30" fill="none">
-          <path d="M0 25 L15 15 L30 20 L45 5 L60 10" stroke="currentColor" strokeWidth="2" />
-          <path d="M0 30 L15 20 L30 25 L45 10 L60 15 L60 30 Z" fill="currentColor" opacity="0.2" />
-        </svg>
-      </Box>
-    </Paper>
-  </motion.div>
-);
 
 const MatrimonyBanner = () => {
   return (

@@ -1,50 +1,8 @@
 import React from "react";
-import { Box, Container, Typography, Button, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Button, Grid } from "@mui/material";
 import { motion } from "framer-motion";
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import InsertChartOutlinedIcon from '@mui/icons-material/InsertChartOutlined';
-import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
-import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import img from '../../../../assets/real-estate-tech.png'
-const StatCard = ({ icon: Icon, value, label, delay }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8, delay, type: "spring", stiffness: 100 }}
-  >
-    <Paper
-      elevation={0}
-      sx={{
-        p: 3,
-        borderRadius: "20px",
-        bgcolor: "#ffffff",
-        boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        minHeight: "130px",
-        transition: "transform 0.3s ease",
-        "&:hover": {
-          transform: "translateY(-5px)"
-        }
-      }}
-    >
-      <Box sx={{ color: "#00b4d8", mb: 1 }}>
-        <Icon sx={{ fontSize: 24 }} />
-      </Box>
-      <Box>
-        <Typography variant="h3" sx={{ fontWeight: 800, color: "#1a1a1a", mb: 0.5, fontSize: "36px" }}>
-          {value}
-        </Typography>
-        <Typography sx={{ color: "#666", fontSize: "12px", fontWeight: 600, lineHeight: 1.2 }}>
-          {label}
-        </Typography>
-      </Box>
-    </Paper>
-  </motion.div>
-);
 
 const RealEstateBanner = () => {
   return (

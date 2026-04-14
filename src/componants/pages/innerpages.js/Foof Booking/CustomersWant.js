@@ -1,5 +1,4 @@
-import React from "react";
-import { Box, Typography, Grid, Paper, useTheme, useMediaQuery } from "@mui/material";
+import { Box, Typography, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 import TakeoutDiningIcon from "@mui/icons-material/TakeoutDining";
 import DeliveryDiningIcon from "@mui/icons-material/DeliveryDining";
@@ -64,8 +63,6 @@ const ServiceCard = ({ icon: Icon, title, description, delay }) => (
 );
 
 const CustomersWant = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Box sx={{ pt: { xs: 4, md: 6 }, pb: { xs: 8, md: 16 }, bgcolor: "#ffffff" }}>

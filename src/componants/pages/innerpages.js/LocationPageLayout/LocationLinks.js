@@ -6,6 +6,7 @@ import { bangaloreLocalities, majorIndianCities, globalCities, serviceTypes, slu
 const LocationLinks = ({ serviceType }) => {
     const isWebDev = serviceType === serviceTypes.WEBSITE_DEVELOPMENT;
     const isDigitalMarketing = serviceType === serviceTypes.DIGITAL_MARKETING;
+    const isAnimation = serviceType === serviceTypes.ANIMATION_VIDEO;
     const showAll = !serviceType;
 
     const renderLinkGroup = (title, locations, pathPrefix, linkSuffix) => (
@@ -58,6 +59,15 @@ const LocationLinks = ({ serviceType }) => {
                         {renderLinkGroup("Digital Marketing Services Across Bangalore", bangaloreLocalities, "digital-marketing-services", "Digital Marketing Services")}
                         {renderLinkGroup("Leading Digital Marketing Company in Major Cities", majorIndianCities, "digital-marketing-services", "Digital Marketing Services")}
                         {renderLinkGroup("International SEO & Performance Marketing", globalCities, "digital-marketing-services", "Digital Marketing Services")}
+                    </Box>
+                )}
+
+                {(showAll || isAnimation) && (
+                    <Box sx={{ mt: (showAll || isWebDev || isDigitalMarketing) ? 8 : 0 }}>
+                        {/* Animation & Video Sections */}
+                        {renderLinkGroup("Animation & Video Services in Bangalore", bangaloreLocalities, "animation-and-video-services", "Animation & Video Services")}
+                        {renderLinkGroup("Top Animation Studios in Major Cities", majorIndianCities, "animation-and-video-services", "Animation & Video Services")}
+                        {renderLinkGroup("Global Video Production & VFX Solutions", globalCities, "animation-and-video-services", "Animation & Video Services")}
                     </Box>
                 )}
             </Container>

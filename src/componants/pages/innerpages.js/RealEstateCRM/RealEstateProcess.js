@@ -1,19 +1,7 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid } from "@mui/material";
 import { motion } from "framer-motion";
-import SearchIcon from '@mui/icons-material/Search';
-import DesignServicesIcon from '@mui/icons-material/DesignServices';
-import CodeIcon from '@mui/icons-material/Code';
-import PeopleIcon from '@mui/icons-material/People';
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import img from '../../../../assets/Five-step real estate CRM process.png'
-const steps = [
-  { num: "01", title: "Discovery", icon: <SearchIcon /> },
-  { num: "02", title: "Design", icon: <DesignServicesIcon /> },
-  { num: "03", title: "Development", icon: <CodeIcon /> },
-  { num: "04", title: "Training & UAT", icon: <PeopleIcon /> },
-  { num: "05", title: "Launch & Support", icon: <RocketLaunchIcon /> }
-];
 
 const RealEstateProcess = () => {
   return (

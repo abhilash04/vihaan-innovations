@@ -1,30 +1,13 @@
 import React, { useState } from "react";
-import { Box, Typography, Grid, Container, Paper, Divider } from "@mui/material";
-import { styled, keyframes } from "@mui/system";
+import { Box, Typography, Grid, Container, Paper } from "@mui/material";
+import { keyframes } from "@mui/system";
 import { motion, AnimatePresence } from "framer-motion";
 import CodeIcon from "@mui/icons-material/Code";
-import AssessmentIcon from "@mui/icons-material/Assessment";
-import VideoCameraBackIcon from "@mui/icons-material/VideoCameraBack";
-import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 import ComputerIcon from "@mui/icons-material/Computer";
 import SmartphoneIcon from "@mui/icons-material/Smartphone";
-import CloudIcon from "@mui/icons-material/Cloud";
 import StorageIcon from "@mui/icons-material/Storage";
 import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import BrushIcon from "@mui/icons-material/Brush";
-import SearchIcon from "@mui/icons-material/Search";
-import CampaignIcon from "@mui/icons-material/Campaign";
-import BarChartIcon from "@mui/icons-material/BarChart";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import DescriptionIcon from "@mui/icons-material/Description";
-import PlaceIcon from "@mui/icons-material/Place";
-import MovieIcon from "@mui/icons-material/Movie";
-import AnimationIcon from "@mui/icons-material/Animation";
-import slowMotionVideoIcon from "@mui/icons-material/SlowMotionVideo";
-import VideoCallIcon from "@mui/icons-material/VideoCall";
-import BusinessIcon from "@mui/icons-material/Business";
-import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
-import SchoolIcon from "@mui/icons-material/School";
 import img from '../../../../../assets/serviceImg.png'
 const float = keyframes`
   0% { transform: translateY(0px); }
@@ -124,7 +107,7 @@ const DetailedServices = ({ data }) => {
     services = serviceData
   } = data || {};
 
-  const [activeTab, setActiveTab] = useState(0);
+  const activeTab = 0;
   const [activeItem, setActiveItem] = useState(1); // Set default active row (e.g. 1 for Web Development)
 
   const activeCat = services[activeTab] || { cards: [] };

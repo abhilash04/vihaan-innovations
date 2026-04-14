@@ -1,48 +1,7 @@
 import React from "react";
-import { Box, Container, Typography, Button, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Button, Grid } from "@mui/material";
 import { motion } from "framer-motion";
 import img from '../../../../assets/edu-crm-tech-img.png'
-const StatCard = ({ icon: Icon, value, label, delay }) => (
-  <motion.div
-    initial={{ opacity: 0, scale: 0.9 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.6, delay }}
-  >
-    <Paper
-      elevation={0}
-      sx={{
-        p: 2.5,
-        borderRadius: "20px",
-        bgcolor: "rgba(255, 255, 255, 0.95)",
-        backdropFilter: "blur(10px)",
-        boxShadow: "0 15px 35px rgba(0,0,0,0.1)",
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        minHeight: "120px"
-      }}
-    >
-      <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", mb: 1 }}>
-        <Typography variant="h3" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: "32px", lineHeight: 1 }}>
-          {value}
-        </Typography>
-        <Box sx={{
-          bgcolor: "#e0fbfc",
-          color: "#00b4d8",
-          p: 0.8,
-          borderRadius: "10px",
-          display: "flex"
-        }}>
-          <Icon sx={{ fontSize: 20 }} />
-        </Box>
-      </Box>
-      <Typography sx={{ color: "#555", fontSize: "12px", fontWeight: 600, lineHeight: 1.3 }}>
-        {label}
-      </Typography>
-    </Paper>
-  </motion.div>
-);
 
 const EducationBanner = () => {
   return (

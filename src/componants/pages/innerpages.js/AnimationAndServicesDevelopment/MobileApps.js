@@ -276,11 +276,10 @@ const MobileApps = () => {
                   color: "#475569",
                   fontSize: { xs: "16px", md: "20px" },
                   lineHeight: 1.7,
-                  lineHeight: 1.7,
                   fontWeight: 500,
                 }}
               >
-                Complementing our premium website development services, we build high-performance mobile applications that users love. Whether it's native iOS/Android or cross-platform solutions, we ensure speed, security, and a premium feel. Our website development services ensure your brand remains consistent across all digital platforms.
+                In an increasingly mobile-first world, your brand needs to live where your customers are. We build high-performance mobile applications that offer seamless speed, enterprise-grade security, and a premium user experience across iOS and Android platforms.
               </Typography>
 
               <Stack spacing={2.5}>

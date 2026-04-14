@@ -1,7 +1,5 @@
-import React from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Paper } from "@mui/material";
 import { motion } from "framer-motion";
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 const opdSteps = [
   { id: 1, label: "Online Registration", desc: "Quick digital onboarding" },
