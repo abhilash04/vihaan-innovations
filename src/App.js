@@ -113,7 +113,7 @@ function App() {
               <Route path="/cancellation-policy" element={<LegalCenter />} />
               <Route path="/shipping-policy" element={<ShippingPolicy />} />
 
-              <Route path="/article/blog-detailing-page" element={<BlogHomepage />} />
+              <Route path="/article/:ogUrl" element={<BlogHomepage />} />
 
               {/* Ready Products */}
               <Route path="/ready-products/ecommerce-single-vendor" element={<EcommerceSingleVendorHomepage />} />

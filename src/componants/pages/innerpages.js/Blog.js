@@ -269,6 +269,7 @@ const Blog = () => {
                     </Box>
                     <Typography
                       variant="subtitle1"
+                      onClick={() => navigate(`/article/${post.ogUrl}`)}
                       sx={{
                         fontSize: "20px",
                         fontWeight: 600,
@@ -276,6 +277,7 @@ const Blog = () => {
                         color: "#0a0a0a",
                         fontFamily: "Livvic",
                         mb: "15px",
+                        cursor: "pointer",
                         "&:hover": { color: "#0B70E1" },
                       }}
                     >
@@ -298,6 +300,7 @@ const Blog = () => {
                     </Typography>
                     <Typography
                       variant="body2"
+                      onClick={() => navigate(`/article/${post.ogUrl}`)}
                       sx={{
                         color: "#061340",
                         fontWeight: 600,
