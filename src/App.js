@@ -47,6 +47,7 @@ import {
 
 import { allLocations, slugify } from "./componants/pages/innerpages.js/LocationPageLayout/locationData";
 import AnimationVideoServices from "./componants/pages/innerpages.js/AnimationVideoServices/AnimationVideoServices";
+import BlogHomepage from "./componants/pages/innerpages.js/Blog/BlogHomePage";
 
 // Lazy Loaded Page Components
 const HomePage = lazy(() => import("./componants/pages/HomePage"));
@@ -108,6 +109,8 @@ function App() {
               <Route path="/refund-policy" element={<LegalCenter />} />
               <Route path="/cancellation-policy" element={<LegalCenter />} />
               <Route path="/shipping-policy" element={<ShippingPolicy />} />
+
+              <Route path="/article/blog-detailing-page" element={<BlogHomepage />} />
 
               {/* Ready Products */}
               <Route path="/ready-products/ecommerce-single-vendor" element={<EcommerceSingleVendorHomepage />} />
