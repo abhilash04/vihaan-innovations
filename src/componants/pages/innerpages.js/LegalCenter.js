@@ -150,7 +150,7 @@ const RefundContent = () => (
 
     <SectionHeading>Digital Marketing & Maintenance Contracts</SectionHeading>
     <Paragraph>
-      Services such as SEO, Digital Marketing, and App/Website Maintenance are billed on a monthly or quarterly retainer basis. 
+      Services such as SEO, Digital Marketing, and App/Website Maintenance are billed on a monthly or quarterly retainer basis.
     </Paragraph>
     <Paragraph>
       These retainers are non-refundable. However, if a client is dissatisfied, they may request a cancellation of the service for the upcoming billing cycle by providing a 15-day written notice.
@@ -192,7 +192,7 @@ const CancellationContent = () => (
 
     <SectionHeading>Service Retainer Cancellations</SectionHeading>
     <Paragraph>
-      Monthly retainer services (such as Server Management, SEO, Maintenance) require a designated notice period prior to the next billing cycle. 
+      Monthly retainer services (such as Server Management, SEO, Maintenance) require a designated notice period prior to the next billing cycle.
     </Paragraph>
     <Paragraph bold>
       - Standard Notice Period: 15 Days
@@ -231,27 +231,27 @@ const LegalCenter = () => {
       {/* Main Content Layout */}
       <Container maxWidth="lg" sx={{ pt: { xs: 16, md: 24 }, pb: { xs: 8, md: 12 }, px: { xs: 3, md: 6 } }}>
         <Grid container spacing={{ xs: 6, md: 10 }}>
-          
+
           {/* Left Sticky Sidebar */}
           <Grid item xs={12} md={3.5} sx={{ display: { xs: "none", md: "block" } }}>
-            <Box sx={{ 
-              position: { md: "sticky" }, 
-              top: { md: "120px" }, 
-              bgcolor: "#ffffff", 
-              borderRadius: "16px", 
-              p: { xs: 3, md: 4 }, 
+            <Box sx={{
+              position: { md: "sticky" },
+              top: { md: "120px" },
+              bgcolor: "#ffffff",
+              borderRadius: "16px",
+              p: { xs: 3, md: 4 },
               boxShadow: "0 10px 40px rgba(0,0,0,0.03)",
               mb: { xs: 2, md: 0 }
             }}>
               <Typography sx={{ fontFamily: "'Playfair Display', serif", fontWeight: 800, fontSize: "22px", color: "#0f172a", mb: 3 }}>
                 Legal Hub
               </Typography>
-              
+
               <Box component="nav" sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                 {SIDEBAR_LINKS.map((link) => {
                   const isActive = activePolicy === link.id;
                   return (
-                    <RouterLink 
+                    <RouterLink
                       to={link.path}
                       key={link.id}
                       style={{ textDecoration: "none" }}
@@ -306,7 +306,7 @@ const LegalCenter = () => {
                       <span style={{ color: "#c8442a" }}>E.</span> legal@vihaaninnovations.com
                     </Typography>
                     <Typography sx={{ fontFamily: "'DM Sans', sans-serif", color: "#ffffff", fontWeight: 600, fontSize: "16px", display: "flex", alignItems: "center", gap: 2 }}>
-                      <span style={{ color: "#c8442a" }}>T.</span> +91 80739 79129
+                      <span style={{ color: "#c8442a" }}>T.</span> +91 99648 48414
                     </Typography>
                   </Box>
                 </Box>
