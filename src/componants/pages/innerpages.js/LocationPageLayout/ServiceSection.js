@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 
 const ServicesSection = ({ location, serviceType, services = [], customServicesHeaders }) => {
     return (
-        <Box sx={{ background: "#f8fbff", py: "80px" }}>
+        <Box sx={{ background: "#f8fbff", py: "50px" }}>
             <Container maxWidth="lg">
                 {/* Header */}
                 <Stack alignItems="center" spacing={2} mb={8}>
@@ -51,16 +51,16 @@ const ServicesSection = ({ location, serviceType, services = [], customServicesH
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
                         <Typography color="#378add" textAlign="center" sx={{ maxWidth: "700px", fontSize: "1.1rem" }}>
-                            We provide end-to-end digital excellence tailored for businesses in {location}. 
+                            We provide end-to-end digital excellence tailored for businesses in {location}.
                             Our solutions are designed to scale and succeed.
                         </Typography>
                     </motion.div>
                 </Stack>
 
                 {/* Services Grid */}
-                <Grid container spacing={4}>
+                <Grid container spacing={4} alignItems="stretch">
                     {services.map((service, index) => (
-                        <Grid item xs={12} sm={6} md={4} key={index}>
+                        <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: "flex" }}>
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ const ServicesSection = ({ location, serviceType, services = [], customServicesH
                                         border: "1px solid #e0e0e0",
                                         borderRadius: "24px",
                                         p: 4,
-                                        height: "100%",
+                                        height: "80%",
                                         transition: "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
                                         display: "flex",
                                         flexDirection: "column",

@@ -19,9 +19,9 @@ const metrics = [
 
 const ImpactSection = ({ location }) => {
     return (
-        <Box sx={{ background: "#e6f1fb", py: "80px" }}>
+        <Box sx={{ background: "#e6f1fb", py: "60px" }}>
             <Container maxWidth="lg">
-                <Stack alignItems="center" spacing={2} mb={8}>
+                <Stack alignItems="center" spacing={2} mb={4}>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -96,7 +96,7 @@ const ImpactSection = ({ location }) => {
                                     <Typography sx={{ color: "#378add", fontWeight: 700, fontSize: "0.9rem", mb: 3 }}>
                                         {item.label}
                                     </Typography>
-                                    
+
                                     <Box sx={{ height: 6, width: "100%", background: "#e6f1fb", borderRadius: 3, overflow: 'hidden' }}>
                                         <motion.div
                                             initial={{ width: 0 }}
