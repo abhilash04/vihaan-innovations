@@ -913,26 +913,21 @@ const Header = () => {
             <Typography sx={{ fontWeight: 700, color: "#050748", fontSize: "18px" }}>
               Digital Marketing Training
             </Typography>
-            <Typography 
-              component="a" 
-              href="/training/digital-marketing-training" 
-              sx={{ 
-                display: 'flex', 
-                alignItems: 'center', 
-                gap: 0.5, 
-                backgroundColor: "#0EA5E9", 
-                color: "#ffffff", 
-                px: 1.5, 
-                py: 0.5, 
-                borderRadius: "8px", 
-                fontWeight: 700, 
-                fontSize: "13px", 
-                textDecoration: 'none', 
+            <Typography
+              component="a"
+              href="/training/digital-marketing-training"
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 0.5,
+                color: "#0EA5E9",
+                px: 1.5,
+                py: 0.5,
+                borderRadius: "8px",
+                fontWeight: 700,
+                fontSize: "13px",
+                textDecoration: 'none',
                 transition: "all 0.3s ease",
-                "&:hover": { 
-                  backgroundColor: "#0284c7",
-                  transform: "translateY(-1px)"
-                } 
               }}
             >
               View All <ArrowRight size={14} />
@@ -984,23 +979,18 @@ const Header = () => {
                       <Typography
                         component="a"
                         href={category === "Software Training" ? "/training/software-training" : "/training/animation-training"}
-                        sx={{ 
-                          display: 'flex', 
-                          alignItems: 'center', 
-                          gap: 0.5, 
-                          backgroundColor: "#0EA5E9", 
-                          color: "#ffffff", 
-                          px: 1.5, 
-                          py: 0.5, 
-                          borderRadius: "8px", 
-                          fontWeight: 700, 
-                          fontSize: "13px", 
-                          textDecoration: 'none', 
+                        sx={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: 0.5,
+                          color: "#0EA5E9",
+                          px: 1.5,
+                          py: 0.5,
+                          borderRadius: "8px",
+                          fontWeight: 700,
+                          fontSize: "13px",
+                          textDecoration: 'none',
                           transition: "all 0.3s ease",
-                          "&:hover": { 
-                            backgroundColor: "#0284c7",
-                            transform: "translateY(-1px)"
-                          } 
                         }}
                       >
                         View All <ArrowRight size={14} />
@@ -1110,22 +1100,14 @@ const Header = () => {
               alignItems: "center",
               gap: 1,
               mt: 1,
-              backgroundColor: "#0EA5E9",
-              color: "#ffffff",
+              color: "#0EA5E9",
               fontWeight: 700,
-              fontSize: "14px",
+              fontSize: "16px",
               textDecoration: "none",
               whiteSpace: "nowrap",
               padding: "8px 16px",
               borderRadius: "10px",
               transition: "all 0.3s ease",
-              boxShadow: "0 4px 12px rgba(14, 165, 233, 0.2)",
-              "&:hover": {
-                backgroundColor: "#0284c7",
-                gap: 1.5,
-                transform: "translateY(-1px)",
-                boxShadow: "0 6px 16px rgba(14, 165, 233, 0.3)",
-              }
             }}
           >
             View All <ArrowRight size={14} />
@@ -1175,7 +1157,7 @@ const Header = () => {
           }}
         >
           <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-            <Box
+            {/* <Box
               sx={{
                 width: 42,
                 height: 42,
@@ -1188,7 +1170,7 @@ const Header = () => {
               }}
             >
               <Code2 size={24} strokeWidth={2.5} />
-            </Box>
+            </Box> */}
             <Box>
               <Typography
                 sx={{
@@ -1196,7 +1178,7 @@ const Header = () => {
                   fontSize: "18px",
                   color: "#050748",
                   lineHeight: 1.2,
-                  mb: 0.5,
+
                 }}
               >
                 Development Services
@@ -1211,24 +1193,17 @@ const Header = () => {
               display: "flex",
               alignItems: "center",
               gap: 0.5,
-              backgroundColor: "#0EA5E9",
-              color: "#ffffff",
+              color: "#0EA5E9",
+              px: 1.5,
+              py: 0.5,
+              borderRadius: "8px",
               fontWeight: 700,
               fontSize: "13px",
               textDecoration: "none",
-              padding: "8px 16px",
-              borderRadius: "10px",
               transition: "all 0.3s ease",
-              boxShadow: "0 4px 12px rgba(14, 165, 233, 0.2)",
-              "&:hover": {
-                backgroundColor: "#0284c7",
-                gap: 1,
-                transform: "translateY(-1px)",
-                boxShadow: "0 6px 16px rgba(14, 165, 233, 0.3)",
-              },
             }}
           >
-            View All <ArrowRight size={14} strokeWidth={2.5} />
+            View All <ArrowRight size={14} />
           </Typography>
         </Box>
 
@@ -1305,8 +1280,7 @@ const Header = () => {
                           display: "flex",
                           alignItems: "center",
                           gap: 0.5,
-                          backgroundColor: "#0EA5E9",
-                          color: "#ffffff",
+                          color: "#0EA5E9",
                           px: 1.5,
                           py: 0.5,
                           borderRadius: "8px",
@@ -1314,10 +1288,6 @@ const Header = () => {
                           fontSize: "13px",
                           textDecoration: "none",
                           transition: "all 0.3s ease",
-                          "&:hover": {
-                            backgroundColor: "#0284c7",
-                            transform: "translateY(-1px)",
-                          },
                         }}
                       >
                         View All <ArrowRight size={14} />
@@ -1423,21 +1393,14 @@ const Header = () => {
                   display: "flex",
                   alignItems: "center",
                   gap: 0.5,
-                  backgroundColor: "#0EA5E9",
-                  color: "#ffffff",
+                  color: "#0EA5E9",
                   fontWeight: 700,
                   fontSize: "13px",
                   textDecoration: "none",
                   padding: "8px 16px",
                   borderRadius: "10px",
                   transition: "all 0.3s ease",
-                  boxShadow: "0 4px 12px rgba(14, 165, 233, 0.2)",
-                  "&:hover": {
-                    backgroundColor: "#0284c7",
-                    transform: "translateY(-1px)",
-                    boxShadow: "0 6px 16px rgba(14, 165, 233, 0.3)",
-                    gap: 1,
-                  },
+
                 }}
               >
                 View All <ArrowRight size={14} strokeWidth={2.5} />
@@ -1571,7 +1534,7 @@ const Header = () => {
                     href={item.href}
                     sx={{
                       color: "rgba(255,255,255,0.8)",
-                      fontSize: "14px",
+                      fontSize: "16px",
                       padding: "10px 20px",
                       textDecoration: "none",
                       width: "100%",
@@ -1616,7 +1579,7 @@ const Header = () => {
                     href={item.href}
                     sx={{
                       color: "rgba(255,255,255,0.8)",
-                      fontSize: "14px",
+                      fontSize: "16px",
                       padding: "10px 20px",
                       textDecoration: "none",
                       width: "100%",
@@ -1663,7 +1626,7 @@ const Header = () => {
                       href={item.href}
                       sx={{ color: "rgba(255,255,255,0.7)", fontSize: "13px", padding: "10px 24px", textDecoration: "none", width: "100%", borderBottom: "1px solid rgba(255,255,255,0.02)", "&:hover": { color: "#fff" } }}
                     >
-                      <ListItemText primary={item.label} primaryTypographyProps={{ fontSize: "14px" }} />
+                      <ListItemText primary={item.label} primaryTypographyProps={{ fontSize: "16px" }} />
                     </ListItem>
                   ))}
                 </List>
@@ -1704,7 +1667,7 @@ const Header = () => {
                       href={item.href}
                       sx={{ color: "rgba(255,255,255,0.7)", fontSize: "13px", padding: "10px 24px", textDecoration: "none", width: "100%", borderBottom: "1px solid rgba(255,255,255,0.02)", "&:hover": { color: "#fff" } }}
                     >
-                      <ListItemText primary={item.label} primaryTypographyProps={{ fontSize: "14px" }} />
+                      <ListItemText primary={item.label} primaryTypographyProps={{ fontSize: "16px" }} />
                     </ListItem>
                   ))}
                   {/* View All Button for Category Hub */}
@@ -1713,7 +1676,7 @@ const Header = () => {
                     href={category === "Digital Marketing Training" ? "/training/digital-marketing-training" : category === "Software Training" ? "/training/software-training" : "/training/animation-training"}
                     sx={{
                       color: "#ffffff",
-                      fontSize: "14px",
+                      fontSize: "16px",
                       padding: "12px 24px",
                       textDecoration: "none",
                       width: "100%",
@@ -1723,7 +1686,7 @@ const Header = () => {
                       "&:hover": { backgroundColor: "#0284c7" }
                     }}
                   >
-                    <ListItemText primary={`View All ${category}`} primaryTypographyProps={{ fontSize: "14px", fontWeight: 700 }} />
+                    <ListItemText primary={`View All ${category}`} primaryTypographyProps={{ fontSize: "16px", fontWeight: 700 }} />
                     <ArrowRight size={16} />
                   </ListItem>
                 </List>
@@ -1785,7 +1748,7 @@ const Header = () => {
                     href={item.href}
                     sx={{
                       color: "rgba(255,255,255,0.8)",
-                      fontSize: "14px",
+                      fontSize: "16px",
                       padding: "8px 16px",
                     }}
                   >

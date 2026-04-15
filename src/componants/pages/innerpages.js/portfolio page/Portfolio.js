@@ -550,7 +550,7 @@ export default function PortfolioSection() {
                             <Box display="flex" alignItems="center" gap={1}>
                                 <PhoneIcon sx={{ color: "#93c5fd" }} />
                                 <Typography color="rgba(255,255,255,0.85)">
-                                    +91 98765 43210
+                                    +91 99648 48414
                                 </Typography>
                             </Box>
 
