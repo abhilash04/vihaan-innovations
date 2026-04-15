@@ -24,20 +24,27 @@ const LocationPageLayout = () => {
     const isTraining = path.includes("/training/");
     const isDigitalMarketing = path.includes("digital-marketing");
     const isAnimation = path.includes("animation-and-video-services");
+    const isSoftwareDev = path.includes("software-development") || path.includes("custom-software");
 
     let serviceType = serviceTypes.WEBSITE_DEVELOPMENT;
     if (isDigitalMarketing) serviceType = serviceTypes.DIGITAL_MARKETING;
     if (isAnimation) serviceType = serviceTypes.ANIMATION_VIDEO;
+    if (isSoftwareDev) serviceType = serviceTypes.SOFTWARE_DEVELOPMENT;
 
     // ... detectedLocation logic stays same ...
     const mode = isTraining ? "training" : "service";
-    
+
     // Parse location from pathname if locationParam is empty (for hyphenated routes)
     let detectedLocation = locationParam;
+    let dynamicServiceName = "";
+
     if (!detectedLocation) {
         const parts = path.split("-in-");
         if (parts.length > 1) {
             detectedLocation = parts[1];
+            // Extract the service portion from the path (e.g., ui-ux-design)
+            const serviceSlug = parts[0].replace("/services/", "").replace("/training/", "").replace(/^\//, "");
+            dynamicServiceName = serviceSlug.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
         }
     }
 
@@ -47,7 +54,7 @@ const LocationPageLayout = () => {
         : "Bangalore";
 
     // Get unique content for this location and service type from our single data source
-    const dynamicContent = getContentForLocation(locationName, serviceType, mode);
+    const dynamicContent = getContentForLocation(locationName, serviceType, mode, dynamicServiceName);
 
     return (
         <Grid sx={{ background: "#ffffff" }}>
@@ -61,6 +68,7 @@ const LocationPageLayout = () => {
                 location={locationName}
                 serviceType={serviceType}
                 services={dynamicContent.services}
+                customServicesHeaders={dynamicContent.customServicesHeaders}
             />
             <Impact location={locationName} />
             <SeoContent
@@ -91,6 +99,7 @@ const LocationPageLayout = () => {
             <Testimonials
                 location={locationName}
                 serviceType={serviceType}
+                customTestimonials={dynamicContent.customTestimonials}
             />
             <LocationLinks serviceType={serviceType} isTraining={isTraining} />
             <FooterAndPopup />

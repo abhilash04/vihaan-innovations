@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 
-const ServicesSection = ({ location, serviceType, services = [] }) => {
+const ServicesSection = ({ location, serviceType, services = [], customServicesHeaders }) => {
     return (
         <Box sx={{ background: "#f8fbff", py: "80px" }}>
             <Container maxWidth="lg">
@@ -40,7 +40,7 @@ const ServicesSection = ({ location, serviceType, services = [] }) => {
                         transition={{ duration: 0.5, delay: 0.1 }}
                     >
                         <Typography variant="h3" fontWeight={900} color="#042c53" textAlign="center">
-                            Comprehensive {serviceType} in {location}
+                            {customServicesHeaders?.title || `Comprehensive ${serviceType} in ${location}`}
                         </Typography>
                     </motion.div>
 

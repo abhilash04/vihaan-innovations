@@ -7,6 +7,7 @@ const LocationLinks = ({ serviceType, isTraining = false }) => {
     const isWebDev = serviceType === serviceTypes.WEBSITE_DEVELOPMENT;
     const isDigitalMarketing = serviceType === serviceTypes.DIGITAL_MARKETING;
     const isAnimation = serviceType === serviceTypes.ANIMATION_VIDEO;
+    const isSoftwareDev = serviceType === serviceTypes.SOFTWARE_DEVELOPMENT;
     const showAll = !serviceType;
 
     const renderLinkGroup = (title, locations, pathPrefix, linkSuffix) => (
@@ -37,17 +38,21 @@ const LocationLinks = ({ serviceType, isTraining = false }) => {
         </Box>
     );
 
-    const devTitle = isTraining ? "Professional Software Training in Bangalore" : "Software Development & Development Services in Bangalore";
-    const devSuffix = isTraining ? "Software Training" : "Software Development & Development Services";
+    const devTitle = isTraining ? "Professional Software Training in Bangalore" : "Website Development Services in Bangalore";
+    const devSuffix = isTraining ? "Software Training" : "Website Development Services";
     const devPath = isTraining ? "software-training" : "website-development-services";
 
-    const marketingTitle = isTraining ? "Digital Marketing Training in Bangalore" : "Software Development & Digital Marketing Bangalore";
-    const marketingSuffix = isTraining ? "Digital Marketing Training" : "Software Development & Digital Marketing Services";
+    const marketingTitle = isTraining ? "Digital Marketing Training in Bangalore" : "Digital Marketing in Bangalore";
+    const marketingSuffix = isTraining ? "Digital Marketing Training" : "Digital Marketing Services";
     const marketingPath = isTraining ? "digital-marketing-training" : "digital-marketing-services";
 
-    const animationTitle = isTraining ? "Animation & VFX Training in Bangalore" : "Software Development & Animation Services Bangalore";
-    const animationSuffix = isTraining ? "Animation & VFX Training" : "Software Development & Animation & Video Services";
+    const animationTitle = isTraining ? "Animation & VFX Training in Bangalore" : "Animation & Video Services in Bangalore";
+    const animationSuffix = isTraining ? "Animation & VFX Training" : "Animation & Video Services";
     const animationPath = isTraining ? "animation-and-video-services" : "animation-and-video-services";
+
+    const softwareTitle = isTraining ? "Advanced Software Development Training in Bangalore" : "Software Development in Bangalore";
+    const softwareSuffix = isTraining ? "Software Development Training" : "Software Development Services";
+    const softwarePath = isTraining ? "software-development-training" : "custom-software-development";
 
     return (
         <Box sx={{ background: "#f8fbff", py: 10, borderTop: "1px solid #e6f1fb" }}>
@@ -61,7 +66,7 @@ const LocationLinks = ({ serviceType, isTraining = false }) => {
                     <>
                         {renderLinkGroup(devTitle, bangaloreLocalities, devPath, devSuffix)}
                         {renderLinkGroup(devTitle.replace("in Bangalore", "in Major Cities"), majorIndianCities, devPath, devSuffix)}
-                        {renderLinkGroup(isTraining ? "Global Technical Training & Certification" : "Global Software Development & IT Consulting", globalCities, devPath, devSuffix)}
+                        {renderLinkGroup(isTraining ? "Global Technical Training & Certification" : "Global Website Development Services & IT Consulting", globalCities, devPath, devSuffix)}
                     </>
                 )}
 
@@ -70,7 +75,7 @@ const LocationLinks = ({ serviceType, isTraining = false }) => {
                         {/* Digital Marketing Section */}
                         {renderLinkGroup(marketingTitle, bangaloreLocalities, marketingPath, marketingSuffix)}
                         {renderLinkGroup(marketingTitle.replace("in Bangalore", "in Major Cities"), majorIndianCities, marketingPath, marketingSuffix)}
-                        {renderLinkGroup(isTraining ? "International Marketing Certification & Training" : "International Software Development & Performance Marketing", globalCities, marketingPath, marketingSuffix)}
+                        {renderLinkGroup(isTraining ? "International Marketing Certification & Training" : "International Performance Marketing", globalCities, marketingPath, marketingSuffix)}
                     </Box>
                 )}
 
@@ -79,7 +84,16 @@ const LocationLinks = ({ serviceType, isTraining = false }) => {
                         {/* Animation & Video Section */}
                         {renderLinkGroup(animationTitle, bangaloreLocalities, animationPath, animationSuffix)}
                         {renderLinkGroup(animationTitle.replace("in Bangalore", "in Major Cities"), majorIndianCities, animationPath, animationSuffix)}
-                        {renderLinkGroup(isTraining ? "Global Creative Arts & VFX Training" : "Global Software Development & Video Production", globalCities, animationPath, animationSuffix)}
+                        {renderLinkGroup(isTraining ? "Global Creative Arts & VFX Training" : "Global Video Production", globalCities, animationPath, animationSuffix)}
+                    </Box>
+                )}
+
+                {(showAll || isSoftwareDev) && (
+                    <Box sx={{ mt: (showAll || isWebDev || isDigitalMarketing || isAnimation) ? 8 : 0 }}>
+                        {/* Software Development Section */}
+                        {renderLinkGroup(softwareTitle, bangaloreLocalities, softwarePath, softwareSuffix)}
+                        {renderLinkGroup(softwareTitle.replace("in Bangalore", "in Major Cities"), majorIndianCities, softwarePath, softwareSuffix)}
+                        {renderLinkGroup(isTraining ? "Global Software Training & Certification" : "Global Software Development", globalCities, softwarePath, softwareSuffix)}
                     </Box>
                 )}
             </Container>

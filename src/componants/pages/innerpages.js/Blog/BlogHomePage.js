@@ -6,7 +6,7 @@ import BlogDetailingPage from "./BlogDetailingPage";
 
 const BlogHomepage = () => {
     return (
-        <Box sx={{ minHeight: "100vh", bgcolor: "#060d1a" }}>
+        <Box sx={{ minHeight: "100vh", bgcolor: "#ffffffff" }}>
             <HeaderSec />
             <BlogDetailingPage />
             <FooterAndPopup />

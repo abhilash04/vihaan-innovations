@@ -928,6 +928,7 @@ const Header = () => {
                 fontSize: "13px",
                 textDecoration: 'none',
                 transition: "all 0.3s ease",
+
               }}
             >
               View All <ArrowRight size={14} />
@@ -991,6 +992,7 @@ const Header = () => {
                           fontSize: "13px",
                           textDecoration: 'none',
                           transition: "all 0.3s ease",
+
                         }}
                       >
                         View All <ArrowRight size={14} />
@@ -1108,6 +1110,7 @@ const Header = () => {
               padding: "8px 16px",
               borderRadius: "10px",
               transition: "all 0.3s ease",
+              boxShadow: "0 4px 12px rgba(14, 165, 233, 0.2)",
             }}
           >
             View All <ArrowRight size={14} />
@@ -1162,11 +1165,11 @@ const Header = () => {
                 width: 42,
                 height: 42,
                 borderRadius: "12px",
-                backgroundColor: "#fff1f2",
+                backgroundColor: "#d1f1ffff",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#e11d48", // Rose-600
+                color: "#0EA5E9", // Rose-600
               }}
             >
               <Code2 size={24} strokeWidth={2.5} />
@@ -1194,9 +1197,6 @@ const Header = () => {
               alignItems: "center",
               gap: 0.5,
               color: "#0EA5E9",
-              px: 1.5,
-              py: 0.5,
-              borderRadius: "8px",
               fontWeight: 700,
               fontSize: "13px",
               textDecoration: "none",
@@ -1288,6 +1288,7 @@ const Header = () => {
                           fontSize: "13px",
                           textDecoration: "none",
                           transition: "all 0.3s ease",
+
                         }}
                       >
                         View All <ArrowRight size={14} />
@@ -1352,18 +1353,18 @@ const Header = () => {
             <Box sx={{ display: "flex", gap: 2 }}>
               <Box
                 sx={{
-                  width: 40,
-                  height: 40,
+                  width: 42,
+                  height: 42,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   borderRadius: "8px",
-                  backgroundColor: "rgba(246, 56, 85, 0.1)",
-                  color: "#f63855",
+                  backgroundColor: "#d1f1ffff",
+                  color: "#0EA5E9",
                   flexShrink: 0,
                 }}
               >
-                <Code2 size={20} />
+                <Code2 size={24} />
               </Box>
               <Box>
                 <Typography
@@ -1400,7 +1401,6 @@ const Header = () => {
                   padding: "8px 16px",
                   borderRadius: "10px",
                   transition: "all 0.3s ease",
-
                 }}
               >
                 View All <ArrowRight size={14} strokeWidth={2.5} />
@@ -1910,7 +1910,7 @@ const Header = () => {
           transition: "all 0.3s ease",
           boxShadow: "0px 0px 10px -1px #1b58b6",
           borderBottom: "1px solid rgba(7, 130, 134, 0.1)",
-          height: scrolled ? "70px" : "90px",
+          height: { xs: scrolled ? "60px" : "70px", md: scrolled ? "70px" : "90px" },
         }}
       >
         <Box
@@ -1945,7 +1945,7 @@ const Header = () => {
                   alt="Website Logo"
                   sx={{
                     width: "100%",
-                    maxWidth: { xs: "90px", md: scrolled ? "160px" : "200px" },
+                    maxWidth: { xs: "120px", md: scrolled ? "160px" : "200px" },
                     height: "auto",
                     transition: "all 0.3s ease",
                   }}
@@ -1959,7 +1959,7 @@ const Header = () => {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: { xs: "space-between", lg: "flex-end" },
+                  justifyContent: "flex-end",
                   gap: { xs: "0.5rem", lg: "2rem" },
                   width: "100%",
                 }}
@@ -2120,7 +2120,7 @@ const Header = () => {
                   onMouseEnter={() => setHovered(true)}
                   onMouseLeave={() => setHovered(false)}
                   sx={{
-                    display: "inline-flex",
+                    display: { xs: "none", md: "inline-flex" },
                     alignItems: "center",
                     justifyContent: "center",
                     padding: { xs: "6px 12px", md: "10px 16px" },
