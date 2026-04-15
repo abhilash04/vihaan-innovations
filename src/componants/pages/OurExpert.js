@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
 
-// Dummy images - replace with actual assets if needed
 import phone1 from "../../assets/Bitmap.png";
 import arrow from "../../assets/arrow.png";
 import img1 from "../../assets/2-1.png";
@@ -16,10 +15,10 @@ const OurExpert = () => {
         overflow: "hidden",
       }}
     >
-      {/* Background Lines */}
+      {/* ── Background Lines (desktop only to avoid visual clutter on mobile) ── */}
       <Box
-        className="lines"
         sx={{
+          display: { xs: "none", md: "block" },
           position: "absolute",
           top: 0,
           left: "-25%",
@@ -32,7 +31,6 @@ const OurExpert = () => {
         {[0, 1, 2].map((i) => (
           <Box
             key={i}
-            className="line"
             sx={{
               position: "absolute",
               width: "1px",
@@ -52,14 +50,14 @@ const OurExpert = () => {
                 background:
                   "linear-gradient(to bottom, rgba(0,0,0,0) 0%, #00b4d8 75%, #00b4d8 100%)",
                 animation: "drop 7s cubic-bezier(.4,.26,0,.97) infinite",
-                animationDelay: `${i * 2}s`, // delay per line
+                animationDelay: `${i * 2}s`,
               },
             }}
           />
         ))}
       </Box>
 
-      {/* Foreground Content */}
+      {/* ── Foreground Content ── */}
       <Box
         sx={{
           maxWidth: "1200px",
@@ -67,12 +65,13 @@ const OurExpert = () => {
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
           alignItems: "center",
-          pt: 6,
+          pt: { xs: 4, md: 6 },
+          px: { xs: 2, md: 0 },
           position: "relative",
           zIndex: 1,
         }}
       >
-        {/* Left Section: Mobile App Images */}
+        {/* ── Left: Phone Image ── */}
         <Box
           component={motion.div}
           initial={{ opacity: 0, x: -30 }}
@@ -83,49 +82,64 @@ const OurExpert = () => {
             flex: 1,
             display: "flex",
             justifyContent: "center",
-            mb: { xs: 4, md: 0 },
-            position: "relative"
+            mb: { xs: 3, md: 0 },
+            position: "relative",
           }}
         >
           <Box
             component="img"
             src={phone1}
-            alt="Mobile App 1"
+            alt="Mobile App"
             sx={{
               height: "100%",
-              width: "70%",
+              width: { xs: "60%", sm: "50%", md: "70%" },
               position: "relative",
               zIndex: 2,
             }}
           />
+
+          {/* Floating badge image — hidden on mobile to avoid overflow */}
+          <Box
+            component="img"
+            src={img1}
+            alt="badge"
+            sx={{
+              display: { xs: "none", md: "block" },
+              height: "auto",
+              width: "100px",
+              position: "absolute",
+              left: "60%",
+              bottom: "65%",
+              zIndex: 3,
+            }}
+          />
         </Box>
 
-        <img
-          src={img1}
-          alt="image1"
-          style={{
-            height: "auto",
-            width: "100px",
-            position: "absolute",
-            left: "38%",
-            bottom: "65%",
-            zIndex: 2,
+        {/* ── Right: Text Content ── */}
+        <Box
+          component={motion.div}
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          sx={{
+            flex: 1,
+            borderTop: { xs: "none", md: "1px solid #00b4d8" },
+            borderLeft: { xs: "none", md: "none" },
+            pt: { xs: 0, md: 4 },
           }}
-        />
-
-        {/* Right Section: Text Content */}
-        <Box component={motion.div} initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} sx={{ flex: 1, borderTop: "1px solid #00b4d8", pt: 4 }}>
-          <Box sx={{ px: { xs: 2, md: 4 } }}>
+        >
+          <Box sx={{ px: { xs: 0, md: 4 } }}>
             <Typography
               sx={{
                 color: "#009f9f",
                 fontWeight: 600,
-                fontSize: "14px",
+                fontSize: { xs: "11px", md: "14px" },
                 letterSpacing: "2px",
                 textTransform: "uppercase",
               }}
             >
-              [LET’S BUILD SOMETHING AMAZING]
+              [LET'S BUILD SOMETHING AMAZING]
             </Typography>
 
             <Typography
@@ -133,7 +147,7 @@ const OurExpert = () => {
                 color: "#41294a",
                 pt: "10px",
                 m: "0 0 15px 0",
-                fontSize: "42px",
+                fontSize: { xs: "26px", sm: "34px", md: "42px" },
                 lineHeight: "1.12em",
                 textTransform: "uppercase",
                 fontWeight: 700,
@@ -147,14 +161,23 @@ const OurExpert = () => {
               sx={{
                 color: "#616263ff",
                 fontWeight: 400,
-                fontSize: "16px",
+                fontSize: { xs: "14px", md: "16px" },
                 lineHeight: 1.8,
               }}
             >
               Share your details and get a free consultation from Vihaan Innovations.
             </Typography>
 
-            <Box sx={{ m: "60px 0 60px", position: "relative" }}>
+            {/* ── CTA Button ── */}
+            <Box
+              sx={{
+                mt: { xs: 4, md: "60px" },
+                mb: { xs: 4, md: "60px" },
+                position: "relative",
+                display: "inline-block",
+                width: "100%",
+              }}
+            >
               <Button
                 variant="contained"
                 sx={{
@@ -162,9 +185,9 @@ const OurExpert = () => {
                   backgroundColor: "#00b4d8",
                   animation: "pulse 2s infinite",
                   textTransform: "none",
-                  width: "400px",
+                  width: { xs: "100%", sm: "320px", md: "400px" },
                   py: 1.5,
-                  fontSize: "16px",
+                  fontSize: { xs: "15px", md: "16px" },
                   fontWeight: 500,
                   "&:hover": { backgroundColor: "#0077b6" },
                   "@keyframes pulse": {
@@ -177,10 +200,13 @@ const OurExpert = () => {
                 Get Started
               </Button>
 
-              <img
+              {/* Arrow — hidden on mobile to avoid overflow issues */}
+              <Box
+                component="img"
                 src={arrow}
                 alt="arrow"
-                style={{
+                sx={{
+                  display: { xs: "none", md: "block" },
                   height: "auto",
                   width: "120px",
                   position: "absolute",
@@ -193,7 +219,7 @@ const OurExpert = () => {
         </Box>
       </Box>
 
-      {/* Drop Animation Keyframes */}
+      {/* Drop Animation */}
       <style>
         {`
           @keyframes drop {
