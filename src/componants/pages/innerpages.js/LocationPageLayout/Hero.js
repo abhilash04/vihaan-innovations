@@ -18,7 +18,7 @@ const HeroSection = ({ location, serviceType, content }) => {
                 minHeight: "90vh",
                 textAlign: "center",
                 position: "relative",
-                pt: 8,
+                pt: 12,
                 overflow: "hidden",
                 display: "flex",
                 alignItems: "center",
@@ -69,7 +69,7 @@ const HeroSection = ({ location, serviceType, content }) => {
                     <Typography
                         variant="body1"
                         sx={{
-                            mt: 3,
+                            mt: 2,
                             color: "#185fa5",
                             maxWidth: "700px",
                             mx: "auto",
@@ -90,7 +90,7 @@ const HeroSection = ({ location, serviceType, content }) => {
                         direction={{ xs: "column", sm: "row" }}
                         spacing={2}
                         justifyContent="center"
-                        sx={{ mt: 5 }}
+                        sx={{ mt: 2 }}
                     >
                         <Button
                             variant="contained"
@@ -136,7 +136,7 @@ const HeroSection = ({ location, serviceType, content }) => {
                     </Stack>
                 </motion.div>
 
-                <Box sx={{ mt: 8 }}>
+                <Box sx={{ mt: 6 }}>
                     <Stack
                         direction="row"
                         flexWrap="wrap"
