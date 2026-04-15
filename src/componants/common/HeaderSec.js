@@ -1181,12 +1181,11 @@ const Header = () => {
                   fontSize: "18px",
                   color: "#050748",
                   lineHeight: 1.2,
-
+                  py: 0.5
                 }}
               >
                 Development Services
               </Typography>
-
             </Box>
           </Box>
           <Typography

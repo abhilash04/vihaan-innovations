@@ -6,7 +6,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in Marathahalli to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -129,7 +128,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in Koramangala to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -252,7 +250,6 @@ export const customWebDevLocationContent = {
       "subtext": "We offer high-performance website development services in Indiranagar to help businesses build a strong online presence and achieve consistent growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -375,7 +372,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in Electronic City to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -498,7 +494,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in Whitefield to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -621,7 +616,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in Jayanagar to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -744,7 +738,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in HSR Layout to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -867,7 +860,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in Rajajinagar to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -990,7 +982,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in JP Nagar to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -1113,7 +1104,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in Yelahanka to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -1236,7 +1226,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in Bannerghatta Road to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -1359,7 +1348,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in RT Nagar to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -1482,7 +1470,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in Chickpet to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -1605,7 +1592,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in Vijayanagar to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -1728,7 +1714,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in Hebbal to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -1851,7 +1836,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in BTM Layout to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -1974,7 +1958,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in Malleshwaram to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -2097,7 +2080,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in Yeshwanthpur to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -2220,7 +2202,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in Kaggadasapura to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -2343,7 +2324,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in Bellandur to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -2466,7 +2446,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in Mumbai to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -3105,7 +3084,6 @@ export const customWebDevLocationContent = {
       "subtext": "We deliver result-driven website development services in Lucknow to help businesses build fast, scalable, and high-performing digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -3228,7 +3206,6 @@ export const customWebDevLocationContent = {
       "subtext": "We offer high-quality website development services in Jaipur to help businesses build fast, scalable, and conversion-focused digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -3351,7 +3328,6 @@ export const customWebDevLocationContent = {
       "subtext": "We deliver high-quality website development services in Indore to help businesses build fast, scalable, and performance-driven digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -3474,7 +3450,6 @@ export const customWebDevLocationContent = {
       "subtext": "We deliver result-driven website development services in Kochi to help businesses build fast, scalable, and high-performing digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -3597,7 +3572,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-quality website development services in Coimbatore to help businesses build fast, scalable, and performance-driven digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -3720,7 +3694,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide result-driven website development services in Nagpur to help businesses build fast, scalable, and high-performing digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -3843,7 +3816,6 @@ export const customWebDevLocationContent = {
       "subtext": "We offer result-driven website development services in Ludhiana to help businesses build fast, scalable, and high-performing digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -3966,7 +3938,6 @@ export const customWebDevLocationContent = {
       "subtext": "We deliver high-quality website development services in Agra to help businesses build fast, scalable, and performance-driven digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -4089,7 +4060,6 @@ export const customWebDevLocationContent = {
       "subtext": "We deliver performance-focused website development services in Surat to help businesses build fast, scalable, and high-converting digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -4212,7 +4182,6 @@ export const customWebDevLocationContent = {
       "subtext": "We deliver high-performance website development services in Madurai to help businesses build fast, scalable, and conversion-focused digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -4335,7 +4304,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide performance-driven website development services in Vadodara to help businesses build fast, scalable, and high-converting digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -4458,7 +4426,6 @@ export const customWebDevLocationContent = {
       "subtext": "We deliver result-oriented website development services in Meerut to help businesses build fast, scalable, and high-performing digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -4581,7 +4548,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide result-driven website development services in Thiruvananthapuram to help businesses build fast, scalable, and high-performing digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -4704,7 +4670,6 @@ export const customWebDevLocationContent = {
       "subtext": "We deliver result-driven website development services in Nashik to help businesses build fast, scalable, and high-performing digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -4827,7 +4792,6 @@ export const customWebDevLocationContent = {
       "subtext": "We deliver result-driven website development services in Gurgaon to help businesses build fast, scalable, and high-performing digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -4950,7 +4914,6 @@ export const customWebDevLocationContent = {
       "subtext": "We deliver result-driven website development services in Noida to help businesses build fast, scalable, and high-performing digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -5073,7 +5036,6 @@ export const customWebDevLocationContent = {
       "subtext": "We deliver result-driven website development services in Chandigarh to help businesses build fast, scalable, and high-performing digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -5196,7 +5158,6 @@ export const customWebDevLocationContent = {
       "subtext": "We deliver result-driven website development services in Visakhapatnam to help businesses build fast, scalable, and high-performing digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -5319,7 +5280,6 @@ export const customWebDevLocationContent = {
       "subtext": "We deliver result-driven website development services in Bhopal to help businesses build fast, scalable, and high-performing digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -5442,7 +5402,6 @@ export const customWebDevLocationContent = {
       "subtext": "We deliver result-driven website development services in Patna to help businesses build fast, scalable, and high-performing digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -5565,7 +5524,6 @@ export const customWebDevLocationContent = {
       "subtext": "We deliver result-driven website development services in Ghaziabad to help businesses build fast, scalable, and high-performing digital platforms."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -5688,7 +5646,6 @@ export const customWebDevLocationContent = {
       "subtext": "We provide high-performance website development services in India to help businesses build a strong online presence and drive real growth."
     },
     "services": {
-      "title": "H2",
       "cards": [
         {
           "title": "UI / UX Design",
@@ -5877,7 +5834,6 @@ export const customWebDevLocationContent = {
       ]
     },
     "about": {
-      "title": "H2",
       "description": "We combine design thinking, technical expertise, and growth strategy to deliver websites that perform.",
       "features": [
         {
@@ -6000,7 +5956,6 @@ export const customWebDevLocationContent = {
       ]
     },
     "about": {
-      "title": "H2",
       "description": "We blend premium design, reliable engineering, and growth strategy to deliver websites that convert.",
       "features": [
         {
@@ -6123,7 +6078,6 @@ export const customWebDevLocationContent = {
       ]
     },
     "about": {
-      "title": "H2",
       "description": "We combine smart design, strong development, and business strategy to deliver websites that grow brands.",
       "features": [
         {
@@ -6246,7 +6200,6 @@ export const customWebDevLocationContent = {
       ]
     },
     "about": {
-      "title": "H2",
       "description": "We combine smart design, strong engineering, and growth strategy to deliver websites that perform.",
       "features": [
         {
@@ -6369,7 +6322,6 @@ export const customWebDevLocationContent = {
       ]
     },
     "about": {
-      "title": "H2",
       "description": "We combine premium design, robust engineering, and growth strategy to deliver websites that perform.",
       "features": [
         {
@@ -6492,7 +6444,6 @@ export const customWebDevLocationContent = {
       ]
     },
     "about": {
-      "title": "H2",
       "description": "We combine premium design, reliable engineering, and growth strategy to deliver websites that perform.",
       "features": [
         {
@@ -6615,7 +6566,6 @@ export const customWebDevLocationContent = {
       ]
     },
     "about": {
-      "title": "H2",
       "description": "We combine premium design, strong engineering, and growth strategy to deliver websites that perform.",
       "features": [
         {
@@ -6738,7 +6688,6 @@ export const customWebDevLocationContent = {
       ]
     },
     "about": {
-      "title": "H2",
       "description": "We combine premium design, strong engineering, and growth strategy to deliver websites that perform.",
       "features": [
         {
