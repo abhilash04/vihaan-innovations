@@ -17,7 +17,7 @@ const CloudDevelopment = () => {
   const providers = ["AWS", "GCP", "Azure", "Vercel", "Netlify", "Cloudflare"];
 
   return (
-    <Box id="cloud-dev" sx={{ py: { xs: 8, md: 12 }, bgcolor: "#ffffff", position: "relative", overflow: "hidden" }}>
+    <Box id="cloud-dev" sx={{ py: { xs: 8, md: 10 }, bgcolor: "#ffffff", position: "relative", overflow: "hidden" }}>
 
 
       <Box
@@ -88,21 +88,7 @@ const CloudDevelopment = () => {
                 ))}
               </Stack>
 
-              <Stack direction="row" flexWrap="wrap" gap={1.5} sx={{ pt: 4 }}>
-                {providers.map((provider, i) => (
-                  <Chip
-                    key={i}
-                    label={provider}
-                    sx={{
-                      bgcolor: "white",
-                      border: "1px solid #e2e8f0",
-                      color: "#1e293b",
-                      fontWeight: 700,
-                      boxShadow: "0 2px 4px rgba(0,0,0,0.02)",
-                    }}
-                  />
-                ))}
-              </Stack>
+
             </Stack>
           </Grid>
 
@@ -211,6 +197,21 @@ const CloudDevelopment = () => {
                 </svg>
               </Box>
             </Box>
+            <Stack direction="row" flexWrap="wrap" gap={1.5} sx={{ pt: 4 }}>
+              {providers.map((provider, i) => (
+                <Chip
+                  key={i}
+                  label={provider}
+                  sx={{
+                    bgcolor: "white",
+                    border: "1px solid #e2e8f0",
+                    color: "#1e293b",
+                    fontWeight: 700,
+                    boxShadow: "0 2px 4px rgba(0,0,0,0.02)",
+                  }}
+                />
+              ))}
+            </Stack>
           </Grid>
         </Grid>
       </Container>

@@ -12,6 +12,7 @@ const CustomApps = () => {
     "Microservices Architecture",
     "Legacy System Modernization",
     "Custom Website Development Services",
+    "Custom Software Development Services",
   ];
 
   const tiers = [
@@ -21,7 +22,7 @@ const CustomApps = () => {
   ];
 
   return (
-    <Box id="custom-apps" sx={{ py: { xs: 8, md: 12 }, bgcolor: "#f8fafc", position: "relative", overflow: "hidden" }}>
+    <Box id="custom-apps" sx={{ py: { xs: 8, md: 10 }, bgcolor: "#f8fafc", position: "relative", overflow: "hidden" }}>
 
       <Box
         sx={{
@@ -62,7 +63,7 @@ const CustomApps = () => {
                     sx={{
                       color: "#7c3aed",
                       fontWeight: 800,
-                      letterSpacing: "0.2em",
+                      letterSpacing: "0.175em",
                       fontSize: "14px",
                       display: "block",
                     }}
@@ -93,20 +94,9 @@ const CustomApps = () => {
                   Off-the-shelf software often fails to meet unique business needs. As part of our comprehensive website development services, we build custom applications from the ground up, designed to solve your specific challenges. Our website development services ensure that your custom software is both functional and visually stunning.
                 </Typography>
 
-                <Grid container spacing={2.5}>
-                  {features.map((feature, i) => (
-                    <Grid item xs={12} sm={6} key={i}>
-                      <Stack direction="row" spacing={2} alignItems="center">
-                        <Box sx={{ width: 20, height: 20, borderRadius: "50%", bgcolor: "rgba(124, 58, 237, 0.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                          <Box sx={{ width: 8, height: 8, borderRadius: "50%", bgcolor: "#7c3aed" }} />
-                        </Box>
-                        <Typography sx={{ color: "#1e293b", fontSize: "15px", fontWeight: 600 }}>{feature}</Typography>
-                      </Stack>
-                    </Grid>
-                  ))}
-                </Grid>
 
-                <Box sx={{ pt: 2 }}>
+
+                <Box sx={{ py: 1.5 }}>
                   <Button variant="contained" sx={{ bgcolor: "#7c3aed", px: 4, py: 1.5, borderRadius: "100px", textTransform: "none", fontWeight: 700 }}>
                     Request Technical Proposal
                   </Button>
@@ -186,6 +176,21 @@ const CustomApps = () => {
               </Box>
             </Grid>
           </Grid>
+
+          <Box>
+            <Grid container spacing={2.5}>
+              {features.map((feature, i) => (
+                <Grid item xs={12} sm={6} key={i}>
+                  <Stack direction="row" spacing={2} alignItems="center">
+                    <Box sx={{ width: 20, height: 20, borderRadius: "50%", bgcolor: "rgba(124, 58, 237, 0.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <Box sx={{ width: 8, height: 8, borderRadius: "50%", bgcolor: "#7c3aed" }} />
+                    </Box>
+                    <Typography sx={{ color: "#1e293b", fontSize: "15px", fontWeight: 600 }}>{feature}</Typography>
+                  </Stack>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
         </Box>
       </Container>
     </Box>

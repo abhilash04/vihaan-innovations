@@ -1,286 +1,278 @@
-import React from 'react';
-import { Box, Typography, Grid, Container, TextField, Button, Paper, Link as MuiLink } from '@mui/material';
-import { CalendarToday, AccessTime, Visibility } from '@mui/icons-material';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { Box, Typography, Grid, Container, TextField, Button, Paper, Link as MuiLink, Avatar, Divider, CircularProgress, Snackbar, Alert, IconButton as MuiIconButton } from '@mui/material';
+import { motion } from 'framer-motion';
+import { Calendar, Clock, Eye, ArrowRight, Share2, Bookmark, CheckCircle2, Mail } from 'lucide-react';
+import { config } from '../../../../config/Config';
+import { apiList, invokeApi } from '../../../../services/ApiServices';
 
-const BlogDetailingPage = ({ blogData }) => {
-    // Default fallback data so the page still renders beautifully if no props are passed
-    const data = blogData || {
-        title: "The Future of Web Development: Trends to Watch",
-        date: "October 24, 2026",
-        mins: "5 min read",
-        views: "1,245 Views",
-        bannerImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        sidebarImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        content: [
-            {
-                heading: "Introduction",
-                body: "The landscape of web development is constantly evolving, driven by new technologies, shifting user expectations, and the continuous pursuit of better performance. In this article, we delve deep into the most promising trends that are set to redefine how we build and experience the web in the coming years."
-            },
-            {
-                heading: "The Rise of AI-Driven Development",
-                body: "Artificial Intelligence is no longer just a buzzword; it's becoming an integral part of the development lifecycle. From intelligent code completion to automated testing and debugging, AI is streamlining workflows and allowing developers to focus on higher-level problem solving. Furthermore, AI-powered features like personalized content delivery and intelligent search are becoming standard expectations for modern web applications.",
-                image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-            },
-            {
-                heading: "Conclusion",
-                body: "Staying ahead in web development requires continuous learning and adaptation. By embracing these emerging trends, developers can create more robust, efficient, and engaging web experiences that meet the demands of tomorrow's users. The future is bright, and the possibilities are limitless."
+const BlogDetailingPage = ({ blogData: propData }) => {
+    const { ogUrl } = useParams();
+    const [blogData, setBlogData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [snackbar, setSnackbar] = useState({ open: false, message: '', severity: 'info' });
+
+    const fetchBlogData = async () => {
+        setLoading(true);
+        try {
+            const params = { ogUrl };
+            const response = await invokeApi(config.apiBaseUrl + apiList.getArticleByOgUrl, params);
+
+            if (response?.status >= 200 && response?.status < 300) {
+                const resData = response.data;
+                // Handling the singular 'blog' array as per latest API spec
+                if (resData.responseCode == "200" && resData.blog && resData.blog.length > 0) {
+                    setBlogData(resData.blog[0]);
+                } else {
+                    handleError("Blog not found.");
+                }
+            } else {
+                handleError("Failed to connect to the article service.");
             }
-        ]
+        } catch (error) {
+            handleError("An unexpected error occurred while loading the blog.");
+        } finally {
+            setLoading(false);
+        }
     };
 
-    // Helper to generate a URL-safe ID for the table of contents anchors
-    const generateSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+    const handleError = (message) => {
+        setSnackbar({ open: true, message, severity: 'error' });
+    };
+
+    useEffect(() => {
+        if (ogUrl) {
+            fetchBlogData();
+        } else if (propData) {
+            setBlogData(propData);
+            setLoading(false);
+        }
+    }, [ogUrl, propData]);
+
+    const data = blogData || {};
+
+    const generateSlug = (text) => text ? text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '') : 'section';
+
+    if (loading) {
+        return (
+            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', bgcolor: '#fcfdff' }}>
+                <CircularProgress color="primary" />
+            </Box>
+        );
+    }
 
     return (
-        <Box sx={{ width: '100%', pb: { xs: 4, md: 6 }, backgroundColor: '#f8fafc', minHeight: '100vh' }}>
-            {/* Banner Section */}
+        <Box sx={{ width: '100%', pb: 10, backgroundColor: '#fcfdff', minHeight: '100vh' }}>
+            {/* --- Hero Section --- */}
             <Box
+                component={motion.div}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
                 sx={{
-                    background: 'linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%)',
-                    py: { xs: 3, md: 3 },
-                    px: 2,
-                    mt: 10,
-                    borderBottom: '1px solid #38bdf8'
+                    position: 'relative',
+                    height: { xs: '70vh', md: '80vh' },
+                    width: '100%',
+                    mb: -10,
+                    display: 'flex',
+                    alignItems: 'center',
+                    overflow: 'hidden'
                 }}
             >
-                <Container maxWidth="xl">
-                    <Grid container spacing={4} alignItems="center">
-                        {/* Left Box (Title, Date, Read, Views) */}
-                        <Grid item xs={12} md={6}>
-                            <Box pr={{ md: 4 }}>
-                                <Typography
-                                    variant="h3"
-                                    component="h1"
-                                    sx={{
-                                        fontWeight: 800,
-                                        color: '#0c4a6e',
-                                        mb: 3,
-                                        lineHeight: 1.3,
-                                        fontSize: { xs: '2rem', md: '3rem' }
-                                    }}
-                                >
-                                    {data.title}
-                                </Typography>
+                <Box
+                    sx={{
+                        position: 'absolute',
+                        top: 0, left: 0, right: 0, bottom: 0,
+                        backgroundImage: `url(${data.bannerUrl || data.featuredUrl})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        '&::before': {
+                            content: '""',
+                            position: 'absolute',
+                            top: 0, left: 0, right: 0, bottom: 0,
+                            background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.8) 100%)',
+                            zIndex: 1
+                        }
+                    }}
+                />
 
-                                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 4, color: '#0284c7', mt: 4 }}>
-                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                                        <CalendarToday fontSize="medium" sx={{ color: '#0ea5e9' }} />
-                                        <Typography variant="body1" fontWeight={600}>{data.date}</Typography>
-                                    </Box>
-                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                                        <AccessTime fontSize="medium" sx={{ color: '#0ea5e9' }} />
-                                        <Typography variant="body1" fontWeight={600}>{data.mins}</Typography>
-                                    </Box>
-                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                                        <Visibility fontSize="medium" sx={{ color: '#0ea5e9' }} />
-                                        <Typography variant="body1" fontWeight={600}>{data.views}</Typography>
-                                    </Box>
-                                </Box>
-                            </Box>
-                        </Grid>
+                <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 10 }}>
+                    <Box sx={{ maxWidth: '900px', mx: 'auto', textAlign: 'center', px: 2 }}>
+                        <Typography
+                            sx={{
+                                color: '#38bdf8',
+                                fontWeight: 800,
+                                fontSize: '14px',
+                                textTransform: 'uppercase',
+                                letterSpacing: '4px',
+                                mb: 3
+                            }}
+                        >
+                            {data.category}
+                        </Typography>
 
-                        {/* Right Box (Image) */}
-                        <Grid item xs={12} md={6}>
-                            <Box
-                                sx={{
-                                    height: { xs: '200px', md: '300px' },
-                                    borderRadius: '24px',
-                                    overflow: 'hidden',
-                                    boxShadow: '0 25px 50px -12px rgba(2, 132, 199, 0.25)' // Slightly blue tinted shadow
-                                }}
-                            >
-                                <img
-                                    src={data.bannerImage}
-                                    alt={data.title}
-                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                />
+                        <Typography
+                            variant="h1"
+                            sx={{
+                                color: '#ffffff',
+                                fontWeight: 900,
+                                fontSize: { xs: '2.4rem', md: '3.8rem' },
+                                lineHeight: 1.1,
+                                mb: 4,
+                                fontFamily: "'Syne', sans-serif"
+                            }}
+                        >
+                            {data.blogTitle}
+                        </Typography>
+
+                        <Box
+                            sx={{
+                                display: 'inline-flex',
+                                flexWrap: 'wrap',
+                                justifyContent: 'center',
+                                gap: { xs: 2, md: 5 },
+                                px: 5, py: 2.5,
+                                background: 'rgba(255, 255, 255, 0.08)',
+                                backdropFilter: 'blur(12px)',
+                                borderRadius: '50px',
+                                border: '1px solid rgba(255, 255, 255, 0.15)',
+                                color: '#ffffff',
+                            }}
+                        >
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
+                                <Calendar size={18} color="#38bdf8" />
+                                <Typography sx={{ fontSize: '15px', fontWeight: 600 }}>{data.date?.split(' ')[0] || 'Oct 2026'}</Typography>
                             </Box>
-                        </Grid>
-                    </Grid>
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
+                                <Clock size={18} color="#38bdf8" />
+                                <Typography sx={{ fontSize: '15px', fontWeight: 600 }}>5 min read</Typography>
+                            </Box>
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
+                                <Eye size={18} color="#38bdf8" />
+                                <Typography sx={{ fontSize: '15px', fontWeight: 600 }}>1.2k views</Typography>
+                            </Box>
+                        </Box>
+                    </Box>
                 </Container>
             </Box>
 
-            {/* Main Content Area */}
-            <Container maxWidth="xl" sx={{ mt: { xs: 6, md: 8 }, mb: { xs: 4, md: 6 }, position: 'relative', zIndex: 10 }}>
-                <Grid container spacing={4}>
-
-                    {/* Dynamic Content Area (md=8) */}
+            {/* --- Main Reading Experience --- */}
+            <Container maxWidth="xl" sx={{ mt: { xs: 15, md: 20 }, position: 'relative', zIndex: 12 }}>
+                <Grid container spacing={6}>
                     <Grid item xs={12} md={8}>
                         <Paper
                             elevation={0}
                             sx={{
-                                p: { xs: 3, md: 6 },
+                                p: { xs: 4, md: 7 },
+                                borderRadius: '32px',
                                 backgroundColor: '#ffffff',
-                                borderRadius: '24px',
-                                boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
+                                border: '1px solid #f1f5f9',
+                                boxShadow: '0 20px 50px -12px rgba(15, 23, 42, 0.08)'
                             }}
                         >
-                            {/* Table of Contents */}
-                            {data.content && data.content.length > 0 && (
-                                <Box sx={{ mb: 6, p: 4, backgroundColor: '#f0f9ff', borderRadius: '16px', borderLeft: '4px solid #0ea5e9' }}>
-                                    <Typography variant="h5" sx={{ fontWeight: 800, color: '#0f172a', mb: 2 }}>
-                                        Table of Contents
-                                    </Typography>
-                                    <Box component="ul" sx={{ m: 0, pl: 3 }}>
-                                        {data.content.map((section, index) => section.heading && (
-                                            <Typography component="li" key={index} sx={{ mb: 1.5 }}>
-                                                <MuiLink
-                                                    href={`#${generateSlug(section.heading)}`}
-                                                    underline="hover"
-                                                    sx={{ color: '#0284c7', fontWeight: 600, fontSize: '1.1rem' }}
-                                                >
-                                                    {section.heading}
-                                                </MuiLink>
-                                            </Typography>
-                                        ))}
+                            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 8, pb: 4, borderBottom: '1px solid #f1f5f9' }}>
+                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                                    <Avatar sx={{ bgcolor: '#0ea5e9', width: 48, height: 48, fontWeight: 700 }}>V</Avatar>
+                                    <Box>
+                                        <Typography sx={{ fontWeight: 800, color: '#0f172a', fontSize: '1rem' }}>Vihaan Insights</Typography>
+                                        <Typography sx={{ color: '#64748b', fontSize: '0.85rem' }}>Technology Analyst</Typography>
                                     </Box>
+                                </Box>
+                                <Box sx={{ display: 'flex', gap: 1 }}>
+                                    <MuiIconButton size="small" sx={{ border: '1px solid #e2e8f0', color: '#64748b' }}><Share2 size={18} /></MuiIconButton>
+                                    <MuiIconButton size="small" sx={{ border: '1px solid #e2e8f0', color: '#64748b' }}><Bookmark size={18} /></MuiIconButton>
+                                </Box>
+                            </Box>
+
+                            {/* Table of Contents from HTML */}
+                            {data.tableOfContent && (
+                                <Box sx={{ mb: 10, p: 4, bgcolor: '#f8fbfc', borderRadius: '24px', border: '1px solid #e0f2fe' }}>
+                                    <Typography variant="h6" sx={{ fontWeight: 800, color: '#0c4a6e', mb: 2, display: 'flex', alignItems: 'center', gap: 1.5 }}>
+                                        <CheckCircle2 color="#0ea5e9" size={24} /> Highlights
+                                    </Typography>
+                                    <Box
+                                        sx={{
+                                            color: '#475569',
+                                            '& p, & ul, & li': { m: 0, fontSize: '1rem', fontWeight: 500 }
+                                        }}
+                                        dangerouslySetInnerHTML={{ __html: data.tableOfContent }}
+                                    />
                                 </Box>
                             )}
 
-                            {/* Render Dynamic Sections */}
-                            {data.content?.map((section, index) => (
-                                <Box key={index} id={section.heading ? generateSlug(section.heading) : `section-${index}`} sx={{ mb: 6 }}>
-                                    {section.heading && (
-                                        <Typography variant="h4" sx={{ fontWeight: 700, color: '#0f172a', mb: 3 }}>
-                                            {section.heading}
-                                        </Typography>
-                                    )}
-                                    {section.body && (
-                                        <Typography variant="body1" sx={{ color: '#475569', mb: 4, fontSize: '1.1rem', lineHeight: 1.8 }}>
-                                            {section.body}
-                                        </Typography>
-                                    )}
-                                    {section.image && (
-                                        <Box
-                                            sx={{
-                                                width: { xs: '100%', md: '100%' },
-                                                mx: 'auto', /* Centers the image */
-                                                height: { xs: '200px', md: '450px' },
-                                                borderRadius: '16px',
-                                                overflow: 'hidden',
-                                                my: 5,
-                                                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
-                                            }}
-                                        >
-                                            <img
-                                                src={section.image}
-                                                alt={section.heading || 'Blog Image'}
-                                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                            />
-                                        </Box>
-                                    )}
-                                </Box>
-                            ))}
+                            {/* Main Blog Content from HTML */}
+                            <Box
+                                sx={{
+                                    color: '#334155',
+                                    fontSize: '1.2rem',
+                                    lineHeight: 2,
+                                    '& p': { mb: 4 },
+                                    '& h2, & h3, & h4': { fontWeight: 800, color: '#0f172a', mt: 6, mb: 3, fontFamily: "'Syne', sans-serif" },
+                                    '& img': { maxWidth: '100%', borderRadius: '24px', my: 4 }
+                                }}
+                                dangerouslySetInnerHTML={{ __html: data.blogContent }}
+                            />
                         </Paper>
                     </Grid>
 
-                    {/* Static Content Area (md=4) */}
+                    {/* Sidebar */}
                     <Grid item xs={12} md={4}>
-                        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4, position: 'sticky', top: '24px' }}>
-
-                            {/* Top Small Image */}
-                            <Box
-                                sx={{
-                                    width: '100%',
-                                    height: '300px',
-                                    borderRadius: '24px',
-                                    overflow: 'hidden',
-                                    boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)'
-                                }}
-                            >
-                                <img
-                                    src={data.sidebarImage}
-                                    alt="Side placement"
-                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                />
-                            </Box>
-
-                            {/* Bottom Form */}
-                            <Paper
-                                elevation={0}
-                                sx={{
-                                    p: 4,
-                                    borderRadius: '24px',
-                                    background: 'linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%)',
-                                    border: '1px solid #7dd3fc',
-                                    boxShadow: '0 10px 15px -3px rgba(125, 211, 252, 0.3)'
-                                }}
-                            >
-                                <Typography variant="h5" sx={{ fontWeight: 800, color: '#0284c7', mb: 2, textAlign: 'center' }}>
-                                    Subscribe
-                                </Typography>
-                                <Typography variant="body2" sx={{ color: '#0f172a', mb: 4, textAlign: 'center', fontSize: '1rem' }}>
-                                    Get the latest updates directly in your inbox.
-                                </Typography>
-
-                                <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-                                    <TextField
-                                        placeholder="Your Name"
-                                        variant="outlined"
-                                        fullWidth
-                                        sx={{
-                                            backgroundColor: '#ffffff',
-                                            borderRadius: '8px',
-                                            '& .MuiOutlinedInput-root': {
-                                                '& fieldset': {
-                                                    borderColor: '#bae6fd',
-                                                },
-                                                '&:hover fieldset': {
-                                                    borderColor: '#38bdf8',
-                                                },
-                                            }
-                                        }}
-                                    />
-                                    <TextField
-                                        placeholder="Your Email"
-                                        variant="outlined"
-                                        type="email"
-                                        fullWidth
-                                        sx={{
-                                            backgroundColor: '#ffffff',
-                                            borderRadius: '8px',
-                                            '& .MuiOutlinedInput-root': {
-                                                '& fieldset': {
-                                                    borderColor: '#bae6fd',
-                                                },
-                                                '&:hover fieldset': {
-                                                    borderColor: '#38bdf8',
-                                                },
-                                            }
-                                        }}
-                                    />
-                                    <Button
-                                        variant="contained"
-                                        disableElevation
-                                        fullWidth
-                                        sx={{
-                                            mt: 2,
-                                            backgroundColor: '#0284c7',
-                                            color: 'white',
-                                            fontWeight: 700,
-                                            p: 1.5,
-                                            fontSize: '1rem',
-                                            textTransform: 'none',
-                                            borderRadius: '8px',
-                                            transition: 'all 0.3s',
-                                            '&:hover': {
-                                                backgroundColor: '#0369a1',
-                                                transform: 'translateY(-2px)',
-                                                boxShadow: '0 10px 15px -3px rgba(2, 132, 199, 0.4)'
-                                            }
-                                        }}
-                                    >
-                                        Subscribe Now
+                        <Box sx={{ position: 'sticky', top: 120, display: 'flex', flexDirection: 'column', gap: 5 }}>
+                            <Paper sx={{ borderRadius: '32px', overflow: 'hidden', border: '1px solid #f1f5f9', bgcolor: '#ffffff' }}>
+                                <img src={data.featuredUrl} alt="Featured" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
+                                <Box sx={{ p: 4, textAlign: 'center' }}>
+                                    <Typography sx={{ fontWeight: 800, color: '#0f172a', mb: 1.5, fontSize: '1.1rem' }}>Expert Perspective</Typography>
+                                    <Typography sx={{ color: '#64748b', fontSize: '0.9rem', mb: 3 }}>Want custom solutions based on these insights?</Typography>
+                                    <Button variant="outlined" fullWidth endIcon={<ArrowRight size={16} />} sx={{ borderRadius: '12px', py: 1.5, fontWeight: 700, borderColor: '#7c3aed', color: '#7c3aed' }}>
+                                        Consult with us
                                     </Button>
                                 </Box>
                             </Paper>
 
+                            <Paper sx={{ p: 5, borderRadius: '32px', background: '#ffffff', border: '1px solid #f1f5f9', boxShadow: '0 40px 80px -20px rgba(15, 23, 42, 0.08)' }}>
+                                <Typography variant="h5" sx={{ fontWeight: 900, mb: 1.5, fontFamily: "'Syne', sans-serif", color: '#0f172a' }}>Join the Circle</Typography>
+                                <Typography sx={{ color: '#64748b', fontSize: '1rem', mb: 4 }}>Get weekly deep-dives into future tech.</Typography>
+                                <Stack spacing={2.5}>
+                                    <TextField fullWidth placeholder="Full Name" sx={inputStyles} />
+                                    <TextField fullWidth placeholder="Email Address" sx={inputStyles} />
+                                    <TextField fullWidth placeholder="Mobile" sx={inputStyles} />
+                                    <Button fullWidth variant="contained" sx={submitBtnStyles}>Submit</Button>
+                                </Stack>
+                            </Paper>
                         </Box>
                     </Grid>
                 </Grid>
             </Container>
+
+            <Snackbar open={snackbar.open} autoHideDuration={6000} onClose={() => setSnackbar({ ...snackbar, open: false })}>
+                <Alert severity={snackbar.severity} sx={{ width: '100%' }}>{snackbar.message}</Alert>
+            </Snackbar>
         </Box>
     );
 };
+
+const inputStyles = {
+    '& .MuiOutlinedInput-root': {
+        bgcolor: '#f8fafc',
+        borderRadius: '16px',
+        '& fieldset': { borderColor: 'rgba(15, 23, 42, 0.08)' },
+        '&.Mui-focused fieldset': { borderColor: '#7c3aed' },
+    }
+};
+
+const submitBtnStyles = {
+    bgcolor: '#7c3aed',
+    color: '#ffffff',
+    py: 2,
+    borderRadius: '16px',
+    fontWeight: 800,
+    textTransform: 'none',
+    '&:hover': { bgcolor: '#6d28d9', transform: 'translateY(-2px)' },
+    transition: 'all 0.3s ease'
+};
+
+const Stack = ({ children, spacing = 2, sx }) => (
+    <Box sx={{ display: 'flex', flexDirection: 'column', gap: spacing, ...sx }}>{children}</Box>
+);
 
 export default BlogDetailingPage;
