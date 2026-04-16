@@ -12,9 +12,9 @@ import { motion } from "framer-motion";
 
 const IndustriesSection = ({ location, serviceType, industriesList = [] }) => {
     return (
-        <Box sx={{ background: "#f8fbff", py: "80px" }}>
+        <Box sx={{ background: "#f8fbff", py: "60px" }}>
             <Container maxWidth="lg">
-                <Stack alignItems="center" spacing={2} mb={8}>
+                <Stack alignItems="center" spacing={2} mb={6}>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}

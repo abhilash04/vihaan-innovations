@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 
 export default function CTA() {
   return (
-    <Box sx={{ py: { xs: 8, md: 10 }, background: "#ffffff" }}>
+    <Box sx={{ py: { xs: 8, md: 8 }, background: "#ffffff" }}>
       <Container maxWidth="lg">
-        <Box component={motion.div} initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} sx={{ 
+        <Box component={motion.div} initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} sx={{
           background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
           borderRadius: "24px",
           p: { xs: 4, sm: 6, md: 8 },

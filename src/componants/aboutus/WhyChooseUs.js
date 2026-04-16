@@ -13,7 +13,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <Box sx={{ py: { xs: 8, md: 10 }, background: "#ffffff" }}>
+    <Box sx={{ py: { xs: 8, md: 8 }, background: "#ffffff" }}>
       <Container maxWidth="lg">
         <Grid container spacing={8} alignItems="center">
           <Grid item xs={12} md={5}>
@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
               </Typography>
             </Box>
           </Grid>
-          
+
           <Grid item xs={12} md={7}>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
               {points.map((p, i) => (

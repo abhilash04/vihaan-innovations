@@ -12,9 +12,9 @@ import { motion } from "framer-motion";
 
 const ServiceProcess = ({ location, serviceType, process = [] }) => {
     return (
-        <Box sx={{ background: "linear-gradient(180deg, #f8fbff 0%, #e6f1fb 100%)", py: "80px" }}>
+        <Box sx={{ background: "linear-gradient(180deg, #f8fbff 0%, #e6f1fb 100%)", py: "60px" }}>
             <Container maxWidth="lg">
-                <Stack alignItems="center" spacing={2} mb={8}>
+                <Stack alignItems="center" spacing={2} mb={4}>
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -75,7 +75,7 @@ const ServiceProcess = ({ location, serviceType, process = [] }) => {
                                             display: "flex",
                                             alignItems: "center",
                                             justifyContent: "center",
-                                            mb: 3,
+                                            mb: 2,
                                             position: "relative",
                                             "&::after": index < process.length - 1 ? {
                                                 content: '""',

@@ -149,7 +149,7 @@ export default function WorkingRoadmap() {
         maxWidth: 1400,
         mx: "auto",
         px: 6,
-        py: 8,
+        py: 4,
         backgroundColor: "#0A1628",
         color: "#fff",
         fontFamily: "'Poppins', sans-serif",

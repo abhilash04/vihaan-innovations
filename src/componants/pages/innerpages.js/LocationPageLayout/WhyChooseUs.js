@@ -21,7 +21,7 @@ const features = [
 
 const WhyChooseUsSection = ({ location, serviceType, content }) => {
     return (
-        <Box sx={{ background: "linear-gradient(135deg, #0c447c 0%, #185fa5 100%)", py: "100px" }}>
+        <Box sx={{ background: "linear-gradient(135deg, #0c447c 0%, #185fa5 100%)", py: "60px" }}>
             <Container maxWidth="lg">
                 <Grid container spacing={6} alignItems="center">
                     <Grid item xs={12} lg={5}>
@@ -43,13 +43,13 @@ const WhyChooseUsSection = ({ location, serviceType, content }) => {
                                     mb: 3
                                 }}
                             />
-                            <Typography variant="h3" fontWeight={900} color="#fff" gutterBottom>
+                            <Typography variant="h3" fontWeight={800} color="#fff" gutterBottom>
                                 {content.title || `The Trusted ${serviceType} Partner in ${location}`}
                             </Typography>
                             <Typography sx={{ color: "#b5d4f4", fontSize: "1.1rem", lineHeight: 1.8, mb: 4 }}>
                                 {content.content}
                             </Typography>
-                            
+
                             <Stack spacing={2}>
                                 {["Local Market Experts", "Zero Plagiarism Content", "Technical Excellence"].map((item, i) => (
                                     <Stack key={i} direction="row" spacing={2} alignItems="center">
@@ -62,9 +62,9 @@ const WhyChooseUsSection = ({ location, serviceType, content }) => {
                     </Grid>
 
                     <Grid item xs={12} lg={7}>
-                        <Grid container spacing={2}>
+                        <Grid container spacing={3} alignItems="stretch">
                             {features.map((item, index) => (
-                                <Grid item xs={12} sm={6} key={index}>
+                                <Grid item xs={12} sm={6} key={index} sx={{ display: "flex" }}>
                                     <motion.div
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ const WhyChooseUsSection = ({ location, serviceType, content }) => {
                                                 border: "1px solid rgba(255, 255, 255, 0.1)",
                                                 borderRadius: "24px",
                                                 p: 3,
-                                                height: "100%",
+                                                height: "80%",
                                                 transition: "all 0.3s",
                                                 "&:hover": {
                                                     background: "rgba(255, 255, 255, 0.1)",

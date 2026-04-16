@@ -11,7 +11,7 @@ const LocationLinks = ({ serviceType, isTraining = false }) => {
     const showAll = !serviceType;
 
     const renderLinkGroup = (title, locations, pathPrefix, linkSuffix) => (
-        <Box sx={{ mb: 6 }}>
+        <Box sx={{ mb: 2 }}>
             <Typography variant="h6" sx={{ fontWeight: 800, color: "#042c53", mb: 2.5, borderBottom: "2px solid #e6f1fb", pb: 1, display: 'inline-block' }}>
                 {title}
             </Typography>
@@ -55,9 +55,9 @@ const LocationLinks = ({ serviceType, isTraining = false }) => {
     const softwarePath = isTraining ? "software-development-training" : "custom-software-development";
 
     return (
-        <Box sx={{ background: "#f8fbff", py: 10, borderTop: "1px solid #e6f1fb" }}>
+        <Box sx={{ background: "#f8fbff", py: 6, borderTop: "1px solid #e6f1fb" }}>
             <Container maxWidth="lg">
-                <Typography variant="h3" sx={{ fontWeight: 900, color: "#042c53", mb: 6, textAlign: "center" }}>
+                <Typography variant="h3" sx={{ fontWeight: 900, color: "#042c53", mb: 4, textAlign: "center" }}>
                     Explore Our {isTraining ? "Training" : "Service"} Locations
                 </Typography>
 

@@ -23,15 +23,15 @@ export default function MissionVision() {
   ];
 
   return (
-    <Box sx={{ py: { xs: 8, md: 10 }, background: "#ffffff" }}>
+    <Box sx={{ py: { xs: 8, md: 8 }, background: "#ffffff" }}>
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           {items.map((item, i) => (
             <Grid item xs={12} md={6} key={i}>
               <Box component={motion.div} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.2 }}>
-                <Card elevation={0} sx={{ 
-                  p: { xs: 4, md: 6 }, 
-                  borderRadius: "20px", 
+                <Card elevation={0} sx={{
+                  p: { xs: 4, md: 6 },
+                  borderRadius: "20px",
                   background: item.gradient,
                   border: `1px solid ${item.border}`,
                   height: "100%",
