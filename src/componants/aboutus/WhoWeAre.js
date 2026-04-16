@@ -13,7 +13,7 @@ export default function WhoWeAre() {
   ];
 
   return (
-    <Box sx={{ py: { xs: 8, md: 12 }, background: "#fafafa" }}>
+    <Box sx={{ py: { xs: 8, md: 8 }, background: "#fafafa" }}>
       <Container maxWidth="lg">
         <Grid container spacing={8} alignItems="center">
           <Grid item xs={12} md={6}>
@@ -52,9 +52,9 @@ export default function WhoWeAre() {
             <Box component={motion.div} initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
               <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
                 {highlights.map((h, i) => (
-                  <Card key={i} elevation={0} sx={{ 
-                    p: 3, 
-                    borderRadius: "16px", 
+                  <Card key={i} elevation={0} sx={{
+                    p: 3,
+                    borderRadius: "16px",
                     border: "1px solid rgba(0,0,0,0.05)",
                     boxShadow: "0 10px 30px rgba(0,0,0,0.02)",
                     display: "flex",

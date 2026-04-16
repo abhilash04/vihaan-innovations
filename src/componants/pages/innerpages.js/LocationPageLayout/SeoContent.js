@@ -12,9 +12,9 @@ import { motion } from "framer-motion";
 
 const SeoContent = ({ location, serviceType, content }) => {
     return (
-        <Box sx={{ background: "#ffffff", py: "100px" }}>
+        <Box sx={{ background: "#ffffff", py: "60px" }}>
             <Container maxWidth="lg">
-                <Grid container spacing={8}>
+                <Grid container spacing={8} alignItems="center">
                     <Grid item xs={12} md={7}>
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
@@ -25,15 +25,15 @@ const SeoContent = ({ location, serviceType, content }) => {
                             <Typography variant="h4" fontWeight={900} color="#042c53" mb={4}>
                                 {content.heading}
                             </Typography>
-                            
+
                             {content.paragraphs.map((para, i) => (
-                                <Typography 
-                                    key={i} 
-                                    sx={{ 
-                                        color: "#4a5568", 
-                                        lineHeight: 1.8, 
-                                        fontSize: "1.1rem", 
-                                        mb: 3 
+                                <Typography
+                                    key={i}
+                                    sx={{
+                                        color: "#4a5568",
+                                        lineHeight: 1.8,
+                                        fontSize: "1.1rem",
+                                        mb: 2
                                     }}
                                 >
                                     {para}
@@ -45,8 +45,8 @@ const SeoContent = ({ location, serviceType, content }) => {
                                     The Competitive Edge in {location}
                                 </Typography>
                                 <Typography sx={{ color: '#4a5568', lineHeight: 1.7 }}>
-                                    In a bustling hub like ${location}, standing out requires more than just a digital presence. 
-                                    Our ${serviceType.toLowerCase()} are engineered to bridge the gap between your brand 
+                                    In a bustling hub like ${location}, standing out requires more than just a digital presence.
+                                    Our ${serviceType.toLowerCase()} are engineered to bridge the gap between your brand
                                     and your ${location} audience through technical excellence and creative storytelling.
                                 </Typography>
                             </Box>
@@ -93,11 +93,11 @@ const SeoContent = ({ location, serviceType, content }) => {
                                 </Box>
 
                                 {/* Decorative Background Circle */}
-                                <Box sx={{ 
-                                    position: 'absolute', top: '-10%', right: '-10%', 
-                                    width: '200px', height: '200px', 
-                                    background: 'rgba(55,138,221,0.2)', 
-                                    borderRadius: '50%', filter: 'blur(40px)' 
+                                <Box sx={{
+                                    position: 'absolute', top: '-10%', right: '-10%',
+                                    width: '200px', height: '200px',
+                                    background: 'rgba(55,138,221,0.2)',
+                                    borderRadius: '50%', filter: 'blur(40px)'
                                 }} />
                             </Paper>
                         </motion.div>

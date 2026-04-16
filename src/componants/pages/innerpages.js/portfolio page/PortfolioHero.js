@@ -9,7 +9,7 @@ const PortfolioHero = () => {
     <Box
       sx={{
         position: "relative",
-        minHeight: { xs: "70vh", md: "80vh" },
+        minHeight: { xs: "70vh", md: "95vh" },
         display: "flex",
         alignItems: "center",
         backgroundImage: `url(${bgImage})`,

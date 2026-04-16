@@ -12,9 +12,9 @@ import { motion } from "framer-motion";
 
 const TechStackSection = ({ location, serviceType, techStack = [] }) => {
     return (
-        <Box sx={{ background: "#ffffff", py: "80px" }}>
+        <Box sx={{ background: "#ffffff", py: "60px" }}>
             <Container maxWidth="lg">
-                <Stack alignItems="center" spacing={2} mb={8}>
+                <Stack alignItems="center" spacing={2} mb={4}>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -38,28 +38,35 @@ const TechStackSection = ({ location, serviceType, techStack = [] }) => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.1 }}
                     >
-                        <Typography variant="h3" fontWeight={900} color="#042c53" textAlign="center">
+                        <Typography variant="h4" fontWeight={900} color="#042c53" textAlign="center">
                             Powering {location} with Modern Tools
                         </Typography>
                     </motion.div>
                 </Stack>
 
-                <Grid container spacing={3} justifyContent="center">
+                <Grid container spacing={3} justifyContent="center" alignItems="stretch">
                     {techStack.map((tech, index) => (
-                        <Grid item xs={6} sm={4} md={2} key={index}>
+                        <Grid item xs={6} sm={4} md={2} key={index} sx={{ display: "flex" }}>
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: index * 0.05 }}
+                                style={{ width: "100%", display: "flex" }}
                             >
                                 <Paper
                                     elevation={0}
                                     sx={{
-                                        p: 3,
+                                        p: 2,
                                         textAlign: "center",
                                         background: "#f8fbff",
                                         borderRadius: "20px",
+                                        width: "100%",
+                                        height: "100px",
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        alignItems: "center",
+                                        justifyContent: "center",
                                         border: "1px solid #e6f1fb",
                                         transition: "all 0.3s",
                                         "&:hover": {

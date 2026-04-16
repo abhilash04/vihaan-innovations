@@ -67,12 +67,15 @@ const PostCard = ({ post }) => (
   <Card
     sx={{
       width: "100%",
+      height: "100%",
+      display: "flex",
+      flexDirection: "column",
       flexShrink: 0,
       transition: "transform 0.3s ease, box-shadow 0.3s ease",
       "&:hover": { transform: "translateY(-8px)", boxShadow: 6 },
     }}
   >
-    <Box sx={{ position: "relative", overflow: "hidden" }}>
+    <Box sx={{ position: "relative", overflow: "hidden", flexShrink: 0 }}>
       <CardMedia
         component="img"
         height="200"
@@ -99,7 +102,7 @@ const PostCard = ({ post }) => (
         {post.category}
       </Button>
     </Box>
-    <CardContent>
+    <CardContent sx={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
       <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1 }}>
         <CalendarMonthIcon sx={{ fontSize: 16, color: "#0B70E1" }} />
         <Typography variant="caption" color="text.secondary">{post.date}</Typography>
@@ -122,7 +125,7 @@ const PostCard = ({ post }) => (
       </Typography>
       <Typography
         variant="body2"
-        sx={{ fontSize: "16px", color: "#454545", fontFamily: "Livvic", mb: "15px", "&:hover": { color: "#0B70E1" } }}
+        sx={{ fontSize: "16px", color: "#454545", fontFamily: "Livvic", mb: "15px", flexGrow: 1, "&:hover": { color: "#0B70E1" } }}
       >
         {post.description}
       </Typography>
@@ -241,9 +244,9 @@ export default function TipsAndTricks() {
           </Box>
         ) : (
           /* ── DESKTOP: show 3 cards side by side ── */
-          <Box sx={{ display: "flex", gap: 4, width: "100%", maxWidth: 1200 }}>
+          <Box sx={{ display: "flex", alignItems: "stretch", gap: 4, width: "100%", maxWidth: 1200 }}>
             {posts.slice(currentIndex, currentIndex + visibleCount).map((post) => (
-              <Box key={post.id} sx={{ flex: 1, minWidth: 0 }}>
+              <Box key={post.id} sx={{ flex: 1, minWidth: 0, display: "flex" }}>
                 <PostCard post={post} />
               </Box>
             ))}

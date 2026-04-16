@@ -414,13 +414,13 @@ const FooterAndPopup = () => {
                     </Typography>
                     <Box component="ul" sx={{ listStyle: "none", padding: 0, margin: 0 }}>
                       {[
-                        { name: "Real Estate Portal", path: "/real-estate-portal" },
-                        { name: "Education CRM", path: "/education-crm" },
-                        { name: "Matrimony CRM", path: "/matrimony-crm" },
-                        { name: "Listing Platform", path: "/listing-platform" },
-                        { name: "LMS Platform", path: "/lms-platform" },
-                        { name: "Cab Booking App", path: "/cab-booking-app" },
-                        { name: "Hospital Management System", path: "/hospital-management-system" },
+                        { name: "Real Estate Portal", path: "/ready-products/real-estate-portal" },
+                        { name: "Education CRM", path: "/ready-products/education-crm" },
+                        { name: "Matrimony CRM", path: "/ready-products/matrimony-crm" },
+                        { name: "Listing Platform", path: "/ready-products/listing-platform" },
+                        { name: "LMS Platform", path: "/ready-products/lms-platform" },
+                        { name: "Cab Booking App", path: "/ready-products/cab-booking-app" },
+                        { name: "Hospital Management System", path: "/ready-products/hospital-management-system" },
                       ].map((product) => (
                         <li key={product.name} style={{ marginBottom: "12px" }}>
                           <Link
@@ -445,13 +445,13 @@ const FooterAndPopup = () => {
                     </Typography>
                     <Box component="ul" sx={{ listStyle: "none", padding: 0, margin: 0 }}>
                       {[
-                        { name: "SEO", path: "/seo-services" },
-                        { name: "UI Ux Design", path: "/ui-ux-design" },
-                        { name: "Web Development", path: "/web-development" },
-                        { name: "Socail Media Marketing", path: "/social-media-marketing" },
-                        { name: "Mobile App Development", path: "/mobile-app-development" },
-                        { name: "Ecommerce Development", path: "/ecommerce-development" },
-                        { name: "Maintenance & Support", path: "/maintenance-&-support" },
+                        { name: "SEO", path: "/services/seo" },
+                        { name: "UI Ux Design", path: "/services/ui-ux-design" },
+                        { name: "Web Development", path: "/services/web-designing" },
+                        { name: "Socail Media Marketing", path: "/services/social-media-marketing" },
+                        { name: "Mobile App Development", path: "/services/mobile-app-development" },
+                        { name: "Ecommerce Development", path: "/services/ecommerce-software-development" },
+                        { name: "Maintenance & Support", path: "/services/maintenance-and-support" },
                       ].map((service) => (
                         <li key={service.name} style={{ marginBottom: "12px" }}>
                           <Link
@@ -476,13 +476,13 @@ const FooterAndPopup = () => {
                     </Typography>
                     <Box component="ul" sx={{ listStyle: "none", padding: 0, margin: 0 }}>
                       {[
-                        { name: "SEO", path: "/seo-training" },
-                        { name: "Java", path: "/java-training" },
-                        { name: "Python", path: "/python-training" },
-                        { name: "2D Animation", path: "/2d-animation-training" },
-                        { name: "3D Animation", path: "/3d-animation-training" },
-                        { name: "Web Development", path: "/web-design-react-training" },
-                        { name: "Social Media Marketing", path: "/social-media-marketing-training" },
+                        { name: "SEO", path: "/training/seo" },
+                        { name: "Java", path: "/training/java" },
+                        { name: "Python", path: "/training/python" },
+                        { name: "2D Animation", path: "/training/2d-animation" },
+                        { name: "3D Animation", path: "/training/3d-animation" },
+                        { name: "Web Development", path: "/training/web-designing-react" },
+                        { name: "Social Media Marketing", path: "/training/social-media-marketing" },
                       ].map((training) => (
                         <li key={training.name} style={{ marginBottom: "12px" }}>
                           <Link

@@ -271,7 +271,7 @@ const ServicesSection = () => {
         borderTop: "1px solid rgba(0,0,0,0.05)",
       }}
     >
-      <Box sx={{ maxWidth: 1200, mx: "auto", py: { xs: 8, md: 10 }, px: 2 }}>
+      <Box sx={{ maxWidth: 1200, mx: "auto", py: { xs: 6, md: 6 }, px: 2 }}>
         {/* Header */}
         <Box
           sx={{

@@ -81,7 +81,7 @@ export default function SwitchingCards() {
               lineHeight: 1.3,
               color: "#313845",
               fontFamily: "Gilroy-bold",
-              mb: "15px",
+              mb: "2px",
             }}
           >
             Ready Products
@@ -93,7 +93,7 @@ export default function SwitchingCards() {
               lineHeight: 1.4,
               color: "rgba(49, 56, 69, 0.7)",
               fontFamily: "lato",
-              mb: "15px",
+              mb: "8px",
               maxWidth: "600px",
               width: "100%",
               "&:hover": { color: "#0B70E1" },
