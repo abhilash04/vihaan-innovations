@@ -580,7 +580,7 @@ const FooterAndPopup = () => {
 
       {/* Fixed Floating Action Buttons */}
       <>
-        {/* Phone — visible on all screens */}
+        {/* Phone — mobile only */}
         <Box
           component="a"
           href="tel:+919964848414"
@@ -595,7 +595,7 @@ const FooterAndPopup = () => {
             zIndex: 99999,
             cursor: "pointer",
             backgroundColor: "#25d366",
-            display: "flex",
+            display: { xs: "flex", md: "none" }, // mobile only
             alignItems: "center",
             justifyContent: "center",
             boxShadow: "0 6px 20px rgba(37, 211, 102, 0.45)",
