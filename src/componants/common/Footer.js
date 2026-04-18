@@ -447,8 +447,8 @@ const FooterAndPopup = () => {
                       {[
                         { name: "SEO", path: "/services/seo" },
                         { name: "UI Ux Design", path: "/services/ui-ux-design" },
-                        { name: "Web Development", path: "/services/web-designing" },
-                        { name: "Socail Media Marketing", path: "/services/social-media-marketing" },
+                        { name: "Web Development", path: "/services/web-development" },
+                        { name: "Social Media Marketing", path: "/services/social-media-marketing" },
                         { name: "Mobile App Development", path: "/services/mobile-app-development" },
                         { name: "Ecommerce Development", path: "/services/ecommerce-software-development" },
                         { name: "Maintenance & Support", path: "/services/maintenance-and-support" },
@@ -580,7 +580,7 @@ const FooterAndPopup = () => {
 
       {/* Fixed Floating Action Buttons */}
       <>
-        {/* Phone — mobile only */}
+        {/* Phone — visible on mobile screens only */}
         <Box
           component="a"
           href="tel:+919964848414"
@@ -595,7 +595,7 @@ const FooterAndPopup = () => {
             zIndex: 99999,
             cursor: "pointer",
             backgroundColor: "#25d366",
-            display: { xs: "flex", md: "none" }, // mobile only
+            display: { xs: "flex", md: "none" },
             alignItems: "center",
             justifyContent: "center",
             boxShadow: "0 6px 20px rgba(37, 211, 102, 0.45)",
@@ -607,7 +607,7 @@ const FooterAndPopup = () => {
           <PhoneIcon sx={{ fontSize: 24, color: "#fff" }} />
         </Box>
 
-        {/* WhatsApp — mobile only */}
+        {/* WhatsApp — visible on all screens */}
         <Box
           component="a"
           href="https://wa.me/919964848414"
@@ -616,7 +616,7 @@ const FooterAndPopup = () => {
           aria-label="WhatsApp"
           sx={{
             position: "fixed",
-            bottom: visible ? "176px" : "108px",
+            bottom: visible ? { xs: "176px", md: "108px" } : { xs: "108px", md: "40px" },
             right: "40px",
             width: "56px",
             height: "56px",
@@ -624,7 +624,7 @@ const FooterAndPopup = () => {
             zIndex: 99999,
             cursor: "pointer",
             backgroundColor: "#128c7e",
-            display: { xs: "flex", md: "none" },
+            display: "flex",
             alignItems: "center",
             justifyContent: "center",
             boxShadow: "0 6px 20px rgba(18, 140, 126, 0.45)",
