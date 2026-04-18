@@ -303,7 +303,7 @@ const LegalCenter = () => {
                 <Box>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                     <Typography sx={{ fontFamily: "'DM Sans', sans-serif", color: "#ffffff", fontWeight: 600, fontSize: "16px", display: "flex", alignItems: "center", gap: 2 }}>
-                      <span style={{ color: "#c8442a" }}>E.</span> legal@vihaaninnovations.com
+                      <span style={{ color: "#c8442a" }}>E.</span> contact@vihaaninnovations.com
                     </Typography>
                     <Typography sx={{ fontFamily: "'DM Sans', sans-serif", color: "#ffffff", fontWeight: 600, fontSize: "16px", display: "flex", alignItems: "center", gap: 2 }}>
                       <span style={{ color: "#c8442a" }}>T.</span> +91 99648 48414

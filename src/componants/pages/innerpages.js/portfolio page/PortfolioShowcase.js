@@ -79,7 +79,7 @@ const PortfolioShowcase = () => {
     : projects.filter((p) => p.category === activeTab);
 
   return (
-    <Box sx={{ py: { xs: 6, md: 8 }, background: "#f8fafc" }}>
+    <Box sx={{ py: { xs: 6, md: 6 }, background: "#f8fafc" }}>
       <Container maxWidth="lg">
         {/* Header Section */}
         <Box sx={{ textAlign: "center", mb: 6 }}>
