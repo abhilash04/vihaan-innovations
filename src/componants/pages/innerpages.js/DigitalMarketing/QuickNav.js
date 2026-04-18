@@ -17,7 +17,7 @@ const services = [
   { id: 8, name: "Influencer", icon: Users, href: "influencer" },
 ];
 
-const QuickNav = ({ activeSection }) => {
+const QuickNav = ({ activeSection, setActiveSection }) => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -71,7 +71,13 @@ const QuickNav = ({ activeSection }) => {
           return (
             <Box
               key={service.id}
-              onClick={() => scrollToSection(service.href)}
+              onClick={() => {
+                scrollToSection(service.href);
+                if (setActiveSection) setActiveSection(service.id);
+              }}
+              onMouseEnter={() => {
+                if (setActiveSection) setActiveSection(service.id);
+              }}
               sx={{
                 display: "flex",
                 alignItems: "center",
@@ -82,16 +88,15 @@ const QuickNav = ({ activeSection }) => {
                 cursor: "pointer",
                 transition: "all 0.3s ease",
                 background: isActive
-                  ? "linear-gradient(90deg, #2563eb, #f59e0b)"
+                  ? "linear-gradient(90deg, #2563eb, #0ea5e9)"
                   : "rgba(15, 23, 42, 0.03)",
                 color: isActive ? "white" : "#64748b",
                 boxShadow: isActive ? "0 10px 20px -5px rgba(37, 99, 235, 0.3)" : "none",
                 border: isActive ? "none" : "1px solid rgba(15, 23, 42, 0.05)",
                 "&:hover": {
-                  background: isActive 
-                    ? "linear-gradient(90deg, #2563eb, #f59e0b)" 
-                    : "rgba(15, 23, 42, 0.08)",
-                  color: isActive ? "white" : "#0f172a",
+                  background: "linear-gradient(90deg, #2563eb, #0ea5e9)",
+                  color: "white",
+                  border: "none",
                 },
               }}
             >

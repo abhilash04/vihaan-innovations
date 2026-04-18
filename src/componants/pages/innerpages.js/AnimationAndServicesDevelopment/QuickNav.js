@@ -19,7 +19,7 @@ const services = [
   { id: 10, name: "Maintenance", icon: LifeBuoy, href: "maintenance" },
 ];
 
-const QuickNav = ({ activeSection }) => {
+const QuickNav = ({ activeSection, setActiveSection }) => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -73,7 +73,13 @@ const QuickNav = ({ activeSection }) => {
           return (
             <Box
               key={service.id}
-              onClick={() => scrollToSection(service.href)}
+              onClick={() => {
+                scrollToSection(service.href);
+                if (setActiveSection) setActiveSection(service.id);
+              }}
+              onMouseEnter={() => {
+                if (setActiveSection) setActiveSection(service.id);
+              }}
               sx={{
                 display: "flex",
                 alignItems: "center",
@@ -90,10 +96,9 @@ const QuickNav = ({ activeSection }) => {
                 boxShadow: isActive ? "0 10px 20px -5px rgba(37, 99, 235, 0.3)" : "none",
                 border: isActive ? "none" : "1px solid rgba(15, 23, 42, 0.05)",
                 "&:hover": {
-                  background: isActive 
-                    ? "linear-gradient(90deg, #2563eb, #06b6d4)" 
-                    : "rgba(15, 23, 42, 0.08)",
-                  color: isActive ? "white" : "#0f172a",
+                  background: "linear-gradient(90deg, #2563eb, #06b6d4)",
+                  color: "white",
+                  border: "none",
                 },
               }}
             >
