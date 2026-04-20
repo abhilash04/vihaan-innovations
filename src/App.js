@@ -88,6 +88,8 @@ const DigitalMarketingHub = lazy(() => import("./componants/pages/innerpages.js/
 const SoftwareTrainingHub = lazy(() => import("./componants/pages/innerpages.js/training/SoftwareTrainingHub"));
 const AnimationTrainingHub = lazy(() => import("./componants/pages/innerpages.js/training/AnimationTrainingHub"));
 
+const NotFound = lazy(() => import("./componants/pages/NotFound"));
+
 function App() {
   return (
     <ThemeProvider>
@@ -228,6 +230,9 @@ function App() {
                   />
                 </React.Fragment>
               ))}
+              
+              {/* Catch-all Route for 404 */}
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </Router>
@@ -235,5 +240,6 @@ function App() {
     </ThemeProvider>
   );
 }
+
 
 export default App;
