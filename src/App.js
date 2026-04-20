@@ -1,6 +1,6 @@
 // src/App.js
 import React, { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { Grid } from "@mui/material";
 
 // Standard Static Imports
@@ -230,9 +230,10 @@ function App() {
                   />
                 </React.Fragment>
               ))}
-              
-              {/* Catch-all Route for 404 */}
-              <Route path="*" element={<NotFound />} />
+
+              {/* 404 Pages */}
+              <Route path="/404" element={<NotFound />} />
+              <Route path="*" element={<Navigate to="/404" replace />} />
             </Routes>
           </Suspense>
         </Router>
