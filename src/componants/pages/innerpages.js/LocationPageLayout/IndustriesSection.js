@@ -12,9 +12,9 @@ import { motion } from "framer-motion";
 
 const IndustriesSection = ({ location, serviceType, industriesList = [] }) => {
     return (
-        <Box sx={{ background: "#f8fbff", py: "80px" }}>
+        <Box sx={{ background: "#f8fbff", py: { xs: "36px", md: "80px" } }}>
             <Container maxWidth="lg">
-                <Stack alignItems="center" spacing={2} mb={8}>
+                <Stack alignItems="center" spacing={{ xs: 1.5, md: 2 }} mb={{ xs: 4, md: 8 }}>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -38,13 +38,14 @@ const IndustriesSection = ({ location, serviceType, industriesList = [] }) => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.1 }}
                     >
-                        <Typography variant="h3" fontWeight={900} color="#042c53" textAlign="center">
+                        <Typography variant="h3" fontWeight={900} color="#042c53" textAlign="center"
+                            sx={{ fontSize: { xs: "22px", sm: "28px", md: "3rem" }, px: { xs: 1, md: 0 } }}>
                             Empowering Diverse Sectors in {location}
                         </Typography>
                     </motion.div>
                 </Stack>
 
-                <Grid container spacing={3}>
+                <Grid container spacing={{ xs: 2, md: 3 }}>
                     {industriesList.map((item, index) => (
                         <Grid item xs={6} sm={4} md={3} key={index}>
                             <motion.div
@@ -59,7 +60,7 @@ const IndustriesSection = ({ location, serviceType, industriesList = [] }) => {
                                         background: "#fff",
                                         border: "1px solid #e6f1fb",
                                         borderRadius: "20px",
-                                        p: 4,
+                                        p: { xs: 2, md: 4 },
                                         height: "100%",
                                         textAlign: "center",
                                         transition: "all 0.3s",
@@ -77,14 +78,14 @@ const IndustriesSection = ({ location, serviceType, industriesList = [] }) => {
                                     <Box
                                         className="icon-bg"
                                         sx={{
-                                            width: 64,
-                                            height: 64,
-                                            mb: 2,
-                                            borderRadius: "16px",
+                                            width: { xs: 48, md: 64 },
+                                            height: { xs: 48, md: 64 },
+                                            mb: { xs: 1.5, md: 2 },
+                                            borderRadius: "14px",
                                             display: "flex",
                                             alignItems: "center",
                                             justifyContent: "center",
-                                            fontSize: "32px",
+                                            fontSize: { xs: "24px", md: "32px" },
                                             background: "#e6f1fb",
                                             transition: "0.3s"
                                         }}
@@ -94,7 +95,7 @@ const IndustriesSection = ({ location, serviceType, industriesList = [] }) => {
                                     <Typography
                                         className="icon-text"
                                         sx={{
-                                            fontSize: "1rem",
+                                            fontSize: { xs: "13px", md: "1rem" },
                                             fontWeight: 800,
                                             color: "#042c53",
                                             transition: "0.3s"

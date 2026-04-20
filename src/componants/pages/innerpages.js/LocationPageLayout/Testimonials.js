@@ -38,7 +38,11 @@ const getInitials = (name) =>
         .map((n) => n[0])
         .join("");
 
-const TestimonialsSection = ({ location, serviceType }) => {
+const TestimonialsSection = ({ location, serviceType, customTestimonials }) => {
+    const displayTestimonials = customTestimonials?.items && customTestimonials.items.length > 0
+        ? customTestimonials.items.map(i => ({ name: i.author, role: i.role, quote: i.text, rating: 5 }))
+        : testimonials;
+
     return (
         <Box sx={{ background: "#ffffff", py: "80px" }}>
             <Container maxWidth="lg">
@@ -66,14 +70,14 @@ const TestimonialsSection = ({ location, serviceType }) => {
                         transition={{ duration: 0.5, delay: 0.1 }}
                     >
                         <Typography variant="h3" fontWeight={900} color="#042c53" textAlign="center">
-                            What Clients In {location} Say
+                            {customTestimonials?.title ? customTestimonials.title : `What Clients In ${location} Say`}
                         </Typography>
                     </motion.div>
                 </Stack>
 
-                <Grid container spacing={4}>
-                    {testimonials.map((item, index) => (
-                        <Grid item xs={12} md={4} key={index}>
+                <Grid container spacing={4} alignItems="stretch">
+                    {displayTestimonials.map((item, index) => (
+                        <Grid item xs={12} md={4} key={index} sx={{ display: "flex" }}>
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -87,7 +91,7 @@ const TestimonialsSection = ({ location, serviceType }) => {
                                         border: "1px solid #e6f1fb",
                                         borderRadius: "32px",
                                         p: 4,
-                                        height: "100%",
+                                        height: "70%",
                                         position: "relative",
                                         transition: "all 0.3s",
                                         "&:hover": {
@@ -99,7 +103,7 @@ const TestimonialsSection = ({ location, serviceType }) => {
                                     }}
                                 >
                                     {/* Quote Icon */}
-                                    <Typography
+                                    {/* <Typography
                                         sx={{
                                             fontSize: "64px",
                                             color: "rgba(24, 95, 165, 0.1)",
@@ -111,11 +115,11 @@ const TestimonialsSection = ({ location, serviceType }) => {
                                         }}
                                     >
                                         “
-                                    </Typography>
+                                    </Typography> */}
 
                                     <Box sx={{ position: "relative", zIndex: 1 }}>
                                         <Rating value={item.rating} readOnly size="small" sx={{ color: '#185fa5', mb: 2 }} />
-                                        
+
                                         <Typography
                                             sx={{
                                                 fontSize: "1.05rem",

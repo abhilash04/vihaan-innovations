@@ -47,7 +47,7 @@ export const fullStackTrainingData = {
     coursePlaceholder: "Select Desired Course",
     submitButtonText: "Apply for Early Seat",
     supportText: "Support: ",
-    supportPhone: "+91 98765 43210",
+    supportPhone: "+91 99648 48414",
     features: [
       { icon: SchoolIcon, text: "Expert Industry Instructors" },
       { icon: GroupsIcon, text: "Small Batch for Personalized Attention" },
@@ -183,12 +183,12 @@ export const fullStackTrainingData = {
 };
 
 // Helper: build a standard training data object quickly
-const makeTrainingData = ({ 
+const makeTrainingData = ({
   heroTitle, heroSubtitle, heroBadge, heroUrgency, heroFormTitle, heroFormSubtitle, heroFormBtn,
   aboutTitle, aboutBadge, about1, about2, aboutHighlights, aboutStats,
-  duration, courseLabel, 
-  frontEnd, backEnd, database, 
-  months, 
+  duration, courseLabel,
+  frontEnd, backEnd, database,
+  months,
   ctaTitle, ctaSubtitle, ctaFooter,
   audience, tools,
   testimonialsList,
@@ -218,7 +218,7 @@ const makeTrainingData = ({
       coursePlaceholder: "Select Desired Course",
       submitButtonText: heroFormBtn || "Apply for Early Seat",
       supportText: "Support: ",
-      supportPhone: "+91 80739 79129",
+      supportPhone: "+91 99648 48414",
       features: [
         { icon: SchoolIcon, text: "Expert Industry Instructors" },
         { icon: GroupsIcon, text: "Small Batch for Personalized Attention" },

@@ -15,10 +15,11 @@ const HeroSection = ({ location, serviceType, content }) => {
         <Box
             sx={{
                 background: "linear-gradient(135deg, #e6f1fb 0%, #b5d4f4 100%)",
-                minHeight: "90vh",
+                minHeight: { xs: "auto", md: "90vh" },
                 textAlign: "center",
                 position: "relative",
-                pt: 8,
+                pt: { xs: 10, md: 12 },
+                pb: { xs: 6, md: 0 },
                 overflow: "hidden",
                 display: "flex",
                 alignItems: "center",
@@ -33,12 +34,13 @@ const HeroSection = ({ location, serviceType, content }) => {
                     <Chip
                         label={content.badge || `${location}'s #1 Tech Partner`}
                         sx={{
-                            mb: 3,
+                            mb: { xs: 2, md: 3 },
                             background: "rgba(255, 255, 255, 0.5)",
                             backdropFilter: "blur(4px)",
                             color: "#0c447c",
                             border: "1px solid #85b7eb",
                             fontWeight: 600,
+                            fontSize: { xs: "12px", md: "13px" },
                         }}
                     />
                 </motion.div>
@@ -51,10 +53,11 @@ const HeroSection = ({ location, serviceType, content }) => {
                     <Typography
                         variant="h2"
                         sx={{
-                            fontSize: "clamp(32px, 6vw, 56px)",
+                            fontSize: { xs: "26px", sm: "36px", md: "clamp(32px, 6vw, 56px)" },
                             fontWeight: 900,
                             color: "#042c53",
-                            lineHeight: 1.1,
+                            lineHeight: 1.15,
+                            px: { xs: 1, md: 0 },
                         }}
                     >
                         {content.title}
@@ -69,12 +72,13 @@ const HeroSection = ({ location, serviceType, content }) => {
                     <Typography
                         variant="body1"
                         sx={{
-                            mt: 3,
+                            mt: { xs: 1.5, md: 2 },
                             color: "#185fa5",
                             maxWidth: "700px",
                             mx: "auto",
-                            fontSize: "1.1rem",
+                            fontSize: { xs: "14px", md: "1.1rem" },
                             lineHeight: 1.7,
+                            px: { xs: 1, md: 0 },
                         }}
                     >
                         {content.subtext}
@@ -90,17 +94,18 @@ const HeroSection = ({ location, serviceType, content }) => {
                         direction={{ xs: "column", sm: "row" }}
                         spacing={2}
                         justifyContent="center"
-                        sx={{ mt: 5 }}
+                        sx={{ mt: { xs: 2.5, md: 2 }, px: { xs: 2, md: 0 } }}
                     >
                         <Button
                             variant="contained"
+                            fullWidth={false}
                             sx={{
                                 background: "#0c447c",
                                 color: "#fff",
                                 borderRadius: "12px",
-                                px: 4,
-                                py: 1.8,
-                                fontSize: "1rem",
+                                px: { xs: 3, md: 4 },
+                                py: { xs: 1.4, md: 1.8 },
+                                fontSize: { xs: "14px", md: "1rem" },
                                 textTransform: "none",
                                 fontWeight: 700,
                                 boxShadow: "0 10px 20px rgba(12, 68, 124, 0.2)",
@@ -119,9 +124,9 @@ const HeroSection = ({ location, serviceType, content }) => {
                                 borderColor: "#0c447c",
                                 color: "#0c447c",
                                 borderRadius: "12px",
-                                px: 4,
-                                py: 1.8,
-                                fontSize: "1rem",
+                                px: { xs: 3, md: 4 },
+                                py: { xs: 1.4, md: 1.8 },
+                                fontSize: { xs: "14px", md: "1rem" },
                                 textTransform: "none",
                                 fontWeight: 700,
                                 "&:hover": {
@@ -136,12 +141,13 @@ const HeroSection = ({ location, serviceType, content }) => {
                     </Stack>
                 </motion.div>
 
-                <Box sx={{ mt: 8 }}>
+                {/* Stats */}
+                <Box sx={{ mt: { xs: 4, md: 6 }, pb: { xs: 1, md: 0 } }}>
                     <Stack
                         direction="row"
                         flexWrap="wrap"
                         justifyContent="center"
-                        spacing={{ xs: 2, md: 4 }}
+                        gap={{ xs: 1.5, md: 4 }}
                     >
                         {[
                             { value: "500+", label: `${location} Clients` },
@@ -159,16 +165,30 @@ const HeroSection = ({ location, serviceType, content }) => {
                                     sx={{
                                         background: "rgba(255, 255, 255, 0.4)",
                                         backdropFilter: "blur(10px)",
-                                        p: 2,
-                                        minWidth: "140px",
+                                        p: { xs: 1.5, md: 2 },
+                                        minWidth: { xs: "100px", md: "140px" },
                                         borderRadius: "16px",
                                         border: "1px solid rgba(255, 255, 255, 0.3)",
                                     }}
                                 >
-                                    <Typography variant="h4" sx={{ fontWeight: 800, color: "#0c447c" }}>
+                                    <Typography
+                                        variant="h4"
+                                        sx={{
+                                            fontWeight: 800,
+                                            color: "#0c447c",
+                                            fontSize: { xs: "22px", md: "2.125rem" },
+                                        }}
+                                    >
                                         {stat.value}
                                     </Typography>
-                                    <Typography variant="caption" sx={{ color: "#378add", fontWeight: 600 }}>
+                                    <Typography
+                                        variant="caption"
+                                        sx={{
+                                            color: "#378add",
+                                            fontWeight: 600,
+                                            fontSize: { xs: "11px", md: "12px" },
+                                        }}
+                                    >
                                         {stat.label}
                                     </Typography>
                                 </Paper>

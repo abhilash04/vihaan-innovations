@@ -1,27 +1,12 @@
 import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import { 
-  Palette, Image, Film, Layers, Video, 
-  PenTool, Edit3, Scissors, Clapperboard, MonitorPlay 
-} from "lucide-react";
 
-const services = [
-  { id: 1, name: "Brand Design", icon: Palette, href: "brand-design" },
-  { id: 2, name: "2D Animation", icon: Film, href: "2d-animation" },
-  { id: 3, name: "3D Animation", icon: Layers, href: "3d-animation" },
-  { id: 4, name: "Motion Graphics", icon: PenTool, href: "motion-graphics" },
-  { id: 5, name: "Explainer Videos", icon: Video, href: "explainer-videos" },
-  { id: 6, name: "Whiteboard", icon: Edit3, href: "whiteboard" },
-  { id: 7, name: "Video Editing", icon: Scissors, href: "video-editing" },
-  { id: 8, name: "Showreel", icon: MonitorPlay, href: "results" },
-];
-
-const QuickNav = ({ activeSection, setActiveSection }) => {
+const HubQuickNav = ({ activeSection, navigationItems, themeColor = "#2563eb" }) => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 140; // Height of header + quicknav
+      const offset = 140; 
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -64,20 +49,14 @@ const QuickNav = ({ activeSection, setActiveSection }) => {
           mx: "auto",
         }}
       >
-        {services.map((service) => {
-          const isActive = activeSection === service.id;
-          const Icon = service.icon;
+        {navigationItems.map((item) => {
+          const isActive = activeSection === item.id;
+          const Icon = item.icon;
 
           return (
             <Box
-              key={service.id}
-              onClick={() => {
-                scrollToSection(service.href);
-                if (setActiveSection) setActiveSection(service.id);
-              }}
-              onMouseEnter={() => {
-                if (setActiveSection) setActiveSection(service.id);
-              }}
+              key={item.id}
+              onClick={() => scrollToSection(item.href)}
               sx={{
                 display: "flex",
                 alignItems: "center",
@@ -88,22 +67,23 @@ const QuickNav = ({ activeSection, setActiveSection }) => {
                 cursor: "pointer",
                 transition: "all 0.3s ease",
                 background: isActive
-                  ? "linear-gradient(90deg, #7c3aed, #ec4899)"
+                  ? `linear-gradient(90deg, ${themeColor}, #8b5cf6)`
                   : "rgba(15, 23, 42, 0.03)",
                 color: isActive ? "white" : "#64748b",
-                boxShadow: isActive ? "0 10px 20px -5px rgba(124, 58, 237, 0.3)" : "none",
+                boxShadow: isActive ? `0 10px 20px -5px ${themeColor}40` : "none",
                 border: isActive ? "none" : "1px solid rgba(15, 23, 42, 0.05)",
                 "&:hover": {
-                  background: "linear-gradient(90deg, #7c3aed, #ec4899)",
-                  color: "white",
-                  border: "none",
+                  background: isActive 
+                    ? `linear-gradient(90deg, ${themeColor}, #8b5cf6)` 
+                    : "rgba(15, 23, 42, 0.08)",
+                  color: isActive ? "white" : "#0f172a",
                 },
               }}
             >
               {isActive && (
                 <Box
                   component={motion.div}
-                  layoutId="pulse-anim"
+                  layoutId="pulse-training"
                   animate={{ scale: [1, 1.3, 1] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                   sx={{
@@ -118,11 +98,11 @@ const QuickNav = ({ activeSection, setActiveSection }) => {
               <Typography
                 sx={{
                   fontSize: "14px",
-                  fontWeight: 600,
+                  fontWeight: 700,
                   whiteSpace: "nowrap",
                 }}
               >
-                {service.name}
+                {item.name}
               </Typography>
             </Box>
           );
@@ -132,4 +112,4 @@ const QuickNav = ({ activeSection, setActiveSection }) => {
   );
 };
 
-export default QuickNav;
+export default HubQuickNav;

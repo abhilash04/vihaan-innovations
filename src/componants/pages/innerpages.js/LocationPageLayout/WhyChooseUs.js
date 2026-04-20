@@ -21,9 +21,10 @@ const features = [
 
 const WhyChooseUsSection = ({ location, serviceType, content }) => {
     return (
-        <Box sx={{ background: "linear-gradient(135deg, #0c447c 0%, #185fa5 100%)", py: "100px" }}>
+        <Box sx={{ background: "linear-gradient(135deg, #0c447c 0%, #185fa5 100%)", py: { xs: "48px", md: "100px" } }}>
             <Container maxWidth="lg">
-                <Grid container spacing={6} alignItems="center">
+                <Grid container spacing={{ xs: 4, md: 6 }} alignItems="center">
+                    {/* Left text block */}
                     <Grid item xs={12} lg={5}>
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
@@ -40,31 +41,59 @@ const WhyChooseUsSection = ({ location, serviceType, content }) => {
                                     borderRadius: "8px",
                                     backdropFilter: "blur(4px)",
                                     border: "1px solid rgba(255, 255, 255, 0.2)",
-                                    mb: 3
+                                    mb: { xs: 2, md: 3 },
+                                    fontSize: { xs: "11px", md: "13px" },
                                 }}
                             />
-                            <Typography variant="h3" fontWeight={900} color="#fff" gutterBottom>
+                            <Typography
+                                variant="h3"
+                                fontWeight={900}
+                                color="#fff"
+                                gutterBottom
+                                sx={{ fontSize: { xs: "22px", sm: "28px", md: "3rem" } }}
+                            >
                                 {content.title || `The Trusted ${serviceType} Partner in ${location}`}
                             </Typography>
-                            <Typography sx={{ color: "#b5d4f4", fontSize: "1.1rem", lineHeight: 1.8, mb: 4 }}>
+                            <Typography
+                                sx={{
+                                    color: "#b5d4f4",
+                                    fontSize: { xs: "13px", md: "1.1rem" },
+                                    lineHeight: 1.8,
+                                    mb: { xs: 3, md: 4 },
+                                }}
+                            >
                                 {content.content}
                             </Typography>
-                            
-                            <Stack spacing={2}>
+
+                            <Stack spacing={1.5}>
                                 {["Local Market Experts", "Zero Plagiarism Content", "Technical Excellence"].map((item, i) => (
                                     <Stack key={i} direction="row" spacing={2} alignItems="center">
-                                        <Box sx={{ width: 24, height: 24, borderRadius: '50%', background: '#378add', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '14px' }}>✓</Box>
-                                        <Typography sx={{ color: '#fff', fontWeight: 600 }}>{item}</Typography>
+                                        <Box sx={{
+                                            width: { xs: 22, md: 24 },
+                                            height: { xs: 22, md: 24 },
+                                            borderRadius: '50%',
+                                            background: '#378add',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            color: '#fff',
+                                            fontSize: { xs: "12px", md: "14px" },
+                                            flexShrink: 0,
+                                        }}>✓</Box>
+                                        <Typography sx={{ color: '#fff', fontWeight: 600, fontSize: { xs: "14px", md: "16px" } }}>
+                                            {item}
+                                        </Typography>
                                     </Stack>
                                 ))}
                             </Stack>
                         </motion.div>
                     </Grid>
 
+                    {/* Right features grid */}
                     <Grid item xs={12} lg={7}>
-                        <Grid container spacing={2}>
+                        <Grid container spacing={{ xs: 1.5, md: 2 }}>
                             {features.map((item, index) => (
-                                <Grid item xs={12} sm={6} key={index}>
+                                <Grid item xs={12} sm={6} key={index} sx={{ display: "flex" }}>
                                     <motion.div
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
@@ -77,8 +106,8 @@ const WhyChooseUsSection = ({ location, serviceType, content }) => {
                                                 background: "rgba(255, 255, 255, 0.05)",
                                                 backdropFilter: "blur(10px)",
                                                 border: "1px solid rgba(255, 255, 255, 0.1)",
-                                                borderRadius: "24px",
-                                                p: 3,
+                                                borderRadius: { xs: "16px", md: "24px" },
+                                                p: { xs: 2, md: 3 },
                                                 height: "100%",
                                                 transition: "all 0.3s",
                                                 "&:hover": {
@@ -88,9 +117,24 @@ const WhyChooseUsSection = ({ location, serviceType, content }) => {
                                                 },
                                             }}
                                         >
-                                            <Box sx={{ fontSize: "24px", mb: 2 }}>{item.icon}</Box>
-                                            <Typography variant="h6" fontWeight={800} color="#fff" mb={1}>{item.title}</Typography>
-                                            <Typography variant="body2" sx={{ color: "#b5d4f4", lineHeight: 1.6 }}>{item.desc}</Typography>
+                                            <Box sx={{ fontSize: { xs: "20px", md: "24px" }, mb: { xs: 1, md: 2 } }}>
+                                                {item.icon}
+                                            </Box>
+                                            <Typography
+                                                variant="h6"
+                                                fontWeight={800}
+                                                color="#fff"
+                                                mb={0.8}
+                                                sx={{ fontSize: { xs: "14px", md: "1.25rem" } }}
+                                            >
+                                                {item.title}
+                                            </Typography>
+                                            <Typography
+                                                variant="body2"
+                                                sx={{ color: "#b5d4f4", lineHeight: 1.6, fontSize: { xs: "12px", md: "14px" } }}
+                                            >
+                                                {item.desc}
+                                            </Typography>
                                         </Paper>
                                     </motion.div>
                                 </Grid>

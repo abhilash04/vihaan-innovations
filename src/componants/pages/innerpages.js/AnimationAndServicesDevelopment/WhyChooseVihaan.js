@@ -12,7 +12,7 @@ const WhyChooseVihaan = () => {
   ];
 
   return (
-    <Box id="why-choose-vihaan" sx={{ py: { xs: 8, md: 10 }, bgcolor: "#f8fafc", position: "relative", overflow: "hidden" }}>
+    <Box id="why-choose-vihaan" sx={{ py: { xs: 8, md: 10 }, bgcolor: "#fff", position: "relative", overflow: "hidden" }}>
       <Box
         sx={{
           position: "absolute",
@@ -47,11 +47,11 @@ const WhyChooseVihaan = () => {
                     initial={{ x: -30, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ delay: i * 0.1 }}
-                    whileHover={{ x: 10, bgcolor: "#ffffff" }}
+                    whileHover={{ x: 10, bgcolor: "#f8fafc" }}
                     viewport={{ once: true }}
                     sx={{
                       p: 4,
-                      background: "#ffffff",
+                      background: "#f8fafc",
                       borderRadius: "24px",
                       border: "1px solid #e2e8f0",
                       borderLeft: `6px solid ${item.color}`,
@@ -120,7 +120,7 @@ const WhyChooseVihaan = () => {
                   position: "relative",
                   p: 6,
                   borderRadius: "28px",
-                  background: "#ffffff", // matches section bg but darker for contrast
+                  background: "#f8fafc", // matches section bg but darker for contrast
                   zIndex: 1,
                 }}
               >

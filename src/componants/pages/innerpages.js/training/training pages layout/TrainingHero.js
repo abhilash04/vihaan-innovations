@@ -353,7 +353,7 @@ const TrainingHero = ({ data = {} }) => {
                 </Box>
                 <Box sx={{ mt: 2, pt: 2, borderTop: "1px solid rgba(255,255,255,0.1)", textAlign: "center" }}>
                   <Typography sx={{ color: "rgba(255,255,255,0.5)", fontSize: "13px", fontWeight: 600 }}>
-                    {supportText || "Support: "} <Box component="span" sx={{ color: "#ffffff" }}>{supportPhone || "+91 98765 43210"}</Box>
+                    {supportText || "Support: "} <Box component="span" sx={{ color: "#ffffff" }}>{supportPhone || "+91 99648 48414"}</Box>
                   </Typography>
                 </Box>
               </Paper>

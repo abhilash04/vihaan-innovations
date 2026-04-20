@@ -87,7 +87,7 @@ const faqs = [
   {
     question: "Can I get a demo of SpaceBasic's PGmanagement software?",
     answer:
-      "Get in touch with our team at +91 8884133362 and explore how the best PG management system in India can benefit you by creating a more interconnected institutional experience",
+      "Get in touch with our team at +91 9964848414 and explore how the best PG management system in India can benefit you by creating a more interconnected institutional experience",
   },
 ];
 
@@ -105,7 +105,7 @@ function PgFaqs() {
     >
       <Grid container justifyContent="center">
         <Grid
-          size={{xs:12,md:8}}
+          size={{ xs: 12, md: 8 }}
           sx={{
             maxWidth: isMobile ? "100%" : 1200,
             margin: isMobile ? "0" : "0 auto",

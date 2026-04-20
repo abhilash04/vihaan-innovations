@@ -47,6 +47,7 @@ import {
 
 import { allLocations, slugify } from "./componants/pages/innerpages.js/LocationPageLayout/locationData";
 import AnimationVideoServices from "./componants/pages/innerpages.js/AnimationVideoServices/AnimationVideoServices";
+import BlogHomepage from "./componants/pages/innerpages.js/Blog/BlogHomePage";
 
 // Lazy Loaded Page Components
 const HomePage = lazy(() => import("./componants/pages/HomePage"));
@@ -83,6 +84,9 @@ const ServiceDetails = lazy(() => import("./componants/pages/innerpages.js/servi
 const LocationPageLayout = lazy(() => import("./componants/pages/innerpages.js/LocationPageLayout/LocationPageLayout"));
 const DigitalMarketing = lazy(() => import("./componants/pages/innerpages.js/DigitalMarketing/DigitalMarketing"));
 const SoftwareDevelopmentHub = lazy(() => import("./componants/pages/innerpages.js/SoftwareDevelopmentHub/SoftwareDevelopmentHub"));
+const DigitalMarketingHub = lazy(() => import("./componants/pages/innerpages.js/training/DigitalMarketingHub"));
+const SoftwareTrainingHub = lazy(() => import("./componants/pages/innerpages.js/training/SoftwareTrainingHub"));
+const AnimationTrainingHub = lazy(() => import("./componants/pages/innerpages.js/training/AnimationTrainingHub"));
 
 function App() {
   return (
@@ -108,6 +112,8 @@ function App() {
               <Route path="/refund-policy" element={<LegalCenter />} />
               <Route path="/cancellation-policy" element={<LegalCenter />} />
               <Route path="/shipping-policy" element={<ShippingPolicy />} />
+
+              <Route path="/article/:ogUrl" element={<BlogHomepage />} />
 
               {/* Ready Products */}
               <Route path="/ready-products/ecommerce-single-vendor" element={<EcommerceSingleVendorHomepage />} />
@@ -162,6 +168,11 @@ function App() {
               <Route path="/services/whiteboard-animation" element={<ServicePage serviceData={whiteboardAnimationServiceData} />} />
               <Route path="/services/animation-and-video-services" element={<AnimationVideoServices />} />
 
+              {/* Training Categories Hubs */}
+              <Route path="/training/digital-marketing-training" element={<DigitalMarketingHub />} />
+              <Route path="/training/software-training" element={<SoftwareTrainingHub />} />
+              <Route path="/training/animation-training" element={<AnimationTrainingHub />} />
+
               {/* Training */}
               <Route path="/training/seo" element={<TrainingPage trainingData={seoTrainingData} />} />
               <Route path="/training/sem-google-ads" element={<TrainingPage trainingData={semTrainingData} />} />
@@ -185,6 +196,21 @@ function App() {
 
               {allLocations.map((loc) => (
                 <React.Fragment key={loc}>
+                  <Route
+                    key={`software-training-${loc}`}
+                    path={`/training/software-training-in-${slugify(loc)}`}
+                    element={<LocationPageLayout />}
+                  />
+                  <Route
+                    key={`marketing-training-${loc}`}
+                    path={`/training/digital-marketing-training-in-${slugify(loc)}`}
+                    element={<LocationPageLayout />}
+                  />
+                  <Route
+                    key={`animation-training-${loc}`}
+                    path={`/training/animation-training-in-${slugify(loc)}`}
+                    element={<LocationPageLayout />}
+                  />
                   <Route
                     key={`website-${loc}`}
                     path={`/services/website-development-services-in-${slugify(loc)}`}

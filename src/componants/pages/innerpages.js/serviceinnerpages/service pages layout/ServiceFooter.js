@@ -41,7 +41,7 @@ const ServiceFooter = () => {
     <Box sx={{ bgcolor: "#f8fafc", pt: 8, pb: 4, position: "relative", borderTop: "1px solid rgba(0,0,0,0.03)" }}>
       <Container maxWidth="lg">
         <Grid container spacing={4} justifyContent="space-between">
-          
+
           {/* Column 1 - Brand */}
           <Grid item xs={12} md={3}>
             <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
@@ -91,13 +91,13 @@ const ServiceFooter = () => {
               Contact Us
             </Typography>
             <Typography sx={{ color: "#64748b", fontSize: "14px", mb: 1, display: "flex", alignItems: "center", gap: 1, fontWeight: 500 }}>
-               hello@vihaan.com
+              hello@vihaan.com
             </Typography>
             <Typography sx={{ color: "#64748b", fontSize: "14px", mb: 1, display: "flex", alignItems: "center", gap: 1, fontWeight: 500 }}>
-               +91 98765 43210
+              +91 99648 48414
             </Typography>
             <Typography sx={{ color: "#64748b", fontSize: "14px", mb: 3, display: "flex", alignItems: "center", gap: 1, fontWeight: 500 }}>
-               Hyderabad, India
+              Hyderabad, India
             </Typography>
           </Grid>
 

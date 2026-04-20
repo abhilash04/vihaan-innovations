@@ -12,9 +12,9 @@ import { motion } from "framer-motion";
 
 const TechStackSection = ({ location, serviceType, techStack = [] }) => {
     return (
-        <Box sx={{ background: "#ffffff", py: "80px" }}>
+        <Box sx={{ background: "#ffffff", py: { xs: "36px", md: "80px" } }}>
             <Container maxWidth="lg">
-                <Stack alignItems="center" spacing={2} mb={8}>
+                <Stack alignItems="center" spacing={{ xs: 1.5, md: 2 }} mb={{ xs: 4, md: 8 }}>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -38,28 +38,30 @@ const TechStackSection = ({ location, serviceType, techStack = [] }) => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.1 }}
                     >
-                        <Typography variant="h3" fontWeight={900} color="#042c53" textAlign="center">
+                        <Typography variant="h3" fontWeight={900} color="#042c53" textAlign="center"
+                            sx={{ fontSize: { xs: "22px", sm: "28px", md: "3rem" }, px: { xs: 1, md: 0 } }}>
                             Powering {location} with Modern Tools
                         </Typography>
                     </motion.div>
                 </Stack>
 
-                <Grid container spacing={3} justifyContent="center">
+                <Grid container spacing={{ xs: 1.5, md: 3 }} justifyContent="center">
                     {techStack.map((tech, index) => (
-                        <Grid item xs={6} sm={4} md={2} key={index}>
+                        <Grid item xs={6} sm={4} md={2} key={index} sx={{ display: "flex" }}>
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: index * 0.05 }}
+                                style={{ width: "100%", display: "flex" }}
                             >
                                 <Paper
                                     elevation={0}
                                     sx={{
-                                        p: 3,
+                                        p: { xs: 2, md: 3 },
                                         textAlign: "center",
                                         background: "#f8fbff",
-                                        borderRadius: "20px",
+                                        borderRadius: { xs: "14px", md: "20px" },
                                         border: "1px solid #e6f1fb",
                                         transition: "all 0.3s",
                                         "&:hover": {
@@ -70,10 +72,10 @@ const TechStackSection = ({ location, serviceType, techStack = [] }) => {
                                         },
                                     }}
                                 >
-                                    <Box sx={{ fontSize: "32px", mb: 1 }}>{tech.icon}</Box>
+                                    <Box sx={{ fontSize: { xs: "26px", md: "32px" }, mb: 1 }}>{tech.icon}</Box>
                                     <Typography
                                         sx={{
-                                            fontSize: "12px",
+                                            fontSize: { xs: "11px", md: "12px" },
                                             fontWeight: 800,
                                             color: "#0c447c",
                                         }}

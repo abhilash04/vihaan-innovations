@@ -15,9 +15,9 @@ export default function OurExpertise() {
   ];
 
   return (
-    <Box sx={{ py: { xs: 8, md: 10 }, background: "#fafafa" }}>
+    <Box sx={{ py: { xs: 8, md: 8 }, background: "#fafafa" }}>
       <Container maxWidth="lg">
-        <Box component={motion.div} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} sx={{ textAlign: "center", mb: 8 }}>
+        <Box component={motion.div} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} sx={{ textAlign: "center", mb: 4 }}>
           <Typography sx={{ color: "#00b4d8", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase", fontSize: "13px", mb: 2, fontFamily: "'Inter', sans-serif" }}>
             Our Expertise
           </Typography>
@@ -29,16 +29,16 @@ export default function OurExpertise() {
           </Typography>
         </Box>
 
-        <Grid container spacing={4}>
+        <Grid container spacing={4} alignItems="stretch">
           {services.map((s, i) => (
-            <Grid item xs={12} sm={6} md={3} key={i}>
+            <Grid item xs={12} sm={6} md={3} key={i} sx={{ display: "flex" }}>
               <Box component={motion.div} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}>
-                <Card elevation={0} sx={{ 
-                  p: 4, 
-                  borderRadius: "16px", 
+                <Card elevation={0} sx={{
+                  p: 4,
+                  borderRadius: "16px",
                   border: "1px solid rgba(0,0,0,0.05)",
                   background: "#ffffff",
-                  height: "100%",
+                  height: "75%",
                   transition: "all 0.3s ease",
                   "&:hover": {
                     borderColor: "#00b4d8",
