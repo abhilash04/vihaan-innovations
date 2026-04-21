@@ -66,7 +66,7 @@ const WhyChooseUsSection = ({ location, serviceType, content }) => {
                             </Typography>
 
                             <Stack spacing={1.5}>
-                                {["Local Market Experts", "Zero Plagiarism Content", "Technical Excellence"].map((item, i) => (
+                                {(content.bullets || ["Local Market Experts", "Zero Plagiarism Content", "Technical Excellence"]).map((item, i) => (
                                     <Stack key={i} direction="row" spacing={2} alignItems="center">
                                         <Box sx={{
                                             width: { xs: 22, md: 24 },
@@ -92,7 +92,7 @@ const WhyChooseUsSection = ({ location, serviceType, content }) => {
                     {/* Right features grid */}
                     <Grid item xs={12} lg={7}>
                         <Grid container spacing={{ xs: 1.5, md: 2 }}>
-                            {features.map((item, index) => (
+                            {(content.features || features).map((item, index) => (
                                 <Grid item xs={12} sm={6} key={index} sx={{ display: "flex" }}>
                                     <motion.div
                                         initial={{ opacity: 0, y: 20 }}
@@ -118,7 +118,7 @@ const WhyChooseUsSection = ({ location, serviceType, content }) => {
                                             }}
                                         >
                                             <Box sx={{ fontSize: { xs: "20px", md: "24px" }, mb: { xs: 1, md: 2 } }}>
-                                                {item.icon}
+                                                {item.icon || "📍"}
                                             </Box>
                                             <Typography
                                                 variant="h6"

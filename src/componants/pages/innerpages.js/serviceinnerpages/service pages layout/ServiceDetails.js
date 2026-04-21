@@ -14,13 +14,17 @@ import ExploreResults from "./serviceExplore/ExploreResults";
 import ExploreBottomCTA from "./serviceExplore/ExploreBottomCTA";
 import ExplorePricing from "./serviceExplore/ExplorePricing";
 
-// Data
 import { getExploreDataByTitle } from "./serviceExplore/ExploreData";
+import NotFound from "../../../NotFound";
 
 const ServiceDetails = ({ title: propTitle }) => {
   const { title: urlTitle } = useParams();
   const title = propTitle || decodeURIComponent(urlTitle);
   const data = getExploreDataByTitle(title);
+
+  if (!data) {
+    return <NotFound />;
+  }
 
   return (
     <Box sx={{ bgcolor: "#ffffff", minHeight: "100vh" }}>

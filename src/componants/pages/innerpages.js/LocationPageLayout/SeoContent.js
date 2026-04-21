@@ -42,12 +42,12 @@ const SeoContent = ({ location, serviceType, content }) => {
 
                             <Box sx={{ mt: 5, p: 4, background: '#f8fbff', borderRadius: '24px', borderLeft: '6px solid #185fa5' }}>
                                 <Typography variant="h6" fontWeight={800} color="#0c447c" mb={2}>
-                                    The Competitive Edge in {location}
+                                    {content.highlight?.title || `The Competitive Edge in ${location}`}
                                 </Typography>
                                 <Typography sx={{ color: '#4a5568', lineHeight: 1.7 }}>
-                                    In a bustling hub like ${location}, standing out requires more than just a digital presence.
+                                    {content.highlight?.text || `In a bustling hub like ${location}, standing out requires more than just a digital presence.
                                     Our ${serviceType.toLowerCase()} are engineered to bridge the gap between your brand
-                                    and your ${location} audience through technical excellence and creative storytelling.
+                                    and your ${location} audience through technical excellence and creative storytelling.`}
                                 </Typography>
                             </Box>
                         </motion.div>
@@ -73,20 +73,20 @@ const SeoContent = ({ location, serviceType, content }) => {
                             >
                                 <Box sx={{ position: 'relative', zIndex: 1 }}>
                                     <Typography variant="h5" fontWeight={900} mb={3}>
-                                        Localized Strategy for {location}
+                                        {content.sidebar?.title || `Localized Strategy for ${location}`}
                                     </Typography>
 
                                     <Stack spacing={3}>
-                                        {[
+                                        {(content.sidebar?.items || [
                                             { t: "Deep Local Research", d: "Content tailored to local search intent." },
                                             { t: "Technical Optimization", d: "Fast results with localized server logic." },
                                             { t: "Performance Driven", d: "Focus on ROI and high conversion rates." },
                                             { t: "Ethical & Quality", d: "Zero-plagiarism, human-centric approach." }
-                                        ].map((item, i) => (
+                                        ]).map((item, i, arr) => (
                                             <Box key={i}>
                                                 <Typography fontWeight={800} sx={{ color: '#378add', mb: 0.5 }}>{item.t}</Typography>
                                                 <Typography variant="body2" sx={{ opacity: 0.8 }}>{item.d}</Typography>
-                                                {i < 3 && <Divider sx={{ mt: 2, background: 'rgba(255,255,255,0.1)' }} />}
+                                                {i < arr.length - 1 && <Divider sx={{ mt: 2, background: 'rgba(255,255,255,0.1)' }} />}
                                             </Box>
                                         ))}
                                     </Stack>

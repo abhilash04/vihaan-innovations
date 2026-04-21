@@ -1942,6 +1942,7 @@ const Header = () => {
                   component="img"
                   src={logo}
                   alt="Website Logo"
+                  fetchPriority="high"
                   sx={{
                     width: "100%",
                     maxWidth: { xs: "120px", md: scrolled ? "160px" : "200px" },

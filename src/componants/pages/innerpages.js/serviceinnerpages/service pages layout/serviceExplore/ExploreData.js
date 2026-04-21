@@ -1067,29 +1067,13 @@ export const getExploreDataByTitle = (title) => {
 
   const query = title.toLowerCase().replace(/[\s-]/g, "");
 
-  // 2. Try normalized substring match
-  const subKey = Object.keys(exploreServiceData).find(k => {
+  // 2. Try strict normalized match (no partial includes)
+  const matchingKey = Object.keys(exploreServiceData).find(k => {
     const normalizedKey = k.toLowerCase().replace(/[\s-]/g, "");
-    return normalizedKey.includes(query) || query.includes(normalizedKey);
-  });
-  if (subKey) return exploreServiceData[subKey];
-
-  // 3. Try fallback word-by-word match
-  const queryWords = title.toLowerCase().split(/[\s-]+/).filter(w => w.length > 2);
-  const fallbackKey = Object.keys(exploreServiceData).find(k => {
-    const keyLow = k.toLowerCase();
-    return queryWords.every(word => {
-      if (keyLow.includes(word)) return true;
-      // Handle variations like "consultant" vs "consulting" or "service" vs "services"
-      const stem = word.replace(/(ing|ant|s|es)$/, "");
-      if (stem.length > 2) {
-        return keyLow.includes(stem);
-      }
-      return false;
-    });
+    return normalizedKey === query;
   });
 
-  if (fallbackKey) return exploreServiceData[fallbackKey];
+  if (matchingKey) return exploreServiceData[matchingKey];
 
   return null;
 };

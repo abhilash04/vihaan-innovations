@@ -86,7 +86,7 @@ const ServicesSection = ({ location, serviceType, services = [], customServicesH
                                         border: "1px solid #e0e0e0",
                                         borderRadius: { xs: "16px", md: "24px" },
                                         p: { xs: 2.5, md: 4 },
-                                        height: "100%",
+                                        height: "80%",
                                         transition: "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
                                         display: "flex",
                                         flexDirection: "column",
@@ -103,7 +103,7 @@ const ServicesSection = ({ location, serviceType, services = [], customServicesH
                                         },
                                     }}
                                 >
-                                    <Box sx={{ position: "relative", zIndex: 1, display: 'flex', flexDirection: 'column', height: '100%' }}>
+                                    <Box sx={{ position: "relative", zIndex: 1, display: 'flex', flexDirection: 'column', height: '80%' }}>
                                         {/* Icon */}
                                         <Box
                                             className="icon-box"
