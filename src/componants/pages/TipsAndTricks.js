@@ -102,7 +102,7 @@ const PostCard = ({ post }) => (
         {post.category}
       </Button>
     </Box>
-    <CardContent sx={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
+    <CardContent sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}>
       <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1 }}>
         <CalendarMonthIcon sx={{ fontSize: 16, color: "#0B70E1" }} />
         <Typography variant="caption" color="text.secondary">{post.date}</Typography>
@@ -112,7 +112,7 @@ const PostCard = ({ post }) => (
       <Typography
         variant="subtitle1"
         sx={{
-          fontSize: "20px",
+          fontSize: "18px",
           fontWeight: 600,
           lineHeight: 1.4,
           color: "#0a0a0a",
@@ -131,7 +131,7 @@ const PostCard = ({ post }) => (
       </Typography>
       <Typography
         variant="body2"
-        sx={{ color: "#061340", fontWeight: 600, cursor: "pointer", "&:hover": { color: "#0B70E1" } }}
+        sx={{ color: "#061340", fontWeight: 600, cursor: "pointer", mt: "auto", "&:hover": { color: "#0B70E1" } }}
       >
         Learn More →
       </Typography>
@@ -244,9 +244,9 @@ export default function TipsAndTricks() {
           </Box>
         ) : (
           /* ── DESKTOP: show 3 cards side by side ── */
-          <Box sx={{ display: "flex", alignItems: "stretch", gap: 4, width: "100%", maxWidth: 1200 }}>
+          <Box sx={{ display: "flex", gap: 4, width: "100%", maxWidth: 1200, alignItems: "stretch" }}>
             {posts.slice(currentIndex, currentIndex + visibleCount).map((post) => (
-              <Box key={post.id} sx={{ flex: 1, minWidth: 0, display: "flex" }}>
+              <Box key={post.id} sx={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column" }}>
                 <PostCard post={post} />
               </Box>
             ))}
@@ -264,7 +264,10 @@ export default function TipsAndTricks() {
           {posts.map((_, i) => (
             <Box
               key={i}
-              onClick={() => { setDirection(i > currentIndex ? 1 : -1); setCurrentIndex(i); }}
+              onClick={() => {
+                setDirection(i > currentIndex ? 1 : -1);
+                setCurrentIndex(i);
+              }}
               sx={{
                 width: i === currentIndex ? 20 : 8,
                 height: 8,
@@ -283,7 +286,10 @@ export default function TipsAndTricks() {
         <Button
           variant="contained"
           sx={{
-            textTransform: "none", fontSize: "16px", px: 4, py: 1.5,
+            textTransform: "none",
+            fontSize: "16px",
+            px: 4,
+            py: 1.5,
             borderRadius: "30px",
             background: "linear-gradient(90deg, #00b4d8 0%, #0077b6 100%)",
             color: "#fff",

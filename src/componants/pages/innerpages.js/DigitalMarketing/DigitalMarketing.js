@@ -82,7 +82,7 @@ const DigitalMarketing = () => {
         </section>
 
         <Box sx={{ position: "sticky", top: "70px", zIndex: 1000 }}>
-          <QuickNav activeSection={activeSection} />
+          <QuickNav activeSection={activeSection} setActiveSection={setActiveSection} />
         </Box>
 
         <section id="seo" data-section-id="1">

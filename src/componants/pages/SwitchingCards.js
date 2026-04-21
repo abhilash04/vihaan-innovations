@@ -91,12 +91,11 @@ export default function SwitchingCards() {
               fontSize: { xs: "14px", md: "16.5px" },
               fontWeight: 500,
               lineHeight: 1.4,
-              color: "rgba(49, 56, 69, 0.7)",
+              color: "rgba(24, 28, 35, 0.7)",
               fontFamily: "lato",
-              mb: "8px",
-              maxWidth: "600px",
+              mb: "15px",
+              maxWidth: "700px",
               width: "100%",
-              "&:hover": { color: "#0B70E1" },
             }}
           >
             Discover ready-to-use digital solutions that help you build, optimize, and promote your website faster.
@@ -107,23 +106,27 @@ export default function SwitchingCards() {
         <Box
           sx={{
             display: "flex",
+            flexDirection: { xs: "column", md: "row" },
             justifyContent: "center",
+            alignItems: "center",
             mb: { xs: 4, md: 8 },
-            gap: 1,
-            flexWrap: "wrap",
+            gap: { xs: 1.5, md: 2 },
+            width: "100%",
           }}
         >
           {sections.map((s) => (
             <Button
               key={s.id}
               onClick={() => setActiveSection(s.id)}
+              onMouseEnter={() => setActiveSection(s.id)}
               sx={{
                 textTransform: "none",
-                px: { xs: 2.5, md: 6 },
-                py: { xs: 0.8, md: 1 },
+                px: { xs: 3, md: 6 },
+                py: { xs: 1, md: 1.2 },
                 fontSize: { xs: "13px", md: "18px" },
                 fontWeight: 500,
                 color: activeSection === s.id ? "#fff" : "#333",
+                whiteSpace: "nowrap",
                 background:
                   activeSection === s.id
                     ? "linear-gradient(90deg, #00b4d8 0%, #0077b6 100%)"
@@ -132,14 +135,20 @@ export default function SwitchingCards() {
                   activeSection === s.id
                     ? "none"
                     : "1px solid #dee2e6",
-                borderBottom: activeSection === s.id ? "none" : "1px solid #c4c0c0ff",
                 boxShadow:
                   activeSection === s.id
                     ? "0px 4px 10px rgba(0,0,0,0.15)"
                     : "none",
                 borderRadius: "6px",
                 transition: "all 0.3s ease",
-                minWidth: { xs: "100px", md: "auto" },
+                width: { xs: "100%", md: "auto" },
+                maxWidth: { xs: "100%", md: "250px" }, // Added a max width for desktop buttons to be consistent if needed, but 'auto' is fine too. Let's stick to user preference.
+                minWidth: { xs: "none", md: "180px" },
+                "&:hover": {
+                  background: "linear-gradient(90deg, #00b4d8 0%, #0077b6 100%)",
+                  color: "#fff",
+                  border: "none",
+                }
               }}
             >
               {s.button}
