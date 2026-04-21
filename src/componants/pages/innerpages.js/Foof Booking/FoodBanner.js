@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Box, Typography, Stack, Button, Avatar } from "@mui/material";
 import { motion } from "framer-motion";
 import StarIcon from "@mui/icons-material/Star";
@@ -8,6 +9,7 @@ import LocalPizzaIcon from '@mui/icons-material/LocalPizza';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
 import EmojiFoodBeverageIcon from '@mui/icons-material/EmojiFoodBeverage';
+import PopUps from "../../../common/PopUps";
 
 const TrustBadge = ({ title, desc }) => (
   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, bgcolor: '#ffffff99', backdropFilter: 'blur(5px)', p: 1, borderRadius: '8px', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }}>
@@ -20,6 +22,7 @@ const TrustBadge = ({ title, desc }) => (
 );
 
 const FoodBanner = () => {
+  const [openPopup, setOpenPopup] = useState(false);
 
   const floatingIcons = [
     { Icon: LocalPizzaIcon, color: '#ff6b6b', top: '10%', left: '5%' },
@@ -92,6 +95,7 @@ const FoodBanner = () => {
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} sx={{ mb: 4 }}>
               <Button
                 variant="contained"
+                onClick={() => setOpenPopup(true)}
                 sx={{
                   backgroundColor: "#ff6f1e",
                   textTransform: "none",
@@ -175,7 +179,7 @@ const FoodBanner = () => {
           </motion.div>
         </Box>
       </Box>
-
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

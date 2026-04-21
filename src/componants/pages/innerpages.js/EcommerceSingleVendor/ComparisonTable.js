@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Table,
@@ -14,6 +14,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CancelIcon from "@mui/icons-material/Cancel";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
 import { keyframes, styled } from "@mui/system";
+import PopUps from "../../../common/PopUps";
 
 // Animations
 const fadeIn = keyframes`
@@ -128,6 +129,7 @@ const renderIcon = (type) => {
 };
 
 export default function ComparisonTable() {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box sx={{ py: 4, px: 3, maxWidth: "1100px", mx: "auto", backgroundColor: "#fff" }}>
       <Box sx={{ textAlign: "center", mb: 6, animation: `${fadeIn} 1s ease` }}>
@@ -311,6 +313,7 @@ export default function ComparisonTable() {
 
         <Box
           component="button"
+          onClick={() => setOpenPopup(true)}
           sx={{
             backgroundColor: "#3f51b5",
             color: "white",
@@ -353,6 +356,7 @@ export default function ComparisonTable() {
           </Box>
         </Box>
       </Box>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 }

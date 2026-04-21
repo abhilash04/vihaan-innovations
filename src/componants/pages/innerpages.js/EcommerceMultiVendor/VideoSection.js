@@ -1,11 +1,13 @@
 // VideoSection.js
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { motion } from "framer-motion";
 import videoSrc from "../../../../assets/ecommerce-Banner-2.mp4";
+import PopUps from "../../../common/PopUps";
 
 const VideoSection = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -158,6 +160,7 @@ const VideoSection = () => {
           <motion.div variants={itemVariants}>
             <Button
               variant="contained"
+              onClick={() => setOpenPopup(true)}
               endIcon={<ArrowForwardIcon />}
               component={motion.button}
               whileHover={{ scale: 1.05 }}
@@ -185,6 +188,7 @@ const VideoSection = () => {
           </motion.div>
         </Container>
       </Box>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box >
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Card, CardContent, Grid } from "@mui/material";
 import icon1 from "../../../../assets/edge1.svg";
 import icon2 from "../../../../assets/edge2.svg";
@@ -6,6 +6,7 @@ import icon3 from "../../../../assets/edge3.svg";
 import icon4 from "../../../../assets/edge4.svg";
 import icon5 from "../../../../assets/edge5.svg";
 import icon6 from "../../../../assets/edge6.svg";
+import PopUps from "../../../common/PopUps";
 
 // Services data array
 const services = [
@@ -66,6 +67,7 @@ const services = [
 ];
 
 const CuttingEdgeSolutions = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box>
       <Box sx={{ maxWidth: 1200, mx: "auto", py: 6, px: 2 }}>
@@ -203,7 +205,7 @@ const CuttingEdgeSolutions = () => {
                       fontSize: "15px",
                       color: "#555",
                       px: 3,
-                      mb: 4,
+                      mb: 3,
                       lineHeight: 1.4,
                       textAlign: "justify",
                       transition: "color 0.3s ease",
@@ -211,47 +213,13 @@ const CuttingEdgeSolutions = () => {
                   >
                     {service.description}
                   </Typography>
-
-                  {/* Spacer to push button to bottom */}
-                  <Box sx={{ flexGrow: 1 }} />
-
-                  <Box
-                    className="learn-more"
-                    component="a"
-                    href={service.link}
-                    sx={{
-                      textDecoration: "none",
-                      color: "#fff",
-                      backgroundColor: "#007bff",
-                      padding: "10px 25px",
-                      fontSize: "14px",
-                      fontWeight: 700,
-                      borderRadius: "50px",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      transition: "all 0.4s ease",
-                      border: "2px solid transparent",
-                      boxShadow: "0 4px 10px rgba(0, 123, 255, 0.2)",
-                      mb: 1, // Minimize space below button
-                      "&:hover": {
-                        transform: "scale(1.05)",
-                      },
-                      "@keyframes pulse": {
-                        "0%": { boxShadow: "0 0 0 0 rgba(0, 123, 255, 0.4)" },
-                        "70%": { boxShadow: "0 0 0 10px rgba(0, 123, 255, 0)" },
-                        "100%": { boxShadow: "0 0 0 0 rgba(0, 123, 255, 0)" },
-                      },
-                      animation: "pulse 2s infinite",
-                    }}
-                  >
-                    Learn More
-                  </Box>
                 </CardContent>
               </Card>
             </Grid>
           ))}
         </Grid>
       </Box>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

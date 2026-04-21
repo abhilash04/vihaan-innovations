@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Grid, Container, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import { Globe, Zap, Target, TrendingUp, Shield } from "lucide-react";
+import PopUps from "../../../common/PopUps";
 
 const benefits = [
   {
@@ -45,6 +46,7 @@ const bottomBenefits = [
 ];
 
 const ResortBenefits = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box
       sx={{
@@ -258,6 +260,7 @@ const ResortBenefits = () => {
           </Typography>
           <Button
             variant="contained"
+            onClick={() => setOpenPopup(true)}
             sx={{
               fontFamily: "'Outfit', sans-serif",
               background: "linear-gradient(90deg, #D4AF37, #B08D28)",
@@ -279,6 +282,7 @@ const ResortBenefits = () => {
           </Button>
         </Box>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

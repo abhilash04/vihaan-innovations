@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
-import { Box, Typography, IconButton } from "@mui/material";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Box, Typography, IconButton, Button } from "@mui/material";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import PopUps from "../../../common/PopUps";
 
 // 👇 Sample banner images (replace with your own)
 import banner1 from "../../../../assets/Sales-dashboard.svg";
@@ -11,6 +15,7 @@ import banner3 from "../../../../assets/Product-dashboard.svg";
 import bgImage from "../../../../assets/homepage-banner2.3.png";
 
 const EcommerceDashboard = () => {
+  const [openPopup, setOpenPopup] = React.useState(false);
   const sliderRef = React.useRef();
 
   const bannerData = [
@@ -113,72 +118,101 @@ const EcommerceDashboard = () => {
         {/* Slider */}
         <Slider {...settings} ref={sliderRef}>
           {bannerData.map((item, index) => (
-            <Box
-              key={index}
-              sx={{
-                position: "relative",
-                outline: "none",
-                px: 1,
-                overflow: "hidden", // for zoom effect
-                "&:hover .dashboard-btn": {
-                  opacity: 1,
-                  transform: "translateX(-50%) translateY(0)",
-                },
-                "&:hover img": {
-                  transform: "scale(1.05)",
-                }
-              }}
-            >
+            <div key={index}>
               <Box
-                component="img"
-                src={item.src}
-                alt={`banner-${index}`}
                 sx={{
-                  width: "100%",
-                  borderRadius: 6,
-                  maxHeight: { xs: "220px", md: "400px" },
-                  objectFit: "cover",
-                  transition: "transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)",
-                  display: "block"
-                }}
-              />
-
-              {/* Checkout Website Button */}
-              <Box
-                component="button"
-                className="dashboard-btn"
-                onClick={() => window.open(item.url, "_blank")}
-                sx={{
-                  position: "absolute",
-                  bottom: "10%",
-                  left: "50%",
-                  transform: "translateX(-50%) translateY(20px)",
-                  opacity: 0,
-                  backgroundColor: "#3f51b5",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "50px",
-                  padding: "12px 32px",
-                  fontSize: "16px",
-                  fontWeight: 700,
-                  cursor: "pointer",
-                  transition: "all 0.4s ease",
-                  boxShadow: "0 8px 16px rgba(63, 81, 181, 0.3)",
-                  whiteSpace: "nowrap",
-                  zIndex: 2,
-                  "&:hover": {
-                    backgroundColor: "#283593",
-                    boxShadow: "0 12px 24px rgba(63, 81, 181, 0.5)",
-                    transform: "translateX(-50%) scale(1.05)",
+                  position: "relative",
+                  outline: "none",
+                  px: 1,
+                  overflow: "hidden", // for zoom effect
+                  "&:hover .dashboard-btn": {
+                    opacity: 1,
+                    transform: "translateX(-50%) translateY(0)",
+                  },
+                  "&:hover img": {
+                    transform: "scale(1.05)",
                   }
                 }}
               >
-                Checkout Website
+                <Box
+                  component="img"
+                  src={item.src}
+                  alt={`banner-${index}`}
+                  sx={{
+                    width: "100%",
+                    borderRadius: 6,
+                    maxHeight: { xs: "220px", md: "400px" },
+                    objectFit: "cover",
+                    transition: "transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)",
+                    display: "block"
+                  }}
+                />
+
+                {/* Checkout Website Button */}
+                <Box
+                  component="button"
+                  className="dashboard-btn"
+                  onClick={() => window.open(item.url, "_blank")}
+                  sx={{
+                    position: "absolute",
+                    bottom: "10%",
+                    left: "50%",
+                    transform: "translateX(-50%) translateY(20px)",
+                    opacity: 0,
+                    backgroundColor: "#3f51b5",
+                    color: "white",
+                    border: "none",
+                    borderRadius: "50px",
+                    padding: "12px 32px",
+                    fontSize: "16px",
+                    fontWeight: 700,
+                    cursor: "pointer",
+                    transition: "all 0.4s ease",
+                    boxShadow: "0 8px 16px rgba(63, 81, 181, 0.3)",
+                    whiteSpace: "nowrap",
+                    zIndex: 2,
+                    "&:hover": {
+                      backgroundColor: "#283593",
+                      boxShadow: "0 12px 24px rgba(63, 81, 181, 0.5)",
+                      transform: "translateX(-50%) scale(1.05)",
+                    }
+                  }}
+                >
+                  Checkout Website
+                </Box>
               </Box>
-            </Box>
+            </div>
           ))}
         </Slider>
       </Box>
+
+      {/* Get Free Demo Button */}
+      <Box sx={{ textAlign: "center", mt: 6 }}>
+        <Button
+          variant="contained"
+          onClick={() => setOpenPopup(true)}
+          endIcon={<ArrowForwardIcon />}
+          sx={{
+            background: "linear-gradient(to right, #025170, #5699c1)",
+            color: "#fff",
+            px: 6,
+            py: 1.8,
+            fontSize: "18px",
+            fontWeight: 700,
+            borderRadius: "50px",
+            textTransform: "none",
+            boxShadow: "0 10px 20px rgba(2, 81, 112, 0.3)",
+            transition: "all 0.4s ease",
+            "&:hover": {
+              transform: "scale(1.05)",
+              boxShadow: "0 15px 30px rgba(2, 81, 112, 0.4)",
+            }
+          }}
+        >
+          Get Free Demo
+        </Button>
+      </Box>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

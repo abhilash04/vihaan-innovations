@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 import WorkIcon from '@mui/icons-material/Work';
 import HomeWorkIcon from '@mui/icons-material/HomeWork';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
@@ -107,6 +108,7 @@ const AudienceBox = ({ icon, title, desc, color, delay }) => (
 );
 
 const ListingWhoThisIsFor = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box
       sx={{
@@ -159,6 +161,7 @@ const ListingWhoThisIsFor = () => {
         <Box sx={{ textAlign: "center", mt: 6 }}>
           <Button
             variant="contained"
+            onClick={() => setOpenPopup(true)}
             sx={{
               bgcolor: "#2563eb",
               color: "#ffffff",
@@ -180,6 +183,7 @@ const ListingWhoThisIsFor = () => {
         </Box>
 
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

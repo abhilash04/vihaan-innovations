@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Grid, Container, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import { Check, X, ArrowRight } from "lucide-react";
+import PopUps from "../../../common/PopUps";
 
 const rows = [
   { item: "Booking", smart: "Online booking system", trad: "Manual inquiries" },
@@ -14,6 +15,7 @@ const rows = [
 ];
 
 const ResortComparison = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box
       sx={{
@@ -105,6 +107,7 @@ const ResortComparison = () => {
 
               <Button
                 variant="contained"
+                onClick={() => setOpenPopup(true)}
                 endIcon={<ArrowRight size={18} />}
                 sx={{
                   mt: 3,
@@ -215,6 +218,7 @@ const ResortComparison = () => {
           </Grid>
         </Grid>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

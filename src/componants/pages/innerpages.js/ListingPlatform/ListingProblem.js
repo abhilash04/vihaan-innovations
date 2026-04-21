@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Grid, Button } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 import img from "../../../../assets/the-problem1.png"
 
 const ListingProblem = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box sx={{ bgcolor: "#242A38", py: 10, position: "relative", overflow: "hidden" }}> {/* Dark navy/grey from mock */}
       <Container maxWidth="lg">
@@ -73,6 +75,7 @@ const ListingProblem = () => {
 
               <Button
                 variant="contained"
+                onClick={() => setOpenPopup(true)}
                 sx={{
                   bgcolor: "#ef4444",
                   color: "#ffffff",
@@ -96,6 +99,7 @@ const ListingProblem = () => {
 
         </Grid>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

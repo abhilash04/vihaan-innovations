@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Button } from "@mui/material";
+import PopUps from "../common/PopUps";
 import { motion } from "framer-motion";
 
 import phone1 from "../../assets/Bitmap.png";
@@ -7,6 +8,7 @@ import arrow from "../../assets/arrow.png";
 import img1 from "../../assets/2-1.png";
 
 const OurExpert = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box
       sx={{
@@ -180,6 +182,7 @@ const OurExpert = () => {
             >
               <Button
                 variant="contained"
+                onClick={() => setOpenPopup(true)}
                 sx={{
                   borderRadius: "6px",
                   backgroundColor: "#00b4d8",
@@ -228,6 +231,7 @@ const OurExpert = () => {
           }
         `}
       </style>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

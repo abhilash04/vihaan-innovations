@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, Typography, Box, Button } from "@mui/material";
 import img from "../../../../assets/Home-banner-img 1.png";
 import banner from "../../../../assets/EcommerceBannerimg.png";
 import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
+import PopUps from "../../../common/PopUps";
 
 const EcommerceBanner = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box
       sx={{
@@ -101,6 +103,7 @@ const EcommerceBanner = () => {
 
                 <Button
                   variant="outlined"
+                  onClick={() => setOpenPopup(true)}
                   endIcon={<DoubleArrowIcon />}
                   sx={{
                     px: 3,
@@ -162,6 +165,7 @@ const EcommerceBanner = () => {
           </Grid>{" "}
         </Grid>
       </Box>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };
