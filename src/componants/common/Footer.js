@@ -556,8 +556,8 @@ const FooterAndPopup = () => {
                     <Box sx={{ width: "40px", height: "40px", minWidth: "40px", borderRadius: "50%", backgroundColor: "#eef2f6", display: "flex", alignItems: "center", justifyContent: "center" }}>
                       <LocationOn sx={{ fontSize: "20px", color: "#444" }} />
                     </Box>
-                    <Typography variant="body2" sx={{ color: "#555", fontSize: { xs: "14px", sm: "15px" }, fontWeight: 600, mt: 1 }}>
-                      Bangalore, India
+                    <Typography variant="body1" sx={{ color: "#555", fontSize: { xs: "12px", sm: "14px" }, fontWeight: 500, mt: 1, lineHeight: 1.4 }}>
+                      1st Floor, Vijayashree Layout, 2, Kodichikkanahalli Main Rd, Rotary Nagar, Bommanahalli, Bengaluru, Karnataka 560076
                     </Typography>
                   </Box>
                 </Box>

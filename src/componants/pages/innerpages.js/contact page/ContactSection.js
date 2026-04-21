@@ -10,16 +10,16 @@ import {
   Stack,
   IconButton as MuiIconButton
 } from "@mui/material";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  ArrowRight, 
-  Send, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  ArrowRight,
+  Send,
+  Facebook,
+  Twitter,
+  Linkedin,
   Instagram,
   CheckCircle2
 } from "lucide-react";
@@ -46,8 +46,8 @@ const ContactUs = () => {
     {
       icon: <MapPin size={24} />,
       title: "Visit Us",
-      value: "26, 2nd Main Rd, Kodichikknahalli",
-      subValue: "Bommanahalli, Bengaluru, Karnataka 560076",
+      value: "1st Floor, Vijayashree Layout",
+      subValue: "2, Kodichikkanahalli Main Rd, Rotary Nagar, Bommanahalli, Bengaluru, Karnataka 560076",
     },
   ];
 
@@ -60,12 +60,12 @@ const ContactUs = () => {
 
   return (
     <Box sx={{ bgcolor: "#ffffff", minHeight: "100vh", position: "relative", overflow: "hidden" }}>
-      
+
       {/* --- Minimalist Modern Hero --- */}
-      <Box 
-        sx={{ 
-          pt: { xs: 15, md: 20 }, 
-          pb: { xs: 8, md: 10 }, 
+      <Box
+        sx={{
+          pt: { xs: 15, md: 20 },
+          pb: { xs: 8, md: 10 },
           position: "relative",
           background: "radial-gradient(circle at 0% 0%, rgba(124, 58, 237, 0.03) 0%, transparent 50%)"
         }}
@@ -130,7 +130,7 @@ const ContactUs = () => {
       {/* --- Main Content Section --- */}
       <Container maxWidth="lg" sx={{ pb: 15, position: "relative", zIndex: 2 }}>
         <Grid container spacing={8}>
-          
+
           {/* Left Side: Contact Information Cards */}
           <Grid item xs={12} md={5}>
             <Stack spacing={4}>
@@ -287,8 +287,8 @@ const ContactUs = () => {
               </Grid>
 
               <Box sx={{ mt: 5, display: "flex", alignItems: "center", justifyContent: "center", gap: 1, opacity: 0.6 }}>
-                 <CheckCircle2 size={16} color="#10b981" />
-                 <Typography variant="caption" sx={{ fontWeight: 600, color: "#475569" }}>We value your privacy. No spam, ever.</Typography>
+                <CheckCircle2 size={16} color="#10b981" />
+                <Typography variant="caption" sx={{ fontWeight: 600, color: "#475569" }}>We value your privacy. No spam, ever.</Typography>
               </Box>
             </Paper>
           </Grid>
@@ -297,11 +297,11 @@ const ContactUs = () => {
       </Container>
 
       {/* --- Immersive Map Section --- */}
-      <Box 
-        sx={{ 
-          width: "100%", 
-          height: { xs: "400px", md: "500px" }, 
-          overflow: "hidden", 
+      <Box
+        sx={{
+          width: "100%",
+          height: { xs: "400px", md: "500px" },
+          overflow: "hidden",
           mb: 0,
           opacity: 0.8,
           filter: "grayscale(100%) invert(90%) contrast(90%) brightness(100%)",
@@ -310,7 +310,7 @@ const ContactUs = () => {
         }}
       >
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3256.1292890259033!2d77.61608037413626!3d12.899691016452715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14d10c31c9a1%3A0x4f51c10549606b0b!2sSELF%20DRIVE%20CARS%20RENTAL%20TRAVEL%20GO%20MOTORS!5e1!3m2!1sen!2sin!4v1758111024662!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62212.51716287016!2d77.5237741!3d12.9537777!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe056fcea967b0b9%3A0x51f71b29354f23f7!2sVihaan%20Innovations!5e0!3m2!1sen!2sin!4v1776674903305!5m2!1sen!2sin"
           width="100%"
           height="100%"
           style={{ border: 0 }}

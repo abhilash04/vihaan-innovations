@@ -5,11 +5,13 @@ import { motion } from 'framer-motion';
 import { Calendar, Clock, Eye, ArrowRight, Share2, Bookmark, CheckCircle2, Mail } from 'lucide-react';
 import { config } from '../../../../config/Config';
 import { apiList, invokeApi } from '../../../../services/ApiServices';
+import NotFound from '../../NotFound';
 
 const BlogDetailingPage = ({ blogData: propData }) => {
     const { ogUrl } = useParams();
     const [blogData, setBlogData] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [notFound, setNotFound] = useState(false);
     const [snackbar, setSnackbar] = useState({ open: false, message: '', severity: 'info' });
 
     const fetchBlogData = async () => {
@@ -24,9 +26,11 @@ const BlogDetailingPage = ({ blogData: propData }) => {
                 if (resData.responseCode == "200" && resData.blog && resData.blog.length > 0) {
                     setBlogData(resData.blog[0]);
                 } else {
+                    setNotFound(true);
                     handleError("Blog not found.");
                 }
             } else {
+                setNotFound(true);
                 handleError("Failed to connect to the article service.");
             }
         } catch (error) {
@@ -59,6 +63,10 @@ const BlogDetailingPage = ({ blogData: propData }) => {
                 <CircularProgress color="primary" />
             </Box>
         );
+    }
+
+    if (notFound) {
+        return <NotFound />;
     }
 
     return (

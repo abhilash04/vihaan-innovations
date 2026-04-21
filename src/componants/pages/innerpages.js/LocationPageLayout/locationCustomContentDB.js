@@ -6735,6 +6735,80 @@ export const customWebDevLocationContent = {
           "text": "Dependable team with strong technical delivery."
         }
       ]
+    },
+    "ghaziabad": {
+      "hero": {
+        "title": "Professional Website Development Services in Ghaziabad",
+        "badge": "Ghaziabad\u2019s Trusted Digital Growth Partner",
+        "subtext": "We deliver result-driven website development services in Ghaziabad to help businesses build fast, scalable, and high-performing digital platforms."
+      },
+      "services": {
+        "title": "Complete Website Development Services in Ghaziabad",
+        "cards": [
+          { "title": "UI / UX Design", "desc": "Modern designs that improve user engagement and usability." },
+          { "title": "Web Design & Development", "desc": "Custom websites optimized for speed and SEO." },
+          { "title": "Mobile App Development", "desc": "High-performance apps for seamless functionality." },
+          { "title": "Custom Application Development", "desc": "Tailored solutions built for business growth." },
+          { "title": "Cloud-Based Development", "desc": "Reliable and scalable cloud-powered systems." },
+          { "title": "Ecommerce Development", "desc": "Conversion-focused online stores designed to boost sales." }
+        ]
+      },
+      "seoContent": {
+        "title": "Grow Your Business with Website Development Services in Ghaziabad",
+        "paragraphs": [
+          "Our website development services in Ghaziabad help businesses create impactful digital platforms.",
+          "We build fast, responsive, and SEO-friendly websites to improve visibility and reach.",
+          "Our focus is on performance, user experience, and long-term success."
+        ],
+        "highlight": {
+          "title": "Stand Out in Ghaziabad\u2019s Competitive Market",
+          "text": "We create high-performance websites that give your business a strong competitive edge."
+        },
+        "sidebar": {
+          "title": "Strategic Approach for Ghaziabad Businesses",
+          "items": [
+            { "t": "Local Market Insights", "d": "Understanding audience behavior and trends" },
+            { "t": "Performance Optimization", "d": "Fast, responsive, and SEO-ready websites" },
+            { "t": "Growth-Focused Solutions", "d": "Designed to increase leads and conversions" },
+            { "t": "Reliable Development", "d": "Secure and scalable solutions" }
+          ]
+        }
+      },
+      "process": {
+        "title": "Our Website Development Process in Ghaziabad",
+        "steps": [
+          { "title": "Strategy & Research", "desc": "We analyze your business and target audience." },
+          { "title": "Design & Planning", "desc": "We create user-friendly and structured layouts." },
+          { "title": "Development Phase", "desc": "We build scalable and efficient systems." },
+          { "title": "Testing & Optimization", "desc": "We ensure speed, security, and performance." },
+          { "title": "Launch & Support", "desc": "We deploy and support continuous growth." }
+        ]
+      },
+      "about": {
+        "title": "Why Choose Our Website Development Services in Ghaziabad",
+        "description": "We deliver scalable and high-quality solutions tailored to businesses in Ghaziabad.",
+        "bullets": [
+          "Strong Local Expertise",
+          "100% Unique Solutions",
+          "Advanced Technical Skills"
+        ],
+        "features": [
+          { "title": "Local Market Knowledge", "icon": "\ud83d\udccd", "desc": "Deep understanding of Ghaziabad\u2019s business ecosystem." },
+          { "title": "Fast Execution", "icon": "\u26a1", "desc": "Efficient and agile development process." },
+          { "title": "Enterprise Solutions", "icon": "\ud83c\udfe2", "desc": "Secure and scalable web platforms." },
+          { "title": "Innovation-Driven Development", "icon": "\ud83d\udca1", "desc": "Using modern tools and technologies." },
+          { "title": "Future-Ready Systems", "icon": "\ud83d\ude80", "desc": "Designed for scalability and growth." },
+          { "title": "Global Standards", "icon": "\ud83c\udf10", "desc": "Maintaining top industry benchmarks." }
+        ]
+      },
+      "testimonials": {
+        "title": "Client Feedback on Our Website Development Services in Ghaziabad",
+        "items": [
+          { "author": "Rohit Sharma", "role": "CEO, WebCore Solutions", "text": "Excellent service. Our website performance improved significantly." },
+          { "author": "Neha Gupta", "role": "Founder, StyleAura Ghaziabad", "text": "Very professional team with great design quality." },
+          { "author": "Amit Verma", "role": "CTO, TechAxis Systems", "text": "Reliable team with strong technical expertise." }
+        ]
+      }
     }
   }
 };
