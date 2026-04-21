@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Button, Grid, Container } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 
 const ResortHero = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box
       sx={{
@@ -97,6 +99,7 @@ const ResortHero = () => {
               <Box sx={{ display: "flex", gap: 2, mb: 3 }}>
                 <Button
                   variant="contained"
+                  onClick={() => setOpenPopup(true)}
                   sx={{
                     fontFamily: "'Outfit', sans-serif",
                     bgcolor: "#D4AF37",
@@ -128,7 +131,7 @@ const ResortHero = () => {
                 >
                   Start Free Trial
                 </Button>
-                <Button
+                {/* <Button
                   variant="outlined"
                   sx={{
                     fontFamily: "'Outfit', sans-serif",
@@ -145,7 +148,7 @@ const ResortHero = () => {
                   }}
                 >
                   View Features
-                </Button>
+                </Button> */}
               </Box>
             </motion.div>
 
@@ -288,6 +291,7 @@ const ResortHero = () => {
           </Grid>
         </Grid>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

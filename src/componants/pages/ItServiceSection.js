@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Box, Grid, Typography, Button, Tabs, Tab, Stack } from "@mui/material";
+import PopUps from "../common/PopUps";
 import { motion } from "framer-motion";
 import img1 from "../../assets/first page.png";
 import img2 from "../../assets/first page 1.png";
@@ -7,6 +8,7 @@ import img3 from "../../assets/first page 2.png";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 const ITServiceSection = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   const [tabValue, setTabValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -214,6 +216,7 @@ const ITServiceSection = () => {
             <Stack direction="row" spacing={5} alignItems="center" mt={2}>
               <Button
                 variant="contained"
+                onClick={() => setOpenPopup(true)}
                 sx={{
                   backgroundColor: "#0087c9",
                   borderRadius: "20px",
@@ -285,6 +288,7 @@ const ITServiceSection = () => {
           </Box>
         </Grid>
       </Grid>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

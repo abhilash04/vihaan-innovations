@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, Typography, Box, Button } from "@mui/material";
+import PopUps from "../../../common/PopUps";
 import img from "../../../../assets/homePageGirlImg.svg";
 import banner from "../../../../assets/FreeTrailBanner.png";
 const DayFreeTrial = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box
       sx={{
@@ -23,7 +25,7 @@ const DayFreeTrial = () => {
               alt="IT Consultation"
               sx={{
                 width: "100%",
-                height:'500px',
+                height: '500px',
                 objectFit: "cover",
               }}
             />
@@ -39,18 +41,18 @@ const DayFreeTrial = () => {
               mt: 3.5,
             }}
           >
-            <Box sx={{ width: "100%", px:14}}>
+            <Box sx={{ width: "100%", px: 14 }}>
               <Typography
                 variant="h6"
                 sx={{
                   fontSize: "45px",
                   lineHeight: "55px",
-                  color:'white',
+                  color: 'white',
                   mb: 4,
                 }}
               >
                 Enjoy A{" "}
-                <span style={{ color: "#f7931e", fontWeight:600 }}>30-Day Free Trial</span> With
+                <span style={{ color: "#f7931e", fontWeight: 600 }}>30-Day Free Trial</span> With
                 No Advance Payment.
               </Typography>
 
@@ -66,6 +68,7 @@ const DayFreeTrial = () => {
               >
                 <Button
                   variant="contained"
+                  onClick={() => setOpenPopup(true)}
                   sx={{
                     backgroundColor: "#103f6f",
                     color: "white",
@@ -86,6 +89,7 @@ const DayFreeTrial = () => {
           </Grid>
         </Grid>
       </Box>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };
