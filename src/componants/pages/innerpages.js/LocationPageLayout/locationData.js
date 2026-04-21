@@ -12,7 +12,7 @@ export const majorIndianCities = [
   "Kolkata", "Lucknow", "Jaipur", "Indore", "Kochi", "Coimbatore", "Nagpur",
   "Ludhiana", "Agra", "Surat", "Madurai", "Vadodara", "Meerut",
   "Thiruvananthapuram", "Nashik", "Gurgaon", "Noida", "Chandigarh",
-  "Visakhapatnam", "Bhopal", "Patna", "Ghazaibad"
+  "Visakhapatnam", "Bhopal", "Patna", "Ghaziabad"
 ];
 
 export const globalCities = [
@@ -326,12 +326,14 @@ export const getContentForLocation = (location, serviceType, mode = "service", d
         about: {
           title: customMatch.about.title,
           content: customMatch.about.description,
-          features: customMatch.about.features
+          features: customMatch.about.features,
+          bullets: customMatch.about.bullets
         },
         seoContent: {
           heading: customMatch.seoContent.title,
           paragraphs: customMatch.seoContent.paragraphs,
-          highlight: customMatch.seoContent.highlight
+          highlight: customMatch.seoContent.highlight,
+          sidebar: customMatch.seoContent.sidebar
         },
         process: customProcess,
         customTestimonials: customMatch.testimonials

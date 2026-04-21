@@ -244,6 +244,7 @@ export default function SwitchingCards() {
                   component="img"
                   src={current.image}
                   alt={current.subtitle}
+                  fetchPriority={current.id === 1 ? "high" : "auto"}
                   sx={{
                     width: "100%",
                     height: { xs: "220px", sm: "300px", md: "400px" },

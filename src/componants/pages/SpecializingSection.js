@@ -88,6 +88,7 @@ const ServiceCard = ({ service }) => (
       component="img"
       src={service.icon}
       alt={service.title}
+      loading="lazy"
       sx={{ width: 100, height: 100, marginY: 2 }}
     />
     <CardContent sx={{ p: 0 }}>
