@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Button, Container, Grid } from "@mui/material";
 import { motion } from "framer-motion";
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import phone1 from "../../../../assets/foodiv_web_img.png";
+import PopUps from "../../../common/PopUps";
 
 const benefits = [
   "No commission",
@@ -13,6 +14,7 @@ const benefits = [
 ];
 
 const ThirdPartyApps = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box sx={{ backgroundColor: "#1e1e2d", py: { xs: 4, md: 6 }, overflow: "hidden" }}>
       <Container maxWidth="lg">
@@ -66,6 +68,7 @@ const ThirdPartyApps = () => {
 
               <Button
                 variant="contained"
+                onClick={() => setOpenPopup(true)}
                 sx={{
                   backgroundColor: "#ff6f1e",
                   color: "#fff",
@@ -161,6 +164,7 @@ const ThirdPartyApps = () => {
 
         </Grid>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

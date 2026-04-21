@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Typography,
@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { keyframes, styled } from "@mui/system";
+import PopUps from "../../../common/PopUps";
 
 // Animations
 const fadeInUp = keyframes`
@@ -134,6 +135,7 @@ const pricingPlans = [
 ];
 
 const PricingCards = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box sx={{ py: 8, backgroundColor: "#fff" }}>
       <Container maxWidth="lg">
@@ -198,6 +200,7 @@ const PricingCards = () => {
 
                   <PlanButton
                     variant={plan.recommended ? "contained" : "outlined"}
+                    onClick={() => setOpenPopup(true)}
                     fullWidth
                   >
                     {plan.buttonText}
@@ -246,6 +249,7 @@ const PricingCards = () => {
           </Typography>
           <PlanButton
             variant="contained"
+            onClick={() => setOpenPopup(true)}
             sx={{
               px: 5,
               py: 2,
@@ -262,6 +266,7 @@ const PricingCards = () => {
           </PlanButton>
         </Box>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

@@ -211,6 +211,8 @@ const EcommerceSingleRenderAboutUs = () => {
                             </Typography>
                             <Button
                                 variant="contained"
+                                component="a"
+                                href="https://www.vihaaninnovations.com/services/ecommerce-software-development"
                                 endIcon={<ArrowForwardIcon />}
                                 sx={{
                                     background: "linear-gradient(to right, #025170, #5699c1)",

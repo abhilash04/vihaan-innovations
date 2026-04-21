@@ -19,6 +19,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import CodeIcon from '@mui/icons-material/Code';
 import DnsIcon from '@mui/icons-material/Dns';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import PopUps from "../common/PopUps";
 
 // ----------------------------------------------------------------------
 // Keyframes & Styled Components
@@ -57,6 +58,7 @@ const IconContainer = styled(Box)(({ color }) => ({
 // ----------------------------------------------------------------------
 // Data
 // ----------------------------------------------------------------------
+
 
 const scrollItems = [
   {
@@ -130,6 +132,7 @@ const Counter = ({ target, duration = 1500 }) => {
 // ----------------------------------------------------------------------
 
 const ScrollFormComponent = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   const [scrollIndex, setScrollIndex] = useState(0);
   const [pauseScroll, setPauseScroll] = useState(false);
 
@@ -301,6 +304,7 @@ const ScrollFormComponent = () => {
                 <Box sx={{ display: "flex", gap: 2, mb: 5, flexWrap: "wrap" }}>
                   <Button
                     variant="contained"
+                    onClick={() => setOpenPopup(true)}
                     sx={{
                       bgcolor: "#006cff",
                       color: "#fff",
@@ -321,7 +325,8 @@ const ScrollFormComponent = () => {
                         left: "-100%",
                         width: "100%",
                         height: "100%",
-                        background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
+                        background:
+                          "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
                         transition: "all 0.6s ease",
                       },
                       "&:hover": {
@@ -335,15 +340,20 @@ const ScrollFormComponent = () => {
                     }}
                   >
                     Get Free Consultation
+
                     <ArrowForwardIosIcon
                       sx={{
                         fontSize: 14,
                         ml: 1,
                         transition: "transform 0.2s",
-                        "&:hover": { transform: "translateX(4px)" },
                       }}
                     />
                   </Button>
+                  {/* ADD POPUP HERE */}
+                  <PopUps
+                    open={openPopup}
+                    handleClose={() => setOpenPopup(false)}
+                  />
 
                   <Button
                     variant="outlined"

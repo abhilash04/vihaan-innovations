@@ -6,6 +6,7 @@ import FastfoodIcon from "@mui/icons-material/Fastfood";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import imgFoodie from "../../../../assets/local-food.webp";
 import imgRestaurant from "../../../../assets/order-management.webp";
+import PopUps from "../../../common/PopUps";
 
 const tabData = {
   foodies: {
@@ -55,6 +56,7 @@ const tabData = {
 };
 
 export default function FoodDiscovery() {
+  const [openPopup, setOpenPopup] = useState(false);
   const [activeTab, setActiveTab] = useState("foodies");
   const content = tabData[activeTab];
 
@@ -168,6 +170,7 @@ export default function FoodDiscovery() {
 
                 <Button
                   variant="contained"
+                  onClick={() => setOpenPopup(true)}
                   sx={{
                     backgroundColor: activeTab === 'foodies' ? '#ff6f1e' : '#1b25a8',
                     px: 4, py: 1.5,
@@ -190,8 +193,8 @@ export default function FoodDiscovery() {
             </Grid>
           </motion.div>
         </AnimatePresence>
-
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 }

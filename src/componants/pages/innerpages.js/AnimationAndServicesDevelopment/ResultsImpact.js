@@ -40,7 +40,7 @@ const ResultsImpact = () => {
       }}
     >
       {/* Background Watermark - Dark Optimized */}
-      <Box
+      {/* <Box
         sx={{
           position: "absolute",
           inset: 0,
@@ -55,28 +55,28 @@ const ResultsImpact = () => {
          <svg width="400" height="400" viewBox="0 0 24 24" fill="white">
             <path d="M13 21h-2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1zm-5 0H6a1 1 0 0 1-1-1V10a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1zm10 0h-2a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1z" />
          </svg>
-      </Box>
+      </Box> */}
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
         <Stack spacing={2} alignItems="center" textAlign="center" sx={{ mb: 10 }}>
-          <Typography 
-            variant="h2" 
-            sx={{ 
-              fontSize: { xs: "32px", md: "46px" }, 
-              fontWeight: 900, 
-              fontFamily: "'Syne', sans-serif", 
-              color: "white", 
-              lineHeight: 1.1 
+          <Typography
+            variant="h2"
+            sx={{
+              fontSize: { xs: "32px", md: "46px" },
+              fontWeight: 900,
+              fontFamily: "'Syne', sans-serif",
+              color: "white",
+              lineHeight: 1.1
             }}
           >
             Impact of Guided Website Development
           </Typography>
-          <Typography 
-            sx={{ 
-              color: "#94a3b8", 
-              maxWidth: "700px", 
-              fontSize: "18px", 
-              fontWeight: 500 
+          <Typography
+            sx={{
+              color: "#94a3b8",
+              maxWidth: "700px",
+              fontSize: "18px",
+              fontWeight: 500
             }}
           >
             Our website development services have empowered hundreds of businesses globally with tangible technical excellence.
@@ -92,22 +92,22 @@ const ResultsImpact = () => {
                 transition={{ delay: i * 0.1, duration: 0.8 }}
                 viewport={{ once: true }}
                 sx={{
-                   position: "relative",
-                   "&::after": {
-                      content: i < stats.length - 1 ? '""' : "none",
-                      position: "absolute",
-                      right: "-15%",
-                      top: "20%",
-                      height: "60%",
-                      width: "1px",
-                      bgcolor: "rgba(255,255,255,0.1)",
-                      display: { xs: "none", md: "block" }
-                   }
+                  position: "relative",
+                  "&::after": {
+                    content: i < stats.length - 1 ? '""' : "none",
+                    position: "absolute",
+                    right: "-15%",
+                    top: "20%",
+                    height: "60%",
+                    width: "1px",
+                    bgcolor: "rgba(255,255,255,0.1)",
+                    display: { xs: "none", md: "block" }
+                  }
                 }}
               >
                 <Stack spacing={2} alignItems="center">
                   <Box sx={{ color: "#3b82f6", mb: 1 }}>
-                     <stat.icon size={36} />
+                    <stat.icon size={36} />
                   </Box>
                   <Typography
                     variant="h3"

@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import { keyframes, styled } from "@mui/system";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import PopUps from "../../../common/PopUps";
 
 // --- Animations ---
 const pulseGlow = keyframes`
@@ -127,6 +129,7 @@ const GrowthIcon = ({ active }) => (
 );
 
 const OrderCycle = () => {
+    const [openPopup, setOpenPopup] = useState(false);
     const [activeStep, setActiveStep] = useState(-1);
 
     // Refs for performance (Direct DOM manipulation)
@@ -438,8 +441,37 @@ const OrderCycle = () => {
                         </Box>
                     </Box>
                 ))}
-
             </Box>
+
+            {/* Get Free Demo Button */}
+            <Box sx={{ mt: 8, zIndex: 10 }}>
+                <Button
+                    variant="contained"
+                    onClick={() => setOpenPopup(true)}
+                    endIcon={<ArrowForwardIcon />}
+                    sx={{
+                        background: "linear-gradient(to right, #00d2ff, #3a7bd5)",
+                        color: "#fff",
+                        px: 6,
+                        py: 2,
+                        fontSize: "18px",
+                        fontWeight: 800,
+                        borderRadius: "50px",
+                        textTransform: "none",
+                        boxShadow: "0 10px 30px rgba(0, 210, 255, 0.4)",
+                        transition: "all 0.4s ease",
+                        "&:hover": {
+                            transform: "scale(1.05) translateY(-5px)",
+                            boxShadow: "0 15px 40px rgba(0, 210, 255, 0.6)",
+                            background: "linear-gradient(to right, #3a7bd5, #00d2ff)",
+                        }
+                    }}
+                >
+                    Get Free Demo
+                </Button>
+            </Box>
+
+            <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
         </Box>
     );
 };
