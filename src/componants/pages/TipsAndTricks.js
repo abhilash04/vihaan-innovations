@@ -78,7 +78,7 @@ const PostCard = ({ post }) => (
     <Box sx={{ position: "relative", overflow: "hidden", flexShrink: 0 }}>
       <CardMedia
         component="img"
-        height="200"
+        height="170"
         image={post.image}
         alt={post.title}
         sx={{ transition: "filter 0.4s ease", "&:hover": { filter: "grayscale(100%)" } }}
@@ -112,12 +112,12 @@ const PostCard = ({ post }) => (
       <Typography
         variant="subtitle1"
         sx={{
-          fontSize: "18px",
+          fontSize: "16px",
           fontWeight: 600,
           lineHeight: 1.4,
           color: "#0a0a0a",
           fontFamily: "Livvic",
-          mb: "15px",
+          mb: "10px",
           "&:hover": { color: "#0B70E1" },
         }}
       >
@@ -125,7 +125,7 @@ const PostCard = ({ post }) => (
       </Typography>
       <Typography
         variant="body2"
-        sx={{ fontSize: "16px", color: "#454545", fontFamily: "Livvic", mb: "15px", flexGrow: 1, "&:hover": { color: "#0B70E1" } }}
+        sx={{ fontSize: "14px", color: "#454545", fontFamily: "Livvic", mb: "10px", flexGrow: 1, "&:hover": { color: "#0B70E1" } }}
       >
         {post.description}
       </Typography>
@@ -139,36 +139,39 @@ const PostCard = ({ post }) => (
   </Card>
 );
 
-/* ─── Arrow Button ───────────────────────────────────────────────────────── */
-const ArrowBtn = ({ onClick, disabled, children }) => (
-  <IconButton
-    onClick={onClick}
-    disabled={disabled}
-    sx={{
-      borderRadius: "50%",
-      background: disabled
-        ? "rgba(0,0,0,0.15)"
-        : "linear-gradient(to right, #03228f 0%, #03228f 26%, #4e95ed 100%)",
-      color: "#fff",
-      width: 42,
-      height: 42,
-      flexShrink: 0,
-      boxShadow: 2,
-      "&:hover": {
-        background: disabled
-          ? "rgba(0,0,0,0.15)"
-          : "linear-gradient(to left, #03228f 0%, #4e95ed 100%)",
-      },
-    }}
-  >
-    {children}
-  </IconButton>
-);
+
 
 /* ─── Main Component ─────────────────────────────────────────────────────── */
 export default function TipsAndTricks() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
+  /* ─── Arrow Button ─── */
+  const ArrowBtn = ({ onClick, disabled, children }) => (
+    <IconButton
+      onClick={onClick}
+      disabled={disabled}
+      sx={{
+        borderRadius: "50%",
+        background: disabled
+          ? "rgba(0,0,0,0.15)"
+          : "linear-gradient(to right, #03228f 0%, #03228f 26%, #4e95ed 100%)",
+        color: "#fff",
+        width: isMobile ? 32 : 42,
+        height: isMobile ? 32 : 42,
+        flexShrink: 0,
+        boxShadow: 2,
+        zIndex: 10,
+        "&:hover": {
+          background: disabled
+            ? "rgba(0,0,0,0.15)"
+            : "linear-gradient(to left, #03228f 0%, #4e95ed 100%)",
+        },
+      }}
+    >
+      {children}
+    </IconButton>
+  );
 
   const visibleCount = isMobile ? 1 : 3;
   const maxIndex = posts.length - visibleCount;
@@ -204,7 +207,7 @@ export default function TipsAndTricks() {
         <Typography variant="h4" sx={{ fontWeight: "bold", fontSize: { xs: "1.6rem", md: "2.125rem" } }}>
           Explore Our Latest Insights &amp; Updates
         </Typography>
-        <Typography variant="body1" sx={{ fontSize: "16px", fontWeight: 500, color: "#444a56", mt: 1 }}>
+        <Typography variant="body1" sx={{ fontSize: "16px", fontWeight: 500, color: "#444a56", mt: 1, textAlign: "justify" }}>
           Stay informed with the newest technology trends, digital tools, and IT solutions that are shaping businesses and everyday life.
         </Typography>
         <Box sx={{ position: "relative", mt: 1, height: 4, width: 80, mx: "auto", backgroundColor: "#0066ff", borderRadius: 2 }}>
@@ -220,10 +223,14 @@ export default function TipsAndTricks() {
       </Box>
 
       {/* ── Cards Row ── */}
-      <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: { xs: 1, md: 2 } }}>
-        <ArrowBtn onClick={handlePrev} disabled={currentIndex === 0}>
-          <ArrowBackIos fontSize="small" />
-        </ArrowBtn>
+      <Box sx={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
+
+
+        {!isMobile && (
+          <ArrowBtn onClick={handlePrev} disabled={currentIndex === 0}>
+            <ArrowBackIos fontSize="small" />
+          </ArrowBtn>
+        )}
 
         {/* ── MOBILE: one card at a time with AnimatePresence ── */}
         {isMobile ? (
@@ -244,7 +251,7 @@ export default function TipsAndTricks() {
           </Box>
         ) : (
           /* ── DESKTOP: show 3 cards side by side ── */
-          <Box sx={{ display: "flex", gap: 4, width: "100%", maxWidth: 1200, alignItems: "stretch" }}>
+          <Box sx={{ display: "flex", gap: 3, width: "100%", maxWidth: 1300, alignItems: "stretch" }}>
             {posts.slice(currentIndex, currentIndex + visibleCount).map((post) => (
               <Box key={post.id} sx={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column" }}>
                 <PostCard post={post} />
@@ -253,31 +260,45 @@ export default function TipsAndTricks() {
           </Box>
         )}
 
-        <ArrowBtn onClick={handleNext} disabled={currentIndex === maxIndex}>
-          <ArrowForwardIos fontSize="small" />
-        </ArrowBtn>
+
+
+        {!isMobile && (
+          <ArrowBtn onClick={handleNext} disabled={currentIndex === maxIndex}>
+            <ArrowForwardIos fontSize="small" />
+          </ArrowBtn>
+        )}
       </Box>
 
       {/* ── Dot Indicators (mobile only) ── */}
       {isMobile && (
-        <Box sx={{ display: "flex", justifyContent: "center", gap: 0.8, mt: 2.5 }}>
-          {posts.map((_, i) => (
-            <Box
-              key={i}
-              onClick={() => {
-                setDirection(i > currentIndex ? 1 : -1);
-                setCurrentIndex(i);
-              }}
-              sx={{
-                width: i === currentIndex ? 20 : 8,
-                height: 8,
-                borderRadius: "4px",
-                backgroundColor: i === currentIndex ? "#0066ff" : "rgba(0,0,0,0.15)",
-                cursor: "pointer",
-                transition: "all 0.3s ease",
-              }}
-            />
-          ))}
+        <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 3, mt: 2.5 }}>
+          <ArrowBtn onClick={handlePrev} disabled={currentIndex === 0}>
+            <ArrowBackIos sx={{ fontSize: 14 }} />
+          </ArrowBtn>
+
+          <Box sx={{ display: "flex", gap: 0.8 }}>
+            {posts.map((_, i) => (
+              <Box
+                key={i}
+                onClick={() => {
+                  setDirection(i > currentIndex ? 1 : -1);
+                  setCurrentIndex(i);
+                }}
+                sx={{
+                  width: i === currentIndex ? 20 : 8,
+                  height: 8,
+                  borderRadius: "4px",
+                  backgroundColor: i === currentIndex ? "#0066ff" : "rgba(0,0,0,0.15)",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease",
+                }}
+              />
+            ))}
+          </Box>
+
+          <ArrowBtn onClick={handleNext} disabled={currentIndex === maxIndex}>
+            <ArrowForwardIos sx={{ fontSize: 14 }} />
+          </ArrowBtn>
         </Box>
       )}
 
@@ -288,7 +309,7 @@ export default function TipsAndTricks() {
           sx={{
             textTransform: "none",
             fontSize: "16px",
-            px: 4,
+            px: 8,
             py: 1.5,
             borderRadius: "30px",
             background: "linear-gradient(90deg, #00b4d8 0%, #0077b6 100%)",
