@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Button, Container } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 import { ArrowRight } from "lucide-react";
 
 const PortalCTABand = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box
       sx={{
@@ -92,6 +94,7 @@ const PortalCTABand = () => {
 
               <Button
                 variant="contained"
+                onClick={() => setOpenPopup(true)}
                 endIcon={<ArrowRight size={18} />}
                 sx={{
                   mt: 4,
@@ -120,6 +123,7 @@ const PortalCTABand = () => {
           </Box>
         </motion.div>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

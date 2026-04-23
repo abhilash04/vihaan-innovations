@@ -4,10 +4,10 @@ import { styled, keyframes } from "@mui/system";
 import { motion } from "framer-motion";
 import CheckIcon from "@mui/icons-material/Check";
 
-const drawPath = keyframes`
-  0% { stroke-dashoffset: 1000; }
-  100% { stroke-dashoffset: 0; }
-`;
+// const drawPath = keyframes`
+//   0% { stroke-dashoffset: 1000; }
+//   100% { stroke-dashoffset: 0; }
+// `;
 
 const pulse = keyframes`
   0% { transform: scale(1); opacity: 0.6; }
@@ -130,7 +130,7 @@ const ProcessSection = ({ data }) => {
         <Box sx={{ position: "relative", display: { xs: "none", md: "block" }, height: "480px", mt: 3 }}>
 
           {/* SVG Background Curve */}
-          <svg
+          {/* <svg
             width="100%"
             height="100%"
             viewBox="0 0 1200 500"
@@ -151,7 +151,7 @@ const ProcessSection = ({ data }) => {
                 <stop offset="100%" stopColor="#0087c9" />
               </linearGradient>
             </defs>
-          </svg>
+          </svg> */}
 
           {/* Nodes & Cards */}
           {processSteps.map((step, index) => {

@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Button, Grid, Paper, Divider } from "@mui/material";
 import { motion } from "framer-motion";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import PopUps from "../../../common/PopUps";
 import img from '../../../../assets/hms-banner.png'
 const HMSHero = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box sx={{ background: "radial-gradient(circle at top right, #F5F7FA 0%, #FFFFFF 100%)", pt: { xs: 6, md: 8 }, pb: { xs: 6, md: 8 }, position: "relative", overflow: "hidden" }}>
       {/* Background Watermark */}
@@ -52,12 +54,17 @@ const HMSHero = () => {
               {/* Buttons */}
               <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.85 }}>
                 <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mb: 4 }}>
-                  <Button variant="contained" endIcon={<ArrowForwardIcon sx={{ transition: "0.15s", ".MuiButton-root:hover &": { transform: "translateX(4px)" } }} />} sx={{ bgcolor: "#0A2D6E", color: "#fff", fontWeight: 800, px: 3.5, py: 1.5, borderRadius: "25px", textTransform: "none", boxShadow: "0 4px 15px rgba(10, 45, 110, 0.2)", "&:hover": { bgcolor: "#0e3b8a" } }}>
+                  <Button
+                    variant="contained"
+                    endIcon={<ArrowForwardIcon sx={{ transition: "0.15s", ".MuiButton-root:hover &": { transform: "translateX(4px)" } }} />}
+                    onClick={() => setOpenPopup(true)}
+                    sx={{ bgcolor: "#0A2D6E", color: "#fff", fontWeight: 800, px: 3.5, py: 1.5, borderRadius: "25px", textTransform: "none", boxShadow: "0 4px 15px rgba(10, 45, 110, 0.2)", "&:hover": { bgcolor: "#0e3b8a" } }}
+                  >
                     Get Free Demo
                   </Button>
-                  <Button variant="outlined" sx={{ borderColor: "#0A2D6E", color: "#0A2D6E", fontWeight: 800, px: 3.5, py: 1.5, borderRadius: "25px", textTransform: "none", borderWidth: "2px", "&:hover": { borderWidth: "2px", bgcolor: "rgba(10, 45, 110, 0.03)" } }}>
+                  {/* <Button variant="outlined" sx={{ borderColor: "#0A2D6E", color: "#0A2D6E", fontWeight: 800, px: 3.5, py: 1.5, borderRadius: "25px", textTransform: "none", borderWidth: "2px", "&:hover": { borderWidth: "2px", bgcolor: "rgba(10, 45, 110, 0.03)" } }}>
                     View Features
-                  </Button>
+                  </Button> */}
                 </Box>
               </motion.div>
 
@@ -121,6 +128,7 @@ const HMSHero = () => {
           </Grid>
         </Grid>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

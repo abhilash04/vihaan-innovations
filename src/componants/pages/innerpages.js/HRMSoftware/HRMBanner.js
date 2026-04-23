@@ -36,9 +36,9 @@ const HRMBanner = () => (
               <Button variant="contained" sx={{ bgcolor: "#f97316", color: "#fff", fontWeight: 800, px: 4, py: 1.5, borderRadius: "25px", textTransform: "none", fontSize: "14px", boxShadow: "0 6px 20px rgba(249,115,22,0.4)", "&:hover": { bgcolor: "#ea580c" } }}>
                 Get Started
               </Button>
-              <Button variant="outlined" sx={{ borderColor: "rgba(255,255,255,0.2)", color: "#ffffff", fontWeight: 700, px: 4, py: 1.5, borderRadius: "25px", textTransform: "none", fontSize: "14px", "&:hover": { borderColor: "#fff" } }}>
+              {/* <Button variant="outlined" sx={{ borderColor: "rgba(255,255,255,0.2)", color: "#ffffff", fontWeight: 700, px: 4, py: 1.5, borderRadius: "25px", textTransform: "none", fontSize: "14px", "&:hover": { borderColor: "#fff" } }}>
                 Explore More
-              </Button>
+              </Button> */}
             </Box>
           </motion.div>
         </Grid>

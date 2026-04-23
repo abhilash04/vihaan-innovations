@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Button, Grid } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 import img from '../../../../assets/edu-crm-tech-img.png'
 
 const EducationBanner = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box
       sx={{
@@ -62,12 +64,16 @@ const EducationBanner = () => {
               </Typography>
 
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mb: 5 }}>
-                <Button variant="contained" sx={{ bgcolor: "#00B4D8", color: "#fff", px: 4, py: 1.5, borderRadius: "30px", fontWeight: 700, textTransform: "none", "&:hover": { bgcolor: "#0096b4" } }}>
+                <Button
+                  variant="contained"
+                  onClick={() => setOpenPopup(true)}
+                  sx={{ bgcolor: "#00B4D8", color: "#fff", px: 4, py: 1.5, borderRadius: "30px", fontWeight: 700, textTransform: "none", "&:hover": { bgcolor: "#0096b4" } }}
+                >
                   Get Free Demo
                 </Button>
-                <Button variant="outlined" sx={{ color: "#fff", borderColor: "rgba(255,255,255,0.3)", px: 4, py: 1.5, borderRadius: "30px", fontWeight: 600, textTransform: "none", "&:hover": { borderColor: "#fff" } }}>
+                {/* <Button variant="outlined" sx={{ color: "#fff", borderColor: "rgba(255,255,255,0.3)", px: 4, py: 1.5, borderRadius: "30px", fontWeight: 600, textTransform: "none", "&:hover": { borderColor: "#fff" } }}>
                   Explore Education CRM Features
-                </Button>
+                </Button> */}
               </Box>
             </motion.div>
           </Grid>
@@ -80,6 +86,7 @@ const EducationBanner = () => {
           </Grid>
         </Grid>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

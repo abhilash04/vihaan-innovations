@@ -34,9 +34,9 @@ const MobileWorkingRoadmap = () => {
       </Typography>
 
       {/* Stacked Timeline/List for Mobile avoiding overlap circles */}
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 2, alignItems: "flex-start", maxWidth: "340px", mx: "auto", textAlign: "left" }}>
+      <Box sx={{ display: "flex", flexDirection: "column", gap: 2, alignItems: "flex-start", maxWidth: "280px", mx: "auto", textAlign: "left" }}>
         {roadmapItems.map((item) => (
-          <Box key={item.id} sx={{ display: "flex", alignItems: "center", gap: 2, width: "100%", p: 1.5, borderRadius: "12px", bgcolor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.06)" }}>
+          <Box key={item.id} sx={{ display: "flex", alignItems: "center", gap: 2, width: "90%", p: 1.5, borderRadius: "12px", bgcolor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.06)" }}>
             <Box sx={{ width: 44, height: 44, borderRadius: "12px", bgcolor: item.bgColor, display: "flex", justifyContent: "center", alignItems: "center", flexShrink: 0, boxShadow: "0 4px 10px rgba(0,0,0,0.1)" }}>
               {item.icon}
             </Box>

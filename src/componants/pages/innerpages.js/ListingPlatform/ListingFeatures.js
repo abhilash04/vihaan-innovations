@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import EditNoteIcon from '@mui/icons-material/EditNote';
@@ -9,6 +9,7 @@ import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import FindInPageIcon from '@mui/icons-material/FindInPage';
 import StarRateIcon from '@mui/icons-material/StarRate';
+import PopUps from "../../../common/PopUps";
 
 const features = [
   { icon: <EditNoteIcon />, title: "Listing Submission", desc: "Easily allow users to submit listings with a smooth and guided process, optimized for top listing sites for business platforms.", color: "#3b82f6" },
@@ -73,6 +74,8 @@ const FeatureCard = ({ icon, title, desc, color, delay }) => (
 );
 
 const ListingFeatures = () => {
+  const [openPopup, setOpenPopup] = useState(false);
+
   return (
     <Box sx={{ bgcolor: "#fafafa", py: 8 }}>
       <Container maxWidth="lg">
@@ -103,6 +106,7 @@ const ListingFeatures = () => {
         <Box sx={{ textAlign: "center" }}>
           <Button
             variant="contained"
+            onClick={() => setOpenPopup(true)}
             sx={{
               bgcolor: "#2563eb",
               color: "#ffffff",
@@ -124,6 +128,7 @@ const ListingFeatures = () => {
         </Box>
 
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

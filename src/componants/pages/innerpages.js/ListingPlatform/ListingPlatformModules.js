@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Container, Typography, Grid, Paper, Tabs, Tab, Button } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 
 const tabNames = [
   "Listing Management",
@@ -105,6 +106,7 @@ const moduleData = {
 
 const ListingPlatformModules = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [openPopup, setOpenPopup] = useState(false);
 
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);
@@ -266,6 +268,7 @@ const ListingPlatformModules = () => {
             </Typography>
             <Button
               variant="contained"
+              onClick={() => setOpenPopup(true)}
               sx={{
                 bgcolor: "#2563eb",
                 color: "#ffffff",
@@ -288,6 +291,7 @@ const ListingPlatformModules = () => {
 
         </Box>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

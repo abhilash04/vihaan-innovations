@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
 import CloudUploadOutlinedIcon from '@mui/icons-material/CloudUploadOutlined';
@@ -171,6 +172,7 @@ const VerticalFlow = ({ steps, title, direction = "left" }) => {
 };
 
 const ListingPlatformJourney = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box
       sx={{
@@ -252,6 +254,7 @@ const ListingPlatformJourney = () => {
           </Typography>
           <Box
             component="button"
+            onClick={() => setOpenPopup(true)}
             sx={{
               bgcolor: "#2563eb",
               color: "#ffffff",
@@ -274,6 +277,7 @@ const ListingPlatformJourney = () => {
           </Box>
         </Box>
 
+        <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
       </Container>
     </Box>
   );

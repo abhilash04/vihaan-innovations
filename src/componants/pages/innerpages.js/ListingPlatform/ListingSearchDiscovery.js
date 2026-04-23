@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 import LayersIcon from '@mui/icons-material/Layers';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -18,6 +19,7 @@ const FilterDropdownMock = ({ label }) => (
 );
 
 const ListingSearchDiscovery = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box sx={{ bgcolor: "#ffffff", py: 8, overflow: "hidden" }}>
 
@@ -175,6 +177,7 @@ const ListingSearchDiscovery = () => {
           </Typography>
           <Box
             component="button"
+            onClick={() => setOpenPopup(true)}
             sx={{
               bgcolor: "#2563eb",
               color: "#ffffff",
@@ -197,6 +200,7 @@ const ListingSearchDiscovery = () => {
           </Box>
         </Box>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

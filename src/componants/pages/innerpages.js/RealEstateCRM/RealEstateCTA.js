@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 
 const RealEstateCTA = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box sx={{
       position: "relative",
@@ -61,6 +63,7 @@ const RealEstateCTA = () => {
 
             <Button
               variant="contained"
+              onClick={() => setOpenPopup(true)}
               sx={{
                 background: "linear-gradient(90deg, #00F2FE 0%, #4FACFE 100%)",
                 color: "#0B2046",
@@ -78,7 +81,6 @@ const RealEstateCTA = () => {
                 },
                 transition: "all 0.3s ease"
               }}
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               Book a Free Call
             </Button>
@@ -107,6 +109,7 @@ const RealEstateCTA = () => {
         </motion.div>
 
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };
