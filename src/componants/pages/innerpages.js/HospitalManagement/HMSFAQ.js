@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, Container, Typography, Accordion, AccordionSummary, AccordionDetails, Button, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 import AddIcon from '@mui/icons-material/Add';
+import PopUps from "../../../common/PopUps";
 
 const faqs = [
   { id: "panel1", q: "How long does typical hospital onboarding take?", a: "Most single-facility rollouts take 4-6 weeks, including data migration and staff hypercare onboarding support directly Index." },
@@ -11,6 +12,7 @@ const faqs = [
 
 const HMSFAQ = () => {
   const [expanded, setExpanded] = useState(false);
+  const [openPopup, setOpenPopup] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -46,11 +48,18 @@ const HMSFAQ = () => {
           <Paper elevation={0} sx={{ p: 4, borderRadius: "20px", background: "linear-gradient(135deg, #0A2D6E 0%, #10B981 100%)", textAlign: "center", color: "#ffffff", boxShadow: "0 15px 35px rgba(10,45,110,0.15)" }}>
             <Typography variant="h4" sx={{ fontWeight: 800, fontSize: "20px", mb: 1, fontFamily: "Plus Jakarta Sans, sans-serif" }}>Still have questions? Let's talk.</Typography>
             <Typography sx={{ color: "rgba(255,255,255,0.8)", fontSize: "12px", mb: 3 }}>Book a free 60-minute strategy call with our health consultants.</Typography>
-            <Button variant="contained" sx={{ bgcolor: "#ffffff", color: "#0A2D6E", fontWeight: 800, px: 3, py: 1.2, borderRadius: "25px", textTransform: "none", "&:hover": { bgcolor: "#f0f4f8" } }}>Book a Free Demo</Button>
+            <Button
+              variant="contained"
+              onClick={() => setOpenPopup(true)}
+              sx={{ bgcolor: "#ffffff", color: "#0A2D6E", fontWeight: 800, px: 3, py: 1.2, borderRadius: "25px", textTransform: "none", "&:hover": { bgcolor: "#f0f4f8" } }}
+            >
+              Book a Free Demo
+            </Button>
           </Paper>
         </motion.div>
 
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

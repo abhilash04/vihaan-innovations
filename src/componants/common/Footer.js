@@ -6,19 +6,18 @@ import {
   Typography,
   Link,
   Button,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
-import {
-  Email,
-  Phone,
-  LocationOn,
-  Facebook,
-  Twitter,
-  Instagram,
-  LinkedIn,
-  YouTube,
-} from "@mui/icons-material";
+import Email from "@mui/icons-material/Email";
+import Phone from "@mui/icons-material/Phone";
+import LocationOn from "@mui/icons-material/LocationOn";
+import Facebook from "@mui/icons-material/Facebook";
+import Twitter from "@mui/icons-material/Twitter";
+import Instagram from "@mui/icons-material/Instagram";
+import LinkedIn from "@mui/icons-material/LinkedIn";
+import YouTube from "@mui/icons-material/YouTube";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import PhoneIcon from "@mui/icons-material/Phone";
 import PopUps from "./PopUps";
 import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
 
@@ -276,7 +275,7 @@ const Footer = () => {
               {/* Contact Details Row */}
               <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, justifyContent: "space-between", alignItems: { xs: "flex-start", md: "center" }, mt: { xs: 2, md: 4 }, pt: { xs: 3, md: 4 }, borderTop: "1px solid #eaeaea", gap: { xs: 3, md: 3 } }}>
                 {/* Email */}
-                <Box sx={{ display: "flex", alignItems: "center", justifyContent: 'flex-start', gap: "12px", width: "100%" }}>
+                <Box sx={{ display: "flex", alignItems: "center", justifyContent: { xs: "flex-start", md: "center" }, gap: "12px", width: "100%" }}>
                   <Box sx={{ width: "40px", height: "40px", minWidth: "40px", borderRadius: "50%", backgroundColor: "#eef2f6", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <Email sx={{ fontSize: "20px", color: "#444" }} />
                   </Box>
@@ -286,7 +285,7 @@ const Footer = () => {
                 </Box>
 
                 {/* Phone */}
-                <Box sx={{ display: "flex", alignItems: "center", justifyContent: 'center', gap: "12px", width: "100%" }}>
+                <Box sx={{ display: "flex", alignItems: "center", justifyContent: { xs: "flex-start", md: "center" }, gap: "12px", width: "100%" }}>
                   <Box sx={{ width: "40px", height: "40px", minWidth: "40px", borderRadius: "50%", backgroundColor: "#eef2f6", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <Phone sx={{ fontSize: "20px", color: "#444" }} />
                   </Box>
@@ -296,11 +295,11 @@ const Footer = () => {
                 </Box>
 
                 {/* Location */}
-                <Box sx={{ display: "flex", alignItems: "flex-start", justifyContent: 'center', gap: "12px", width: "100%" }}>
+                <Box sx={{ display: "flex", alignItems: "flex-start", justifyContent: { xs: "flex-start", md: "center" }, gap: "12px", width: "100%" }}>
                   <Box sx={{ width: "40px", height: "40px", minWidth: "40px", borderRadius: "50%", backgroundColor: "#eef2f6", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <LocationOn sx={{ fontSize: "20px", color: "#444" }} />
                   </Box>
-                  <Typography variant="body1" sx={{ color: "#555", fontSize: { xs: "12px", sm: "14px" }, fontWeight: 500, mt: 1, lineHeight: 1.4 }}>
+                  <Typography variant="body1" sx={{ color: "#555", fontSize: { xs: "12px", sm: "14px" }, fontWeight: 600, mt: 1, lineHeight: 1.4 }}>
                     1st Floor, Vijayashree Layout, 2, Kodichikkanahalli Main Rd, Rotary Nagar, Bommanahalli, Bengaluru, Karnataka 560076
                   </Typography>
                 </Box>
@@ -314,7 +313,7 @@ const Footer = () => {
       <Box sx={{ borderTop: "1px solid rgba(0,0,0,0.06)", padding: "20px 0", position: "relative", zIndex: 1 }}>
         <Container maxWidth="xl" sx={{ px: { xs: 2, md: 5 } }}>
           <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <Typography variant="body2" sx={{ color: "#666", fontSize: "14px", fontWeight: 600, textAlign: 'center' }}>
+            <Typography variant="body2" sx={{ color: "#666", fontSize: { xs: "11px", sm: "14px" }, fontWeight: 600, textAlign: 'center' }}>
               © 2025 Vihaan Innovations. All rights reserved.
             </Typography>
           </Box>
@@ -325,6 +324,8 @@ const Footer = () => {
 };
 
 const FooterAndPopup = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [visible, setVisible] = useState(false);
 
   const toggleVisible = () => {
@@ -362,24 +363,24 @@ const FooterAndPopup = () => {
           aria-label="Call us"
           sx={{
             position: "fixed",
-            bottom: visible ? "108px" : "40px",
-            right: "40px",
-            width: "56px",
-            height: "56px",
+            bottom: visible ? (isMobile ? "80px" : "108px") : (isMobile ? "20px" : "40px"),
+            right: isMobile ? "20px" : "40px",
+            width: isMobile ? "48px" : "56px",
+            height: isMobile ? "48px" : "56px",
             borderRadius: "50%",
             zIndex: 99999,
             cursor: "pointer",
             backgroundColor: "#25d366",
-            display: { xs: "flex", md: "none" },
+            display: isMobile ? "flex" : "none",
             alignItems: "center",
             justifyContent: "center",
             boxShadow: "0 6px 20px rgba(37, 211, 102, 0.45)",
-            transition: "transform 0.3s ease, bottom 0.3s ease",
+            transition: "all 0.3s ease",
             textDecoration: "none",
             "&:hover": { transform: "translateY(-5px)" },
           }}
         >
-          <Phone sx={{ fontSize: 24, color: "#fff" }} />
+          <Phone sx={{ fontSize: isMobile ? 20 : 24, color: "#fff" }} />
         </Box>
 
         {/* WhatsApp — visible on all screens */}
@@ -391,10 +392,10 @@ const FooterAndPopup = () => {
           aria-label="WhatsApp"
           sx={{
             position: "fixed",
-            bottom: visible ? { xs: "176px", md: "108px" } : { xs: "108px", md: "40px" },
-            right: "40px",
-            width: "56px",
-            height: "56px",
+            bottom: visible ? (isMobile ? "140px" : "108px") : (isMobile ? "80px" : "40px"),
+            right: isMobile ? "20px" : "40px",
+            width: isMobile ? "48px" : "56px",
+            height: isMobile ? "48px" : "56px",
             borderRadius: "50%",
             zIndex: 99999,
             cursor: "pointer",
@@ -403,28 +404,27 @@ const FooterAndPopup = () => {
             alignItems: "center",
             justifyContent: "center",
             boxShadow: "0 6px 20px rgba(18, 140, 126, 0.45)",
-            transition: "transform 0.3s ease, bottom 0.3s ease",
+            transition: "all 0.3s ease",
             textDecoration: "none",
             "&:hover": { transform: "translateY(-5px)" },
           }}
         >
           {/* WhatsApp SVG icon */}
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="26" height="26" fill="#fff">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={isMobile ? "22" : "26"} height={isMobile ? "22" : "26"} fill="#fff">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
           </svg>
         </Box>
 
-        {/* Scroll to Top */}
         {visible && (
           <Box
             onClick={handleClick}
             className="pxl-scroll-top"
             sx={{
               position: "fixed",
-              bottom: "40px",
-              right: "40px",
-              width: "56px",
-              height: "56px",
+              bottom: isMobile ? "20px" : "40px",
+              right: isMobile ? "20px" : "40px",
+              width: isMobile ? "48px" : "56px",
+              height: isMobile ? "48px" : "56px",
               borderRadius: "50%",
               zIndex: 99999,
               cursor: "pointer",
@@ -433,11 +433,11 @@ const FooterAndPopup = () => {
               alignItems: "center",
               justifyContent: "center",
               boxShadow: "0 6px 20px rgba(0, 180, 216, 0.4)",
-              transition: "transform 0.3s ease",
+              transition: "all 0.3s ease",
               "&:hover": { transform: "translateY(-5px)" },
             }}
           >
-            <ArrowUpwardIcon sx={{ fontSize: 24, color: "#fff" }} />
+            <ArrowUpwardIcon sx={{ fontSize: isMobile ? 20 : 24, color: "#fff" }} />
           </Box>
         )}
       </>

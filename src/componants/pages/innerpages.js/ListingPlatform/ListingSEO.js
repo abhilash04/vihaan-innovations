@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
 const ListingSEO = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
       <Container maxWidth="lg">
@@ -60,8 +62,9 @@ const ListingSEO = () => {
                 <Typography sx={{ color: "#1a1a1a", fontWeight: 700, fontSize: "16px", mb: 2 }}>
                   Optimize Your Business Listing Website India for Maximum Traffic
                 </Typography>
-                <Box
+                {/* <Box
                   component="button"
+                  onClick={() => setOpenPopup(true)}
                   sx={{
                     bgcolor: "#2563eb",
                     color: "#ffffff",
@@ -81,7 +84,7 @@ const ListingSEO = () => {
                   }}
                 >
                   Get Started Today
-                </Box>
+                </Box> */}
               </Box>
             </motion.div>
           </Grid>
@@ -175,6 +178,7 @@ const ListingSEO = () => {
         </Grid>
 
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box >
   );
 };

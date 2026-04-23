@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Button, Grid, Container, Paper, TextField, MenuItem } from "@mui/material";
 import { styled, keyframes } from "@mui/system";
 import { motion } from "framer-motion";
@@ -12,6 +12,8 @@ import CodeIcon from "@mui/icons-material/Code";
 import BrushIcon from "@mui/icons-material/Brush";
 import DataObjectIcon from "@mui/icons-material/DataObject";
 import LayersIcon from "@mui/icons-material/Layers";
+import PopUps from "../../../../common/PopUps";
+
 
 const float = keyframes`
   0% { transform: translateY(0px); }
@@ -109,6 +111,8 @@ const ServiceHero = ({ data }) => {
     features = listItems
   } = data || {};
 
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   return (
     <HeroWrapper>
       {/* Background Orbs */}
@@ -149,7 +153,13 @@ const ServiceHero = ({ data }) => {
                 {badgeText}
               </Typography>
 
-              <GradientButton component={motion.div} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ type: "spring", stiffness: 120, delay: 1.3 }}>
+              <GradientButton
+                component={motion.div}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ type: "spring", stiffness: 120, delay: 1.3 }}
+                onClick={() => setIsPopupOpen(true)}
+              >
                 {buttonText}
               </GradientButton>
             </Box>
@@ -246,6 +256,7 @@ const ServiceHero = ({ data }) => {
 
         </Grid>
       </Container>
+      <PopUps open={isPopupOpen} handleClose={() => setIsPopupOpen(false)} />
     </HeroWrapper>
   );
 };

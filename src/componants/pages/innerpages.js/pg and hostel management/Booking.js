@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Typography,
@@ -8,10 +8,12 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
+import PopUps from "../../../common/PopUps";
 
 function Booking() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const [openPopup, setOpenPopup] = useState(false);
 
   return (
     <Box m={{ xs: 1, md: 2 }} >
@@ -69,6 +71,7 @@ function Booking() {
           >
             <Button
               variant="contained"
+              onClick={() => setOpenPopup(true)}
               sx={{
                 bgcolor: "#fff",
                 color: "#4054e6",
@@ -87,6 +90,7 @@ function Booking() {
           </Grid>
         </Grid>
       </Paper>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 }

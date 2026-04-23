@@ -8,11 +8,11 @@ import VideoCameraBackIcon from "@mui/icons-material/VideoCameraBack";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 import CallMadeIcon from '@mui/icons-material/CallMade';
 
-const float = keyframes`
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-`;
+// const float = keyframes`
+//   0% { transform: translateY(0px); }
+//   50% { transform: translateY(-10px); }
+//   100% { transform: translateY(0px); }
+// `;
 
 const categories = [
   {
@@ -134,11 +134,11 @@ const ServicesOverview = ({ data }) => {
                   </Typography>
 
                   <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", mt: "auto" }}>
-                    <Box sx={{ bgcolor: "rgba(0, 135, 201, 0.08)", border: "1px solid rgba(0, 135, 201, 0.15)", px: 1.5, py: 0.5, borderRadius: "20px" }}>
+                    {/* <Box sx={{ bgcolor: "rgba(0, 135, 201, 0.08)", border: "1px solid rgba(0, 135, 201, 0.15)", px: 1.5, py: 0.5, borderRadius: "20px" }}>
                       <Typography sx={{ color: "#0087c9", fontSize: "11px", fontWeight: 700 }}>
                         {cat.count}
                       </Typography>
-                    </Box>
+                    </Box> */}
                     <Box
                       sx={{ display: "flex", alignItems: "center", gap: 0.5, color: "#0087c9", cursor: "pointer", "&:hover": { color: "#005885" } }}
                       onClick={(e) => {

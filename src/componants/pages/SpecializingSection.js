@@ -303,6 +303,7 @@ const ServicesSection = () => {
               fontSize: { xs: "28px", md: "40px" },
               color: "#050748",
               lineHeight: { xs: "38px", md: "52px" },
+              textAlign: "justify"
             }}
           >
             Specialized Digital Solutions by Vihaan Innovations

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 
-const CARCTA = () => (
-  <Box sx={{ background: "linear-gradient(135deg, #0A1E3F 0%, #112A46 100%)", py: 8, position: "relative", overflow: "hidden" }}>
+const CARCTA = () => {
+  const [openPopup, setOpenPopup] = useState(false);
+  return (
+    <Box sx={{ background: "linear-gradient(135deg, #0A1E3F 0%, #112A46 100%)", py: 8, position: "relative", overflow: "hidden" }}>
     <Container maxWidth="md">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
         <Box sx={{ textAlign: "center" }}>
@@ -16,17 +19,23 @@ const CARCTA = () => (
             Empower your business with cutting-edge technology solutions designed to streamline operations, enhance productivity, and drive sustainable growth.
           </Typography>
           <Box sx={{ display: "flex", gap: 2, justifyContent: "center" }}>
-            <Button variant="contained" sx={{ bgcolor: "#f97316", color: "#fff", fontWeight: 800, px: 4, py: 1.5, borderRadius: "25px", textTransform: "none", boxShadow: "0 6px 20px rgba(249,115,22,0.4)", "&:hover": { bgcolor: "#ea580c" } }}>
+            <Button
+              variant="contained"
+              onClick={() => setOpenPopup(true)}
+              sx={{ bgcolor: "#f97316", color: "#fff", fontWeight: 800, px: 4, py: 1.5, borderRadius: "25px", textTransform: "none", boxShadow: "0 6px 20px rgba(249,115,22,0.4)", "&:hover": { bgcolor: "#ea580c" } }}
+            >
               Start Free Trial
             </Button>
-            <Button variant="outlined" sx={{ borderColor: "rgba(255,255,255,0.2)", color: "#fff", fontWeight: 800, px: 4, py: 1.5, borderRadius: "25px", textTransform: "none", "&:hover": { borderColor: "#fff" } }}>
+            {/* <Button variant="outlined" sx={{ borderColor: "rgba(255,255,255,0.2)", color: "#fff", fontWeight: 800, px: 4, py: 1.5, borderRadius: "25px", textTransform: "none", "&:hover": { borderColor: "#fff" } }}>
               Request Demo
-            </Button>
+            </Button> */}
           </Box>
         </Box>
       </motion.div>
     </Container>
+    <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
   </Box>
 );
+};
 
 export default CARCTA;

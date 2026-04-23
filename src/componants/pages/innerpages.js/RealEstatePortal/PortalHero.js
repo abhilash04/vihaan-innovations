@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Button, Grid, Container } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 import { ArrowRight, Home, MapPin } from "lucide-react";
 import img from '../../../../assets/Real-estate-listings.png'
 const PortalHero = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box
       sx={{
@@ -137,48 +139,49 @@ const PortalHero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Button
-                variant="contained"
-                endIcon={
-                  <motion.div whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
-                    <ArrowRight size={18} />
-                  </motion.div>
-                }
-                sx={{
-                  fontFamily: "'Inter', sans-serif",
-                  bgcolor: "#3B82F6",
-                  color: "#FFFFFF",
-                  px: 4,
-                  py: 1.8,
-                  borderRadius: "8px",
-                  fontWeight: 700,
-                  textTransform: "none",
-                  fontSize: "1rem",
-                  position: "relative",
-                  overflow: "hidden",
-                  boxShadow: "0 10px 25px rgba(59,130,246,0.3)",
-                  "&:hover": { bgcolor: "#2563EB" },
-                  // Passive Shimmer effect
-                  "&::before": {
-                    content: "''",
-                    position: "absolute",
-                    top: 0,
-                    left: "-100%",
-                    width: "50%",
-                    height: "100%",
-                    background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)",
-                    transform: "skewX(-25deg)",
-                    animation: "shimmer 3s infinite",
-                  },
-                  "@keyframes shimmer": {
-                    "0%": { left: "-100%" },
-                    "20%": { left: "150%" },
-                    "100%": { left: "150%" },
-                  },
-                }}
-              >
-                View portal Demo
-              </Button>
+                <Button
+                  variant="contained"
+                  onClick={() => setOpenPopup(true)}
+                  endIcon={
+                    <motion.div whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
+                      <ArrowRight size={18} />
+                    </motion.div>
+                  }
+                  sx={{
+                    fontFamily: "'Inter', sans-serif",
+                    bgcolor: "#3B82F6",
+                    color: "#FFFFFF",
+                    px: 4,
+                    py: 1.8,
+                    borderRadius: "8px",
+                    fontWeight: 700,
+                    textTransform: "none",
+                    fontSize: "1rem",
+                    position: "relative",
+                    overflow: "hidden",
+                    boxShadow: "0 10px 25px rgba(59,130,246,0.3)",
+                    "&:hover": { bgcolor: "#2563EB" },
+                    // Passive Shimmer effect
+                    "&::before": {
+                      content: "''",
+                      position: "absolute",
+                      top: 0,
+                      left: "-100%",
+                      width: "50%",
+                      height: "100%",
+                      background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)",
+                      transform: "skewX(-25deg)",
+                      animation: "shimmer 3s infinite",
+                    },
+                    "@keyframes shimmer": {
+                      "0%": { left: "-100%" },
+                      "20%": { left: "150%" },
+                      "100%": { left: "150%" },
+                    },
+                  }}
+                >
+                  View Demo
+                </Button>
             </motion.div>
           </Grid>
 
@@ -271,6 +274,7 @@ const PortalHero = () => {
           </Grid>
         </Grid>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

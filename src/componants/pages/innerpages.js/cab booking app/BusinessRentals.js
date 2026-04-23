@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Grid, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import { CheckCircle, ArrowRight } from "lucide-react";
+import PopUps from "../../../common/PopUps";
 
 const features = [
   "Taxi Companies — Manage taxis, drivers, and ride bookings efficiently",
@@ -13,6 +14,7 @@ const features = [
 ];
 
 const BusinessRentals = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box
       sx={{
@@ -66,6 +68,7 @@ const BusinessRentals = () => {
 
             <Button
               variant="contained"
+              onClick={() => setOpenPopup(true)}
               sx={{
                 background: "transparent",
                 color: "#1a1a1a",
@@ -162,6 +165,7 @@ const BusinessRentals = () => {
           </motion.div>
         </Grid>
       </Grid>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

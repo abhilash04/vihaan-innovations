@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import PopUps from "../../../../common/PopUps";
+
 import { Box, Container, Typography, Button, Stack } from "@mui/material";
 import { motion } from "framer-motion";
 
 const TrainingCTA = ({ data = {} }) => {
   const { title, subtitle, primaryButton, secondaryButton, footerText } = data;
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   return (
     <Box sx={{ position: "relative", bgcolor: "#0f172a", py: { xs: 6, md: 6 }, overflow: "hidden" }}>
 
@@ -53,10 +57,14 @@ const TrainingCTA = ({ data = {} }) => {
                   },
                   transition: "all 0.3s"
                 }}
+                onClick={() => {
+                  console.log("CTA button clicked, opening popup...");
+                  setIsPopupOpen(true);
+                }}
               >
                 {primaryButton || "Enroll Now →"}
               </Button>
-              <Button
+              {/* <Button
                 variant="outlined"
                 sx={{
                   borderColor: "rgba(255,255,255,0.2)",
@@ -72,7 +80,7 @@ const TrainingCTA = ({ data = {} }) => {
                 }}
               >
                 {secondaryButton || "Download Syllabus"}
-              </Button>
+              </Button> */}
             </Stack>
 
             <Typography sx={{ mt: 4, color: "rgba(255,255,255,0.5)", fontSize: "14px", fontWeight: 600 }}>
@@ -82,6 +90,7 @@ const TrainingCTA = ({ data = {} }) => {
           </Box>
         </motion.div>
       </Container>
+      <PopUps open={isPopupOpen} handleClose={() => setIsPopupOpen(false)} />
     </Box>
   );
 };

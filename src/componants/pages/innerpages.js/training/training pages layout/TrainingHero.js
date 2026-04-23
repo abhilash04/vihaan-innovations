@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import PopUps from "../../../../common/PopUps";
+
 import { Box, Typography, Container, Button, Grid, TextField, MenuItem, Chip, Paper } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { motion } from "framer-motion";
@@ -24,6 +26,8 @@ const TrainingHero = ({ data = {} }) => {
     courses = []
   } = data;
   const [formData, setFormData] = useState({ name: "", phone: "", course: "" });
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -161,10 +165,14 @@ const TrainingHero = ({ data = {} }) => {
                     },
                     transition: "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)"
                   }}
+                  onClick={() => {
+                    console.log("Training button clicked, opening popup...");
+                    setIsPopupOpen(true);
+                  }}
                 >
                   {buttonText || "Book Your Seat"}
                 </Button>
-                <Button
+                {/* <Button 
                   variant="outlined"
                   sx={{
                     borderColor: "rgba(255,255,255,0.4)",
@@ -185,7 +193,7 @@ const TrainingHero = ({ data = {} }) => {
                   }}
                 >
                   {secondaryButtonText || "Get Brochure"}
-                </Button>
+                </Button> */}
               </Box>
             </motion.div>
           </Grid>
@@ -361,6 +369,7 @@ const TrainingHero = ({ data = {} }) => {
           </Grid>
         </Grid>
       </Container>
+      <PopUps open={isPopupOpen} handleClose={() => setIsPopupOpen(false)} />
     </Box>
   );
 };
