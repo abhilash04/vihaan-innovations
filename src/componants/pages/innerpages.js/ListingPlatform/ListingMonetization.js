@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import WebAssetIcon from '@mui/icons-material/WebAsset';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
@@ -86,6 +87,7 @@ const MoneyCard = ({ title, desc, icon, color, delay }) => (
 );
 
 const ListingMonetization = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box sx={{ bgcolor: "#f8fafc", py: 8 }}> {/* Light grayish background */}
       <Container maxWidth="lg">
@@ -119,6 +121,7 @@ const ListingMonetization = () => {
           </Typography>
           <Box
             component="button"
+            onClick={() => setOpenPopup(true)}
             sx={{
               bgcolor: "#2563eb",
               color: "#ffffff",
@@ -141,6 +144,7 @@ const ListingMonetization = () => {
           </Box>
         </Box>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

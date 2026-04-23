@@ -1,11 +1,11 @@
 import React from "react";
-import { Box, Typography, Grid, Container, Paper, Button } from "@mui/material";
+import { Box, Typography, Grid, Container, Paper, } from "@mui/material";
 import { styled } from "@mui/system";
 import PeopleIcon from "@mui/icons-material/People";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import MemoryIcon from "@mui/icons-material/Memory";
 import HeadsetMicIcon from "@mui/icons-material/HeadsetMic";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+// import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const reasonCards = [
   {
@@ -43,8 +43,11 @@ const ReasonCard = styled(Paper)(({ theme, bordercolor }) => ({
   border: "1px solid rgba(0, 0, 0, 0.04)",
   borderTop: `4px solid ${bordercolor}`,
   borderRadius: "16px",
-  padding: "32px",
+  padding: "24px",
   height: "100%",
+  display: "flex",
+  flexDirection: "column",
+  width: "100%",
   transition: "all 0.3s ease",
   position: "relative",
   overflow: "hidden",
@@ -55,16 +58,16 @@ const ReasonCard = styled(Paper)(({ theme, bordercolor }) => ({
   },
 }));
 
-const Watermark = styled(Typography)(({ theme }) => ({
-  position: "absolute",
-  bottom: "-30px",
-  right: "-10px",
-  fontSize: "120px",
-  fontWeight: 900,
-  color: "rgba(0, 0, 0, 0.02)",
-  fontFamily: "Urbanist, sans-serif",
-  userSelect: "none",
-}));
+// const Watermark = styled(Typography)(({ theme }) => ({
+//   position: "absolute",
+//   bottom: "-30px",
+//   right: "-10px",
+//   fontSize: "120px",
+//   fontWeight: 900,
+//   color: "rgba(0, 0, 0, 0.02)",
+//   fontFamily: "Urbanist, sans-serif",
+//   userSelect: "none",
+// }));
 
 const WhyChooseUs = ({ data }) => {
   const {
@@ -114,7 +117,7 @@ const WhyChooseUs = ({ data }) => {
               ))}
             </Grid>
 
-            <Button
+            {/* <Button
               variant="text"
               sx={{
                 color: "#0087c9",
@@ -126,44 +129,42 @@ const WhyChooseUs = ({ data }) => {
               }}
             >
               Read Our Story <ArrowForwardIcon sx={{ fontSize: 16 }} />
-            </Button>
+            </Button> */}
           </Grid>
 
           {/* Right Column - 2x2 Grid */}
           <Grid item xs={12} md={7} >
-            <Grid container spacing={3}>
+            <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", sm: "repeat(2, 1fr)" }, gap: 4, gridAutoRows: "1fr" }}>
               {reasons.map((card, i) => {
                 const SvgIcon = card.icon;
                 return (
-                  <Grid item xs={12} sm={6} key={i} mb={8}>
-                    <ReasonCard bordercolor={card.color}>
-                      <Box
-                        sx={{
-                          width: "48px",
-                          height: "48px",
-                          borderRadius: "12px",
-                          bgcolor: `${card.color}10`,
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          color: card.color,
-                          mb: 3,
-                        }}
-                      >
-                        <SvgIcon />
-                      </Box>
-                      <Typography variant="h6" sx={{ color: "#0a2233", fontWeight: 800, mb: 1, fontSize: "18px", fontFamily: "Urbanist, sans-serif" }}>
-                        {card.title}
-                      </Typography>
-                      <Typography sx={{ color: "#64748b", fontSize: "14px", lineHeight: 1.6 }}>
-                        {card.desc}
-                      </Typography>
-                      <Watermark>{card.number}</Watermark>
-                    </ReasonCard>
-                  </Grid>
+                  <ReasonCard key={i} bordercolor={card.color}>
+                    <Box
+                      sx={{
+                        width: "48px",
+                        height: "32px",
+                        borderRadius: "12px",
+                        bgcolor: `${card.color}10`,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        color: card.color,
+
+                      }}
+                    >
+                      <SvgIcon />
+                    </Box>
+                    <Typography variant="h6" sx={{ color: "#0a2233", fontWeight: 800, mb: 1, fontSize: "17px", fontFamily: "Urbanist, sans-serif" }}>
+                      {card.title}
+                    </Typography>
+                    <Typography sx={{ color: "#64748b", fontSize: "14px", lineHeight: 1.6 }}>
+                      {card.desc}
+                    </Typography>
+                    {/* <Watermark>{card.number}</Watermark> */}
+                  </ReasonCard>
                 );
               })}
-            </Grid>
+            </Box>
           </Grid>
 
         </Grid>

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Button, Grid } from "@mui/material";
 import { motion } from "framer-motion";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import PopUps from "../../../common/PopUps";
+
 import img from '../../../../assets/real-estate-tech.png'
 
 const RealEstateBanner = () => {
+  const [openPopup, setOpenPopup] = useState(false);
+
   return (
     <Box
       sx={{
@@ -123,29 +127,11 @@ const RealEstateBanner = () => {
                       boxShadow: "0 15px 25px rgba(0, 242, 254, 0.4)",
                     }
                   }}
+                  onClick={() => setOpenPopup(true)}
                 >
                   Request a Live Demo
                 </Button>
 
-                <Button
-                  variant="outlined"
-                  sx={{
-                    borderColor: "linear-gradient(90deg, #4FACFE 0%, #00F2FE 100%)",
-                    color: "#000",
-                    fontWeight: 600,
-                    fontSize: "16px",
-                    px: 4,
-                    py: 1.5,
-                    borderRadius: "30px",
-                    textTransform: "none",
-                    "&:hover": {
-                      borderColor: "linear-gradient(90deg, #329af4ff 0%, #00a1aaff 100%)",
-                      bgcolor: "rgba(255,255,255,0.05)",
-                    }
-                  }}
-                >
-                  View Features
-                </Button>
               </Box>
             </motion.div>
           </Grid>
@@ -159,7 +145,9 @@ const RealEstateBanner = () => {
 
         </Grid>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
+
   );
 };
 

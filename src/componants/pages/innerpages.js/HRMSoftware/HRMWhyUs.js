@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import PopUps from "../../../common/PopUps";
 
 const checklists = [
   "Customizable HRM Solutions",
@@ -10,52 +11,56 @@ const checklists = [
   "24/7 Support",
 ];
 
-const HRMWhyUs = () => (
-  <Box sx={{ background: "linear-gradient(135deg, #0A1E3F 0%, #0A192F 100%)", py: 8, position: "relative", overflow: "hidden" }}>
-    <Container maxWidth="lg">
-      <Grid container spacing={5} alignItems="center" sx={{ px: 2 }}>
-        {/* Left Side stats photo placeholder */}
-        <Grid item xs={12} md={6.5}>
-          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <Paper elevation={0} sx={{ p: 4, borderRadius: "24px", background: "linear-gradient(145deg, rgba(249,115,22,0.08), rgba(139,92,246,0.08))", border: "1px solid rgba(255,255,255,0.03)", backdropFilter: "blur(10px)", textAlign: "center", position: "relative", overflow: "hidden" }}>
-              <Typography variant="h3" sx={{ fontWeight: 800, color: "#ffffff", fontSize: "36px", mb: 2, fontFamily: "Fira Sans" }}>
-                Smarter Growth with Human Resource Software Development
+const HRMWhyUs = () => {
+  const [openPopup, setOpenPopup] = useState(false);
+  return (
+    <Box sx={{ background: "linear-gradient(135deg, #0A1E3F 0%, #0A192F 100%)", py: 8, position: "relative", overflow: "hidden" }}>
+      <Container maxWidth="lg">
+        <Grid container spacing={5} alignItems="center" sx={{ px: 2 }}>
+          {/* Left Side stats photo placeholder */}
+          <Grid item xs={12} md={6.5}>
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+              <Paper elevation={0} sx={{ p: 4, borderRadius: "24px", background: "linear-gradient(145deg, rgba(249,115,22,0.08), rgba(139,92,246,0.08))", border: "1px solid rgba(255,255,255,0.03)", backdropFilter: "blur(10px)", textAlign: "center", position: "relative", overflow: "hidden" }}>
+                <Typography variant="h3" sx={{ fontWeight: 800, color: "#ffffff", fontSize: "36px", mb: 2, fontFamily: "Fira Sans" }}>
+                  Smarter Growth with Human Resource Software Development
+                </Typography>
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.89)", fontSize: "16px", mb: 2, lineHeight: 1.6 }}>
+                  Transform how you manage people with intelligent human resource software development built for scalability and precision. We design tailored HRM systems, integrate powerful APIs, and craft intuitive ERP dashboards that give you full control over workforce tracking.
+                </Typography>
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.89)", fontSize: "16px", mb: 4, lineHeight: 1.6 }}>
+                  From automation to analytics, our human resource software development solutions simplify operations, improve employee experiences, and drive measurable productivity.
+                </Typography>
+                <Box sx={{ display: "flex", gap: 2, justifyContent: "center" }}>
+                  <Button variant="contained" onClick={() => setOpenPopup(true)} sx={{ bgcolor: "#f97316", color: "#fff", fontWeight: 800, px: 3, py: 1.5, borderRadius: "20px", textTransform: "none" }}>Request Consulting</Button>
+                  {/* <Button variant="outlined" sx={{ borderColor: "rgba(255,255,255,0.2)", color: "#fff", px: 3, borderRadius: "20px", textTransform: "none" }}>See Case Studies</Button> */}
+                </Box>
+              </Paper>
+            </motion.div>
+          </Grid>
+
+          {/* Right Side checklist trust vectors */}
+          <Grid item xs={12} md={5.5}>
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
+              <Typography sx={{ color: "#f97316", fontWeight: 700, fontSize: "13px", mb: 1, letterSpacing: "1px" }}>WHY CHOOSE OUR HRM SOLUTIONS</Typography>
+              <Typography variant="h3" sx={{ fontWeight: 800, color: "#ffffff", fontSize: "28px", mb: 4, fontFamily: "Fira Sans" }}>
+                Why Choose Our HRM Solutions
               </Typography>
-              <Typography sx={{ color: "rgba(255, 255, 255, 0.89)", fontSize: "16px", mb: 2, lineHeight: 1.6 }}>
-                Transform how you manage people with intelligent human resource software development built for scalability and precision. We design tailored HRM systems, integrate powerful APIs, and craft intuitive ERP dashboards that give you full control over workforce tracking.
-              </Typography>
-              <Typography sx={{ color: "rgba(255, 255, 255, 0.89)", fontSize: "16px", mb: 4, lineHeight: 1.6 }}>
-                From automation to analytics, our human resource software development solutions simplify operations, improve employee experiences, and drive measurable productivity.
-              </Typography>
-              <Box sx={{ display: "flex", gap: 2, justifyContent: "center" }}>
-                <Button variant="contained" sx={{ bgcolor: "#f97316", color: "#fff", fontWeight: 800, px: 3, borderRadius: "20px", textTransform: "none" }}>Request Consulting</Button>
-                <Button variant="outlined" sx={{ borderColor: "rgba(255,255,255,0.2)", color: "#fff", px: 3, borderRadius: "20px", textTransform: "none" }}>See Case Studies</Button>
+
+              <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
+                {checklists.map((item, i) => (
+                  <Paper key={i} elevation={0} sx={{ p: 2, borderRadius: "12px", bgcolor: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.05)", display: "flex", alignItems: "center", gap: 2, transition: "all 0.3s", "&:hover": { bgcolor: "rgba(255,255,255,0.05)", transform: "translateX(4px)" } }}>
+                    <CheckCircleOutlineIcon sx={{ color: "#f97316" }} />
+                    <Typography sx={{ color: "#ffffff", fontWeight: 700, fontSize: "14px" }}>{item}</Typography>
+                  </Paper>
+                ))}
               </Box>
-            </Paper>
-          </motion.div>
+            </motion.div>
+          </Grid>
         </Grid>
-
-        {/* Right Side checklist trust vectors */}
-        <Grid item xs={12} md={5.5}>
-          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
-            <Typography sx={{ color: "#f97316", fontWeight: 700, fontSize: "13px", mb: 1, letterSpacing: "1px" }}>WHY CHOOSE OUR HRM SOLUTIONS</Typography>
-            <Typography variant="h3" sx={{ fontWeight: 800, color: "#ffffff", fontSize: "28px", mb: 4, fontFamily: "Fira Sans" }}>
-              Why Choose Our HRM Solutions
-            </Typography>
-
-            <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
-              {checklists.map((item, i) => (
-                <Paper key={i} elevation={0} sx={{ p: 2, borderRadius: "12px", bgcolor: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.05)", display: "flex", alignItems: "center", gap: 2, transition: "all 0.3s", "&:hover": { bgcolor: "rgba(255,255,255,0.05)", transform: "translateX(4px)" } }}>
-                  <CheckCircleOutlineIcon sx={{ color: "#f97316" }} />
-                  <Typography sx={{ color: "#ffffff", fontWeight: 700, fontSize: "14px" }}>{item}</Typography>
-                </Paper>
-              ))}
-            </Box>
-          </motion.div>
-        </Grid>
-      </Grid>
-    </Container>
-  </Box>
-);
+      </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
+    </Box>
+  );
+};
 
 export default HRMWhyUs;

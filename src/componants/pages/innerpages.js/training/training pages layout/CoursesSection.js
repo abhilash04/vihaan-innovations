@@ -87,25 +87,28 @@ const CoursesSection = ({ data = {} }) => {
         </Box>
 
         {/* Feature Grid / Curriculum Breakdown */}
-        <Grid container spacing={4}>
+        <Grid container spacing={4} alignItems="stretch">
           {courses.map((item, index) => (
-            <Grid item xs={12} md={4} key={index}>
+            <Grid item xs={12} md={4} key={index} sx={{ display: "flex" }}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
+                style={{ display: "flex", width: "100%" }}
               >
                 <Paper
                   elevation={0}
                   sx={{
                     p: 4,
-                    height: "100%",
+                    width: "100%",
+                    height: "80%",
                     borderRadius: "24px",
                     bgcolor: "#ffffff",
                     border: "1px solid #e2e8f0",
                     transition: "all 0.4s ease",
                     display: "flex",
+                    mb: 2,
                     flexDirection: "column",
                     "&:hover": {
                       transform: "translateY(-10px)",
@@ -152,7 +155,7 @@ const CoursesSection = ({ data = {} }) => {
                     ))}
                   </List>
 
-                  <Box
+                  {/* <Box
                     sx={{
                       pt: 3,
                       borderTop: "1px solid #f1f5f9",
@@ -165,7 +168,7 @@ const CoursesSection = ({ data = {} }) => {
                       Course Module
                     </Typography>
                     <TrendingUpIcon sx={{ color: "rgba(30, 41, 59, 0.1)" }} />
-                  </Box>
+                  </Box> */}
                 </Paper>
               </motion.div>
             </Grid>

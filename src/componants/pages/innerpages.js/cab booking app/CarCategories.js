@@ -83,7 +83,6 @@ const CarCategories = () => {
           variant="h3"
           sx={{ textAlign: "center", color: "#1a1a1a", fontWeight: 800, mb: 2 }}
         >
-          Manage Every Vehicle Type from One Platform
         </Typography>
         <Typography
           sx={{ textAlign: "center", color: "#666", maxWidth: 650, mx: "auto", mb: 8 }}

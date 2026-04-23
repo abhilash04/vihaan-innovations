@@ -40,6 +40,7 @@ const Hero = () => {
         overflow: "hidden",
         bgcolor: "#ffffff",
         pt: { xs: 8, md: 12 },
+        mt: 5
       }}
     >
       {/* Background Elements - Abstract Mesh & Glows */}
@@ -187,7 +188,7 @@ const Hero = () => {
                   fontWeight: 500,
                 }}
               >
-                From UI/UX design to AI automation — our website development services cover every layer of your product. We provide comprehensive website development services that go beyond just writing code; we architect solutions that grow with your business. Let our website development services elevate your brand today.
+                From UI/UX design to AI automation — our website development services cover every layer of your product. We provide comprehensive website development services that go beyond just writing code; we architect solutions that grow with your business.
               </Typography>
 
               <Stack
@@ -217,9 +218,9 @@ const Hero = () => {
                     transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
                   }}
                 >
-                  Explore All Services
+                  Talk to an Expert <ChevronRight size={20} style={{ marginLeft: 8 }} />
                 </Button>
-                <Button
+                {/* <Button
                   variant="outlined"
                   sx={{
                     borderColor: "rgba(15, 23, 42, 0.15)",
@@ -240,7 +241,7 @@ const Hero = () => {
                   }}
                 >
                   Talk to an Expert <ChevronRight size={20} style={{ marginLeft: 8 }} />
-                </Button>
+                </Button> */}
               </Stack>
 
               <Stack

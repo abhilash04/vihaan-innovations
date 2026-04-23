@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Button, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import PopUps from "../../../common/PopUps";
 
 const reassuranceBadges = ["ABDM Ready", "NABH Aligned", "TPA Enabled", "Multi-branch Support", "99.9% Uptime"];
 
 const HMSCTA = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box sx={{ background: "#0A2D6E", py: { xs: 6, md: 10 }, position: "relative", overflow: "hidden" }}>
       {/* Diagonal Stripes Background Faint */}
@@ -36,7 +38,12 @@ const HMSCTA = () => {
               </Typography>
 
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mb: 4 }}>
-                <Button variant="contained" endIcon={<ArrowForwardIcon />} sx={{ bgcolor: "#ffffff", color: "#0A2D6E", fontWeight: 800, px: 3, py: 1.5, borderRadius: "25px", textTransform: "none", "&:hover": { bgcolor: "#f4f7fa" } }}>
+                <Button
+                  variant="contained"
+                  endIcon={<ArrowForwardIcon />}
+                  onClick={() => setOpenPopup(true)}
+                  sx={{ bgcolor: "#ffffff", color: "#0A2D6E", fontWeight: 800, px: 3, py: 1.5, borderRadius: "25px", textTransform: "none", "&:hover": { bgcolor: "#f4f7fa" } }}
+                >
                   Book a Free 60-Min Call
                 </Button>
                 <Button variant="outlined" sx={{ borderColor: "#ffffff", color: "#ffffff", fontWeight: 800, px: 3, py: 1.5, borderRadius: "25px", textTransform: "none", borderWidth: "2px", "&:hover": { borderWidth: "2px", bgcolor: "rgba(255,255,255,0.04)" } }}>
@@ -69,6 +76,7 @@ const HMSCTA = () => {
           </Grid>
         </Grid>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

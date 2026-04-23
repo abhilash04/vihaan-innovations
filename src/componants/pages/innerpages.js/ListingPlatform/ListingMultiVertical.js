@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 
 const DashboardMock = ({ theme, title, delay }) => (
   <motion.div
@@ -66,6 +67,7 @@ const DashboardMock = ({ theme, title, delay }) => (
 );
 
 const ListingMultiVertical = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box sx={{ bgcolor: "#f8fafc", py: 8 }}>
       <Container maxWidth="lg">
@@ -128,6 +130,7 @@ const ListingMultiVertical = () => {
               <Box sx={{ mt: 5 }}>
                 <Box
                   component="button"
+                  onClick={() => setOpenPopup(true)}
                   sx={{
                     bgcolor: "#2563eb",
                     color: "#ffffff",
@@ -167,6 +170,7 @@ const ListingMultiVertical = () => {
         </Grid>
 
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };
