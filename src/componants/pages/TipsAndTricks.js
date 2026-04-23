@@ -63,7 +63,7 @@ const posts = [
 ];
 
 /* ─── Single Post Card ───────────────────────────────────────────────────── */
-const PostCard = ({ post }) => (
+const PostCard = ({ post, isMobile }) => (
   <Card
     sx={{
       width: "100%",
@@ -78,7 +78,7 @@ const PostCard = ({ post }) => (
     <Box sx={{ position: "relative", overflow: "hidden", flexShrink: 0 }}>
       <CardMedia
         component="img"
-        height="170"
+        height={isMobile ? 170 : 230}
         image={post.image}
         alt={post.title}
         sx={{ transition: "filter 0.4s ease", "&:hover": { filter: "grayscale(100%)" } }}
@@ -112,7 +112,7 @@ const PostCard = ({ post }) => (
       <Typography
         variant="subtitle1"
         sx={{
-          fontSize: "16px",
+          fontSize: { xs: "16px", md: "20px" },
           fontWeight: 600,
           lineHeight: 1.4,
           color: "#0a0a0a",
@@ -125,7 +125,7 @@ const PostCard = ({ post }) => (
       </Typography>
       <Typography
         variant="body2"
-        sx={{ fontSize: "14px", color: "#454545", fontFamily: "Livvic", mb: "10px", flexGrow: 1, "&:hover": { color: "#0B70E1" } }}
+        sx={{ fontSize: { xs: "14px", md: "16px" }, color: "#454545", fontFamily: "Livvic", mb: "10px", flexGrow: 1, "&:hover": { color: "#0B70E1" } }}
       >
         {post.description}
       </Typography>
@@ -207,7 +207,7 @@ export default function TipsAndTricks() {
         <Typography variant="h4" sx={{ fontWeight: "bold", fontSize: { xs: "1.6rem", md: "2.125rem" } }}>
           Explore Our Latest Insights &amp; Updates
         </Typography>
-        <Typography variant="body1" sx={{ fontSize: "16px", fontWeight: 500, color: "#444a56", mt: 1, textAlign: "justify" }}>
+        <Typography variant="body1" sx={{ fontSize: "16px", fontWeight: 500, color: "#444a56", mt: 1, textAlign: { xs: "justify", md: "center" } }}>
           Stay informed with the newest technology trends, digital tools, and IT solutions that are shaping businesses and everyday life.
         </Typography>
         <Box sx={{ position: "relative", mt: 1, height: 4, width: 80, mx: "auto", backgroundColor: "#0066ff", borderRadius: 2 }}>
@@ -223,7 +223,7 @@ export default function TipsAndTricks() {
       </Box>
 
       {/* ── Cards Row ── */}
-      <Box sx={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
+      <Box sx={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", gap: { md: 4 } }}>
 
 
         {!isMobile && (
@@ -245,16 +245,16 @@ export default function TipsAndTricks() {
                 exit="exit"
                 transition={{ duration: 0.35, ease: "easeInOut" }}
               >
-                <PostCard post={posts[currentIndex]} />
+                <PostCard post={posts[currentIndex]} isMobile={isMobile} />
               </motion.div>
             </AnimatePresence>
           </Box>
         ) : (
           /* ── DESKTOP: show 3 cards side by side ── */
-          <Box sx={{ display: "flex", gap: 3, width: "100%", maxWidth: 1300, alignItems: "stretch" }}>
+          <Box sx={{ display: "flex", gap: 4, width: "100%", maxWidth: 1200, alignItems: "stretch" }}>
             {posts.slice(currentIndex, currentIndex + visibleCount).map((post) => (
               <Box key={post.id} sx={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column" }}>
-                <PostCard post={post} />
+                <PostCard post={post} isMobile={isMobile} />
               </Box>
             ))}
           </Box>
