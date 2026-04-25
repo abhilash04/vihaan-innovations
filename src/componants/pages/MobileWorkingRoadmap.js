@@ -26,11 +26,11 @@ const MobileWorkingRoadmap = () => {
   return (
     <Box sx={{ bgcolor: "#171b44", color: "#fff", py: 6, px: 2, textAlign: "center" }}>
       <Button variant="contained" sx={{ bgcolor: "#332d57", textTransform: "none", fontSize: 11, borderRadius: "20px", px: 2, py: 0.5, mb: 2 }}> What We Do </Button>
-      <Typography variant="h3" sx={{ fontWeight: 800, fontSize: "24px", lineHeight: 1.2, mb: 2, fontFamily: "Fira Sans" }}>
-        Our Smart Workflow for Building Better Digital Solutions
+      <Typography variant="h2" sx={{ fontWeight: 800, fontSize: "32px", lineHeight: 1.2, mb: 2, fontFamily: "Fira Sans" }}>
+        How Vihaan Innovations Works
       </Typography>
       <Typography sx={{ color: "#a3abc8", fontSize: "14px", lineHeight: 1.6, mb: 4, px: 1 }}>
-        Every stage of our process ensures reliability, performance, and measurable results.
+        We use a smart process to build quality digital products faster.
       </Typography>
 
       {/* Stacked Timeline/List for Mobile avoiding overlap circles */}

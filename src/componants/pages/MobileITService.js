@@ -17,13 +17,13 @@ const MobileITService = () => {
       </Box>
 
       {/* Main Headline */}
-      <Typography variant="h3" sx={{ fontWeight: 800, fontSize: "28px", lineHeight: 1.2, mb: 2, textAlign: "center", fontFamily: "Fira Sans", color: "#050748" }}>
+      <Typography variant="h2" sx={{ fontWeight: 800, fontSize: "28px", lineHeight: 1.2, mb: 2, textAlign: "center", fontFamily: "Fira Sans", color: "#050748" }}>
         Your Trusted Partner for{" "}
         <Box component="span" sx={{ color: "#0087c9" }}>IT Services</Box> & Digital Innovation
       </Typography>
 
-      <Typography sx={{ color: "#6b7280", fontSize: "14px", lineHeight: 1.6, mb: 2, textAlign: "center" }}>
-        Delivering reliable IT consulting, product development, and digital solutions that help businesses grow with confidence.
+      <Typography sx={{ color: "#6b7280", fontSize: "14px", lineHeight: 1.6, m: 2, textAlign: "justify" }}>
+        Vihaan Innovations helps businesses grow with smart websites, scalable apps, and reliable digital solutions built for long-term success.
       </Typography>
 
       {/* Single Representative Image for Mobile */}
@@ -58,9 +58,9 @@ const MobileITService = () => {
       {/* Tab Content */}
       <Box sx={{ minHeight: "80px", mb: 2 }}>
         <Typography sx={{ color: "#4b5563", fontSize: "13px", lineHeight: 1.6, textAlign: "justify" }}>
-          {tabValue === 0 && "Our mission is to empower businesses with smart, scalable, and secure technology solutions. We work to simplify IT, strengthen digital operations."}
-          {tabValue === 1 && "Our vision is to build a future where businesses of all sizes can access modern, efficient, and innovative digital systems."}
-          {tabValue === 2 && "We believe in delivering solutions with transparency, quality, and customer focus. Every project is guided by integrity and innovation."}
+          {tabValue === 0 && "Our mission is to help businesses grow faster through modern technology, creative strategy, and result-driven digital solutions."}
+          {tabValue === 1 && "Our vision is to become a trusted innovation partner for brands seeking digital growth, better systems, and future-ready success."}
+          {tabValue === 2 && "We believe in honesty, quality, performance, and client-first service that creates real value for every project."}
         </Typography>
       </Box>
 

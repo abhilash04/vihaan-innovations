@@ -197,15 +197,16 @@ export default function WorkingRoadmap() {
           </Box>
 
           <Typography
-            variant="h3"
+            variant="h2"
             sx={{
               fontWeight: "bold",
               mb: 3,
               fontFamily: "'Poppins', sans-serif",
               lineHeight: 1.1,
+              fontSize: "54px",
             }}
           >
-            Our Smart Workflow for Building Powerful Digital Solutions
+            How Vihaan Innovations Works
           </Typography>
 
           <Typography
@@ -217,7 +218,7 @@ export default function WorkingRoadmap() {
               maxWidth: 440,
             }}
           >
-            At Vihaan Innovations, we follow a structured and strategic workflow to create innovative digital solutions.
+            We use a smart process to build quality digital products faster.
           </Typography>
 
           <Box sx={{ display: "flex", alignItems: "center", gap: 5 }}>

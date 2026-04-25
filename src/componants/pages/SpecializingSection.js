@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Box, Typography, Card, CardContent, Grid, IconButton } from "@mui/material";
+import { Box, Typography, Card, CardContent, Grid, IconButton, Button } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import icon1 from "../../assets/website-development.png";
 import icon2 from "../../assets/app-development.png";
 import icon3 from "../../assets/digital-marketing.png";
@@ -18,49 +19,49 @@ const services = [
     icon: icon1,
     title: "Website Development",
     description: "Create fast, modern websites that work on any device.",
-    link: "#",
+    link: "/services/web-designing",
   },
   {
     icon: icon2,
     title: "App Development",
     description: "Develop custom mobile apps for both iOS and Android.",
-    link: "#",
+    link: "/services/mobile-app-development",
   },
   {
     icon: icon3,
     title: "Digital Marketing",
     description: "Grow your online presence with SEO, ads, and social media.",
-    link: "#",
+    link: "/services/digital-marketing",
   },
   {
     icon: icon4,
     title: "E-commerce Solutions",
     description: "Set up secure and scalable online stores with ease.",
-    link: "#",
+    link: "/services/ecommerce-software-development",
   },
   {
     icon: icon5,
-    title: "Branding Service",
-    description: "Build strong brand identities with meaningful visuals.",
-    link: "#",
+    title: "Animations",
+    description: "Captivating visuals that bring ideas to life.",
+    link: "/services/2d-animation",
   },
   {
     icon: icon6,
     title: "UI/UX Design",
-    description: "Design user-friendly interfaces that improve experience.",
-    link: "#",
+    description: "Create stunning, user-first designs that feel intuitive.",
+    link: "/services/ui-ux-design",
   },
   {
     icon: icon7,
     title: "Content Creation",
     description: "Produce engaging content that attracts and informs users.",
-    link: "#",
+    link: "/services/content-marketing",
   },
   {
     icon: icon8,
     title: "DevOps Services",
     description: "Improve deployment speed and ensure smooth cloud operations.",
-    link: "#",
+    link: "/services/devops-and-automation",
   },
 ];
 
@@ -120,22 +121,28 @@ const ServiceCard = ({ service }) => (
       >
         {service.description}
       </Typography>
-      <Typography
+      <Button
         component="a"
         href={service.link}
+        endIcon={<ArrowForwardIcon />}
         sx={{
-          textDecoration: "none",
-          color: "#6a6a8e",
-          fontSize: "17px",
+          textTransform: "none",
+          color: "#ffffff",
+          fontSize: "15px",
           fontWeight: 600,
-          display: "inline-flex",
-          alignItems: "center",
           mb: 2,
-          "&:hover": { color: "#ff1f8e" },
+          backgroundColor: "#0865c3",
+          px: 3,
+          py: 1,
+          borderRadius: "50px",
+          "&:hover": {
+            backgroundColor: "#3083ffff",
+            color: "#ffffff"
+          },
         }}
       >
-        Learn More &gt;
-      </Typography>
+        Explore
+      </Button>
     </CardContent>
   </Card>
 );
@@ -298,15 +305,16 @@ const ServicesSection = () => {
           </Typography>
           <Typography
             sx={{
+              variant: "h2",
               fontWeight: 600,
               mb: 4,
               fontSize: { xs: "28px", md: "40px" },
               color: "#050748",
               lineHeight: { xs: "38px", md: "52px" },
-              textAlign: "justify"
+              textAlign: "center"
             }}
           >
-            Specialized Digital Solutions by Vihaan Innovations
+            Digital Services That Drive Growth
           </Typography>
         </Box>
 
