@@ -18,7 +18,7 @@ import LayersIcon from '@mui/icons-material/Layers';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 
 export const exploreServiceData = {
-  "On-Page SEO Services": {
+  "OnPageSeo": {
     hero: {
       title: "On-Page SEO Services",
       subtitle: "On-Page SEO Services to Boost Rankings, Traffic, and Conversions",
@@ -120,7 +120,7 @@ export const exploreServiceData = {
       cta: "Contact Us ↗"
     }
   },
-  "OFF-Page SEO": {
+  "OffPageSeo": {
     hero: {
       title: "OFF-Page SEO Services",
       subtitle: "OFF-Page SEO Services to Boost Authority and Rankings",
@@ -228,7 +228,7 @@ export const exploreServiceData = {
       cta: "Contact Us ↗"
     }
   },
-  "Keyword Research Services": {
+  "KeywordResearchServices": {
     hero: {
       title: "Keyword Research Services",
       subtitle: "Keyword Research Services to Target the Right Audience and Boost Rankings",
@@ -330,7 +330,7 @@ export const exploreServiceData = {
       cta: "Contact Us ↗"
     }
   },
-  "SEO Consultant Services": {
+  "SeoConsultanting": {
     hero: {
       title: "SEO Consultant Services",
       subtitle: "SEO Consultant Services to Build a Winning Growth Strategy",
