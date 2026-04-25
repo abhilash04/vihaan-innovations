@@ -42,7 +42,7 @@ const ITServiceSection = () => {
                         display: "flex",
                         flexDirection: "column",
                         justifyContent: "center",
-                        p: 5,
+                        p: 4.7,
                       }}
                     >
                       <Typography
@@ -99,7 +99,7 @@ const ITServiceSection = () => {
         <Grid item xs={12} md={6.5}>
           <Box component={motion.div} initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
             {/* About Us Label + Icon */}
-            <Box display="flex" alignItems="center" gap={2} mt={1} mb={2}>
+            <Box display="flex" alignItems="center" gap={2} mt={1} mb={3}>
               <Typography
                 variant="subtitle1"
                 fontWeight={600}
@@ -136,10 +136,10 @@ const ITServiceSection = () => {
             </Box>
 
             <Typography
-              variant="h4"
+              variant="h2"
               sx={{
                 fontWeight: "bold",
-                mb: 1,
+                mb: 2,
                 fontSize: "42px",
                 lineHeight: "1",
                 width: "600px",
@@ -153,8 +153,8 @@ const ITServiceSection = () => {
             </Typography>
 
             <Typography sx={{ color: "text.secondary", mb: 1.5 }}>
-              At Vihaan Innovations, we deliver reliable IT consulting, product development, and
-              digital solutions that empower organizations to scale with confidence.
+              Vihaan Innovations helps businesses grow with smart websites,
+              scalable apps, and reliable digital solutions built for long-term success.
             </Typography>
 
             {/* Tabs */}
@@ -163,7 +163,7 @@ const ITServiceSection = () => {
               onChange={handleChange}
               textColor="primary"
               indicatorColor="primary"
-              sx={{ mb: 2 }}
+              sx={{ mt: 2, mb: 2 }}
             >
               <Tab label="Our Mission" />
               <Tab label="Our Vision" />
@@ -173,28 +173,24 @@ const ITServiceSection = () => {
             {/* Tab Content */}
             {tabValue === 0 && (
               <Typography sx={{ color: "text.secondary", mb: 1.5 }}>
-                Our mission at Vihaan Innovations is to empower businesses with smart,
-                scalable, and secure technology solutions. We strive to simplify IT operations,
-                accelerate digital transformation, and build innovative products that deliver
-                long-term value for our clients.
+                Our mission is to help businesses grow faster through modern technology,
+                creative strategy, and result-driven digital solutions.
               </Typography>
             )}
             {tabValue === 1 && (
               <Typography sx={{ color: "text.secondary", mb: 2 }}>
-                Our vision is to become a leading technology partner recognized for delivering
-                innovative digital solutions that help businesses adapt, grow, and succeed in
-                an ever-changing digital landscape.
+                Our vision is to become a trusted innovation partner for brands seeking
+                digital growth, better systems, and future-ready success.
               </Typography>
             )}
             {tabValue === 2 && (
               <Typography sx={{ color: "text.secondary", mb: 2 }}>
-                Vihaan Innovations believes in innovation, transparency, and customer success.
-                Our core values focus on quality delivery, collaboration, and continuous
-                improvement to ensure every client receives reliable technology solutions.
+                We believe in honesty, quality, performance, and client-first
+                service that creates real value for every project.
               </Typography>
             )}
 
-            <Grid container spacing={2} sx={{ mt: 2 }}>
+            <Grid container spacing={2} sx={{ mt: 2, mb: 2 }}>
               {[
                 "IT Consulting",
                 "Product Development",
@@ -213,7 +209,7 @@ const ITServiceSection = () => {
             </Grid>
 
             {/* Contact & Call Section */}
-            <Stack direction="row" spacing={5} alignItems="center" mt={2}>
+            <Stack direction="row" spacing={5} alignItems="center" mt={6}>
               <Button
                 variant="contained"
                 onClick={() => setOpenPopup(true)}

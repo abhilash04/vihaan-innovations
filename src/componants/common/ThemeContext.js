@@ -27,12 +27,14 @@ export const ThemeProvider = ({ children }) => {
   });
 
 
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const toggleTheme = () => {
     setDarkMode((prevMode) => !prevMode); 
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, mobileMenuOpen, setMobileMenuOpen }}>
       {children}
     </ThemeContext.Provider>
   );

@@ -73,7 +73,7 @@ import {
   Type,
 } from "lucide-react";
 
-import { Brain, BugPlay, Clapperboard } from "lucide-react";
+import { Brain, BugPlay, Clapperboard, Info, Briefcase, Rocket } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useTheme as useAppTheme } from "./ThemeContext";
 
@@ -496,6 +496,23 @@ const MobileMenu = ({
                     },
                   }}
                 >
+                  {item.icon && (
+                    <Box
+                      sx={{
+                        width: "28px",
+                        height: "28px",
+                        borderRadius: "6px",
+                        backgroundColor: item.bgColor || "rgba(14, 165, 233, 0.15)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        mr: 1.5,
+                        flexShrink: 0,
+                      }}
+                    >
+                      <item.icon size={16} color={item.color || "#38bdf8"} strokeWidth={2} />
+                    </Box>
+                  )}
                   <ListItemText
                     primary={item.label}
                     primaryTypographyProps={{ fontSize: "16px" }}
@@ -979,8 +996,8 @@ const Header = () => {
       ],
     },
     about: [
-      { label: "About Us", href: "/about-us" },
-      { label: "Career", href: "/career" },
+      { label: "About Us", href: "/about-us", icon: Users2, color: "#3b82f6", bgColor: "rgba(59, 130, 246, 0.15)" },
+      { label: "Career", href: "/career", icon: Rocket, color: "#10b981", bgColor: "rgba(16, 185, 129, 0.15)" },
     ],
   };
 
@@ -1968,7 +1985,9 @@ const Header = () => {
             key={index}
             href={item.href}
             style={{
-              display: "block",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
               padding: "6px 16px",
               color: "#050748",
               textDecoration: "none",
@@ -1978,6 +1997,7 @@ const Header = () => {
               transition: "all 0.2s ease",
             }}
           >
+            {item.icon && <item.icon size={16} strokeWidth={1.8} color={item.color || "#0081c3"} />}
             {item.label}
           </a>
         ))}
