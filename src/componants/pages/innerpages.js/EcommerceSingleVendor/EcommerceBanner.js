@@ -56,9 +56,9 @@ const EcommerceBanner = () => {
                   color: '#333'
                 }}
               >
-                India’s #1 {" "}
-                <span style={{ color: "#4da6ff" }}>CRM Software </span>
-                <Typography variant="body1" sx={{ fontWeight: 700, fontSize: "58px", lineHeight: "54px", fontFamily: "Fira Sans", marginBottom: 3, color: '#333' }}>for a Single Vendor <br />ECommerce Website</Typography>
+                India’s #1 {" "}<br />
+                <span style={{ color: "#4da6ff" }}>ECommerce Website</span>
+                <Typography variant="body1" sx={{ fontWeight: 700, fontSize: "58px", lineHeight: "54px", fontFamily: "Fira Sans", marginBottom: 3, color: '#333' }}>for a Single Vendor <br /></Typography>
               </Typography>
 
               <Typography
