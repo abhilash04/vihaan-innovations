@@ -67,10 +67,12 @@ const FeaturesSection = ({ data = {} }) => {
                     },
                   }}
                 >
-                  <Box className="feature-icon" sx={{ color: "#94a3b8", mb: 3, transition: "all 0.3s ease" }}>
-                    {item.icon}
+                  <Box sx={{ display: "flex", flexDirection: { xs: "row", md: "column" }, alignItems: { xs: "center", md: "flex-start" }, gap: { xs: 2, md: 0 }, mb: { xs: 2, md: 0 } }}>
+                    <Box className="feature-icon" sx={{ color: "#94a3b8", mb: { xs: 0, md: 3 }, transition: "all 0.3s ease" }}>
+                      {item.icon}
+                    </Box>
+                    <Typography sx={{ fontWeight: 800, color: "#1e293b", mb: { xs: 0, md: 2 }, fontSize: "20px" }}>{item.title}</Typography>
                   </Box>
-                  <Typography sx={{ fontWeight: 800, color: "#1e293b", mb: 2, fontSize: "20px" }}>{item.title}</Typography>
                   <Typography sx={{ color: "#64748b", fontSize: "16px", lineHeight: 1.7 }}>{item.desc}</Typography>
                 </Paper>
               </Box>

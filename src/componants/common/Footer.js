@@ -20,8 +20,8 @@ import YouTube from "@mui/icons-material/YouTube";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import PopUps from "./PopUps";
 import { useTheme as useAppTheme } from "./ThemeContext";
-// import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
-import logo from "../../assets/vihaan-logo.png";
+import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
+// import logo from "../../assets/vihaan-logo.png"; 
 
 const Footer = () => {
   return (
@@ -82,7 +82,7 @@ const Footer = () => {
                 src={logo}
                 alt="Vihaan Innovations Logo"
                 style={{
-                  height: "80px",
+                  height: "100px",
                   width: "auto",
                   marginBottom: "20px",
                 }}

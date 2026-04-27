@@ -14,7 +14,7 @@ const highlights = [
 const AboutProgram = ({ data = {} }) => {
   const { title, description1, description2, badge, highlights = [], stats = [] } = data;
   return (
-    <Box sx={{ py: { xs: 6, md: 8 }, background: "#ffffff" }}>
+    <Box sx={{ py: { xs: 4, md: 8 }, background: "#ffffff" }}>
       <Container maxWidth="lg">
         <Grid container spacing={8} alignItems="center">
           <Grid item xs={12} md={6}>
@@ -57,13 +57,18 @@ const AboutProgram = ({ data = {} }) => {
             >
               <Grid container spacing={3}>
                 {stats.map((item, i) => (
-                  <Grid item xs={6} key={i}>
+                  <Grid item xs={6} key={i} sx={{ display: "flex" }}>
                     <Box
                       sx={{
-                        p: 4,
+                        p: { xs: 2.5, md: 4 },
                         background: "#e7f2ffff",
                         borderRadius: "20px",
                         border: "1px solid #e2e8f0",
+                        width: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        minHeight: { xs: "110px", md: "160px" },
                         transition: "all 0.3s ease",
                         "&:hover": {
                           borderColor: "#00b4d8",
