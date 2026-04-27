@@ -11,6 +11,11 @@ import {
 import { motion } from "framer-motion";
 
 const IndustriesSection = ({ location, serviceType, industriesList = [] }) => {
+    const isArray = Array.isArray(industriesList);
+    const displayList = isArray ? industriesList : (industriesList.list || []);
+    const headerTitle = industriesList.title || `Empowering Diverse Sectors in ${location}`;
+    const headerBadge = industriesList.badge || "Industries We Serve";
+
     return (
         <Box sx={{ background: "#f8fbff", py: { xs: "36px", md: "80px" } }}>
             <Container maxWidth="lg">
@@ -22,7 +27,7 @@ const IndustriesSection = ({ location, serviceType, industriesList = [] }) => {
                         transition={{ duration: 0.5 }}
                     >
                         <Chip
-                            label="Industries We Serve"
+                            label={headerBadge}
                             sx={{
                                 background: "#0c447c",
                                 color: "#fff",
@@ -40,13 +45,13 @@ const IndustriesSection = ({ location, serviceType, industriesList = [] }) => {
                     >
                         <Typography variant="h3" fontWeight={900} color="#042c53" textAlign="center"
                             sx={{ fontSize: { xs: "22px", sm: "28px", md: "3rem" }, px: { xs: 1, md: 0 } }}>
-                            Empowering Diverse Sectors in {location}
+                            {headerTitle}
                         </Typography>
                     </motion.div>
                 </Stack>
 
                 <Grid container spacing={{ xs: 2, md: 3 }}>
-                    {industriesList.map((item, index) => (
+                    {displayList.map((item, index) => (
                         <Grid item xs={6} sm={4} md={3} key={index}>
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
@@ -90,7 +95,7 @@ const IndustriesSection = ({ location, serviceType, industriesList = [] }) => {
                                             transition: "0.3s"
                                         }}
                                     >
-                                        {item.icon}
+                                        {item.icon || "🏢"}
                                     </Box>
                                     <Typography
                                         className="icon-text"
@@ -101,7 +106,7 @@ const IndustriesSection = ({ location, serviceType, industriesList = [] }) => {
                                             transition: "0.3s"
                                         }}
                                     >
-                                        {item.name}
+                                        {item.name || item}
                                     </Typography>
                                 </Paper>
                             </motion.div>

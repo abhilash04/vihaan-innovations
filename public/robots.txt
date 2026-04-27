@@ -3,3 +3,8 @@ User-agent: *
 Disallow:
 
 Sitemap: https://www.vihaaninnovations.com/sitemap.xml
+Sitemap: https://www.vihaaninnovations.com/locations.xml
+Sitemap: https://www.vihaaninnovations.com/services.xml
+Sitemap: https://www.vihaaninnovations.com/servicesexplore.xml
+Sitemap: https://www.vihaaninnovations.com/readyproducts.xml
+Sitemap: https://www.vihaaninnovations.com/training.xml

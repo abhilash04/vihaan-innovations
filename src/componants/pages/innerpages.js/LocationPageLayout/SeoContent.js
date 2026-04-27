@@ -84,8 +84,10 @@ const SeoContent = ({ location, serviceType, content }) => {
                                             { t: "Ethical & Quality", d: "Zero-plagiarism, human-centric approach." }
                                         ]).map((item, i, arr) => (
                                             <Box key={i}>
-                                                <Typography fontWeight={800} sx={{ color: '#378add', mb: 0.5 }}>{item.t}</Typography>
-                                                <Typography variant="body2" sx={{ opacity: 0.8 }}>{item.d}</Typography>
+                                                <Typography fontWeight={800} sx={{ color: '#378add', mb: 0.5 }}>
+                                                    {typeof item === 'string' ? item : item.t}
+                                                </Typography>
+                                                {typeof item !== 'string' && item.d && <Typography variant="body2" sx={{ opacity: 0.8 }}>{item.d}</Typography>}
                                                 {i < arr.length - 1 && <Divider sx={{ mt: 2, background: 'rgba(255,255,255,0.1)' }} />}
                                             </Box>
                                         ))}

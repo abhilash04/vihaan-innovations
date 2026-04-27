@@ -8,6 +8,7 @@ import {
     Avatar,
     Stack,
     Rating,
+    Chip,
 } from "@mui/material";
 import { motion } from "framer-motion";
 
@@ -53,14 +54,28 @@ const TestimonialsSection = ({ location, serviceType, customTestimonials }) => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
                     >
-                        <Box sx={{
-                            display: 'flex',
-                            gap: 1,
-                            color: '#fbbf24',
-                            mb: 1
-                        }}>
-                            {[...Array(5)].map((_, i) => <span key={i}>★</span>)}
-                        </Box>
+                        {customTestimonials?.badge ? (
+                            <Chip
+                                label={customTestimonials.badge}
+                                sx={{
+                                    background: "#e6f1fb",
+                                    color: "#0c447c",
+                                    fontWeight: 700,
+                                    borderRadius: "8px",
+                                    fontSize: { xs: "12px", md: "13px" },
+                                    mb: 1
+                                }}
+                            />
+                        ) : (
+                            <Box sx={{
+                                display: 'flex',
+                                gap: 1,
+                                color: '#fbbf24',
+                                mb: 1
+                            }}>
+                                {[...Array(5)].map((_, i) => <span key={i}>★</span>)}
+                            </Box>
+                        )}
                     </motion.div>
 
                     <motion.div

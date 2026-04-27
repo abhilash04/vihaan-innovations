@@ -33,7 +33,7 @@ const WhyChooseUsSection = ({ location, serviceType, content }) => {
                             transition={{ duration: 0.6 }}
                         >
                             <Chip
-                                label="Why Choose Vihaan Innovations"
+                                label={content.badge || "Why Choose Vihaan Innovations"}
                                 sx={{
                                     background: "rgba(255, 255, 255, 0.1)",
                                     color: "#fff",
@@ -66,7 +66,7 @@ const WhyChooseUsSection = ({ location, serviceType, content }) => {
                             </Typography>
 
                             <Stack spacing={1.5}>
-                                {(content.bullets || ["Local Market Experts", "Zero Plagiarism Content", "Technical Excellence"]).map((item, i) => (
+                                {(content.checklist || content.bullets || ["Local Market Experts", "Zero Plagiarism Content", "Technical Excellence"]).map((item, i) => (
                                     <Stack key={i} direction="row" spacing={2} alignItems="center">
                                         <Box sx={{
                                             width: { xs: 22, md: 24 },

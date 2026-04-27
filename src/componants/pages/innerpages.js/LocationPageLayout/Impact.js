@@ -17,7 +17,9 @@ const metrics = [
     { num: "8yr+", label: "Market Excellence", progress: 85, icon: "🏆" },
 ];
 
-const ImpactSection = ({ location }) => {
+const ImpactSection = ({ location, content }) => {
+    const displayMetrics = content?.stats || metrics;
+
     return (
         <Box sx={{ background: "#e6f1fb", py: { xs: "36px", md: "60px" } }}>
             <Container maxWidth="lg">
@@ -29,7 +31,7 @@ const ImpactSection = ({ location }) => {
                         transition={{ duration: 0.5 }}
                     >
                         <Chip
-                            label="Our Global Impact"
+                            label={content?.badge || "Our Global Impact"}
                             sx={{
                                 background: "#0c447c",
                                 color: "#fff",
@@ -53,7 +55,7 @@ const ImpactSection = ({ location }) => {
                             textAlign="center"
                             sx={{ fontSize: { xs: "22px", sm: "28px", md: "3rem" }, px: { xs: 1, md: 0 } }}
                         >
-                            Proven Success in {location} & Beyond
+                            {content?.title || `Proven Success in ${location} & Beyond`}
                         </Typography>
                     </motion.div>
 
@@ -68,13 +70,13 @@ const ImpactSection = ({ location }) => {
                             textAlign="center"
                             sx={{ maxWidth: "700px", fontSize: { xs: "13px", md: "1.1rem" }, px: { xs: 1, md: 0 } }}
                         >
-                            Our track record of delivering high-impact digital solutions speaks for itself.
+                            {content?.description || "Our track record of delivering high-impact digital solutions speaks for itself."}
                         </Typography>
                     </motion.div>
                 </Stack>
 
                 <Grid container spacing={{ xs: 2, md: 4 }}>
-                    {metrics.map((item, index) => (
+                    {displayMetrics.map((item, index) => (
                         <Grid item xs={6} sm={6} md={3} key={index}>
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
@@ -101,13 +103,13 @@ const ImpactSection = ({ location }) => {
                                     }}
                                 >
                                     <Box sx={{ fontSize: { xs: "28px", md: "40px" }, mb: { xs: 1, md: 2 } }}>
-                                        {item.icon}
+                                        {item.icon || "📈"}
                                     </Box>
                                     <Typography
                                         variant="h3"
                                         sx={{ fontWeight: 900, color: "#0c447c", mb: 0.5, fontSize: { xs: "26px", md: "3rem" } }}
                                     >
-                                        {item.num}
+                                        {item.num || item.value}
                                     </Typography>
                                     <Typography
                                         sx={{ color: "#378add", fontWeight: 700, fontSize: { xs: "11px", md: "0.9rem" }, mb: { xs: 1.5, md: 3 } }}
@@ -118,7 +120,7 @@ const ImpactSection = ({ location }) => {
                                     <Box sx={{ height: 5, width: "100%", background: "#e6f1fb", borderRadius: 3, overflow: 'hidden' }}>
                                         <motion.div
                                             initial={{ width: 0 }}
-                                            whileInView={{ width: `${item.progress}%` }}
+                                            whileInView={{ width: `${item.progress || 90}%` }}
                                             viewport={{ once: true }}
                                             transition={{ duration: 1, delay: 0.5 + index * 0.1 }}
                                             style={{ height: "100%", background: "#185fa5", borderRadius: 3 }}
