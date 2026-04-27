@@ -300,9 +300,14 @@ const Footer = () => {
                   <Box sx={{ width: "40px", height: "40px", minWidth: "40px", borderRadius: "50%", backgroundColor: "#eef2f6", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <LocationOn sx={{ fontSize: "20px", color: "#444" }} />
                   </Box>
-                  <Typography variant="body1" sx={{ color: "#555", fontSize: { xs: "12px", sm: "14px" }, fontWeight: 600, mt: 1, lineHeight: 1.4 }}>
+                  <Link
+                    href="https://www.google.com/maps/place/Vihaan+Innovations/@12.8995549,77.5994519,15z/data=!4m7!3m6!1s0xe056fcea967b0b9:0x51f71b29354f23f7!8m2!3d12.8995549!4d77.6185063!15sChJ2aWhhYW4gaW5ub3ZhdGlvbnNaFCISdmloYWFuIGlubm92YXRpb25zkgEQc29mdHdhcmVfY29tcGFueeABAA!16s%2Fg%2F11nb7573mg?entry=tts&g_ep=EgoyMDI2MDQxNS4wIPu8ASoASAFQAw%3D%3D&skid=3dfdcac8-80f9-4545-8094-d2f5febc5512"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{ color: "#555", textDecoration: "none", fontSize: { xs: "12px", sm: "14px" }, fontWeight: 600, mt: 1, lineHeight: 1.4, "&:hover": { color: "#00b4d8" } }}
+                  >
                     1st Floor, Vijayashree Layout, 2, Kodichikkanahalli Main Rd, Rotary Nagar, Bommanahalli, Bengaluru, Karnataka 560076
-                  </Typography>
+                  </Link>
                 </Box>
               </Box>
             </Grid>

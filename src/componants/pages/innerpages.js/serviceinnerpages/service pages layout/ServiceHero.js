@@ -120,7 +120,7 @@ const ServiceHero = ({ data }) => {
       <FloatingOrb size="350px" color="rgba(6, 182, 212, 0.1)" bottom="10%" right="10%" delay={2} />
       <FloatingOrb size="200px" color="rgba(79, 70, 229, 0.1)" top="40%" left="40%" delay={4} />
 
-      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
+      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1, py: 5 }}>
         <Grid container spacing={5} alignItems="center">
 
           {/* Left Column - Content */}
@@ -240,7 +240,7 @@ const ServiceHero = ({ data }) => {
                   <Grid item xs={12} sm={6}><StyledInput fullWidth placeholder="Enter Mobile" variant="standard" /></Grid>
                   <Grid item xs={12} sm={6}><StyledInput fullWidth placeholder="Enter Email" variant="standard" /></Grid>
                   <Grid item xs={12} sm={6}>
-                    <StyledInput fullWidth select defaultValue="" variant="standard">
+                    <StyledInput fullWidth select defaultValue="Select Service" variant="standard">
                       <MenuItem value="" disabled>Select Service</MenuItem>
                       <MenuItem value="web">Web Design</MenuItem>
                       <MenuItem value="dev">Web Development</MenuItem>

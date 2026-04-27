@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography, Grid, Container, Paper } from "@mui/material";
+import { Box, Typography, Grid, Container, Paper, useTheme, useMediaQuery } from "@mui/material";
 import { keyframes } from "@mui/system";
 import { motion, AnimatePresence } from "framer-motion";
 import CodeIcon from "@mui/icons-material/Code";
@@ -100,6 +100,9 @@ const DashboardMockup = () => (
 );
 
 const DetailedServices = ({ data }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
   const {
     subtitle = "OUR SERVICES",
     title = "We think big and work across leading technology platforms",
@@ -149,7 +152,7 @@ const DetailedServices = ({ data }) => {
         </Box>
 
         {/* 2. Main Content Grid (Two-Column) */}
-        <Grid container spacing={6} alignItems="center">
+        <Grid container spacing={isMobile ? 4 : 6} alignItems="center">
 
           {/* Left Column - 3D Mockup (40%) */}
           <Grid item xs={12} md={5}>
@@ -161,18 +164,19 @@ const DetailedServices = ({ data }) => {
             <Paper
               elevation={0}
               sx={{
+                py: 1,
                 display: "flex",
-                flexDirection: { xs: "column-reverse", md: "row" }, // Tabs above list on mobile
+                flexDirection: isMobile ? "column-reverse" : "row", // Tabs above list on mobile
                 width: "100%",
                 borderRadius: "16px",
-                boxShadow: "0 20px 40px rgba(0,0,0,0.05)",
-                border: "1px solid rgba(0,0,0,0.02)",
+                boxShadow: isMobile ? "none" : "0 20px 40px rgba(0,0,0,0.05)",
+                border: isMobile ? "none" : "1px solid rgba(0,0,0,0.02)",
                 overflow: "hidden",
-                bgcolor: "#ffffff",
+                bgcolor: isMobile ? "transparent" : "#ffffff",
               }}
             >
               {/* Service List Panel (Left Side of Card) */}
-              <Box sx={{ flex: 1, p: { xs: 2.5, md: 3.5 } }}>
+              <Box sx={{ flex: 1, p: isMobile ? 0 : 3.5 }}>
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeTab}
