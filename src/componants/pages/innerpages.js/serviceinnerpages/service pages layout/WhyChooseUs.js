@@ -150,7 +150,7 @@ const WhyChooseUs = ({ data }) => {
                     <ReasonCard
                       bordercolor={card.color}
                       sx={{
-                        width: "80%",
+                        width: "83%",
                         height: "80%",
                         display: "flex",
                         flexDirection: "column",
