@@ -83,6 +83,7 @@ const NodeCircle = styled(Box)(({ theme }) => ({
     left: 0,
     width: "100%",
     height: "100%",
+    boxSizing: "border-box",
     borderRadius: "50%",
     border: "2px solid #0087c9",
     animation: `${pulse} 2s infinite ease-out`,
@@ -108,8 +109,8 @@ const StepCard = styled(Paper)(({ theme }) => ({
     boxShadow: "0 10px 30px rgba(0,0,0,0.02)",
   },
   [theme.breakpoints.down("md")]: {
-    height: "130px", /* <--- CHANGE MOBILE CARD HEIGHT HERE */
-    width: "100%",
+    height: "120px", /* <--- CHANGE MOBILE CARD HEIGHT HERE */
+    width: "90%",
     padding: "20px",
     justifyContent: "center",
   }
@@ -221,12 +222,10 @@ const ProcessSection = ({ data }) => {
         {/* Mobile Stepper Breakdown */}
         <Box sx={{ display: isMobile ? "flex" : "none", flexDirection: "column", gap: 3 }}>
           {processSteps.map((step, index) => (
-            <Box key={index} sx={{ display: "flex", gap: 2, alignItems: "center" }}>
-              <NodeCircle sx={{ width: "48px", height: "48px", fontSize: "16px" }}>
-                {step.number}
-              </NodeCircle>
+            <Box key={index} sx={{ display: "flex", flexDirection: "column", gap: 2, alignItems: "center" }}>
               <StepCard sx={{ width: "100%" }}>
-                <Typography variant="h6" sx={{ color: "#0a2233", fontWeight: 800, mb: 1, fontSize: "16px", fontFamily: "Urbanist, sans-serif" }}>
+                <Typography variant="h6" sx={{ color: "#0a2233", fontWeight: 800, mb: 1, fontSize: "16px", fontFamily: "Urbanist, sans-serif", display: "flex", gap: 1 }}>
+                  <Box component="span" sx={{ color: "#0087c9" }}>{step.number}.</Box>
                   {step.title}
                 </Typography>
                 <Typography sx={{ color: "#64748b", fontSize: "13px", lineHeight: 1.6 }}>
