@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Grid, Container, Paper, } from "@mui/material";
+import { Box, Typography, Grid, Container, Paper, useTheme, useMediaQuery } from "@mui/material";
 import { styled } from "@mui/system";
 import PeopleIcon from "@mui/icons-material/People";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
@@ -70,6 +70,9 @@ const ReasonCard = styled(Paper)(({ theme, bordercolor }) => ({
 // }));
 
 const WhyChooseUs = ({ data }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
   const {
     subtitle = "WHY VIHAAN",
     title = "Why Leading Businesses Trust Vihaan Innovations",
@@ -83,7 +86,7 @@ const WhyChooseUs = ({ data }) => {
   } = data || {};
 
   return (
-    <Box sx={{ bgcolor: "#f1f5f9", py: { xs: 4, md: 6 }, position: "relative" }}>
+    <Box sx={{ bgcolor: "#f1f5f9", py: isMobile ? 4 : 6, position: "relative" }}>
       <Container maxWidth="lg">
         <Grid container spacing={6} alignItems="center">
 
@@ -94,7 +97,7 @@ const WhyChooseUs = ({ data }) => {
                 {subtitle}
               </Typography>
             </Box>
-            <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "40px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2, lineHeight: 1.2 }}>
+            <Typography variant="h2" sx={{ fontWeight: 800, fontSize: isMobile ? "28px" : "40px", fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2, lineHeight: 1.2 }}>
               {title}
             </Typography>
             <Typography sx={{ color: "#475569", fontSize: "16px", lineHeight: 1.8, mb: 4 }}>
@@ -133,38 +136,69 @@ const WhyChooseUs = ({ data }) => {
           </Grid>
 
           {/* Right Column - 2x2 Grid */}
-          <Grid item xs={12} md={7} >
-            <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", sm: "repeat(2, 1fr)" }, gap: 4, gridAutoRows: "1fr" }}>
+          <Grid item xs={12} md={7} alignItems="stretch">
+            <Grid container spacing={isMobile ? 3 : 4}>
               {reasons.map((card, i) => {
                 const SvgIcon = card.icon;
                 return (
-                  <ReasonCard key={i} bordercolor={card.color}>
-                    <Box
+                  <Grid
+                    item
+                    xs={12}
+                    sm={isMobile ? 12 : 6}
+                    key={i}
+                  >
+                    <ReasonCard
+                      bordercolor={card.color}
                       sx={{
-                        width: "48px",
-                        height: "32px",
-                        borderRadius: "12px",
-                        bgcolor: `${card.color}10`,
+                        width: "80%",
+                        height: "80%",
                         display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        color: card.color,
-
+                        flexDirection: "column",
                       }}
                     >
-                      <SvgIcon />
-                    </Box>
-                    <Typography variant="h6" sx={{ color: "#0a2233", fontWeight: 800, mb: 1, fontSize: "17px", fontFamily: "Urbanist, sans-serif" }}>
-                      {card.title}
-                    </Typography>
-                    <Typography sx={{ color: "#64748b", fontSize: "14px", lineHeight: 1.6 }}>
-                      {card.desc}
-                    </Typography>
-                    {/* <Watermark>{card.number}</Watermark> */}
-                  </ReasonCard>
+                      <Box
+                        sx={{
+                          width: "48px",
+                          height: "32px",
+                          borderRadius: "12px",
+                          bgcolor: `${card.color}10`,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          color: card.color,
+                        }}
+                      >
+                        <SvgIcon />
+                      </Box>
+
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          color: "#0a2233",
+                          fontWeight: 800,
+                          mb: 1,
+                          mt: 2,
+                          fontSize: "17px",
+                          fontFamily: "Urbanist, sans-serif",
+                        }}
+                      >
+                        {card.title}
+                      </Typography>
+
+                      <Typography
+                        sx={{
+                          color: "#64748b",
+                          fontSize: "14px",
+                          lineHeight: 1.6,
+                        }}
+                      >
+                        {card.desc}
+                      </Typography>
+                    </ReasonCard>
+                  </Grid>
                 );
               })}
-            </Box>
+            </Grid>
           </Grid>
 
         </Grid>

@@ -85,9 +85,9 @@ const CTASection = ({ data }) => {
                 Get Started Today
               </Button>
 
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1, color: "#64748b", cursor: "pointer", "&:hover": { color: "#0a1628" }, transition: "color 0.3s" }}>
+              {/* <Box sx={{ display: "flex", alignItems: "center", gap: 1, color: "#64748b", cursor: "pointer", "&:hover": { color: "#0a1628" }, transition: "color 0.3s" }}>
                 <Typography sx={{ fontWeight: 600, fontSize: "15px", fontFamily: "Inter, sans-serif" }}>{brandText}</Typography>
-              </Box>
+              </Box> */}
             </Box>
 
           </Box>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography, Container, Grid, Paper, Tabs, Tab } from "@mui/material";
+import { Box, Typography, Container, Grid, Paper, Tabs, Tab, useTheme, useMediaQuery } from "@mui/material";
 import { styled } from "@mui/system";
 import { motion, AnimatePresence } from "framer-motion";
 import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
@@ -103,6 +103,9 @@ const CustomTab = styled(Tab)(({ theme }) => ({
 }));
 
 const IndustryExpertise = ({ data }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
   const {
     subtitle = "INDUSTRY EXPERTISE",
     title = "Delivering Success Across Sectors",
@@ -123,31 +126,34 @@ const IndustryExpertise = ({ data }) => {
   const current = industries[activeTab] || industries[0] || { title: "", desc: "", desc1: "", checks: [], cards: [] };
 
   return (
-    <Box sx={{ bgcolor: "#f1f5f9", py: { xs: 6, md: 8 }, position: "relative" }}>
+    <Box sx={{ bgcolor: "#f1f5f9", py: isMobile ? 6 : 8, position: "relative" }}>
       <Container maxWidth="lg">
         {/* Heading */}
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography sx={{ color: "#0087c9", fontWeight: 700, fontSize: "12px", letterSpacing: "1px", mb: 1.5 }}>
             {subtitle}
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "40px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: isMobile ? "28px" : "40px", fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2 }}>
             {title}
           </Typography>
         </Box>
 
-        {/* Horizontal Scrollable Tabs */}
-        <Box sx={{ display: "flex", justifyContent: "center", mb: 6, overflowX: "auto", pb: 2 }}>
+        {/* Responsive Tabs */}
+        <Box sx={{ display: "flex", justifyContent: isMobile ? "flex-start" : "center", mb: isMobile ? 3 : 4, overflowX: "auto", pb: 1 }}>
           <Tabs
             value={activeTab}
             onChange={(e, v) => setActiveTab(v)}
-            variant="scrollable"
+            variant={isMobile ? "standard" : "scrollable"}
+            orientation={isMobile ? "vertical" : "horizontal"}
             scrollButtons="auto"
             TabIndicatorProps={{ style: { display: "none" } }}
+            sx={isMobile ? { width: "100%" } : {}}
           >
             {categoriesList.map((cat, idx) => (
               <CustomTab
                 key={idx}
                 label={cat.label}
+                sx={{ margin: isMobile ? "4px 0" : "0 6px", width: isMobile ? "100%" : "auto", alignItems: isMobile ? "flex-start" : "center" }}
               />
             ))}
           </Tabs>

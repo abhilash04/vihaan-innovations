@@ -180,6 +180,10 @@ function App() {
               <Route path="/services/keyword-research" element={<ServiceDetails exploreData={exploreServiceData.KeywordResearchServices} />} />
               <Route path="/services/seo-consulting" element={<ServiceDetails exploreData={exploreServiceData.SeoConsultanting} />} />
 
+              <Route path="/services/website-design" element={<ServiceDetails exploreData={exploreServiceData.WebsiteDesignServices} />} />
+              <Route path="/services/frontend-development" element={<ServiceDetails exploreData={exploreServiceData.FrontendDevelopmentServices} />} />
+              <Route path="/services/backend-development" element={<ServiceDetails exploreData={exploreServiceData.BackendDevelopmentServices} />} />
+              <Route path="/services/website-optimization" element={<ServiceDetails exploreData={exploreServiceData.WebsiteSpeedOptimizationServices} />} />
 
 
               {/* Training Categories Hubs */}
