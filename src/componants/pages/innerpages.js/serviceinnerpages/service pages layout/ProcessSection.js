@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Container, Paper } from "@mui/material";
+import { Box, Typography, Container, Paper, useTheme, useMediaQuery } from "@mui/material";
 import { styled, keyframes } from "@mui/system";
 import { motion } from "framer-motion";
 import CheckIcon from "@mui/icons-material/Check";
@@ -95,6 +95,9 @@ const StepCard = styled(Paper)(({ theme }) => ({
   borderRadius: "16px",
   padding: "24px",
   width: "280px",
+  height: "185px", /* <--- CHANGE DESKTOP CARD HEIGHT HERE */
+  display: "flex",
+  flexDirection: "column",
   textAlign: "left",
   position: "relative",
   transition: "all 0.3s ease",
@@ -104,9 +107,18 @@ const StepCard = styled(Paper)(({ theme }) => ({
     background: "#f8fafc",
     boxShadow: "0 10px 30px rgba(0,0,0,0.02)",
   },
+  [theme.breakpoints.down("md")]: {
+    height: "130px", /* <--- CHANGE MOBILE CARD HEIGHT HERE */
+    width: "100%",
+    padding: "20px",
+    justifyContent: "center",
+  }
 }));
 
 const ProcessSection = ({ data }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
   const {
     subtitle = "HOW WE WORK",
     title = "Our Proven Delivery Process",
@@ -114,20 +126,20 @@ const ProcessSection = ({ data }) => {
   } = data || {};
 
   return (
-    <Box sx={{ background: "linear-gradient(135deg, #fce7f3 0%, #e0f2fe 40%, #ccfbf1 100%)", py: { xs: 6, md: 6 }, position: "relative", overflow: "hidden" }}>
+    <Box sx={{ background: "linear-gradient(135deg, #fce7f3 0%, #e0f2fe 40%, #ccfbf1 100%)", py: isMobile ? 6 : 8, position: "relative", overflow: "hidden" }}>
       <Container maxWidth="lg">
         {/* Heading */}
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography sx={{ color: "#0087c9", fontWeight: 700, fontSize: "12px", letterSpacing: "1px", mb: 1.5 }}>
             {subtitle}
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "40px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: isMobile ? "28px" : "40px", fontFamily: "Urbanist, sans-serif", color: "#0a2233", }}>
             {title}
           </Typography>
         </Box>
 
         {/* Desktop Timeline Section */}
-        <Box sx={{ position: "relative", display: { xs: "none", md: "block" }, height: "480px", mt: 3 }}>
+        <Box sx={{ position: "relative", display: isMobile ? "none" : "block", height: "480px", mt: 3 }}>
 
           {/* SVG Background Curve */}
           {/* <svg
@@ -177,7 +189,7 @@ const ProcessSection = ({ data }) => {
                   sx={{
                     position: "absolute",
                     left: "50%",
-                    top: isAbove ? "-200px" : "70px",
+                    top: isAbove ? "-240px" : "70px",
                   }}
                 >
                   <StepCard>
@@ -207,9 +219,9 @@ const ProcessSection = ({ data }) => {
         </Box>
 
         {/* Mobile Stepper Breakdown */}
-        <Box sx={{ display: { xs: "flex", md: "none" }, flexDirection: "column", gap: 3 }}>
+        <Box sx={{ display: isMobile ? "flex" : "none", flexDirection: "column", gap: 3 }}>
           {processSteps.map((step, index) => (
-            <Box key={index} sx={{ display: "flex", gap: 2, alignItems: "flex-start" }}>
+            <Box key={index} sx={{ display: "flex", gap: 2, alignItems: "center" }}>
               <NodeCircle sx={{ width: "48px", height: "48px", fontSize: "16px" }}>
                 {step.number}
               </NodeCircle>
