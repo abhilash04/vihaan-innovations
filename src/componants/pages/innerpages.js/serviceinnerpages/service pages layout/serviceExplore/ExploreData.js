@@ -534,7 +534,7 @@ export const exploreServiceData = {
       cta: "Contact Us ↗"
     }
   },
-  "Website Design Services": {
+  "WebsiteDesignServices": {
     hero: {
       title: "Website Design Services",
       subtitle: "Website Design Services to Create Modern, High-Converting Websites",
@@ -636,7 +636,7 @@ export const exploreServiceData = {
       cta: "Contact Us ↗"
     }
   },
-  "Frontend Development Services": {
+  "FrontendDevelopmentServices": {
     hero: {
       title: "Frontend Development Services",
       subtitle: "Frontend Development Services to Build Fast, Responsive, and Engaging Interfaces",
@@ -738,7 +738,7 @@ export const exploreServiceData = {
       cta: "Contact Us ↗"
     }
   },
-  "Backend Development Services": {
+  "BackendDevelopmentServices": {
     hero: {
       title: "Backend Development Services",
       subtitle: "Backend Development Services to Build Secure, Scalable, and High-Performance Systems",
@@ -840,7 +840,7 @@ export const exploreServiceData = {
       cta: "Contact Us ↗"
     }
   },
-  "Website Speed Optimization Services": {
+  "WebsiteSpeedOptimizationServices": {
     hero: {
       title: "Website Speed Optimization Services",
       subtitle: "Website Speed Optimization Services to Improve Performance and User Experience",
