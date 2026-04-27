@@ -23,7 +23,7 @@ const ServicesSection = ({ location, serviceType, services = [], customServicesH
                         transition={{ duration: 0.5 }}
                     >
                         <Chip
-                            label="Specialized Services"
+                            label={customServicesHeaders?.badge || "Specialized Services"}
                             sx={{
                                 background: "#e6f1fb",
                                 color: "#0c447c",
@@ -62,8 +62,7 @@ const ServicesSection = ({ location, serviceType, services = [], customServicesH
                             textAlign="center"
                             sx={{ maxWidth: "700px", fontSize: { xs: "13px", md: "1.1rem" }, px: { xs: 1, md: 0 } }}
                         >
-                            We provide end-to-end digital excellence tailored for businesses in {location}.
-                            Our solutions are designed to scale and succeed.
+                            {customServicesHeaders?.description || `We provide end-to-end digital excellence tailored for businesses in ${location}. Our solutions are designed to scale and succeed.`}
                         </Typography>
                     </motion.div>
                 </Stack>

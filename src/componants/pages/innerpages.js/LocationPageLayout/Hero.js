@@ -149,11 +149,11 @@ const HeroSection = ({ location, serviceType, content }) => {
                         justifyContent="center"
                         gap={{ xs: 1.5, md: 4 }}
                     >
-                        {[
+                        {(content.stats || [
                             { value: "500+", label: `${location} Clients` },
                             { value: "99%", label: "Local Success Rate" },
                             { value: "24/7", label: "Direct Support" },
-                        ].map((stat, i) => (
+                        ]).map((stat, i) => (
                             <motion.div
                                 key={i}
                                 initial={{ opacity: 0, scale: 0.9 }}

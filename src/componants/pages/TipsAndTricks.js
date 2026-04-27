@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Typography,
@@ -9,78 +9,47 @@ import {
   IconButton,
   useMediaQuery,
   useTheme,
+  CircularProgress,
 } from "@mui/material";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import PersonIcon from "@mui/icons-material/Person";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
-import img1 from "../../assets/it-trends.jpeg";
-import img2 from "../../assets/smart-tools.jpeg";
-import img3 from "../../assets/tech-life.jpeg";
-import img4 from "../../assets/ai-transform.png";
-
-const posts = [
-  {
-    id: 1,
-    category: "IT Services",
-    title: "Emerging IT Trends Shaping the Future",
-    description:
-      "Learn about the latest technology trends like AI, cloud computing, and cybersecurity that are transforming modern businesses.",
-    date: "16 Nov 2020",
-    author: "admin",
-    image: img1,
-  },
-  {
-    id: 2,
-    category: "Software Development",
-    title: "Smart Tools to Improve Remote Work",
-    description:
-      "Discover software solutions that make remote work more efficient, collaborative, and productive.",
-    date: "16 Nov 2020",
-    author: "admin",
-    image: img2,
-  },
-  {
-    id: 3,
-    category: "Web Development",
-    title: "Tech That Makes Everyday Life Easier",
-    description:
-      "Explore digital tools and smart devices designed to simplify tasks at home and in the workplace.",
-    date: "16 Nov 2020",
-    author: "admin",
-    image: img3,
-  },
-  {
-    id: 4,
-    category: "AI/ML",
-    title: "How AI is Transforming Today's World",
-    description:
-      "Understand essential cybersecurity practices to protect your company data and maintain online security.",
-    date: "18 Dec 2021",
-    author: "admin",
-    image: img4,
-  },
-];
+import { useNavigate } from "react-router-dom";
+import { config } from "../../config/Config";
+import { apiList, invokeApi } from "../../services/ApiServices";
 
 /* ─── Single Post Card ───────────────────────────────────────────────────── */
-const PostCard = ({ post, isMobile }) => (
+const PostCard = ({ post, isMobile, onClick }) => (
   <Card
+    component={motion.div}
+    whileHover={{ 
+      y: -12,
+      transition: { type: "spring", stiffness: 300, damping: 15 }
+    }}
+    onClick={onClick}
     sx={{
       width: "100%",
       height: "100%",
       display: "flex",
       flexDirection: "column",
       flexShrink: 0,
-      transition: "transform 0.3s ease, box-shadow 0.3s ease",
-      "&:hover": { transform: "translateY(-8px)", boxShadow: 6 },
+      cursor: "pointer",
+      borderRadius: "20px",
+      overflow: "hidden",
+      transition: "box-shadow 0.3s ease",
+      "&:hover": { 
+        boxShadow: "0 25px 50px rgba(0, 108, 255, 0.15)",
+        "& img": { filter: "grayscale(0%) scale(1.05)" }
+      },
     }}
   >
     <Box sx={{ position: "relative", overflow: "hidden", flexShrink: 0 }}>
       <CardMedia
         component="img"
         height={isMobile ? 170 : 230}
-        image={post.image}
-        alt={post.title}
+        image={post.featuredUrl || post.image}
+        alt={post.blogTitle || post.title}
         sx={{ transition: "filter 0.4s ease", "&:hover": { filter: "grayscale(100%)" } }}
       />
       <Button
@@ -107,7 +76,7 @@ const PostCard = ({ post, isMobile }) => (
         <CalendarMonthIcon sx={{ fontSize: 16, color: "#0B70E1" }} />
         <Typography variant="caption" color="text.secondary">{post.date}</Typography>
         <PersonIcon sx={{ fontSize: 16, color: "#0B70E1", ml: 2 }} />
-        <Typography variant="caption" color="#454545">{post.author}</Typography>
+        <Typography variant="caption" color="#454545">{post.author || "admin"}</Typography>
       </Box>
       <Typography
         variant="subtitle1"
@@ -118,14 +87,29 @@ const PostCard = ({ post, isMobile }) => (
           color: "#0a0a0a",
           fontFamily: "Livvic",
           mb: "10px",
+          display: "-webkit-box",
+          WebkitLineClamp: 2,
+          WebkitBoxOrient: "vertical",
+          overflow: "hidden",
           "&:hover": { color: "#0B70E1" },
         }}
       >
-        {post.title}
+        {post.blogTitle || post.title}
       </Typography>
       <Typography
         variant="body2"
-        sx={{ fontSize: { xs: "14px", md: "16px" }, color: "#454545", fontFamily: "Livvic", mb: "10px", flexGrow: 1, "&:hover": { color: "#0B70E1" } }}
+        sx={{
+          fontSize: { xs: "14px", md: "16px" },
+          color: "#454545",
+          fontFamily: "Livvic",
+          mb: "10px",
+          flexGrow: 1,
+          display: "-webkit-box",
+          WebkitLineClamp: 3,
+          WebkitBoxOrient: "vertical",
+          overflow: "hidden",
+          "&:hover": { color: "#0B70E1" }
+        }}
       >
         {post.description}
       </Typography>
@@ -145,6 +129,32 @@ const PostCard = ({ post, isMobile }) => (
 export default function TipsAndTricks() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const navigate = useNavigate();
+
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(1);
+
+  const fetchArticles = async () => {
+    setLoading(true);
+    try {
+      const response = await invokeApi(config.apiBaseUrl + apiList.getArticles, {});
+      if (response?.status >= 200 && response?.status < 300) {
+        if (response.data.responseCode === "200") {
+          setPosts(response.data.blogs || []);
+        }
+      }
+    } catch (error) {
+      console.error("Error fetching articles:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchArticles();
+  }, []);
 
   /* ─── Arrow Button ─── */
   const ArrowBtn = ({ onClick, disabled, children }) => (
@@ -174,9 +184,7 @@ export default function TipsAndTricks() {
   );
 
   const visibleCount = isMobile ? 1 : 3;
-  const maxIndex = posts.length - visibleCount;
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(1);
+  const maxIndex = Math.max(0, posts.length - visibleCount);
 
   const handlePrev = () => {
     setDirection(-1);
@@ -233,7 +241,11 @@ export default function TipsAndTricks() {
         )}
 
         {/* ── MOBILE: one card at a time with AnimatePresence ── */}
-        {isMobile ? (
+        {loading ? (
+          <CircularProgress />
+        ) : posts.length === 0 ? (
+          <Typography>No articles found.</Typography>
+        ) : isMobile ? (
           <Box sx={{ overflow: "hidden", width: "100%" }}>
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
@@ -245,7 +257,11 @@ export default function TipsAndTricks() {
                 exit="exit"
                 transition={{ duration: 0.35, ease: "easeInOut" }}
               >
-                <PostCard post={posts[currentIndex]} isMobile={isMobile} />
+                <PostCard
+                  post={posts[currentIndex]}
+                  isMobile={isMobile}
+                  onClick={() => navigate(`/article/${posts[currentIndex].ogUrl}`)}
+                />
               </motion.div>
             </AnimatePresence>
           </Box>
@@ -254,7 +270,11 @@ export default function TipsAndTricks() {
           <Box sx={{ display: "flex", gap: 4, width: "100%", maxWidth: 1200, alignItems: "stretch" }}>
             {posts.slice(currentIndex, currentIndex + visibleCount).map((post) => (
               <Box key={post.id} sx={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column" }}>
-                <PostCard post={post} isMobile={isMobile} />
+                <PostCard
+                  post={post}
+                  isMobile={isMobile}
+                  onClick={() => navigate(`/article/${post.ogUrl}`)}
+                />
               </Box>
             ))}
           </Box>
@@ -306,6 +326,7 @@ export default function TipsAndTricks() {
       <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
         <Button
           variant="contained"
+          onClick={() => navigate("/articles")}
           sx={{
             textTransform: "none",
             fontSize: "16px",

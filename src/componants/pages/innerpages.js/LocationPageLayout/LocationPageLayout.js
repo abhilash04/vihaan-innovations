@@ -70,7 +70,11 @@ const LocationPageLayout = () => {
                 services={dynamicContent.services}
                 customServicesHeaders={dynamicContent.customServicesHeaders}
             />
-            <Impact location={locationName} />
+            <Impact 
+                location={locationName} 
+                content={dynamicContent.impact}
+            />
+
             <SeoContent
                 location={locationName}
                 serviceType={serviceType}
