@@ -80,12 +80,16 @@ const ITServiceSection = () => {
                     </Box>
                   ) : (
                     <Box
-                      component="img"
+                      component={motion.img}
+                      whileHover={{ scale: 1.05, filter: "grayscale(0%)", transition: { duration: 0.3 } }}
                       src={item}
                       alt={`dummy-${index}`}
                       sx={{
                         width: "100%",
-                        borderRadius: "10px",
+                        borderRadius: "20px",
+                        filter: "grayscale(20%)",
+                        boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+                        transition: "filter 0.3s ease",
                       }}
                     />
                   )}

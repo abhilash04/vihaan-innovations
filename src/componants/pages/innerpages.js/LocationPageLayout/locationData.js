@@ -1,4 +1,6 @@
 import { customWebDevLocationContent } from "./locationCustomContentDB";
+import { customDigitalMarketingLocationContent } from "./locationDigitalMarketingContentDB";
+
 // Detailed location groupings
 export const bangaloreLocalities = [
   "Marathahalli", "Koramangala", "Indiranagar", "Electronic City", "Whitefield",
@@ -336,6 +338,68 @@ export const getContentForLocation = (location, serviceType, mode = "service", d
           sidebar: customMatch.seoContent.sidebar
         },
         process: customProcess,
+        customTestimonials: customMatch.testimonials
+      };
+    }
+  } else if (isDigitalMarketing) {
+    const customMatch = customDigitalMarketingLocationContent[cleanLocation.toLowerCase()];
+    if (customMatch) {
+      // Merge custom content with existing structures
+      
+      // Merge services with icons
+      const customServicesCards = customMatch.services.cards.map((c, i) => {
+        const baseService = digitalMarketingServices[i] || digitalMarketingServices[0];
+        return {
+          title: c.title,
+          desc: c.desc,
+          tags: baseService.tags,
+          icon: baseService.icon
+        };
+      });
+
+      // Process
+      const customProcess = customMatch.process.steps.map((s, i) => {
+        return {
+          title: s.title,
+          desc: s.desc
+        };
+      });
+
+      return {
+        ...baseContent,
+        hero: {
+          title: customMatch.hero.title,
+          badge: customMatch.hero.badge,
+          subtext: customMatch.hero.subtext,
+          stats: customMatch.hero.stats
+        },
+        services: customServicesCards,
+        customServicesHeaders: {
+          title: customMatch.services.title,
+          description: customMatch.services.description,
+          badge: customMatch.services.badge
+        },
+        impact: customMatch.impact,
+        about: {
+          title: customMatch.about.title,
+          content: customMatch.about.description,
+          features: customMatch.about.features,
+          bullets: customMatch.about.bullets,
+          badge: customMatch.about.badge,
+          checklist: customMatch.about.checklist
+        },
+        seoContent: {
+          heading: customMatch.seoContent.title,
+          paragraphs: customMatch.seoContent.paragraphs,
+          highlight: customMatch.seoContent.highlight,
+          sidebar: customMatch.seoContent.sidebar
+        },
+        process: {
+          ...customMatch.process,
+          steps: customProcess
+        },
+        techStack: customMatch.techStack,
+        industries: customMatch.industries,
         customTestimonials: customMatch.testimonials
       };
     }

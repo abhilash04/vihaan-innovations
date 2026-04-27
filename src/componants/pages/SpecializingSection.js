@@ -68,6 +68,12 @@ const services = [
 /* ─── Reusable Service Card ─────────────────────────────────────────────── */
 const ServiceCard = ({ service }) => (
   <Card
+    component={motion.div}
+    whileHover={{
+      scale: 1.05,
+      y: -8,
+      transition: { type: "spring", stiffness: 400, damping: 10 }
+    }}
     sx={{
       borderRadius: "16px",
       border: "1px solid rgba(0,0,0,0.05)",
@@ -77,11 +83,11 @@ const ServiceCard = ({ service }) => (
       alignItems: "center",
       textAlign: "center",
       height: "100%",
-      transition: "all 0.3s ease",
+      cursor: "pointer",
+      transition: "box-shadow 0.3s ease",
       "&:hover": {
-        boxShadow: "0 15px 35px rgba(0,0,0,0.08)",
-        transform: "translateY(-5px)",
-        borderColor: "rgba(0,0,0,0.1)",
+        boxShadow: "0 20px 40px rgba(0,0,0,0.12)",
+        borderColor: "rgba(0,108,255,0.2)",
       },
     }}
   >
