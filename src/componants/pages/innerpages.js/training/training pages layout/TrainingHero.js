@@ -326,8 +326,9 @@ const TrainingHero = ({ data = {} }) => {
                     }}
 
                   >
-                    <MenuItem value="Select Desired Course">
-                      {coursePlaceholder || "Select Desired Course"}
+                    {/* Placeholder option — value="" matches initial formData.course */}
+                    <MenuItem value="Select Course" disabled sx={{ color: "rgba(255,255,255,0.5)", fontStyle: "italic" }}>
+                      {coursePlaceholder || "Select Course"}
                     </MenuItem>
 
                     {courses.map((c) => (
