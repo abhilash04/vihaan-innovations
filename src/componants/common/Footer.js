@@ -21,7 +21,7 @@ import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import PopUps from "./PopUps";
 import { useTheme as useAppTheme } from "./ThemeContext";
 import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
-// import logo from "../../assets/vihaan-logo.png"; 
+// import logo from "../../assets/vihaan-logo.png";
 
 const Footer = () => {
   return (
