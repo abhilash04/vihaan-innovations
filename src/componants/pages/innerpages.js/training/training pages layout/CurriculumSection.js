@@ -35,14 +35,14 @@ const CurriculumSection = ({ data = {} }) => {
 
         <Grid container spacing={3}>
           {roadmap.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+            <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: "flex" }}>
               <Box
                 component={motion.div}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                sx={{ height: "100%" }}
+                sx={{ height: "100%", width: "100%" }}
               >
                 <Paper
                   elevation={0}
@@ -53,6 +53,8 @@ const CurriculumSection = ({ data = {} }) => {
                     background: "#f8fafc",
                     border: "1px solid #e2e8f0",
                     transition: "all 0.3s ease",
+                    display: "flex",
+                    flexDirection: "column",
                     "&:hover": {
                       borderColor: "#00b4d8",
                       background: "#ffffff",

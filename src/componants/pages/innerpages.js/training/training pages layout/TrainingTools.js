@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Container, Grid, Card } from "@mui/material";
+import { Box, Typography, Container, Grid, Card, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 
 const tools = [
@@ -14,6 +14,9 @@ const tools = [
 ];
 
 const TrainingTools = ({ data = [] }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Box sx={{ py: { xs: 8, md: 10 }, background: "#f8fafc" }}>
       <Container maxWidth="lg">
@@ -31,7 +34,16 @@ const TrainingTools = ({ data = [] }) => {
           </Typography>
         </Box>
 
-        <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 3 }}>
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            flexDirection: isMobile ? "column" : "row",
+            justifyContent: "center",
+            alignItems: isMobile ? "stretch" : "center",
+            gap: 3,
+          }}
+        >
           {data.map((t, i) => (
             <Box
               key={i}

@@ -9,6 +9,11 @@ import {
   TableRow,
   Typography,
   Paper,
+  useMediaQuery,
+  useTheme,
+  Card,
+  CardContent,
+  Stack,
 } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CancelIcon from "@mui/icons-material/Cancel";
@@ -84,7 +89,7 @@ const HeaderCell = styled(TableCell)({
   textAlign: "center",
   "&:last-child": {
     borderRight: "none",
-  }
+  },
 });
 
 const FeatureCell = styled(TableCell)({
@@ -118,7 +123,7 @@ const NormalCell = styled(TableCell)({
   textAlign: "center",
   "&:last-child": {
     borderRight: "none",
-  }
+  },
 });
 
 const renderIcon = (type) => {
@@ -128,19 +133,57 @@ const renderIcon = (type) => {
   return null;
 };
 
+// Mobile card for each comparison row
+const MobileComparisonCard = ({ row }) => (
+  <Card
+    elevation={0}
+    sx={{ mb: 2, border: "1px solid #eee", borderRadius: "12px", overflow: "hidden" }}
+  >
+    <Box sx={{ backgroundColor: "#f0f4ff", px: 2, py: 1 }}>
+      <Typography sx={{ fontWeight: 700, fontSize: "14px", color: "#3f51b5" }}>
+        {row.feature}
+      </Typography>
+    </Box>
+    <CardContent sx={{ p: 2 }}>
+      <Stack spacing={1.5}>
+        {[
+          { label: "Vihaan Innovations", data: row.webmind, color: "#3f51b5" },
+          { label: "Freelancers", data: row.freelance, color: "#666" },
+          { label: "Other Agencies", data: row.others, color: "#666" },
+        ].map((item, i) => (
+          <Box key={i} sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            {renderIcon(item.data.type)}
+            <Box>
+              <Typography sx={{ fontSize: "11px", color: "#999", fontWeight: 600 }}>
+                {item.label}
+              </Typography>
+              <Typography sx={{ fontSize: "13px", color: item.color, fontWeight: i === 0 ? 600 : 400 }}>
+                {item.data.text}
+              </Typography>
+            </Box>
+          </Box>
+        ))}
+      </Stack>
+    </CardContent>
+  </Card>
+);
+
 export default function ComparisonTable() {
   const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
-    <Box sx={{ py: 4, px: 3, maxWidth: "1100px", mx: "auto", backgroundColor: "#fff" }}>
-      <Box sx={{ textAlign: "center", mb: 6, animation: `${fadeIn} 1s ease` }}>
+    <Box sx={{ py: 4, px: isMobile ? 2 : 3, maxWidth: "1100px", mx: "auto", backgroundColor: "#fff" }}>
+      <Box sx={{ textAlign: "center", mb: isMobile ? 3 : 6, animation: `${fadeIn} 1s ease` }}>
         <Typography
           sx={{
             fontWeight: 800,
-            fontSize: "36px",
+            fontSize: isMobile ? "24px" : "36px",
             color: "#1a1a1a",
             mb: 2,
             letterSpacing: "-0.5px",
-            textAlign: "center"
+            textAlign: "center",
           }}
         >
           Why Businesses Choose Vihaan Innovations
@@ -148,128 +191,180 @@ export default function ComparisonTable() {
         <Typography
           sx={{
             fontWeight: 400,
-            fontSize: "16px",
+            fontSize: isMobile ? "14px" : "16px",
             color: "#777",
             maxWidth: "700px",
             mx: "auto",
             lineHeight: 1.5,
-            textAlign: "center"
+            textAlign: isMobile ? "justify" : "center",
           }}
         >
-          A detailed comparison showcasing our commitment to quality, expert solutions, and 24/7 support <br />for your single vendor ecommerce website success.
+          A detailed comparison showcasing our commitment to quality, expert solutions, and 24/7
+          support {!isMobile && <br />} for your single vendor ecommerce website success.
         </Typography>
       </Box>
-      <TableContainer
-        component={Paper}
-        elevation={0}
-        sx={{
-          borderRadius: "16px",
-          border: "1px solid #eee",
-          overflow: "hidden"
-        }}
-      >
-        <Table>
-          <TableHead>
-            <TableRow>
-              <HeaderCell sx={{ textAlign: "left", pl: 3 }}>Key Feature</HeaderCell>
-              <HeaderCell sx={{
-                backgroundColor: "#f0f4ff",
-                color: "#3f51b5",
-                position: "relative",
-                overflow: "hidden"
-              }}>
-                Vihaan Innovations
-                <Box
+
+      {/* Mobile: Cards layout */}
+      {isMobile ? (
+        <Box>
+          {data.map((row, index) => (
+            <MobileComparisonCard key={index} row={row} />
+          ))}
+        </Box>
+      ) : (
+        /* Desktop: Table layout */
+        <TableContainer
+          component={Paper}
+          elevation={0}
+          sx={{
+            borderRadius: "16px",
+            border: "1px solid #eee",
+            overflow: "hidden",
+          }}
+        >
+          <Table>
+            <TableHead>
+              <TableRow>
+                <HeaderCell sx={{ textAlign: "left", pl: 3 }}>Key Feature</HeaderCell>
+                <HeaderCell
                   sx={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)",
-                    animation: `${shimer} 2.5s infinite`,
+                    backgroundColor: "#f0f4ff",
+                    color: "#3f51b5",
+                    position: "relative",
+                    overflow: "hidden",
                   }}
-                />
-              </HeaderCell>
-              <HeaderCell>Freelancers</HeaderCell>
-              <HeaderCell>Other Agencies</HeaderCell>
-            </TableRow>
-          </TableHead>
+                >
+                  Vihaan Innovations
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      background:
+                        "linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)",
+                      animation: `${shimer} 2.5s infinite`,
+                    }}
+                  />
+                </HeaderCell>
+                <HeaderCell>Freelancers</HeaderCell>
+                <HeaderCell>Other Agencies</HeaderCell>
+              </TableRow>
+            </TableHead>
 
-          <TableBody>
-            {data.map((row, index) => (
-              <StyledTableRow key={index}>
-                <FeatureCell>{row.feature}</FeatureCell>
+            <TableBody>
+              {data.map((row, index) => (
+                <StyledTableRow key={index}>
+                  <FeatureCell>{row.feature}</FeatureCell>
 
-                <VihaanCell>
-                  <Box sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "flex-start",
-                    width: "100%",
-                    pl: { md: 3, xs: 1 }, // Standardized padding for all columns
-                  }}>
-                    <Box sx={{ display: "flex", width: 24, justifyContent: "center", mr: 1.5, flexShrink: 0 }}>
-                      {renderIcon(row.webmind.type)}
+                  <VihaanCell>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "flex-start",
+                        width: "100%",
+                        pl: { md: 3, xs: 1 },
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          display: "flex",
+                          width: 24,
+                          justifyContent: "center",
+                          mr: 1.5,
+                          flexShrink: 0,
+                        }}
+                      >
+                        {renderIcon(row.webmind.type)}
+                      </Box>
+                      <Typography
+                        sx={{ fontWeight: 600, fontSize: "14px", whiteSpace: "normal", textAlign: "left" }}
+                      >
+                        {row.webmind.text}
+                      </Typography>
                     </Box>
-                    <Typography sx={{ fontWeight: 600, fontSize: "14px", whiteSpace: "normal", textAlign: "left" }}>
-                      {row.webmind.text}
-                    </Typography>
-                  </Box>
-                </VihaanCell>
+                  </VihaanCell>
 
-                <NormalCell>
-                  <Box sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "flex-start",
-                    width: "100%",
-                    pl: { md: 3, xs: 1 },
-                  }}>
-                    <Box sx={{ display: "flex", width: 24, justifyContent: "center", mr: 1.5, flexShrink: 0 }}>
-                      {renderIcon(row.freelance.type)}
+                  <NormalCell>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "flex-start",
+                        width: "100%",
+                        pl: { md: 3, xs: 1 },
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          display: "flex",
+                          width: 24,
+                          justifyContent: "center",
+                          mr: 1.5,
+                          flexShrink: 0,
+                        }}
+                      >
+                        {renderIcon(row.freelance.type)}
+                      </Box>
+                      <Typography
+                        sx={{ fontSize: "14px", whiteSpace: "normal", textAlign: "left", color: "#666" }}
+                      >
+                        {row.freelance.text}
+                      </Typography>
                     </Box>
-                    <Typography sx={{ fontSize: "14px", whiteSpace: "normal", textAlign: "left", color: "#666" }}>
-                      {row.freelance.text}
-                    </Typography>
-                  </Box>
-                </NormalCell>
+                  </NormalCell>
 
-                <NormalCell>
-                  <Box sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "flex-start",
-                    width: "100%",
-                    pl: { md: 3, xs: 1 },
-                  }}>
-                    <Box sx={{ display: "flex", width: 24, justifyContent: "center", mr: 1.5, flexShrink: 0 }}>
-                      {renderIcon(row.others.type)}
+                  <NormalCell>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "flex-start",
+                        width: "100%",
+                        pl: { md: 3, xs: 1 },
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          display: "flex",
+                          width: 24,
+                          justifyContent: "center",
+                          mr: 1.5,
+                          flexShrink: 0,
+                        }}
+                      >
+                        {renderIcon(row.others.type)}
+                      </Box>
+                      <Typography
+                        sx={{ fontSize: "14px", whiteSpace: "normal", textAlign: "left", color: "#666" }}
+                      >
+                        {row.others.text}
+                      </Typography>
                     </Box>
-                    <Typography sx={{ fontSize: "14px", whiteSpace: "normal", textAlign: "left", color: "#666" }}>
-                      {row.others.text}
-                    </Typography>
-                  </Box>
-                </NormalCell>
-              </StyledTableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+                  </NormalCell>
+                </StyledTableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      )}
 
       {/* Why This Matters Section */}
       <Box
         sx={{
           mt: 1,
-          p: { xs: 4, md: 6 },
+          px: { xs: 1, md: 6 },
+          py: { xs: 2, md: 6 },
           textAlign: "center",
-          animation: `${fadeIn} 1.2s ease`,
+          animation: `${fadeIn} 1.2s ease`, 
         }}
       >
         <Typography
           sx={{
             fontWeight: 800,
-            fontSize: { xs: "28px", md: "36px" },
+            fontSize: { xs: "22px", md: "36px" },
             color: "#1a1a1a",
             mb: 3,
             letterSpacing: "-0.5px",
@@ -278,36 +373,37 @@ export default function ComparisonTable() {
           Why This Matters for Your Business
         </Typography>
 
-        <Box sx={{ maxWidth: "900px", mx: "auto", mb: 5 }}>
+        <Box sx={{ maxWidth: isMobile ? "100%" : "900px", mx: "auto", mb: 5 }}>
           <Typography
             sx={{
-              fontSize: "17px",
+              fontSize: isMobile ? "15px" : "17px",
               color: "#444",
-              lineHeight: 1.2,
-              width: 800,
+              lineHeight: 1.6,
+              width: isMobile ? "100%" : 800,
               mb: 2,
               fontWeight: 500,
-              textAlign: "center",
-              mx: "auto"
-
+              textAlign: isMobile ? "justify" : "center",
+              mx: "auto",
             }}
           >
-            Choosing the right partner ensures your single vendor ecommerce app is professional, scalable, <br />and ready to attract customers and drive sales.
+            Choosing the right partner ensures your single vendor ecommerce app is professional,
+            scalable, and ready to attract customers and drive sales.
           </Typography>
           <Typography
             sx={{
-              fontSize: "17px",
+              fontSize: isMobile ? "15px" : "17px",
               color: "#444",
-              lineHeight: 1.2,
-              width: 800,
+              lineHeight: 1.6,
+              width: isMobile ? "100%" : 800,
               mb: 1,
               fontWeight: 500,
-              textAlign: "center",
-              mx: "auto"
+              textAlign: isMobile ? "justify" : "center",
+              mx: "auto",
             }}
           >
-            With Vihaan Innovations, you get expert developers, modern design, strong SEO foundations,
-            and ongoing support to help your single vendor ecommerce app succeed online.
+            With Vihaan Innovations, you get expert developers, modern design, strong SEO
+            foundations, and ongoing support to help your single vendor ecommerce app succeed
+            online.
           </Typography>
         </Box>
 
@@ -319,8 +415,8 @@ export default function ComparisonTable() {
             color: "white",
             border: "none",
             borderRadius: "50px",
-            padding: "16px 40px",
-            fontSize: "18px",
+            padding: isMobile ? "14px 28px" : "16px 40px",
+            fontSize: isMobile ? "16px" : "18px",
             fontWeight: 700,
             cursor: "pointer",
             display: "inline-flex",
@@ -335,7 +431,7 @@ export default function ComparisonTable() {
             },
             "&:active": {
               transform: "scale(0.98)",
-            }
+            },
           }}
         >
           Build Your Website
@@ -343,15 +439,26 @@ export default function ComparisonTable() {
             component="span"
             sx={{
               display: "flex",
-
               transition: "transform 0.3s ease",
               ".MuiBox-root:hover &": {
-                transform: "translateX(5px)"
-              }
+                transform: "translateX(5px)",
+              },
             }}
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 12H19M19 12L12 5M19 12L12 19"
+                stroke="white"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </Box>
         </Box>
