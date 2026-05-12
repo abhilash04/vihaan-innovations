@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useRef } from "react";
-import { Box, Typography } from "@mui/material";
+import React, { useEffect, useState, useRef, useCallback, useMemo } from "react";
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { keyframes, styled } from "@mui/system";
 
 // --- Animations ---
@@ -127,6 +127,8 @@ const HappyIcon = ({ active }) => (
 );
 
 const OrderCycleMultiVendor = () => {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("md"));
     const [activeStep, setActiveStep] = useState(-1);
 
     // Refs for performance (Direct DOM manipulation)
@@ -136,18 +138,18 @@ const OrderCycleMultiVendor = () => {
     const requestRef = useRef();
     const startTimeRef = useRef();
 
-    const steps = [
+    const steps = useMemo(() => [
         { id: 0, icon: <OrderPlacedIcon />, label: "Online order placed", pos: { x: 300, y: 50 }, color: "#00bfff", func: pulseGlow, labelPos: "top" },
         { id: 1, icon: <PaymentsIcon />, label: "Payments received", pos: { x: 700, y: 50 }, color: "#00bfff", func: rotateSpark, labelPos: "top" },
         { id: 2, icon: <InventoryIcon />, label: "Inventory levels updated", pos: { x: 900, y: 250 }, color: "#00bfff", func: typing, labelPos: "right" },
         { id: 3, icon: <ShippedIcon />, label: "Products shipped & tracked", pos: { x: 700, y: 450 }, color: "#00bfff", func: scan, labelPos: "bottom" },
         { id: 4, icon: <DeliveredIcon />, label: "Product delivered to the customer", pos: { x: 300, y: 450 }, color: "#00bfff", func: launch, labelPos: "bottom" },
         { id: 5, icon: <HappyIcon />, label: "Happy customer +1", pos: { x: 100, y: 250 }, color: "#00bfff", func: grow, labelPos: "left" },
-    ];
+    ], []);
 
     const historyRef = useRef([]);
 
-    const animate = (time) => {
+    const animate = useCallback((time) => {
         if (!startTimeRef.current) startTimeRef.current = time;
         const elapsed = time - startTimeRef.current;
         const duration = 24000;
@@ -228,12 +230,12 @@ const OrderCycleMultiVendor = () => {
         }
 
         requestRef.current = requestAnimationFrame(animate);
-    };
+    }, [activeStep, steps, setActiveStep]);
 
     useEffect(() => {
         requestRef.current = requestAnimationFrame(animate);
         return () => cancelAnimationFrame(requestRef.current);
-    }, [activeStep]); // Dependency minimized to activeStep trigger
+    }, [animate]); // Dependency is now stable with useCallback
 
     return (
         <Box sx={{
@@ -267,7 +269,7 @@ const OrderCycleMultiVendor = () => {
             ))}
 
             {/* Header Content */}
-            <Box sx={{ textAlign: "center", mb: 8, maxWidth: "800px", zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
+            <Box sx={{ textAlign: "center", mb: 4, maxWidth: "800px", zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
                 <Typography sx={{
                     fontFamily: "'Dancing Script', cursive",
                     color: "#00bfff",
@@ -291,144 +293,201 @@ const OrderCycleMultiVendor = () => {
                 </Typography>
             </Box>
 
-            <Box sx={{ position: "relative", width: 1000, height: 550, transform: { xs: 'scale(0.6)', sm: 'scale(0.8)', md: 'scale(1)' } }}>
+            {/* Desktop Animated Cycle */}
+            {!isMobile ? (
+                <Box sx={{ position: "relative", width: 1000, height: 550, transform: { xs: 'scale(0.6)', sm: 'scale(0.8)', md: 'scale(1)' } }}>
 
-                {/* Central Focus Area - Subtle Glow */}
-                <Box sx={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                    width: 450,
-                    height: 450,
-                    borderRadius: "50%",
-                    background: "radial-gradient(circle, rgba(0, 191, 255, 0.05) 0%, transparent 60%)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    zIndex: 1
-                }}>
+                    {/* Central Focus Area - Subtle Glow */}
                     <Box sx={{
-                        width: 150, height: 150,
-                        bgcolor: "rgba(0, 191, 255, 0.05)",
+                        position: "absolute",
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%)",
+                        width: 450,
+                        height: 450,
                         borderRadius: "50%",
-                        filter: "blur(40px)",
-                        animation: `${float} 6s infinite ease-in-out`
-                    }} />
-                </Box>
+                        background: "radial-gradient(circle, rgba(0, 191, 255, 0.05) 0%, transparent 60%)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        zIndex: 1
+                    }}>
+                        <Box sx={{
+                            width: 150, height: 150,
+                            bgcolor: "rgba(0, 191, 255, 0.05)",
+                            borderRadius: "50%",
+                            filter: "blur(40px)",
+                            animation: `${float} 6s infinite ease-in-out`
+                        }} />
+                    </Box>
 
-                {/* Main Path Line */}
-                <svg width="1000" height="500" style={{ position: "absolute", top: 0, left: 0, zIndex: 2 }}>
-                    <defs>
-                        <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stopColor="#1b25a8" stopOpacity="0.2" />
-                            <stop offset="50%" stopColor="#00bfff" stopOpacity="0.5" />
-                            <stop offset="100%" stopColor="#1b25a8" stopOpacity="0.2" />
-                        </linearGradient>
-                    </defs>
-                    <path
-                        d="M300,50 L700,50 A200,200 0 0,1 900,250 A200,200 0 0,1 700,450 L300,450 A200,200 0 0,1 100,250 A200,200 0 0,1 300,50 Z"
-                        fill="none"
-                        stroke="url(#pathGradient)"
-                        strokeWidth="3"
-                        strokeDasharray="8 6"
-                    />
-                </svg>
+                    {/* Main Path Line */}
+                    <svg width="1000" height="500" style={{ position: "absolute", top: 0, left: 0, zIndex: 2 }}>
+                        <defs>
+                            <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#1b25a8" stopOpacity="0.2" />
+                                <stop offset="50%" stopColor="#00bfff" stopOpacity="0.5" />
+                                <stop offset="100%" stopColor="#1b25a8" stopOpacity="0.2" />
+                            </linearGradient>
+                        </defs>
+                        <path
+                            d="M300,50 L700,50 A200,200 0 0,1 900,250 A200,200 0 0,1 700,450 L300,450 A200,200 0 0,1 100,250 A200,200 0 0,1 300,50 Z"
+                            fill="none"
+                            stroke="url(#pathGradient)"
+                            strokeWidth="3"
+                            strokeDasharray="8 6"
+                        />
+                    </svg>
 
-                {/* Foreground Voyager Layer */}
-                <svg width="1000" height="500" style={{ position: "absolute", top: 0, left: 0, zIndex: 20, pointerEvents: "none" }}>
-                    <defs>
-                        <filter id="voyagerGlow">
-                            <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="glow" />
-                            <feMerge>
-                                <feMergeNode in="glow" />
-                                <feMergeNode in="SourceGraphic" />
-                            </feMerge>
-                        </filter>
-                    </defs>
-                    {/* The Voyager Ball Trail */}
-                    {[...Array(6)].map((_, i) => (
+                    {/* Foreground Voyager Layer */}
+                    <svg width="1000" height="500" style={{ position: "absolute", top: 0, left: 0, zIndex: 20, pointerEvents: "none" }}>
+                        <defs>
+                            <filter id="voyagerGlow">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="glow" />
+                                <feMerge>
+                                    <feMergeNode in="glow" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        {/* The Voyager Ball Trail */}
+                        {[...Array(6)].map((_, i) => (
+                            <circle
+                                key={i}
+                                ref={el => trailRefs.current[i] = el}
+                                cx="-100" cy="-100"
+                                r={6 - i}
+                                fill="#00bfff"
+                                opacity={0.5 / (i + 1)}
+                                filter="url(#voyagerGlow)"
+                            />
+                        ))}
+                        {/* Main Ball */}
                         <circle
-                            key={i}
-                            ref={el => trailRefs.current[i] = el}
+                            ref={voyagerRef}
                             cx="-100" cy="-100"
-                            r={6 - i}
-                            fill="#00bfff"
-                            opacity={0.5 / (i + 1)}
+                            r="8"
+                            fill="#1b25a8"
                             filter="url(#voyagerGlow)"
                         />
-                    ))}
-                    {/* Main Ball */}
-                    <circle
-                        ref={voyagerRef}
-                        cx="-100" cy="-100"
-                        r="8"
-                        fill="#1b25a8"
-                        filter="url(#voyagerGlow)"
-                    />
-                </svg>
+                    </svg>
 
-                {/* Icon Steps */}
-                {steps.map((step, idx) => (
-                    <Box key={step.id} sx={{
-                        position: "absolute",
-                        top: step.pos.y,
-                        left: step.pos.x,
-                        transform: "translate(-50%, -50%)",
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        zIndex: activeStep === idx ? 15 : 10
-                    }}>
-                        {/* Status Ring */}
-                        <svg width="120" height="120" style={{ position: "absolute", top: -20, left: -20, zIndex: 4, transform: "rotate(-90deg)" }}>
-                            <circle
-                                ref={el => ringRefs.current[idx] = el}
-                                cx="60" cy="60" r="54"
-                                fill="none"
-                                stroke="#1b25a8"
-                                strokeWidth="3"
-                                strokeDasharray="339"
-                                strokeDashoffset="339"
-                                opacity={activeStep === idx ? 0.8 : 0.05}
-                            />
-                        </svg>
-
-                        <StyledIconCircle
-                            bgcolor={step.color}
-                            active={activeStep === idx}
-                            animation={step.func}
-                        >
-                            {React.cloneElement(step.icon, { active: activeStep === idx })}
-                        </StyledIconCircle>
-
-                        {/* Labels */}
-                        <Box sx={{
+                    {/* Icon Steps */}
+                    {steps.map((step, idx) => (
+                        <Box key={step.id} sx={{
                             position: "absolute",
-                            width: 220,
-                            textAlign: "center",
-                            opacity: activeStep === idx ? 1 : 0.6,
-                            transition: "all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)",
-                            transform: activeStep === idx ? "scale(1.05) translateY(-5px)" : "scale(1)",
-                            ...(step.labelPos === "top" && { bottom: 100 }),
-                            ...(step.labelPos === "bottom" && { top: 100 }),
-                            ...(step.labelPos === "right" && { left: 120, textAlign: "left" }),
-                            ...(step.labelPos === "left" && { right: 120, textAlign: "right" }),
+                            top: step.pos.y,
+                            left: step.pos.x,
+                            transform: "translate(-50%, -50%)",
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            zIndex: activeStep === idx ? 15 : 10
                         }}>
+                            {/* Status Ring */}
+                            <svg width="120" height="120" style={{ position: "absolute", top: -20, left: -20, zIndex: 4, transform: "rotate(-90deg)" }}>
+                                <circle
+                                    ref={el => ringRefs.current[idx] = el}
+                                    cx="60" cy="60" r="54"
+                                    fill="none"
+                                    stroke="#1b25a8"
+                                    strokeWidth="3"
+                                    strokeDasharray="339"
+                                    strokeDashoffset="339"
+                                    opacity={activeStep === idx ? 0.8 : 0.05}
+                                />
+                            </svg>
+
+                            <StyledIconCircle
+                                bgcolor={step.color}
+                                active={activeStep === idx}
+                                animation={step.func}
+                            >
+                                {React.cloneElement(step.icon, { active: activeStep === idx })}
+                            </StyledIconCircle>
+
+                            {/* Labels */}
+                            <Box sx={{
+                                position: "absolute",
+                                width: 220,
+                                textAlign: "center",
+                                opacity: activeStep === idx ? 1 : 0.6,
+                                transition: "all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)",
+                                transform: activeStep === idx ? "scale(1.05) translateY(-5px)" : "scale(1)",
+                                ...(step.labelPos === "top" && { bottom: 100 }),
+                                ...(step.labelPos === "bottom" && { top: 100 }),
+                                ...(step.labelPos === "right" && { left: 120, textAlign: "left" }),
+                                ...(step.labelPos === "left" && { right: 120, textAlign: "right" }),
+                            }}>
+                                <Typography sx={{
+                                    color: "#1d1d1f",
+                                    fontWeight: 800,
+                                    fontSize: "14px",
+                                    textTransform: "none",
+                                    lineHeight: 1.2
+                                }}>
+                                    {step.label}
+                                </Typography>
+                            </Box>
+                        </Box>
+                    ))}
+
+                </Box>
+            ) : (
+                <Box sx={{ width: "100%", px: 2, display: "flex", flexDirection: "column", gap: 3 }}>
+                    {steps.map((step, idx) => (
+                        <Box
+                            key={step.id}
+                            sx={{
+                                display: "flex",
+                                alignItems: "center",
+                                gap: 3,
+                                p: 3,
+                                bgcolor: "#fff",
+                                borderRadius: "20px",
+                                border: "1px solid rgba(0, 191, 255, 0.1)",
+                                boxShadow: "0 4px 20px rgba(0,0,0,0.03)",
+                                position: "relative",
+                                "&::before": idx !== steps.length - 1 ? {
+                                    content: '""',
+                                    position: "absolute",
+                                    left: "48px",
+                                    top: "80px",
+                                    bottom: "-24px",
+                                    width: "2px",
+                                    background: "linear-gradient(to bottom, #00bfff 0%, transparent 100%)",
+                                    zIndex: 1
+                                } : {}
+                            }}
+                        >
+                            <Box
+                                sx={{
+                                    width: "56px",
+                                    height: "56px",
+                                    borderRadius: "16px",
+                                    bgcolor: "#f0f7ff",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    flexShrink: 0,
+                                    zIndex: 2,
+                                    border: "1px solid rgba(0, 191, 255, 0.2)"
+                                }}
+                            >
+                                {React.cloneElement(step.icon, { active: true })}
+                            </Box>
                             <Typography sx={{
                                 color: "#1d1d1f",
-                                fontWeight: 800,
-                                fontSize: "14px",
-                                textTransform: "none",
-                                lineHeight: 1.2
+                                fontWeight: 700,
+                                fontSize: "16px",
+                                lineHeight: 1.3
                             }}>
                                 {step.label}
                             </Typography>
                         </Box>
-                    </Box>
-                ))}
-
-            </Box>
+                    ))}
+                </Box>
+            )}
         </Box>
     );
 };

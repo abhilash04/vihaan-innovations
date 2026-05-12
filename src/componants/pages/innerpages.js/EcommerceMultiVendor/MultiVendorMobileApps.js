@@ -1,11 +1,14 @@
 import React from "react";
-import { Box, Typography, Paper, Container } from "@mui/material";
+import { Box, Typography, Paper, Container, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 
 // Dummy images - replace with actual assets if needed
 import phone1 from "../../../../assets/multivendor-web.png";
 
 const MultiVendorMobileApps = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -126,11 +129,12 @@ const MultiVendorMobileApps = () => {
           <Paper
             elevation={0}
             sx={{
-              p: 2,
+              p: isMobile ? 3 : 2,
               mb: 3,
               borderRadius: "20px",
               display: "flex",
-              gap: 3,
+              flexDirection: isMobile ? "column" : "row",
+              gap: isMobile ? 2 : 3,
               transition: "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
               position: "relative",
               alignItems: "flex-start",
@@ -147,55 +151,102 @@ const MultiVendorMobileApps = () => {
               },
             }}
           >
-            <Box
-              className="icon-box"
-              sx={{
-                width: "48px",
-                height: "48px",
-                borderRadius: "12px",
-                bgcolor: "#f0f7ff",
-                color: "#00bfff",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexShrink: 0,
-                transition: "all 0.3s ease",
-              }}
-            >
-              1
-            </Box>
-            <Box>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontWeight: 700,
-                  mb: 1,
-                  fontSize: "1.2rem",
-                  color: "#1d1d1f",
-                }}
-              >
-                Unified Marketplace Storefront
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "15px",
-                  color: "#5e6d7a",
-                  lineHeight: 1.5,
-                }}
-              >
-                Our multi vendor ecommerce website development displays products from multiple vendors in one marketplace, making shopping simple for customers.
-              </Typography>
-            </Box>
+            {isMobile ? (
+              <>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 1 }}>
+                  <Box
+                    className="icon-box"
+                    sx={{
+                      width: "48px",
+                      height: "48px",
+                      borderRadius: "12px",
+                      bgcolor: "#f0f7ff",
+                      color: "#00bfff",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                      transition: "all 0.3s ease",
+                    }}
+                  >
+                    1
+                  </Box>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: 700,
+                      fontSize: "1.1rem",
+                      color: "#1d1d1f",
+                    }}
+                  >
+                    Unified Marketplace Storefront
+                  </Typography>
+                </Box>
+                <Typography
+                  sx={{
+                    fontSize: "15px",
+                    color: "#5e6d7a",
+                    lineHeight: 1.5,
+                    textAlign: "left"
+                  }}
+                >
+                  Our multi vendor ecommerce website development displays products from multiple vendors in one marketplace, making shopping simple for customers.
+                </Typography>
+              </>
+            ) : (
+              <>
+                <Box
+                  className="icon-box"
+                  sx={{
+                    width: "48px",
+                    height: "48px",
+                    borderRadius: "12px",
+                    bgcolor: "#f0f7ff",
+                    color: "#00bfff",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    transition: "all 0.3s ease",
+                  }}
+                >
+                  1
+                </Box>
+                <Box>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: 700,
+                      mb: 1,
+                      fontSize: "1.2rem",
+                      color: "#1d1d1f",
+                    }}
+                  >
+                    Unified Marketplace Storefront
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontSize: "15px",
+                      color: "#5e6d7a",
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    Our multi vendor ecommerce website development displays products from multiple vendors in one marketplace, making shopping simple for customers.
+                  </Typography>
+                </Box>
+              </>
+            )}
           </Paper>
 
           {/* Paper 2 */}
           <Paper
             elevation={0}
             sx={{
-              p: 4,
+              p: isMobile ? 3 : 2,
               borderRadius: "20px",
               display: "flex",
-              gap: 3,
+              flexDirection: isMobile ? "column" : "row",
+              gap: isMobile ? 2 : 3,
               transition: "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
               position: "relative",
               alignItems: "flex-start",
@@ -212,45 +263,91 @@ const MultiVendorMobileApps = () => {
               },
             }}
           >
-            <Box
-              className="icon-box"
-              sx={{
-                width: "48px",
-                height: "48px",
-                borderRadius: "12px",
-                bgcolor: "#f0f7ff",
-                color: "#00bfff",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexShrink: 0,
-                transition: "all 0.3s ease",
-              }}
-            >
-              2
-            </Box>
-            <Box>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontWeight: 700,
-                  mb: 1,
-                  fontSize: "1.2rem",
-                  color: "#1d1d1f",
-                }}
-              >
-                Complete Multi Vendor Ecommerce Website Development Solution
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "15px",
-                  color: "#5e6d7a",
-                  lineHeight: 1.5,
-                }}
-              >
-                Advanced multi vendor ecommerce website development that helps businesses manage vendors, expand product listings, and improve customer experience.
-              </Typography>
-            </Box>
+            {isMobile ? (
+              <>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 1 }}>
+                  <Box
+                    className="icon-box"
+                    sx={{
+                      width: "48px",
+                      height: "48px",
+                      borderRadius: "12px",
+                      bgcolor: "#f0f7ff",
+                      color: "#00bfff",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                      transition: "all 0.3s ease",
+                    }}
+                  >
+                    2
+                  </Box>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: 700,
+                      fontSize: "1.1rem",
+                      color: "#1d1d1f",
+                    }}
+                  >
+                    Complete Multi Vendor Ecommerce Website Development Solution
+                  </Typography>
+                </Box>
+                <Typography
+                  sx={{
+                    fontSize: "15px",
+                    color: "#5e6d7a",
+                    lineHeight: 1.5,
+                    textAlign: "left"
+                  }}
+                >
+                  Advanced multi vendor ecommerce website development that helps businesses manage vendors, expand product listings, and improve customer experience.
+                </Typography>
+              </>
+            ) : (
+              <>
+                <Box
+                  className="icon-box"
+                  sx={{
+                    width: "48px",
+                    height: "48px",
+                    borderRadius: "12px",
+                    bgcolor: "#f0f7ff",
+                    color: "#00bfff",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    transition: "all 0.3s ease",
+                  }}
+                >
+                  2
+                </Box>
+                <Box>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: 700,
+                      mb: 1,
+                      fontSize: "1.2rem",
+                      color: "#1d1d1f",
+                    }}
+                  >
+                    Complete Multi Vendor Ecommerce Website Development Solution
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontSize: "15px",
+                      color: "#5e6d7a",
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    Advanced multi vendor ecommerce website development that helps businesses manage vendors, expand product listings, and improve customer experience.
+                  </Typography>
+                </Box>
+              </>
+            )}
           </Paper>
         </Box>
       </Container>
