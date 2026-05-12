@@ -20,8 +20,8 @@ import {
   ExpandLess as ExpandLessIcon,
 } from "@mui/icons-material";
 import SearchIcon from "@mui/icons-material/Search";
-// import logo from "../../assets/vihaan-logo.png";
-import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
+import logo from "../../assets/vihaan-logo.png";
+// import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import img1 from "../../assets/img2.png"
 import {
