@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Grid, Paper } from "@mui/material";
+import { Box, Typography, Grid, Paper, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import SmartphoneIcon from "@mui/icons-material/Smartphone";
 import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
@@ -60,8 +60,19 @@ const FeatureCard = ({ icon: Icon, title, description, delay }) => (
 );
 
 const FoodOrdering = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const ecosystemNodes = [
+    { icon: <SmartphoneIcon sx={{ fontSize: isMobile ? 30 : 40 }} />, label: "Customer Ordering App", delay: 0 },
+    { icon: <RestaurantMenuIcon sx={{ fontSize: isMobile ? 30 : 40 }} />, label: "Restaurant Panel", delay: 0.2 },
+    { icon: <DashboardIcon sx={{ fontSize: isMobile ? 30 : 40 }} />, label: "Admin Dashboard", delay: 0.4 },
+    { icon: <DeliveryDiningIcon sx={{ fontSize: isMobile ? 30 : 40 }} />, label: "Delivery App", delay: 0.6 },
+    { icon: <PeopleIcon sx={{ fontSize: isMobile ? 30 : 40 }} />, label: "CRM System", delay: 0.8 },
+  ];
+
   return (
-    <Box sx={{ py: { xs: 4, md: 6 }, position: "relative", overflow: "hidden", bgcolor: "#fafafa" }}>
+    <Box sx={{ py: isMobile ? 4 : 6, position: "relative", overflow: "hidden", bgcolor: "#fafafa" }}>
       {/* Floating Background Icons */}
       {[...Array(6)].map((_, i) => (
         <motion.div
@@ -93,7 +104,7 @@ const FoodOrdering = () => {
 
         {/* Header Section */}
         <Box sx={{ textAlign: "center", mb: 4, maxWidth: "800px", mx: "auto" }}>
-          <Typography variant="h2" sx={{ fontSize: { xs: "28px", md: "42px" }, fontWeight: 800, mb: 3, color: "#1a1a1a" }}>
+          <Typography variant="h2" sx={{ fontSize: isMobile ? "28px" : "42px", fontWeight: 800, mb: 3, color: "#1a1a1a" }}>
             Next-Generation Digital Food Platforms
           </Typography>
           <Typography sx={{ fontSize: "17px", color: "#666", lineHeight: 1.4 }}>
@@ -102,42 +113,93 @@ const FoodOrdering = () => {
         </Box>
 
         {/* Central Ecosystem Layout */}
-        <Box sx={{ mb: 2, display: { xs: 'none', md: 'block' } }}>
-          <Box sx={{ position: 'relative', height: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            {/* Central connecting line */}
-            <Box sx={{ position: 'absolute', width: '80%', height: '2px', bgcolor: '#e0e0e0', zIndex: 0 }} />
+        <Box sx={{ mb: 6 }}>
+          {isMobile ? (
+            <Box sx={{ display: 'flex', flexDirection: 'column', position: 'relative', maxWidth: '400px', mx: 'auto', }}>
+              {/* Vertical Connecting Line */}
+              <Box sx={{
+                position: 'absolute',
+                left: '50px',
+                top: '35px',
+                bottom: '35px',
+                width: '2px',
+                bgcolor: '#e0e0e0',
+                zIndex: 0
+              }} />
 
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%', position: 'relative', zIndex: 1 }}>
-              {/* Ecosystem Nodes */}
-              {[
-                { icon: <SmartphoneIcon sx={{ fontSize: 40 }} />, label: "Customer Ordering App", delay: 0 },
-                { icon: <RestaurantMenuIcon sx={{ fontSize: 40 }} />, label: "Restaurant Panel", delay: 0.2 },
-                { icon: <DashboardIcon sx={{ fontSize: 40 }} />, label: "Admin Dashboard", delay: 0.4 },
-                { icon: <DeliveryDiningIcon sx={{ fontSize: 40 }} />, label: "Delivery App", delay: 0.6 },
-                { icon: <PeopleIcon sx={{ fontSize: 40 }} />, label: "CRM System", delay: 0.8 },
-              ].map((node, idx) => (
+              {ecosystemNodes.map((node, idx) => (
                 <motion.div
                   key={idx}
-                  initial={{ scale: 0, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
+                  initial={{ x: -20, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: node.delay }}
-                  style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '150px' }}
+                  style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '25px', position: 'relative', zIndex: 1 }}
                 >
                   <Box sx={{
-                    width: 80, height: 80, borderRadius: '50%', bgcolor: '#fff',
+                    width: 70, height: 70, borderRadius: '50%', bgcolor: '#fff',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    boxShadow: '0 10px 25px rgba(0,0,0,0.1)', color: '#ff6f1e', mb: 2,
-                    border: '4px solid #fafafa',
-                    backgroundColor: '#f0f8ff'
+                    boxShadow: '0 8px 25px rgba(0,0,0,0.1)', color: '#ff6f1e',
+                    border: '2px solid #f0f8ff', flexShrink: 0
                   }}>
                     {node.icon}
                   </Box>
-                  <Typography sx={{ fontWeight: 600, textAlign: 'center', color: '#444' }}>{node.label}</Typography>
+                  <Box sx={{
+                    bgcolor: '#fff',
+                    px: 3,
+                    py: 2,
+                    borderRadius: '12px',
+                    boxShadow: '0 4px 15px rgba(0,0,0,0.05)',
+                    flex: 1,
+                    border: '1px solid #f0f0f0',
+                    position: 'relative',
+                    '&::before': {
+                      content: '""',
+                      position: 'absolute',
+                      left: '-8px',
+                      top: '50%',
+                      transform: 'translateY(-50%) rotate(45deg)',
+                      width: '16px',
+                      height: '16px',
+                      bgcolor: '#fff',
+                      borderLeft: '1px solid #f0f0f0',
+                      borderBottom: '1px solid #f0f0f0',
+                    }
+                  }}>
+                    <Typography sx={{ fontWeight: 700, color: '#1a1a1a', fontSize: '15px' }}>{node.label}</Typography>
+                  </Box>
                 </motion.div>
               ))}
             </Box>
-          </Box>
+          ) : (
+            <Box sx={{ position: 'relative', height: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              {/* Central connecting line */}
+              <Box sx={{ position: 'absolute', width: '80%', height: '2px', bgcolor: '#e0e0e0', top: '42%', left: '50%', transform: 'translateX(-50%)', zIndex: 0 }} />
+
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%', position: 'relative', zIndex: 1 }}>
+                {ecosystemNodes.map((node, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: node.delay }}
+                    style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '150px' }}
+                  >
+                    <Box sx={{
+                      width: 80, height: 80, borderRadius: '50%', bgcolor: '#f0f8ff',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      boxShadow: '0 10px 25px rgba(0,0,0,0.1)', color: '#ff6f1e', mb: 2,
+                      border: '4px solid #fff'
+                    }}>
+                      {node.icon}
+                    </Box>
+                    <Typography sx={{ fontWeight: 600, textAlign: 'center', color: '#444' }}>{node.label}</Typography>
+                  </motion.div>
+                ))}
+              </Box>
+            </Box>
+          )}
         </Box>
 
         <Typography variant="h5" sx={{ textAlign: 'center', fontWeight: 700, mb: 4, color: '#333' }}>
@@ -147,10 +209,10 @@ const FoodOrdering = () => {
         {/* Feature Cards Grid */}
         <Box sx={{
           display: "grid",
-          gridTemplateColumns: { xs: "1fr", sm: "repeat(2, 1fr)", md: "repeat(3, 1fr)" },
-          rowGap: { xs: "20px", md: "80px" },
-          columnGap: { xs: "20px", md: "30px" },
-          mb: 8,
+          gridTemplateColumns: isMobile ? "1fr" : "repeat(3, 1fr)",
+          rowGap: isMobile ? "80px" : "80px",
+          columnGap: isMobile ? "20px" : "30px",
+          mb: isMobile ? 6 : 8,
         }}>
           <FeatureCard
             icon={SmartphoneIcon}

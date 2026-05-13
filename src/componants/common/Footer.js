@@ -297,7 +297,7 @@ const Footer = () => {
                 </Box>
 
                 {/* Location */}
-                <Box sx={{ display: "flex", alignItems: "flex-start", justifyContent: { xs: "flex-start", md: "center" }, gap: "12px", width: "100%" }}>
+                <Box sx={{ display: "flex", alignItems: "center", justifyContent: { xs: "flex-start", md: "center" }, gap: "12px", width: "100%" }}>
                   <Box sx={{ width: "40px", height: "40px", minWidth: "40px", borderRadius: "50%", backgroundColor: "#eef2f6", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <LocationOn sx={{ fontSize: "20px", color: "#444" }} />
                   </Box>

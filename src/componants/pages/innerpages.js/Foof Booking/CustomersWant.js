@@ -1,4 +1,4 @@
-import { Box, Typography, Grid, Paper } from "@mui/material";
+import { Box, Typography, Grid, Paper, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import TakeoutDiningIcon from "@mui/icons-material/TakeoutDining";
 import DeliveryDiningIcon from "@mui/icons-material/DeliveryDining";
@@ -63,15 +63,17 @@ const ServiceCard = ({ icon: Icon, title, description, delay }) => (
 );
 
 const CustomersWant = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Box sx={{ pt: { xs: 4, md: 6 }, pb: { xs: 8, md: 16 }, bgcolor: "#ffffff" }}>
+    <Box sx={{ pt: isMobile ? 4 : 6, pb: isMobile ? 0 : 4, bgcolor: "#ffffff" }}>
       <Box sx={{ maxWidth: "1200px", mx: "auto", px: 3 }}>
 
         {/* Header Section */}
-        <Box sx={{ textAlign: "center", mb: 8, maxWidth: "800px", mx: "auto" }}>
+        <Box sx={{ textAlign: "center", mb: 4, maxWidth: "800px", mx: "auto" }}>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <Typography variant="h2" sx={{ fontSize: { xs: "28px", md: "42px" }, fontWeight: 800, mb: 2, color: "#1a1a1a" }}>
+            <Typography variant="h2" sx={{ fontSize: isMobile ? "28px" : "42px", fontWeight: 800, mb: 2, color: "#1a1a1a" }}>
               Serve Your Customers the Smarter Way
             </Typography>
             <Typography sx={{ fontSize: "18px", color: "#666", lineHeight: 1.4 }}>
@@ -84,10 +86,10 @@ const CustomersWant = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4, mb: 12 }}>
 
           {/* Top Row: Takeaway | Image | Delivery */}
-          <Grid container spacing={4} alignItems="stretch" justifyContent="center">
+          <Grid container spacing={isMobile ? 5 : 4} alignItems="stretch" justifyContent="center">
 
             {/* Left Card: Takeaway */}
-            <Grid item xs={12} md={4}>
+            <Grid item xs={isMobile ? 12 : 4} sx={{ order: isMobile ? 2 : 1 }}>
               <ServiceCard
                 icon={TakeoutDiningIcon}
                 title="Takeaway Orders"
@@ -97,7 +99,7 @@ const CustomersWant = () => {
             </Grid>
 
             {/* Center Image */}
-            <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Grid item xs={isMobile ? 12 : 4} sx={{ display: 'flex', justifyContent: 'center', order: isMobile ? 1 : 2 }}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -113,15 +115,15 @@ const CustomersWant = () => {
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover',
-                    borderRadius: '30px',
-                    boxShadow: '0 20px 40px rgba(0,0,0,0.1)'
+                    borderRadius: isMobile ? 0 : '30px',
+                    boxShadow: isMobile ? 'none' : '0 20px 40px rgba(0,0,0,0.1)'
                   }}
                 />
               </motion.div>
             </Grid>
 
             {/* Right Card: Delivery */}
-            <Grid item xs={12} md={4}>
+            <Grid item xs={isMobile ? 12 : 4} sx={{ order: isMobile ? 3 : 3 }}>
               <ServiceCard
                 icon={DeliveryDiningIcon}
                 title="Online Delivery"
@@ -131,19 +133,19 @@ const CustomersWant = () => {
             </Grid>
 
           </Grid>
+          {/* Bottom Row: QR Code centered and wider */}
+          <Grid container justifyContent="center" sx={{ mt: isMobile ? 5 : 0 }}>
+            <Grid item xs={isMobile ? 12 : 8}>
+              <ServiceCard
+                icon={QrCodeScannerIcon}
+                title="QR Code Dine-in"
+                description="Customers scan, browse the menu, and order directly from their phones. A contactless experience created by the best food delivery app development company."
+                delay={0.3}
+              />
+            </Grid>
+          </Grid>
         </Box>
       </Box>
-      {/* Bottom Row: QR Code centered and wider */}
-      <Grid container justifyContent="center">
-        <Grid item xs={12} md={10} lg={8}>
-          <ServiceCard
-            icon={QrCodeScannerIcon}
-            title="QR Code Dine-in"
-            description="Customers scan, browse the menu, and order directly from their phones. A contactless experience created by the best food delivery app development company."
-            delay={0.3}
-          />
-        </Grid>
-      </Grid>
     </Box>
   );
 };

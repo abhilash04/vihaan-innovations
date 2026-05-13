@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography, Button, Container, Grid } from "@mui/material";
+import { Box, Typography, Button, Container, Grid, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
@@ -14,11 +14,13 @@ const benefits = [
 ];
 
 const ThirdPartyApps = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [openPopup, setOpenPopup] = useState(false);
   return (
-    <Box sx={{ backgroundColor: "#1e1e2d", py: { xs: 4, md: 6 }, overflow: "hidden" }}>
+    <Box sx={{ backgroundColor: "#1e1e2d", py: isMobile ? 4 : 6, overflow: "hidden" }}>
       <Container maxWidth="lg">
-        <Grid container spacing={6} alignItems="center">
+        <Grid container spacing={isMobile ? 4 : 6} alignItems="center">
 
           {/* Left Section: Text Content */}
           <Grid item xs={12} md={6}>
@@ -41,7 +43,7 @@ const ThirdPartyApps = () => {
                 <Typography variant="h2" sx={{
                   color: "#ffffff",
                   fontWeight: 800,
-                  fontSize: { xs: "28px", md: "46px" },
+                  fontSize: isMobile ? "28px" : "46px",
                   lineHeight: 1.2,
                   mb: 3
                 }}>
@@ -94,7 +96,7 @@ const ThirdPartyApps = () => {
 
           {/* Right Section: Graphics */}
           <Grid item xs={12} md={6}>
-            <Box sx={{ position: "relative", height: { xs: "350px", md: "550px" }, display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <Box sx={{ position: "relative", height: isMobile ? "350px" : "550px", display: "flex", justifyContent: "center", alignItems: "center" }}>
 
               {/* Background Glow */}
               <Box sx={{
