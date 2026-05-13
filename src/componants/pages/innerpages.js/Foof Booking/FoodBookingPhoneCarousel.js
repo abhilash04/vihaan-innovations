@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Box, Container, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, Container, IconButton, Typography, useTheme, useMediaQuery } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, EffectCoverflow } from "swiper/modules";
 import { motion } from "framer-motion";
@@ -26,67 +26,73 @@ const features = [
   { label: "Delivery Notifications", top: "85%", right: "-60%" },
 ];
 
-const FloatingLabel = ({ label, top, left, right }) => (
-  <Box
-    sx={{
-      position: 'absolute',
-      top,
-      left,
-      right,
-      bgcolor: 'rgba(255, 255, 255, 0.95)',
-      p: 1.5,
-      borderRadius: '12px',
-      boxShadow: '0 8px 25px rgba(0,0,0,0.1)',
-      display: { xs: 'none', md: 'flex' },
-      alignItems: 'center',
-      gap: 1,
-      zIndex: 20,
-      width: 'max-content',
-      animation: 'float 4s ease-in-out infinite',
-      '&::before': {
-        content: '""',
+const FloatingLabel = ({ label, top, left, right }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  return (
+    <Box
+      sx={{
         position: 'absolute',
-        top: '50%',
-        [left ? 'right' : 'left']: '-20px',
-        transform: 'translateY(-50%)',
-        width: '20px',
-        height: '2px',
-        bgcolor: '#ff6f1e',
-      },
-      '&::after': {
-        content: '""',
-        position: 'absolute',
-        top: '50%',
-        [left ? 'right' : 'left']: '-24px',
-        transform: 'translateY(-50%)',
-        width: '8px',
-        height: '8px',
-        borderRadius: '50%',
-        bgcolor: '#ff6f1e',
-      }
-    }}
-  >
-    <Box sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: '#4caf50' }} />
-    <Typography sx={{ fontWeight: 600, fontSize: '14px', color: '#1a1a1a' }}>{label}</Typography>
-    <style>
-      {`
+        top,
+        left,
+        right,
+        bgcolor: 'rgba(255, 255, 255, 0.95)',
+        p: 1.5,
+        borderRadius: '12px',
+        boxShadow: '0 8px 25px rgba(0,0,0,0.1)',
+        display: isMobile ? 'none' : 'flex',
+        alignItems: 'center',
+        gap: 1,
+        zIndex: 20,
+        width: 'max-content',
+        animation: 'float 4s ease-in-out infinite',
+        '&::before': {
+          content: '""',
+          position: 'absolute',
+          top: '50%',
+          [left ? 'right' : 'left']: '-20px',
+          transform: 'translateY(-50%)',
+          width: '20px',
+          height: '2px',
+          bgcolor: '#ff6f1e',
+        },
+        '&::after': {
+          content: '""',
+          position: 'absolute',
+          top: '50%',
+          [left ? 'right' : 'left']: '-24px',
+          transform: 'translateY(-50%)',
+          width: '8px',
+          height: '8px',
+          borderRadius: '50%',
+          bgcolor: '#ff6f1e',
+        }
+      }}
+    >
+      <Box sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: '#4caf50' }} />
+      <Typography sx={{ fontWeight: 600, fontSize: '14px', color: '#1a1a1a' }}>{label}</Typography>
+      <style>
+        {`
         @keyframes float {
           0% { transform: translateY(0px); }
           50% { transform: translateY(-10px); }
           100% { transform: translateY(0px); }
         }
       `}
-    </style>
-  </Box>
-);
+      </style>
+    </Box>
+  );
+};
 
 const FoodBookingPhoneCarousel = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const swiperRef = useRef(null);
 
   return (
     <Box sx={{
       position: "relative",
-      py: { xs: 4, md: 6 },
+      py: isMobile ? 4 : 6,
       backgroundColor: "#f9f9fc",
       overflow: "hidden"
     }}>
@@ -95,7 +101,7 @@ const FoodBookingPhoneCarousel = () => {
         {/* Header Section */}
         <Box sx={{ textAlign: "center", mb: 8, maxWidth: "800px", mx: "auto" }}>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <Typography variant="h2" sx={{ fontSize: { xs: "28px", md: "42px" }, fontWeight: 800, mb: 3, color: "#1a1a1a" }}>
+            <Typography variant="h2" sx={{ fontSize: isMobile ? "28px" : "42px", fontWeight: 800, mb: 3, color: "#1a1a1a" }}>
               Powerful Food Ordering Apps <br /> Built for Modern Restaurants
             </Typography>
             <Typography sx={{ fontSize: "17px", color: "#666", lineHeight: 1.4 }}>
@@ -110,7 +116,8 @@ const FoodBookingPhoneCarousel = () => {
             display: "flex",
             justifyContent: "space-between",
             position: "absolute",
-            width: "120%",
+            width: "100%",
+            px: isMobile ? 2 : 12,
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
@@ -125,10 +132,10 @@ const FoodBookingPhoneCarousel = () => {
                 border: "1px solid rgba(255, 111, 30, 0.3)",
                 "&:hover": { backgroundColor: "#ff6f1e", color: "#fff" },
                 boxShadow: "0 8px 25px rgba(0,0,0,0.1)",
-                width: 55, height: 55, transition: "all 0.3s ease", pointerEvents: "auto"
+                width: isMobile ? 32 : 55, height: isMobile ? 32 : 55, transition: "all 0.3s ease", pointerEvents: "auto"
               }}
             >
-              <ArrowBackIosNewIcon />
+              <ArrowBackIosNewIcon sx={{ fontSize: isMobile ? 16 : 24 }} />
             </IconButton>
             <IconButton
               onClick={() => swiperRef.current?.slideNext()}
@@ -138,10 +145,10 @@ const FoodBookingPhoneCarousel = () => {
                 border: "1px solid rgba(255, 111, 30, 0.3)",
                 "&:hover": { backgroundColor: "#ff6f1e", color: "#fff" },
                 boxShadow: "0 8px 25px rgba(0,0,0,0.1)",
-                width: 55, height: 55, transition: "all 0.3s ease", pointerEvents: "auto"
+                width: isMobile ? 32 : 55, height: isMobile ? 32 : 55, transition: "all 0.3s ease", pointerEvents: "auto"
               }}
             >
-              <ArrowForwardIosIcon />
+              <ArrowForwardIosIcon sx={{ fontSize: isMobile ? 16 : 24 }} />
             </IconButton>
           </Box>
 
