@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Box, Typography, Grid, Container, TextField, Button, Paper, Link as MuiLink, Avatar, Divider, CircularProgress, Snackbar, Alert, IconButton as MuiIconButton } from '@mui/material';
+import { Box, Typography, Grid, Container, TextField, Button, Paper, Link as MuiLink, Avatar, Divider, CircularProgress, Snackbar, Alert, IconButton as MuiIconButton, useTheme } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, Eye, ArrowRight, Share2, Bookmark, CheckCircle2, Mail } from 'lucide-react';
 import { config } from '../../../../config/Config';
 import { apiList, invokeApi } from '../../../../services/ApiServices';
 import NotFound from '../../NotFound';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const BlogDetailingPage = ({ blogData: propData }) => {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("md"));
     const { ogUrl } = useParams();
     const [blogData, setBlogData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -175,8 +178,8 @@ const BlogDetailingPage = ({ blogData: propData }) => {
                         <Paper
                             elevation={0}
                             sx={{
-                                p: { xs: 4, md: 7 },
-                                borderRadius: '32px',
+                                p: isMobile ? 3 : 7,
+                                borderRadius: isMobile ? '24px' : '32px',
                                 backgroundColor: '#ffffff',
                                 border: '1px solid #f1f5f9',
                                 boxShadow: '0 20px 50px -12px rgba(15, 23, 42, 0.08)'
@@ -228,7 +231,7 @@ const BlogDetailingPage = ({ blogData: propData }) => {
                     </Grid>
 
                     {/* Sidebar */}
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={isMobile ? 12 : 4}>
                         <Box sx={{ position: 'sticky', top: 120, display: 'flex', flexDirection: 'column', gap: 5 }}>
                             <Paper
                                 elevation={0}

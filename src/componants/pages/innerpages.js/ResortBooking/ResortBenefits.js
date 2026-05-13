@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography, Grid, Container, Button } from "@mui/material";
+import { Box, Typography, Grid, Container, Button, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import { Globe, Zap, Target, TrendingUp, Shield } from "lucide-react";
 import PopUps from "../../../common/PopUps";
@@ -47,17 +47,19 @@ const bottomBenefits = [
 
 const ResortBenefits = () => {
   const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box
       sx={{
-        py: 8,
+        py: isMobile ? 4 : 8,
         bgcolor: "#0A111E", // Dark Navy
         color: "#F5F5F0",
       }}
     >
       <Container maxWidth="lg">
         {/* Intro */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: isMobile ? 4 : 8 }}>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -69,7 +71,7 @@ const ResortBenefits = () => {
               sx={{
                 fontFamily: "'Playfair Display', serif",
                 fontWeight: 700,
-                fontSize: { xs: "2.5rem", md: "3rem" },
+                fontSize: isMobile ? "2.2rem" : "3rem",
                 mb: 2,
               }}
             >
@@ -79,9 +81,9 @@ const ResortBenefits = () => {
         </Box>
 
         {/* Top Row - 3 Cards */}
-        <Grid container spacing={4} sx={{ mb: 4 }} alignItems="stretch">
+        <Grid container spacing={isMobile ? 3 : 4} sx={{ mb: 4 }} alignItems="stretch">
           {benefits.map((item, index) => (
-            <Grid item xs={12} md={4} key={index} sx={{ display: "flex" }}>
+            <Grid item xs={isMobile ? 12 : 4} key={index} sx={{ display: "flex" }}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -167,9 +169,9 @@ const ResortBenefits = () => {
         </Grid>
 
         {/* Bottom Row - 2 Cards Centered */}
-        <Grid container spacing={4} justifyContent="center" sx={{ mb: 6 }}>
+        <Grid container spacing={isMobile ? 3 : 4} justifyContent="center" sx={{ mb: 6 }}>
           {bottomBenefits.map((item, index) => (
-            <Grid item xs={12} md={4} key={index}>
+            <Grid item xs={isMobile ? 12 : 4} key={index}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -254,8 +256,8 @@ const ResortBenefits = () => {
           ))}
         </Grid>
 
-        <Box sx={{ textAlign: "center", mt: 6 }}>
-          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "1.1rem", color: "rgba(245,245,240,0.8)", mb: 3 }}>
+        <Box sx={{ textAlign: "center", mt: isMobile ? 4 : 6 }}>
+          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: isMobile ? "1rem" : "1.1rem", color: "rgba(245,245,240,0.8)", mb: 3 }}>
             Upgrade your resort with a smart management system today.
           </Typography>
           <Button
@@ -265,12 +267,12 @@ const ResortBenefits = () => {
               fontFamily: "'Outfit', sans-serif",
               background: "linear-gradient(90deg, #D4AF37, #B08D28)",
               color: "#0A111E",
-              px: 5,
-              py: 1.8,
+              px: isMobile ? 3 : 5,
+              py: isMobile ? 1.5 : 1.8,
               borderRadius: "30px",
               fontWeight: 700,
               textTransform: "none",
-              fontSize: "1rem",
+              fontSize: isMobile ? "0.9rem" : "1rem",
               boxShadow: "0 10px 20px rgba(212,175,55,0.2)",
               "&:hover": {
                 transform: "scale(1.02)",

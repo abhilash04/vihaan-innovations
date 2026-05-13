@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import { Box, Container, Typography, Button } from "@mui/material";
+import { Box, Container, Typography, Button, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import PopUps from "../../../common/PopUps";
 
 const ListingCTA = () => {
   const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
-    <Box sx={{ position: "relative", bgcolor: "#0f172a", py: 10, overflow: "hidden" }}>
+    <Box sx={{ position: "relative", bgcolor: "#0f172a", py: isMobile ? 8 : 10, overflow: "hidden" }}>
 
       {/* Soft gradient glow */}
       <Box sx={{ position: "absolute", bottom: "-30%", left: "50%", transform: "translateX(-50%)", width: "80%", height: "80%", background: "radial-gradient(ellipse, rgba(59, 130, 246, 0.3) 0%, rgba(15, 23, 42, 0) 70%)", filter: "blur(60px)", zIndex: 0 }} />
@@ -26,11 +29,11 @@ const ListingCTA = () => {
           <Box sx={{ textAlign: "center" }}>
 
 
-            <Typography sx={{ color: "#ffffff", fontSize: { xs: "28px", md: "36px" }, mb: 2, lineHeight: 1.3, fontWeight: 800 }}>
+            <Typography sx={{ color: "#ffffff", fontSize: isMobile ? "1.8rem" : "2.25rem", mb: 2, lineHeight: 1.3, fontWeight: 800 }}>
               Launch Your High-Performance Business Listing Website India Today
             </Typography>
 
-            <Typography sx={{ color: "#ffffff", fontSize: "18px", mb: 7, opacity: 0.9 }}>
+            <Typography sx={{ color: "#ffffff", fontSize: isMobile ? "1rem" : "1.125rem", mb: isMobile ? 5 : 7, opacity: 0.9 }}>
               Let's build a powerful, scalable, and feature-rich directory platform that dominates your industry.
             </Typography>
 
@@ -43,7 +46,7 @@ const ListingCTA = () => {
                   color: "#ffffff",
                   fontWeight: 700,
                   fontSize: "16px",
-                  px: 6,
+                  px: isMobile ? 4 : 6,
                   py: 2,
                   borderRadius: "40px",
                   textTransform: "none",

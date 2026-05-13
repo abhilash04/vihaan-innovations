@@ -6,9 +6,13 @@ import {
   IconButton,
   Link,
   Breadcrumbs,
+  useTheme,
+  useMediaQuery,
 } from "@mui/material";
 import bannerimg from "../../../assets/slider-1.jpg";
 const BlogBanner = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box
       sx={{
@@ -25,13 +29,13 @@ const BlogBanner = () => {
         backgroundPosition: "center",
         backgroundColor: "#0a0a1a",
         color: "#fff",
-        px: { xs: 2, md: 10 },
+        px: isMobile ? 3 : 10,
         mt: 10,
         overflow: "hidden",
       }}
     >
       {/* ===== Left Content ===== */}
-      <Box sx={{ width: { xs: "100%", md: "50%" }, zIndex: 2 }}>
+      <Box sx={{ width: isMobile ? "100%" : "50%", zIndex: 2, textAlign: isMobile ? "center" : "left" }}>
         <Typography
           variant="h2"
           sx={{
@@ -47,9 +51,9 @@ const BlogBanner = () => {
           variant="body1"
           sx={{
             mb: 1.5,
-            fontSize: "18px",
+            fontSize: isMobile ? "16px" : "18px",
             color: "#d1d1d1",
-            maxWidth: "480px",
+            maxWidth: isMobile ? "100%" : "480px",
           }}
         >
           We are enabling digital transformation for our clients since 1999 by
@@ -58,11 +62,12 @@ const BlogBanner = () => {
 
         <Breadcrumbs
           separator={
-            <Typography sx={{ color: "#fff", mx: 0.5, fontSize: "24px" }}>
+            <Typography sx={{ color: "#fff", mx: 0.5, fontSize: isMobile ? "18px" : "24px" }}>
               /
             </Typography>
           }
           aria-label="breadcrumb"
+          sx={{ display: "flex", justifyContent: isMobile ? "center" : "flex-start" }}
         >
           <Link
             href="/"
@@ -77,7 +82,7 @@ const BlogBanner = () => {
           >
             Home
           </Link>
-          <Typography sx={{ color: "#fff", fontSize: "24px" }}>
+          <Typography sx={{ color: "#fff", fontSize: isMobile ? "18px" : "24px" }}>
             Career Page:
           </Typography>
         </Breadcrumbs>

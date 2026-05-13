@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography, Container, Button } from "@mui/material";
+import { Box, Typography, Container, Button, useTheme, useMediaQuery } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus, ArrowRight } from "lucide-react";
 import PopUps from "../../../common/PopUps";
@@ -20,6 +20,8 @@ const faqs = [
 const ResortFAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -28,7 +30,7 @@ const ResortFAQ = () => {
   return (
     <Box
       sx={{
-        py: 4,
+        py: isMobile ? 4 : 8,
         bgcolor: "#0A111E", // Dark Navy
         color: "#F5F5F0",
         position: "relative",
@@ -47,7 +49,7 @@ const ResortFAQ = () => {
               sx={{
                 fontFamily: "'Playfair Display', serif",
                 fontWeight: 700,
-                fontSize: { xs: "2.5rem", md: "3rem" },
+                fontSize: isMobile ? "2.2rem" : "3rem",
                 mb: 2,
               }}
             >
@@ -156,7 +158,7 @@ const ResortFAQ = () => {
               sx={{
                 fontFamily: "'Playfair Display', serif",
                 fontWeight: 700,
-                fontSize: { xs: "2rem", md: "2.5rem" },
+                fontSize: isMobile ? "1.6rem" : "2.5rem",
                 mb: 1.5,
               }}
             >
@@ -174,24 +176,24 @@ const ResortFAQ = () => {
             >
               Improve your resort business with a smart website and management system.
             </Typography>
-            <Button
-              variant="contained"
-              onClick={() => setOpenPopup(true)}
-              endIcon={<ArrowRight size={18} />}
-              sx={{
-                mt: 4,
-                fontFamily: "'Outfit', sans-serif",
-                bgcolor: "#D4AF37",
-                color: "#0A111E",
-                px: 5,
-                py: 1.8,
-                borderRadius: "30px",
-                fontWeight: 700,
-                textTransform: "none",
-                fontSize: "1rem",
-                "&:hover": { bgcolor: "#E5C158" },
-              }}
-            >
+              <Button
+                variant="contained"
+                onClick={() => setOpenPopup(true)}
+                endIcon={<ArrowRight size={18} />}
+                sx={{
+                  mt: 4,
+                  fontFamily: "'Outfit', sans-serif",
+                  bgcolor: "#D4AF37",
+                  color: "#0A111E",
+                  px: isMobile ? 3 : 5,
+                  py: isMobile ? 1.5 : 1.8,
+                  borderRadius: "30px",
+                  fontWeight: 700,
+                  textTransform: "none",
+                  fontSize: isMobile ? "0.9rem" : "1rem",
+                  "&:hover": { bgcolor: "#E5C158" },
+                }}
+              >
               Get Your Resort Website Today
             </Button>
           </Box>

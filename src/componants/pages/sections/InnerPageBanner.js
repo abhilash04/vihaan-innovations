@@ -6,12 +6,16 @@ import {
   IconButton,
   Link,
   Breadcrumbs,
+  useTheme,
+  useMediaQuery,
 } from "@mui/material";
 import bannerimg from "../../../assets/slider-1.jpg";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { useLocation, Link as RouterLink } from "react-router-dom";
 
 const InnerPageBanner = ({ title }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
 
@@ -27,7 +31,7 @@ const InnerPageBanner = ({ title }) => {
     <Box
       sx={{
         position: "relative",
-        height: "60vh",
+        height: isMobile ? "50vh" : "60vh",
         display: "flex",
         alignItems: "center",
         backgroundImage: `url(${bannerimg})`,
@@ -35,11 +39,11 @@ const InnerPageBanner = ({ title }) => {
         backgroundPosition: "center",
         color: "#fff",
         mt: 10,
-        px: { xs: 2, md: 10 },
+        px: isMobile ? 3 : 10,
       }}
     >
       {/* ===== Left Content ===== */}
-      <Box sx={{ width: { xs: "100%", md: "50%" }, zIndex: 2 }}>
+      <Box sx={{ width: isMobile ? "100%" : "50%", zIndex: 2, textAlign: isMobile ? "center" : "left" }}>
         <Typography
           variant="h2"
           sx={{
@@ -55,9 +59,9 @@ const InnerPageBanner = ({ title }) => {
           variant="body1"
           sx={{
             mb: 1.5,
-            fontSize: "18px",
+            fontSize: isMobile ? "16px" : "18px",
             color: "#d1d1d1",
-            maxWidth: "480px",
+            maxWidth: isMobile ? "100%" : "480px",
           }}
         >
           We are enabling digital transformation for our clients since 1999 by
@@ -66,11 +70,12 @@ const InnerPageBanner = ({ title }) => {
 
         <Breadcrumbs
           separator={
-            <Typography sx={{ color: "#fff", mx: 0.5, fontSize: "24px" }}>
+            <Typography sx={{ color: "#fff", mx: 0.5, fontSize: isMobile ? "18px" : "24px" }}>
               /
             </Typography>
           }
           aria-label="breadcrumb"
+          sx={{ display: "flex", justifyContent: isMobile ? "center" : "flex-start" }}
         >
           <Link
             component={RouterLink}
@@ -79,7 +84,7 @@ const InnerPageBanner = ({ title }) => {
               display: "flex",
               alignItems: "center",
               color: "#fff",
-              fontSize: "24px",
+              fontSize: isMobile ? "18px" : "24px",
               textDecoration: "none",
             }}
           >
@@ -91,7 +96,7 @@ const InnerPageBanner = ({ title }) => {
             const formattedValue = formatSegment(value);
 
             return isLast ? (
-              <Typography key={to} sx={{ color: "#fff", fontSize: "24px" }}>
+              <Typography key={to} sx={{ color: "#fff", fontSize: isMobile ? "18px" : "24px" }}>
                 {formattedValue}
               </Typography>
             ) : (
@@ -101,7 +106,7 @@ const InnerPageBanner = ({ title }) => {
                 key={to}
                 sx={{
                   color: "#fff",
-                  fontSize: "24px",
+                  fontSize: isMobile ? "18px" : "24px",
                   textDecoration: "none",
                 }}
               >

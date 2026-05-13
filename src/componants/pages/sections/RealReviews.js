@@ -95,9 +95,8 @@ const reviewsData = [
 
 const RealReviews = () => {
   const theme = useTheme();
-  const isXs = useMediaQuery(theme.breakpoints.down("sm")); // mobile: 1 item
-  const isMd = useMediaQuery(theme.breakpoints.down("md")); // tablet: 2 items
-  const itemsPerPage = isXs ? 1 : isMd ? 2 : 4;
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const itemsPerPage = isMobile ? 1 : 4;
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
   const [showForm, setShowForm] = useState(false);
@@ -234,7 +233,7 @@ const RealReviews = () => {
         variant="h3"
         sx={{
           fontWeight: 700,
-          fontSize: { xs: "1.5rem", md: "2rem" },
+          fontSize: isMobile ? "1.5rem" : "2rem",
           mb: 2,
           fontFamily: "Montserrat, sans-serif",
           color: "#00584b",
@@ -298,7 +297,7 @@ const RealReviews = () => {
               sx={{
                 flex: "0 0 auto",
                 position: "relative",
-                width: { xs: 240, sm: 260, md: 280 },
+                width: isMobile ? 260 : 280,
                 height: 350,
                 borderRadius: 2,
                 boxShadow: 2,

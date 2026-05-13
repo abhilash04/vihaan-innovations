@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import PopUps from "../../../common/PopUps";
 import LayersIcon from '@mui/icons-material/Layers';
@@ -20,15 +20,18 @@ const FilterDropdownMock = ({ label }) => (
 
 const ListingSearchDiscovery = () => {
   const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
-    <Box sx={{ bgcolor: "#ffffff", py: 8, overflow: "hidden" }}>
+    <Box sx={{ bgcolor: "#ffffff", py: isMobile ? 6 : 8, overflow: "hidden" }}>
 
       {/* Top Header section that appears above the split */}
-      <Container maxWidth="lg" sx={{ mb: 8, textAlign: "center" }}>
+      <Container maxWidth="lg" sx={{ mb: isMobile ? 6 : 8, textAlign: "center" }}>
         <Typography sx={{ color: "#2563eb", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: 1, mb: 1 }}>
           Search & Discovery
         </Typography>
-        <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+        <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: isMobile ? "1.75rem" : "2.25rem", mb: 2 }}>
           Advanced Search & Discovery for Business Listing Website India
         </Typography>
         <Typography sx={{ color: "#666", fontSize: "16px", mb: 1, maxWidth: "700px", margin: "0 auto" }}>
@@ -38,7 +41,7 @@ const ListingSearchDiscovery = () => {
 
 
       <Container maxWidth="lg">
-        <Grid container spacing={8} alignItems="center">
+        <Grid container spacing={isMobile ? 4 : 8} alignItems="center">
 
           {/* Left Text Features */}
           <Grid item xs={12} md={5}>
@@ -114,26 +117,30 @@ const ListingSearchDiscovery = () => {
                 </Box>
 
                 {/* Browser Content Split: Left Filters, Right Map */}
-                <Box sx={{ display: "flex", height: "400px" }}>
+                <Box sx={{ display: "flex", height: isMobile ? "300px" : "400px" }}>
 
                   {/* Left Filters Box */}
-                  <Box sx={{ width: "35%", p: 3, borderRight: "1px solid #e2e8f0", bgcolor: "#ffffff" }}>
-                    <Typography sx={{ fontWeight: 800, fontSize: "14px", color: "#1a1a1a", mb: 3 }}>
+                  <Box sx={{ width: isMobile ? "40%" : "35%", p: isMobile ? 1.5 : 3, borderRight: "1px solid #e2e8f0", bgcolor: "#ffffff" }}>
+                    <Typography sx={{ fontWeight: 800, fontSize: "14px", color: "#1a1a1a", mb: isMobile ? 1.5 : 3 }}>
                       Filters
                     </Typography>
 
                     <FilterDropdownMock label="Location" />
                     <FilterDropdownMock label="Autocomplete" />
-                    <FilterDropdownMock label="Category" />
-                    <FilterDropdownMock label="Price" />
-                    <FilterDropdownMock label="Distance" />
+                    {!isMobile && (
+                      <>
+                        <FilterDropdownMock label="Category" />
+                        <FilterDropdownMock label="Price" />
+                        <FilterDropdownMock label="Distance" />
+                      </>
+                    )}
                   </Box>
 
                   {/* Right Map Box */}
-                  <Box sx={{ width: "65%", position: "relative", bgcolor: "#e2e8f0", overflow: "hidden" }}>
+                  <Box sx={{ width: isMobile ? "60%" : "65%", position: "relative", bgcolor: "#e2e8f0", overflow: "hidden" }}>
                     {/* SVG Map Roads Simulation */}
                     <Box sx={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 1 }}>
-                      <svg width="100%" height="100%" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                      <svg width="100%" height="100%" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                         <path d="M0 100 Q 200 150 400 50" stroke="#cbd5e1" strokeWidth="6" fill="none" />
                         <path d="M50 0 L 150 400" stroke="#cbd5e1" strokeWidth="8" fill="none" />
                         <path d="M250 0 L 200 400" stroke="#ffffff" strokeWidth="12" fill="none" />
@@ -142,23 +149,23 @@ const ListingSearchDiscovery = () => {
                     </Box>
 
                     {/* Overlay List UI Mock */}
-                    <Box sx={{ position: "absolute", top: 20, right: 20, width: "180px", zIndex: 2 }}>
+                    <Box sx={{ position: "absolute", top: isMobile ? 10 : 20, right: isMobile ? 10 : 20, width: isMobile ? "120px" : "180px", zIndex: 2 }}>
                       {[1, 2, 3].map((item) => (
-                        <Paper key={item} elevation={2} sx={{ p: 1.5, mb: 1.5, borderRadius: "8px" }}>
-                          <Box sx={{ width: "100%", height: "40px", bgcolor: "#f1f5f9", borderRadius: "4px", mb: 1 }} />
-                          <Box sx={{ width: "60%", height: "10px", bgcolor: "#e2e8f0", borderRadius: "5px", mb: 0.5 }} />
-                          <Box sx={{ width: "40%", height: "10px", bgcolor: "#e2e8f0", borderRadius: "5px" }} />
+                        <Paper key={item} elevation={2} sx={{ p: isMobile ? 1 : 1.5, mb: isMobile ? 1 : 1.5, borderRadius: "8px" }}>
+                          <Box sx={{ width: "100%", height: isMobile ? "20px" : "40px", bgcolor: "#f1f5f9", borderRadius: "4px", mb: 1 }} />
+                          <Box sx={{ width: "60%", height: "8px", bgcolor: "#e2e8f0", borderRadius: "5px", mb: 0.5 }} />
+                          <Box sx={{ width: "40%", height: "8px", bgcolor: "#e2e8f0", borderRadius: "5px" }} />
                         </Paper>
                       ))}
                     </Box>
 
                     {/* Animated Map Pins */}
                     <motion.div style={{ position: "absolute", top: "30%", left: "40%", zIndex: 3, color: "#3b82f6" }} animate={{ y: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 2 }}>
-                      <LocationOnIcon sx={{ fontSize: 36, filter: 'drop-shadow(0px 4px 4px rgba(0,0,0,0.2))' }} />
+                      <LocationOnIcon sx={{ fontSize: isMobile ? 24 : 36, filter: 'drop-shadow(0px 4px 4px rgba(0,0,0,0.2))' }} />
                     </motion.div>
 
                     <motion.div style={{ position: "absolute", top: "60%", left: "20%", zIndex: 3, color: "#ef4444" }} animate={{ y: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 2.5, delay: 0.5 }}>
-                      <LocationOnIcon sx={{ fontSize: 32, filter: 'drop-shadow(0px 4px 4px rgba(0,0,0,0.2))' }} />
+                      <LocationOnIcon sx={{ fontSize: isMobile ? 20 : 32, filter: 'drop-shadow(0px 4px 4px rgba(0,0,0,0.2))' }} />
                     </motion.div>
 
                   </Box>
@@ -171,7 +178,7 @@ const ListingSearchDiscovery = () => {
         </Grid>
 
         {/* Footer CTA */}
-        <Box sx={{ textAlign: "center", mt: 8 }}>
+        <Box sx={{ textAlign: "center", mt: isMobile ? 6 : 8 }}>
           <Typography sx={{ color: "#1a1a1a", fontWeight: 700, fontSize: "18px", mb: 2 }}>
             Build a Smart Search Experience for Your Business Listing Website India
           </Typography>
@@ -183,7 +190,7 @@ const ListingSearchDiscovery = () => {
               color: "#ffffff",
               fontWeight: 700,
               fontSize: "15px",
-              px: { xs: 2, md: 5 },
+              px: isMobile ? 4 : 5,
               py: 1.5,
               borderRadius: "8px",
               textTransform: "none",

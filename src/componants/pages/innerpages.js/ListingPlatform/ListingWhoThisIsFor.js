@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, Button, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import PopUps from "../../../common/PopUps";
 import WorkIcon from '@mui/icons-material/Work';
@@ -53,7 +53,7 @@ const Bubble = ({ size, color, top, left, right, bottom, delay }) => (
   />
 );
 
-const AudienceBox = ({ icon, title, desc, color, delay }) => (
+const AudienceBox = ({ icon, title, desc, color, delay, isMobile }) => (
   <motion.div
     initial={{ opacity: 0, scale: 0.95 }}
     whileInView={{ opacity: 1, scale: 1 }}
@@ -64,12 +64,13 @@ const AudienceBox = ({ icon, title, desc, color, delay }) => (
     <Paper
       elevation={0}
       sx={{
-        p: 2,
+        p: isMobile ? 2.5 : 2,
         borderRadius: "20px", // slightly rounder
         bgcolor: color,
         color: "#ffffff",
-        height: "80%",
-        width: "85%",
+        height: isMobile ? "auto" : "80%",
+        width: isMobile ? "100%" : "85%",
+        margin: "0 auto",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -109,11 +110,14 @@ const AudienceBox = ({ icon, title, desc, color, delay }) => (
 
 const ListingWhoThisIsFor = () => {
   const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box
       sx={{
         bgcolor: "#ffffff",
-        py: 6,
+        py: isMobile ? 6 : 8,
         position: "relative",
         overflow: "hidden" // Clip bubbles
       }}
@@ -124,16 +128,16 @@ const ListingWhoThisIsFor = () => {
       <Bubble size={200} color="#14b8a6" top="30%" left="15%" delay={2} />
       <Bubble size={250} color="#ef4444" top="10%" right="20%" delay={0.5} />
 
-      <Container maxWidth="md" sx={{ position: "relative", zIndex: 1 }}>
+      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: isMobile ? 6 : 8 }}>
           <Typography
             variant="h2"
             sx={{
               fontWeight: 800,
               color: "#1a1a1a",
-              fontSize: { xs: "28px", md: "36px" },
+              fontSize: isMobile ? "1.75rem" : "2.25rem",
               mb: 2
             }}
           >
@@ -147,18 +151,18 @@ const ListingWhoThisIsFor = () => {
         {/* 4x2 Color Block Grid with Spacing Fixes */}
         <Grid
           container
-          rowSpacing={1}
-          columnSpacing={3}
+          spacing={isMobile ? 3 : 4}
+          rowSpacing={isMobile ? 2 : 4}
           justifyContent="center"
         >
           {audiences.map((audience, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
-              <AudienceBox {...audience} delay={index * 0.1} />
+              <AudienceBox {...audience} delay={index * 0.1} isMobile={isMobile} />
             </Grid>
           ))}
         </Grid>
 
-        <Box sx={{ textAlign: "center", mt: 6 }}>
+        <Box sx={{ textAlign: "center", mt: isMobile ? 4 : 6 }}>
           <Button
             variant="contained"
             onClick={() => setOpenPopup(true)}
@@ -167,7 +171,7 @@ const ListingWhoThisIsFor = () => {
               color: "#ffffff",
               fontWeight: 700,
               fontSize: "15px",
-              px: { xs: 2, md: 5 },
+              px: isMobile ? 4 : 5,
               py: 1.8,
               borderRadius: "8px",
               textTransform: "none",
