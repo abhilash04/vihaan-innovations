@@ -228,7 +228,7 @@ const Blog = () => {
                   <Box sx={{ position: "relative", overflow: "hidden" }}>
                     <CardMedia
                       component="img"
-                      height="200"
+                      height="300"
                       image={post.featuredUrl}
                       alt={post.blogTitle}
                       sx={{
