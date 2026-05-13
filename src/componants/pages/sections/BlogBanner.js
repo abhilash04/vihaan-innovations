@@ -18,30 +18,48 @@ const BlogBanner = () => {
       sx={{
         position: "relative",
         width: "100%",
-        maxWidth: "1750px",
-        height: "800px",
+        height: isMobile ? "300px" : "400px",
         mx: "auto",
         display: "flex",
         alignItems: "center",
+        justifyContent: "center",
         backgroundImage: `url(${bannerimg})`,
-        backgroundSize: "contain",
+        backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
+        backgroundPosition: "center center",
         backgroundColor: "#0a0a1a",
         color: "#fff",
-        px: isMobile ? 3 : 10,
-        mt: 10,
+        mt: 8,
         overflow: "hidden",
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: "rgba(0, 0, 0, 0.65)", // Slightly darker for even better contrast
+          zIndex: 1,
+        },
       }}
     >
-      {/* ===== Left Content ===== */}
-      <Box sx={{ width: isMobile ? "100%" : "50%", zIndex: 2, textAlign: isMobile ? "center" : "left" }}>
+      {/* ===== Centered Content ===== */}
+      <Box sx={{ 
+        width: "90%", 
+        maxWidth: "900px", 
+        zIndex: 2, 
+        textAlign: "center",
+        px: isMobile ? 2 : 4, // Added internal padding
+        boxSizing: "border-box"
+      }}>
         <Typography
-          variant="h2"
+          variant="h4"
           sx={{
             fontWeight: 700,
-            mb: 2,
+            mb: 1.5,
             lineHeight: 1.2,
+            fontSize: isMobile ? "1.8rem" : "2.4rem",
+            textShadow: "2px 2px 4px rgba(0,0,0,0.5)", // Added text shadow
           }}
         >
           Build Your Brand <br />
@@ -50,10 +68,11 @@ const BlogBanner = () => {
         <Typography
           variant="body1"
           sx={{
-            mb: 1.5,
-            fontSize: isMobile ? "16px" : "18px",
+            mb: 2,
+            fontSize: "15px",
             color: "#d1d1d1",
-            maxWidth: isMobile ? "100%" : "480px",
+            maxWidth: "600px",
+            mx: "auto",
           }}
         >
           We are enabling digital transformation for our clients since 1999 by
@@ -62,12 +81,12 @@ const BlogBanner = () => {
 
         <Breadcrumbs
           separator={
-            <Typography sx={{ color: "#fff", mx: 0.5, fontSize: isMobile ? "18px" : "24px" }}>
+            <Typography sx={{ color: "#fff", mx: 0.5, fontSize: "14px" }}>
               /
             </Typography>
           }
           aria-label="breadcrumb"
-          sx={{ display: "flex", justifyContent: isMobile ? "center" : "flex-start" }}
+          sx={{ display: "flex", justifyContent: "center" }}
         >
           <Link
             href="/"
@@ -76,32 +95,17 @@ const BlogBanner = () => {
               display: "flex",
               alignItems: "center",
               color: "#fff",
-              fontSize: "24px",
+              fontSize: "14px",
               textDecoration: "none",
+              "&:hover": { color: "#ff9966" }
             }}
           >
             Home
           </Link>
-          <Typography sx={{ color: "#fff", fontSize: isMobile ? "18px" : "24px" }}>
-            Career Page:
+          <Typography sx={{ color: "#fff", fontSize: "14px", fontWeight: 600 }}>
+            Blog
           </Typography>
         </Breadcrumbs>
-
-        <Button
-          variant="contained"
-          sx={{
-            borderRadius: "30px",
-            mt: 3.5,
-            px: 4,
-            py: 1.5,
-            fontSize: "16px",
-            fontWeight: 600,
-            background: "linear-gradient(90deg, #ff9966, #ff5e62)",
-            textTransform: "none",
-          }}
-        >
-          View Showcase
-        </Button>
       </Box>
     </Box>
   );
