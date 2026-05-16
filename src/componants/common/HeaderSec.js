@@ -19,7 +19,6 @@ import {
   ExpandMore as ExpandMoreIcon,
   ExpandLess as ExpandLessIcon,
 } from "@mui/icons-material";
-import SearchIcon from "@mui/icons-material/Search";
 // import logo from "../../assets/vihaan-logo.png";
 import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";

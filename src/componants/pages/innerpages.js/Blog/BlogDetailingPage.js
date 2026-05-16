@@ -223,7 +223,7 @@ const BlogDetailingPage = ({ blogData: propData }) => {
                                     lineHeight: 2,
                                     '& p': { mb: 4 },
                                     '& h2, & h3, & h4': { fontWeight: 800, color: '#0f172a', mt: 6, mb: 3, fontFamily: "'Syne', sans-serif" },
-                                    '& img': { maxWidth: '100%', borderRadius: '24px', my: 4 }
+                                    '& img': { maxWidth: '100%', my: 4 }
                                 }}
                                 dangerouslySetInnerHTML={{ __html: data.blogContent }}
                             />
