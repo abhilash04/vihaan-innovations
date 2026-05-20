@@ -1,3 +1,4 @@
 export const config = {
-    apiBaseUrl: "https://vi.sudarshanholiday.com",
+    apiBaseUrl: "https://api.vihaaninnovations.com",
+    // apiBaseUrl: "https://vi.sudarshanholiday.com",
 }
