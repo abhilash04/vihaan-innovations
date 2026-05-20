@@ -82,92 +82,70 @@ const BlogDetailingPage = ({ blogData: propData }) => {
                 transition={{ duration: 1 }}
                 sx={{
                     position: 'relative',
-                    mt: 5,
+                    mt: { xs: 8, md: 10 },
                     width: '100%',
-                    maxWidth: '1750px',
-                    height: '775px',
                     mx: 'auto',
                     display: 'flex',
                     alignItems: 'center',
-                    overflow: 'hidden',
-                    backgroundColor: '#0a0a1a',
+                    backgroundColor: '#0b293c', // matching the website's deep blue theme
+                    py: { xs: 6, md: 8 }
                 }}
             >
-                <Box
-                    sx={{
-                        position: 'absolute',
-                        top: 0, left: 0, right: 0, bottom: 0,
-                        backgroundImage: `url(${data.bannerUrl || data.featuredUrl})`,
-                        backgroundSize: 'contain',
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'center',
-                        '&::before': {
-                            content: '""',
-                            position: 'absolute',
-                            top: 0, left: 0, right: 0, bottom: 0,
-                            background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.35) 0%, rgba(15, 23, 42, 0.75) 100%)',
-                            zIndex: 1
-                        }
-                    }}
-                />
-
-                <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 10 }}>
-                    <Box sx={{ maxWidth: '900px', mx: 'auto', textAlign: 'center', px: 2 }}>
-                        <Typography
-                            sx={{
-                                color: '#38bdf8',
-                                fontWeight: 800,
-                                fontSize: '14px',
-                                textTransform: 'uppercase',
-                                letterSpacing: '4px',
-                                mb: 3
-                            }}
-                        >
-                            {data.category}
-                        </Typography>
-
-                        <Typography
-                            variant="h1"
-                            sx={{
-                                color: '#ffffff',
-                                fontWeight: 900,
-                                fontSize: { xs: '2.4rem', md: '3.8rem' },
-                                lineHeight: 1.1,
-                                mb: 4,
-                                fontFamily: "'Syne', sans-serif"
-                            }}
-                        >
-                            {data.blogTitle}
-                        </Typography>
-
-                        <Box
-                            sx={{
-                                display: 'inline-flex',
-                                flexWrap: 'wrap',
+                <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 10 }}>
+                    <Grid container spacing={6} alignItems="center">
+                        {/* Title Side (Left) */}
+                        <Grid item xs={12} md={7}>
+                            <Box sx={{ pr: { md: 4 } }}>
+                                <Typography
+                                    variant="h1"
+                                    sx={{
+                                        color: '#ffffff',
+                                        fontWeight: 700,
+                                        fontSize: { xs: '2rem', md: '2.5rem', lg: '3rem' },
+                                        lineHeight: 1.3,
+                                        mb: 4,
+                                        fontFamily: "'Inter', sans-serif"
+                                    }}
+                                >
+                                    {data.blogTitle || "Can B.Tech Graduates Apply for NABARD Grade A? Eligibility and Preparation Strategy"}
+                                </Typography>
+                                
+                                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+                                    <Typography sx={{ color: '#e2e8f0', fontSize: '1rem', fontWeight: 500 }}>
+                                        Updated: {data.date?.split(' ')[0] || "April 24, 2026"}
+                                    </Typography>
+                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, color: '#e2e8f0' }}>
+                                        <Clock size={18} />
+                                        <Typography sx={{ fontSize: '0.95rem', fontWeight: 500 }}>{data.readTime || "22 mins read"}</Typography>
+                                    </Box>
+                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, color: '#e2e8f0' }}>
+                                        <Eye size={18} />
+                                        <Typography sx={{ fontSize: '0.95rem', fontWeight: 500 }}>{data.views || 74} View</Typography>
+                                    </Box>
+                                </Box>
+                            </Box>
+                        </Grid>
+                        {/* Image Side (Right) */}
+                        <Grid item xs={12} md={5}>
+                            <Box sx={{ 
+                                width: '100%', 
+                                display: 'flex', 
                                 justifyContent: 'center',
-                                gap: { xs: 2, md: 5 },
-                                px: 5, py: 2.5,
-                                background: 'rgba(255, 255, 255, 0.08)',
-                                backdropFilter: 'blur(12px)',
-                                borderRadius: '50px',
-                                border: '1px solid rgba(255, 255, 255, 0.15)',
-                                color: '#ffffff',
-                            }}
-                        >
-                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                                <Calendar size={18} color="#38bdf8" />
-                                <Typography sx={{ fontSize: '15px', fontWeight: 600 }}>{data.date?.split(' ')[0] || 'Oct 2026'}</Typography>
+                                alignItems: 'center'
+                            }}>
+                                <img 
+                                    src={data.bannerUrl || data.featuredUrl || "fallback.jpg"} 
+                                    alt={data.blogTitle || "Banner"} 
+                                    style={{ 
+                                        width: '100%', 
+                                        height: 'auto', 
+                                        borderRadius: '16px',
+                                        objectFit: 'cover'
+                                    }} 
+                                />
                             </Box>
-                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                                <Clock size={18} color="#38bdf8" />
-                                <Typography sx={{ fontSize: '15px', fontWeight: 600 }}>5 min read</Typography>
-                            </Box>
-                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                                <Eye size={18} color="#38bdf8" />
-                                <Typography sx={{ fontSize: '15px', fontWeight: 600 }}>1.2k views</Typography>
-                            </Box>
-                        </Box>
-                    </Box>
+                        </Grid>
+                    </Grid>
                 </Container>
             </Box>
 
