@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Typography,
@@ -8,24 +8,16 @@ import {
   Stack,
   Grid,
   Container,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { keyframes, styled } from "@mui/system";
+import PopUps from "../../../common/PopUps";
 
-// Animations
 const fadeInUp = keyframes`
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
-`;
-
-const hoverScale = keyframes`
-  0% { transform: scale(1); }
-  100% { transform: scale(1.03); }
-`;
-
-const shimer = keyframes`
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
 `;
 
 const StyledPricingCard = styled(Card)(({ theme, recommended }) => ({
@@ -42,9 +34,7 @@ const StyledPricingCard = styled(Card)(({ theme, recommended }) => ({
     transform: "translateY(-10px)",
     boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
   },
-  ...(recommended && {
-    boxShadow: "0 10px 30px rgba(63, 81, 181, 0.15)",
-  }),
+  ...(recommended && { boxShadow: "0 10px 30px rgba(63, 81, 181, 0.15)" }),
 }));
 
 const RecommendedBadge = styled(Box)({
@@ -70,21 +60,20 @@ const PlanButton = styled(Button)(({ variant }) => ({
   fontWeight: 700,
   textTransform: "none",
   transition: "all 0.3s ease",
-  ...(variant === "contained" ? {
-    backgroundColor: "#3f51b5",
-    "&:hover": {
-      backgroundColor: "#283593",
-      transform: "scale(1.02)",
+  ...(variant === "contained"
+    ? {
+      backgroundColor: "#3f51b5",
+      "&:hover": { backgroundColor: "#283593", transform: "scale(1.02)" },
     }
-  } : {
-    border: "2px solid #3f51b5",
-    color: "#3f51b5",
-    "&:hover": {
-      backgroundColor: "rgba(63, 81, 181, 0.05)",
-      border: "2px solid #283593",
-      transform: "scale(1.02)",
-    }
-  })
+    : {
+      border: "2px solid #3f51b5",
+      color: "#3f51b5",
+      "&:hover": {
+        backgroundColor: "rgba(63, 81, 181, 0.05)",
+        border: "2px solid #283593",
+        transform: "scale(1.02)",
+      },
+    }),
 }));
 
 const pricingPlans = [
@@ -100,7 +89,7 @@ const pricingPlans = [
     ],
     buttonText: "Get a Quote",
     recommended: false,
-    color: "#fafafa"
+    color: "#fafafa",
   },
   {
     title: "E-Commerce Website",
@@ -114,7 +103,7 @@ const pricingPlans = [
     ],
     buttonText: "Launch My Online Store",
     recommended: true,
-    color: "#fafafa"
+    color: "#fafafa",
   },
   {
     title: "Advanced Business Website",
@@ -128,24 +117,27 @@ const pricingPlans = [
     ],
     buttonText: "Start Your Project",
     recommended: false,
-    color: "#f0f4ff"
+    color: "#f0f4ff",
   },
-
 ];
 
 const PricingCards = () => {
+  const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box sx={{ py: 8, backgroundColor: "#fff" }}>
       <Container maxWidth="lg">
-        {/* Header Section */}
-        <Box sx={{ textAlign: "center", mb: 8, animation: `${fadeInUp} 0.8s ease-out` }}>
+        {/* Header */}
+        <Box sx={{ textAlign: "center", mb: isMobile ? 4 : 6, animation: `${fadeInUp} 0.8s ease-out` }}>
           <Typography
             sx={{
               fontWeight: 800,
-              fontSize: { xs: "28px", md: "48px" },
+              fontSize: { xs: "24px", md: "48px" },
               color: "#1a1a1a",
               mb: 2,
-              letterSpacing: "-1px"
+              letterSpacing: "-1px",
             }}
           >
             Website Solutions for Every Business
@@ -153,20 +145,22 @@ const PricingCards = () => {
           <Typography
             sx={{
               fontWeight: 400,
-              fontSize: "18px",
+              fontSize: isMobile ? "15px" : "18px",
               color: "#666",
               maxWidth: "800px",
               mx: "auto",
-              lineHeight: 1.6
+              lineHeight: 1.6,
+              textAlign: isMobile ? "justify" : "center",
             }}
           >
-            At Vihaan Innovations, every project is tailored to your goals, design preferences, and features,
-            offering flexible single vendor ecommerce development solutions to create the perfect online store for your business.
+            At Vihaan Innovations, every project is tailored to your goals, design preferences, and
+            features, offering flexible single vendor ecommerce development solutions to create the
+            perfect online store for your business.
           </Typography>
         </Box>
 
-        {/* Dynamic Pricing Cards */}
-        <Grid container spacing={4} sx={{ mb: 10 }}>
+        {/* Pricing Cards */}
+        <Grid container spacing={isMobile ? 6 : 4} sx={{ mb: 10 }}>
           {pricingPlans.map((plan, index) => (
             <Grid
               item
@@ -181,7 +175,9 @@ const PricingCards = () => {
                   <Typography variant="h5" sx={{ fontWeight: 800, color: "#1a1a1a", mb: 1, fontSize: "20px" }}>
                     {plan.title}
                   </Typography>
-                  <Typography sx={{ color: "#666", mb: 4, height: 48, overflow: "hidden", fontSize: "14px", lineHeight: 1.4 }}>
+                  <Typography
+                    sx={{ color: "#666", mb: 4, height: 48, overflow: "hidden", fontSize: "14px", lineHeight: 1.4 }}
+                  >
                     {plan.subtitle}
                   </Typography>
 
@@ -198,6 +194,7 @@ const PricingCards = () => {
 
                   <PlanButton
                     variant={plan.recommended ? "contained" : "outlined"}
+                    onClick={() => setOpenPopup(true)}
                     fullWidth
                   >
                     {plan.buttonText}
@@ -208,7 +205,7 @@ const PricingCards = () => {
           ))}
         </Grid>
 
-        {/* Custom Solution Footer Section */}
+        {/* Custom Solution Footer */}
         <Box
           sx={{
             textAlign: "center",
@@ -218,50 +215,46 @@ const PricingCards = () => {
             border: "1px dashed #3f51b5",
             animation: `${fadeInUp} 1s ease-out 0.8s backwards`,
             maxWidth: "1000px",
-            mx: "auto"
+            mx: "auto",
           }}
         >
-          <Typography
-            sx={{
-              fontWeight: 800,
-              fontSize: "28px",
-              color: "#1a1a1a",
-              mb: 1.5
-            }}
-          >
+          <Typography sx={{ fontWeight: 800, fontSize: isMobile ? "22px" : "28px", color: "#1a1a1a", mb: 1.5 }}>
             Custom Website Solutions
           </Typography>
           <Typography
             sx={{
               fontWeight: 400,
-              fontSize: "17px",
+              fontSize: isMobile ? "15px" : "17px",
               color: "#666",
               maxWidth: "700px",
               mx: "auto",
               mb: 4,
-              lineHeight: 1.5
+              lineHeight: 1.5,
             }}
           >
-            Need something unique? We also develop fully customized websites with advanced features tailored to your business.
+            Need something unique? We also develop fully customized websites with advanced features
+            tailored to your business.
           </Typography>
           <PlanButton
             variant="contained"
+            onClick={() => setOpenPopup(true)}
             sx={{
               px: 5,
               py: 2,
-              fontSize: "18px",
+              fontSize: isMobile ? "15px" : "18px",
               background: "linear-gradient(90deg, #3f51b5, #283593)",
               boxShadow: "0 10px 20px rgba(63, 81, 181, 0.2)",
               "&:hover": {
                 background: "linear-gradient(90deg, #283593, #1a237e)",
-                boxShadow: "0 15px 30px rgba(63, 81, 181, 0.3)"
-              }
+                boxShadow: "0 15px 30px rgba(63, 81, 181, 0.3)",
+              },
             }}
           >
             Request Custom Solution
           </PlanButton>
         </Box>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

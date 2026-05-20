@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Box, Grid, Typography, Button, Container } from "@mui/material";
+import { Box, Grid, Typography, Button, Container, useMediaQuery, useTheme } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
 import FastfoodIcon from "@mui/icons-material/Fastfood";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import imgFoodie from "../../../../assets/local-food.webp";
 import imgRestaurant from "../../../../assets/order-management.webp";
+import PopUps from "../../../common/PopUps";
 
 const tabData = {
   foodies: {
@@ -28,7 +29,7 @@ const tabData = {
     ],
     buttonText: "Order Your Favorite Food",
     image: imgFoodie,
-    icon: <FastfoodIcon sx={{ mr: 1, fontSize: 24 }} />
+    IconComponent: FastfoodIcon
   },
   restaurants: {
     id: "restaurants",
@@ -50,36 +51,42 @@ const tabData = {
     ],
     buttonText: "List Your Restaurant",
     image: imgRestaurant,
-    icon: <RestaurantMenuIcon sx={{ mr: 1, fontSize: 24 }} />
+    IconComponent: RestaurantMenuIcon
   }
 };
 
 export default function FoodDiscovery() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const [openPopup, setOpenPopup] = useState(false);
   const [activeTab, setActiveTab] = useState("foodies");
   const content = tabData[activeTab];
 
   return (
-    <Box sx={{ backgroundColor: "#f9fcff", py: { xs: 4, md: 6 }, overflow: "hidden" }}>
+    <Box sx={{ backgroundColor: "#f9fcff", py: isMobile ? 3 : 6, overflow: "hidden" }}>
       <Container maxWidth="lg">
 
         {/* Toggle Switches */}
         <Box sx={{ display: "flex", justifyContent: "center", mb: 6 }}>
           <Box sx={{
             display: "inline-flex",
+            flexDirection: "row",
             backgroundColor: "#fff",
             borderRadius: "40px",
             p: 1,
+            width: isMobile ? "100%" : "auto",
             boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
             border: "1px solid rgba(0,0,0,0.05)"
           }}>
             <Button
               onClick={() => setActiveTab("foodies")}
               sx={{
-                px: { xs: 2, md: 5 },
+                flex: 1,
+                px: isMobile ? 1 : 5,
                 py: 1.5,
                 borderRadius: "30px",
                 textTransform: "none",
-                fontSize: "18px",
+                fontSize: isMobile ? "13px" : "18px",
                 fontWeight: activeTab === "foodies" ? 700 : 500,
                 color: activeTab === "foodies" ? "#fff" : "#666",
                 backgroundColor: activeTab === "foodies" ? "#ff6f1e" : "transparent",
@@ -89,17 +96,18 @@ export default function FoodDiscovery() {
                 transition: "all 0.3s ease"
               }}
             >
-              {tabData.foodies.icon}
+              <tabData.foodies.IconComponent sx={{ mr: 1, fontSize: isMobile ? 18 : 24 }} />
               For Foodies
             </Button>
             <Button
               onClick={() => setActiveTab("restaurants")}
               sx={{
-                px: { xs: 2, md: 5 },
+                flex: 1,
+                px: isMobile ? 1 : 5,
                 py: 1.5,
                 borderRadius: "30px",
                 textTransform: "none",
-                fontSize: "18px",
+                fontSize: isMobile ? "13px" : "18px",
                 fontWeight: activeTab === "restaurants" ? 700 : 500,
                 color: activeTab === "restaurants" ? "#fff" : "#666",
                 backgroundColor: activeTab === "restaurants" ? "#1b25a8" : "transparent",
@@ -109,7 +117,7 @@ export default function FoodDiscovery() {
                 transition: "all 0.3s ease"
               }}
             >
-              {tabData.restaurants.icon}
+              <tabData.restaurants.IconComponent sx={{ mr: 1, fontSize: isMobile ? 18 : 24 }} />
               For Restaurants
             </Button>
           </Box>
@@ -124,74 +132,81 @@ export default function FoodDiscovery() {
             exit={{ opacity: 0, x: activeTab === 'foodies' ? 50 : -50 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            <Grid container spacing={6} alignItems="center" direction={activeTab === 'restaurants' ? 'row-reverse' : 'row'}>
+            <Grid container spacing={isMobile ? 4 : 6} alignItems="center" direction={(isMobile ? false : activeTab === 'restaurants') ? 'row-reverse' : 'row'}>
 
               {/* Left Side: Image / Illustration */}
-              <Grid item xs={12} md={5}>
+              <Grid item xs={isMobile ? 12 : 5}>
                 <Box
                   component="img"
                   src={content.image}
                   alt={content.title}
                   sx={{
                     width: "100%",
-                    borderRadius: "30px",
-                    boxShadow: "0 25px 50px rgba(0,0,0,0.15)",
-                    border: "8px solid #fff"
+                    height: isMobile ? "380px" : "auto",
+                    objectFit: "cover",
+                    borderRadius: isMobile ? "20px" : "30px",
+                    boxShadow: isMobile ? "0 15px 30px rgba(0,0,0,0.1)" : "0 25px 50px rgba(0,0,0,0.15)",
+                    border: isMobile ? "4px solid #fff" : "8px solid #fff"
                   }}
                 />
               </Grid>
 
               {/* Right Side: Content + Features */}
-              <Grid item xs={12} md={7}>
-                <Typography variant="h3" sx={{ fontWeight: 800, mb: 2.5, color: "#1a1a1a", fontSize: { xs: "28px", md: "38px" } }}>
-                  {content.title}
-                </Typography>
-                <Typography sx={{ fontSize: "18px", color: "#555", mb: 4, lineHeight: 1.4 }}>
-                  {content.description}
-                </Typography>
+              <Grid item xs={isMobile ? 12 : 7}>
+                <Box sx={{ textAlign: isMobile ? "center" : "left" }}>
+                  <Typography variant="h3" sx={{ fontWeight: 800, mb: 2.5, color: "#1a1a1a", fontSize: isMobile ? "22px" : "38px" }}>
+                    {content.title}
+                  </Typography>
+                  <Typography sx={{ fontSize: "18px", color: "#555", mb: 4, lineHeight: 1.4 }}>
+                    {content.description}
+                  </Typography>
 
-                <Box sx={{ mb: 6 }}>
-                  {content.features.map((feature, idx) => (
-                    <Box key={idx} sx={{ display: 'flex', alignItems: 'flex-start', mb: 3 }}>
-                      <CheckCircleIcon sx={{ color: activeTab === 'foodies' ? '#ff6f1e' : '#1b25a8', mt: '4px', mr: 2 }} />
-                      <Box>
-                        <Typography sx={{ fontWeight: 700, fontSize: "18px", color: "#1a1a1a", mb: 0.5 }}>
-                          {feature.title}
-                        </Typography>
-                        <Typography sx={{ color: "#666", lineHeight: 1.6, fontSize: "16px" }}>
-                          {feature.desc}
-                        </Typography>
+                  <Box sx={{ mb: 6, textAlign: "left" }}>
+                    {content.features.map((feature, idx) => (
+                      <Box key={idx} sx={{ display: 'flex', alignItems: 'flex-start', mb: 3 }}>
+                        <CheckCircleIcon sx={{ color: activeTab === 'foodies' ? '#ff6f1e' : '#1b25a8', mt: '4px', mr: 2 }} />
+                        <Box>
+                          <Typography sx={{ fontWeight: 700, fontSize: "18px", color: "#1a1a1a", mb: 0.5 }}>
+                            {feature.title}
+                          </Typography>
+                          <Typography sx={{ color: "#666", lineHeight: 1.6, fontSize: "16px" }}>
+                            {feature.desc}
+                          </Typography>
+                        </Box>
                       </Box>
-                    </Box>
-                  ))}
-                </Box>
+                    ))}
+                  </Box>
 
-                <Button
-                  variant="contained"
-                  sx={{
-                    backgroundColor: activeTab === 'foodies' ? '#ff6f1e' : '#1b25a8',
-                    px: 4, py: 1.5,
-                    borderRadius: "30px",
-                    fontSize: "16px",
-                    fontWeight: 600,
-                    textTransform: "none",
-                    boxShadow: `0 10px 20px ${activeTab === 'foodies' ? 'rgba(255,111,30,0.3)' : 'rgba(27,37,168,0.3)'}`,
-                    "&:hover": {
-                      backgroundColor: activeTab === 'foodies' ? '#e65a10' : '#141d8c',
-                      transform: 'translateY(-2px)'
-                    },
-                    transition: "all 0.3s ease"
-                  }}
-                >
-                  {content.buttonText}
-                </Button>
+                  <Box sx={{ display: isMobile ? "flex" : "block", justifyContent: "center" }}>
+                    <Button
+                      variant="contained"
+                      onClick={() => setOpenPopup(true)}
+                      sx={{
+                        backgroundColor: activeTab === 'foodies' ? '#ff6f1e' : '#1b25a8',
+                        px: 4, py: 1.5,
+                        borderRadius: "30px",
+                        fontSize: "16px",
+                        fontWeight: 600,
+                        textTransform: "none",
+                        boxShadow: `0 10px 20px ${activeTab === 'foodies' ? 'rgba(255,111,30,0.3)' : 'rgba(27,37,168,0.3)'}`,
+                        "&:hover": {
+                          backgroundColor: activeTab === 'foodies' ? '#e65a10' : '#141d8c',
+                          transform: 'translateY(-2px)'
+                        },
+                        transition: "all 0.3s ease"
+                      }}
+                    >
+                      {content.buttonText}
+                    </Button>
+                  </Box>
+                </Box>
               </Grid>
 
             </Grid>
           </motion.div>
         </AnimatePresence>
-
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 }

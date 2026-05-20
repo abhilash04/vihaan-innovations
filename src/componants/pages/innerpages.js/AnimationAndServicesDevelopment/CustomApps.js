@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import PopUps from "../../../common/PopUps";
+
 import { Box, Container, Typography, Stack, Grid, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import { Code, Database, Globe, Network, Server, Cpu, ArrowRight } from "lucide-react";
 
 const CustomApps = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   const features = [
     "Enterprise-Grade Scalability",
     "Tailored Business Logic",
@@ -96,8 +100,12 @@ const CustomApps = () => {
 
 
 
-                <Box sx={{ py: 1.5 }}>
-                  <Button variant="contained" sx={{ bgcolor: "#7c3aed", px: 4, py: 1.5, borderRadius: "100px", textTransform: "none", fontWeight: 700 }}>
+                <Box sx={{ py: 1.5, mb: 2 }}>
+                  <Button
+                    variant="contained"
+                    sx={{ bgcolor: "#7c3aed", px: 4, py: 1.5, borderRadius: "100px", textTransform: "none", fontWeight: 700 }}
+                    onClick={() => setIsPopupOpen(true)}
+                  >
                     Request Technical Proposal
                   </Button>
                 </Box>
@@ -178,7 +186,7 @@ const CustomApps = () => {
           </Grid>
 
           <Box>
-            <Grid container spacing={2.5}>
+            <Grid container spacing={2.5} mt={2}>
               {features.map((feature, i) => (
                 <Grid item xs={12} sm={6} key={i}>
                   <Stack direction="row" spacing={2} alignItems="center">
@@ -193,6 +201,7 @@ const CustomApps = () => {
           </Box>
         </Box>
       </Container>
+      <PopUps open={isPopupOpen} handleClose={() => setIsPopupOpen(false)} />
     </Box>
   );
 };

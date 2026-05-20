@@ -26,17 +26,17 @@ const MobileWorkingRoadmap = () => {
   return (
     <Box sx={{ bgcolor: "#171b44", color: "#fff", py: 6, px: 2, textAlign: "center" }}>
       <Button variant="contained" sx={{ bgcolor: "#332d57", textTransform: "none", fontSize: 11, borderRadius: "20px", px: 2, py: 0.5, mb: 2 }}> What We Do </Button>
-      <Typography variant="h3" sx={{ fontWeight: 800, fontSize: "24px", lineHeight: 1.2, mb: 2, fontFamily: "Fira Sans" }}>
-        Our Smart Workflow for Building Better Digital Solutions
+      <Typography variant="h2" sx={{ fontWeight: 800, fontSize: "32px", lineHeight: 1.2, mb: 2, fontFamily: "Fira Sans" }}>
+        How Vihaan Innovations Works
       </Typography>
       <Typography sx={{ color: "#a3abc8", fontSize: "14px", lineHeight: 1.6, mb: 4, px: 1 }}>
-        Every stage of our process ensures reliability, performance, and measurable results.
+        We use a smart process to build quality digital products faster.
       </Typography>
 
       {/* Stacked Timeline/List for Mobile avoiding overlap circles */}
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 2, alignItems: "flex-start", maxWidth: "340px", mx: "auto", textAlign: "left" }}>
+      <Box sx={{ display: "flex", flexDirection: "column", gap: 2, alignItems: "flex-start", maxWidth: "280px", mx: "auto", textAlign: "left" }}>
         {roadmapItems.map((item) => (
-          <Box key={item.id} sx={{ display: "flex", alignItems: "center", gap: 2, width: "100%", p: 1.5, borderRadius: "12px", bgcolor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.06)" }}>
+          <Box key={item.id} sx={{ display: "flex", alignItems: "center", gap: 2, width: "90%", p: 1.5, borderRadius: "12px", bgcolor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.06)" }}>
             <Box sx={{ width: 44, height: 44, borderRadius: "12px", bgcolor: item.bgColor, display: "flex", justifyContent: "center", alignItems: "center", flexShrink: 0, boxShadow: "0 4px 10px rgba(0,0,0,0.1)" }}>
               {item.icon}
             </Box>

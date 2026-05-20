@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Button, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
 import HotelIcon from '@mui/icons-material/Hotel';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import PopUps from "../../../common/PopUps";
 
 const StatBadge = ({ value, label, icon: Icon, color, delay }) => (
   <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay }}>
@@ -20,8 +21,10 @@ const StatBadge = ({ value, label, icon: Icon, color, delay }) => (
   </motion.div>
 );
 
-const HotelBanner = () => (
-  <Box sx={{
+const HotelBanner = () => {
+  const [openPopup, setOpenPopup] = useState(false);
+  return (
+    <Box sx={{
     background: "linear-gradient(135deg, #fffdf5 0%, #fef9ec 50%, #f0faf8 100%)",
     position: "relative", overflow: "hidden",
     pt: { xs: 12, md: 6 }, pb: { xs: 10, md: 6 }
@@ -43,12 +46,16 @@ const HotelBanner = () => (
               Build a custom booking solution with our hotel booking app development services. We provide booking platforms, property management systems, and guest experience portals for hotels, resorts, homestays, and hospitality businesses.
             </Typography>
             <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mb: 4 }}>
-              <Button variant="contained" sx={{ bgcolor: "#d4a017", color: "#fff", fontWeight: 800, px: 4, py: 1.5, borderRadius: "10px", textTransform: "none", fontSize: "15px", boxShadow: "0 6px 20px rgba(212,160,23,0.4)", "&:hover": { bgcolor: "#b8891a", transform: "translateY(-2px)" }, transition: "all 0.3s" }}>
+              <Button
+                variant="contained"
+                onClick={() => setOpenPopup(true)}
+                sx={{ bgcolor: "#d4a017", color: "#fff", fontWeight: 800, px: 4, py: 1.5, borderRadius: "10px", textTransform: "none", fontSize: "15px", boxShadow: "0 6px 20px rgba(212,160,23,0.4)", "&:hover": { bgcolor: "#b8891a", transform: "translateY(-2px)" }, transition: "all 0.3s" }}
+              >
                 View Demo
               </Button>
-              <Button variant="outlined" sx={{ borderColor: "#0f766e", color: "#0f766e", fontWeight: 700, px: 4, py: 1.5, borderRadius: "10px", textTransform: "none", fontSize: "15px", "&:hover": { bgcolor: "rgba(15,118,110,0.06)" } }}>
+              {/* <Button variant="outlined" sx={{ borderColor: "#0f766e", color: "#0f766e", fontWeight: 700, px: 4, py: 1.5, borderRadius: "10px", textTransform: "none", fontSize: "15px", "&:hover": { bgcolor: "rgba(15,118,110,0.06)" } }}>
                 Explore Features
-              </Button>
+              </Button> */}
             </Box>
             {/* Stats */}
             <Box sx={{ display: "flex", flexDirection: "row", gap: 1.5, flexWrap: "wrap", maxWidth: "100%" }}>
@@ -85,8 +92,10 @@ const HotelBanner = () => (
           </motion.div>
         </Grid>
       </Grid>
-    </Container>
-  </Box>
-);
+      </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
+    </Box>
+  );
+};
 
 export default HotelBanner;

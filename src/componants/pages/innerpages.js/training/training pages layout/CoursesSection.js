@@ -36,10 +36,10 @@ const CoursesSection = ({ data = {} }) => {
   const { title, subtitle, duration, projects, courses = [] } = data;
 
   return (
-    <Box sx={{ py: { xs: 6, md: 8 }, background: "#deedfcff" }}>
+    <Box sx={{ pt: { xs: 4, md: 8 }, pb: { xs: 3, md: 8 }, background: "#deedfcff" }}>
       <Container maxWidth="lg">
         {/* Header Section */}
-        <Box sx={{ textAlign: "center", mb: { xs: 4, md: 6 } }}>
+        <Box sx={{ textAlign: "center", mb: { xs: 3, md: 6 } }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -87,25 +87,28 @@ const CoursesSection = ({ data = {} }) => {
         </Box>
 
         {/* Feature Grid / Curriculum Breakdown */}
-        <Grid container spacing={4}>
+        <Grid container spacing={{ xs: 1, md: 4 }} alignItems="stretch">
           {courses.map((item, index) => (
-            <Grid item xs={12} md={4} key={index}>
+            <Grid item xs={12} md={4} key={index} sx={{ display: "flex" }}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
+                style={{ display: "flex", width: "100%" }}
               >
                 <Paper
                   elevation={0}
                   sx={{
-                    p: 4,
-                    height: "100%",
+                    p: { xs: 2.5, md: 4 },
+                    width: "90%",
+                    height: "80%",
                     borderRadius: "24px",
                     bgcolor: "#ffffff",
                     border: "1px solid #e2e8f0",
                     transition: "all 0.4s ease",
                     display: "flex",
+                    mb: 0,
                     flexDirection: "column",
                     "&:hover": {
                       transform: "translateY(-10px)",
@@ -114,7 +117,7 @@ const CoursesSection = ({ data = {} }) => {
                     }
                   }}
                 >
-                  <Box sx={{ mb: 3, display: "flex", alignItems: "center", gap: 1.5 }}>
+                  <Box sx={{ mb: { xs: 1.5, md: 3 }, display: "flex", alignItems: "center", gap: 1.5 }}>
                     <Box
                       sx={{
                         width: 12,
@@ -136,7 +139,7 @@ const CoursesSection = ({ data = {} }) => {
                     </Typography>
                   </Box>
 
-                  <List sx={{ mb: 4, flexGrow: 1 }}>
+                  <List sx={{ pt: 0, mb: { xs: 1, md: 4 }, flexGrow: 1 }}>
                     {(item.frontEnd || item.skills || []).map((skill, i) => (
                       <ListItem key={i} sx={{ px: 0, py: 0.8 }}>
                         <ListItemIcon sx={{ minWidth: 32 }}>
@@ -152,7 +155,7 @@ const CoursesSection = ({ data = {} }) => {
                     ))}
                   </List>
 
-                  <Box
+                  {/* <Box
                     sx={{
                       pt: 3,
                       borderTop: "1px solid #f1f5f9",
@@ -165,7 +168,7 @@ const CoursesSection = ({ data = {} }) => {
                       Course Module
                     </Typography>
                     <TrendingUpIcon sx={{ color: "rgba(30, 41, 59, 0.1)" }} />
-                  </Box>
+                  </Box> */}
                 </Paper>
               </motion.div>
             </Grid>
@@ -181,8 +184,8 @@ const CoursesSection = ({ data = {} }) => {
         >
           <Box
             sx={{
-              mt: 6,
-              p: 4,
+              m: { xs: 2.5, md: 6 },
+              p: { xs: 3, md: 4 },
               borderRadius: "24px",
               background: "rgba(64, 87, 123, 0.02)",
               border: "1px dashed rgba(30, 41, 59, 0.1)",

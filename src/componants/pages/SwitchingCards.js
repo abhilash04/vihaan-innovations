@@ -12,9 +12,9 @@ const sections = [
   {
     id: 1,
     title: "Website Development",
-    subtitle: "Create Fast, Scalable, and User-Friendly Websites",
+    subtitle: "Ready Websites That Launch Fast",
     description:
-      "At Vihaan Innovations, we design and develop modern websites that are responsive, secure, and optimized for performance.",
+      "Get premium websites designed for speed, mobile users, SEO, and conversions.",
     button: "Start Building",
     icons: [
       { icon: <FavoriteBorder sx={{ color: "#00b4d8" }} />, label: "Modern Responsive Design" },
@@ -29,7 +29,7 @@ const sections = [
   {
     id: 2,
     title: "SEO Optimization",
-    subtitle: "Boost Your Website's Reach with Smart SEO Strategies",
+    subtitle: "SEO Products That Rank Higher using the SEO Strategies",
     description:
       "Vihaan Innovations helps businesses increase their search engine visibility with advanced SEO strategies.",
     button: "Improve Ranking",
@@ -47,7 +47,7 @@ const sections = [
   {
     id: 3,
     title: "Digital Marketing",
-    subtitle: "Grow Your Brand with Data-Driven Digital Marketing",
+    subtitle: "Campaigns That Bring Real Leads",
     description:
       "At Vihaan Innovations, we create targeted digital marketing campaigns that increase brand awareness, engagement, and conversions.",
     button: "Start Campaign",
@@ -84,7 +84,7 @@ export default function SwitchingCards() {
               mb: "2px",
             }}
           >
-            Ready Products
+            Ready Solutions for Fast Growth
           </Typography>
           <Typography
             sx={{
@@ -174,7 +174,7 @@ export default function SwitchingCards() {
               {/* ── Text + Icons ── */}
               <Grid item xs={12} md={6}>
                 <Typography
-                  variant="subtitle1"
+                  variant="h3"
                   sx={{
                     fontSize: { xs: "13px", md: "1.1rem" },
                     fontWeight: 600,
@@ -187,7 +187,7 @@ export default function SwitchingCards() {
                 </Typography>
 
                 <Typography
-                  variant="h4"
+                  variant="body1"
                   sx={{
                     fontSize: { xs: "1.6rem", md: "2.6rem" },
                     fontWeight: "bold",
@@ -244,6 +244,7 @@ export default function SwitchingCards() {
                   component="img"
                   src={current.image}
                   alt={current.subtitle}
+                  fetchPriority={current.id === 1 ? "high" : "auto"}
                   sx={{
                     width: "100%",
                     height: { xs: "220px", sm: "300px", md: "400px" },

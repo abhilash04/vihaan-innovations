@@ -1,11 +1,14 @@
 import React from "react";
-import { Box, Typography, Paper, Container } from "@mui/material";
+import { Box, Typography, Paper, Container, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 
 // Dummy images - replace with actual assets if needed
 import computerImg from "../../../../assets/multivendor-mobile.png";
 
 const MultiVendorComputer = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -127,11 +130,12 @@ const MultiVendorComputer = () => {
           <Paper
             elevation={0}
             sx={{
-              p: 2,
+              p: isMobile ? 3 : 2,
               mb: 3,
               borderRadius: "20px",
               display: "flex",
-              gap: 3,
+              flexDirection: isMobile ? "column" : "row",
+              gap: isMobile ? 2 : 3,
               transition: "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
               position: "relative",
               alignItems: "flex-start",
@@ -149,57 +153,105 @@ const MultiVendorComputer = () => {
               },
             }}
           >
-            <Box
-              className="icon-box"
-              sx={{
-                width: "48px",
-                height: "48px",
-                borderRadius: "12px",
-                bgcolor: "#fff",
-                color: "#1b25a8",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexShrink: 0,
-                transition: "all 0.3s ease",
-                boxShadow: "0 4px 10px rgba(0,0,0,0.05)"
-              }}
-            >
-              3
-            </Box>
-            <Box>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontWeight: 700,
-                  mb: 1,
-                  fontSize: "1.2rem",
-                  color: "#1d1d1f",
-                }}
-              >
-                Branded Multi Vendor Ecommerce App for Customers
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "15px",
-                  color: "#5e6d7a",
-                  lineHeight: 1.5,
-                }}
-              >
-                Our multi vendor ecommerce app helps businesses increase engagement by providing customers with a smooth and convenient marketplace shopping experience.
-              </Typography>
-            </Box>
+            {isMobile ? (
+              <>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 1 }}>
+                  <Box
+                    className="icon-box"
+                    sx={{
+                      width: "48px",
+                      height: "48px",
+                      borderRadius: "12px",
+                      bgcolor: "#fff",
+                      color: "#1b25a8",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                      transition: "all 0.3s ease",
+                      boxShadow: "0 4px 10px rgba(0,0,0,0.05)"
+                    }}
+                  >
+                    3
+                  </Box>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: 700,
+                      fontSize: "1.1rem",
+                      color: "#1d1d1f",
+                    }}
+                  >
+                    Branded Multi Vendor Ecommerce App for Customers
+                  </Typography>
+                </Box>
+                <Typography
+                  sx={{
+                    fontSize: "15px",
+                    color: "#5e6d7a",
+                    lineHeight: 1.5,
+                    textAlign: "left"
+                  }}
+                >
+                  Our multi vendor ecommerce app helps businesses increase engagement by providing customers with a smooth and convenient marketplace shopping experience.
+                </Typography>
+              </>
+            ) : (
+              <>
+                <Box
+                  className="icon-box"
+                  sx={{
+                    width: "48px",
+                    height: "48px",
+                    borderRadius: "12px",
+                    bgcolor: "#fff",
+                    color: "#1b25a8",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    transition: "all 0.3s ease",
+                    boxShadow: "0 4px 10px rgba(0,0,0,0.05)"
+                  }}
+                >
+                  3
+                </Box>
+                <Box>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: 700,
+                      mb: 1,
+                      fontSize: "1.2rem",
+                      color: "#1d1d1f",
+                    }}
+                  >
+                    Branded Multi Vendor Ecommerce App for Customers
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontSize: "15px",
+                      color: "#5e6d7a",
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    Our multi vendor ecommerce app helps businesses increase engagement by providing customers with a smooth and convenient marketplace shopping experience.
+                  </Typography>
+                </Box>
+              </>
+            )}
           </Paper>
 
           {/* Paper 2 */}
           <Paper
             elevation={0}
             sx={{
-              p: 2,
+              p: isMobile ? 3 : 2,
               mb: 3,
               borderRadius: "20px",
               display: "flex",
-              gap: 3,
+              flexDirection: isMobile ? "column" : "row",
+              gap: isMobile ? 2 : 3,
               transition: "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
               position: "relative",
               alignItems: "flex-start",
@@ -217,46 +269,93 @@ const MultiVendorComputer = () => {
               },
             }}
           >
-            <Box
-              className="icon-box"
-              sx={{
-                width: "48px",
-                height: "48px",
-                borderRadius: "12px",
-                bgcolor: "#fff",
-                color: "#1b25a8",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexShrink: 0,
-                transition: "all 0.3s ease",
-                boxShadow: "0 4px 10px rgba(0,0,0,0.05)"
-              }}
-            >
-              4
-            </Box>
-            <Box>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontWeight: 700,
-                  mb: 1,
-                  fontSize: "1.2rem",
-                  color: "#1d1d1f",
-                }}
-              >
-                User-Friendly Ecommerce Multi Vendor App
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "15px",
-                  color: "#5e6d7a",
-                  lineHeight: 1.5,
-                }}
-              >
-                We design fast and intuitive ecommerce multi vendor apps with easy navigation, secure checkout, and seamless product browsing to improve customer satisfaction.
-              </Typography>
-            </Box>
+            {isMobile ? (
+              <>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 1 }}>
+                  <Box
+                    className="icon-box"
+                    sx={{
+                      width: "48px",
+                      height: "48px",
+                      borderRadius: "12px",
+                      bgcolor: "#fff",
+                      color: "#1b25a8",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                      transition: "all 0.3s ease",
+                      boxShadow: "0 4px 10px rgba(0,0,0,0.05)"
+                    }}
+                  >
+                    4
+                  </Box>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: 700,
+                      fontSize: "1.1rem",
+                      color: "#1d1d1f",
+                    }}
+                  >
+                    User-Friendly Ecommerce Multi Vendor App
+                  </Typography>
+                </Box>
+                <Typography
+                  sx={{
+                    fontSize: "15px",
+                    color: "#5e6d7a",
+                    lineHeight: 1.5,
+                    textAlign: "left"
+                  }}
+                >
+                  We design fast and intuitive ecommerce multi vendor apps with easy navigation, secure checkout, and seamless product browsing to improve customer satisfaction.
+                </Typography>
+              </>
+            ) : (
+              <>
+                <Box
+                  className="icon-box"
+                  sx={{
+                    width: "48px",
+                    height: "48px",
+                    borderRadius: "12px",
+                    bgcolor: "#fff",
+                    color: "#1b25a8",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    transition: "all 0.3s ease",
+                    boxShadow: "0 4px 10px rgba(0,0,0,0.05)"
+                  }}
+                >
+                  4
+                </Box>
+                <Box>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: 700,
+                      mb: 1,
+                      fontSize: "1.2rem",
+                      color: "#1d1d1f",
+                    }}
+                  >
+                    User-Friendly Ecommerce Multi Vendor App
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontSize: "15px",
+                      color: "#5e6d7a",
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    We design fast and intuitive ecommerce multi vendor apps with easy navigation, secure checkout, and seamless product browsing to improve customer satisfaction.
+                  </Typography>
+                </Box>
+              </>
+            )}
           </Paper>
         </Box>
       </Container>

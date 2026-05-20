@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
+import PopUps from "../../../common/PopUps";
 
 const faqs = [
   {
@@ -36,6 +37,7 @@ const faqs = [
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const [openPopup, setOpenPopup] = useState(false);
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -185,11 +187,13 @@ const FAQSection = () => {
           <Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
             <Button
               variant="contained"
+              onClick={() => setOpenPopup(true)}
               sx={{
                 background: "linear-gradient(135deg, #f78361 0%, #fd544e 100%)",
                 color: "#fff",
                 borderRadius: "24px",
                 px: 3,
+                py: 2,
                 boxShadow: "0 4px 15px rgba(253, 84, 78, 0.3)",
                 textTransform: "none",
                 fontWeight: 600,
@@ -197,7 +201,7 @@ const FAQSection = () => {
             >
               Start Your Car Booking Platform
             </Button>
-            <Button
+            {/* <Button
               variant="outlined"
               sx={{
                 borderColor: "#fd544e",
@@ -210,10 +214,11 @@ const FAQSection = () => {
               }}
             >
               View Platform Features
-            </Button>
+            </Button> */}
           </Box>
         </Box>
       </motion.div>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

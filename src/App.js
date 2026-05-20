@@ -2,6 +2,8 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { Grid } from "@mui/material";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // Standard Static Imports
 import { ThemeProvider } from "./componants/common/ThemeContext";
@@ -48,6 +50,7 @@ import {
 import { allLocations, slugify } from "./componants/pages/innerpages.js/LocationPageLayout/locationData";
 import AnimationVideoServices from "./componants/pages/innerpages.js/AnimationVideoServices/AnimationVideoServices";
 import BlogHomepage from "./componants/pages/innerpages.js/Blog/BlogHomePage";
+import { exploreServiceData } from "./componants/pages/innerpages.js/serviceinnerpages/service pages layout/serviceExplore/ExploreData";
 
 // Lazy Loaded Page Components
 const HomePage = lazy(() => import("./componants/pages/HomePage"));
@@ -114,7 +117,6 @@ function App() {
               <Route path="/refund-policy" element={<LegalCenter />} />
               <Route path="/cancellation-policy" element={<LegalCenter />} />
               <Route path="/shipping-policy" element={<ShippingPolicy />} />
-
               <Route path="/article/:ogUrl" element={<BlogHomepage />} />
 
               {/* Ready Products */}
@@ -135,8 +137,9 @@ function App() {
               <Route path="/ready-products/cab-booking-app" element={<CabBookingApp />} />
 
               {/* Services */}
-              <Route path="/services/web-development" element={<ServicesDevelopment />} />
               <Route path="/services/software-development" element={<SoftwareDevelopmentHub />} />
+              {/*Development Services */}
+              <Route path="/services/web-development" element={<ServicesDevelopment />} />
               <Route path="/services/ui-ux-design" element={<ServicePage serviceData={uiUxServiceData} />} />
               <Route path="/services/web-designing" element={<ServicePage serviceData={webDesignDevServiceData} />} />
               <Route path="/services/mobile-app-development" element={<ServicePage serviceData={mobileAppDevFullServiceData} />} />
@@ -169,6 +172,19 @@ function App() {
               <Route path="/services/video-editing-and-vfx" element={<ServicePage serviceData={videoEditingServiceData} />} />
               <Route path="/services/whiteboard-animation" element={<ServicePage serviceData={whiteboardAnimationServiceData} />} />
               <Route path="/services/animation-and-video-services" element={<AnimationVideoServices />} />
+
+              {/* Explore Pages */}
+
+              <Route path="/services/on-page-seo" element={<ServiceDetails exploreData={exploreServiceData.OnPageSeo} />} />
+              <Route path="/services/off-page-seo" element={<ServiceDetails exploreData={exploreServiceData.OffPageSeo} />} />
+              <Route path="/services/keyword-research" element={<ServiceDetails exploreData={exploreServiceData.KeywordResearchServices} />} />
+              <Route path="/services/seo-consulting" element={<ServiceDetails exploreData={exploreServiceData.SeoConsultanting} />} />
+
+              <Route path="/services/website-design" element={<ServiceDetails exploreData={exploreServiceData.WebsiteDesignServices} />} />
+              <Route path="/services/frontend-development" element={<ServiceDetails exploreData={exploreServiceData.FrontendDevelopmentServices} />} />
+              <Route path="/services/backend-development" element={<ServiceDetails exploreData={exploreServiceData.BackendDevelopmentServices} />} />
+              <Route path="/services/website-optimization" element={<ServiceDetails exploreData={exploreServiceData.WebsiteSpeedOptimizationServices} />} />
+
 
               {/* Training Categories Hubs */}
               <Route path="/training/digital-marketing-training" element={<DigitalMarketingHub />} />
@@ -233,7 +249,7 @@ function App() {
 
               {/* 404 Pages */}
               <Route path="/404" element={<NotFound />} />
-              <Route path="*" element={<Navigate to="/404" replace />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </Router>

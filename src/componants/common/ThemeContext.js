@@ -5,6 +5,7 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useState(true);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const theme = createTheme({
     palette: {
@@ -18,21 +19,21 @@ export const ThemeProvider = ({ children }) => {
       background: {
         default: darkMode ? "#1d1d1d" : "#000000",
         paper: darkMode ? "#131313" : "#1c191f",
-        toolbar:darkMode?"#ffffff" :"#312b36",
-        toolbartextfield:darkMode? "#ffffff":"#1c191f",
-        homeBackground:darkMode?"#f8f3f7":"#1c191f"
+        toolbar: darkMode ? "#ffffff" : "#312b36",
+        toolbartextfield: darkMode ? "#ffffff" : "#1c191f",
+        homeBackground: darkMode ? "#f8f3f7" : "#1c191f"
       },
-      
+
     },
   });
 
 
   const toggleTheme = () => {
-    setDarkMode((prevMode) => !prevMode); 
+    setDarkMode((prevMode) => !prevMode);
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, mobileMenuOpen, setMobileMenuOpen }}>
       {children}
     </ThemeContext.Provider>
   );

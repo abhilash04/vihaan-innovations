@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Grid,
@@ -18,6 +18,7 @@ import ListAltIcon from "@mui/icons-material/ListAlt";
 import StorageIcon from "@mui/icons-material/Storage";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import CampaignIcon from "@mui/icons-material/Campaign";
+import PopUps from "../common/PopUps";
 import bgimage from "../../assets/curve-line.png";
 import img from "../../assets/curve-arrow-white.png";
 
@@ -92,6 +93,7 @@ const Circle = styled(Box)(({ bgcolor }) => ({
 }));
 
 export default function WorkingRoadmap() {
+  const [openPopup, setOpenPopup] = useState(false);
   const roadmapItems = [
     {
       id: 1,
@@ -195,15 +197,16 @@ export default function WorkingRoadmap() {
           </Box>
 
           <Typography
-            variant="h3"
+            variant="h2"
             sx={{
               fontWeight: "bold",
               mb: 3,
               fontFamily: "'Poppins', sans-serif",
               lineHeight: 1.1,
+              fontSize: "54px",
             }}
           >
-            Our Smart Workflow for Building Powerful Digital Solutions
+            How Vihaan Innovations Works
           </Typography>
 
           <Typography
@@ -215,12 +218,13 @@ export default function WorkingRoadmap() {
               maxWidth: 440,
             }}
           >
-            At Vihaan Innovations, we follow a structured and strategic workflow to create innovative digital solutions.
+            We use a smart process to build quality digital products faster.
           </Typography>
 
           <Box sx={{ display: "flex", alignItems: "center", gap: 5 }}>
             <Button
               variant="contained"
+              onClick={() => setOpenPopup(true)}
               sx={{
                 backgroundColor: colors.blue,
                 textTransform: "none",
@@ -348,6 +352,7 @@ export default function WorkingRoadmap() {
           px: 2, // Padding horizontal, optional
         }}
       />
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 }

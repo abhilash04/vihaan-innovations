@@ -10,7 +10,11 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 
-const ServiceProcess = ({ location, serviceType, process = [] }) => {
+const ServiceProcess = ({ location, serviceType, process = {} }) => {
+    const steps = Array.isArray(process) ? process : (process.steps || []);
+    const headerTitle = process.title || `How We Deliver Excellence in ${location}`;
+    const headerBadge = process.badge || "Our Strategic Process";
+
     return (
         <Box sx={{ background: "linear-gradient(180deg, #f8fbff 0%, #e6f1fb 100%)", py: { xs: "36px", md: "80px" } }}>
             <Container maxWidth="lg">
@@ -22,7 +26,7 @@ const ServiceProcess = ({ location, serviceType, process = [] }) => {
                         transition={{ duration: 0.5 }}
                     >
                         <Chip
-                            label="Our Strategic Process"
+                            label={headerBadge}
                             sx={{
                                 background: "#0c447c",
                                 color: "#fff",
@@ -40,13 +44,13 @@ const ServiceProcess = ({ location, serviceType, process = [] }) => {
                     >
                         <Typography variant="h3" fontWeight={900} color="#042c53" textAlign="center"
                             sx={{ fontSize: { xs: "22px", sm: "28px", md: "3rem" }, px: { xs: 1, md: 0 } }}>
-                            How We Deliver Excellence in {location}
+                            {headerTitle}
                         </Typography>
                     </motion.div>
                 </Stack>
 
                 <Grid container spacing={{ xs: 2, md: 4 }}>
-                    {process.map((step, index) => (
+                    {steps.map((step, index) => (
                         <Grid item xs={12} sm={6} md={4} lg={2.4} key={index}>
                             <motion.div
                                 initial={{ opacity: 0, x: -20 }}
@@ -78,7 +82,7 @@ const ServiceProcess = ({ location, serviceType, process = [] }) => {
                                             justifyContent: "center",
                                             mb: 2,
                                             position: "relative",
-                                            "&::after": index < process.length - 1 ? {
+                                            "&::after": index < steps.length - 1 ? {
                                                 content: '""',
                                                 position: "absolute",
                                                 right: -40,
@@ -92,7 +96,7 @@ const ServiceProcess = ({ location, serviceType, process = [] }) => {
                                     >
                                         <Typography variant="h4" fontWeight={900} color="#0c447c"
                                             sx={{ fontSize: { xs: "20px", md: "2.125rem" } }}>
-                                            {step.number}
+                                            {step.number || `0${index + 1}`}
                                         </Typography>
                                     </Box>
 

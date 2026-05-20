@@ -14,13 +14,20 @@ import ExploreResults from "./serviceExplore/ExploreResults";
 import ExploreBottomCTA from "./serviceExplore/ExploreBottomCTA";
 import ExplorePricing from "./serviceExplore/ExplorePricing";
 
-// Data
 import { getExploreDataByTitle } from "./serviceExplore/ExploreData";
+import NotFound from "../../../NotFound";
 
-const ServiceDetails = ({ title: propTitle }) => {
+const ServiceDetails = ({ title: propTitle, exploreData }) => {
   const { title: urlTitle } = useParams();
-  const title = propTitle || decodeURIComponent(urlTitle);
-  const data = getExploreDataByTitle(title);
+  
+  // Use the provided exploreData directy if it exists, 
+  // otherwise look it up using the title from props or URL
+  const title = propTitle || (urlTitle ? decodeURIComponent(urlTitle) : null);
+  const data = exploreData || (title ? getExploreDataByTitle(title) : null);
+
+  if (!data) {
+    return <NotFound />;
+  }
 
   return (
     <Box sx={{ bgcolor: "#ffffff", minHeight: "100vh" }}>

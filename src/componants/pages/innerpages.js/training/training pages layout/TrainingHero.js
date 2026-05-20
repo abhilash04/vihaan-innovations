@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { Box, Typography, Container, Button, Grid, TextField, MenuItem, Chip, Paper } from "@mui/material";
+import PopUps from "../../../../common/PopUps";
+
+import { Box, Typography, Container, Button, Grid, TextField, MenuItem, Chip, Paper, useTheme, useMediaQuery } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { motion } from "framer-motion";
 import bgImage from "../../../../../assets/training-hero-bg.png"; // Using the premium generated background
@@ -23,7 +25,11 @@ const TrainingHero = ({ data = {} }) => {
     features = [],
     courses = []
   } = data;
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [formData, setFormData] = useState({ name: "", phone: "", course: "" });
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -39,7 +45,7 @@ const TrainingHero = ({ data = {} }) => {
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
         overflow: "hidden",
-        py: { xs: 10, md: 4 },
+        py: { xs: 6, md: 4 },
       }}
     >
       {/* Dynamic Overlay */}
@@ -53,7 +59,7 @@ const TrainingHero = ({ data = {} }) => {
       />
 
       <Container maxWidth="lg" sx={{ position: "relative", zIndex: 2, pt: { xs: 5, md: 6 } }}>
-        <Grid container spacing={6} alignItems="center">
+        <Grid container spacing={{ xs: 3, md: 6 }} alignItems="center">
 
           {/* Left Content */}
           <Grid item xs={12} md={7}>
@@ -107,7 +113,7 @@ const TrainingHero = ({ data = {} }) => {
                   fontSize: { xs: "17px", md: "19px" },
                   color: "rgba(255,255,255,0.85)",
                   lineHeight: 1.7,
-                  mb: 5,
+                  mb: 3,
                   maxWidth: "600px",
                   textShadow: "0 2px 40px rgba(0,0,0,0.2)"
                 }}
@@ -127,7 +133,7 @@ const TrainingHero = ({ data = {} }) => {
                 borderRadius: "14px",
                 px: 2.5,
                 py: 1.2,
-                mb: 5
+                mb: 3
               }}>
                 <Box
                   component={motion.div}
@@ -140,7 +146,7 @@ const TrainingHero = ({ data = {} }) => {
                 </Typography>
               </Box>
 
-              <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
+              <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3, justifyContent: isMobile ? "center" : "flex-start" }}>
                 <Button
                   variant="contained"
                   endIcon={<ArrowForwardIcon />}
@@ -161,10 +167,14 @@ const TrainingHero = ({ data = {} }) => {
                     },
                     transition: "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)"
                   }}
+                  onClick={() => {
+                    console.log("Training button clicked, opening popup...");
+                    setIsPopupOpen(true);
+                  }}
                 >
                   {buttonText || "Book Your Seat"}
                 </Button>
-                <Button
+                {/* <Button 
                   variant="outlined"
                   sx={{
                     borderColor: "rgba(255,255,255,0.4)",
@@ -185,7 +195,7 @@ const TrainingHero = ({ data = {} }) => {
                   }}
                 >
                   {secondaryButtonText || "Get Brochure"}
-                </Button>
+                </Button> */}
               </Box>
             </motion.div>
           </Grid>
@@ -316,8 +326,9 @@ const TrainingHero = ({ data = {} }) => {
                     }}
 
                   >
-                    <MenuItem value="Select Desired Course">
-                      {coursePlaceholder || "Select Desired Course"}
+                    {/* Placeholder option — value="" matches initial formData.course */}
+                    <MenuItem value="Select Course" disabled sx={{ color: "rgba(255,255,255,0.5)", fontStyle: "italic" }}>
+                      {coursePlaceholder || "Select Course"}
                     </MenuItem>
 
                     {courses.map((c) => (
@@ -361,6 +372,7 @@ const TrainingHero = ({ data = {} }) => {
           </Grid>
         </Grid>
       </Container>
+      <PopUps open={isPopupOpen} handleClose={() => setIsPopupOpen(false)} />
     </Box>
   );
 };

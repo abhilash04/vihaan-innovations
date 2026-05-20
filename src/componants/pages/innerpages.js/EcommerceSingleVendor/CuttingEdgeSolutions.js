@@ -1,11 +1,12 @@
-import React from "react";
-import { Box, Typography, Card, CardContent, Grid } from "@mui/material";
+import React, { useState } from "react";
+import { Box, Typography, Card, CardContent, Grid, useMediaQuery, useTheme } from "@mui/material";
 import icon1 from "../../../../assets/edge1.svg";
 import icon2 from "../../../../assets/edge2.svg";
 import icon3 from "../../../../assets/edge3.svg";
 import icon4 from "../../../../assets/edge4.svg";
 import icon5 from "../../../../assets/edge5.svg";
 import icon6 from "../../../../assets/edge6.svg";
+import PopUps from "../../../common/PopUps";
 
 // Services data array
 const services = [
@@ -66,75 +67,77 @@ const services = [
 ];
 
 const CuttingEdgeSolutions = () => {
+  const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box>
-      <Box sx={{ maxWidth: 1200, mx: "auto", py: 6, px: 2 }}>
+      <Box sx={{ maxWidth: 1200, mx: "auto", py: 6, px: isMobile ? 2 : 2 }}>
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
+            textAlign: "center",
+            px: isMobile ? 1 : 0,
           }}
         >
           <Typography
             sx={{
               fontWeight: 600,
               mb: 3.5,
-              fontSize: "38px",
+              fontSize: isMobile ? "24px" : "38px",
               color: "#333",
               letterSpacing: ".5px",
-              lineHeight: "26px",
+              lineHeight: isMobile ? "34px" : "26px",
             }}
           >
-            Powerful Solutions to Streamline Your  <span style={{ color: "#4da6ff" }}>E-Commerce Operations</span>
+            Powerful Solutions to Streamline Your{" "}
+            <span style={{ color: "#4da6ff" }}>E-Commerce Operations</span>
           </Typography>
           <Typography
             sx={{
               fontWeight: 500,
               mb: 4,
-              fontSize: "18px",
+              fontSize: isMobile ? "15px" : "18px",
               textAlign: "center",
-              width: 800,
+              width: isMobile ? "100%" : 800,
               color: "#333",
             }}
           >
-            Our advanced tools are built for a single vendor ecommerce
-            iOS experience, helping you automate processes, manage operations efficiently,
-            and deliver better customer experiences.
+            Our advanced tools are built for a single vendor ecommerce iOS experience, helping you
+            automate processes, manage operations efficiently, and deliver better customer
+            experiences.
           </Typography>
         </Box>
 
-        {/* 🔥 Fixed Grid Layout */}
-        <Grid container rowSpacing={8} columnSpacing={4} justifyContent="center">
+        {/* Fixed Grid Layout */}
+        <Grid container rowSpacing={isMobile ? 4 : 8} columnSpacing={4} justifyContent="center">
           {services.map((service, index) => (
             <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: "flex" }}>
               <Card
                 sx={{
-                  borderRadius: "24px", // Even more premium
+                  borderRadius: "24px",
                   boxShadow: "0 10px 30px rgba(0, 0, 0, 0.05)",
                   display: "flex",
                   flexDirection: "column",
                   background: service.bgcolor,
-                  textAlign: "center",
-                  width: "100%", // Ensure it fills grid item
+                  textAlign: isMobile ? "left" : "center",
+                  width: "100%",
                   transition: "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
                   cursor: "pointer",
                   position: "relative",
                   overflow: "hidden",
-                  pb: 3, // Reduced bottom space
-                  border: "1px solid rgba(0,0,0,0.05)", // More visible border
+                  p: isMobile ? 2.5 : 3,
+                  border: "1px solid rgba(0,0,0,0.05)",
                   "&:hover": {
                     boxShadow: "0 25px 50px rgba(0,123,255,0.2)",
                     background: service.bghoverColor,
                     transform: "scale(1.04)",
-                    "& .learn-more": {
-                      backgroundColor: "#ffffff",
-                      color: "#007bff",
-                      boxShadow: "0 8px 20px rgba(255,255,255,0.4)",
-                    },
                     "& .icon-wrapper": {
-                      transform: "scale(1.1) rotate(5deg)",
+                      transform: isMobile ? "scale(1.1)" : "scale(1.1) rotate(5deg)",
                     },
                     "& *": {
                       color: "white",
@@ -142,116 +145,86 @@ const CuttingEdgeSolutions = () => {
                   },
                 }}
               >
+                {/* Header: Icon and Title Container */}
                 <Box
-                  className="icon-wrapper"
                   sx={{
-                    width: 85,
-                    height: 70,
-                    mt: 2.5,
-                    mb: 1,
-                    transition: "all 0.4s ease-in-out",
                     display: "flex",
+                    flexDirection: isMobile ? "row" : "column",
                     alignItems: "center",
-                    justifyContent: "center",
+                    gap: isMobile ? 2 : 0,
+                    mb: isMobile ? 1.5 : 0,
                   }}
                 >
                   <Box
-                    component="img"
-                    src={service.icon}
-                    alt="icon"
+                    className="icon-wrapper"
                     sx={{
-                      width: "100%",
-                      height: "100%",
-                      filter: "none",
-                      transition: "filter 0.3s ease-in-out",
-                      ".MuiCard-root:hover &": {
-                        filter: "brightness(0) invert(1)",
-                      },
+                      width: isMobile ? 50 : 85,
+                      height: isMobile ? 50 : 70,
+                      transition: "all 0.4s ease-in-out",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
                     }}
-                  />
-                </Box>
+                  >
+                    <Box
+                      component="img"
+                      src={service.icon}
+                      alt="icon"
+                      sx={{
+                        width: "100%",
+                        height: "100%",
+                        filter: "none",
+                        transition: "filter 0.3s ease-in-out",
+                        ".MuiCard-root:hover &": {
+                          filter: "brightness(0) invert(1)",
+                        },
+                      }}
+                    />
+                  </Box>
 
-                <CardContent
-                  sx={{
-                    p: 0,
-                    width: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    flexGrow: 1, // Push content to fill card
-                    alignItems: "center"
-                  }}
-                >
                   <Typography
                     variant="h6"
                     sx={{
-                      fontSize: "20px",
-                      lineHeight: "28px",
+                      fontSize: isMobile ? "17px" : "20px",
+                      lineHeight: isMobile ? "24px" : "28px",
                       fontWeight: 700,
-                      px: 3,
-                      my: 2,
+                      my: isMobile ? 0 : 2,
                       color: "#1a1a1a",
-                      textAlign: "center",
+                      textAlign: isMobile ? "left" : "center",
                       transition: "color 0.3s ease",
                     }}
                   >
                     {service.title}
                   </Typography>
+                </Box>
 
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    flexGrow: 1,
+                  }}
+                >
                   <Typography
                     variant="body2"
                     sx={{
-                      fontSize: "15px",
+                      fontSize: "14.5px",
                       color: "#555",
-                      px: 3,
-                      mb: 4,
-                      lineHeight: 1.4,
-                      textAlign: "justify",
+                      lineHeight: 1.6,
+                      textAlign: isMobile ? "justify" : "justify",
                       transition: "color 0.3s ease",
                     }}
                   >
                     {service.description}
                   </Typography>
-
-                  {/* Spacer to push button to bottom */}
-                  <Box sx={{ flexGrow: 1 }} />
-
-                  <Box
-                    className="learn-more"
-                    component="a"
-                    href={service.link}
-                    sx={{
-                      textDecoration: "none",
-                      color: "#fff",
-                      backgroundColor: "#007bff",
-                      padding: "10px 25px",
-                      fontSize: "14px",
-                      fontWeight: 700,
-                      borderRadius: "50px",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      transition: "all 0.4s ease",
-                      border: "2px solid transparent",
-                      boxShadow: "0 4px 10px rgba(0, 123, 255, 0.2)",
-                      mb: 1, // Minimize space below button
-                      "&:hover": {
-                        transform: "scale(1.05)",
-                      },
-                      "@keyframes pulse": {
-                        "0%": { boxShadow: "0 0 0 0 rgba(0, 123, 255, 0.4)" },
-                        "70%": { boxShadow: "0 0 0 10px rgba(0, 123, 255, 0)" },
-                        "100%": { boxShadow: "0 0 0 0 rgba(0, 123, 255, 0)" },
-                      },
-                      animation: "pulse 2s infinite",
-                    }}
-                  >
-                    Learn More
-                  </Box>
-                </CardContent>
+                </Box>
               </Card>
             </Grid>
           ))}
         </Grid>
       </Box>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Button, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 import SchoolIcon from '@mui/icons-material/School';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
@@ -24,6 +25,7 @@ const StatCard = ({ icon: Icon, value, label, color, delay }) => (
 );
 
 const LMSBanner = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box sx={{
       background: "linear-gradient(135deg, #e8f4fd 0%, #dbeafe 40%, #eff6ff 100%)",
@@ -47,12 +49,16 @@ const LMSBanner = () => {
                 We offer custom LMS website development services, including e-learning platforms and training management systems, designed for edtech startups, coaching institutes, corporate training teams, and universities.
               </Typography>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
-                <Button variant="contained" sx={{ bgcolor: "#2563eb", color: "#fff", fontWeight: 700, px: 4, py: 1.5, borderRadius: "10px", textTransform: "none", fontSize: "15px", boxShadow: "0 6px 20px rgba(37,99,235,0.35)", "&:hover": { bgcolor: "#1d4ed8", transform: "translateY(-2px)" }, transition: "all 0.3s" }}>
+                <Button
+                  variant="contained"
+                  onClick={() => setOpenPopup(true)}
+                  sx={{ bgcolor: "#2563eb", color: "#fff", fontWeight: 700, px: 4, py: 2, borderRadius: "10px", textTransform: "none", fontSize: "15px", boxShadow: "0 6px 20px rgba(37,99,235,0.35)", "&:hover": { bgcolor: "#1d4ed8", transform: "translateY(-2px)" }, transition: "all 0.3s" }}
+                >
                   Start Building
                 </Button>
-                <Button variant="outlined" sx={{ borderColor: "#2563eb", color: "#2563eb", fontWeight: 600, px: 4, py: 1.5, borderRadius: "10px", textTransform: "none", fontSize: "15px", "&:hover": { bgcolor: "rgba(37,99,235,0.05)" } }}>
+                {/* <Button variant="outlined" sx={{ borderColor: "#2563eb", color: "#2563eb", fontWeight: 600, px: 4, py: 1.5, borderRadius: "10px", textTransform: "none", fontSize: "15px", "&:hover": { bgcolor: "rgba(37,99,235,0.05)" } }}>
                   Explore Features
-                </Button>
+                </Button> */}
               </Box>
             </motion.div>
           </Grid>
@@ -106,6 +112,7 @@ const LMSBanner = () => {
           </Grid>
         </Box>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

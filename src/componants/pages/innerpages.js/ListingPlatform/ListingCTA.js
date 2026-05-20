@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 
 const ListingCTA = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box sx={{ position: "relative", bgcolor: "#0f172a", py: 10, overflow: "hidden" }}>
 
@@ -35,6 +37,7 @@ const ListingCTA = () => {
             <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 3 }}>
               <Button
                 variant="contained"
+                onClick={() => setOpenPopup(true)}
                 sx={{
                   background: "linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%)",
                   color: "#ffffff",
@@ -57,7 +60,9 @@ const ListingCTA = () => {
               </Button>
 
               <Box sx={{ display: "flex", gap: 3 }}>
-                <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "14px", textDecoration: "underline", cursor: "pointer", "&:hover": { color: "#ffffff" } }}>
+                <Typography
+                  onClick={() => setOpenPopup(true)}
+                  sx={{ color: "rgba(255,255,255,0.7)", fontSize: "14px", textDecoration: "underline", cursor: "pointer", "&:hover": { color: "#ffffff" } }}>
                   Request Free Proposal
                 </Typography>
               </Box>
@@ -66,6 +71,7 @@ const ListingCTA = () => {
           </Box>
         </motion.div>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

@@ -23,7 +23,7 @@ const ServicesSection = ({ location, serviceType, services = [], customServicesH
                         transition={{ duration: 0.5 }}
                     >
                         <Chip
-                            label="Specialized Services"
+                            label={customServicesHeaders?.badge || "Specialized Services"}
                             sx={{
                                 background: "#e6f1fb",
                                 color: "#0c447c",
@@ -62,8 +62,7 @@ const ServicesSection = ({ location, serviceType, services = [], customServicesH
                             textAlign="center"
                             sx={{ maxWidth: "700px", fontSize: { xs: "13px", md: "1.1rem" }, px: { xs: 1, md: 0 } }}
                         >
-                            We provide end-to-end digital excellence tailored for businesses in {location}.
-                            Our solutions are designed to scale and succeed.
+                            {customServicesHeaders?.description || `We provide end-to-end digital excellence tailored for businesses in ${location}. Our solutions are designed to scale and succeed.`}
                         </Typography>
                     </motion.div>
                 </Stack>
@@ -86,7 +85,7 @@ const ServicesSection = ({ location, serviceType, services = [], customServicesH
                                         border: "1px solid #e0e0e0",
                                         borderRadius: { xs: "16px", md: "24px" },
                                         p: { xs: 2.5, md: 4 },
-                                        height: "100%",
+                                        height: "80%",
                                         transition: "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
                                         display: "flex",
                                         flexDirection: "column",
@@ -103,7 +102,7 @@ const ServicesSection = ({ location, serviceType, services = [], customServicesH
                                         },
                                     }}
                                 >
-                                    <Box sx={{ position: "relative", zIndex: 1, display: 'flex', flexDirection: 'column', height: '100%' }}>
+                                    <Box sx={{ position: "relative", zIndex: 1, display: 'flex', flexDirection: 'column', height: '80%' }}>
                                         {/* Icon */}
                                         <Box
                                             className="icon-box"

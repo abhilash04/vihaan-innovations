@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Container, Paper, Avatar } from "@mui/material";
+import { Box, Typography, Container, Paper, Avatar, useTheme, useMediaQuery } from "@mui/material";
 import { styled, keyframes } from "@mui/system";
 import StarIcon from "@mui/icons-material/Star";
 
@@ -52,6 +52,9 @@ const TestimonialCard = styled(Paper)(({ theme }) => ({
 }));
 
 const TestimonialsSection = ({ data }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
   const {
     subtitle = "CLIENT LOVE",
     title = "What Our Clients Say About Us",
@@ -61,14 +64,14 @@ const TestimonialsSection = ({ data }) => {
   } = data || {};
 
   return (
-    <Box sx={{ bgcolor: "#ffffff", py: { xs: 6, md: 6 }, position: "relative", overflow: "hidden" }}>
+    <Box sx={{ bgcolor: "#ffffff", py: isMobile ? 6 : 6, position: "relative", overflow: "hidden" }}>
       <Container maxWidth="lg">
         {/* Heading */}
         <Box sx={{ textAlign: "center", mb: 6 }}>
           <Typography sx={{ color: "#0087c9", fontWeight: 700, fontSize: "12px", letterSpacing: "1px", mb: 1.5 }}>
             {subtitle}
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "40px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233" }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: isMobile ? "28px" : "40px", fontFamily: "Urbanist, sans-serif", color: "#0a2233" }}>
             {title}
           </Typography>
         </Box>
@@ -78,7 +81,7 @@ const TestimonialsSection = ({ data }) => {
       <Box sx={{ mb: 4 }}>
         <TickerContainer speed="30s" direction="left">
           {[...list, ...list].map((item, i) => (
-            <TestimonialCard key={i} elevation={0}>
+            <TestimonialCard key={i} elevation={0} sx={{ width: isMobile ? "240px" : "320px", padding: isMobile ? "16px" : "24px", margin: isMobile ? "0 8px" : "0 12px", gap: isMobile ? "12px" : "16px" }}>
               <Box sx={{ display: "flex", gap: 0.5, color: "#f59e0b" }}>
                 {[...Array(5)].map((_, j) => <StarIcon key={j} sx={{ fontSize: 16 }} />)}
               </Box>
@@ -102,11 +105,11 @@ const TestimonialsSection = ({ data }) => {
 
       {/* Ratings Pill */}
       <Box sx={{ display: "flex", justifyContent: "center", }}>
-        <Box sx={{ bgcolor: "rgba(0, 135, 201, 0.06)", border: "1px solid rgba(0, 135, 201, 0.15)", px: 3, py: 1, borderRadius: "50px", display: "flex", gap: 2, alignItems: "center" }}>
+        <Box sx={{ bgcolor: "rgba(0, 135, 201, 0.06)", border: "1px solid rgba(0, 135, 201, 0.15)", px: 3, py: isMobile ? 1.5 : 1, borderRadius: isMobile ? "24px" : "50px", display: "flex", flexDirection: isMobile ? "column" : "row", gap: isMobile ? 0.5 : 2, alignItems: "center" }}>
           <Typography sx={{ color: "#0087c9", fontSize: "13px", fontWeight: 700 }}>
             {rating} Average Rating ⭐
           </Typography>
-          <Box sx={{ width: "4px", height: "4px", bgcolor: "#0087c9", borderRadius: "50%" }} />
+          {!isMobile && <Box sx={{ width: "4px", height: "4px", bgcolor: "#0087c9", borderRadius: "50%" }} />}
           <Typography sx={{ color: "#0087c9", fontSize: "13px", fontWeight: 700 }}>
             {reviews} Reviews
           </Typography>

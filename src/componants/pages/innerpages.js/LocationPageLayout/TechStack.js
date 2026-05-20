@@ -11,6 +11,11 @@ import {
 import { motion } from "framer-motion";
 
 const TechStackSection = ({ location, serviceType, techStack = [] }) => {
+    const isArray = Array.isArray(techStack);
+    const displayTools = isArray ? techStack : (techStack.tools || []);
+    const headerTitle = techStack.title || `Powering ${location} with Modern Tools`;
+    const headerBadge = techStack.badge || "Our Tech Stack";
+
     return (
         <Box sx={{ background: "#ffffff", py: { xs: "36px", md: "80px" } }}>
             <Container maxWidth="lg">
@@ -22,7 +27,7 @@ const TechStackSection = ({ location, serviceType, techStack = [] }) => {
                         transition={{ duration: 0.5 }}
                     >
                         <Chip
-                            label="Our Tech Stack"
+                            label={headerBadge}
                             sx={{
                                 background: "#0c447c",
                                 color: "#fff",
@@ -40,13 +45,13 @@ const TechStackSection = ({ location, serviceType, techStack = [] }) => {
                     >
                         <Typography variant="h3" fontWeight={900} color="#042c53" textAlign="center"
                             sx={{ fontSize: { xs: "22px", sm: "28px", md: "3rem" }, px: { xs: 1, md: 0 } }}>
-                            Powering {location} with Modern Tools
+                            {headerTitle}
                         </Typography>
                     </motion.div>
                 </Stack>
 
                 <Grid container spacing={{ xs: 1.5, md: 3 }} justifyContent="center">
-                    {techStack.map((tech, index) => (
+                    {displayTools.map((tech, index) => (
                         <Grid item xs={6} sm={4} md={2} key={index} sx={{ display: "flex" }}>
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.8 }}
@@ -63,6 +68,7 @@ const TechStackSection = ({ location, serviceType, techStack = [] }) => {
                                         background: "#f8fbff",
                                         borderRadius: { xs: "14px", md: "20px" },
                                         border: "1px solid #e6f1fb",
+                                        width: "100%",
                                         transition: "all 0.3s",
                                         "&:hover": {
                                             background: "#fff",
@@ -72,7 +78,7 @@ const TechStackSection = ({ location, serviceType, techStack = [] }) => {
                                         },
                                     }}
                                 >
-                                    <Box sx={{ fontSize: { xs: "26px", md: "32px" }, mb: 1 }}>{tech.icon}</Box>
+                                    <Box sx={{ fontSize: { xs: "26px", md: "32px" }, mb: 1 }}>{tech.icon || "🛠️"}</Box>
                                     <Typography
                                         sx={{
                                             fontSize: { xs: "11px", md: "12px" },
@@ -80,7 +86,7 @@ const TechStackSection = ({ location, serviceType, techStack = [] }) => {
                                             color: "#0c447c",
                                         }}
                                     >
-                                        {tech.name}
+                                        {tech.name || tech}
                                     </Typography>
                                 </Paper>
                             </motion.div>

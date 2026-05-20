@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Grid, Container, Paper } from "@mui/material";
+import { Box, Typography, Grid, Container, Paper, useTheme, useMediaQuery } from "@mui/material";
 import { styled, keyframes } from "@mui/system";
 import { useNavigate } from "react-router-dom";
 import CodeIcon from "@mui/icons-material/Code";
@@ -8,11 +8,11 @@ import VideoCameraBackIcon from "@mui/icons-material/VideoCameraBack";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 import CallMadeIcon from '@mui/icons-material/CallMade';
 
-const float = keyframes`
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-`;
+// const float = keyframes`
+//   0% { transform: translateY(0px); }
+//   50% { transform: translateY(-10px); }
+//   100% { transform: translateY(0px); }
+// `;
 
 const categories = [
   {
@@ -85,6 +85,8 @@ const IconBox = styled(Box)(({ gradient }) => ({
 
 const ServicesOverview = ({ data }) => {
   const navigate = useNavigate();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const {
     subtitle = "WHAT WE OFFER",
     title = "Comprehensive Technology Services",
@@ -98,7 +100,7 @@ const ServicesOverview = ({ data }) => {
   };
 
   return (
-    <Box sx={{ bgcolor: "#f1f5f9", py: { xs: 6, md: 6 }, position: "relative" }}>
+    <Box sx={{ bgcolor: "#f1f5f9", py: isMobile ? 6 : 6, position: "relative" }}>
       <Container maxWidth="lg">
         {/* Heading Block */}
         <Box sx={{ textAlign: "center", mb: 6 }}>
@@ -108,7 +110,7 @@ const ServicesOverview = ({ data }) => {
               {subtitle}
             </Typography>
           </Box>
-          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "40px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: isMobile ? "28px" : "40px", fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2 }}>
             {title}
           </Typography>
           <Typography sx={{ color: "#475569", maxWidth: "560px", mx: "auto", fontSize: "16px", lineHeight: 1.7 }}>
@@ -123,22 +125,24 @@ const ServicesOverview = ({ data }) => {
             return (
               <Grid item xs={12} sm={6} md={3} key={i} mb={6}>
                 <CategoryCard bordercolor={cat.color} onClick={() => handleExplore(cat.title)}>
-                  <IconBox gradient={cat.gradient}>
-                    <SvgIcon sx={{ fontSize: 28 }} />
-                  </IconBox>
-                  <Typography variant="h6" sx={{ color: "#0a2233", fontWeight: 800, mb: 1, fontSize: "19px", fontFamily: "Urbanist, sans-serif" }}>
-                    {cat.title}
-                  </Typography>
+                  <Box sx={{ display: "flex", flexDirection: isMobile ? "row" : "column", alignItems: isMobile ? "center" : "flex-start", gap: isMobile ? 2 : 0, mb: isMobile ? 1.5 : 0 }}>
+                    <IconBox gradient={cat.gradient} sx={{ mb: isMobile ? 0 : "24px", width: isMobile ? "48px" : "56px", height: isMobile ? "48px" : "56px", minWidth: isMobile ? "48px" : "56px", borderRadius: isMobile ? "12px" : "16px" }}>
+                      <SvgIcon sx={{ fontSize: isMobile ? 24 : 28 }} />
+                    </IconBox>
+                    <Typography variant="h6" sx={{ color: "#0a2233", fontWeight: 800, mb: isMobile ? 0 : 1, fontSize: isMobile ? "18px" : "19px", fontFamily: "Urbanist, sans-serif" }}>
+                      {cat.title}
+                    </Typography>
+                  </Box>
                   <Typography sx={{ color: "#64748b", fontSize: "14px", lineHeight: 1.6, flexGrow: 1 }}>
                     {cat.description}
                   </Typography>
 
                   <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", mt: "auto" }}>
-                    <Box sx={{ bgcolor: "rgba(0, 135, 201, 0.08)", border: "1px solid rgba(0, 135, 201, 0.15)", px: 1.5, py: 0.5, borderRadius: "20px" }}>
+                    {/* <Box sx={{ bgcolor: "rgba(0, 135, 201, 0.08)", border: "1px solid rgba(0, 135, 201, 0.15)", px: 1.5, py: 0.5, borderRadius: "20px" }}>
                       <Typography sx={{ color: "#0087c9", fontSize: "11px", fontWeight: 700 }}>
                         {cat.count}
                       </Typography>
-                    </Box>
+                    </Box> */}
                     <Box
                       sx={{ display: "flex", alignItems: "center", gap: 0.5, color: "#0087c9", cursor: "pointer", "&:hover": { color: "#005885" } }}
                       onClick={(e) => {

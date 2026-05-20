@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import PopUps from "../../../../common/PopUps";
+
 import { Box, Container, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
 
@@ -18,6 +20,8 @@ const CTASection = ({ data }) => {
     buttonText = "Get Started Today",
     brandText = "Vihaan Innovations"
   } = data || {};
+
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
     <Box sx={{ position: "relative", background: "linear-gradient(135deg, #fce7f3 0%, #e0f2fe 40%, #ccfbf1 100%)", pt: 12, pb: 6, overflow: "hidden" }}>
@@ -76,18 +80,20 @@ const CTASection = ({ data }) => {
                   },
                   transition: "all 0.3s"
                 }}
+                onClick={() => setIsPopupOpen(true)}
               >
                 Get Started Today
               </Button>
 
-              <Box sx={{ display: "flex", alignItems: "center", gap: 1, color: "#64748b", cursor: "pointer", "&:hover": { color: "#0a1628" }, transition: "color 0.3s" }}>
+              {/* <Box sx={{ display: "flex", alignItems: "center", gap: 1, color: "#64748b", cursor: "pointer", "&:hover": { color: "#0a1628" }, transition: "color 0.3s" }}>
                 <Typography sx={{ fontWeight: 600, fontSize: "15px", fontFamily: "Inter, sans-serif" }}>{brandText}</Typography>
-              </Box>
+              </Box> */}
             </Box>
 
           </Box>
         </motion.div>
       </Container>
+      <PopUps open={isPopupOpen} handleClose={() => setIsPopupOpen(false)} />
     </Box>
   );
 };

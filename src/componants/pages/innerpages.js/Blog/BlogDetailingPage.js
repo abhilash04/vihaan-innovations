@@ -5,11 +5,13 @@ import { motion } from 'framer-motion';
 import { Calendar, Clock, Eye, ArrowRight, Share2, Bookmark, CheckCircle2, Mail } from 'lucide-react';
 import { config } from '../../../../config/Config';
 import { apiList, invokeApi } from '../../../../services/ApiServices';
+import NotFound from '../../NotFound';
 
 const BlogDetailingPage = ({ blogData: propData }) => {
     const { ogUrl } = useParams();
     const [blogData, setBlogData] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [notFound, setNotFound] = useState(false);
     const [snackbar, setSnackbar] = useState({ open: false, message: '', severity: 'info' });
 
     const fetchBlogData = async () => {
@@ -24,9 +26,11 @@ const BlogDetailingPage = ({ blogData: propData }) => {
                 if (resData.responseCode == "200" && resData.blog && resData.blog.length > 0) {
                     setBlogData(resData.blog[0]);
                 } else {
+                    setNotFound(true);
                     handleError("Blog not found.");
                 }
             } else {
+                setNotFound(true);
                 handleError("Failed to connect to the article service.");
             }
         } catch (error) {
@@ -61,8 +65,12 @@ const BlogDetailingPage = ({ blogData: propData }) => {
         );
     }
 
+    if (notFound) {
+        return <NotFound />;
+    }
+
     return (
-        <Box sx={{ width: '100%', pb: 10, backgroundColor: '#fcfdff', minHeight: '100vh' }}>
+        <Box sx={{ width: '100%', pb: 5, backgroundColor: '#fcfdff', minHeight: '100vh' }}>
             {/* --- Hero Section --- */}
             <Box
                 component={motion.div}
@@ -71,12 +79,15 @@ const BlogDetailingPage = ({ blogData: propData }) => {
                 transition={{ duration: 1 }}
                 sx={{
                     position: 'relative',
-                    height: { xs: '70vh', md: '80vh' },
+                    mt: 5,
                     width: '100%',
-                    mb: -10,
+                    maxWidth: '1750px',
+                    height: '775px',
+                    mx: 'auto',
                     display: 'flex',
                     alignItems: 'center',
-                    overflow: 'hidden'
+                    overflow: 'hidden',
+                    backgroundColor: '#0a0a1a',
                 }}
             >
                 <Box
@@ -84,13 +95,14 @@ const BlogDetailingPage = ({ blogData: propData }) => {
                         position: 'absolute',
                         top: 0, left: 0, right: 0, bottom: 0,
                         backgroundImage: `url(${data.bannerUrl || data.featuredUrl})`,
-                        backgroundSize: 'cover',
+                        backgroundSize: 'contain',
+                        backgroundRepeat: 'no-repeat',
                         backgroundPosition: 'center',
                         '&::before': {
                             content: '""',
                             position: 'absolute',
                             top: 0, left: 0, right: 0, bottom: 0,
-                            background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.8) 100%)',
+                            background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.35) 0%, rgba(15, 23, 42, 0.75) 100%)',
                             zIndex: 1
                         }
                     }}
@@ -157,7 +169,7 @@ const BlogDetailingPage = ({ blogData: propData }) => {
             </Box>
 
             {/* --- Main Reading Experience --- */}
-            <Container maxWidth="xl" sx={{ mt: { xs: 15, md: 20 }, position: 'relative', zIndex: 12 }}>
+            <Container maxWidth="xl" sx={{ mt: { xs: 8, md: 10 }, position: 'relative', zIndex: 12 }}>
                 <Grid container spacing={6}>
                     <Grid item xs={12} md={8}>
                         <Paper
@@ -218,12 +230,103 @@ const BlogDetailingPage = ({ blogData: propData }) => {
                     {/* Sidebar */}
                     <Grid item xs={12} md={4}>
                         <Box sx={{ position: 'sticky', top: 120, display: 'flex', flexDirection: 'column', gap: 5 }}>
-                            <Paper sx={{ borderRadius: '32px', overflow: 'hidden', border: '1px solid #f1f5f9', bgcolor: '#ffffff' }}>
-                                <img src={data.featuredUrl} alt="Featured" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
-                                <Box sx={{ p: 4, textAlign: 'center' }}>
-                                    <Typography sx={{ fontWeight: 800, color: '#0f172a', mb: 1.5, fontSize: '1.1rem' }}>Expert Perspective</Typography>
-                                    <Typography sx={{ color: '#64748b', fontSize: '0.9rem', mb: 3 }}>Want custom solutions based on these insights?</Typography>
-                                    <Button variant="outlined" fullWidth endIcon={<ArrowRight size={16} />} sx={{ borderRadius: '12px', py: 1.5, fontWeight: 700, borderColor: '#7c3aed', color: '#7c3aed' }}>
+                            <Paper
+                                elevation={0}
+                                sx={{
+                                    borderRadius: '28px',
+                                    overflow: 'hidden',
+                                    border: '1px solid #ede9fe',
+                                    bgcolor: '#ffffff',
+                                    boxShadow: '0 8px 32px -8px rgba(124, 58, 237, 0.12)',
+                                }}
+                            >
+                                {/* Gradient accent top bar */}
+                                <Box sx={{ height: '6px', background: 'linear-gradient(90deg, #7c3aed 0%, #a78bfa 50%, #38bdf8 100%)' }} />
+
+                                {/* Featured image — equal padding on all 4 sides */}
+                                <Box
+                                    sx={{
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                        p: '16px',          /* equal on all sides */
+                                        bgcolor: '#f8f5ff',
+                                    }}
+                                >
+                                    <Box
+                                        sx={{
+                                            width: '100%',
+                                            aspectRatio: '1 / 1',
+                                            maxWidth: '220px',
+                                            borderRadius: '16px',
+                                            overflow: 'hidden',
+                                            border: '2px solid #ede9fe',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            bgcolor: '#fff',
+                                            boxShadow: '0 4px 16px rgba(124,58,237,0.1)',
+                                        }}
+                                    >
+                                        <img
+                                            src={data.featuredUrl}
+                                            alt="Featured"
+                                            style={{
+                                                width: '100%',
+                                                height: '100%',
+                                                objectFit: 'contain',
+                                                display: 'block',
+                                                padding: '12px',  /* inner equal spacing */
+                                                boxSizing: 'border-box',
+                                            }}
+                                        />
+                                    </Box>
+                                </Box>
+
+                                {/* Card content */}
+                                <Box sx={{ px: '24px', pb: '24px', textAlign: 'center' }}>
+                                    <Box
+                                        sx={{
+                                            display: 'inline-block',
+                                            bgcolor: '#f3e8ff',
+                                            color: '#7c3aed',
+                                            fontSize: '0.72rem',
+                                            fontWeight: 700,
+                                            letterSpacing: '1.5px',
+                                            textTransform: 'uppercase',
+                                            px: 1.5, py: 0.5,
+                                            borderRadius: '20px',
+                                            mb: 1.5,
+                                        }}
+                                    >
+                                        Featured Article
+                                    </Box>
+                                    <Typography sx={{ fontWeight: 800, color: '#0f172a', mb: 1, fontSize: '1.05rem', lineHeight: 1.3 }}>
+                                        Expert Perspective
+                                    </Typography>
+                                    <Typography sx={{ color: '#64748b', fontSize: '0.88rem', mb: 2.5, lineHeight: 1.6 }}>
+                                        Want custom solutions based on these insights?
+                                    </Typography>
+                                    <Button
+                                        variant="contained"
+                                        fullWidth
+                                        endIcon={<ArrowRight size={16} />}
+                                        sx={{
+                                            borderRadius: '14px',
+                                            py: 1.4,
+                                            fontWeight: 700,
+                                            fontSize: '0.9rem',
+                                            textTransform: 'none',
+                                            background: 'linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%)',
+                                            boxShadow: '0 4px 14px rgba(124, 58, 237, 0.35)',
+                                            '&:hover': {
+                                                background: 'linear-gradient(135deg, #6d28d9 0%, #7c3aed 100%)',
+                                                transform: 'translateY(-2px)',
+                                                boxShadow: '0 6px 20px rgba(124, 58, 237, 0.45)',
+                                            },
+                                            transition: 'all 0.25s ease',
+                                        }}
+                                    >
                                         Consult with us
                                     </Button>
                                 </Box>

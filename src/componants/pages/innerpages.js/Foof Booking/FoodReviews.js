@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Container, Avatar, Rating, Paper } from "@mui/material";
+import { Box, Typography, Container, Avatar, Rating, Paper, useMediaQuery, useTheme } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
@@ -49,11 +49,14 @@ const reviews = [
   }
 ];
 
-const ReviewCard = ({ review }) => (
-  <Paper
-    elevation={0}
-    sx={{
-      p: { xs: 3, md: 4 },
+const ReviewCard = ({ review }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  return (
+    <Paper
+      elevation={0}
+      sx={{
+        p: isMobile ? 3 : 4,
       borderRadius: "24px",
       bgcolor: "#ffffff",
       boxShadow: "0 10px 30px rgba(0,0,0,0.06)",
@@ -121,14 +124,18 @@ const ReviewCard = ({ review }) => (
         <Typography sx={{ color: "#ff6f1e", fontSize: "13px", fontWeight: 600 }}>
           {review.role}
         </Typography>
+        </Box>
       </Box>
-    </Box>
-  </Paper>
-);
+    </Paper>
+  );
+};
 
 const FoodReviews = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
-    <Box sx={{ py: { xs: 4, md: 6 }, backgroundColor: "#fafafc", overflow: 'hidden' }}>
+    <Box sx={{ py: isMobile ? 4 : 6, backgroundColor: "#fafafc", overflow: 'hidden' }}>
       <Container maxWidth="lg">
 
         {/* Header Section */}
@@ -137,7 +144,7 @@ const FoodReviews = () => {
             <Typography sx={{ color: "#ff6f1e", fontWeight: 600, letterSpacing: 1.5, mb: 2, textTransform: 'uppercase' }}>
               Testimonials
             </Typography>
-            <Typography variant="h2" sx={{ fontSize: { xs: "28px", md: "38px" }, fontWeight: 800, mb: 3, color: "#1a1a1a" }}>
+            <Typography variant="h2" sx={{ fontSize: isMobile ? "28px" : "38px", fontWeight: 800, mb: 3, color: "#1a1a1a" }}>
               What Our Clients Say About Vihaan Innovations
             </Typography>
             <Typography sx={{ fontSize: "17px", color: "#666", lineHeight: 1.4 }}>

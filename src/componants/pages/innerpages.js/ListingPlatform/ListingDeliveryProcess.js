@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Grid } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 
 const steps = [
   { label: "Concept & Strategy", sub: "Discovery & requirement analysis" },
@@ -12,6 +13,7 @@ const steps = [
 ];
 
 const ListingDeliveryProcess = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
       <Container maxWidth="lg">
@@ -112,6 +114,7 @@ const ListingDeliveryProcess = () => {
           </Typography>
           <Box
             component="button"
+            onClick={() => setOpenPopup(true)}
             sx={{
               bgcolor: "#2563eb",
               color: "#ffffff",
@@ -135,6 +138,7 @@ const ListingDeliveryProcess = () => {
         </Box>
 
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

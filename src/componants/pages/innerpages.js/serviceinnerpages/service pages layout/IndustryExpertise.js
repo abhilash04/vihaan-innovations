@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography, Container, Grid, Paper, Tabs, Tab } from "@mui/material";
+import { Box, Typography, Container, Grid, Paper, Tabs, Tab, useTheme, useMediaQuery, IconButton } from "@mui/material";
 import { styled } from "@mui/system";
 import { motion, AnimatePresence } from "framer-motion";
 import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
@@ -7,6 +7,8 @@ import SchoolIcon from "@mui/icons-material/School";
 import HomeWorkIcon from "@mui/icons-material/HomeWork";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const industryData = {
   0: { // Healthcare
@@ -103,6 +105,9 @@ const CustomTab = styled(Tab)(({ theme }) => ({
 }));
 
 const IndustryExpertise = ({ data }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
   const {
     subtitle = "INDUSTRY EXPERTISE",
     title = "Delivering Success Across Sectors",
@@ -123,31 +128,41 @@ const IndustryExpertise = ({ data }) => {
   const current = industries[activeTab] || industries[0] || { title: "", desc: "", desc1: "", checks: [], cards: [] };
 
   return (
-    <Box sx={{ bgcolor: "#f1f5f9", py: { xs: 6, md: 8 }, position: "relative" }}>
+    <Box sx={{ bgcolor: "#f1f5f9", py: isMobile ? 6 : 8, position: "relative" }}>
       <Container maxWidth="lg">
         {/* Heading */}
-        <Box sx={{ textAlign: "center", mb: 6 }}>
+        <Box sx={{ textAlign: "center", mb: isMobile ? 3 : 6 }}>
           <Typography sx={{ color: "#0087c9", fontWeight: 700, fontSize: "12px", letterSpacing: "1px", mb: 1.5 }}>
             {subtitle}
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "40px" }, fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, fontSize: isMobile ? "28px" : "40px", fontFamily: "Urbanist, sans-serif", color: "#0a2233", mb: 2 }}>
             {title}
           </Typography>
         </Box>
 
-        {/* Horizontal Scrollable Tabs */}
-        <Box sx={{ display: "flex", justifyContent: "center", mb: 6, overflowX: "auto", pb: 2 }}>
+        {/* Responsive Tabs */}
+        <Box sx={{ display: "flex", justifyContent: "center", mb: isMobile ? 3 : 4, overflowX: "auto", pb: 1 }}>
           <Tabs
             value={activeTab}
             onChange={(e, v) => setActiveTab(v)}
-            variant="scrollable"
+            variant={isMobile ? "standard" : "scrollable"}
+            orientation={isMobile ? "vertical" : "horizontal"}
             scrollButtons="auto"
             TabIndicatorProps={{ style: { display: "none" } }}
+            sx={isMobile ? { width: "100%" } : {}}
           >
             {categoriesList.map((cat, idx) => (
               <CustomTab
                 key={idx}
                 label={cat.label}
+                sx={{ 
+                  margin: isMobile ? "4px auto" : "0 6px", 
+                  width: isMobile ? "75%" : "auto", 
+                  alignItems: "center",
+                  padding: isMobile ? "6px 16px" : "10px 20px",
+                  minHeight: isMobile ? "36px" : "auto",
+                  fontSize: isMobile ? "13px" : "14px"
+                }}
               />
             ))}
           </Tabs>
@@ -171,14 +186,14 @@ const IndustryExpertise = ({ data }) => {
                 <Typography sx={{ color: "#475569", fontSize: "16px", lineHeight: 1.6, mb: 2 }}>
                   {current.desc}
                 </Typography>
-                <Typography sx={{ color: "#475569", fontSize: "16px", lineHeight: 1.6, mb: 4 }}>
+                <Typography sx={{ color: "#475569", fontSize: "16px", lineHeight: 1.6, mb: isMobile ? 2 : 4 }}>
                   {current.desc1}
                 </Typography>
 
-                <Grid container spacing={1} sx={{ mb: 4 }}>
+                <Grid container spacing={1} sx={{ mb: isMobile ? 0 : 4 }}>
                   {current?.checks?.map((check, i) => (
-                    <Grid item xs={6} key={i} sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                      <Box sx={{ width: "6px", height: "6px", bgcolor: "#0087c9", borderRadius: "50%" }} />
+                    <Grid item xs={isMobile ? 12 : 6} key={i} sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                      <Box sx={{ width: "6px", height: "6px", minWidth: "6px", bgcolor: "#0087c9", borderRadius: "50%" }} />
                       <Typography sx={{ fontSize: "14px", color: "#475569", fontWeight: 500 }}>{check}</Typography>
                     </Grid>
                   ))}
@@ -220,6 +235,42 @@ const IndustryExpertise = ({ data }) => {
             </Grid>
           </motion.div>
         </AnimatePresence>
+
+        {/* Mobile Pagination & Arrows */}
+        {isMobile && (
+          <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", mt: 4, gap: 2 }}>
+            <IconButton 
+              onClick={() => setActiveTab((prev) => (prev === 0 ? categoriesList.length - 1 : prev - 1))}
+              sx={{ border: "1px solid rgba(0,0,0,0.1)", bgcolor: "#ffffff" }}
+            >
+              <ArrowBackIcon sx={{ fontSize: 18, color: "#0a2233" }} />
+            </IconButton>
+            
+            <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
+              {categoriesList.map((_, idx) => (
+                <Box 
+                  key={idx} 
+                  onClick={() => setActiveTab(idx)}
+                  sx={{ 
+                    width: activeTab === idx ? "24px" : "8px", 
+                    height: "8px", 
+                    borderRadius: "4px", 
+                    bgcolor: activeTab === idx ? "#0087c9" : "rgba(0,135,201,0.2)",
+                    transition: "all 0.3s ease",
+                    cursor: "pointer"
+                  }} 
+                />
+              ))}
+            </Box>
+
+            <IconButton 
+              onClick={() => setActiveTab((prev) => (prev + 1) % categoriesList.length)}
+              sx={{ border: "1px solid rgba(0,0,0,0.1)", bgcolor: "#ffffff" }}
+            >
+              <ArrowForwardIcon sx={{ fontSize: 18, color: "#0a2233" }} />
+            </IconButton>
+          </Box>
+        )}
 
       </Container>
     </Box>

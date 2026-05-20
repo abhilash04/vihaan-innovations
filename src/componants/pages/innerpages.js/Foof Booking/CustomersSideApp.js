@@ -6,11 +6,16 @@ import {
   ListItem,
   ListItemText,
   Grid,
+  useMediaQuery,
+  useTheme
 } from "@mui/material";
 import bnr from "../../../../assets/bg.webp";
 import img from "../../../../assets/food-delivery-banner.webp";
 
 const CustomerSideApp = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box
       sx={{
@@ -40,10 +45,12 @@ const CustomerSideApp = () => {
         sx={{
           position: "relative",
           zIndex: 2,
-          padding: "30px",
+          padding: isMobile ? "20px" : "30px",
           display: "flex",
+          flexDirection: isMobile ? "column" : "row",
           mx: "auto",
           maxWidth: "1250px",
+          gap: isMobile ? 4 : 0
         }}
       >
         {/* Left Section */}
@@ -142,7 +149,7 @@ const CustomerSideApp = () => {
           <img
             src={img}
             alt="Mobile App UI"
-            style={{ maxWidth: "500px", borderRadius: "12px" }}
+            style={{ width: "100%", maxWidth: isMobile ? "100%" : "500px", borderRadius: "12px" }}
           />
         </Box>
       </Box>

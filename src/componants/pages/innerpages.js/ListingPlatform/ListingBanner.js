@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Button, Grid, Paper } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 import ListAltIcon from '@mui/icons-material/ListAlt';
 import SpeedIcon from '@mui/icons-material/Speed';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
@@ -28,6 +29,7 @@ const StatRow = ({ icon: Icon, text, delay }) => (
 );
 
 const ListingBanner = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box
       sx={{
@@ -69,6 +71,7 @@ const ListingBanner = () => {
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 <Button
                   variant="contained"
+                  onClick={() => setOpenPopup(true)}
                   sx={{
                     bgcolor: "#2563eb", // Royal Blue from mock
                     color: "#ffffff",
@@ -130,7 +133,7 @@ const ListingBanner = () => {
           <StatRow icon={ListAltIcon} text="Custom Built for Every Industry" delay={0.6} />
         </Box>
       </Container>
-
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

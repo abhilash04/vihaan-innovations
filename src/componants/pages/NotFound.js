@@ -29,7 +29,7 @@ const DecorativeIcon = styled(Box)(({ top, left, right, bottom, delay }) => ({
   left,
   right,
   bottom,
-  color: "#FF8C00",
+  color: "#0b70e1",
   opacity: 0.1,
   fontSize: "2rem",
   animation: `${float} 8s ease-in-out infinite`,
@@ -43,16 +43,16 @@ const NotFound = () => {
   const isDark = theme.palette.mode === "dark";
 
   return (
-    <Box sx={{ 
-      display: "flex", 
-      flexDirection: "column", 
+    <Box sx={{
+      display: "flex",
+      flexDirection: "column",
       minHeight: "100vh",
-      backgroundColor: isDark ? theme.palette.background.default : theme.palette.background.homeBackground || "#f8f3f7",
+      background: "linear-gradient(135deg, #e6f1fb 0%, #b5d4f4 100%)",
       position: "relative",
       overflow: "hidden"
     }}>
       <HeaderSec />
-      
+
       {/* Background Patterns */}
       <Box
         sx={{
@@ -71,14 +71,14 @@ const NotFound = () => {
       <DecorativeIcon top="60%" right="5%" delay="2s"><SecurityIcon sx={{ fontSize: "4rem" }} /></DecorativeIcon>
       <DecorativeIcon bottom="20%" left="15%" delay="4s"><SettingsIcon sx={{ fontSize: "2.5rem" }} /></DecorativeIcon>
 
-      <Container maxWidth="lg" sx={{ 
-        flexGrow: 1, 
-        display: "flex", 
-        alignItems: "center", 
-        py: 8, 
+      <Container maxWidth="lg" sx={{
+        flexGrow: 1,
+        display: "flex",
+        alignItems: "center",
+        py: 8,
         mt: { xs: 8, md: 12 },
         position: "relative",
-        zIndex: 1 
+        zIndex: 1
       }}>
         <Grid container spacing={6} alignItems="center" justifyContent="center">
           <Grid item xs={12} md={6} sx={{ textAlign: { xs: "center", md: "left" } }}>
@@ -92,7 +92,7 @@ const NotFound = () => {
                 sx={{
                   fontSize: { xs: "6rem", md: "10rem" },
                   fontWeight: 900,
-                  background: "linear-gradient(45deg, #FF8C00 30%, #FFB347 90%)",
+                  background: "linear-gradient(45deg, #0b70e1 30%, rgba(133, 198, 255, 1) 90%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   lineHeight: 0.9,
@@ -125,16 +125,16 @@ const NotFound = () => {
                   mx: { xs: "auto", md: 0 },
                 }}
               >
-                The page you're looking for seems to have vanished into the digital void. 
+                The page you're looking for seems to have vanished into the digital void.
                 Don't worry, even the best explorers get lost sometimes!
               </Typography>
-              
+
               <Box sx={{ display: "flex", gap: 2, justifyContent: { xs: "center", md: "flex-start" } }}>
                 <Button
                   variant="contained"
                   onClick={() => navigate("/")}
                   sx={{
-                    background: "linear-gradient(90deg, #FF8C00 0%, #e67e00 100%)",
+                    background: "linear-gradient(90deg, #187aeaff 0%, #88c0ffff 100%)",
                     color: "#fff",
                     px: 6,
                     py: 2,
@@ -142,12 +142,12 @@ const NotFound = () => {
                     fontWeight: 700,
                     borderRadius: "50px",
                     textTransform: "none",
-                    boxShadow: "0 10px 30px rgba(255, 140, 0, 0.4)",
+                    boxShadow: "0 10px 30px rgba(1, 73, 140, 0.4)",
                     position: "relative",
                     overflow: "hidden",
                     "&:hover": {
                       transform: "translateY(-3px)",
-                      boxShadow: "0 15px 40px rgba(255, 140, 0, 0.6)",
+                      boxShadow: "0 15px 40px rgba(26, 158, 234, 0.6)",
                     },
                     "&::after": {
                       content: '""',
@@ -156,7 +156,7 @@ const NotFound = () => {
                       left: "-100%",
                       width: "100%",
                       height: "100%",
-                      background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
+                      background: "linear-gradient(90deg, transparent, rgba(119, 161, 189, 0.3), transparent)",
                       transition: "all 0.6s ease",
                     },
                     "&:hover::after": {
@@ -170,7 +170,7 @@ const NotFound = () => {
               </Box>
             </motion.div>
           </Grid>
-          
+
           <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: "center", position: "relative" }}>
             <motion.div
               initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
@@ -193,7 +193,7 @@ const NotFound = () => {
                   animation: `${pulse} 4s infinite`,
                 }}
               />
-              
+
               <Box
                 component="img"
                 src={robot404}
@@ -210,7 +210,7 @@ const NotFound = () => {
           </Grid>
         </Grid>
       </Container>
-      
+
       <Footer />
     </Box>
   );

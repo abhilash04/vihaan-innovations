@@ -19,6 +19,7 @@ import {
   ExpandMore as ExpandMoreIcon,
   ExpandLess as ExpandLessIcon,
 } from "@mui/icons-material";
+import SearchIcon from "@mui/icons-material/Search";
 // import logo from "../../assets/vihaan-logo.png";
 import logo from "../../assets/SN (1).894d8a0c22e4885edea1.png";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
@@ -41,6 +42,8 @@ import {
   Bot,
   ArrowRight,
   Code2,
+  MonitorSmartphone,
+  Laptop,
 } from "lucide-react";
 
 import {
@@ -70,16 +73,541 @@ import {
   Type,
 } from "lucide-react";
 
-import {
-  MonitorSmartphone,
-  Laptop,
-  Brain,
-  BugPlay,
-  Clapperboard,
-} from "lucide-react";
+import { Brain, BugPlay, Clapperboard, Info, Briefcase, Rocket } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useTheme as useAppTheme } from "./ThemeContext";
+
+const MobileMenu = ({
+  mobileOpen,
+  handleMobileMenuToggle,
+  mobileSubMenus,
+  handleMobileSubMenuToggle,
+  menuItems,
+  hovered,
+}) => (
+  <>
+    <Box
+      sx={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+        zIndex: 9998,
+      }}
+      onClick={handleMobileMenuToggle}
+    />
+    <Box
+      sx={{
+        position: "fixed",
+        top: 0,
+        right: 0,
+        height: "100%",
+        width: "280px",
+        backgroundColor: "#0b293c",
+        zIndex: 9999,
+        padding: "20px 0",
+        paddingTop: "40px",
+        paddingBottom: "120px",
+        overflowY: "auto",
+        webkitOverflowScrolling: "touch",
+      }}
+    >
+      <IconButton
+        onClick={handleMobileMenuToggle}
+        sx={{
+          position: "absolute",
+          top: "15px",
+          right: "20px",
+          color: "white",
+          padding: 0,
+        }}
+      >
+        <CloseIcon />
+      </IconButton>
+
+      <List sx={{ padding: 0 }}>
+        {/* Ready Products Mobile Menu */}
+        <ListItem
+          sx={{
+            padding: 0,
+            borderBottom: "1px solid rgba(255,255,255,0.1)",
+            display: "block",
+          }}
+        >
+          <Button
+            onClick={() => handleMobileSubMenuToggle("ready_products")}
+            sx={{
+              width: "100%",
+              justifyContent: "space-between",
+              color: "white",
+              padding: "12px 20px",
+              textTransform: "none",
+              fontSize: "16px",
+            }}
+          >
+            Ready Products
+            {mobileSubMenus.ready_products ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+          </Button>
+          <Collapse in={mobileSubMenus.ready_products} timeout="auto" unmountOnExit>
+            <List sx={{ backgroundColor: "rgba(255,255,255,0.03)", padding: 0, width: "100%" }}>
+              {menuItems.products.map((item, index) => (
+                <ListItem
+                  key={index}
+                  component="a"
+                  href={item.href}
+                  sx={{
+                    color: "rgba(255,255,255,0.8)",
+                    fontSize: "16px",
+                    padding: "10px 20px",
+                    textDecoration: "none",
+                    width: "100%",
+                    borderBottom: "1px solid rgba(255,255,255,0.03)",
+                    display: "flex",
+                    alignItems: "center",
+                    "&:hover": {
+                      backgroundColor: "rgba(255,255,255,0.05)",
+                    },
+                  }}
+                >
+                  {item.icon && (
+                    <Box
+                      sx={{
+                        width: "32px",
+                        height: "32px",
+                        borderRadius: "8px",
+                        backgroundColor: item.color || "#673ab7",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginRight: "12px",
+                        flexShrink: 0,
+                        boxShadow: `0 4px 10px ${item.color}40`,
+                      }}
+                    >
+                      <item.icon size={18} color="white" strokeWidth={2.5} />
+                    </Box>
+                  )}
+                  <ListItemText primary={item.title || item.label} />
+                </ListItem>
+              ))}
+              {/* Coming Soon Header inside Ready Products */}
+              <ListItem
+                sx={{
+                  padding: "15px 20px 5px 20px",
+                  backgroundColor: "rgba(255,255,255,0.05)",
+                }}
+              >
+                <Typography
+                  sx={{
+                    color: "#38bdf8",
+                    fontSize: "16px",
+                    fontWeight: 700,
+                    textTransform: "uppercase",
+                    letterSpacing: "1px",
+                    mb: 1,
+                  }}
+                >
+                  Coming Soon
+                </Typography>
+              </ListItem>
+
+              {menuItems.products1.map((item, index) => (
+                <ListItem
+                  key={`coming_${index}`}
+                  component="a"
+                  href={item.href}
+                  sx={{
+                    color: "rgba(255,255,255,0.8)",
+                    fontSize: "16px",
+                    padding: "10px 20px",
+                    textDecoration: "none",
+                    width: "100%",
+                    borderBottom: "1px solid rgba(255,255,255,0.03)",
+                    display: "flex",
+                    alignItems: "center",
+                    "&:hover": {
+                      backgroundColor: "rgba(255,255,255,0.05)",
+                    },
+                  }}
+                >
+                  {item.icon && (
+                    <Box
+                      sx={{
+                        width: "32px",
+                        height: "32px",
+                        borderRadius: "8px",
+                        backgroundColor: item.color || "#673ab7",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginRight: "12px",
+                        flexShrink: 0,
+                      }}
+                    >
+                      <item.icon size={12} color="white" strokeWidth={2.5} />
+                    </Box>
+                  )}
+                  <ListItemText primary={item.title || item.label} />
+                </ListItem>
+              ))}
+            </List>
+          </Collapse>
+        </ListItem>
+
+        {/* Services Category Dropdowns */}
+        {Object.entries(menuItems.services).map(([category, items], i) => (
+          <ListItem
+            key={`service_${i}`}
+            sx={{
+              padding: 0,
+              borderBottom: "1px solid rgba(255,255,255,0.1)",
+              display: "block",
+            }}
+          >
+            <Button
+              onClick={() => handleMobileSubMenuToggle(`service_${i}`)}
+              sx={{
+                width: "100%",
+                justifyContent: "space-between",
+                color: "white",
+                padding: "12px 20px",
+                textTransform: "none",
+                fontSize: "16px",
+              }}
+            >
+              {category}
+              {mobileSubMenus[`service_${i}`] ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+            </Button>
+            <Collapse in={mobileSubMenus[`service_${i}`]} timeout="auto" unmountOnExit>
+              <List sx={{ backgroundColor: "rgba(255,255,255,0.03)", padding: 0, width: "100%" }}>
+                {items.map((item, index) => (
+                  <ListItem
+                    key={index}
+                    component="a"
+                    href={item.href}
+                    sx={{
+                      color: "rgba(255,255,255,0.7)",
+                      fontSize: "16px",
+                      padding: "10px 24px",
+                      textDecoration: "none",
+                      width: "100%",
+                      borderBottom: "1px solid rgba(255,255,255,0.02)",
+                      display: "flex",
+                      alignItems: "center",
+                      "&:hover": {
+                        color: "#fff",
+                        backgroundColor: "rgba(255,255,255,0.05)",
+                      },
+                    }}
+                  >
+                    {item.icon && (
+                      <Box
+                        sx={{
+                          width: "28px",
+                          height: "28px",
+                          borderRadius: "6px",
+                          backgroundColor: "rgba(14, 165, 233, 0.15)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          mr: 1.5,
+                          flexShrink: 0,
+                        }}
+                      >
+                        <item.icon size={16} color="#38bdf8" strokeWidth={2} />
+                      </Box>
+                    )}
+                    <ListItemText
+                      primary={item.label}
+                      primaryTypographyProps={{ fontSize: "16px" }}
+                    />
+                  </ListItem>
+                ))}
+              </List>
+            </Collapse>
+          </ListItem>
+        ))}
+
+        {/* Training Category Dropdowns */}
+        {Object.entries(menuItems.training).map(([category, items], i) => (
+          <ListItem
+            key={`training_${i}`}
+            sx={{
+              padding: 0,
+              borderBottom: "1px solid rgba(255,255,255,0.1)",
+              display: "block",
+            }}
+          >
+            <Button
+              onClick={() => handleMobileSubMenuToggle(`training_${i}`)}
+              sx={{
+                width: "100%",
+                justifyContent: "space-between",
+                color: "white",
+                padding: "12px 20px",
+                textTransform: "none",
+                fontSize: "16px",
+              }}
+            >
+              {category}
+              {mobileSubMenus[`training_${i}`] ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+            </Button>
+            <Collapse in={mobileSubMenus[`training_${i}`]} timeout="auto" unmountOnExit>
+              <List sx={{ backgroundColor: "rgba(255,255,255,0.03)", padding: 0, width: "100%" }}>
+                {items.map((item, index) => (
+                  <ListItem
+                    key={index}
+                    component="a"
+                    href={item.href}
+                    sx={{
+                      color: "rgba(255,255,255,0.7)",
+                      fontSize: "16px",
+                      padding: "10px 24px",
+                      textDecoration: "none",
+                      width: "100%",
+                      borderBottom: "1px solid rgba(255,255,255,0.02)",
+                      display: "flex",
+                      alignItems: "center",
+                      "&:hover": {
+                        color: "#fff",
+                        backgroundColor: "rgba(255,255,255,0.05)",
+                      },
+                    }}
+                  >
+                    {item.icon && (
+                      <Box
+                        sx={{
+                          width: "28px",
+                          height: "28px",
+                          borderRadius: "6px",
+                          backgroundColor: "rgba(14, 165, 233, 0.15)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          mr: 1.5,
+                          flexShrink: 0,
+                        }}
+                      >
+                        <item.icon size={16} color="#38bdf8" strokeWidth={2} />
+                      </Box>
+                    )}
+                    <ListItemText
+                      primary={item.label}
+                      primaryTypographyProps={{ fontSize: "16px" }}
+                    />
+                  </ListItem>
+                ))}
+                {/* View All Button for Category Hub */}
+                <ListItem
+                  component="a"
+                  href={
+                    category === "Digital Marketing Training"
+                      ? "/training/digital-marketing-training"
+                      : category === "Software Training"
+                        ? "/training/software-training"
+                        : "/training/animation-training"
+                  }
+                  sx={{
+                    color: "#ffffff",
+                    fontSize: "16px",
+                    padding: "12px 24px",
+                    textDecoration: "none",
+                    width: "100%",
+                    backgroundColor: "#0EA5E9",
+                    fontWeight: 700,
+                    borderBottom: "1px solid rgba(255,255,255,0.05)",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    "&:hover": { backgroundColor: "#0284c7" },
+                  }}
+                >
+                  <ListItemText
+                    primary={`View All ${category}`}
+                    primaryTypographyProps={{ fontSize: "16px", fontWeight: 700 }}
+                  />
+                  <ArrowRight size={16} />
+                </ListItem>
+              </List>
+            </Collapse>
+          </ListItem>
+        ))}
+
+        <ListItem
+          component="a"
+          href="/company-portfolio"
+          sx={{
+            color: "white",
+            textDecoration: "none",
+            borderBottom: "1px solid rgba(255,255,255,0.1)",
+            transition: "background-color 0.3s ease",
+            padding: "12px 20px",
+            "&:hover": {
+              backgroundColor: "rgba(255,255,255,0.1)",
+            },
+          }}
+        >
+          <ListItemText primary="Portfolio" />
+        </ListItem>
+
+        {/* About Mobile Menu */}
+        <ListItem
+          sx={{
+            padding: 0,
+            borderBottom: "1px solid rgba(255,255,255,0.1)",
+            display: "block",
+          }}
+        >
+          <Button
+            onClick={() => handleMobileSubMenuToggle("about")}
+            sx={{
+              width: "100%",
+              justifyContent: "space-between",
+              color: "white",
+              padding: "12px 20px",
+              textTransform: "none",
+              fontSize: "16px",
+            }}
+          >
+            About Us
+            {mobileSubMenus.about ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+          </Button>
+          <Collapse in={mobileSubMenus.about} timeout="auto" unmountOnExit>
+            <List sx={{ backgroundColor: "rgba(255,255,255,0.03)", padding: 0, width: "100%" }}>
+              {menuItems.about.map((item, index) => (
+                <ListItem
+                  key={index}
+                  component="a"
+                  href={item.href}
+                  sx={{
+                    color: "rgba(255,255,255,0.7)",
+                    fontSize: "16px",
+                    padding: "10px 24px",
+                    textDecoration: "none",
+                    width: "100%",
+                    borderBottom: "1px solid rgba(255,255,255,0.02)",
+                    display: "flex",
+                    alignItems: "center",
+                    "&:hover": {
+                      color: "#fff",
+                      backgroundColor: "rgba(255,255,255,0.05)",
+                    },
+                  }}
+                >
+                  {item.icon && (
+                    <Box
+                      sx={{
+                        width: "28px",
+                        height: "28px",
+                        borderRadius: "6px",
+                        backgroundColor: item.bgColor || "rgba(14, 165, 233, 0.15)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        mr: 1.5,
+                        flexShrink: 0,
+                      }}
+                    >
+                      <item.icon size={16} color={item.color || "#38bdf8"} strokeWidth={2} />
+                    </Box>
+                  )}
+                  <ListItemText
+                    primary={item.label}
+                    primaryTypographyProps={{ fontSize: "16px" }}
+                  />
+                </ListItem>
+              ))}
+            </List>
+          </Collapse>
+        </ListItem>
+
+        <ListItem
+          component="a"
+          href="/articles"
+          sx={{
+            color: "white",
+            textDecoration: "none",
+            borderBottom: "1px solid rgba(255,255,255,0.1)",
+            transition: "background-color 0.3s ease",
+            padding: "12px 20px",
+            "&:hover": {
+              backgroundColor: "rgba(255,255,255,0.1)",
+            },
+          }}
+        >
+          <ListItemText primary="Blog" />
+        </ListItem>
+
+        {/* Mobile Contact Button */}
+        <Box sx={{ padding: "24px 20px", display: "flex", justifyContent: "center", mb: 6 }}>
+          <Box
+            component="a"
+            href="/contact-us"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: "12px 20px",
+              background: "linear-gradient(to right, #025170, #5699c1)",
+              color: "#fff",
+              fontWeight: 600,
+              borderRadius: "30px",
+              textDecoration: "none",
+              width: "100%",
+              maxWidth: "240px",
+              boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
+            }}
+          >
+            <Typography
+              variant="body1"
+              sx={{
+                fontWeight: 700,
+                fontSize: "16px",
+                color: "white",
+              }}
+            >
+              Contact Us
+            </Typography>
+
+            {/* Icon Container (matches desktop) */}
+            <Box
+              sx={{
+                position: "relative",
+                width: "30px",
+                height: "30px",
+                overflow: "hidden",
+              }}
+            >
+              <Box
+                sx={{
+                  position: "absolute",
+                  top: "0%",
+                  left: 0,
+                  opacity: 1,
+                  transform: "rotate(30deg)",
+                  backgroundColor: "#ffffffff",
+                  width: "30px",
+                  height: "30px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: "50%",
+                }}
+              >
+                <ArrowUpwardIcon sx={{ fontSize: "18px", color: "#000" }} />
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </List>
+    </Box>
+  </>
+);
 
 const Header = () => {
+  const { setMobileMenuOpen } = useAppTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileSubMenus, setMobileSubMenus] = useState({});
@@ -102,8 +630,21 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [mobileOpen]);
+
   const handleMobileMenuToggle = () => {
-    setMobileOpen(!mobileOpen);
+    const nextState = !mobileOpen;
+    setMobileOpen(nextState);
+    setMobileMenuOpen(nextState);
   };
 
   const handleMobileSubMenuToggle = (menuName) => {
@@ -455,8 +996,8 @@ const Header = () => {
       ],
     },
     about: [
-      { label: "About Us", href: "/about-us" },
-      { label: "Career", href: "/career" },
+      { label: "About Us", href: "/about-us", icon: Users2, color: "#3b82f6", bgColor: "rgba(59, 130, 246, 0.15)" },
+      { label: "Career", href: "/career", icon: Rocket, color: "#10b981", bgColor: "rgba(16, 185, 129, 0.15)" },
     ],
   };
 
@@ -800,7 +1341,7 @@ const Header = () => {
           <Box
             component="img"
             src={img1}
-            alt="VR Technology Experience"
+            alt="vihaan innovations logo"
             sx={{
               width: "100%",
               height: "240px",
@@ -1444,7 +1985,9 @@ const Header = () => {
             key={index}
             href={item.href}
             style={{
-              display: "block",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
               padding: "6px 16px",
               color: "#050748",
               textDecoration: "none",
@@ -1454,6 +1997,7 @@ const Header = () => {
               transition: "all 0.2s ease",
             }}
           >
+            {item.icon && <item.icon size={16} strokeWidth={1.8} color={item.color || "#0081c3"} />}
             {item.label}
           </a>
         ))}
@@ -1461,436 +2005,6 @@ const Header = () => {
     </Box>
   );
 
-  // Mobile Menu Components
-  const MobileMenu = () => (
-    <>
-      <Box
-        sx={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          backgroundColor: "rgba(0, 0, 0, 0.5)",
-          zIndex: 9998,
-        }}
-        onClick={handleMobileMenuToggle}
-      />
-      <Box
-        sx={{
-          position: "fixed",
-          top: 0,
-          right: 0,
-          height: "100%",
-          width: "280px",
-          backgroundColor: "#0b293c",
-          zIndex: 9999,
-          padding: "20px 0",
-          paddingTop: "80px",
-        }}
-      >
-        <IconButton
-          onClick={handleMobileMenuToggle}
-          sx={{
-            position: "absolute",
-            top: "16px",
-            right: "16px",
-            color: "white",
-          }}
-        >
-          <CloseIcon />
-        </IconButton>
-
-        <List sx={{ padding: 0 }}>
-          {/* Ready Products Mobile Menu */}
-          <ListItem
-            sx={{
-              padding: 0,
-              borderBottom: "1px solid rgba(255,255,255,0.1)",
-              display: "block",
-            }}
-          >
-            <Button
-              onClick={() => handleMobileSubMenuToggle("ready_products")}
-              sx={{
-                width: "100%",
-                justifyContent: "space-between",
-                color: "white",
-                padding: "12px 20px",
-                textTransform: "none",
-                fontSize: "16px",
-              }}
-            >
-              Ready Products
-              {mobileSubMenus.ready_products ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-            </Button>
-            <Collapse in={mobileSubMenus.ready_products} timeout="auto" unmountOnExit>
-              <List sx={{ backgroundColor: "rgba(255,255,255,0.03)", padding: 0, width: "100%" }}>
-                {menuItems.products.map((item, index) => (
-                  <ListItem
-                    key={index}
-                    component="a"
-                    href={item.href}
-                    sx={{
-                      color: "rgba(255,255,255,0.8)",
-                      fontSize: "16px",
-                      padding: "10px 20px",
-                      textDecoration: "none",
-                      width: "100%",
-                      borderBottom: "1px solid rgba(255,255,255,0.03)",
-                    }}
-                  >
-                    <ListItemText primary={item.title || item.label} />
-                  </ListItem>
-                ))}
-              </List>
-            </Collapse>
-          </ListItem>
-
-          {/* Coming Soon Mobile Menu */}
-          <ListItem
-            sx={{
-              padding: 0,
-              borderBottom: "1px solid rgba(255,255,255,0.1)",
-              display: "block",
-            }}
-          >
-            <Button
-              onClick={() => handleMobileSubMenuToggle("coming_soon")}
-              sx={{
-                width: "100%",
-                justifyContent: "space-between",
-                color: "white",
-                padding: "12px 20px",
-                textTransform: "none",
-                fontSize: "16px",
-              }}
-            >
-              Coming Soon
-              {mobileSubMenus.coming_soon ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-            </Button>
-            <Collapse in={mobileSubMenus.coming_soon} timeout="auto" unmountOnExit>
-              <List sx={{ backgroundColor: "rgba(255,255,255,0.03)", padding: 0, width: "100%" }}>
-                {menuItems.products1.map((item, index) => (
-                  <ListItem
-                    key={index}
-                    component="a"
-                    href={item.href}
-                    sx={{
-                      color: "rgba(255,255,255,0.8)",
-                      fontSize: "16px",
-                      padding: "10px 20px",
-                      textDecoration: "none",
-                      width: "100%",
-                      borderBottom: "1px solid rgba(255,255,255,0.03)",
-                    }}
-                  >
-                    <ListItemText primary={item.title || item.label} />
-                  </ListItem>
-                ))}
-              </List>
-            </Collapse>
-          </ListItem>
-
-          {/* Services Category Dropdowns */}
-          {Object.entries(menuItems.services).map(([category, items], i) => (
-            <ListItem
-              key={`service_${i}`}
-              sx={{
-                padding: 0,
-                borderBottom: "1px solid rgba(255,255,255,0.1)",
-                display: "block",
-              }}
-            >
-              <Button
-                onClick={() => handleMobileSubMenuToggle(`service_${i}`)}
-                sx={{
-                  width: "100%",
-                  justifyContent: "space-between",
-                  color: "white",
-                  padding: "12px 20px",
-                  textTransform: "none",
-                  fontSize: "16px",
-                }}
-              >
-                {category}
-                {mobileSubMenus[`service_${i}`] ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-              </Button>
-              <Collapse in={mobileSubMenus[`service_${i}`]} timeout="auto" unmountOnExit>
-                <List sx={{ backgroundColor: "rgba(255,255,255,0.03)", padding: 0, width: "100%" }}>
-                  {items.map((item, index) => (
-                    <ListItem
-                      key={index}
-                      component="a"
-                      href={item.href}
-                      sx={{ color: "rgba(255,255,255,0.7)", fontSize: "13px", padding: "10px 24px", textDecoration: "none", width: "100%", borderBottom: "1px solid rgba(255,255,255,0.02)", "&:hover": { color: "#fff" } }}
-                    >
-                      <ListItemText primary={item.label} primaryTypographyProps={{ fontSize: "16px" }} />
-                    </ListItem>
-                  ))}
-                </List>
-              </Collapse>
-            </ListItem>
-          ))}
-
-          {/* Training Category Dropdowns */}
-          {Object.entries(menuItems.training).map(([category, items], i) => (
-            <ListItem
-              key={`training_${i}`}
-              sx={{
-                padding: 0,
-                borderBottom: "1px solid rgba(255,255,255,0.1)",
-                display: "block",
-              }}
-            >
-              <Button
-                onClick={() => handleMobileSubMenuToggle(`training_${i}`)}
-                sx={{
-                  width: "100%",
-                  justifyContent: "space-between",
-                  color: "white",
-                  padding: "12px 20px",
-                  textTransform: "none",
-                  fontSize: "16px",
-                }}
-              >
-                {category}
-                {mobileSubMenus[`training_${i}`] ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-              </Button>
-              <Collapse in={mobileSubMenus[`training_${i}`]} timeout="auto" unmountOnExit>
-                <List sx={{ backgroundColor: "rgba(255,255,255,0.03)", padding: 0, width: "100%" }}>
-                  {items.map((item, index) => (
-                    <ListItem
-                      key={index}
-                      component="a"
-                      href={item.href}
-                      sx={{ color: "rgba(255,255,255,0.7)", fontSize: "13px", padding: "10px 24px", textDecoration: "none", width: "100%", borderBottom: "1px solid rgba(255,255,255,0.02)", "&:hover": { color: "#fff" } }}
-                    >
-                      <ListItemText primary={item.label} primaryTypographyProps={{ fontSize: "16px" }} />
-                    </ListItem>
-                  ))}
-                  {/* View All Button for Category Hub */}
-                  <ListItem
-                    component="a"
-                    href={category === "Digital Marketing Training" ? "/training/digital-marketing-training" : category === "Software Training" ? "/training/software-training" : "/training/animation-training"}
-                    sx={{
-                      color: "#ffffff",
-                      fontSize: "16px",
-                      padding: "12px 24px",
-                      textDecoration: "none",
-                      width: "100%",
-                      backgroundColor: "#0EA5E9",
-                      fontWeight: 700,
-                      borderBottom: "1px solid rgba(255,255,255,0.05)",
-                      "&:hover": { backgroundColor: "#0284c7" }
-                    }}
-                  >
-                    <ListItemText primary={`View All ${category}`} primaryTypographyProps={{ fontSize: "16px", fontWeight: 700 }} />
-                    <ArrowRight size={16} />
-                  </ListItem>
-                </List>
-              </Collapse>
-            </ListItem>
-          ))}
-
-          <ListItem
-            component="a"
-            href="#"
-            sx={{
-              color: "white",
-              textDecoration: "none",
-              borderBottom: "1px solid rgba(255,255,255,0.1)",
-              transition: "background-color 0.3s ease",
-              padding: "12px 20px",
-              "&:hover": {
-                backgroundColor: "rgba(255,255,255,0.1)",
-              },
-            }}
-          >
-            <ListItemText primary="Portfolio" />
-          </ListItem>
-
-          {/* About Mobile Menu */}
-          <ListItem
-            sx={{
-              padding: 0,
-              borderBottom: "1px solid rgba(255,255,255,0.1)",
-            }}
-          >
-            <Button
-              onClick={() => handleMobileSubMenuToggle("about")}
-              sx={{
-                width: "100%",
-                justifyContent: "space-between",
-                color: "white",
-                padding: "12px 20px",
-                textTransform: "none",
-                fontSize: "16px",
-              }}
-            >
-              About
-              {mobileSubMenus.about ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-            </Button>
-            <Collapse in={mobileSubMenus.about} timeout="auto" unmountOnExit>
-              <List
-                sx={{
-                  backgroundColor: "rgba(255,255,255,0.05)",
-                  borderLeft: "2px solid #2196F3",
-                  marginLeft: "16px",
-                  padding: 0,
-                }}
-              >
-                {menuItems.about.map((item, index) => (
-                  <ListItem
-                    key={index}
-                    component="a"
-                    href={item.href}
-                    sx={{
-                      color: "rgba(255,255,255,0.8)",
-                      fontSize: "16px",
-                      padding: "8px 16px",
-                    }}
-                  >
-                    <ListItemText primary={item.label} />
-                  </ListItem>
-                ))}
-              </List>
-            </Collapse>
-          </ListItem>
-
-          <ListItem
-            component="a"
-            href="#"
-            sx={{
-              color: "white",
-              textDecoration: "none",
-              borderBottom: "1px solid rgba(255,255,255,0.1)",
-              transition: "background-color 0.3s ease",
-              padding: "12px 20px",
-              "&:hover": {
-                backgroundColor: "rgba(255,255,255,0.1)",
-              },
-            }}
-          >
-            <ListItemText primary="Blog" />
-          </ListItem>
-
-          {/* Mobile Dark Mode Switch */}
-          <ListItem
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "12px",
-              color: "white",
-              borderBottom: "1px solid rgba(255,255,255,0.1)",
-              padding: "12px 20px",
-            }}
-          >
-            <CustomSwitch
-              checked={darkMode}
-              onChange={(e) => setDarkMode(e.target.checked)}
-            />
-            <Typography>Dark Mode</Typography>
-          </ListItem>
-
-          {/* Mobile Contact Button */}
-          <ListItem sx={{ padding: "16px", justifyContent: "center" }}>
-            <Box
-              component="a"
-              href="/contact-us"
-              aria-label="Contact us"
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => setHovered(false)}
-              sx={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                padding: "10px 16px",
-                background: "linear-gradient(to right, #025170, #5699c1)",
-                color: "#fff",
-                fontWeight: 500,
-                borderRadius: "25px",
-                textDecoration: "none",
-                overflow: "hidden",
-                transition: "all 0.3s ease",
-                cursor: "pointer",
-                // "&:hover": {
-                //   backgroundColor: "#005efc",
-                //   color: "white",
-                // },
-              }}
-            >
-              <Typography
-                variant="body1"
-                sx={{
-                  fontWeight: 600,
-                  zIndex: 1,
-                  // textTransform: hovered ? "none" : "uppercase",
-                  transition: "text-transform 0.3s ease",
-                }}
-              >
-                {hovered ? "contact Us" : "Contact Us"}
-              </Typography>
-
-              {/* Icon Container */}
-              <Box
-                sx={{
-                  position: "relative",
-                  width: "30px",
-                  height: "30px",
-                  marginLeft: "10px",
-                  overflow: "hidden",
-                }}
-              >
-                {/* First Arrow (default state) */}
-                <Box
-                  sx={{
-                    position: "absolute",
-                    top: hovered ? "-100%" : "0%",
-                    left: 0,
-                    opacity: hovered ? 0 : 1,
-                    transform: "rotate(30deg)",
-                    transition: "all 0.3s ease",
-                    backgroundColor: "#00f0bd",
-                    width: "30px",
-                    height: "30px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    borderRadius: "50%",
-                  }}
-                >
-                  <ArrowUpwardIcon sx={{ fontSize: "18px", color: "#000" }} />
-                </Box>
-
-                {/* Second Arrow (on hover) */}
-                <Box
-                  sx={{
-                    position: "absolute",
-                    top: hovered ? "0%" : "100%",
-                    left: 0,
-                    opacity: hovered ? 1 : 0,
-                    transform: "rotate(30deg)",
-                    transition: "all 0.3s ease",
-                    backgroundColor: "#93e5d4ff",
-                    width: "30px",
-                    height: "30px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    borderRadius: "50%",
-                  }}
-                >
-                  <ArrowUpwardIcon sx={{ fontSize: "18px", color: "black" }} />
-                </Box>
-              </Box>
-            </Box>
-          </ListItem>
-        </List>
-      </Box>
-    </>
-  );
 
   return (
     <Box>
@@ -1941,11 +2055,13 @@ const Header = () => {
                 <Box
                   component="img"
                   src={logo}
-                  alt="Website Logo"
+                  alt="vihaan innovation logo"
+                  fetchPriority="high"
                   sx={{
-                    width: "100%",
-                    maxWidth: { xs: "120px", md: scrolled ? "160px" : "200px" },
-                    height: "auto",
+                    mt: 1,
+                    width: "auto",
+                    height: { xs: "52px", md: "auto" },
+                    maxWidth: { xs: "none", md: scrolled ? "160px" : "200px" },
                     transition: "all 0.3s ease",
                   }}
                 />
@@ -2058,30 +2174,14 @@ const Header = () => {
                     </Button>
                   </Box>
 
-                  {/* About Dropdown */}
-                  <Box
-                    sx={{ position: "relative" }}
-                    onMouseEnter={() => setActiveDropdown("about")}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
+                  {/* About Link */}
+                  <Box sx={{ position: "relative" }}>
                     <Button
-                      sx={{
-                        ...navButtonStyle("about"),
-                        "& .MuiButton-endIcon": {
-                          marginLeft: "1px",
-                        },
-                      }}
-                      endIcon={
-                        activeDropdown === "about" ? (
-                          <ExpandLessIcon />
-                        ) : (
-                          <ExpandMoreIcon />
-                        )
-                      }
+                      sx={navButtonStyle("about")}
+                      onClick={() => navigate("/about-us")}
                     >
                       About Us
                     </Button>
-                    {activeDropdown === "about" && <AboutDropdown />}
                   </Box>
 
                   {/* Blog */}
@@ -2214,7 +2314,7 @@ const Header = () => {
                     color: "#0a2233",
                     display: { xs: "block", lg: "none" },
                     fontSize: "28px",
-                    mr: { xs: 1, lg: 0 },
+                    mr: { xs: 2.5, lg: 0 },
                   }}
                 >
                   <MenuIcon />
@@ -2226,7 +2326,16 @@ const Header = () => {
       </Box>
 
       {/* Mobile Menu */}
-      {mobileOpen && <MobileMenu />}
+      {mobileOpen && (
+        <MobileMenu
+          mobileOpen={mobileOpen}
+          handleMobileMenuToggle={handleMobileMenuToggle}
+          mobileSubMenus={mobileSubMenus}
+          handleMobileSubMenuToggle={handleMobileSubMenuToggle}
+          menuItems={menuItems}
+          hovered={hovered}
+        />
+      )}
     </Box>
   );
 };

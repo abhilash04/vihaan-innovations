@@ -262,7 +262,7 @@ const WhoCanApply = ({ data = {} }) => {
               display: "flex",
               flexWrap: "wrap",
               alignItems: "center",
-              justifyContent: "space-between",
+              justifyContent: { xs: "center", md: "space-between" },
               gap: 3,
             }}
           >
@@ -272,7 +272,7 @@ const WhoCanApply = ({ data = {} }) => {
               { num: 500, label: "Projects built", suffix: "+" },
               { num: 100, label: "Placement assistance", suffix: "%" },
             ]).map((stat, i) => (
-              <Box key={i} sx={{ textAlign: "center", flex: "1 1 120px" }}>
+              <Box key={i} sx={{ textAlign: "center", flex: { xs: "0 0 calc(50% - 12px)", md: "1 1 120px" } }}>
                 <Typography
                   sx={{
                     fontFamily: "'Syne', sans-serif",

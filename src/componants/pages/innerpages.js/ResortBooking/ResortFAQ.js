@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, Typography, Container, Button } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus, ArrowRight } from "lucide-react";
+import PopUps from "../../../common/PopUps";
 
 const faqs = [
   { q: "What is resort website design?", a: "It is a website made for resorts to show rooms, services, and allow online bookings." },
@@ -18,6 +19,7 @@ const faqs = [
 
 const ResortFAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const [openPopup, setOpenPopup] = useState(false);
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -174,6 +176,7 @@ const ResortFAQ = () => {
             </Typography>
             <Button
               variant="contained"
+              onClick={() => setOpenPopup(true)}
               endIcon={<ArrowRight size={18} />}
               sx={{
                 mt: 4,
@@ -194,6 +197,7 @@ const ResortFAQ = () => {
           </Box>
         </motion.div>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

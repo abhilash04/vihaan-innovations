@@ -1,4 +1,6 @@
 import { customWebDevLocationContent } from "./locationCustomContentDB";
+import { customDigitalMarketingLocationContent } from "./locationDigitalMarketingContentDB";
+
 // Detailed location groupings
 export const bangaloreLocalities = [
   "Marathahalli", "Koramangala", "Indiranagar", "Electronic City", "Whitefield",
@@ -12,7 +14,7 @@ export const majorIndianCities = [
   "Kolkata", "Lucknow", "Jaipur", "Indore", "Kochi", "Coimbatore", "Nagpur",
   "Ludhiana", "Agra", "Surat", "Madurai", "Vadodara", "Meerut",
   "Thiruvananthapuram", "Nashik", "Gurgaon", "Noida", "Chandigarh",
-  "Visakhapatnam", "Bhopal", "Patna", "Ghazaibad"
+  "Visakhapatnam", "Bhopal", "Patna", "Ghaziabad"
 ];
 
 export const globalCities = [
@@ -151,11 +153,11 @@ export const getContentForLocation = (location, serviceType, mode = "service", d
           `We are proud to partner with businesses in ${cleanLocation}, delivering high-performance solutions right at your doorstep.`
         ],
         values: [
-           `We focus on key performance indicators (KPIs) that matter to your ${cleanLocation} business—whether it's increased footfall, higher quality leads, or direct online sales.`,
-           `Our strategies for ${cleanLocation} are built on a foundation of deep data analysis and localized Bangalore market insights.`,
-           `By combining technical prowess with a deep understanding of the Bangalore ecosystem, we deliver results that last.`,
-           `In the bustling market of ${cleanLocation}, a generic approach simply won't suffice; we provide bespoke strategies designed specifically for your target demographic.`,
-           `Our local expertise in ${cleanLocation} coupled with our global standards makes us the ideal partner for your long-term digital growth.`
+          `We focus on key performance indicators (KPIs) that matter to your ${cleanLocation} business—whether it's increased footfall, higher quality leads, or direct online sales.`,
+          `Our strategies for ${cleanLocation} are built on a foundation of deep data analysis and localized Bangalore market insights.`,
+          `By combining technical prowess with a deep understanding of the Bangalore ecosystem, we deliver results that last.`,
+          `In the bustling market of ${cleanLocation}, a generic approach simply won't suffice; we provide bespoke strategies designed specifically for your target demographic.`,
+          `Our local expertise in ${cleanLocation} coupled with our global standards makes us the ideal partner for your long-term digital growth.`
         ]
       },
       training: {
@@ -167,11 +169,11 @@ export const getContentForLocation = (location, serviceType, mode = "service", d
           `Learn directly from industry experts in ${cleanLocation} to build a successful career in Bangalore's tech industry.`
         ],
         values: [
-           `We focus on industry-relevant skills that matter in the Bangalore job market—ensuring you're project-ready from day one.`,
-           `Our training programs in ${cleanLocation} are built on real-world case studies and live projects, giving you the edge in interviews.`,
-           `By combining technical theory with deep practical experience in the Bangalore IT ecosystem, we build career-ready professionals.`,
-           `In the competitive job market of ${cleanLocation}, generic learning isn't enough; we provide bespoke mentorship designed for your career goals.`,
-           `Our local placement network in ${cleanLocation} coupled with global standards makes us the ideal career partner.`
+          `We focus on industry-relevant skills that matter in the Bangalore job market—ensuring you're project-ready from day one.`,
+          `Our training programs in ${cleanLocation} are built on real-world case studies and live projects, giving you the edge in interviews.`,
+          `By combining technical theory with deep practical experience in the Bangalore IT ecosystem, we build career-ready professionals.`,
+          `In the competitive job market of ${cleanLocation}, generic learning isn't enough; we provide bespoke mentorship designed for your career goals.`,
+          `Our local placement network in ${cleanLocation} coupled with global standards makes us the ideal career partner.`
         ]
       }
     },
@@ -185,11 +187,11 @@ export const getContentForLocation = (location, serviceType, mode = "service", d
           `Transforming the tech landscape across India, we deliver bespoke, innovative digital experiences exclusively for ${cleanLocation}.`
         ],
         values: [
-           `We focus on key metrics that fuel your success in the dynamic ${cleanLocation} market, optimizing heavily for high ROI.`,
-           `Our top-tier strategies for ${cleanLocation} rely on deep industry research and extensive Indian market insights.`,
-           `Seamlessly combining technical prowess with a nuanced understanding of ${cleanLocation}'s economy, we ensure sustainable operations.`,
-           `A generic approach won't work in ${cleanLocation}; we map out personalized strategies addressing India's rapidly evolving consumer base.`,
-           `Scale steadily with our experienced team acting as your reliable technology and growth partner in ${cleanLocation}.`
+          `We focus on key metrics that fuel your success in the dynamic ${cleanLocation} market, optimizing heavily for high ROI.`,
+          `Our top-tier strategies for ${cleanLocation} rely on deep industry research and extensive Indian market insights.`,
+          `Seamlessly combining technical prowess with a nuanced understanding of ${cleanLocation}'s economy, we ensure sustainable operations.`,
+          `A generic approach won't work in ${cleanLocation}; we map out personalized strategies addressing India's rapidly evolving consumer base.`,
+          `Scale steadily with our experienced team acting as your reliable technology and growth partner in ${cleanLocation}.`
         ]
       },
       training: {
@@ -201,11 +203,11 @@ export const getContentForLocation = (location, serviceType, mode = "service", d
           `Our specialized educational programs in ${cleanLocation} are carefully designed to make you instantly industry-ready for India's top tech firms.`
         ],
         values: [
-           `Acquire critical skill sets specifically aligned with what top recruiters and startups in the ${cleanLocation} job market demand.`,
-           `Tackle complex national challenges through hands-on case studies built into our ${cleanLocation} curriculum.`,
-           `Achieve mastery by combining proven fundamental theory with high-paced intensive learning directly in ${cleanLocation}.`,
-           `Unlock personalized mentorship tracks in ${cleanLocation} that prepare you gracefully for high-stakes interviews.`,
-           `A robust pan-India placement network effectively positions our ${cleanLocation} graduates directly into renowned tech firms.`
+          `Acquire critical skill sets specifically aligned with what top recruiters and startups in the ${cleanLocation} job market demand.`,
+          `Tackle complex national challenges through hands-on case studies built into our ${cleanLocation} curriculum.`,
+          `Achieve mastery by combining proven fundamental theory with high-paced intensive learning directly in ${cleanLocation}.`,
+          `Unlock personalized mentorship tracks in ${cleanLocation} that prepare you gracefully for high-stakes interviews.`,
+          `A robust pan-India placement network effectively positions our ${cleanLocation} graduates directly into renowned tech firms.`
         ]
       }
     },
@@ -292,7 +294,7 @@ export const getContentForLocation = (location, serviceType, mode = "service", d
     const customMatch = customWebDevLocationContent[cleanLocation.toLowerCase()];
     if (customMatch) {
       // Merge custom content with existing structures
-      
+
       // Merge services with icons
       const customServicesCards = customMatch.services.cards.map((c, i) => {
         const baseService = webDevServices[i] || webDevServices[0];
@@ -326,14 +328,78 @@ export const getContentForLocation = (location, serviceType, mode = "service", d
         about: {
           title: customMatch.about.title,
           content: customMatch.about.description,
-          features: customMatch.about.features
+          features: customMatch.about.features,
+          bullets: customMatch.about.bullets
         },
         seoContent: {
           heading: customMatch.seoContent.title,
           paragraphs: customMatch.seoContent.paragraphs,
-          highlight: customMatch.seoContent.highlight
+          highlight: customMatch.seoContent.highlight,
+          sidebar: customMatch.seoContent.sidebar
         },
         process: customProcess,
+        customTestimonials: customMatch.testimonials
+      };
+    }
+  } else if (isDigitalMarketing) {
+    const customMatch = customDigitalMarketingLocationContent[cleanLocation.toLowerCase()];
+    if (customMatch) {
+      // Merge custom content with existing structures
+
+      // Merge services with icons
+      const customServicesCards = customMatch.services.cards.map((c, i) => {
+        const baseService = digitalMarketingServices[i] || digitalMarketingServices[0];
+        return {
+          title: c.title,
+          desc: c.desc,
+          tags: baseService.tags,
+          icon: baseService.icon
+        };
+      });
+
+      // Process
+      const customProcess = customMatch.process.steps.map((s, i) => {
+        return {
+          title: s.title,
+          desc: s.desc
+        };
+      });
+
+      return {
+        ...baseContent,
+        hero: {
+          title: customMatch.hero.title,
+          badge: customMatch.hero.badge,
+          subtext: customMatch.hero.subtext,
+          stats: customMatch.hero.stats
+        },
+        services: customServicesCards,
+        customServicesHeaders: {
+          title: customMatch.services.title,
+          description: customMatch.services.description,
+          badge: customMatch.services.badge
+        },
+        impact: customMatch.impact,
+        about: {
+          title: customMatch.about.title,
+          content: customMatch.about.description,
+          features: customMatch.about.features,
+          bullets: customMatch.about.bullets,
+          badge: customMatch.about.badge,
+          checklist: customMatch.about.checklist
+        },
+        seoContent: {
+          heading: customMatch.seoContent.title,
+          paragraphs: customMatch.seoContent.paragraphs,
+          highlight: customMatch.seoContent.highlight,
+          sidebar: customMatch.seoContent.sidebar
+        },
+        process: {
+          ...customMatch.process,
+          steps: customProcess
+        },
+        techStack: customMatch.techStack,
+        industries: customMatch.industries,
         customTestimonials: customMatch.testimonials
       };
     }

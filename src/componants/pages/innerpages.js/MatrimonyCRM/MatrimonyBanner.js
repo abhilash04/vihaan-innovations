@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Button, Grid } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 import img from '../../../../assets/trusted-matrimony-app.png';
 
 const MatrimonyBanner = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box
       sx={{
@@ -75,13 +77,14 @@ const MatrimonyBanner = () => {
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 <Button
                   variant="contained"
+                  onClick={() => setOpenPopup(true)}
                   sx={{
                     background: "linear-gradient(90deg, #00B4D8 0%, #0096b4 100%)",
                     color: "#ffffff",
                     fontWeight: 700,
                     fontSize: "14px",
                     px: 4,
-                    py: 1.5,
+                    py: 2,
                     borderRadius: "30px",
                     textTransform: "none",
                     boxShadow: "0 8px 20px rgba(0, 180, 216, 0.3)",
@@ -96,7 +99,7 @@ const MatrimonyBanner = () => {
                   Start Your Matrimony App
                 </Button>
 
-                <Button
+                {/* <Button
                   variant="outlined"
                   sx={{
                     borderColor: "rgba(0, 180, 216, 0.5)",
@@ -115,7 +118,7 @@ const MatrimonyBanner = () => {
                   }}
                 >
                   View Features
-                </Button>
+                </Button> */}
               </Box>
             </motion.div>
           </Grid>
@@ -131,6 +134,7 @@ const MatrimonyBanner = () => {
 
         </Grid>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

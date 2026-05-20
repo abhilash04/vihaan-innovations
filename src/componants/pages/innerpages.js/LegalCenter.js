@@ -47,15 +47,23 @@ const TermsContent = () => (
     </Typography>
 
     <HighlightBox title="Agreement to Terms">
-      By accessing or using the services provided by Vihan Innovations Pvt. Ltd., you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you may not access our services or technology platforms.
+      By accessing or using the services provided by Vihan Innovations, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you may not access our services or technology platforms.
     </HighlightBox>
 
     <SectionHeading>Service Provision & Eligibility</SectionHeading>
     <Paragraph>
-      Vihan Innovations Pvt. Ltd. ("the Company") provides IT consulting, custom software development, digital marketing, and enterprise solutions. Our services are intended for business entities and individuals legally capable of entering into binding contracts.
+      Vihan Innovations provides IT consulting, custom software development, digital marketing, and enterprise solutions. Our services are intended for business entities and individuals legally capable of entering into binding contracts.
     </Paragraph>
     <Paragraph>
       We reserve the right to refuse service, terminate accounts, or cancel projects at our sole discretion if we believe that user conduct violates applicable laws or is harmful to our interests.
+    </Paragraph>
+
+    <SectionHeading>User Registration & Account Responsibility</SectionHeading>
+    <Paragraph>
+      Access to certain specialized services or client portals may require user registration. You are responsible for maintaining the confidentiality of your login credentials and for all activities that occur under your account.
+    </Paragraph>
+    <Paragraph>
+      Registration is currently ongoing for all users; however, Vihaan Innovations reserves the right to restrict registration, verify user identities, or terminate profiles at our sole discretion to maintain the platform's security and enterprise integrity.
     </Paragraph>
 
     <SectionHeading>Intellectual Property Rights</SectionHeading>
@@ -73,7 +81,7 @@ const TermsContent = () => (
 
     <SectionHeading>Limitation of Liability</SectionHeading>
     <Paragraph>
-      In no event shall Vihan Innovations Pvt. Ltd., nor its directors, employees, partners, or agents, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, or goodwill, arising out of your access to or use of our services.
+      In no event shall Vihan Innovations, nor its directors, employees, partners, or agents, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, or goodwill, arising out of your access to or use of our services.
     </Paragraph>
   </Box>
 );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { PlayArrow, Menu } from "@mui/icons-material";
 import {
   Button,
@@ -9,11 +9,13 @@ import {
   Box,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import PopUps from "../../../common/PopUps";
 import img1 from "../../../../assets/system1.jpg";
 
 function PgBanner() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const [openPopup, setOpenPopup] = useState(false);
 
   return (
     <Box
@@ -84,6 +86,7 @@ function PgBanner() {
           <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mb: 3 }}>
             <Button
               variant="contained"
+              onClick={() => setOpenPopup(true)}
               startIcon={<PlayArrow />}
               sx={{
                 backgroundColor: "#00C853",
@@ -171,6 +174,7 @@ function PgBanner() {
           </Paper>
         </Grid>
       </Grid>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 }

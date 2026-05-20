@@ -1,14 +1,19 @@
-import React from "react";
-import { Grid, Typography, Box, Button } from "@mui/material";
+import React, { useState } from "react";
+import { Grid, Typography, Box, Button, useMediaQuery, useTheme } from "@mui/material";
 import img from "../../../../assets/Home-banner-img 1.png";
 import banner from "../../../../assets/EcommerceBannerimg.png";
-import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
+import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
+import PopUps from "../../../common/PopUps";
 
 const EcommerceBanner = () => {
+  const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box
       sx={{
-        pt: 13,
+        pt: isMobile ? 10 : 13,
         backgroundImage: `url(${banner})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
@@ -16,7 +21,7 @@ const EcommerceBanner = () => {
         minHeight: "550px",
       }}
     >
-      <Box sx={{ maxWidth: "1250px", mx: "auto" }}>
+      <Box sx={{ maxWidth: "1250px", mx: "auto", px: isMobile ? 2 : 0 }}>
         <Grid container>
           {/* Left Content */}
           <Grid
@@ -33,11 +38,12 @@ const EcommerceBanner = () => {
               <Typography
                 variant="h6"
                 sx={{
-                  fontSize: "18px",
+                  fontSize: isMobile ? "14px" : "18px",
                   lineHeight: "24px",
                   color: "#333",
                   textTransform: "uppercase",
                   mb: 2,
+                  textAlign: isMobile ? "center" : "left",
                 }}
               >
                 Simplify Your E-Commerce Operations with
@@ -47,45 +53,85 @@ const EcommerceBanner = () => {
                 variant="h3"
                 sx={{
                   fontWeight: 700,
-                  fontSize: "58px",
-                  lineHeight: "54px",
+                  fontSize: isMobile ? "34px" : "58px",
+                  lineHeight: isMobile ? "40px" : "54px",
                   fontFamily: "Fira Sans",
                   marginBottom: 3,
-                  color: '#333'
+                  color: "#333",
+                  textAlign: isMobile ? "center" : "left",
                 }}
               >
-                India’s #1 {" "}
-                <span style={{ color: "#4da6ff" }}>CRM Software </span>
-                <Typography variant="body1" sx={{ fontWeight: 700, fontSize: "58px", lineHeight: "54px", fontFamily: "Fira Sans", marginBottom: 3, color: '#333' }}>for a Single Vendor <br />ECommerce Website</Typography>
+                India's #1 <br />
+                <span style={{ color: "#4da6ff" }}>ECommerce Website</span>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    fontWeight: 700,
+                    fontSize: isMobile ? "34px" : "58px",
+                    lineHeight: isMobile ? "40px" : "54px",
+                    fontFamily: "Fira Sans",
+                    marginBottom: 3,
+                    color: "#333",
+                  }}
+                >
+                  for a Single Vendor <br />
+                </Typography>
+              </Typography>
+
+              {/* Image shown only on mobile — after the title */}
+              {isMobile && (
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    mt: 2,
+                    mb: 3,
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={img}
+                    alt="E-Commerce Banner"
+                    sx={{
+                      width: "90%",
+                      maxWidth: "400px",
+                      height: "auto",
+                      objectFit: "contain",
+                      borderRadius: "12px",
+                    }}
+                  />
+                </Box>
+              )}
+
+              <Typography
+                variant="subtitle1"
+                sx={{
+                  fontWeight: 500,
+                  fontSize: isMobile ? "15px" : "18px",
+                  lineHeight: "25px",
+                  color: "#333",
+                  width: isMobile ? "100%" : "600px",
+                  textAlign: isMobile ? "center" : "justify",
+                }}
+              >
+                Streamline your workflow with a powerful CRM built for a single vendor ecommerce
+                website. Manage inventory, warehouse, orders, and returns-all in one place.
               </Typography>
 
               <Typography
                 variant="subtitle1"
                 sx={{
                   fontWeight: 500,
-                  fontSize: "18px",
+                  fontSize: isMobile ? "15px" : "18px",
                   lineHeight: "25px",
                   color: "#333",
-                  width: "600px",
-                  textAlign: 'justify',
-                }}
-              >
-                Streamline your workflow with a powerful CRM built for a single vendor ecommerce website. Manage inventory, warehouse, orders, and returns-all in one place.
-              </Typography>
-
-              <Typography
-                variant="subtitle1"
-                sx={{
-                  fontWeight: 500,
-                  fontSize: "18px",
-                  lineHeight: "25px",
-                  color: "#333",
-                  width: "600px",
+                  width: isMobile ? "100%" : "600px",
                   mt: 2,
-                  textAlign: 'justify'
+                  textAlign: isMobile ? "center" : "justify",
                 }}
               >
-                Boost efficiency by tracking products, managing customers, and reducing manual work. Grow your single vendor ecommerce website faster with an all-in-one solution.
+                Boost efficiency by tracking products, managing customers, and reducing manual work.
+                Grow your single vendor ecommerce website faster with an all-in-one solution.
               </Typography>
 
               <Box
@@ -93,53 +139,54 @@ const EcommerceBanner = () => {
                   display: "flex",
                   flexDirection: "row",
                   gap: 2,
-                  justifyContent: "flex-start",
+                  justifyContent: isMobile ? "center" : "flex-start",
                   alignItems: "center",
                   mt: 6,
+                  mb: isMobile ? 4 : 0,
                 }}
               >
-
                 <Button
                   variant="outlined"
+                  onClick={() => setOpenPopup(true)}
                   endIcon={<DoubleArrowIcon />}
                   sx={{
                     px: 3,
                     py: 1.2,
-                    fontSize: '18px',
+                    fontSize: isMobile ? "15px" : "18px",
                     fontWeight: 600,
                     borderRadius: 2,
-                    color: '#036',
-                    borderColor: '#036',
+                    color: "#036",
+                    borderColor: "#036",
                     textTransform: "none",
-                    position: 'relative',
-                    overflow: 'hidden',
-                    transition: 'all 0.3s ease-in-out',
-                    '&:hover': {
-                      color: 'white',
-                      borderColor: '#4da6ff', // sky blue
-                      backgroundColor: '#4da6ff', // sky blue
-                      transform: 'translateY(-2px)',
-                      boxShadow: '0 10px 25px -5px rgba(54, 183, 244, 0.4)',
+                    position: "relative",
+                    overflow: "hidden",
+                    transition: "all 0.3s ease-in-out",
+                    "&:hover": {
+                      color: "white",
+                      borderColor: "#4da6ff",
+                      backgroundColor: "#4da6ff",
+                      transform: "translateY(-2px)",
+                      boxShadow: "0 10px 25px -5px rgba(54, 183, 244, 0.4)",
                     },
-                    '&:active': {
-                      transform: 'translateY(0px)',
-                      boxShadow: '0 5px 15px -3px rgba(60, 182, 239, 0.4)',
+                    "&:active": {
+                      transform: "translateY(0px)",
+                      boxShadow: "0 5px 15px -3px rgba(60, 182, 239, 0.4)",
                     },
-                    '&::after': {
+                    "&::after": {
                       content: '""',
-                      position: 'absolute',
-                      top: '50%',
-                      left: '50%',
+                      position: "absolute",
+                      top: "50%",
+                      left: "50%",
                       width: 0,
                       height: 0,
-                      borderRadius: '50%',
-                      background: 'rgba(6, 180, 254, 0.3)',
-                      transform: 'translate(-50%, -50%)',
-                      transition: 'width 0.6s, height 0.6s',
+                      borderRadius: "50%",
+                      background: "rgba(6, 180, 254, 0.3)",
+                      transform: "translate(-50%, -50%)",
+                      transition: "width 0.6s, height 0.6s",
                     },
-                    '&:hover::after': {
-                      width: '300px',
-                      height: '300px',
+                    "&:hover::after": {
+                      width: "300px",
+                      height: "300px",
                     },
                   }}
                 >
@@ -148,20 +195,34 @@ const EcommerceBanner = () => {
               </Box>
             </Box>
           </Grid>
-          {/* Right column (empty to keep background aligned) */}
-          <Grid item xs={12} md={5} sx={{ mt: 2.5 }}>
-            <Box
-              component="img"
-              src={img}
-              alt="IT Consultation"
+          {/* Right column image — shown only on desktop now */}
+          {!isMobile && (
+            <Grid
+              item
+              xs={12}
+              md={5}
               sx={{
-                width: "100%",
-                objectFit: "cover",
+                mt: 2.5,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
-            />
-          </Grid>{" "}
+            >
+              <Box
+                component="img"
+                src={img}
+                alt="E-Commerce Banner"
+                sx={{
+                  width: "100%",
+                  height: "auto",
+                  objectFit: "contain",
+                }}
+              />
+            </Grid>
+          )}
         </Grid>
       </Box>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

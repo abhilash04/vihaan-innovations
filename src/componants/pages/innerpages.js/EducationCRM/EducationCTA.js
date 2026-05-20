@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Container, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 
 
 // Reusing the starry background from Real Estate as it perfectly matches the mock's bottom section
 const EducationCTA = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box sx={{ position: "relative", bgcolor: "#0B1528", pt: 12, pb: 8, overflow: "hidden" }}>
 
@@ -46,6 +48,7 @@ const EducationCTA = () => {
             <Box sx={{ display: "flex", flexDirection: "column", gap: 3, alignItems: "center" }}>
               <Button
                 variant="extended"
+                onClick={() => setOpenPopup(true)}
                 sx={{
                   background: "linear-gradient(90deg, #00B4D8 0%, #0096b4 100%)",
                   color: "#ffffff",
@@ -75,6 +78,7 @@ const EducationCTA = () => {
           </Box>
         </motion.div>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

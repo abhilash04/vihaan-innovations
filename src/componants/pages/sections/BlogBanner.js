@@ -13,15 +13,21 @@ const BlogBanner = () => {
     <Box
       sx={{
         position: "relative",
-        height: "60vh",
+        width: "100%",
+        maxWidth: "1750px",
+        height: "800px",
+        mx: "auto",
         display: "flex",
         alignItems: "center",
         backgroundImage: `url(${bannerimg})`,
-        backgroundSize: "cover",
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
+        backgroundColor: "#0a0a1a",
         color: "#fff",
         px: { xs: 2, md: 10 },
         mt: 10,
+        overflow: "hidden",
       }}
     >
       {/* ===== Left Content ===== */}

@@ -13,12 +13,22 @@ import { styled, keyframes } from "@mui/system";
 import { motion, AnimatePresence } from "framer-motion";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import SecurityIcon from "@mui/icons-material/Security";
-import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import SettingsIcon from "@mui/icons-material/Settings";
-import CodeIcon from '@mui/icons-material/Code';
-import DnsIcon from '@mui/icons-material/Dns';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import CodeIcon from "@mui/icons-material/Code";
+import {
+  Globe,
+  Users,
+  LifeBuoy,
+  Smartphone,
+  Palette,
+  Search,
+  Award,
+  Share2,
+  Cloud,
+} from "lucide-react";
+import PopUps from "../common/PopUps";
 
 // ----------------------------------------------------------------------
 // Keyframes & Styled Components
@@ -58,41 +68,42 @@ const IconContainer = styled(Box)(({ color }) => ({
 // Data
 // ----------------------------------------------------------------------
 
+
 const scrollItems = [
   {
     number: "01",
-    line1: "Intelligent IT Solutions",
-    line2: "That Drive Your",
-    line3: "Business Forward",
-    subtitle: "We provide intelligent, reliable, and cutting-edge IT solutions so your business can grow with confidence — from web platforms to enterprise systems.",
+    line1: "Vihaan Innovations Digital",
+    line3: "Growth Experts",
+    // line3: "Business Forward",
+    subtitle: "Build modern websites, apps, and scalable business solutions designed to grow your brand faster.",
     services: [
-      { label: "Professional Services", icon: BusinessCenterIcon, color: "#34D399" },
-      { label: "Managed IT Solution", icon: SettingsIcon, color: "#EC4899" },
-      { label: "Cyber & IT Security", icon: SecurityIcon, color: "#6366F1" },
+      { label: "Web Development", icon: Globe, color: "#34D399" },
+      { label: "CRM", icon: Users, color: "#EC4899" },
+      { label: "Support", icon: LifeBuoy, color: "#6366F1" },
     ],
   },
   {
     number: "02",
-    line1: "Turning Big Ideas",
-    line2: "Into Smart Digital",
-    line3: "Solutions",
-    subtitle: "We build intuitive, scalable custom web and mobile solutions to bring your vision into the modern market efficiently.",
+    line1: "Best IT Services by",
+    line3: "Vihaan Innovations",
+    // line3: "Solutions",
+    subtitle: "We create fast, secure, and user-friendly digital products that improve business performance.",
     services: [
-      { label: "Web Development", icon: CodeIcon, color: "#34D399" },
-      { label: "CRM Solutions", icon: DnsIcon, color: "#EC4899" },
-      { label: "Managed Support", icon: SettingsIcon, color: "#6366F1" },
+      { label: "App Development", icon: Smartphone, color: "#34D399" },
+      { label: "UI/UX", icon: Palette, color: "#EC4899" },
+      { label: "SEO", icon: Search, color: "#6366F1" },
     ],
   },
   {
     number: "03",
-    line1: "Building Strong",
-    line2: "Technology For A",
-    line3: "Changing World",
-    subtitle: "Secure and stable architectures for hosting enterprise logic ensuring maximum up-time and high security overlays.",
+    line1: "Custom Website &",
+    line3: "App Solutions",
+    // line3: "Changing World",
+    subtitle: "Choose Vihaaninnovations for premium design, strong technology, and long-term growth.",
     services: [
-      { label: "Cloud Services", icon: DnsIcon, color: "#34D399" },
-      { label: "Enterprise Security", icon: SecurityIcon, color: "#EC4899" },
-      { label: "DevOps Setup", icon: SettingsIcon, color: "#6366F1" },
+      { label: "Branding", icon: Award, color: "#34D399" },
+      { label: "Marketing", icon: Share2, color: "#EC4899" },
+      { label: "DevOps", icon: Cloud, color: "#6366F1" },
     ],
   },
 ];
@@ -130,6 +141,7 @@ const Counter = ({ target, duration = 1500 }) => {
 // ----------------------------------------------------------------------
 
 const ScrollFormComponent = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   const [scrollIndex, setScrollIndex] = useState(0);
   const [pauseScroll, setPauseScroll] = useState(false);
 
@@ -201,7 +213,7 @@ const ScrollFormComponent = () => {
                     px: 2,
                     py: 1,
                     borderRadius: "50px",
-                    mb: 4,
+                    mb: 2,
                   }}
                 >
                   <Box
@@ -221,17 +233,17 @@ const ScrollFormComponent = () => {
                       letterSpacing: "0.02em",
                     }}
                   >
-                    Now Serving 150+ Businesses Across India 🚀
+                    Trusted by 150+ Businesses Across India 🚀
                   </Typography>
                 </Box>
 
                 {/* Headline */}
-                <Box sx={{ mb: 3 }}>
+                <Box sx={{ mb: 2 }}>
                   <Typography
                     variant="h1"
                     sx={{
                       fontWeight: 800,
-                      fontSize: { xs: "28px", md: "64px" },
+                      fontSize: { xs: "28px", md: "48px" },
                       lineHeight: 1.05,
                       fontFamily: "Fira Sans",
                       color: "#0d1b3e",
@@ -244,7 +256,7 @@ const ScrollFormComponent = () => {
                     variant="h1"
                     sx={{
                       fontWeight: 800,
-                      fontSize: { xs: "28px", md: "64px" },
+                      fontSize: { xs: "28px", md: "48px" },
                       lineHeight: 1.05,
                       fontFamily: "Fira Sans",
                       color: "#0d1b3e",
@@ -258,7 +270,7 @@ const ScrollFormComponent = () => {
                       variant="h1"
                       sx={{
                         fontWeight: 800,
-                        fontSize: { xs: "28px", md: "64px" },
+                        fontSize: { xs: "28px", md: "48px" },
                         lineHeight: 1.05,
                         fontFamily: "Fira Sans",
                         color: "#006cff",
@@ -291,16 +303,17 @@ const ScrollFormComponent = () => {
                     lineHeight: 1.8,
                     color: "rgb(106, 107, 126)",
                     maxWidth: "480px",
-                    mb: 4,
+                    mb: 2,
                   }}
                 >
                   {item.subtitle}
                 </Typography>
 
                 {/* CTA Buttons */}
-                <Box sx={{ display: "flex", gap: 2, mb: 5, flexWrap: "wrap" }}>
+                <Box sx={{ display: "flex", gap: 2, mb: 2, flexWrap: "wrap" }}>
                   <Button
                     variant="contained"
+                    onClick={() => setOpenPopup(true)}
                     sx={{
                       bgcolor: "#006cff",
                       color: "#fff",
@@ -321,7 +334,8 @@ const ScrollFormComponent = () => {
                         left: "-100%",
                         width: "100%",
                         height: "100%",
-                        background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
+                        background:
+                          "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
                         transition: "all 0.6s ease",
                       },
                       "&:hover": {
@@ -335,15 +349,20 @@ const ScrollFormComponent = () => {
                     }}
                   >
                     Get Free Consultation
+
                     <ArrowForwardIosIcon
                       sx={{
                         fontSize: 14,
                         ml: 1,
                         transition: "transform 0.2s",
-                        "&:hover": { transform: "translateX(4px)" },
                       }}
                     />
                   </Button>
+                  {/* ADD POPUP HERE */}
+                  <PopUps
+                    open={openPopup}
+                    handleClose={() => setOpenPopup(false)}
+                  />
 
                   <Button
                     variant="outlined"
@@ -393,7 +412,7 @@ const ScrollFormComponent = () => {
                           }}
                         >
                           <IconContainer color={service.color}>
-                            <SvgIcon sx={{ fontSize: 20 }} />
+                            <SvgIcon size={20} strokeWidth={2.5} />
                           </IconContainer>
                           <Typography
                             sx={{

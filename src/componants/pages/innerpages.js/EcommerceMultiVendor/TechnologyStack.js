@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import { styled } from "@mui/system";
 
@@ -105,6 +105,9 @@ const techData = [
 ];
 
 const TechnologyStack = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Box sx={{ 
       py: 6, 
@@ -160,7 +163,7 @@ const TechnologyStack = () => {
               
               <Grid container spacing={2}>
                 {section.items.map((item, iIdx) => (
-                  <Grid item xs={6} sm={4} md={3} key={iIdx}>
+                  <Grid item xs={isMobile ? 12 : 6} sm={4} md={3} key={iIdx}>
                     <TechCard
                       initial={{ opacity: 0, scale: 0.95 }}
                       whileInView={{ opacity: 1, scale: 1 }}

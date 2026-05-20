@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Box, Container, IconButton, Typography } from "@mui/material";
+import { Box, Container, IconButton, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, EffectCoverflow } from "swiper/modules";
 import { motion } from "framer-motion";
@@ -36,12 +36,14 @@ const pulseGlow = keyframes`
 `;
 
 const PhoneCarousel = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const swiperRef = useRef(null);
 
   return (
     <Box sx={{
       position: "relative",
-      py: 6,
+      py: 4,
       background: "linear-gradient(180deg, #ffffff 0%, #f0f8ff 100%)",
       overflow: "hidden"
     }}>
@@ -84,9 +86,10 @@ const PhoneCarousel = () => {
           display: "flex",
           justifyContent: "space-between",
           position: "absolute",
-          width: "110%",
+          width: isMobile ? "100%" : "110%",
+          px: isMobile ? 2 : 0,
           top: "50%",
-          left: "50%",
+          left: isMobile ? "50%" : "50%",
           transform: "translate(-50%, -50%)",
           zIndex: 20,
           pointerEvents: "none"
@@ -104,10 +107,13 @@ const PhoneCarousel = () => {
                 transform: "scale(1.1)"
               },
               boxShadow: "0 8px 32px rgba(0, 191, 255, 0.15)",
-              width: 55,
-              height: 55,
+              width: isMobile ? 30 : 55,
+              height: isMobile ? 30 : 55,
               transition: "all 0.3s ease",
-              pointerEvents: "auto"
+              pointerEvents: "auto",
+              "& svg": {
+                fontSize: isMobile ? "1rem" : "1.5rem"
+              }
             }}
           >
             <ArrowBackIosNewIcon />
@@ -126,10 +132,13 @@ const PhoneCarousel = () => {
                 transform: "scale(1.1)"
               },
               boxShadow: "0 8px 32px rgba(0, 191, 255, 0.15)",
-              width: 55,
-              height: 55,
+              width: isMobile ? 30 : 55,
+              height: isMobile ? 30 : 55,
               transition: "all 0.3s ease",
-              pointerEvents: "auto"
+              pointerEvents: "auto",
+              "& svg": {
+                fontSize: isMobile ? "1rem" : "1.5rem"
+              }
             }}
           >
             <ArrowForwardIosIcon />
@@ -147,7 +156,7 @@ const PhoneCarousel = () => {
           coverflowEffect={{
             rotate: 20,
             stretch: 0,
-            depth: 150,
+            depth: isMobile ? 100 : 150,
             modifier: 1,
             slideShadows: false,
           }}
@@ -189,8 +198,8 @@ const PhoneCarousel = () => {
                   <Box
                     sx={{
                       position: "relative",
-                      width: "230px",
-                      height: "477px",
+                      width: isMobile ? "180px" : "230px",
+                      height: isMobile ? "373px" : "477px",
                       mx: "auto",
                       perspective: "1000px"
                     }}
@@ -202,11 +211,11 @@ const PhoneCarousel = () => {
                       alt={`Phone ${index + 1}`}
                       sx={{
                         position: "absolute",
-                        top: "10px",
-                        left: "10px",
-                        width: "210px",
-                        height: "457px",
-                        borderRadius: "30px",
+                        top: isMobile ? "8px" : "10px",
+                        left: isMobile ? "8px" : "10px",
+                        width: isMobile ? "164px" : "210px",
+                        height: isMobile ? "357px" : "457px",
+                        borderRadius: isMobile ? "24px" : "30px",
                         objectFit: "cover",
                         zIndex: 1
                       }}
@@ -221,8 +230,8 @@ const PhoneCarousel = () => {
                         position: "absolute",
                         top: 0,
                         left: 0,
-                        width: "230px",
-                        height: "477px",
+                        width: isMobile ? "180px" : "230px",
+                        height: isMobile ? "373px" : "477px",
                         zIndex: 2,
                         filter: isActive ? "drop-shadow(0 10px 30px rgba(0, 191, 255, 0.2))" : "none",
                         transition: "all 0.5s ease"

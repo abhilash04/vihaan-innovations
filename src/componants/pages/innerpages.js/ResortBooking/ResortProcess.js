@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Container, Button } from "@mui/material";
 import { motion } from "framer-motion";
+import PopUps from "../../../common/PopUps";
 
 const steps = [
   {
@@ -36,6 +37,7 @@ const steps = [
 ];
 
 const ResortProcess = () => {
+  const [openPopup, setOpenPopup] = useState(false);
   return (
     <Box
       sx={{
@@ -219,6 +221,7 @@ const ResortProcess = () => {
           </Typography>
           <Button
             variant="contained"
+            onClick={() => setOpenPopup(true)}
             sx={{
               fontFamily: "'Outfit', sans-serif",
               background: "linear-gradient(90deg, #dd690aff, #B08D28)",
@@ -240,6 +243,7 @@ const ResortProcess = () => {
           </Button>
         </Box>
       </Container>
+      <PopUps open={openPopup} handleClose={() => setOpenPopup(false)} />
     </Box>
   );
 };

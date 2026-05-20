@@ -1,11 +1,14 @@
 import React from "react";
-import { Box, Typography, Paper, Container } from "@mui/material";
+import { Box, Typography, Paper, Container, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 
 // Dummy images - replace with actual assets if needed
 import adminImg from "../../../../assets/mutilvendor-dashboard.png";
 
 const MultiVendorAdmin = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -126,11 +129,12 @@ const MultiVendorAdmin = () => {
           <Paper
             elevation={0}
             sx={{
-              p: 2,
+              p: isMobile ? 3 : 2,
               mb: 3,
               borderRadius: "20px",
               display: "flex",
-              gap: 3,
+              flexDirection: isMobile ? "column" : "row",
+              gap: isMobile ? 2 : 3,
               transition: "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
               position: "relative",
               alignItems: "flex-start",
@@ -147,55 +151,104 @@ const MultiVendorAdmin = () => {
               },
             }}
           >
-            <Box
-              className="icon-number"
-              sx={{
-                width: "48px",
-                height: "48px",
-                borderRadius: "50%",
-                bgcolor: "#f0f7ff",
-                color: "#00bfff",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexShrink: 0,
-                fontWeight: 800,
-                transition: "all 0.3s ease",
-              }}
-            >
-              5
-            </Box>
-            <Box>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontWeight: 700,
-                  mb: 1,
-                  fontSize: "1.2rem",
-                  color: "#1d1d1f",
-                }}
-              >
-                Advanced Platform Settings
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "15px",
-                  color: "#5e6d7a",
-                  lineHeight: 1.5,
-                }}
-              >
-                The super admin gets complete control to manage settings, features, and configurations across the entire marketplace.              </Typography>
-            </Box>
+            {isMobile ? (
+              <>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 1 }}>
+                  <Box
+                    className="icon-number"
+                    sx={{
+                      width: "48px",
+                      height: "48px",
+                      borderRadius: "50%",
+                      bgcolor: "#f0f7ff",
+                      color: "#00bfff",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                      fontWeight: 800,
+                      transition: "all 0.3s ease",
+                    }}
+                  >
+                    5
+                  </Box>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: 700,
+                      fontSize: "1.1rem",
+                      color: "#1d1d1f",
+                    }}
+                  >
+                    Advanced Platform Settings
+                  </Typography>
+                </Box>
+                <Typography
+                  sx={{
+                    fontSize: "15px",
+                    color: "#5e6d7a",
+                    lineHeight: 1.5,
+                    textAlign: "left"
+                  }}
+                >
+                  The super admin gets complete control to manage settings, features, and configurations across the entire marketplace.
+                </Typography>
+              </>
+            ) : (
+              <>
+                <Box
+                  className="icon-number"
+                  sx={{
+                    width: "48px",
+                    height: "48px",
+                    borderRadius: "50%",
+                    bgcolor: "#f0f7ff",
+                    color: "#00bfff",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    fontWeight: 800,
+                    transition: "all 0.3s ease",
+                  }}
+                >
+                  5
+                </Box>
+                <Box>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: 700,
+                      mb: 1,
+                      fontSize: "1.2rem",
+                      color: "#1d1d1f",
+                    }}
+                  >
+                    Advanced Platform Settings
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontSize: "15px",
+                      color: "#5e6d7a",
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    The super admin gets complete control to manage settings, features, and configurations across the entire marketplace.
+                  </Typography>
+                </Box>
+              </>
+            )}
           </Paper>
 
           {/* Paper 2 */}
           <Paper
             elevation={0}
             sx={{
-              p: 4,
+              p: isMobile ? 3 : 2,
               borderRadius: "20px",
               display: "flex",
-              gap: 3,
+              flexDirection: isMobile ? "column" : "row",
+              gap: isMobile ? 2 : 3,
               transition: "all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
               position: "relative",
               alignItems: "flex-start",
@@ -212,46 +265,93 @@ const MultiVendorAdmin = () => {
               },
             }}
           >
-            <Box
-              className="icon-number"
-              sx={{
-                width: "48px",
-                height: "48px",
-                borderRadius: "50%",
-                bgcolor: "#f0f7ff",
-                color: "#00bfff",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexShrink: 0,
-                fontWeight: 800,
-                transition: "all 0.3s ease",
-              }}
-            >
-              6
-            </Box>
-            <Box>
-              <Typography
-                variant="h6"
-                sx={{
-                  fontWeight: 700,
-                  mb: 1,
-                  fontSize: "1.2rem",
-                  color: "#1d1d1f",
-                }}
-              >
-                Smart Vendor Management
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: "15px",
-                  color: "#5e6d7a",
-                  lineHeight: 1.5,
-                }}
-              >
-                Monitor vendor activities, track performance, and manage commissions easily through the centralized admin dashboard.
-              </Typography>
-            </Box>
+            {isMobile ? (
+              <>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 1 }}>
+                  <Box
+                    className="icon-number"
+                    sx={{
+                      width: "48px",
+                      height: "48px",
+                      borderRadius: "50%",
+                      bgcolor: "#f0f7ff",
+                      color: "#00bfff",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                      fontWeight: 800,
+                      transition: "all 0.3s ease",
+                    }}
+                  >
+                    6
+                  </Box>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: 700,
+                      fontSize: "1.1rem",
+                      color: "#1d1d1f",
+                    }}
+                  >
+                    Smart Vendor Management
+                  </Typography>
+                </Box>
+                <Typography
+                  sx={{
+                    fontSize: "15px",
+                    color: "#5e6d7a",
+                    lineHeight: 1.5,
+                    textAlign: "left"
+                  }}
+                >
+                  Monitor vendor activities, track performance, and manage commissions easily through the centralized admin dashboard.
+                </Typography>
+              </>
+            ) : (
+              <>
+                <Box
+                  className="icon-number"
+                  sx={{
+                    width: "48px",
+                    height: "48px",
+                    borderRadius: "50%",
+                    bgcolor: "#f0f7ff",
+                    color: "#00bfff",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    fontWeight: 800,
+                    transition: "all 0.3s ease",
+                  }}
+                >
+                  6
+                </Box>
+                <Box>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      fontWeight: 700,
+                      mb: 1,
+                      fontSize: "1.2rem",
+                      color: "#1d1d1f",
+                    }}
+                  >
+                    Smart Vendor Management
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontSize: "15px",
+                      color: "#5e6d7a",
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    Monitor vendor activities, track performance, and manage commissions easily through the centralized admin dashboard.
+                  </Typography>
+                </Box>
+              </>
+            )}
           </Paper>
         </Box>
       </Container>

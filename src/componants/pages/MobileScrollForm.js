@@ -9,44 +9,52 @@ import {
   IconButton,
   styled,
 } from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
-import SettingsIcon from "@mui/icons-material/Settings";
-import SecurityIcon from "@mui/icons-material/Security";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Globe,
+  Users,
+  LifeBuoy,
+  Smartphone,
+  Palette,
+  Search,
+  Award,
+  Share2,
+  Cloud,
+} from "lucide-react";
 
 const scrollItems = [
   {
     number: "01.",
-    title: "IT Solution ",
-    title2: "That Drive Your Business Forward",
-    subtitle: "We provide intelligent, reliable, and cutting-edge IT solutions so that your business can grow with confidence.",
+    title: "Vihaan Innovations Digital ",
+    title2: "Growth Experts",
+    subtitle: "Build modern websites, apps, and scalable business solutions designed to grow your brand faster.",
     services: [
-      { label: "Professional Services", icon: BusinessCenterIcon, color: "#34D399" },
-      { label: "Managed IT Solution", icon: SettingsIcon, color: "#EC4899" },
-      { label: "Cyber & IT Security", icon: SecurityIcon, color: "#6366F1" },
+      { label: "Web Development", icon: Globe, color: "#34D399" },
+      { label: "CRM", icon: Users, color: "#EC4899" },
+      { label: "Support", icon: LifeBuoy, color: "#6366F1" },
     ],
   },
   {
     number: "02.",
-    title: "Turning Big Ideas ",
-    title2: "into Smart Digital Solutions",
-    subtitle: "We provide intelligent, reliable, and cutting-edge IT solutions so that your business can grow with confidence.",
+    title: "Best IT Services by ",
+    title2: "Vihaan Innovations",
+    subtitle: "We create fast, secure, and user-friendly digital products that improve business performance.",
     services: [
-      { label: "Professional Services", icon: BusinessCenterIcon, color: "#34D399" },
-      { label: "Managed IT Solution", icon: SettingsIcon, color: "#EC4899" },
-      { label: "Cyber & IT Security", icon: SecurityIcon, color: "#6366F1" },
+      { label: "App Development", icon: Smartphone, color: "#34D399" },
+      { label: "UI/UX", icon: Palette, color: "#EC4899" },
+      { label: "SEO", icon: Search, color: "#6366F1" },
     ],
   },
   {
     number: "03.",
-    title: "Building Strong Technology ",
-    title2: "for a Changing World",
-    subtitle: "We provide intelligent, reliable, and cutting-edge IT solutions so that your business can grow with confidence.",
+    title: "Custom Web & ",
+    title2: "App Solutions",
+    subtitle: "Choose Vihaaninnovations for premium design, strong technology, and long-term growth.",
     services: [
-      { label: "Professional Services", icon: BusinessCenterIcon, color: "#34D399" },
-      { label: "Managed IT Solution", icon: SettingsIcon, color: "#EC4899" },
-      { label: "Cyber & IT Security", icon: SecurityIcon, color: "#6366F1" },
+      { label: "Branding", icon: Award, color: "#34D399" },
+      { label: "Marketing", icon: Share2, color: "#EC4899" },
+      { label: "DevOps", icon: Cloud, color: "#6366F1" },
     ],
   },
 ];
@@ -94,7 +102,7 @@ const MobileScrollForm = () => {
               <Grid item xs={12} key={i}>
                 <Paper elevation={0} sx={{ p: 1.5, borderRadius: "10px", bgcolor: "#ffffff", border: "1px solid rgba(0,0,0,0.05)", display: "flex", alignItems: "center", gap: 1.5 }}>
                   <IconContainer color={ser.color}>
-                    <Icon sx={{ color: "#fff", fontSize: 18 }} />
+                    <Icon size={18} color="#fff" strokeWidth={2.5} />
                   </IconContainer>
                   <Typography sx={{ fontWeight: 600, color: "#1e293b", fontSize: "13px" }}>{ser.label}</Typography>
                 </Paper>
@@ -112,10 +120,10 @@ const MobileScrollForm = () => {
           </Box>
           <Box sx={{ display: "flex", gap: 1 }}>
             <IconButton size="small" sx={{ border: "1px solid #006cff", color: "#006cff" }} onClick={handlePrev}>
-              <ArrowBackIcon sx={{ fontSize: 16 }} />
+              <ArrowLeft size={16} />
             </IconButton>
             <IconButton size="small" sx={{ border: "1px solid #006cff", color: "#006cff" }} onClick={handleNext}>
-              <ArrowForwardIcon sx={{ fontSize: 16 }} />
+              <ArrowRight size={16} />
             </IconButton>
           </Box>
         </Box>
@@ -125,7 +133,7 @@ const MobileScrollForm = () => {
       <Paper elevation={0} sx={{ p: 3, borderRadius: "16px", bgcolor: "#ffffff", border: "1px solid rgba(0,0,0,0.05)", boxShadow: "0 8px 32px rgba(0,0,0,0.04)" }}>
         <Typography sx={{ fontWeight: 800, color: "#0f172a", fontSize: "18px", mb: 0.5, textAlign: "center" }}>Free IT Consultation</Typography>
         <Typography sx={{ color: "#64748b", fontSize: "12px", mb: 2.5, textAlign: "center" }}>Trusted by businesses to deliver reliable IT solutions</Typography>
-        
+
         <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
           {["Name", "Email", "Phone Number", "Your Message Here"].map((label, i) => (
             <TextField key={i} label={label} variant="outlined" size="small" fullWidth multiline={i === 3} rows={i === 3 ? 2 : 1}

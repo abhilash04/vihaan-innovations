@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Box, Container, Typography, Avatar, Card } from "@mui/material";
+import React from "react";
+import { Box, Container, Typography, Avatar, Card, useMediaQuery, useTheme } from "@mui/material";
 import { styled, keyframes } from "@mui/system";
 
 // ✅ Importing images
@@ -37,7 +37,11 @@ const MarqueeRow = styled(Box)(({ direction }) => ({
 const ReviewCard = styled(Card)(({ theme }) => ({
   width: "380px",
   minWidth: "380px",
-  margin: "0 15px",
+  "@media (max-width: 600px)": {
+    width: "280px",
+    minWidth: "280px",
+  },
+  margin: "0 10px",
   padding: "24px",
   borderRadius: "24px",
   background: "#ffffff",
@@ -73,69 +77,106 @@ const reviews = [
   { id: 15, name: "Vikram Joshi", profileImg: boy5Img, role: "Company Director", review: "The team understood our requirements perfectly and built a scalable platform.", rating: 5 },
 ];
 
-const ReviewCardContent = ({ review }) => (
-  <ReviewCard elevation={0}>
-    {/* Grid-like 4-portion layout */}
-    <Box sx={{ display: "flex", flex: 1, gap: 2, mb: 1 }}>
-      {/* Portion 1: Photo */}
-      <Avatar
-        src={review.profileImg}
-        imgProps={{
-          style: {
-            objectFit: "cover",
-            width: "100%",
-            height: "100%",
-            backgroundColor: "#f8faff",
-          }
-        }}
-        sx={{
-          width: 110,
-          height: 110,
-          bgcolor: "#f8faff",
-          borderRadius: "50%",
-          border: "1.5px solid rgba(0, 191, 255, 0.2)",
-          overflow: "hidden",
-          flexShrink: 0
-        }}
-      >
-        {review.name.charAt(0)}
-      </Avatar>
-      {/* Portion 2: Review Text */}
-      <Typography
-        sx={{
-          fontSize: "13px",
-          color: "#435963",
-          lineHeight: 1.4,
-          fontStyle: "italic",
-          display: "-webkit-box",
-          WebkitLineClamp: 4,
-          WebkitBoxOrient: "vertical",
-          overflow: "hidden",
-          flex: 1
-        }}
-      >
-        "{review.review}"
-      </Typography>
-    </Box>
+const ReviewCardContent = ({ review }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
-    {/* Bottom Section */}
-    <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", pt: 1.5, borderTop: "1px solid rgba(0,0,0,0.05)" }}>
-      {/* Portion 3: Name */}
-      <Box sx={{ flex: 1 }}>
-        <Typography sx={{ fontWeight: 700, color: "#1d1d1f", fontSize: "14px", lineHeight: 1.2 }}>
-          {review.name}
-        </Typography>
-        <Typography sx={{ fontSize: "11px", color: "#86868b", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-          {review.role}
-        </Typography>
-      </Box>
-      {/* Portion 4: Rating */}
-      <Box sx={{ color: "#FFD700", fontSize: "14px", ml: 1 }}>
-        {"⭐".repeat(review.rating)}
-      </Box>
-    </Box>
-  </ReviewCard>
-);
+  return (
+    <ReviewCard elevation={0} sx={{ height: isMobile ? "auto" : "160px" }}>
+      {isMobile ? (
+        <>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 2 }}>
+            <Avatar
+              src={review.profileImg}
+              sx={{
+                width: 50,
+                height: 50,
+                border: "1.5px solid rgba(0, 191, 255, 0.2)",
+              }}
+            />
+            <Box>
+              <Typography sx={{ fontWeight: 700, color: "#1d1d1f", fontSize: "14px", lineHeight: 1.2 }}>
+                {review.name}
+              </Typography>
+              <Typography sx={{ fontSize: "11px", color: "#86868b" }}>
+                {review.role}
+              </Typography>
+            </Box>
+          </Box>
+          <Typography
+            sx={{
+              fontSize: "13px",
+              color: "#435963",
+              lineHeight: 1.4,
+              fontStyle: "italic",
+              mb: 1
+            }}
+          >
+            "{review.review}"
+          </Typography>
+          <Box sx={{ color: "#FFD700", fontSize: "14px" }}>
+            {"⭐".repeat(review.rating)}
+          </Box>
+        </>
+      ) : (
+        <>
+          <Box sx={{ display: "flex", flex: 1, gap: 2, mb: 1 }}>
+            <Avatar
+              src={review.profileImg}
+              imgProps={{
+                style: {
+                  objectFit: "cover",
+                  width: "100%",
+                  height: "100%",
+                  backgroundColor: "#f8faff",
+                }
+              }}
+              sx={{
+                width: 110,
+                height: 110,
+                bgcolor: "#f8faff",
+                borderRadius: "50%",
+                border: "1.5px solid rgba(0, 191, 255, 0.2)",
+                overflow: "hidden",
+                flexShrink: 0
+              }}
+            >
+              {review.name.charAt(0)}
+            </Avatar>
+            <Typography
+              sx={{
+                fontSize: "13px",
+                color: "#435963",
+                lineHeight: 1.4,
+                fontStyle: "italic",
+                display: "-webkit-box",
+                WebkitLineClamp: 4,
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
+                flex: 1
+              }}
+            >
+              "{review.review}"
+            </Typography>
+          </Box>
+          <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", pt: 1.5, borderTop: "1px solid rgba(0,0,0,0.05)" }}>
+            <Box sx={{ flex: 1 }}>
+              <Typography sx={{ fontWeight: 700, color: "#1d1d1f", fontSize: "14px", lineHeight: 1.2 }}>
+                {review.name}
+              </Typography>
+              <Typography sx={{ fontSize: "11px", color: "#86868b", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                {review.role}
+              </Typography>
+            </Box>
+            <Box sx={{ color: "#FFD700", fontSize: "14px", ml: 1 }}>
+              {"⭐".repeat(review.rating)}
+            </Box>
+          </Box>
+        </>
+      )}
+    </ReviewCard>
+  );
+};
 
 const ReviewsMultiVendor = () => {
   // Split reviews into two rows

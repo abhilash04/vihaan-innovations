@@ -18,7 +18,7 @@ import LayersIcon from '@mui/icons-material/Layers';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 
 export const exploreServiceData = {
-  "On-Page SEO Services": {
+  "OnPageSeo": {
     hero: {
       title: "On-Page SEO Services",
       subtitle: "On-Page SEO Services to Boost Rankings, Traffic, and Conversions",
@@ -120,7 +120,7 @@ export const exploreServiceData = {
       cta: "Contact Us ↗"
     }
   },
-  "OFF-Page SEO": {
+  "OffPageSeo": {
     hero: {
       title: "OFF-Page SEO Services",
       subtitle: "OFF-Page SEO Services to Boost Authority and Rankings",
@@ -228,7 +228,7 @@ export const exploreServiceData = {
       cta: "Contact Us ↗"
     }
   },
-  "Keyword Research Services": {
+  "KeywordResearchServices": {
     hero: {
       title: "Keyword Research Services",
       subtitle: "Keyword Research Services to Target the Right Audience and Boost Rankings",
@@ -330,7 +330,7 @@ export const exploreServiceData = {
       cta: "Contact Us ↗"
     }
   },
-  "SEO Consultant Services": {
+  "SeoConsultanting": {
     hero: {
       title: "SEO Consultant Services",
       subtitle: "SEO Consultant Services to Build a Winning Growth Strategy",
@@ -534,7 +534,7 @@ export const exploreServiceData = {
       cta: "Contact Us ↗"
     }
   },
-  "Website Design Services": {
+  "WebsiteDesignServices": {
     hero: {
       title: "Website Design Services",
       subtitle: "Website Design Services to Create Modern, High-Converting Websites",
@@ -636,7 +636,7 @@ export const exploreServiceData = {
       cta: "Contact Us ↗"
     }
   },
-  "Frontend Development Services": {
+  "FrontendDevelopmentServices": {
     hero: {
       title: "Frontend Development Services",
       subtitle: "Frontend Development Services to Build Fast, Responsive, and Engaging Interfaces",
@@ -738,7 +738,7 @@ export const exploreServiceData = {
       cta: "Contact Us ↗"
     }
   },
-  "Backend Development Services": {
+  "BackendDevelopmentServices": {
     hero: {
       title: "Backend Development Services",
       subtitle: "Backend Development Services to Build Secure, Scalable, and High-Performance Systems",
@@ -840,7 +840,7 @@ export const exploreServiceData = {
       cta: "Contact Us ↗"
     }
   },
-  "Website Speed Optimization Services": {
+  "WebsiteSpeedOptimizationServices": {
     hero: {
       title: "Website Speed Optimization Services",
       subtitle: "Website Speed Optimization Services to Improve Performance and User Experience",
@@ -1067,29 +1067,13 @@ export const getExploreDataByTitle = (title) => {
 
   const query = title.toLowerCase().replace(/[\s-]/g, "");
 
-  // 2. Try normalized substring match
-  const subKey = Object.keys(exploreServiceData).find(k => {
+  // 2. Try strict normalized match (no partial includes)
+  const matchingKey = Object.keys(exploreServiceData).find(k => {
     const normalizedKey = k.toLowerCase().replace(/[\s-]/g, "");
-    return normalizedKey.includes(query) || query.includes(normalizedKey);
-  });
-  if (subKey) return exploreServiceData[subKey];
-
-  // 3. Try fallback word-by-word match
-  const queryWords = title.toLowerCase().split(/[\s-]+/).filter(w => w.length > 2);
-  const fallbackKey = Object.keys(exploreServiceData).find(k => {
-    const keyLow = k.toLowerCase();
-    return queryWords.every(word => {
-      if (keyLow.includes(word)) return true;
-      // Handle variations like "consultant" vs "consulting" or "service" vs "services"
-      const stem = word.replace(/(ing|ant|s|es)$/, "");
-      if (stem.length > 2) {
-        return keyLow.includes(stem);
-      }
-      return false;
-    });
+    return normalizedKey === query;
   });
 
-  if (fallbackKey) return exploreServiceData[fallbackKey];
+  if (matchingKey) return exploreServiceData[matchingKey];
 
   return null;
 };
