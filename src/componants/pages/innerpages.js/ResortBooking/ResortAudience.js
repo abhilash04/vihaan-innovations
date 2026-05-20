@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography, Grid, Container } from "@mui/material";
+import { Box, Typography, Grid, Container, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import { Building, Home, Key, Star, ArrowRight } from "lucide-react";
 
@@ -33,18 +33,20 @@ const audiences = [
 
 const ResortAudience = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <Box
       sx={{
-        py: 6,
+        py: isMobile ? 4 : 8,
         bgcolor: "#0A111E", // Dark Navy
         color: "#F5F5F0",
         position: "relative",
       }}
     >
       <Container maxWidth="lg">
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: isMobile ? 4 : 8 }}>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -56,7 +58,7 @@ const ResortAudience = () => {
               sx={{
                 fontFamily: "'Playfair Display', serif",
                 fontWeight: 700,
-                fontSize: { xs: "2.5rem", md: "3rem" },
+                fontSize: isMobile ? "2.2rem" : "3rem",
                 mb: 2,
               }}
             >
@@ -65,9 +67,9 @@ const ResortAudience = () => {
           </motion.div>
         </Box>
 
-        <Grid container spacing={6} alignItems="center">
+        <Grid container spacing={isMobile ? 4 : 6} alignItems="center">
           {/* Left - Stacked Audience Cards */}
-          <Grid item xs={12} md={5}>
+          <Grid item xs={isMobile ? 12 : 5} sx={{ order: isMobile ? 2 : 1 }}>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
               {audiences.map((item, index) => (
                 <motion.div
@@ -119,7 +121,7 @@ const ResortAudience = () => {
           </Grid>
 
           {/* Right - Central Dashboard Diagram mockup */}
-          <Grid item xs={12} md={7}>
+          <Grid item xs={isMobile ? 12 : 7} sx={{ order: isMobile ? 1 : 2 }}>
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -129,7 +131,7 @@ const ResortAudience = () => {
               <Box
                 sx={{
                   position: "relative",
-                  height: "400px",
+                  height: isMobile ? "320px" : "400px",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -137,12 +139,14 @@ const ResortAudience = () => {
               >
                 {/* Connecting Lines SVG */}
                 <svg
+                  viewBox="0 0 400 320"
+                  preserveAspectRatio="xMidYMid meet"
                   style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0 }}
                 >
                   <motion.path
-                    d="M 350 200 L 200 120"
+                    d={isMobile ? "M 200 160 L 80 60" : "M 200 160 L 140 100"}
                     stroke="#D4AF37"
-                    strokeWidth="1"
+                    strokeWidth="1.5"
                     strokeDasharray="5,5"
                     fill="none"
                     initial={{ pathLength: 0 }}
@@ -150,9 +154,9 @@ const ResortAudience = () => {
                     transition={{ duration: 1 }}
                   />
                   <motion.path
-                    d="M 350 200 L 200 280"
+                    d={isMobile ? "M 200 160 L 80 260" : "M 200 160 L 140 220"}
                     stroke="#D4AF37"
-                    strokeWidth="1"
+                    strokeWidth="1.5"
                     strokeDasharray="5,5"
                     fill="none"
                     initial={{ pathLength: 0 }}
@@ -160,9 +164,9 @@ const ResortAudience = () => {
                     transition={{ duration: 1, delay: 0.3 }}
                   />
                   <motion.path
-                    d="M 350 200 L 500 200"
+                    d={isMobile ? "M 200 160 L 320 160" : "M 200 160 L 260 160"}
                     stroke="#D4AF37"
-                    strokeWidth="1"
+                    strokeWidth="1.5"
                     strokeDasharray="5,5"
                     fill="none"
                     initial={{ pathLength: 0 }}
@@ -174,8 +178,8 @@ const ResortAudience = () => {
                 {/* Central Glow Box */}
                 <Box
                   sx={{
-                    width: "160px",
-                    height: "160px",
+                    width: isMobile ? "100px" : "140px",
+                    height: isMobile ? "100px" : "140px",
                     borderRadius: "20px",
                     bgcolor: "rgba(255, 255, 255, 0.02)",
                     border: "1px solid rgba(212, 175, 55, 0.3)",
@@ -187,10 +191,10 @@ const ResortAudience = () => {
                     zIndex: 1,
                   }}
                 >
-                  <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, color: "#D4AF37" }}>
+                  <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, color: "#D4AF37", fontSize: isMobile ? "0.8rem" : "0.9rem" }}>
                     Operations
                   </Typography>
-                  <Typography sx={{ fontSize: "0.75rem", opacity: 0.6 }}>
+                  <Typography sx={{ fontSize: isMobile ? "0.65rem" : "0.7rem", opacity: 0.6 }}>
                     Control Center
                   </Typography>
                 </Box>
@@ -199,51 +203,58 @@ const ResortAudience = () => {
                 <Box
                   sx={{
                     position: "absolute",
-                    top: "100px",
-                    left: "140px",
-                    width: "120px",
-                    p: 1.5,
-                    bgcolor: "rgba(0,0,0,0.4)",
-                    border: "1px solid rgba(255,255,255,0.05)",
+                    top: isMobile ? "20px" : "90px",
+                    left: isMobile ? "10px" : "90px",
+                    width: isMobile ? "80px" : "100px",
+                    p: 1,
+                    bgcolor: "rgba(0,0,0,0.7)",
+                    backdropFilter: "blur(8px)",
+                    border: "1px solid rgba(212, 175, 55, 0.3)",
                     borderRadius: "10px",
                     textAlign: "center",
+                    boxShadow: "0 4px 15px rgba(0,0,0,0.5)",
                   }}
                 >
-                  <Typography sx={{ fontSize: "0.8rem", fontWeight: 600 }}>Booking</Typography>
+                  <Typography sx={{ fontSize: isMobile ? "0.7rem" : "0.8rem", fontWeight: 700, color: "#fff" }}>Booking</Typography>
                 </Box>
 
                 {/* Satellite 2 */}
                 <Box
                   sx={{
                     position: "absolute",
-                    bottom: "100px",
-                    left: "140px",
-                    width: "120px",
-                    p: 1.5,
-                    bgcolor: "rgba(0,0,0,0.4)",
-                    border: "1px solid rgba(255,255,255,0.05)",
+                    bottom: isMobile ? "20px" : "90px",
+                    left: isMobile ? "10px" : "90px",
+                    width: isMobile ? "80px" : "100px",
+                    p: 1,
+                    bgcolor: "rgba(0,0,0,0.7)",
+                    backdropFilter: "blur(8px)",
+                    border: "1px solid rgba(212, 175, 55, 0.3)",
                     borderRadius: "10px",
                     textAlign: "center",
+                    boxShadow: "0 4px 15px rgba(0,0,0,0.5)",
                   }}
                 >
-                  <Typography sx={{ fontSize: "0.8rem", fontWeight: 600 }}>Guests</Typography>
+                  <Typography sx={{ fontSize: isMobile ? "0.7rem" : "0.8rem", fontWeight: 700, color: "#fff" }}>Guests</Typography>
                 </Box>
 
                 {/* Satellite 3 */}
                 <Box
                   sx={{
                     position: "absolute",
-                    top: "180px",
-                    right: "100px",
-                    width: "120px",
-                    p: 1.5,
-                    bgcolor: "rgba(0,0,0,0.4)",
-                    border: "1px solid rgba(255,255,255,0.05)",
+                    top: "50%",
+                    right: isMobile ? "10px" : "90px",
+                    transform: "translateY(-50%)",
+                    width: isMobile ? "80px" : "100px",
+                    p: 1,
+                    bgcolor: "rgba(0,0,0,0.7)",
+                    backdropFilter: "blur(8px)",
+                    border: "1px solid rgba(212, 175, 55, 0.3)",
                     borderRadius: "10px",
                     textAlign: "center",
+                    boxShadow: "0 4px 15px rgba(0,0,0,0.5)",
                   }}
                 >
-                  <Typography sx={{ fontSize: "0.8rem", fontWeight: 600 }}>Analytics</Typography>
+                  <Typography sx={{ fontSize: isMobile ? "0.7rem" : "0.8rem", fontWeight: 700, color: "#fff" }}>Analytics</Typography>
                 </Box>
               </Box>
             </motion.div>

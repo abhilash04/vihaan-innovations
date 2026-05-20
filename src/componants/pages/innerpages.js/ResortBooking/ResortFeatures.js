@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Grid, Container } from "@mui/material";
+import { Box, Typography, Grid, Container, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import {
   CalendarDays,
@@ -50,10 +50,12 @@ const features = [
 ];
 
 const ResortFeatures = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box
       sx={{
-        py: 8,
+        py: isMobile ? 4 : 8,
         bgcolor: "#0A111E", // Dark Navy
         color: "#F5F5F0",
         position: "relative",
@@ -61,7 +63,7 @@ const ResortFeatures = () => {
     >
       <Container maxWidth="lg">
         {/* Section Heading */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: isMobile ? 4 : 8 }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +75,7 @@ const ResortFeatures = () => {
               sx={{
                 fontFamily: "'Playfair Display', serif",
                 fontWeight: 700,
-                fontSize: { xs: "2.5rem", md: "3rem" },
+                fontSize: isMobile ? "2.2rem" : "3rem",
                 mb: 2,
               }}
             >
@@ -108,9 +110,9 @@ const ResortFeatures = () => {
         </Box>
 
         {/* Features Grid */}
-        <Grid container spacing={3} alignItems="stretch">
+        <Grid container spacing={isMobile ? 3 : 4} alignItems="stretch">
           {features.map((feature, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: "flex" }}>
+            <Grid item xs={isMobile ? 12 : 4} key={index} sx={{ display: "flex" }}>
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}

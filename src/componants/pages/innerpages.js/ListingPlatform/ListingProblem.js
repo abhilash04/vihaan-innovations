@@ -1,19 +1,22 @@
 import React, { useState } from "react";
-import { Box, Container, Typography, Grid, Button } from "@mui/material";
+import { Box, Container, Typography, Grid, Button, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import PopUps from "../../../common/PopUps";
 import img from "../../../../assets/the-problem1.png"
 
 const ListingProblem = () => {
   const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
-    <Box sx={{ bgcolor: "#242A38", py: 10, position: "relative", overflow: "hidden" }}> {/* Dark navy/grey from mock */}
+    <Box sx={{ bgcolor: "#242A38", py: isMobile ? 6 : 10, position: "relative", overflow: "hidden" }}> {/* Dark navy/grey from mock */}
       <Container maxWidth="lg">
-        <Grid container spacing={8} alignItems="center">
+        <Grid container spacing={isMobile ? 4 : 8} alignItems="center">
 
           {/* Left Graphic Side */}
           <Grid item xs={12} md={6}>
-            <Box sx={{ position: "relative", height: "400px", width: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <Box sx={{ position: "relative", height: isMobile ? "250px" : "400px", width: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
 
               {/* Background abstract shape */}
               <motion.div
@@ -21,10 +24,10 @@ const ListingProblem = () => {
                 whileInView={{ opacity: 0.1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                style={{ position: 'absolute', width: '300px', height: '300px', borderRadius: '50%', backgroundColor: '#ef4444', filter: 'blur(60px)', zIndex: 0 }}
+                style={{ position: 'absolute', width: isMobile ? '200px' : '300px', height: isMobile ? '200px' : '300px', borderRadius: '50%', backgroundColor: '#ef4444', filter: 'blur(60px)', zIndex: 0 }}
               />
 
-              <img src={img} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: '20px' }} />
+              <img src={img} alt="" style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: '20px' }} />
 
             </Box>
           </Grid>
@@ -36,17 +39,19 @@ const ListingProblem = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+              style={{ textAlign: isMobile ? "center" : "left" }}
             >
-              <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: { xs: "28px", md: "46px" }, mb: 2 }}>
+              <Typography variant="h2" sx={{ fontWeight: 800, color: "#ffffff", fontSize: isMobile ? "1.75rem" : "2.8rem", mb: 2 }}>
                 The Hidden Problems Behind Most Top Listing Sites
               </Typography>
 
-              <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", mb: 5, lineHeight: 1.6, maxWidth: "500px" }}>
+              <Typography sx={{ color: "rgba(255,255,255,0.7)", fontSize: "16px", mb: 5, lineHeight: 1.6, maxWidth: isMobile ? "100%" : "500px", mx: isMobile ? "auto" : 0 }}>
                 Many top listing sites look good on the surface but fail where it matters—performance, scalability, and revenue generation.
               </Typography>
 
               <Box component="ul" sx={{
                 p: 0, m: 0, listStyle: "none", mb: 4,
+                textAlign: "left",
                 "& li": {
                   position: "relative",
                   paddingLeft: "30px",
@@ -81,7 +86,7 @@ const ListingProblem = () => {
                   color: "#ffffff",
                   fontWeight: 700,
                   fontSize: "15px",
-                  px: { xs: 2, md: 5 },
+                  px: isMobile ? 4 : 5,
                   py: 1.5,
                   borderRadius: "8px",
                   textTransform: "none",

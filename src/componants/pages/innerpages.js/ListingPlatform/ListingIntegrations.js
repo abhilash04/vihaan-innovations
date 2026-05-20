@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Paper, Grid } from "@mui/material";
+import { Box, Container, Typography, Paper, Grid, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 
 // Simple text logos since we can't load external images
@@ -41,8 +41,11 @@ const Bubble = ({ size, color, top, left, right, bottom, delay }) => (
 );
 
 const ListingIntegrations = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
-    <Box sx={{ bgcolor: "#f8fafc", py: 8, position: "relative", overflow: "hidden" }}>
+    <Box sx={{ bgcolor: "#f8fafc", py: isMobile ? 6 : 8, position: "relative", overflow: "hidden" }}>
 
       <Bubble size={300} color="#3b82f6" top="-80px" left="-80px" delay={0} />
       <Bubble size={250} color="#ec4899" bottom="-80px" right="-80px" delay={1} />
@@ -51,8 +54,8 @@ const ListingIntegrations = () => {
       <Container maxWidth="md" sx={{ position: "relative", zIndex: 1 }}>
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 6 }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "34px" }, mb: 1.5 }}>
+        <Box sx={{ textAlign: "center", mb: isMobile ? 4 : 6 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: isMobile ? "1.75rem" : "2.1rem", mb: 1.5 }}>
             Seamless Integrations
           </Typography>
           <Typography sx={{ color: "#666", fontSize: "15px" }}>
@@ -64,7 +67,7 @@ const ListingIntegrations = () => {
         <Paper 
           elevation={0} 
           sx={{ 
-            p: { xs: 4, md: 6 }, 
+            p: isMobile ? 3 : 6, 
             borderRadius: "24px", 
             bgcolor: "#ffffff", 
             border: "1px solid rgba(0,0,0,0.04)", 
@@ -72,9 +75,9 @@ const ListingIntegrations = () => {
           }}
         >
           {/* Replacing Flex with Grid for rigid symmetry */}
-          <Grid container spacing={3} justifyContent="center" alignItems="center">
+          <Grid container spacing={isMobile ? 2 : 3} justifyContent="center" alignItems="center">
             {integrationLogos.map((logo, index) => (
-              <Grid item xs={6} sm={4} md={3} key={index}>
+              <Grid item xs={isMobile ? 4 : 6} sm={4} md={3} key={index}>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.85, y: 15 }}
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -84,8 +87,8 @@ const ListingIntegrations = () => {
                 >
                   <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 1.5 }}>
                     <Box sx={{
-                      width: 65, 
-                      height: 65, 
+                      width: isMobile ? 55 : 65, 
+                      height: isMobile ? 55 : 65, 
                       borderRadius: "18px", // smooth curved square
                       bgcolor: logo.bg,
                       display: "flex", 
@@ -99,7 +102,7 @@ const ListingIntegrations = () => {
                         boxShadow: "0 10px 25px rgba(0,0,0,0.12)"
                       }
                     }}>
-                      <Typography sx={{ color: logo.color, fontWeight: 900, fontSize: "24px", letterSpacing: -1 }}>
+                      <Typography sx={{ color: logo.color, fontWeight: 900, fontSize: isMobile ? "20px" : "24px", letterSpacing: -1 }}>
                         {logo.initial}
                       </Typography>
                     </Box>

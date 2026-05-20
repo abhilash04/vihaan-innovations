@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Container, Typography, Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
+import { Box, Container, Typography, Accordion, AccordionSummary, AccordionDetails, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
@@ -13,18 +13,20 @@ const faqs = [
 
 const ListingFAQ = () => {
   const [expanded, setExpanded] = useState("panel0");
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
 
   return (
-    <Box sx={{ bgcolor: "#f0f9ff", py: 12 }}> {/* Light blue from mock */}
+    <Box sx={{ bgcolor: "#f0f9ff", py: isMobile ? 8 : 12 }}> {/* Light blue from mock */}
       <Container maxWidth="md">
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+        <Box sx={{ textAlign: "center", mb: isMobile ? 6 : 8 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: isMobile ? "1.75rem" : "2.25rem", mb: 2 }}>
             FAQ
           </Typography>
           <Typography sx={{ color: "#666", fontSize: "16px" }}>
@@ -61,7 +63,7 @@ const ListingFAQ = () => {
                   sx={{
                     bgcolor: expanded === `panel${index}` ? "rgba(59, 130, 246, 0.07)" : "#ffffff",
                     borderBottom: expanded === `panel${index}` ? "1px solid rgba(59, 130, 246, 0.15)" : "none",
-                    px: 3, py: 1.5,
+                    px: isMobile ? 2 : 3, py: 1.5,
                     transition: "background-color 0.3s"
                   }}
                 >
@@ -69,7 +71,7 @@ const ListingFAQ = () => {
                     {faq.question}
                   </Typography>
                 </AccordionSummary>
-                <AccordionDetails sx={{ bgcolor: "#f8fafc", px: 3, py: 3 }}>
+                <AccordionDetails sx={{ bgcolor: "#f8fafc", px: isMobile ? 2 : 3, py: 3 }}>
                   <Typography sx={{ color: "#444", fontSize: "15px", lineHeight: 1.6 }}>
                     {faq.answer}
                   </Typography>

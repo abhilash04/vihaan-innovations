@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Container, Typography, Grid, Paper, Tabs, Tab, Button } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, Tabs, Tab, Button, useTheme, useMediaQuery } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import PopUps from "../../../common/PopUps";
 
@@ -107,6 +107,8 @@ const moduleData = {
 const ListingPlatformModules = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);
@@ -115,15 +117,15 @@ const ListingPlatformModules = () => {
   const currentContent = moduleData[activeTab];
 
   return (
-    <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
+    <Box sx={{ bgcolor: "#ffffff", py: isMobile ? 6 : 8 }}>
       <Container maxWidth="lg">
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: isMobile ? 6 : 8 }}>
           <Typography sx={{ color: "#2563eb", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: 1, mb: 1 }}>
             Platform Modules
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: isMobile ? "1.75rem" : "2.25rem", mb: 2 }}>
             Complete Modules That Power Top Listing Sites for Business
           </Typography>
           <Typography sx={{ color: "#666", fontSize: "16px", mb: 1, maxWidth: "700px", margin: "0 auto" }}>
@@ -133,7 +135,7 @@ const ListingPlatformModules = () => {
 
         {/* Custom Tabs Implementation matching the image */}
         <Box sx={{ width: "100%" }}>
-          <Box sx={{ borderBottom: "none", overflowX: "auto", pb: 2 }}>
+          <Box sx={{ borderBottom: "none", overflowX: "auto", pb: isMobile ? 1 : 2 }}>
             <Tabs
               value={activeTab}
               onChange={handleTabChange}
@@ -172,12 +174,12 @@ const ListingPlatformModules = () => {
           <Paper
             elevation={0}
             sx={{
-              mt: 2,
-              p: { xs: 3, md: 5 },
+              mt: isMobile ? 1 : 2,
+              p: isMobile ? 3 : 5,
               bgcolor: "#f8fafc", // Very light greyish blue
               borderRadius: "16px",
               border: "1px solid #e2e8f0",
-              minHeight: "300px"
+              minHeight: isMobile ? "auto" : "300px"
             }}
           >
             <AnimatePresence mode="wait">
@@ -190,11 +192,13 @@ const ListingPlatformModules = () => {
               >
 
                 {/* Description Text */}
-                <Typography sx={{ color: "#444", fontSize: "15px", lineHeight: 1.6, mb: 5 }}>
-                  {currentContent.description}
-                </Typography>
+                {currentContent.description && (
+                  <Typography sx={{ color: "#444", fontSize: "15px", lineHeight: 1.6, mb: 5 }}>
+                    {currentContent.description}
+                  </Typography>
+                )}
 
-                <Grid container spacing={6}>
+                <Grid container spacing={isMobile ? 4 : 6}>
                   {/* Left Column (Listers) */}
                   <Grid item xs={12} md={6}>
                     <Typography sx={{ fontWeight: 800, color: "#1a1a1a", mb: 3, fontSize: "15px" }}>
@@ -262,7 +266,7 @@ const ListingPlatformModules = () => {
           </Paper>
 
           {/* Footer CTA */}
-          <Box sx={{ textAlign: "center", mt: 6 }}>
+          <Box sx={{ textAlign: "center", mt: isMobile ? 4 : 6 }}>
             <Typography sx={{ color: "#1a1a1a", fontWeight: 700, fontSize: "18px", mb: 2 }}>
               Build Your Own Top Listing Site for Business
             </Typography>
@@ -274,7 +278,7 @@ const ListingPlatformModules = () => {
                 color: "#ffffff",
                 fontWeight: 700,
                 fontSize: "15px",
-                px: { xs: 2, md: 5 },
+                px: isMobile ? 4 : 5,
                 py: 1.5,
                 borderRadius: "8px",
                 textTransform: "none",

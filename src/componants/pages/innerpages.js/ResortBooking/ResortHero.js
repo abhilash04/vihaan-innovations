@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Box, Typography, Button, Grid, Container } from "@mui/material";
+import { Box, Typography, Button, Grid, Container, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import PopUps from "../../../common/PopUps";
 
 const ResortHero = () => {
   const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box
       sx={{
@@ -20,13 +22,13 @@ const ResortHero = () => {
                         url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        pt: { xs: 12, md: 8 },
+        pt: isMobile ? 12 : 8,
       }}
     >
       <Container maxWidth="lg" sx={{ zIndex: 2 }}>
         <Grid container spacing={4} alignItems="center">
           {/* Left Content */}
-          <Grid item xs={12} md={6}>
+          <Grid item xs={isMobile ? 12 : 6}>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -37,9 +39,10 @@ const ResortHero = () => {
                 sx={{
                   fontFamily: "'Playfair Display', serif",
                   fontWeight: 700,
-                  fontSize: { xs: "3rem", md: "4rem" },
+                  fontSize: isMobile ? "2.2rem" : "4rem",
                   lineHeight: 1.1,
                   mb: 2,
+                  textAlign: isMobile ? "center" : "left",
                 }}
               >
                 Complete Resort <br />
@@ -78,11 +81,13 @@ const ResortHero = () => {
                 variant="body1"
                 sx={{
                   fontFamily: "'Outfit', sans-serif",
-                  fontSize: { xs: "1rem", md: "1.15rem" },
+                  fontSize: isMobile ? "0.95rem" : "1.15rem",
                   color: "rgba(245, 245, 240, 0.8)",
                   maxWidth: "550px",
                   lineHeight: 1.6,
                   mb: 3,
+                  textAlign: isMobile ? "center" : "left",
+                  mx: isMobile ? "auto" : 0,
                 }}
               >
                 Make your resort operations simple and stress-free with our resort booking software. It helps you manage bookings, guests, payments, and room availability all in one place.
@@ -96,7 +101,7 @@ const ResortHero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Box sx={{ display: "flex", gap: 2, mb: 3 }}>
+              <Box sx={{ display: "flex", gap: 2, mb: 3, justifyContent: isMobile ? "center" : "flex-start" }}>
                 <Button
                   variant="contained"
                   onClick={() => setOpenPopup(true)}
@@ -160,7 +165,8 @@ const ResortHero = () => {
                 borderTop: "1px solid rgba(245, 245, 240, 0.1)",
                 pt: 2,
                 width: "fit-content",
-                mb: 3,
+                mb: isMobile ? 6 : 3,
+                mx: isMobile ? "auto" : 0,
               }}
             >
               {[
@@ -179,8 +185,8 @@ const ResortHero = () => {
                       variant="h4"
                       sx={{
                         fontFamily: "'Playfair Display', serif",
-                        color: "#D4AF37",
                         fontWeight: 700,
+                        fontSize: isMobile ? "1.5rem" : "2rem",
                       }}
                     >
                       {stat.value}
@@ -201,7 +207,7 @@ const ResortHero = () => {
           </Grid>
 
           {/* Right Content - Mockup */}
-          <Grid item xs={12} md={6}>
+          <Grid item xs={isMobile ? 12 : 6}>
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -215,8 +221,8 @@ const ResortHero = () => {
                 <Box
                   sx={{
                     position: "relative",
-                    width: { xs: "100%", md: "500px" },
-                    height: "400px",
+                    width: isMobile ? "100%" : "500px",
+                    height: isMobile ? "400px" : "400px",
                     borderRadius: "20px",
                     overflow: "hidden",
                     border: "1px solid rgba(245, 245, 240, 0.1)",

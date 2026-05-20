@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Container, Typography, Grid } from "@mui/material";
+import { Box, Container, Typography, Grid, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import PopUps from "../../../common/PopUps";
 
@@ -14,16 +14,19 @@ const steps = [
 
 const ListingDeliveryProcess = () => {
   const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
-    <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
+    <Box sx={{ bgcolor: "#ffffff", py: isMobile ? 6 : 8 }}>
       <Container maxWidth="lg">
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 10 }}>
+        <Box sx={{ textAlign: "center", mb: isMobile ? 6 : 10 }}>
           <Typography sx={{ color: "#2563eb", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: 1, mb: 1 }}>
             Concept to Launch
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: isMobile ? "1.75rem" : "2.25rem", mb: 2 }}>
             How We Build Your Business Listing Website India
           </Typography>
           <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "700px", margin: "0 auto" }}>
@@ -32,32 +35,56 @@ const ListingDeliveryProcess = () => {
         </Box>
 
         {/* Horizontal stepper */}
-        <Box sx={{ position: "relative", overflowX: "auto" }}>
+        <Box sx={{ position: "relative", overflowX: isMobile ? "hidden" : "auto" }}>
           <Box sx={{
             display: "flex",
-            flexDirection: "row",
-            alignItems: "flex-start",
-            minWidth: "900px",
+            flexDirection: isMobile ? "column" : "row",
+            alignItems: isMobile ? "flex-start" : "flex-start",
+            minWidth: isMobile ? "100%" : "900px",
             position: "relative",
-            px: 4
+            px: isMobile ? 2 : 4,
+            gap: isMobile ? 4 : 0
           }}>
             
-            {/* Horizontal line connector */}
-            <Box sx={{
-              position: "absolute",
-              top: "24px",
-              left: "8%",
-              right: "8%",
-              height: "2px",
-              bgcolor: "#3b82f6",
-              zIndex: 1
-            }} />
+            {/* Horizontal line connector (Desktop only) */}
+            {!isMobile && (
+              <Box sx={{
+                position: "absolute",
+                top: "24px",
+                left: "8%",
+                right: "8%",
+                height: "2px",
+                bgcolor: "#3b82f6",
+                zIndex: 1
+              }} />
+            )}
+
+            {/* Vertical line connector (Mobile only) */}
+            {isMobile && (
+              <Box sx={{
+                position: "absolute",
+                top: "24px",
+                left: "42px",
+                bottom: "24px",
+                width: "2px",
+                bgcolor: "#3b82f6",
+                zIndex: 1
+              }} />
+            )}
 
             {steps.map((step, index) => {
               const isFirst = index === 0;
               const isLast = index === steps.length - 1;
               return (
-                <Box key={index} sx={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", position: "relative", zIndex: 2 }}>
+                <Box key={index} sx={{ 
+                  flex: 1, 
+                  display: "flex", 
+                  flexDirection: isMobile ? "row" : "column", 
+                  alignItems: isMobile ? "center" : "center", 
+                  position: "relative", 
+                  zIndex: 2,
+                  width: isMobile ? "100%" : "auto"
+                }}>
                   
                   <motion.div
                     initial={{ scale: 0 }}
@@ -66,8 +93,8 @@ const ListingDeliveryProcess = () => {
                     transition={{ type: "spring", stiffness: 200, damping: 20, delay: index * 0.15 }}
                   >
                     <Box sx={{
-                      width: 48,
-                      height: 48,
+                      width: isMobile ? 40 : 48,
+                      height: isMobile ? 40 : 48,
                       borderRadius: "50%",
                       bgcolor: "#3b82f6",
                       border: isFirst || isLast ? "3px solid #1d4ed8" : "3px solid #ffffff",
@@ -75,10 +102,11 @@ const ListingDeliveryProcess = () => {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      mb: 2,
+                      mb: isMobile ? 0 : 2,
+                      mr: isMobile ? 3 : 0,
                       zIndex: 2
                     }}>
-                      <Typography sx={{ color: "#ffffff", fontWeight: 800, fontSize: "16px" }}>
+                      <Typography sx={{ color: "#ffffff", fontWeight: 800, fontSize: isMobile ? "14px" : "16px" }}>
                         {index + 1}
                       </Typography>
                     </Box>
@@ -89,13 +117,13 @@ const ListingDeliveryProcess = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: index * 0.15 + 0.2 }}
-                    style={{ textAlign: "center" }}
+                    style={{ textAlign: isMobile ? "left" : "center" }}
                   >
-                    <Typography sx={{ fontWeight: 700, color: "#1a1a1a", fontSize: "13px", mb: 1, lineHeight: 1.3, whiteSpace: "pre-line", textAlign: "center" }}>
+                    <Typography sx={{ fontWeight: 700, color: "#1a1a1a", fontSize: isMobile ? "14px" : "13px", mb: 0.5, lineHeight: 1.3, whiteSpace: "pre-line" }}>
                       {step.label}
                     </Typography>
                     {step.sub && (
-                      <Typography sx={{ color: "#3b82f6", fontSize: "12px", fontWeight: 600, lineHeight: 1.3, textAlign: "center", mt: 0.5, px: 1 }}>
+                      <Typography sx={{ color: "#3b82f6", fontSize: isMobile ? "12px" : "12px", fontWeight: 600, lineHeight: 1.3 }}>
                         {step.sub}
                       </Typography>
                     )}
@@ -108,7 +136,7 @@ const ListingDeliveryProcess = () => {
         </Box>
 
         {/* Footer CTA */}
-        <Box sx={{ textAlign: "center", mt: 8 }}>
+        <Box sx={{ textAlign: "center", mt: isMobile ? 6 : 8 }}>
           <Typography sx={{ color: "#1a1a1a", fontWeight: 700, fontSize: "18px", mb: 2 }}>
             Build Your Platform Today
           </Typography>
@@ -120,7 +148,7 @@ const ListingDeliveryProcess = () => {
               color: "#ffffff",
               fontWeight: 700,
               fontSize: "15px",
-              px: { xs: 2, md: 5 },
+              px: isMobile ? 4 : 5,
               py: 1.5,
               borderRadius: "8px",
               textTransform: "none",

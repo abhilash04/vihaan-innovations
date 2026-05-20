@@ -13,6 +13,9 @@ import {
   Alert,
   IconButton,
   CircularProgress,
+  Pagination,
+  Container,
+  useTheme,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
@@ -28,21 +31,24 @@ import BlogBanner from "../sections/BlogBanner";
 import CloseIcon from "@mui/icons-material/Close";
 import { config } from "../../../config/Config";
 import { apiList, invokeApi } from "../../../services/ApiServices";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const Blog = () => {
   useParams();
   const navigate = useNavigate();
   const location = useLocation();
 
-  const mobileScreen = useMediaQuery(
-    "(min-width: 375px) and (max-width:599px)"
-  );
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const [searchBlogValue, setSearchBlogValue] = useState("");
   const currentIndex = 0;
   const visibleCount = 3;
   const [articleDetails, setArticleDetails] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const blogsPerPage = isMobile ? 5 : 6;
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [snackbarSeverity, setSnackbarSeverity] = useState("success");
   const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -74,7 +80,10 @@ const Blog = () => {
       );
       if (response?.status >= 200 && response?.status < 300) {
         if (response.data.responseCode === "200") {
-          setArticleDetails(response.data.blogs || []);
+          const sortedBlogs = (response.data.blogs || []).sort((a, b) => {
+            return new Date(b.date) - new Date(a.date);
+          });
+          setArticleDetails(sortedBlogs);
         } else {
           showSnackbar("Something went wrong while getting Articles. Please try again later!", "error");
         }
@@ -88,7 +97,10 @@ const Blog = () => {
     }
   };
 
-  const handleBlogInputChange = (e) => setSearchBlogValue(e.target.value);
+  const handleBlogInputChange = (e) => {
+    setSearchBlogValue(e.target.value);
+    setCurrentPage(1); // Reset to first page on search
+  };
 
   useEffect(() => {
     getArticle();
@@ -99,6 +111,17 @@ const Blog = () => {
       navigate("/articles");
     }
   }, [location.pathname, navigate]);
+
+  // Pagination Logic
+  const totalPages = Math.ceil(filteredArticles.length / blogsPerPage);
+  const indexOfLastBlog = currentPage * blogsPerPage;
+  const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
+  const currentBlogs = filteredArticles.slice(indexOfFirstBlog, indexOfLastBlog);
+
+  const handlePageChange = (event, value) => {
+    setCurrentPage(value);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <div
@@ -122,22 +145,23 @@ const Blog = () => {
           flexDirection: "column",
           textAlign: "center",
           padding: "20px",
-          mt: 5,
+          mt: 2,
         }}
       >
-        <Typography sx={{ fontWeight: "bold", fontSize: "1.5rem" }}>
+        <Typography sx={{ fontWeight: "bold", fontSize: "1rem" }}>
           Explore Our Unique Offerings!
         </Typography>
         <Typography
           sx={{
             fontWeight: "bold",
-            fontSize: { md: "4rem", xs: "3rem" },
+            fontSize: isMobile ? "2rem" : "2.5rem",
             color: "#ff5722",
+            my: 1
           }}
         >
           Vihaan Innovations
         </Typography>
-        <Typography sx={{ fontSize: "1.5rem", color: "#6c6c6c" }}>
+        <Typography sx={{ fontSize: "1.1rem", color: "#6c6c6c", maxWidth: "800px", mx: "auto" }}>
           Discover web solutions, the latest industry trends in development, and
           inspiring digital success stories.
         </Typography>
@@ -161,7 +185,7 @@ const Blog = () => {
               justifyContent: "center",
               border: "2px solid #1d1a57",
               borderRadius: 10,
-              width: mobileScreen ? 350 : 600,
+              width: isMobile ? "90%" : 600,
               background: "#f0f8ff",
             }}
           >
@@ -174,9 +198,9 @@ const Blog = () => {
               InputProps={{
                 endAdornment: <SearchIcon style={{ color: "#1d1a57" }} />,
                 disableUnderline: true,
-                style: { fontSize: mobileScreen ? 12 : 16 },
+                style: { fontSize: isMobile ? 14 : 16 },
               }}
-              sx={{ borderRadius: 0, width: mobileScreen ? 250 : 500, py: 1 }}
+              sx={{ borderRadius: 0, width: isMobile ? "80%" : 500, py: 1 }}
             />
           </Grid>
         </Grid>
@@ -184,51 +208,36 @@ const Blog = () => {
 
 
 
-      {/* Blog Cards Carousel */}
-      <Grid container spacing={2} sx={{ width: "100%" }}>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: 2,
-            width: "100%",
-          }}
-        >
-          {/* <IconButton onClick={handlePrev} sx={navBtnStyles}>
-                <ArrowBackIos fontSize="small" />
-              </IconButton> */}
-
-          <Box
-            sx={{
-              display: "flex",
-              gap: 4,
-              justifyContent: "center",
-              width: "100%",
-              maxWidth: 1200,
-              my: 6
-            }}
-          >
-            {loading ? (
-              <CircularProgress />
-            ) : filteredArticles.length > 0 ? (
-              filteredArticles.map((post) => (
+      {/* Blog Cards Grid */}
+      <Container maxWidth="xl" sx={{ my: 6 }}>
+        {loading ? (
+          <Box sx={{ display: "flex", justifyContent: "center", my: 10 }}>
+            <CircularProgress />
+          </Box>
+        ) : currentBlogs.length > 0 ? (
+          <Grid container spacing={4} justifyContent="center">
+            {currentBlogs.map((post) => (
+              <Grid item key={post.id} xs={12} sm={6} md={4} sx={{ display: "flex", justifyContent: "center" }}>
                 <Card
-                  key={post.id}
                   sx={{
-                    width: 320,
-                    flexShrink: 0,
+                    width: "100%",
+                    maxWidth: 380,
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
                     transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    borderRadius: "15px",
+                    overflow: "hidden",
                     "&:hover": {
                       transform: "translateY(-8px)",
-                      boxShadow: 6,
+                      boxShadow: "0 12px 30px rgba(0,0,0,0.12)",
                     },
                   }}
                 >
                   <Box sx={{ position: "relative", overflow: "hidden" }}>
                     <CardMedia
                       component="img"
-                      height="300"
+                      height="240"
                       image={post.featuredUrl}
                       alt={post.blogTitle}
                       sx={{
@@ -245,95 +254,143 @@ const Blog = () => {
                     </Button>
                   </Box>
 
-                  <CardContent>
-                    <Box
+                  <CardContent sx={{ flexGrow: 1, display: "flex", flexDirection: "column" }}>
+                    {/* <Box
                       sx={{
                         display: "flex",
                         alignItems: "center",
                         gap: 1,
-                        mb: 1,
+                        mb: 1.5,
                       }}
                     >
                       <CalendarMonthIcon
-                        sx={{ fontSize: 16, color: "#0B70E1" }}
+                        sx={{ fontSize: 16, color: "#ff5722" }}
                       />
                       <Typography variant="caption" color="text.secondary">
                         {post.date}
                       </Typography>
                       <PersonIcon
-                        sx={{ fontSize: 16, color: "#0B70E1", ml: 2 }}
+                        sx={{ fontSize: 16, color: "#ff5722", ml: 2 }}
                       />
                       <Typography variant="caption" color="#454545">
                         {post.author}
                       </Typography>
-                    </Box>
+                    </Box> */}
                     <Typography
-                      variant="subtitle1"
+                      variant="h6"
                       onClick={() => navigate(`/article/${post.ogUrl}`)}
                       sx={{
-                        fontSize: "20px",
-                        fontWeight: 600,
+                        fontSize: "1.25rem",
+                        fontWeight: 700,
                         lineHeight: 1.4,
-                        color: "#0a0a0a",
-                        fontFamily: "Livvic",
-                        mb: "15px",
+                        color: "#1d1a57",
+                        // mb: 0.5,
                         cursor: "pointer",
-                        "&:hover": { color: "#0B70E1" },
+                        display: "-webkit-box",
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: "vertical",
+                        overflow: "hidden",
+                        minHeight: "3.5rem",
+                        "&:hover": { color: "#ff5722" },
                       }}
                     >
                       {post.blogTitle}
                     </Typography>
-                    <Typography
+                    {/* <Typography
                       variant="body2"
                       sx={{
-                        fontSize: "16px",
-                        color: "#454545",
-                        fontFamily: "Livvic",
-                        mb: "15px",
+                        fontSize: "0.95rem",
+                        color: "#6c6c6c",
+                        mb: 1,
                         display: "-webkit-box",
                         WebkitLineClamp: 3,
                         WebkitBoxOrient: "vertical",
                         overflow: "hidden",
+                        lineHeight: 1.6,
                       }}
                     >
                       {post.description}
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      onClick={() => navigate(`/article/${post.ogUrl}`)}
-                      sx={{
-                        color: "#061340",
-                        fontWeight: 600,
-                        cursor: "pointer",
-                        "&:hover": { color: "#0B70E1" },
-                      }}
-                    >
-                      Learn More →
-                    </Typography>
+                    </Typography> */}
+                    <Box>
+                      <Typography
+                        variant="body2"
+                        onClick={() => navigate(`/article/${post.ogUrl}`)}
+                        sx={{
+                          color: "#ff5722",
+                          fontWeight: 700,
+                          cursor: "pointer",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: 0.5,
+                          "&:hover": { gap: 1.5 },
+                          transition: "all 0.3s ease",
+                        }}
+                      >
+                        Read More →
+                      </Typography>
+                    </Box>
                   </CardContent>
                 </Card>
-              ))
-            ) : (
-              <Typography>No articles found matching your criteria.</Typography>
-            )}
+              </Grid>
+            ))}
+          </Grid>
+        ) : (
+          <Box sx={{ textAlign: "center", my: 10 }}>
+            <Typography variant="h6" color="text.secondary">
+              No articles found matching your criteria.
+            </Typography>
           </Box>
+        )}
+      </Container>
 
-          {/* <IconButton onClick={handleNext} sx={navBtnStyles}>
-                <ArrowForwardIos fontSize="small" />
-              </IconButton> */}
-        </Box>
-      </Grid>
+      {/* Dot Pagination Section with Arrows */}
+      <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", gap: isMobile ? 1 : 3, my: 6 }}>
+        <IconButton
+          onClick={(e) => handlePageChange(e, Math.max(1, currentPage - 1))}
+          disabled={currentPage === 1}
+          sx={{
+            color: "#1d1a57",
+            border: "1.5px solid #1d1a57",
+            "&:disabled": { borderColor: "#d1d1d1" }
+          }}
+        >
+          <ArrowBackIosNewIcon sx={{ fontSize: isMobile ? 14 : 18 }} />
+        </IconButton>
 
-      {/* Pagination */}
-      {/* <Box mt={3} display="flex" justifyContent="center">
-            <Pagination
-              count={Math.ceil(filteredArticles.length / articlesPerPage)}
-              page={currentPage}
-              onChange={(event, value) => paginate(value)}
+        <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
+          {[...Array(totalPages)].map((_, index) => (
+            <Box
+              key={index}
+              onClick={(e) => handlePageChange(e, index + 1)}
+              sx={{
+                width: currentPage === index + 1 ? 30 : 12,
+                height: 12,
+                borderRadius: "6px",
+                backgroundColor: currentPage === index + 1 ? "#1d1a57" : "#d1d1d1",
+                cursor: "pointer",
+                transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                "&:hover": {
+                  backgroundColor: "#1d1a57",
+                  opacity: 0.8,
+                },
+              }}
             />
-          </Box> */}
-      {/* </Grid>
-      </Grid > */}
+          ))}
+        </Box>
+
+        <IconButton
+          onClick={(e) => handlePageChange(e, Math.min(totalPages, currentPage + 1))}
+          disabled={currentPage === totalPages}
+          sx={{
+            color: "#1d1a57",
+            border: "1.5px solid #1d1a57",
+            "&:disabled": { borderColor: "#d1d1d1" }
+          }}
+        >
+          <ArrowForwardIosIcon sx={{ fontSize: isMobile ? 14 : 18 }} />
+        </IconButton>
+      </Box>
+
       <Footer />
       <Snackbar
         open={openSnackbar}
@@ -349,451 +406,26 @@ const Blog = () => {
           {snackbarMessage}
         </Alert>
       </Snackbar>
-    </div >
+    </div>
   );
 };
 
-
 const categoryBtnStyles = {
   position: "absolute",
-  bottom: 10,
-  right: 10,
-  background: "linear-gradient(to right,#03228f 0%,#03228f 26%,#4e95ed 100%)",
-  textTransform: "none",
-  fontWeight: "bold",
-  borderRadius: "20px",
-  padding: "4px 12px",
-  fontSize: "0.75rem",
-  "&:hover": { background: "linear-gradient(to left,#03228f 0%,#4e95ed 100%)" },
+  top: "10px",
+  left: "10px",
+  backgroundColor: "#0B70E1",
+  color: "#fff",
+  "&:hover": {
+    backgroundColor: "#065ab3",
+  },
+};
+
+const navBtnStyles = {
+  bgcolor: "white",
+  color: "#0B70E1",
+  boxShadow: 2,
+  "&:hover": { bgcolor: "#f0f0f0" },
 };
 
 export default Blog;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import {
-//   Box,
-//   Button,
-//   Card,
-//   CardContent,
-//   CardMedia,
-//   Grid,
-//   TextField,
-//   Typography,
-//   useMediaQuery,
-// } from "@mui/material";
-// import React, { useEffect, useState } from "react";
-// import { useLocation, useNavigate, useParams } from "react-router-dom";
-// import SearchIcon from "@mui/icons-material/Search";
-// import img1 from "../../../assets/about-part-003.jpg";
-// import img2 from "../../../assets/about-part-004.jpg";
-// import img3 from "../../../assets/about-part-005.jpg";
-// import Footer from "../../common/Footer";
-// import HeaderSec from "../../common/HeaderSec";
-// import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-// import PersonIcon from "@mui/icons-material/Person";
-// import BlogBanner from "../sections/BlogBanner";
-
-// const Blog = () => {
-//   useParams();
-//   const navigate = useNavigate();
-//   const location = useLocation();
-
-//   const mobileScreen = useMediaQuery(
-//     "(min-width: 375px) and (max-width:599px)"
-//   );
-
-//   const [searchCategoryValue, setSearchCategoryValue] = useState("");
-//   const [searchBlogValue, setSearchBlogValue] = useState("");
-//   const [selectedCategory, setSelectedCategory] = useState(0);
-//   const currentIndex = 0;
-//   const visibleCount = 3;
-
-//   // Dummy articles
-//   const articleDetails = [
-//     {
-//       id: 1,
-//       blogTitle: "Tips for Choosing the Right Paint",
-//       category: "Guides",
-//       ogUrl: "tips-for-choosing-paint",
-//       featuredUrl: img1,
-//       author: "Admin",
-//       date: "Jan 5, 2025",
-//       description:
-//         "Learn how to pick the right paint color and finish for your home.",
-//     },
-//     {
-//       id: 2,
-//       blogTitle: "Trending Wall Colors for 2025",
-//       category: "Trends",
-//       ogUrl: "trending-wall-colors-2025",
-//       featuredUrl: img2,
-//       author: "Vihaan",
-//       date: "Feb 12, 2025",
-//       description:
-//         "Discover the top trending wall colors to transform your interiors this year.",
-//     },
-//     {
-//       id: 3,
-//       blogTitle: "How to Maintain Painted Walls",
-//       category: "Maintenance",
-//       ogUrl: "maintain-painted-walls",
-//       featuredUrl: img3,
-//       author: "Team Vihaan",
-//       date: "Mar 20, 2025",
-//       description:
-//         "Practical tips to keep your painted walls looking fresh and vibrant.",
-//     },
-//     {
-//       id: 4,
-//       blogTitle: "Tips for Choosing the Right Paint",
-//       category: "Guides",
-//       ogUrl: "tips-for-choosing-paint",
-//       featuredUrl: img1,
-//       author: "Admin",
-//       date: "Jan 5, 2025",
-//       description:
-//         "Learn how to pick the right paint color and finish for your home.",
-//     },
-//     {
-//       id: 5,
-//       blogTitle: "Trending Wall Colors for 2025",
-//       category: "Trends",
-//       ogUrl: "trending-wall-colors-2025",
-//       featuredUrl: img2,
-//       author: "Vihaan",
-//       date: "Feb 12, 2025",
-//       description:
-//         "Discover the top trending wall colors to transform your interiors this year.",
-//     },
-//     {
-//       id: 6,
-//       blogTitle: "How to Maintain Painted Walls",
-//       category: "Maintenance",
-//       ogUrl: "maintain-painted-walls",
-//       featuredUrl: img3,
-//       author: "Team Vihaan",
-//       date: "Mar 20, 2025",
-//       description:
-//         "Practical tips to keep your painted walls looking fresh and vibrant.",
-//     },
-//   ];
-
-//   const categories = [
-//     ...new Set(articleDetails.map((article) => article.category)),
-//   ];
-
-//   const handleBlogInputChange = (e) => setSearchBlogValue(e.target.value);
-//   const handleCategoryInputChange = (e) =>
-//     setSearchCategoryValue(e.target.value);
-
-//   useEffect(() => {
-//     navigate("/articles");
-//   }, [location.pathname, navigate]);
-
-//   return (
-//     <div
-//       style={{
-//         position: "absolute",
-//         top: 0,
-//         left: 0,
-//         width: "100%",
-//         height: "100%",
-//         overflowY: "auto",
-//         overflowX: "hidden",
-//       }}
-//     >
-//       <HeaderSec />
-//       <BlogBanner />
-
-//       {/* Heading */}
-//       <Grid
-//         sx={{
-//           display: "flex",
-//           flexDirection: "column",
-//           textAlign: "center",
-//           padding: "20px",
-//           mt: 5,
-//         }}
-//       >
-//         <Typography sx={{ fontWeight: "bold", fontSize: "1.5rem" }}>
-//           Explore Our Unique Offerings!
-//         </Typography>
-//         <Typography
-//           sx={{
-//             fontWeight: "bold",
-//             fontSize: { md: "4rem", xs: "3rem" },
-//             color: "#ff5722",
-//           }}
-//         >
-//           Vihaan Innovations
-//         </Typography>
-//         <Typography sx={{ fontSize: "1.5rem", color: "#6c6c6c" }}>
-//           Discover web solutions, the latest industry trends in development, and
-//           inspiring digital success stories.
-//         </Typography>
-//       </Grid>
-
-//       {/* Search Section */}
-//       <Grid
-//         sx={{
-//           bottom: 0,
-//           pt: 2,
-//           display: "flex",
-//           flexDirection: "column",
-//           alignItems: "center",
-//         }}
-//       >
-//         <Grid style={{ position: "relative" }}>
-//           <Grid
-//             sx={{
-//               display: "flex",
-//               alignItems: "center",
-//               justifyContent: "center",
-//               border: "2px solid #1d1a57",
-//               borderRadius: 10,
-//               width: mobileScreen ? 350 : 600,
-//               background: "#f0f8ff",
-//             }}
-//           >
-//             <TextField
-//               size="small"
-//               placeholder="Search Category"
-//               variant="standard"
-//               InputProps={{
-//                 disableUnderline: true,
-//                 style: {
-//                   fontSize: mobileScreen ? 10 : 14,
-//                   textAlign: "center",
-//                 },
-//               }}
-//               sx={{ borderRadius: 0, width: mobileScreen ? 70 : 150, py: 1 }}
-//               value={searchCategoryValue}
-//               onChange={handleCategoryInputChange}
-//               autoComplete="off"
-//             />
-//             <TextField
-//               value={searchBlogValue}
-//               onChange={handleBlogInputChange}
-//               autoComplete="off"
-//               placeholder="Search Blog Title"
-//               variant="standard"
-//               InputProps={{
-//                 endAdornment: <SearchIcon style={{ color: "#1d1a57" }} />,
-//                 disableUnderline: true,
-//                 style: { fontSize: mobileScreen ? 10 : 14 },
-//               }}
-//               sx={{ borderRadius: 0, width: mobileScreen ? 160 : 300 }}
-//             />
-//           </Grid>
-//         </Grid>
-//       </Grid>
-
-//       {/* Category Tabs */}
-//       <Grid sx={{ p: 5 }}>
-//         <Grid
-//           sx={{
-//             display: "flex",
-//             flexDirection: "column",
-//             alignItems: "center",
-//           }}
-//         >
-//           <Grid sx={{ my: 5 }}>
-//             <Grid sx={{ display: "flex", gap: 2, overflowX: "auto" }}>
-//               {categories.map((category, index) => (
-//                 <Grid
-//                   key={category}
-//                   onClick={() => setSelectedCategory(index)}
-//                   sx={{
-//                     borderRadius: "25px",
-//                     py: 1,
-//                     px: 3,
-//                     cursor: "pointer",
-//                     background:
-//                       selectedCategory === index
-//                         ? "linear-gradient(90deg, #205deb 0%, #3a93f3 50%, #53c7fa 100%)"
-//                         : "#F5F5F5",
-//                     color: selectedCategory === index ? "#fff" : "#333",
-//                     fontWeight: selectedCategory === index ? "bold" : "normal",
-//                     textTransform: "capitalize",
-//                   }}
-//                 >
-//                   <Typography sx={{ fontSize: 16, fontWeight: 600 }}>
-//                     {category}
-//                   </Typography>
-//                 </Grid>
-//               ))}
-//             </Grid>
-//           </Grid>
-
-//           {/* Blog Cards Carousel */}
-//           <Grid container spacing={2} sx={{ width: "100%" }}>
-//             <Box
-//               sx={{
-//                 display: "flex",
-//                 alignItems: "center",
-//                 justifyContent: "center",
-//                 gap: 2,
-//                 width: "100%",
-//               }}
-//             >
-//               {/* <IconButton onClick={handlePrev} sx={navBtnStyles}>
-//                 <ArrowBackIos fontSize="small" />
-//               </IconButton> */}
-
-//               <Box
-//                 sx={{
-//                   display: "flex",
-//                   gap: 4,
-//                   justifyContent: "center",
-//                   width: "100%",
-//                   maxWidth: 1200,
-//                 }}
-//               >
-//                 {articleDetails
-//                   .slice(currentIndex, currentIndex + visibleCount)
-//                   .map((post) => (
-//                     <Card
-//                       key={post.id}
-//                       sx={{
-//                         width: 320,
-//                         flexShrink: 0,
-//                         transition: "transform 0.3s ease, box-shadow 0.3s ease",
-//                         "&:hover": {
-//                           transform: "translateY(-8px)",
-//                           boxShadow: 6,
-//                         },
-//                       }}
-//                     >
-//                       <Box sx={{ position: "relative", overflow: "hidden" }}>
-//                         <CardMedia
-//                           component="img"
-//                           height="200"
-//                           image={post.featuredUrl}
-//                           alt={post.blogTitle}
-//                           sx={{
-//                             transition: "filter 0.4s ease",
-//                             "&:hover": { filter: "grayscale(100%)" },
-//                           }}
-//                         />
-//                         <Button
-//                           size="small"
-//                           variant="contained"
-//                           sx={categoryBtnStyles}
-//                         >
-//                           {post.category}
-//                         </Button>
-//                       </Box>
-
-//                       <CardContent>
-//                         <Box
-//                           sx={{
-//                             display: "flex",
-//                             alignItems: "center",
-//                             gap: 1,
-//                             mb: 1,
-//                           }}
-//                         >
-//                           <CalendarMonthIcon
-//                             sx={{ fontSize: 16, color: "#0B70E1" }}
-//                           />
-//                           <Typography variant="caption" color="text.secondary">
-//                             {post.date}
-//                           </Typography>
-//                           <PersonIcon
-//                             sx={{ fontSize: 16, color: "#0B70E1", ml: 2 }}
-//                           />
-//                           <Typography variant="caption" color="#454545">
-//                             {post.author}
-//                           </Typography>
-//                         </Box>
-//                         <Typography
-//                           variant="subtitle1"
-//                           sx={{
-//                             fontSize: "20px",
-//                             fontWeight: 600,
-//                             lineHeight: 1.4,
-//                             color: "#0a0a0a",
-//                             fontFamily: "Livvic",
-//                             mb: "15px",
-//                             "&:hover": { color: "#0B70E1" },
-//                           }}
-//                         >
-//                           {post.blogTitle}
-//                         </Typography>
-//                         <Typography
-//                           variant="body2"
-//                           sx={{
-//                             fontSize: "16px",
-//                             color: "#454545",
-//                             fontFamily: "Livvic",
-//                             mb: "15px",
-//                           }}
-//                         >
-//                           {post.description}
-//                         </Typography>
-//                         <Typography
-//                           variant="body2"
-//                           sx={{
-//                             color: "#061340",
-//                             fontWeight: 600,
-//                             cursor: "pointer",
-//                             "&:hover": { color: "#0B70E1" },
-//                           }}
-//                         >
-//                           Learn More →
-//                         </Typography>
-//                       </CardContent>
-//                     </Card>
-//                   ))}
-//               </Box>
-
-//               {/* <IconButton onClick={handleNext} sx={navBtnStyles}>
-//                 <ArrowForwardIos fontSize="small" />
-//               </IconButton> */}
-//             </Box>
-//           </Grid>
-
-//           {/* Pagination */}
-//           {/* <Box mt={3} display="flex" justifyContent="center">
-//             <Pagination
-//               count={Math.ceil(filteredArticles.length / articlesPerPage)}
-//               page={currentPage}
-//               onChange={(event, value) => paginate(value)}
-//             />
-//           </Box> */}
-//         </Grid>
-//       </Grid>
-//       <Footer />
-//     </div>
-//   );
-// };
-
-
-// const categoryBtnStyles = {
-//   position: "absolute",
-//   bottom: 10,
-//   right: 10,
-//   background: "linear-gradient(to right,#03228f 0%,#03228f 26%,#4e95ed 100%)",
-//   textTransform: "none",
-//   fontWeight: "bold",
-//   borderRadius: "20px",
-//   padding: "4px 12px",
-//   fontSize: "0.75rem",
-//   "&:hover": { background: "linear-gradient(to left,#03228f 0%,#4e95ed 100%)" },
-// };
-
-// export default Blog;

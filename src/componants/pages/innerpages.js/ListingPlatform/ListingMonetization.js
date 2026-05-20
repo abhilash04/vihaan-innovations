@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import PopUps from "../../../common/PopUps";
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
@@ -34,7 +34,7 @@ const strategies = [
   }
 ];
 
-const MoneyCard = ({ title, desc, icon, color, delay }) => (
+const MoneyCard = ({ title, desc, icon, color, delay, isMobile }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -45,13 +45,13 @@ const MoneyCard = ({ title, desc, icon, color, delay }) => (
     <Paper
       elevation={0}
       sx={{
-        p: 4,
+        p: isMobile ? 3 : 4,
         borderRadius: "16px",
         bgcolor: "#ffffff",
-        height: "60%",
+        height: isMobile ? "auto" : "60%",
         display: "flex",
         alignItems: "flex-start",
-        gap: 3,
+        gap: isMobile ? 2 : 3,
         border: "1px solid rgba(0,0,0,0.08)",
         boxShadow: "0 10px 30px rgba(0,0,0,0.03)",
         transition: "all 0.3s ease",
@@ -68,7 +68,7 @@ const MoneyCard = ({ title, desc, icon, color, delay }) => (
         p: 1.5,
         borderRadius: "12px",
         bgcolor: `${color}15`, // 15% opacity background of the primary color
-        "& > svg": { fontSize: 32 }
+        "& > svg": { fontSize: isMobile ? 28 : 32 }
       }}>
         {icon}
       </Box>
@@ -88,16 +88,19 @@ const MoneyCard = ({ title, desc, icon, color, delay }) => (
 
 const ListingMonetization = () => {
   const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
-    <Box sx={{ bgcolor: "#f8fafc", py: 8 }}> {/* Light grayish background */}
+    <Box sx={{ bgcolor: "#f8fafc", py: isMobile ? 6 : 8 }}> {/* Light grayish background */}
       <Container maxWidth="lg">
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: isMobile ? 6 : 8 }}>
           <Typography sx={{ color: "#2563eb", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: 1, mb: 1 }}>
             Monetization & Revenue
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: isMobile ? "1.75rem" : "2.25rem", mb: 2 }}>
             Revenue Streams for Every Business Listing Website India
           </Typography>
           <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
@@ -106,16 +109,16 @@ const ListingMonetization = () => {
         </Box>
 
         {/* 2x2 Grid */}
-        <Grid container spacing={4} rowSpacing={3} mb={8}>
+        <Grid container spacing={isMobile ? 3 : 4} rowSpacing={isMobile ? 2 : 3} mb={isMobile ? 6 : 8}>
           {strategies.map((strategy, index) => (
             <Grid item xs={12} md={6} key={index}>
-              <MoneyCard {...strategy} delay={index * 0.1} />
+              <MoneyCard {...strategy} delay={index * 0.1} isMobile={isMobile} />
             </Grid>
           ))}
         </Grid>
 
         {/* Footer CTA */}
-        <Box sx={{ textAlign: "center", mt: 6 }}>
+        <Box sx={{ textAlign: "center", mt: isMobile ? 4 : 6 }}>
           <Typography sx={{ color: "#1a1a1a", fontWeight: 700, fontSize: "18px", mb: 2 }}>
             Start Monetizing Today
           </Typography>
@@ -127,7 +130,7 @@ const ListingMonetization = () => {
               color: "#ffffff",
               fontWeight: 700,
               fontSize: "15px",
-              px: { xs: 2, md: 5 },
+              px: isMobile ? 4 : 5,
               py: 1.5,
               borderRadius: "8px",
               textTransform: "none",

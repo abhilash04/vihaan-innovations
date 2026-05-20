@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, Button, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import EditNoteIcon from '@mui/icons-material/EditNote';
 import SearchIcon from '@mui/icons-material/Search';
@@ -24,7 +24,7 @@ const features = [
   { icon: <StarRateIcon />, title: "Review & Rating System", desc: "User reviews and ratings to build trust and improve engagement on your platform.", color: "#f97316" }
 ];
 
-const FeatureCard = ({ icon, title, desc, color, delay }) => (
+const FeatureCard = ({ icon, title, desc, color, delay, isMobile }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -35,8 +35,8 @@ const FeatureCard = ({ icon, title, desc, color, delay }) => (
     <Paper
       elevation={0}
       sx={{
-        p: 3,
-        pt: 4,
+        p: isMobile ? 2 : 3,
+        pt: isMobile ? 3 : 4,
         borderRadius: "16px",
         bgcolor: "#ffffff",
         height: "80%",
@@ -58,7 +58,7 @@ const FeatureCard = ({ icon, title, desc, color, delay }) => (
         sx={{
           color: color,
           mb: 2,
-          "& > svg": { fontSize: 40 }
+          "& > svg": { fontSize: isMobile ? 32 : 40 }
         }}
       >
         {icon}
@@ -75,17 +75,19 @@ const FeatureCard = ({ icon, title, desc, color, delay }) => (
 
 const ListingFeatures = () => {
   const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <Box sx={{ bgcolor: "#fafafa", py: 8 }}>
+    <Box sx={{ bgcolor: "#fafafa", py: isMobile ? 6 : 8 }}>
       <Container maxWidth="lg">
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: isMobile ? 6 : 8 }}>
           <Typography sx={{ color: "#2563eb", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: 1, mb: 1 }}>
             Platform Capabilities
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: isMobile ? "1.75rem" : "2.25rem", mb: 2 }}>
             Advanced Features That Power Top Listing Sites for Business
           </Typography>
           <Typography sx={{ color: "#666", fontSize: "16px", mb: 1, maxWidth: "700px", margin: "0 auto" }}>
@@ -94,10 +96,10 @@ const ListingFeatures = () => {
         </Box>
 
         {/* Grid */}
-        <Grid container spacing={3} rowSpacing={4} columnSpacing={3} mb={8}>
+        <Grid container spacing={isMobile ? 2 : 3} rowSpacing={isMobile ? 3 : 4} columnSpacing={isMobile ? 2 : 3} mb={isMobile ? 6 : 8}>
           {features.map((feature, index) => (
-            <Grid item xs={12} sm={6} md={4} lg={2.4} key={index}>
-              <FeatureCard {...feature} delay={index * 0.1} />
+            <Grid item xs={isMobile ? 6 : 12} sm={6} md={4} lg={2.4} key={index}>
+              <FeatureCard {...feature} delay={index * 0.1} isMobile={isMobile} />
             </Grid>
           ))}
         </Grid>
@@ -112,7 +114,7 @@ const ListingFeatures = () => {
               color: "#ffffff",
               fontWeight: 700,
               fontSize: "15px",
-              px: { xs: 2, md: 5 },
+              px: isMobile ? 4 : 5,
               py: 1.5,
               borderRadius: "8px",
               textTransform: "none",
