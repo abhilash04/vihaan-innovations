@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Grid, Container } from "@mui/material";
+import { Box, Typography, Grid, Container, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import { Trees, Compass, Anchor, Ship } from "lucide-react";
 
@@ -11,10 +11,12 @@ const items = [
 ];
 
 const ResortVisualBreak = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box
       sx={{
-        py: 8,
+        py: isMobile ? 4 : 8,
         bgcolor: "#F9F6F0", // Light Cream/Ivory
         color: "#0A111E", // Dark Navy Text
         position: "relative",
@@ -33,7 +35,7 @@ const ResortVisualBreak = () => {
               sx={{
                 fontFamily: "'Playfair Display', serif",
                 fontWeight: 700,
-                fontSize: { xs: "2.5rem", md: "3rem" },
+                fontSize: isMobile ? "2.2rem" : "3rem",
                 mb: 2,
               }}
             >
@@ -54,9 +56,9 @@ const ResortVisualBreak = () => {
           </motion.div>
         </Box>
 
-        <Grid container spacing={4} justifyContent="center">
+        <Grid container spacing={isMobile ? 3 : 4} justifyContent="center">
           {items.map((item, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index}>
+            <Grid item xs={isMobile ? 12 : 3} key={index}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import PopUps from "../../../common/PopUps";
 
@@ -68,14 +68,17 @@ const DashboardMock = ({ theme, title, delay }) => (
 
 const ListingMultiVertical = () => {
   const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
-    <Box sx={{ bgcolor: "#f8fafc", py: 8 }}>
+    <Box sx={{ bgcolor: "#f8fafc", py: isMobile ? 6 : 8 }}>
       <Container maxWidth="lg">
 
-        <Grid container spacing={8} alignItems="center">
+        <Grid container spacing={isMobile ? 4 : 8} alignItems="center">
 
           {/* Left Text Content */}
-          <Grid item xs={12} md={5}>
+          <Grid item xs={isMobile ? 12 : 5}>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -85,7 +88,7 @@ const ListingMultiVertical = () => {
               <Typography sx={{ color: "#2563eb", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: 1, mb: 1 }}>
                 Multi-vertical Capability
               </Typography>
-              <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+              <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: isMobile ? "1.75rem" : "2.25rem", mb: 2 }}>
                 Versatile Solutions for Every Business Listing Website India
               </Typography>
               <Typography sx={{ color: "#666", fontSize: "16px", mb: 4, lineHeight: 1.6 }}>
@@ -136,7 +139,7 @@ const ListingMultiVertical = () => {
                     color: "#ffffff",
                     fontWeight: 700,
                     fontSize: "15px",
-                    px: { xs: 2, md: 5 },
+                    px: isMobile ? 4 : 5,
                     py: 1.5,
                     borderRadius: "8px",
                     textTransform: "none",

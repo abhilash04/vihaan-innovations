@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import OpenWithIcon from '@mui/icons-material/OpenWith';
 import SearchIcon from '@mui/icons-material/Search';
@@ -16,16 +16,19 @@ const differentiators = [
 ];
 
 const ListingWhyUs = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
-    <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
+    <Box sx={{ bgcolor: "#ffffff", py: isMobile ? 6 : 8 }}>
       <Container maxWidth="lg">
 
         {/* Header */}
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: isMobile ? 6 : 8 }}>
           <Typography sx={{ color: "#2563eb", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: 1, mb: 1 }}>
             Why Choose Us
           </Typography>
-          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+          <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: isMobile ? "1.75rem" : "2.25rem", mb: 2 }}>
             Why Choose Vihaan Innovations for Your Business Listing Website India
           </Typography>
           <Typography sx={{ color: "#666", fontSize: "16px", maxWidth: "700px", margin: "0 auto" }}>
@@ -34,7 +37,7 @@ const ListingWhyUs = () => {
         </Box>
 
         {/* 2x2 Grid Differentiators */}
-        <Grid container spacing={4} sx={{ mb: 8 }}>
+        <Grid container spacing={isMobile ? 3 : 4} sx={{ mb: isMobile ? 6 : 8 }}>
           {differentiators.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -47,8 +50,8 @@ const ListingWhyUs = () => {
                   style={{ height: '100%' }}
                 >
                   <Paper elevation={0} sx={{
-                    p: 3,
-                    height: "75%",
+                    p: isMobile ? 2.5 : 3,
+                    height: isMobile ? "auto" : "75%",
                     borderRadius: "16px",
                     bgcolor: "#f8fafc",
                     border: "1px solid #e2e8f0",
@@ -73,8 +76,8 @@ const ListingWhyUs = () => {
         </Grid>
 
         {/* Testimonial Section Header */}
-        <Box sx={{ textAlign: "center", mb: 6 }}>
-          <Typography variant="h3" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "24px", md: "30px" }, mb: 2 }}>
+        <Box sx={{ textAlign: "center", mb: isMobile ? 4 : 6 }}>
+          <Typography variant="h3" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: isMobile ? "1.5rem" : "1.85rem", mb: 2 }}>
             Testimonial
           </Typography>
         </Box>
@@ -87,7 +90,7 @@ const ListingWhyUs = () => {
           transition={{ duration: 0.6 }}
         >
           <Paper elevation={0} sx={{
-            p: 6,
+            p: isMobile ? 3 : 6,
             borderRadius: "24px",
             bgcolor: "#f0f9ff", // Very light blue
             border: "1px solid rgba(59, 130, 246, 0.2)",
@@ -96,10 +99,10 @@ const ListingWhyUs = () => {
             position: "relative",
             overflow: "hidden",
           }}>
-            <FormatQuoteIcon sx={{ position: "absolute", top: 20, left: 20, fontSize: 50, color: "rgba(59, 130, 246, 0.15)" }} />
-            <FormatQuoteIcon sx={{ position: "absolute", bottom: 20, right: 20, fontSize: 50, color: "rgba(59, 130, 246, 0.15)", transform: "scaleX(-1)" }} />
+            <FormatQuoteIcon sx={{ position: "absolute", top: 20, left: 20, fontSize: isMobile ? 32 : 50, color: "rgba(59, 130, 246, 0.15)" }} />
+            <FormatQuoteIcon sx={{ position: "absolute", bottom: 20, right: 20, fontSize: isMobile ? 32 : 50, color: "rgba(59, 130, 246, 0.15)", transform: "scaleX(-1)" }} />
 
-            <Typography sx={{ fontWeight: 600, color: "#1a1a1a", fontSize: { xs: "18px", md: "20px" }, lineHeight: 1.6, textAlign: "center", mb: 5, mt: 2, position: "relative" }}>
+            <Typography sx={{ fontWeight: 600, color: "#1a1a1a", fontSize: isMobile ? "1.1rem" : "1.25rem", lineHeight: 1.6, textAlign: "center", mb: isMobile ? 4 : 5, mt: 2, position: "relative" }}>
               The best platform we've ever used. Vihaan helped us launch our real estate portal in just 3 months, with advanced search and monetization that we never thought was possible at this budget.
             </Typography>
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography, Grid, Container, Button } from "@mui/material";
+import { Box, Typography, Grid, Container, Button, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import { Check, X, ArrowRight } from "lucide-react";
 import PopUps from "../../../common/PopUps";
@@ -16,10 +16,12 @@ const rows = [
 
 const ResortComparison = () => {
   const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box
       sx={{
-        py: 8,
+        py: isMobile ? 4 : 8,
         bgcolor: "#0A111E", // Dark Navy
         color: "#F5F5F0",
         position: "relative",
@@ -28,7 +30,7 @@ const ResortComparison = () => {
       <Container maxWidth="lg">
         <Grid container spacing={6} alignItems="center">
           {/* Left Side - Text Content */}
-          <Grid item xs={12} md={5}>
+          <Grid item xs={isMobile ? 12 : 5}>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -56,7 +58,7 @@ const ResortComparison = () => {
                 sx={{
                   fontFamily: "'Playfair Display', serif",
                   fontWeight: 700,
-                  fontSize: { xs: "2.5rem", md: "3rem" },
+                  fontSize: isMobile ? "2.2rem" : "3rem",
                   mb: 3,
                 }}
               >
@@ -105,30 +107,32 @@ const ResortComparison = () => {
                 </motion.div>
               ))}
 
-              <Button
-                variant="contained"
-                onClick={() => setOpenPopup(true)}
-                endIcon={<ArrowRight size={18} />}
-                sx={{
-                  mt: 3,
-                  fontFamily: "'Outfit', sans-serif",
-                  bgcolor: "#dd690aff",
-                  color: "#0A111E",
-                  px: 4,
-                  py: 1.5,
-                  borderRadius: "30px",
-                  fontWeight: 600,
-                  textTransform: "none",
-                  "&:hover": { bgcolor: "#E5C158" },
-                }}
-              >
-                CTA Button
-              </Button>
+              <Box sx={{ display: "flex", justifyContent: isMobile ? "center" : "flex-start" }}>
+                <Button
+                  variant="contained"
+                  onClick={() => setOpenPopup(true)}
+                  endIcon={<ArrowRight size={18} />}
+                  sx={{
+                    mt: 3,
+                    fontFamily: "'Outfit', sans-serif",
+                    bgcolor: "#dd690aff",
+                    color: "#0A111E",
+                    px: 4,
+                    py: 1.5,
+                    borderRadius: "30px",
+                    fontWeight: 600,
+                    textTransform: "none",
+                    "&:hover": { bgcolor: "#E5C158" },
+                  }}
+                >
+                  CTA Button
+                </Button>
+              </Box>
             </motion.div>
           </Grid>
 
           {/* Right Side - Comparison Table */}
-          <Grid item xs={12} md={7}>
+          <Grid item xs={isMobile ? 12 : 7}>
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -152,18 +156,18 @@ const ResortComparison = () => {
                     borderBottom: "1px solid rgba(245, 245, 240, 0.08)",
                   }}
                 >
-                  <Grid item xs={5}>
-                    <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, letterSpacing: "1px", textTransform: "uppercase", fontSize: "1rem", color: "rgba(255, 255, 255, 0.6)" }}>
+                  <Grid item xs={4}>
+                    <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, letterSpacing: "1px", textTransform: "uppercase", fontSize: isMobile ? "0.7rem" : "1rem", color: "rgba(255, 255, 255, 0.6)" }}>
                       Capability
                     </Typography>
                   </Grid>
-                  <Grid item xs={3.5} textAlign="center">
-                    <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase", fontSize: "1rem", color: "#dd690aff" }}>
+                  <Grid item xs={4} textAlign="center">
+                    <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase", fontSize: isMobile ? "0.7rem" : "1rem", color: "#dd690aff" }}>
                       Smart Platform
                     </Typography>
                   </Grid>
-                  <Grid item xs={3.5} textAlign="center">
-                    <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, letterSpacing: "1px", textTransform: "uppercase", fontSize: "1rem", color: "rgba(245,245,240,0.4)" }}>
+                  <Grid item xs={4} textAlign="center">
+                    <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontWeight: 600, letterSpacing: "1px", textTransform: "uppercase", fontSize: isMobile ? "0.7rem" : "1rem", color: "rgba(245,245,240,0.4)" }}>
                       Traditional
                     </Typography>
                   </Grid>
@@ -187,27 +191,27 @@ const ResortComparison = () => {
                         borderBottom: index !== rows.length - 1 ? "1px solid rgba(245, 245, 240, 0.04)" : "none",
                       }}
                     >
-                      <Grid item xs={5}>
-                        <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "1rem" }}>
+                      <Grid item xs={4}>
+                        <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: isMobile ? "0.7rem" : "1rem" }}>
                           {row.item}
                         </Typography>
                       </Grid>
-                      <Grid item xs={3.5} textAlign="center">
+                      <Grid item xs={4} textAlign="center">
                         {row.smart === true ? (
                           <Check size={20} color="#4CAF50" />
                         ) : row.smart === false ? (
                           <X size={20} color="#F44336" />
                         ) : (
-                          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.95rem", color: "#dd690aff" }}>{row.smart}</Typography>
+                          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: isMobile ? "0.7rem" : "1rem", color: "#dd690aff" }}>{row.smart}</Typography>
                         )}
                       </Grid>
-                      <Grid item xs={3.5} textAlign="center">
+                      <Grid item xs={4} textAlign="center">
                         {row.trad === true ? (
                           <Check size={20} color="#4CAF50" />
                         ) : row.trad === false ? (
                           <X size={20} color="#F44336" />
                         ) : (
-                          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "0.95rem", color: "rgba(245,245,240,0.6)" }}>{row.trad}</Typography>
+                          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: isMobile ? "0.7rem" : "1rem", color: "rgba(245,245,240,0.6)" }}>{row.trad}</Typography>
                         )}
                       </Grid>
                     </Grid>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography, Container, Button } from "@mui/material";
+import { Box, Typography, Container, Button, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import PopUps from "../../../common/PopUps";
 
@@ -38,10 +38,12 @@ const steps = [
 
 const ResortProcess = () => {
   const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box
       sx={{
-        py: { xs: 6, md: 8 },
+        py: isMobile ? 6 : 8,
         bgcolor: "rgba(255, 255, 255, 0.01)", // Slightly lighter dark
         color: "#F5F5F0",
         position: "relative",
@@ -65,7 +67,7 @@ const ResortProcess = () => {
               sx={{
                 fontFamily: "'Playfair Display', serif",
                 fontWeight: 700,
-                fontSize: { xs: "1.5rem", md: "2rem" },
+                fontSize: isMobile ? "2.2rem" : "2.5rem",
                 mb: 2,
               }}
             >
@@ -78,7 +80,7 @@ const ResortProcess = () => {
                 color: "rgba(245, 245, 240, 0.6)",
                 maxWidth: "800px",
                 margin: "0 auto",
-                fontSize: "1.2rem",
+                fontSize: isMobile ? "1rem" : "1.2rem",
               }}
             >
               We follow a simple step-by-step process to build a website that brings you more bookings.
@@ -89,7 +91,7 @@ const ResortProcess = () => {
         {/* Timeline Desktop Layout */}
         <Box
           sx={{
-            display: { xs: "none", md: "flex" },
+            display: isMobile ? "none" : "flex",
             justifyContent: "center",
             position: "relative",
             width: "100%",
@@ -181,7 +183,7 @@ const ResortProcess = () => {
         </Box>
 
         {/* Mobile Layout Stacks steps vertically */}
-        <Box sx={{ display: { xs: "flex", md: "none" }, flexDirection: "column", gap: 5, px: 3 }}>
+        <Box sx={{ display: isMobile ? "flex" : "none", flexDirection: "column", gap: 5, px: 3 }}>
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -216,7 +218,7 @@ const ResortProcess = () => {
 
         {/* CTA */}
         <Box sx={{ textAlign: "center", mt: 4, px: 2 }}>
-          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: "1.3rem", color: "rgba(245,245,240,0.8)", mb: 4 }}>
+          <Typography sx={{ fontFamily: "'Outfit', sans-serif", fontSize: isMobile ? "1.1rem" : "1.3rem", color: "rgba(245,245,240,0.8)", mb: 4 }}>
             Start building your resort website today and turn visitors into guests.
           </Typography>
           <Button
@@ -231,7 +233,7 @@ const ResortProcess = () => {
               borderRadius: "40px",
               fontWeight: 700,
               textTransform: "none",
-              fontSize: "1.1rem",
+              fontSize: isMobile ? "0.95rem" : "1.1rem",
               boxShadow: "0 10px 20px rgba(212,175,55,0.2)",
               "&:hover": {
                 transform: "scale(1.02)",

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Container, Typography, Grid, Paper } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import PopUps from "../../../common/PopUps";
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
@@ -64,7 +64,7 @@ const Bubble = ({ size, color, top, left, right, bottom, delay }) => (
   />
 );
 
-const VerticalFlow = ({ steps, title, direction = "left" }) => {
+const VerticalFlow = ({ steps, title, direction = "left", isMobile }) => {
   return (
     <Box
       sx={{
@@ -122,7 +122,8 @@ const VerticalFlow = ({ steps, title, direction = "left" }) => {
                     gap: 2,
                     p: 2,
                     width: "100%",
-                    height: "80px",
+                    height: isMobile ? "auto" : "80px",
+                    minHeight: isMobile ? "70px" : "80px",
                     boxSizing: "border-box",
                     borderRadius: "20px", // pill look
                     border: `1px solid ${borderColor}`,
@@ -173,11 +174,14 @@ const VerticalFlow = ({ steps, title, direction = "left" }) => {
 
 const ListingPlatformJourney = () => {
   const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box
       sx={{
         bgcolor: "#fafafa",
-        py: 8,
+        py: isMobile ? 6 : 8,
         position: "relative",
         overflow: "hidden"
       }}
@@ -188,7 +192,7 @@ const ListingPlatformJourney = () => {
 
       <Container maxWidth="md" sx={{ position: "relative", zIndex: 1 }}>
 
-        <Box sx={{ textAlign: "center", mb: 8 }}>
+        <Box sx={{ textAlign: "center", mb: isMobile ? 6 : 8 }}>
           <Typography sx={{ color: "#2563eb", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: 1, mb: 1 }}>
             Platform Journey
           </Typography>
@@ -197,7 +201,7 @@ const ListingPlatformJourney = () => {
             sx={{
               fontWeight: 800,
               color: "#1a1a1a",
-              fontSize: { xs: "26px", md: "34px" },
+              fontSize: isMobile ? "1.75rem" : "2.1rem",
               mb: 2
             }}
           >
@@ -211,7 +215,7 @@ const ListingPlatformJourney = () => {
         <Paper
           elevation={0}
           sx={{
-            p: { xs: 3, md: 5 },
+            p: isMobile ? 2 : 5,
             bgcolor: "#ffffff",
             borderRadius: "24px",
             border: "1px solid rgba(0,0,0,0.04)",
@@ -219,36 +223,37 @@ const ListingPlatformJourney = () => {
             position: "relative"
           }}
         >
-          <Grid container spacing={4} justifyContent="center" position="relative">
+          <Grid container spacing={isMobile ? 6 : 4} justifyContent="center" position="relative">
 
             {/* Left Column */}
             <Grid item xs={12} sm={6}>
-              <VerticalFlow steps={listerSteps} title="Lister Journey" direction="left" />
+              <VerticalFlow steps={listerSteps} title="Lister Journey" direction="left" isMobile={isMobile} />
             </Grid>
 
             {/* Vertical Divider (Desktop) */}
-            <Box
-              sx={{
-                display: { xs: 'none', sm: 'block' },
-                position: 'absolute',
-                left: '50%',
-                top: '15%',
-                bottom: '10%',
-                width: '1px',
-                background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,0.04) 10%, rgba(0,0,0,0.04) 90%, transparent)'
-              }}
-            />
+            {!isMobile && (
+              <Box
+                sx={{
+                  position: 'absolute',
+                  left: '50%',
+                  top: '15%',
+                  bottom: '10%',
+                  width: '1px',
+                  background: 'linear-gradient(to bottom, transparent, rgba(0,0,0,0.04) 10%, rgba(0,0,0,0.04) 90%, transparent)'
+                }}
+              />
+            )}
 
             {/* Right Column */}
             <Grid item xs={12} sm={6}>
-              <VerticalFlow steps={userSteps} title="User/Buyer Journey" direction="right" />
+              <VerticalFlow steps={userSteps} title="User/Buyer Journey" direction="right" isMobile={isMobile} />
             </Grid>
 
           </Grid>
         </Paper>
 
         {/* Footer CTA */}
-        <Box sx={{ textAlign: "center", mt: 8 }}>
+        <Box sx={{ textAlign: "center", mt: isMobile ? 6 : 8 }}>
           <Typography sx={{ color: "#1a1a1a", fontWeight: 700, fontSize: "18px", mb: 2 }}>
             Launch Your Business Listing Website India Today
           </Typography>
@@ -260,7 +265,7 @@ const ListingPlatformJourney = () => {
               color: "#ffffff",
               fontWeight: 700,
               fontSize: "15px",
-              px: { xs: 2, md: 5 },
+              px: isMobile ? 4 : 5,
               py: 1.5,
               borderRadius: "8px",
               textTransform: "none",

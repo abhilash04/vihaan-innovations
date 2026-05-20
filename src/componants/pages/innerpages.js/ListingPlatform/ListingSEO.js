@@ -1,16 +1,19 @@
 import React, { useState } from "react";
-import { Box, Container, Typography, Grid, Paper, Button } from "@mui/material";
+import { Box, Container, Typography, Grid, Paper, Button, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import PopUps from "../../../common/PopUps";
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
 const ListingSEO = () => {
   const [openPopup, setOpenPopup] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
-    <Box sx={{ bgcolor: "#ffffff", py: 8 }}>
+    <Box sx={{ bgcolor: "#ffffff", py: isMobile ? 6 : 8 }}>
       <Container maxWidth="lg">
 
-        <Grid container spacing={8} alignItems="center">
+        <Grid container spacing={isMobile ? 4 : 8} alignItems="center">
 
           {/* Left: SEO Text Content */}
           <Grid item xs={12} md={5}>
@@ -23,7 +26,7 @@ const ListingSEO = () => {
               <Typography sx={{ color: "#2563eb", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: 1, mb: 1 }}>
                 SEO & Growth
               </Typography>
-              <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: { xs: "28px", md: "36px" }, mb: 2 }}>
+              <Typography variant="h2" sx={{ fontWeight: 800, color: "#1a1a1a", fontSize: isMobile ? "1.75rem" : "2.25rem", mb: 2 }}>
                 Boost Visibility and Traffic on Your Business Listing Website India
               </Typography>
               <Typography sx={{ color: "#666", fontSize: "16px", mb: 4, lineHeight: 1.6 }}>
@@ -62,29 +65,6 @@ const ListingSEO = () => {
                 <Typography sx={{ color: "#1a1a1a", fontWeight: 700, fontSize: "16px", mb: 2 }}>
                   Optimize Your Business Listing Website India for Maximum Traffic
                 </Typography>
-                {/* <Box
-                  component="button"
-                  onClick={() => setOpenPopup(true)}
-                  sx={{
-                    bgcolor: "#2563eb",
-                    color: "#ffffff",
-                    fontWeight: 700,
-                    fontSize: "15px",
-                    px: { xs: 2, md: 5 },
-                    py: 1.5,
-                    borderRadius: "8px",
-                    textTransform: "none",
-                    cursor: "pointer",
-                    border: "none",
-                    boxShadow: "0 4px 14px rgba(37, 99, 235, 0.3)",
-                    "&:hover": {
-                      bgcolor: "#1d4ed8",
-                      boxShadow: "0 6px 20px rgba(37, 99, 235, 0.4)",
-                    },
-                  }}
-                >
-                  Get Started Today
-                </Box> */}
               </Box>
             </motion.div>
           </Grid>
@@ -97,7 +77,7 @@ const ListingSEO = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Paper elevation={0} sx={{ mb: 4, p: 4, bgcolor: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: "16px", boxShadow: "0 10px 30px rgba(0,0,0,0.03)" }}>
+              <Paper elevation={0} sx={{ mb: isMobile ? 3 : 4, p: isMobile ? 2 : 4, bgcolor: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: "16px", boxShadow: "0 10px 30px rgba(0,0,0,0.03)" }}>
 
                 {/* Chart Title Mock */}
                 <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 3 }}>
@@ -110,7 +90,7 @@ const ListingSEO = () => {
                 </Box>
 
                 {/* Fake SVG Chart */}
-                <Box sx={{ height: "180px", position: "relative", display: "flex", alignItems: "flex-end" }}>
+                <Box sx={{ height: isMobile ? "120px" : "180px", position: "relative", display: "flex", alignItems: "flex-end" }}>
                   <svg width="100%" height="100%" viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                     <defs>
                       <linearGradient id="trafficGrad" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -136,7 +116,7 @@ const ListingSEO = () => {
                       <circle key={i} cx={x} cy={y} r="5" fill="#22c55e" />
                     ))}
                   </svg>
-                  <TrendingUpIcon sx={{ position: "absolute", top: 0, right: 0, color: "#22c55e", fontSize: 32 }} />
+                  <TrendingUpIcon sx={{ position: "absolute", top: 0, right: 0, color: "#22c55e", fontSize: isMobile ? 24 : 32 }} />
                 </Box>
 
                 <Box sx={{ display: "flex", justifyContent: "space-between", mt: 2 }}>
@@ -153,7 +133,7 @@ const ListingSEO = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Paper elevation={0} sx={{ p: 4, bgcolor: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: "16px", boxShadow: "0 10px 30px rgba(0,0,0,0.03)" }}>
+              <Paper elevation={0} sx={{ p: isMobile ? 2 : 4, bgcolor: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: "16px", boxShadow: "0 10px 30px rgba(0,0,0,0.03)" }}>
 
                 {/* Browser top bar */}
                 <Box sx={{ display: "flex", gap: 1, mb: 3 }}>

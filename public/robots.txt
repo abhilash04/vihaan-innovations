@@ -69,9 +69,23 @@ Disallow: /3d-animation-training
 Disallow: /motion-graphics-training
 Disallow: /video-editing-vfx-training
 
+Disallow: /local-seo
+Disallow: /real-estate
+Disallow: /web-development-services
+Disallow: /ui-ux-design
+Disallow: /crm-software
+Disallow: /sales-force-software
+Disallow: /project-software
+Disallow: /web-designing-training
+Disallow: /retail-software
+Disallow: /manual-testing-training
+Disallow: /hospital-management
+Disallow: /software-testing-training
+
 Sitemap: https://www.vihaaninnovations.com/sitemap.xml
 Sitemap: https://www.vihaaninnovations.com/locations.xml
 Sitemap: https://www.vihaaninnovations.com/services.xml
 Sitemap: https://www.vihaaninnovations.com/servicesexplore.xml
 Sitemap: https://www.vihaaninnovations.com/readyproducts.xml
 Sitemap: https://www.vihaaninnovations.com/training.xml
+Sitemap: https://www.vihaaninnovations.com/blogs.xml
